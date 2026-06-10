@@ -5,9 +5,9 @@ same week. Gives us a non-empty workbook to verify the merge/pivot
 behaviour before pilot runs land.
 
 The two source files we have:
-  data/art_rubric_runs/2026-06-04_122724/4_rubric_answers.json
+  data/_archive/art_rubric_runs/2026-06-04_122724/4_rubric_answers.json
       ← Shape A, Gemini-2.5-flash, art rubric v1
-  data/art_rubric_runs/2026-06-04_122724/7_claude_answers.json
+  data/_archive/art_rubric_runs/2026-06-04_122724/7_claude_answers.json
       ← Shape B, Claude Opus 4.7, art rubric v1
                                   (the "score_art_with_claude" one-off)
 
@@ -42,7 +42,7 @@ from pipeline.types import RubricAnswer, RubricAnswerSet
 WORKBOOK = Path.home() / "Downloads" / "Teacher Quality Monitoring (1).xlsx"
 ANSWERS_XLSX = ROOT / "data" / "tqm_answers.xlsx"
 QUEUE_DIR = ROOT / "data" / "_answer_queue"
-CACHED_RUN = ROOT / "data" / "art_rubric_runs" / "2026-06-04_122724"
+CACHED_RUN = ROOT / "data" / "_archive" / "art_rubric_runs" / "2026-06-04_122724"
 
 SESSION_ID = "2026-05-18__D28__0900"
 RUBRIC_VERSION = "v1_2026-06-10"
