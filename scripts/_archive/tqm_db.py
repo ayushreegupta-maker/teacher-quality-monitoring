@@ -157,7 +157,7 @@ def cmd_session_queue(args):
     """
     from pathlib import Path as _P
     from pipeline.extract import probe_duration_seconds
-    from pipeline.session_resolve import resolve_session_context
+    from pipeline.session_context import resolve_session_context
 
     if not args.video.exists():
         print(f"ERROR: video not found: {args.video}")

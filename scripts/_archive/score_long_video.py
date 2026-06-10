@@ -40,7 +40,7 @@ from pipeline.extract import (
 from pipeline.items import consolidate_items
 from pipeline.render import load_rubric
 from pipeline.score import score_session
-from pipeline.session_resolve import resolve_session_context
+from pipeline.session_context import resolve_session_context
 from pipeline.types import SessionMeta
 from pipeline.vision import vision_observe
 
