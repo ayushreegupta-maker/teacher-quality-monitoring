@@ -243,3 +243,35 @@ class RubricAnswerSet(BaseModel):
     prompt_hash: Optional[str] = None
     rendered_prompt_path: Optional[str] = None  # for audit
     raw_response_path: Optional[str] = None     # for audit
+
+
+class EvidenceBundle(BaseModel):
+    """Cached vision-pass output for one session, keyed by
+    (session_id, vision_model, vision_fps, chunking). The Shape B scoring
+    path consumes this bundle instead of re-watching the video.
+
+    Per the step-9 design decision (Q3 = "vision + Shape-A-derived"):
+    the bundle carries the vision-pure block (boundaries, transcript,
+    observations) plus optional Shape-A-derived enrichment (phases,
+    explanations, disturbances) that's populated when a prior Shape A
+    run is available for the same session.
+    """
+    # Cache key (must match the on-disk dir name)
+    session_id: str
+    subject: str
+    vision_model: str
+    vision_fps: str           # "default" if no fps override; otherwise "0.30" etc.
+    chunking: str             # "5min" / "10min" / "single"
+    # Vision-pure block
+    boundaries: dict                              # 2_boundaries.json shape
+    transcript: list[dict] = Field(default_factory=list)    # cleaned segments
+    observations: list[dict] = Field(default_factory=list)
+    # Shape-A enrichment (optional)
+    phases: Optional[list[dict]] = None
+    explanations: Optional[list[dict]] = None
+    disturbances: Optional[list[dict]] = None
+    # Provenance + traceability
+    built_at: Optional[str] = None                # ISO timestamp
+    source_run_dir: Optional[str] = None
+    transcript_source_model: Optional[str] = None
+    observations_source_model: Optional[str] = None

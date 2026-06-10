@@ -25,6 +25,7 @@ Prompt rendering and scoring land in this module in step 8 of the migration.
 
 from __future__ import annotations
 
+import json
 import logging
 from pathlib import Path
 
@@ -32,12 +33,18 @@ import openpyxl
 
 from adapters.llm import LLMAdapter, parse_json_lenient, prompt_hash
 from pipeline.types import (
+    EvidenceBundle,
     Rubric,
     RubricAnswer,
     RubricAnswerSet,
     RubricQuestion,
     RubricSection,
 )
+
+# Default reasoner for Shape B (Q2 of step 9). Calibrated baseline from the
+# one-off score_art_with_claude.py experiment. Callers can override via
+# `reasoner_model=` to sweep cheaper alternatives.
+DEFAULT_SHAPE_B_REASONER = "claude-opus-4-7"
 
 log = logging.getLogger(__name__)
 
@@ -216,42 +223,38 @@ def render_prompt(
     prompt_path: Path,
     *,
     shape: str = _SHAPE_A,
-    duration_str: str,
-    duration_sec: int,
-    wallclock_start: str,
-    wallclock_end: str,
+    # Shape A metadata:
+    duration_str: str | None = None,
+    duration_sec: int | None = None,
+    wallclock_start: str | None = None,
+    wallclock_end: str | None = None,
+    # Shape B evidence:
+    evidence: EvidenceBundle | None = None,
 ) -> str:
     """Load a rubric prompt template from `prompt_path` and interpolate it
-    with the rubric's question block + the run metadata.
+    with the rubric's question block + the run inputs.
 
     Shape A (Gemini direct):
-      Returns a fully-rendered prompt ready to send alongside the trimmed
-      video. The template uses Python str.format() — placeholders are bare
-      `{name}` and literal braces are escaped `{{` / `}}` (per the
-      externalised art template at prompts/art/rubric_art_v1_*.md).
+      Loads e.g. prompts/art/rubric_art_v1_2026-06-10.md. Placeholders:
+      `{questions_block}`, `{duration_str}`, `{duration_sec}`,
+      `{wallclock_start}`, `{wallclock_end}`. Returns one string ready to
+      send alongside the trimmed video.
 
     Shape B (text reasoner over Gemini-extracted evidence):
-      Not implemented in 8a. The Shape B prompt template differs (inlines
-      evidence JSON instead of attaching video), and the scoring path
-      (`score()`) doesn't exist yet. Raises NotImplementedError.
+      Loads e.g. prompts/art/rubric_art_v1_2026-06-10_shape_b.md.
+      Placeholders: `{questions_block}` + 6 JSON blobs derived from the
+      EvidenceBundle (boundaries, phases, explanations, disturbances,
+      observations, transcript). Returns one string with `# SYSTEM` and
+      `# USER` markers that pipeline.render.split_system_user parses out
+      for the Anthropic message format.
 
-    `prompt_path` is either an absolute Path or relative to prompts/.
-    Both `prompts/art/rubric_art_v1_2026-06-10` and the full Path are OK —
-    we don't load via load_prompt() here because the templates use
-    str.format() not Jinja, and load_prompt strips frontmatter cleanly.
+    `prompt_path` may be an absolute Path or relative (we search both
+    `<rel>` and `prompts/<rel>` and `prompts/<rel>.md`).
     """
-    if shape != _SHAPE_A:
-        raise NotImplementedError(
-            f"render_prompt(shape={shape!r}) not implemented — "
-            f"Shape B comes in migration step 8b"
-        )
-
-    # Resolve prompt_path. Accept either an absolute path or a prompts/-
-    # relative id (e.g. 'art/rubric_art_v1_2026-06-10').
+    # ── Resolve prompt path ──
     if not isinstance(prompt_path, Path):
         prompt_path = Path(prompt_path)
     if not prompt_path.is_absolute():
-        # Look under prompts/, trying both bare and .md-suffixed
         candidates = [
             prompt_path,
             _PROMPTS_DIR / prompt_path,
@@ -268,17 +271,45 @@ def render_prompt(
 
     raw = prompt_path.read_text()
     body = _strip_frontmatter(raw)
-
     questions_block = render_questions_block(rubric)
 
-    rendered = body.format(
-        questions_block=questions_block,
-        duration_str=duration_str,
-        duration_sec=duration_sec,
-        wallclock_start=wallclock_start,
-        wallclock_end=wallclock_end,
-    )
-    return rendered
+    if shape == _SHAPE_A:
+        missing = [
+            n for n, v in (
+                ("duration_str", duration_str),
+                ("duration_sec", duration_sec),
+                ("wallclock_start", wallclock_start),
+                ("wallclock_end", wallclock_end),
+            ) if v is None
+        ]
+        if missing:
+            raise ValueError(
+                f"render_prompt(shape='A') requires: {missing}"
+            )
+        return body.format(
+            questions_block=questions_block,
+            duration_str=duration_str,
+            duration_sec=duration_sec,
+            wallclock_start=wallclock_start,
+            wallclock_end=wallclock_end,
+        )
+
+    if shape == _SHAPE_B:
+        if evidence is None:
+            raise ValueError(
+                "render_prompt(shape='B') requires evidence=<EvidenceBundle>"
+            )
+        return body.format(
+            questions_block=questions_block,
+            boundaries_json=json.dumps(evidence.boundaries, indent=2),
+            phases_json=json.dumps(evidence.phases or [], indent=2),
+            explanations_json=json.dumps(evidence.explanations or [], indent=2),
+            disturbances_json=json.dumps(evidence.disturbances or [], indent=2),
+            observations_json=json.dumps(evidence.observations, indent=2),
+            transcript_json=json.dumps({"segments": evidence.transcript}, indent=2),
+        )
+
+    raise ValueError(f"unknown shape {shape!r}")
 
 
 # ─── Internal helpers ─────────────────────────────────────────────────────
@@ -322,46 +353,73 @@ def score(
     llm: LLMAdapter,
     session_id: str,
     rubric_version: str,
-    video_path: Path,
+    video_path: Path | None = None,
     shape: str = _SHAPE_A,
     reasoner_model: str | None = None,
 ) -> tuple[RubricAnswerSet, str]:
     """Run one rubric scoring call. Returns (RubricAnswerSet, raw_response).
 
-    Shape A (default): uploads `video_path` to Gemini and asks the rendered
-    `prompt`. The model watches the trimmed class window and returns one
-    answer per question. `reasoner_model` overrides the adapter's default
-    vision model for this single call (used by the model-sweep runner).
+    Shape A (Gemini direct):
+      `video_path` is required. Uploads to Gemini, calls with the rendered
+      prompt. `reasoner_model` overrides the adapter's vision model.
 
-    Shape B: defers to step 9 — the evidence-cache layer needs to land
-    before we can drive a text reasoner over per-session evidence bundles.
+    Shape B (text reasoner over the evidence bundle):
+      `video_path` is ignored (the caller renders evidence into the prompt).
+      `reasoner_model` defaults to DEFAULT_SHAPE_B_REASONER ('claude-opus-4-7').
+      The prompt must contain `# SYSTEM` and `# USER` markers — they're
+      split out for the Anthropic message format.
 
-    The returned RubricAnswerSet carries denormalised flags
-    (insufficient_information, had_evidence, evidence_parse_ok) on each
-    answer so the accumulator XLSX (step 10) can pivot without re-parsing
-    answer strings. Raw model response is returned separately so the
-    caller can persist it for audit alongside the parsed answers.
+    Both shapes return RubricAnswerSet with denormalised flags
+    (insufficient_information / had_evidence / evidence_parse_ok) populated
+    on each answer for downstream pivoting. Raw model response is returned
+    separately so the caller can persist it for audit.
     """
-    if shape != _SHAPE_A:
-        raise NotImplementedError(
-            f"score(shape={shape!r}) not implemented — "
-            "Shape B comes in migration step 9 with the evidence cache"
+    if shape == _SHAPE_A:
+        if video_path is None:
+            raise ValueError("score(shape='A') requires video_path")
+        if not video_path.exists():
+            raise FileNotFoundError(f"video not found: {video_path}")
+        model = reasoner_model or llm.vision_model
+        log.info(
+            f"[{session_id}] score (A): uploading {video_path.name} + asking "
+            f"{model} about {len(rubric.all_questions())} questions"
         )
-    if not video_path.exists():
-        raise FileNotFoundError(f"video not found: {video_path}")
+        video_file = llm.upload_video(video_path)
+        raw = llm.call_gemini_video(
+            prompt=prompt,
+            video_file=video_file,
+            model_name=reasoner_model,
+        )
+        source_model = model
 
-    log.info(
-        f"[{session_id}] score: uploading {video_path.name} + asking "
-        f"{reasoner_model or llm.vision_model} about "
-        f"{len(rubric.all_questions())} questions"
-    )
-    video_file = llm.upload_video(video_path)
-    raw = llm.call_gemini_video(
-        prompt=prompt,
-        video_file=video_file,
-        model_name=reasoner_model,
-    )
+    elif shape == _SHAPE_B:
+        # The Shape B prompt embeds # SYSTEM and # USER markers; split them
+        # out for the Anthropic message format.
+        from pipeline.render import split_system_user
+        system_part, user_part = split_system_user(prompt)
+        model = reasoner_model or DEFAULT_SHAPE_B_REASONER
+        log.info(
+            f"[{session_id}] score (B): asking {model} about "
+            f"{len(rubric.all_questions())} questions "
+            f"(prompt: {len(system_part):,} sys / {len(user_part):,} user chars)"
+        )
+        # Opus 4.7 rejects the temperature parameter; we pass None so the
+        # adapter omits it. Older Claude models accept temperature=0 — pass
+        # 0.0 there if we ever route to one.
+        temperature = None if model.startswith("claude-opus-4-7") else 0.0
+        raw = llm.call_claude_text(
+            system=system_part,
+            user=user_part,
+            max_tokens=16000,
+            temperature=temperature,
+            model_name=model,
+        )
+        source_model = model
 
+    else:
+        raise ValueError(f"unknown shape {shape!r}")
+
+    # ── Parse + build the answer set (shared path) ──
     parsed = parse_json_lenient(raw)
     if not isinstance(parsed, dict):
         raise ValueError(
@@ -374,11 +432,11 @@ def score(
         session_id=session_id,
         rubric_version=rubric_version,
         shape=shape,
-        source_model=reasoner_model or llm.vision_model,
+        source_model=source_model,
         prompt=prompt,
     )
     log.info(
-        f"[{session_id}] score: {len(answer_set.answers)} answers parsed "
+        f"[{session_id}] score ({shape}): {len(answer_set.answers)} answers parsed "
         f"({sum(1 for a in answer_set.answers.values() if a.insufficient_information)} "
         "INSUFFICIENT)"
     )
