@@ -28,7 +28,6 @@ from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT))
 
 from pipeline.answers_book import (
     compute_run_n,

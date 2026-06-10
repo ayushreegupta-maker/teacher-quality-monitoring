@@ -47,7 +47,6 @@ from typing import Optional
 from xml.etree import ElementTree as ET
 
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT))
 
 import openpyxl
 import requests
