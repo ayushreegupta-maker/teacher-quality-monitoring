@@ -1,6 +1,6 @@
 from datetime import date
 from pathlib import Path
-from typing import Literal, Optional, Union
+from typing import Literal, Optional
 
 from pydantic import BaseModel, Field
 
@@ -45,59 +45,10 @@ class VisualObservations(BaseModel):
     prompt_hash: Optional[str] = None
 
 
-class Evidence(BaseModel):
-    ts_start: str
-    ts_end: str
-    type: Literal["transcript", "visual"]
-    quote: str
-    indicator: str
-    reasoning: str
-
-
-ScoreValue = Union[int, float, Literal["insufficient_evidence"]]
-
-
-class DimensionScore(BaseModel):
-    dimension_id: str
-    rubric_version: str
-    score: ScoreValue
-    anchor_matched: Optional[str] = None
-    evidence: list[Evidence] = Field(default_factory=list)
-    confidence: Literal["high", "medium", "low"]
-    scorer_notes: Optional[str] = None
-    prompt_hash: Optional[str] = None
-
-
-class SessionScores(BaseModel):
-    session_id: str
-    rubric_version: str
-    scores: dict[str, DimensionScore]
-    overall: Optional[float] = None
-    cost_usd: Optional[float] = None
-    duration_seconds: Optional[float] = None
-
-
-class ItemEntry(BaseModel):
-    category: str
-    name: str
-    count_or_quantity: Optional[str] = None
-    specifics: Optional[str] = None
-    first_seen_at: Optional[str] = None
-
-
-class OtherItem(BaseModel):
-    name: str
-    location: Optional[str] = None
-
-
-class ConsolidatedItems(BaseModel):
-    activity_zone_items: list[ItemEntry] = Field(default_factory=list)
-    other_items_in_room: list[OtherItem] = Field(default_factory=list)
-    notes: Optional[str] = None
-    # Pipeline-set fields (not returned by the LLM)
-    session_id: Optional[str] = None
-    source_model: Optional[str] = None
-    prompt_hash: Optional[str] = None
+# Evidence + ScoreValue + DimensionScore + SessionScores + ItemEntry +
+# OtherItem + ConsolidatedItems archived 2026-06-10 to
+# pipeline/_archive/legacy_score_types.py — all tied to the legacy 5-dim
+# scoring + items-extraction flow. Zero live callers.
 
 
 class BoundaryDetection(BaseModel):

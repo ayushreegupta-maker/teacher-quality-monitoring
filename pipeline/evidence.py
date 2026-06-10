@@ -264,46 +264,9 @@ def boundaries_class_duration_minutes(boundaries: dict, sva) -> int:
 # ─── Enrich with Shape-A-derived data ─────────────────────────────────────
 
 
-def enrich_bundle_with_shape_a(
-    bundle: EvidenceBundle,
-    *,
-    phases: Optional[list[dict]] = None,
-    explanations: Optional[list[dict]] = None,
-    disturbances: Optional[list[dict]] = None,
-    cache_root: Path = _DEFAULT_CACHE_ROOT,
-) -> EvidenceBundle:
-    """Attach Shape-A-derived enrichment (phases / explanations /
-    disturbances) to a cached EvidenceBundle and re-persist it.
-
-    Existing values are overwritten by any non-None argument. Pass None
-    to leave the existing field alone.
-    """
-    if phases is not None:
-        bundle.phases = phases
-    if explanations is not None:
-        bundle.explanations = explanations
-    if disturbances is not None:
-        bundle.disturbances = disturbances
-
-    # Re-persist at the cache path. We reconstruct it from the bundle's
-    # own cache-key fields so this works for bundles loaded from disk.
-    cdir = cache_dir_for(
-        session_id=bundle.session_id,
-        subject=bundle.subject,
-        vision_model=bundle.vision_model,
-        fps=None if bundle.vision_fps == "fps-default" else _parse_fps_token(bundle.vision_fps),
-        chunking=bundle.chunking,
-        cache_root=cache_root,
-    )
-    cdir.mkdir(parents=True, exist_ok=True)
-    (cdir / "evidence_bundle.json").write_text(bundle.model_dump_json(indent=2))
-    log.info(
-        f"[{bundle.session_id}] enriched bundle with "
-        f"phases={'+' if bundle.phases else '-'} "
-        f"explanations={'+' if bundle.explanations else '-'} "
-        f"disturbances={'+' if bundle.disturbances else '-'}"
-    )
-    return bundle
+# enrich_bundle_with_shape_a archived 2026-06-10 →
+# pipeline/_archive/evidence_legacy.py (zero live callers; restore when
+# the Shape A → enrich → Shape B flow gets wired up).
 
 
 def _parse_fps_token(token: str) -> Optional[float]:

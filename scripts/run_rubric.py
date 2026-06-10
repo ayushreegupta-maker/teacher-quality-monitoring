@@ -46,7 +46,7 @@ from pipeline.answers_book import (
     write_sidecar,
 )
 from pipeline.boundaries import _parse_hms
-from pipeline.evidence import build_evidence_bundle, enrich_bundle_with_shape_a
+from pipeline.evidence import build_evidence_bundle
 from pipeline.rubric import (
     DEFAULT_SHAPE_B_REASONER,
     load_rubric,

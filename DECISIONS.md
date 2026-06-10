@@ -30,6 +30,27 @@ Audited every top-level symbol in the live `adapters/` and `pipeline/` modules f
 
 **What's NOT in the dead-code sweep:** the `_archive/` packages aren't imported by anything live. They're inert until someone explicitly references them.
 
+### 2026-06-10 — Round 2 (second sweep across remaining modules)
+
+After the first sweep I'd only audited 5 of 16 files. Did the full inventory and found a meaningful second tranche:
+
+| File | Lines saved | What came out |
+|---|---:|---|
+| `pipeline/types.py` (2nd pass) | −53 | 7 legacy-scoring/items types: `Evidence`, `ScoreValue`, `DimensionScore`, `SessionScores`, `ItemEntry`, `OtherItem`, `ConsolidatedItems` → `pipeline/_archive/legacy_score_types.py`. Also dropped unused `Union` import |
+| `adapters/sessions.py` | 34 → 13 | `register_session`, `load_session`, `list_sessions` → `adapters/_archive/sessions_legacy.py`. Kept `session_dir` (6 callers) |
+| `pipeline/boundaries.py` | 172 → 105 | The public `detect_boundaries(session, llm)` was archived to `pipeline/_archive/boundaries_legacy.py` — it was orphaned when `session_video.stage2_detect_boundaries` inlined the logic to pass `fps=0.3`. Internal helpers (`_parse_hms`, `_format_hms`, `_subtract_clocks`, `_derive_elapsed_from_walls`) stayed live because session_video imports them directly |
+| `pipeline/evidence.py` | −44 | `enrich_bundle_with_shape_a` → `pipeline/_archive/evidence_legacy.py`. Designed for a future Shape A → enrich → Shape B flow that isn't wired up. Restore when wiring it |
+| `scripts/run_rubric.py` | −1 | Removed dead import of `enrich_bundle_with_shape_a` |
+
+**Recovery patterns (round 2):**
+
+- **Legacy scoring/items types** for the archived 5-dim flow: `from pipeline._archive.legacy_score_types import DimensionScore, ConsolidatedItems, ...`
+- **Session meta.json persistence** (register/load/list sessions): `from adapters._archive.sessions_legacy import register_session, load_session, list_sessions`
+- **Old whole-video boundary call** (without fps-capping): `from pipeline._archive.boundaries_legacy import detect_boundaries`
+- **Shape A → bundle enrichment** for the future Shape A → enrich → Shape B flow: `from pipeline._archive.evidence_legacy import enrich_bundle_with_shape_a`
+
+**Combined sweep total:** ~1,400 lines stripped from live modules across both rounds. Verified: full live pipeline + all 8 archived modules + 4 entry-point scripts import clean.
+
 ---
 
 ## Vision
