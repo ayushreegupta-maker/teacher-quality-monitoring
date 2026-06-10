@@ -38,7 +38,7 @@ from pipeline.answers_book import (
 from pipeline.rubric import load_rubric
 from pipeline.types import RubricAnswer, RubricAnswerSet
 
-WORKBOOK = Path.home() / "Downloads" / "Teacher Quality Monitoring (1).xlsx"
+WORKBOOK = ROOT / "prompts" / "rubrics.xlsx"
 ANSWERS_XLSX = ROOT / "data" / "tqm_answers.xlsx"
 QUEUE_DIR = ROOT / "data" / "_answer_queue"
 CACHED_RUN = ROOT / "data" / "_archive" / "art_rubric_runs" / "2026-06-04_122724"

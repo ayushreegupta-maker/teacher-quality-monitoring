@@ -11,7 +11,7 @@ Usage:
         --session-id 2026-05-18__D28__0900 \\
         --rubric-version v1_2026-06-10 \\
         --shape A \\
-        [--workbook "/Users/oh/Downloads/Teacher Quality Monitoring (1).xlsx"] \\
+        [--workbook prompts/rubrics.xlsx] \\
         [--reasoner gemini-3.1-pro] \\
         [--force] \\
         [--dry-run]
@@ -64,7 +64,7 @@ from pipeline.session_video import (
     video_duration_seconds,
 )
 
-DEFAULT_WORKBOOK = Path.home() / "Downloads" / "Teacher Quality Monitoring (1).xlsx"
+DEFAULT_WORKBOOK = ROOT / "prompts" / "rubrics.xlsx"
 DEFAULT_CAMERAS_XLSX = ROOT / "data" / "cctv_cameras.xlsx"
 RUBRIC_RUNS_DIR = ROOT / "data" / "rubric_runs"
 PROMPTS_DIR = ROOT / "prompts"

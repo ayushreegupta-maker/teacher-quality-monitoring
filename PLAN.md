@@ -94,7 +94,7 @@ The current art rubric prompt is built **inline inside `run_art_rubric_test.py`*
 
 ## 2. The rubric workbook
 
-One file at `~/Downloads/Teacher Quality Monitoring (1).xlsx` with three tabs.
+One file at `prompts/rubrics.xlsx` (moved from `~/Downloads/Teacher Quality Monitoring (1).xlsx` on 2026-06-10 — source-of-truth now lives in the repo) with three tabs.
 
 | Tab | Questions | Sections | Cols | Maturity |
 |---|---:|---:|---|---|

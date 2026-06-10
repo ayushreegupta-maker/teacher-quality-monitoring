@@ -1,7 +1,7 @@
 """
 Q&A rubric loader + prompt renderer.
 
-The rubric workbook (`~/Downloads/Teacher Quality Monitoring (1).xlsx`) has
+The rubric workbook (`prompts/rubrics.xlsx`) has
 one tab per subject: Art, Public Speaking, Robotics. Each tab is a flat
 table of questions with one row per question and these columns:
 
