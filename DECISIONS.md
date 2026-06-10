@@ -2,7 +2,33 @@
 
 Living document. Update whenever a meaningful decision is made or a phase boundary is crossed. The point is that anyone reading this in 3 months (or a new collaborator joining) can understand *why* the system is the way it is, not just *what* it does.
 
-Last updated: **2026-06-02**
+Last updated: **2026-06-10**
+
+---
+
+## 2026-06-10 — Dead-code sweep across live modules
+
+Audited every top-level symbol in the live `adapters/` and `pipeline/` modules for live callers. Found ~830 lines of dead code (~56% of the audited surface) once the legacy 5-dimension scoring path was retired. All dead chunks **archived, not deleted** — recoverable via either the live `_archive/` packages or git history.
+
+**Files trimmed:**
+
+| File | Before | After | What came out |
+|---|---:|---:|---|
+| `adapters/db.py` → `adapters/_archive/db.py` | 561 | 0 (gone) | All 22 functions. The `team_scores` table data stays in `tqm.db`; only the I/O wrappers were dead. Likely revived when task #33 (teacher_schedule) lands |
+| `adapters/llm.py` | 443 | 244 | 5 dead LLMAdapter methods → `adapters/_archive/llm_legacy_methods.py` as `LLMAdapterLegacy` (subclass). Kept: `call_claude_text`, `upload_video`, `call_gemini_video`. Dropped: `call_claude_json`, `call_openai_text`, `call_openai_json`, `call_gemini_text`, `call_gemini_text_json` |
+| `pipeline/render.py` | 89 | 51 | `load_rubric` (YAML), `render_transcript`, `render_visual`, `render_score_prompt` → `pipeline/_archive/render_legacy.py` |
+| `pipeline/session_context.py` | 396 | 153 | `parse_camera_and_recorded_at`, `resolve_session_context`, `_activity_by_name`, `_activity_id_by_name` → `pipeline/_archive/session_context_legacy.py` |
+| `pipeline/types.py` | 285 | 232 | `LegacyRubric*` Pydantic types (3 classes) → `pipeline/_archive/legacy_rubric_types.py` |
+
+**Recovery patterns:**
+
+- **Need an OpenAI / Claude JSON / Gemini-text caller?** Change `LLMAdapter()` → `LLMAdapterLegacy()` at the instantiation site (`from adapters._archive.llm_legacy_methods import LLMAdapterLegacy`). Subclass re-adds all 5 methods.
+- **Task #33 wants the legacy DB-backed session context?** Import directly: `from pipeline._archive.session_context_legacy import resolve_session_context`. The function works as-is; only the import path changes. Its DB layer is `adapters._archive.db`.
+- **Need the YAML 5-dim rubric loader?** `from pipeline._archive.render_legacy import load_rubric, render_score_prompt`. Types come from `pipeline._archive.legacy_rubric_types`.
+
+**Why archive instead of delete:** consistent with the broader `_archive/` discipline. Git would preserve the bodies too, but importable archive modules let us re-enable a code path with a one-line import change rather than a `git show` + paste.
+
+**What's NOT in the dead-code sweep:** the `_archive/` packages aren't imported by anything live. They're inert until someone explicitly references them.
 
 ---
 

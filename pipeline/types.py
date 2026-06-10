@@ -2,7 +2,7 @@ from datetime import date
 from pathlib import Path
 from typing import Literal, Optional, Union
 
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field
 
 
 class SessionMeta(BaseModel):
@@ -135,53 +135,11 @@ class BoundaryDetection(BaseModel):
     prompt_hash: Optional[str] = None
 
 
-# ─── Legacy 5-dimension rubric (YAML-driven; pre-Q&A architecture) ─────────
-# Used only by render_score_prompt() + the archived scoring path. New
-# architecture uses Rubric/RubricSection/RubricQuestion below, loaded from
-# the rubric Excel workbook.
-class LegacyRubricDimension(BaseModel):
-    id: str
-    label: str
-    description: str
-    indicators: list[str]
-    signal_mappings: dict[str, list[str]]
-    anchors: dict[float, str]
-    common_failure_modes: Optional[list[str]] = None
-    scoring_direction: Optional[str] = None
-
-
-class LegacyRubricDomain(BaseModel):
-    id: str
-    label: str
-    description: str
-    dimensions: list[LegacyRubricDimension]
-
-
-class LegacyRubric(BaseModel):
-    version: str
-    name: str
-    created_at: str
-    context: dict
-    scoring_scale: dict
-    anti_bias_rules: list[str]
-    evidence_requirements: list[str]
-    domains: list[LegacyRubricDomain]
-
-    @field_validator("created_at", mode="before")
-    @classmethod
-    def _coerce_to_str(cls, v):
-        return str(v)
-
-    def get_dimension(self, dim_id: str) -> LegacyRubricDimension:
-        for domain in self.domains:
-            for dim in domain.dimensions:
-                if dim.id == dim_id:
-                    return dim
-        raise KeyError(f"Dimension {dim_id} not found in rubric")
-
-    def all_dimensions(self) -> list[LegacyRubricDimension]:
-        return [dim for domain in self.domains for dim in domain.dimensions]
-
+# Legacy 5-dim rubric types (LegacyRubric, LegacyRubricDimension,
+# LegacyRubricDomain) lived here through migration step 6; archived
+# 2026-06-10 to pipeline/_archive/legacy_rubric_types.py once the
+# archived render_score_prompt() became their sole consumer. See
+# DECISIONS.md for the dead-code sweep rationale.
 
 # ─── New Q&A rubric (Excel-driven; one tab per subject) ────────────────────
 # Drives the new architecture. See PLAN.md §3.1 + pipeline/rubric.py.

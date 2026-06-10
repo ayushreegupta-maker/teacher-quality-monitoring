@@ -1,20 +1,23 @@
+"""
+Generic prompt loading + Jinja-templating helpers.
+
+After the dead-code sweep on 2026-06-10, this module just exposes:
+  strip_frontmatter, load_prompt, _jinja_env, split_system_user,
+  render_vision_prompt.
+
+The 4 legacy 5-dimension-rubric functions (load_rubric, render_transcript,
+render_visual, render_score_prompt) moved to
+`pipeline/_archive/render_legacy.py`. See DECISIONS.md for the rationale.
+"""
 import re
 from pathlib import Path
 
-import yaml
 from jinja2 import Environment
 
-from pipeline.types import (
-    LegacyRubric,
-    LegacyRubricDimension,
-    SessionMeta,
-    Transcript,
-    VisualObservations,
-)
+from pipeline.types import SessionMeta
 
 ROOT = Path(__file__).resolve().parent.parent
 PROMPT_DIR = ROOT / "prompts"
-RUBRIC_DIR = ROOT / "rubric"
 
 
 def strip_frontmatter(text: str) -> str:
@@ -29,48 +32,8 @@ def load_prompt(prompt_id: str) -> str:
     return strip_frontmatter((PROMPT_DIR / f"{prompt_id}.md").read_text())
 
 
-def load_rubric(path: Path | None = None) -> LegacyRubric:
-    """Legacy 5-dimension rubric loader (YAML). Stays around for the archived
-    scoring path. New Q&A rubric loader lives in pipeline.rubric."""
-    path = path or (RUBRIC_DIR / "rubric_v0_1.yaml")
-    return LegacyRubric.model_validate(yaml.safe_load(path.read_text()))
-
-
-def render_transcript(transcript: Transcript) -> str:
-    return "\n".join(f"[{seg.ts_start}] {seg.speaker}: {seg.text}" for seg in transcript.segments)
-
-
-def render_visual(observations: VisualObservations) -> str:
-    return "\n".join(
-        f"[{o.ts_start}-{o.ts_end}] {o.description}" for o in observations.observations
-    )
-
-
 def _jinja_env() -> Environment:
     return Environment(autoescape=False, trim_blocks=True, lstrip_blocks=True)
-
-
-def render_score_prompt(
-    dimension: LegacyRubricDimension,
-    rubric: LegacyRubric,
-    session: SessionMeta,
-    transcript: Transcript,
-    observations: VisualObservations,
-    few_shot_examples: list | None = None,
-) -> str:
-    """Legacy 5-dimension prompt renderer. Stays around for the archived
-    scoring path; new Q&A path uses pipeline.rubric.render_prompt()."""
-    template = _jinja_env().from_string(load_prompt("score_dimension"))
-    return template.render(
-        dimension=dimension.model_dump(),
-        rubric_version=rubric.version,
-        rubric_scoring_scale=rubric.scoring_scale,
-        anti_bias_rules=rubric.anti_bias_rules,
-        session=session.model_dump(mode="json"),
-        transcript_rendered=render_transcript(transcript),
-        visual_observations_rendered=render_visual(observations),
-        few_shot_examples=few_shot_examples or [],
-    )
 
 
 def split_system_user(rendered: str) -> tuple[str, str]:
