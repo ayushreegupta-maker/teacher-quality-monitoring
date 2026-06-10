@@ -30,7 +30,14 @@ from pathlib import Path
 
 import openpyxl
 
-from pipeline.types import Rubric, RubricQuestion, RubricSection
+from adapters.llm import LLMAdapter, parse_json_lenient, prompt_hash
+from pipeline.types import (
+    Rubric,
+    RubricAnswer,
+    RubricAnswerSet,
+    RubricQuestion,
+    RubricSection,
+)
 
 log = logging.getLogger(__name__)
 
@@ -292,3 +299,164 @@ def _strip_frontmatter(text: str) -> str:
         return text
     m = _FRONTMATTER_RE.match(text)
     return text[m.end():] if m else text
+
+
+_HMS_RE = _re.compile(r"^\d{1,2}:\d{2}:\d{2}$")
+
+
+def _is_valid_hms(s: str) -> bool:
+    """Strict HH:MM:SS or H:MM:SS check. Does NOT validate field ranges
+    (24h, 60m, 60s); just shape."""
+    if not isinstance(s, str):
+        return False
+    return bool(_HMS_RE.match(s.strip()))
+
+
+# ─── Scoring ──────────────────────────────────────────────────────────────
+
+
+def score(
+    *,
+    rubric: Rubric,
+    prompt: str,
+    llm: LLMAdapter,
+    session_id: str,
+    rubric_version: str,
+    video_path: Path,
+    shape: str = _SHAPE_A,
+    reasoner_model: str | None = None,
+) -> tuple[RubricAnswerSet, str]:
+    """Run one rubric scoring call. Returns (RubricAnswerSet, raw_response).
+
+    Shape A (default): uploads `video_path` to Gemini and asks the rendered
+    `prompt`. The model watches the trimmed class window and returns one
+    answer per question. `reasoner_model` overrides the adapter's default
+    vision model for this single call (used by the model-sweep runner).
+
+    Shape B: defers to step 9 — the evidence-cache layer needs to land
+    before we can drive a text reasoner over per-session evidence bundles.
+
+    The returned RubricAnswerSet carries denormalised flags
+    (insufficient_information, had_evidence, evidence_parse_ok) on each
+    answer so the accumulator XLSX (step 10) can pivot without re-parsing
+    answer strings. Raw model response is returned separately so the
+    caller can persist it for audit alongside the parsed answers.
+    """
+    if shape != _SHAPE_A:
+        raise NotImplementedError(
+            f"score(shape={shape!r}) not implemented — "
+            "Shape B comes in migration step 9 with the evidence cache"
+        )
+    if not video_path.exists():
+        raise FileNotFoundError(f"video not found: {video_path}")
+
+    log.info(
+        f"[{session_id}] score: uploading {video_path.name} + asking "
+        f"{reasoner_model or llm.vision_model} about "
+        f"{len(rubric.all_questions())} questions"
+    )
+    video_file = llm.upload_video(video_path)
+    raw = llm.call_gemini_video(
+        prompt=prompt,
+        video_file=video_file,
+        model_name=reasoner_model,
+    )
+
+    parsed = parse_json_lenient(raw)
+    if not isinstance(parsed, dict):
+        raise ValueError(
+            f"expected dict response keyed by Q-id, got {type(parsed).__name__}"
+        )
+
+    answer_set = _build_answer_set(
+        parsed_response=parsed,
+        rubric=rubric,
+        session_id=session_id,
+        rubric_version=rubric_version,
+        shape=shape,
+        source_model=reasoner_model or llm.vision_model,
+        prompt=prompt,
+    )
+    log.info(
+        f"[{session_id}] score: {len(answer_set.answers)} answers parsed "
+        f"({sum(1 for a in answer_set.answers.values() if a.insufficient_information)} "
+        "INSUFFICIENT)"
+    )
+    return answer_set, raw
+
+
+def _build_answer_set(
+    *,
+    parsed_response: dict,
+    rubric: Rubric,
+    session_id: str,
+    rubric_version: str,
+    shape: str,
+    source_model: str,
+    prompt: str,
+) -> RubricAnswerSet:
+    """Walk the model's JSON response, validate per-question shape, and
+    assemble a typed RubricAnswerSet. Skips unexpected keys + malformed
+    rows with a warning — never raises on a single bad answer."""
+    valid_ids = {q.id for q in rubric.all_questions()}
+    answers: dict[str, RubricAnswer] = {}
+
+    for qid, payload in parsed_response.items():
+        if qid not in valid_ids:
+            log.warning(f"[{session_id}] unexpected qid {qid!r}, skipping")
+            continue
+        if not isinstance(payload, dict):
+            log.warning(
+                f"[{session_id}] {qid}: payload not a dict ({type(payload).__name__}), "
+                "skipping"
+            )
+            continue
+
+        ans_str = str(payload.get("answer", "")).strip()
+        is_insufficient = ans_str.upper().startswith("INSUFFICIENT")
+
+        ev_ts = payload.get("evidence_timestamps") or []
+        if isinstance(ev_ts, str):
+            ev_ts = [ev_ts]
+        ev_ts = [str(t).strip() for t in ev_ts if str(t).strip()]
+        had_evidence = bool(ev_ts)
+        evidence_parse_ok = all(_is_valid_hms(t) for t in ev_ts) if had_evidence else True
+
+        confidence = str(payload.get("confidence", "low")).strip().lower()
+        if confidence not in ("high", "medium", "low"):
+            log.warning(
+                f"[{session_id}] {qid}: confidence={confidence!r} not in "
+                "{high, medium, low}; coercing to 'low'"
+            )
+            confidence = "low"
+
+        try:
+            answers[qid] = RubricAnswer(
+                id=qid,
+                answer=ans_str,
+                confidence=confidence,
+                evidence_timestamps=ev_ts,
+                rationale=payload.get("rationale"),
+                insufficient_information=is_insufficient,
+                had_evidence=had_evidence,
+                evidence_parse_ok=evidence_parse_ok,
+            )
+        except Exception as e:
+            log.warning(f"[{session_id}] {qid}: validation failed ({e!r}); skipping")
+
+    missing = sorted(valid_ids - set(answers.keys()))
+    if missing:
+        log.warning(
+            f"[{session_id}] {len(missing)} questions not in model response: "
+            f"{missing[:5]}{'...' if len(missing) > 5 else ''}"
+        )
+
+    return RubricAnswerSet(
+        session_id=session_id,
+        subject=rubric.subject,
+        rubric_version=rubric_version,
+        answers=answers,
+        source_model=source_model,
+        shape=shape,
+        prompt_hash=prompt_hash(prompt),
+    )
