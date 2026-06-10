@@ -74,6 +74,6 @@ def split_system_user(rendered: str) -> tuple[str, str]:
 
 
 def render_vision_prompt(session: SessionMeta) -> str:
-    """Render the vision_observe prompt with session context injected."""
-    template = _jinja_env().from_string(load_prompt("vision_observe"))
+    """Render the vision prompt with session context injected."""
+    template = _jinja_env().from_string(load_prompt("vision"))
     return template.render(session=session.model_dump(mode="json"))

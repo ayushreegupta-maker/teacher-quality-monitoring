@@ -63,7 +63,7 @@ def detect_boundaries(session: SessionMeta, llm: LLMAdapter) -> BoundaryDetectio
     sidesteps the systemic wall-clock leak we observed across CCTV recordings
     where the model strips the hours digit instead of subtracting properly.
     """
-    template_text = load_prompt("detect_boundaries")
+    template_text = load_prompt("boundaries")
     rendered = _jinja_env().from_string(template_text).render(
         session=session.model_dump(mode="json"),
     )

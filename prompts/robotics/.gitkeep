@@ -1,0 +1,7 @@
+# Robotics rubric prompt files land here.
+#
+# Naming convention: rubric_robotics_v<N>_<YYYY-MM-DD>.md
+#   e.g. rubric_robotics_v1_2026-06-10.md
+#
+# Loader: pipeline/rubric.py resolves the file via subject + version.
+# See PLAN.md §3.1 and §3.5 for the full architecture.

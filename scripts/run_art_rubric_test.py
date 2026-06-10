@@ -272,8 +272,8 @@ def stage2_boundaries(boundary_input: Path, full_combined: Path, run_dir: Path,
         video_path=boundary_input,
     )
 
-    # Render the existing detect_boundaries prompt
-    template_text = load_prompt("detect_boundaries")
+    # Render the existing boundaries prompt
+    template_text = load_prompt("boundaries")
     rendered = _jinja_env().from_string(template_text).render(
         session=session.model_dump(mode="json"),
     )
