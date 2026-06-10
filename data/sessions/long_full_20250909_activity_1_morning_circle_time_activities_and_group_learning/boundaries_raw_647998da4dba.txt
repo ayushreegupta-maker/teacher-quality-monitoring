@@ -1,0 +1,6 @@
+{
+  "first_child_visible_at": "00:04:02",
+  "last_child_visible_at": "00:34:59",
+  "confidence": "high",
+  "notes": "The first child enters the room at 00:04:02 and stays. The last child is visible until 00:34:59, after which no children are seen in the room."
+}

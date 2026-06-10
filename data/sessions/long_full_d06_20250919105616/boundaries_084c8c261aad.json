@@ -1,0 +1,11 @@
+{
+  "first_child_visible_at": "00:00:00",
+  "last_child_visible_at": "00:00:00",
+  "confidence": "high",
+  "notes": "Children are visible throughout the entire recording, indicating a 'children visible throughout' (Shape B) scenario. Therefore, both timestamps are null.",
+  "last_child_evidence": null,
+  "self_check_passed": true,
+  "session_id": "long_full_d06_20250919105616",
+  "source_model": "gemini-2.5-flash",
+  "prompt_hash": "084c8c261aad"
+}

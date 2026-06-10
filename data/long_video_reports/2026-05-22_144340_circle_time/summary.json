@@ -1,0 +1,789 @@
+{
+  "activity_name": "Circle time",
+  "video": "/Users/oh/Desktop/Teacher Quality Monitoring/data/raw/20250909_activity_1_Morning_circle_time_activities_and_group_learning.mp4",
+  "total_seconds": 2117.343,
+  "boundaries": {
+    "first_child_visible_at": "00:04:00",
+    "last_child_visible_at": "00:42:00",
+    "confidence": "high",
+    "notes": "The first child enters at 00:04:00 and the last child leaves at 00:42:00. There are no children visible before or after these timestamps for a sustained period.",
+    "first_child_evidence": "A child in a pink dress walks into the room, followed by a man and a woman.",
+    "last_child_evidence": "A child in a pink dress walks out of the room, followed by a woman.",
+    "self_check_passed": true,
+    "session_id": "long_full_20250909_activity_1_morning_circle_time_activities_and_group_learning",
+    "source_model": "gemini-2.5-flash",
+    "prompt_hash": "b051db6b6152"
+  },
+  "windows": {
+    "before": [
+      180.0,
+      480.0
+    ],
+    "after": [
+      1817.3429999999998,
+      2117.343
+    ],
+    "warnings": [
+      "last_child timestamp (2520s) is beyond video duration (2117s) by more than 5% \u2014 likely hallucinated by the boundary model; treating as missing and falling back",
+      "Last-child timestamp invalid \u2014 after-window uses last 5 min of recording."
+    ]
+  },
+  "results": {
+    "before": {
+      "items": {
+        "activity_zone_items": [
+          {
+            "category": "Furniture",
+            "name": "rug",
+            "count_or_quantity": "one",
+            "specifics": "located in one corner of the room; serves as the group activity/reading area",
+            "first_seen_at": "00:00:00"
+          },
+          {
+            "category": "Furniture",
+            "name": "cushions",
+            "count_or_quantity": "multiple",
+            "specifics": "yellow; arranged in a semi-circle on the rug",
+            "first_seen_at": "00:00:00"
+          }
+        ],
+        "other_items_in_room": [
+          {
+            "name": "tables",
+            "location": "classroom floor, set up for activities"
+          },
+          {
+            "name": "chairs",
+            "location": "tucked under tables"
+          },
+          {
+            "name": "shelves",
+            "location": "along room walls; filled with books and learning materials"
+          },
+          {
+            "name": "books",
+            "location": "on shelves"
+          },
+          {
+            "name": "various learning materials",
+            "location": "on shelves"
+          },
+          {
+            "name": "colorful drawings / children's artwork",
+            "location": "walls"
+          },
+          {
+            "name": "educational posters / materials",
+            "location": "walls"
+          },
+          {
+            "name": "large circular light fixture",
+            "location": "ceiling; described as white"
+          },
+          {
+            "name": "large windows",
+            "location": "walls; providing natural light and view outside"
+          }
+        ],
+        "notes": "The classroom is empty throughout all observations (00:00:00\u201300:05:00); no children or teacher are present. The activity zone (rug with yellow cushions in semi-circle) is identified as the group circle area based on context, but no active use is observed. Counts for cushions are not explicitly stated beyond 'arranged in a semi-circle.' No additional specifics are given for most items.",
+        "session_id": "long_vision_20250909_activity_1_morning_circle_time_activities_and_group_learning_before",
+        "source_model": "claude-sonnet-4-6",
+        "prompt_hash": "0a584ed472ce"
+      },
+      "scores": {
+        "playground": {
+          "session_id": "long_before_playground_20250909_activity_1_morning_circle_time_activities_and_group_learning",
+          "rubric_version": "0.2.3",
+          "scores": {
+            "narrative": {
+              "dimension_id": "narrative",
+              "rubric_version": "0.2.3",
+              "score": 0,
+              "anchor_matched": "No experiential context \u2014 generic space with no immersive framing; pure utility setup",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:01:00",
+                  "type": "visual",
+                  "quote": "There are colorful drawings and educational materials on the walls. The floor is light gray, and there are yellow cushions arranged in a semi-circle on a rug in one corner.",
+                  "indicator": "Thematic decor that names or evokes a setting",
+                  "reasoning": "The wall decorations are described as generic educational materials and children's artwork, not thematic decor evoking a specific immersive setting; the cushion arrangement is functional circle-time setup, not narrative framing."
+                },
+                {
+                  "ts_start": "00:03:00",
+                  "ts_end": "00:04:00",
+                  "type": "visual",
+                  "quote": "The walls are decorated with educational posters and children's artwork, adding to the vibrant learning environment.",
+                  "indicator": "An atmospheric anchor (banner, central feature, framing object)",
+                  "reasoning": "Educational posters and generic children's artwork do not constitute an atmospheric anchor or immersive narrative framing \u2014 per the rubric, generic classroom decoration does not earn a narrative score."
+                },
+                {
+                  "ts_start": "00:04:00",
+                  "ts_end": "00:05:00",
+                  "type": "visual",
+                  "quote": "The camera captures the full extent of the room, highlighting the thoughtful arrangement of furniture and materials.",
+                  "indicator": "An 'in-progress project' feel where the setup itself tells what's happening",
+                  "reasoning": "The overall space is described as a well-organized utility classroom with no deliberate scene-setting, story, or immersive context \u2014 it is a pure utility setup."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The session is an empty classroom recording with no children or teacher present. The space shows standard early-childhood classroom organization (cushions, shelves, educational posters) but no thematic or narrative framing that would place a child inside a deliberate setting.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "multi_sensory": {
+              "dimension_id": "multi_sensory",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "The recording shows only an empty classroom with no children or teacher present and no activity taking place. The session is described as a morning circle time activity, but no actual engagement, materials in use, or sensory interactions are observable. The visual observations describe the room setup (yellow cushions, shelves with books, educational posters) but no active multi-sensory engagement can be assessed from a static, empty room. Insufficient evidence to score this dimension.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "boundary": {
+              "dimension_id": "boundary",
+              "rubric_version": "0.2.3",
+              "score": 1.0,
+              "anchor_matched": "At least one clear, unambiguous activity boundary \u2014 a canvas, paper, mat, rug, table, low fence, or similar marker visually defines the zone. A single well-defined zone is sufficient for this score.",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:01:00",
+                  "type": "visual",
+                  "quote": "there are yellow cushions arranged in a semi-circle on a rug in one corner",
+                  "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+                  "reasoning": "The rug with yellow cushions arranged in a semi-circle provides an unambiguous, self-evident physical boundary for the circle time activity zone."
+                },
+                {
+                  "ts_start": "00:02:00",
+                  "ts_end": "00:03:00",
+                  "type": "visual",
+                  "quote": "The yellow cushions on the rug suggest a designated area for group activities or reading.",
+                  "indicator": "The boundary is intuitive to a child without verbal explanation from an adult",
+                  "reasoning": "The combination of a rug and distinctively colored cushions arranged in a purposeful shape creates a visually intuitive boundary that a child could identify without adult direction."
+                },
+                {
+                  "ts_start": "00:03:00",
+                  "ts_end": "00:04:00",
+                  "type": "visual",
+                  "quote": "The various sections of the room, including the reading corner with cushions and the activity tables, are clearly visible.",
+                  "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+                  "reasoning": "The reading/circle corner is described as a distinct, clearly visible section of the room, confirming the boundary is well-defined and spatially separate from other areas."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "No children or teacher present during the recording; however, the physical setup is fully observable and provides sufficient evidence to score the boundary dimension. The rug with semi-circle cushion arrangement is a classic, unambiguous circle-time boundary.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "movement": {
+              "dimension_id": "movement",
+              "rubric_version": "0.2.3",
+              "score": 1.0,
+              "anchor_matched": "Both elements are present \u2014 children can clearly access the activity zone (visible path markers not required; minor adult presence in the path is acceptable as long as children get past) AND deliberate positioning suited to the activity (standing, kneeling, or sitting as the activity calls for), with materials reachable from that posture. Explicit seating like cushions is NOT required when the activity naturally invites standing or kneeling.",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:01:00",
+                  "type": "visual",
+                  "quote": "There are colorful drawings and educational materials on the walls. The floor is light gray, and there are yellow cushions arranged in a semi-circle on a rug in one corner.",
+                  "indicator": "Clear deliberate positioning suited to the activity",
+                  "reasoning": "Yellow cushions arranged in a semi-circle on a rug provide deliberate, activity-appropriate seating for a group circle time activity, making it immediately clear where children should sit."
+                },
+                {
+                  "ts_start": "00:02:00",
+                  "ts_end": "00:03:00",
+                  "type": "visual",
+                  "quote": "The bright and inviting atmosphere of the room is evident, with ample space for children to move around. The yellow cushions on the rug suggest a designated area for group activities or reading.",
+                  "indicator": "Enough space at the activity for children to stand, kneel, sit, or move as the activity requires",
+                  "reasoning": "Ample space around the cushioned rug area confirms children can access and settle into the circle time zone without obstruction."
+                },
+                {
+                  "ts_start": "00:01:00",
+                  "ts_end": "00:02:00",
+                  "type": "visual",
+                  "quote": "The classroom remains empty and quiet. The camera provides a wide shot of the entire room, showing the organized layout of furniture and learning stations. The shelves are filled with books and various learning materials. The tables are clean and set up for activities, with some chairs tucked under them.",
+                  "indicator": "Children can clearly access the activity zone from the room entry \u2014 minor adult presence in the path is acceptable as long as children can still get past",
+                  "reasoning": "The organized layout with chairs tucked under tables and clear floor space indicates an unobstructed path from the room entry to the circle time rug area."
+                },
+                {
+                  "ts_start": "00:04:00",
+                  "ts_end": "00:05:00",
+                  "type": "visual",
+                  "quote": "The camera captures the full extent of the room, highlighting the thoughtful arrangement of furniture and materials. The large windows offer a view of the outside, and the bright lighting ensures a cheerful ambiance. The space appears clean and well-maintained, ready for the day's activities.",
+                  "indicator": "No significant clutter, furniture, or persistent adult barriers materially blocking the path between entry and the activity zone",
+                  "reasoning": "The thoughtful, clutter-free arrangement of the room confirms no barriers exist between the entry and the circle time zone."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "No children or adults are present in the recording; scoring is based entirely on the physical setup. The semi-circle of yellow cushions on a rug clearly designates the circle time area with appropriate seated positioning, and the open, organized room layout provides unobstructed access.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "clean_up": {
+              "dimension_id": "clean_up",
+              "rubric_version": "0.2.3",
+              "score": 0.5,
+              "anchor_matched": "Some materials can be returned by children, others require adult help (mixed system; partial labelling; some items reachable, some not)",
+              "evidence": [
+                {
+                  "ts_start": "00:01:00",
+                  "ts_end": "00:02:00",
+                  "type": "visual",
+                  "quote": "The shelves are filled with books and various learning materials. The tables are clean and set up for activities, with some chairs tucked under them.",
+                  "indicator": "Storage is at child height and accessible without adult help",
+                  "reasoning": "Shelves are visible and appear to be at a low level consistent with child-height access, suggesting some materials are reachable by children, but no detail on labelling or organization is discernible."
+                },
+                {
+                  "ts_start": "00:03:00",
+                  "ts_end": "00:04:00",
+                  "type": "visual",
+                  "quote": "The shelves are neatly organized, and the walls are decorated with educational posters and children's artwork, adding to the vibrant learning environment.",
+                  "indicator": "Setup is organized rather than piled \u2014 children can see where each thing goes",
+                  "reasoning": "Neatly organized shelves suggest items have designated spots, which supports child-led cleanup, but the absence of visible picture/symbol/color labels cannot be confirmed or ruled out from the description."
+                },
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:01:00",
+                  "type": "visual",
+                  "quote": "There are colorful drawings and educational materials on the walls. The floor is light gray, and there are yellow cushions arranged in a semi-circle on a rug in one corner.",
+                  "indicator": "Return locations are intuitive or visually labelled (pictures, symbols, color codes, silhouettes \u2014 child-readable, not text-only)",
+                  "reasoning": "No visual labels, silhouettes, or color-coded return spots are described on shelves or storage areas, leaving the labelling system unclear and preventing a full score."
+                }
+              ],
+              "confidence": "low",
+              "scorer_notes": "The session is an empty classroom with no children or cleanup activity observed. Evidence is limited to static visual descriptions of the room. Shelves appear child-height and organized, but no detail on visual labelling of return locations is provided. A score of 0.5 reflects partial evidence of good design (low shelves, organized layout) without confirmation of child-readable labels or full child-independence in cleanup.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": 0.625,
+          "cost_usd": null,
+          "duration_seconds": 12.915807962417603
+        },
+        "toy_design": {
+          "session_id": "long_before_toy_design_20250909_activity_1_morning_circle_time_activities_and_group_learning",
+          "rubric_version": "0.2.0",
+          "scores": {
+            "purpose": {
+              "dimension_id": "purpose",
+              "rubric_version": "0.2.0",
+              "score": 0.5,
+              "anchor_matched": "Some cues to purpose are present but the arrangement is mixed or partially staged; intent is unclear in parts",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:01:00",
+                  "type": "visual",
+                  "quote": "there are yellow cushions arranged in a semi-circle on a rug in one corner",
+                  "indicator": "Materials arranged at the activity zone in a way that obviously communicates what to do",
+                  "reasoning": "Cushions arranged in a semi-circle on a rug is a recognizable signal for a group gathering/circle time activity, giving children a partial cue about where to sit together."
+                },
+                {
+                  "ts_start": "00:02:00",
+                  "ts_end": "00:03:00",
+                  "type": "visual",
+                  "quote": "The yellow cushions on the rug suggest a designated area for group activities or reading.",
+                  "indicator": "A child arriving at the activity zone could guess what to do from the arrangement alone",
+                  "reasoning": "The cushion arrangement suggests sitting together but does not clearly communicate the specific activity (songs, storytelling, or guided discussion), leaving the precise purpose partially ambiguous."
+                },
+                {
+                  "ts_start": "00:03:00",
+                  "ts_end": "00:04:00",
+                  "type": "visual",
+                  "quote": "The various sections of the room, including the reading corner with cushions and the activity tables, are clearly visible. The shelves are neatly organized, and the walls are decorated with educational posters and children's artwork",
+                  "indicator": "Optional / supplementary cues (labels, signs, mid-use materials, example work) \u2014 present but NOT required",
+                  "reasoning": "While supplementary environmental cues (posters, artwork) are present, no specific materials for circle time activities (books open, instruments, story props) are staged at the circle area to clarify the intended activity beyond general group gathering."
+                }
+              ],
+              "confidence": "medium",
+              "scorer_notes": "The semi-circle cushion arrangement is a recognizable convention for circle time, providing a partial cue. However, no activity-specific materials (e.g., a book, puppets, instruments) are staged at the circle area to communicate the specific nature of the activity. The setup communicates 'sit here together' but not clearly 'here is what we will do,' warranting a 0.5 score.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "anchor_and_choice_materials": {
+              "dimension_id": "anchor_and_choice_materials",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "The session recording shows only an empty classroom with no children present and no active play-space setup observable. The transcript is empty. While yellow cushions arranged in a semi-circle and shelves with books/materials are visible, no anchor material or choice materials are actively set up or in use for the described circle time activity. There is insufficient evidence to score this dimension reliably.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "spark_curiosity": {
+              "dimension_id": "spark_curiosity",
+              "rubric_version": "0.2.0",
+              "score": 0,
+              "anchor_matched": "Activity area is purely functional with no curiosity hook \u2014 children would not have any 'what's that?' moment from what is at the activity itself",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:01:00",
+                  "type": "visual",
+                  "quote": "There are colorful drawings and educational materials on the walls. The floor is light gray, and there are yellow cushions arranged in a semi-circle on a rug in one corner.",
+                  "indicator": "A surprising or unexpected element AT the activity zone",
+                  "reasoning": "The activity area (yellow cushions in semi-circle on rug) contains only standard seating cushions with no surprising, mysterious, or visually striking element that would invite a 'what's that?' moment; wall decorations are explicitly excluded by the rubric."
+                },
+                {
+                  "ts_start": "00:03:00",
+                  "ts_end": "00:04:00",
+                  "type": "visual",
+                  "quote": "The various sections of the room, including the reading corner with cushions and the activity tables, are clearly visible. The shelves are neatly organized, and the walls are decorated with educational posters and children's artwork.",
+                  "indicator": "Deliberate novelty in the activity setup beyond familiar materials",
+                  "reasoning": "The circle-time area shows only familiar cushions with no novel, hidden, or curiosity-sparking element at the activity zone itself."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The classroom is empty throughout the entire recording with no activity in progress. The designated circle-time area (yellow cushions on rug) is visible but contains only standard, familiar materials. No curiosity hook is present at the activity zone. Wall art and shelf materials are excluded per rubric rules.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "challenge_adjustment": {
+              "dimension_id": "challenge_adjustment",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "The session recording shows only an empty classroom with no children or teacher present, and the transcript contains no dialogue. While shelves with books and learning materials are visible, the camera angles and descriptions do not provide sufficient detail to determine whether multiple difficulty levels, tiered materials, or deliberate challenge variations are present in the setup. No activity is underway and no specific materials can be assessed for difficulty variation.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "self_served": {
+              "dimension_id": "self_served",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "The recording shows only an empty classroom with no children or active materials in use. While yellow cushions arranged in a semi-circle are visible, no specific activity materials for the morning circle time activity are observable in sufficient detail to assess safety, recognisability, weight, or sizing for child hands. No children or teacher interactions are present to provide any additional signal. Cannot reliably score this dimension from the available evidence.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": 0.25,
+          "cost_usd": null,
+          "duration_seconds": 10.383920907974243
+        }
+      }
+    },
+    "after": {
+      "items": {
+        "activity_zone_items": [
+          {
+            "category": "Furniture",
+            "name": "cushions",
+            "count_or_quantity": "multiple",
+            "specifics": "yellow, on the floor for children to sit on",
+            "first_seen_at": "00:00:00"
+          }
+        ],
+        "other_items_in_room": [
+          {
+            "name": "play tunnel",
+            "location": "floor, away from main circle group"
+          },
+          {
+            "name": "small tables",
+            "location": "background/around the room"
+          },
+          {
+            "name": "chairs",
+            "location": "background/around the room"
+          },
+          {
+            "name": "shelves",
+            "location": "background, along wall"
+          },
+          {
+            "name": "mat",
+            "location": "near the shelves"
+          }
+        ],
+        "notes": "Observations are largely behavioral/descriptive rather than object-focused. Items on the shelves are referenced but never described in detail, so their contents cannot be inventoried. The activity zone is the circle area where children sit on yellow cushions; all other furniture and play items are peripheral to that zone.",
+        "session_id": "long_vision_20250909_activity_1_morning_circle_time_activities_and_group_learning_after",
+        "source_model": "claude-sonnet-4-6",
+        "prompt_hash": "0a584ed472ce"
+      },
+      "scores": {
+        "playground": {
+          "session_id": "long_after_playground_20250909_activity_1_morning_circle_time_activities_and_group_learning",
+          "rubric_version": "0.2.3",
+          "scores": {
+            "narrative": {
+              "dimension_id": "narrative",
+              "rubric_version": "0.2.3",
+              "score": 0,
+              "anchor_matched": "No experiential context \u2014 generic space with no immersive framing; pure utility setup",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:00:30",
+                  "type": "visual",
+                  "quote": "The video shows a classroom with several children and a teacher. The children are sitting on yellow cushions on the floor, while the teacher stands in front of them. There are various play areas and furniture around the room, including small tables and chairs, and a play tunnel.",
+                  "indicator": "Thematic decor that names or evokes a setting",
+                  "reasoning": "The space is described as a generic classroom with standard furniture and a play tunnel \u2014 no thematic decor, props, or atmospheric anchors that would place children inside a deliberate setting."
+                },
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:04:57",
+                  "type": "transcript",
+                  "quote": "Now let us form the apple. Form, form the apple and we form the apple.",
+                  "indicator": "Props that place the child inside the theme",
+                  "reasoning": "The fruit activity is conducted entirely through song and gesture with no physical props, scene-setting decor, or framing that would create an immersive narrative context around the activity."
+                },
+                {
+                  "ts_start": "00:04:47",
+                  "ts_end": "00:05:00",
+                  "type": "transcript",
+                  "quote": "Now, today we're going to listen to a story. But should we go to the trampoline and listen to the story?",
+                  "indicator": "An atmospheric anchor (banner, central feature, framing object)",
+                  "reasoning": "The teacher references moving to a trampoline for the next activity, confirming the current space has no deliberate immersive framing or atmospheric anchor \u2014 it is a utility circle-time setup."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": null,
+              "prompt_hash": "c92c689bf87b"
+            },
+            "multi_sensory": {
+              "dimension_id": "multi_sensory",
+              "rubric_version": "0.2.3",
+              "score": 1.0,
+              "anchor_matched": "Two or more senses are meaningfully engaged through deliberate material and arrangement choices",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:46",
+                  "type": "transcript",
+                  "quote": "Now we form the apple. Form, form the apple and we form the apple. Form, form the apple. Now we peel the apple. Peel, peel the apple and we peel the apple. Peel, peel the apple. Now we chop the apple. Chop, chop the apple. Now we eat the apple.",
+                  "indicator": "Proprioceptive / movement opportunities (balance, climbing, kneeling)",
+                  "reasoning": "The teacher leads children through repeated whole-body mime gestures (forming, peeling, chopping, eating) that engage proprioceptive and motor senses alongside the auditory song/chant."
+                },
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "04:44",
+                  "type": "transcript",
+                  "quote": "Form, form the apple and we form the apple. Peel, peel the apple. Chop, chop the apple. Eat, eat the apple.",
+                  "indicator": "Sound-making elements (instruments, chimes, water, music)",
+                  "reasoning": "The rhythmic, repetitive chanting constitutes a deliberate auditory engagement throughout the entire activity, pairing sound with movement."
+                },
+                {
+                  "ts_start": "04:44",
+                  "ts_end": "04:47",
+                  "type": "transcript",
+                  "quote": "(clapping)",
+                  "indicator": "Sound-making elements (instruments, chimes, water, music)",
+                  "reasoning": "Children clapping together adds another auditory and tactile/proprioceptive element at the close of the activity."
+                },
+                {
+                  "ts_start": "04:47",
+                  "ts_end": "04:57",
+                  "type": "transcript",
+                  "quote": "Now, today we're going to listen to a story. But should we go to the trampoline and listen to the story?",
+                  "indicator": "Proprioceptive / movement opportunities (balance, climbing, kneeling)",
+                  "reasoning": "The teacher's reference to moving to a trampoline for the next activity signals deliberate proprioceptive engagement as part of the session design."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The activity meaningfully engages at least two senses: auditory (rhythmic chanting/song) and proprioceptive/kinesthetic (whole-body mime gestures for forming, peeling, chopping, eating). The classroom also contains a play tunnel and cushions visible in the visual observations, and the teacher references a trampoline, further confirming multi-sensory design intent. No tactile materials or visual variety beyond the room setup are evident, but auditory + movement alone is sufficient for a 1.0 score.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "boundary": {
+              "dimension_id": "boundary",
+              "rubric_version": "0.2.3",
+              "score": 1.0,
+              "anchor_matched": "At least one clear, unambiguous activity boundary \u2014 a canvas, paper, mat, rug, table, low fence, or similar marker visually defines the zone. A single well-defined zone is sufficient for this score.",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:30",
+                  "type": "visual",
+                  "quote": "The children are sitting on yellow cushions on the floor, while the teacher stands in front of them.",
+                  "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+                  "reasoning": "The yellow cushions on the floor serve as a clear, unambiguous visual boundary defining the circle-time activity zone \u2014 children can see where to sit without verbal direction."
+                },
+                {
+                  "ts_start": "01:30",
+                  "ts_end": "02:00",
+                  "type": "visual",
+                  "quote": "A new child enters the classroom from the left and walks towards the group. The teacher acknowledges the new child, who then joins the group on the cushions.",
+                  "indicator": "The boundary is intuitive to a child without verbal explanation from an adult",
+                  "reasoning": "The new child independently walks toward and joins the group on the cushions, suggesting the yellow cushions function as a self-evident boundary that children can identify without being directed."
+                },
+                {
+                  "ts_start": "04:30",
+                  "ts_end": "05:00",
+                  "type": "visual",
+                  "quote": "The child who was walking around the shelves is now sitting on a cushion near the group.",
+                  "indicator": "The boundary is intuitive to a child without verbal explanation from an adult",
+                  "reasoning": "A child who had been wandering independently returns and self-selects a cushion near the group, reinforcing that the cushion zone is a recognizable, child-intuitive activity boundary."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The yellow cushions clearly define the circle-time zone. Multiple children independently navigate to and from the cushion area without needing verbal redirection to the zone itself, confirming the boundary is self-evident.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "movement": {
+              "dimension_id": "movement",
+              "rubric_version": "0.2.3",
+              "score": 1.0,
+              "anchor_matched": "Both elements are present \u2014 children can clearly access the activity zone (visible path markers not required; minor adult presence in the path is acceptable as long as children get past) AND deliberate positioning suited to the activity (standing, kneeling, or sitting as the activity calls for), with materials reachable from that posture. Explicit seating like cushions is NOT required when the activity naturally invites standing or kneeling.",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:30",
+                  "type": "visual",
+                  "quote": "The children are sitting on yellow cushions on the floor, while the teacher stands in front of them. There are various play areas and furniture around the room, including small tables and chairs, and a play tunnel.",
+                  "indicator": "Clear deliberate positioning suited to the activity (standing at table height for sensory bins, kneeling on the floor for floor painting, sitting on a mat for story time, etc.)",
+                  "reasoning": "Yellow cushions on the floor provide deliberate, activity-appropriate seating for a circle/group activity, clearly signaling where children should sit."
+                },
+                {
+                  "ts_start": "01:30",
+                  "ts_end": "02:00",
+                  "type": "visual",
+                  "quote": "A new child enters the classroom from the left and walks towards the group. The teacher acknowledges the new child, who then joins the group on the cushions.",
+                  "indicator": "Children can walk from entry to activity zone through the natural layout without weaving around significant clutter, furniture, or persistent adult barriers",
+                  "reasoning": "A new child enters and walks directly to the group without obstruction, demonstrating clear unobstructed access to the activity zone."
+                },
+                {
+                  "ts_start": "04:30",
+                  "ts_end": "05:00",
+                  "type": "visual",
+                  "quote": "The child who was walking around the shelves is now sitting on a cushion near the group.",
+                  "indicator": "Children can intuitively tell WHERE to go to engage with the activity",
+                  "reasoning": "A child who had been independently exploring the room independently navigates to and joins the group on the cushions, confirming the activity zone is clearly identifiable and accessible."
+                },
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:30",
+                  "type": "visual",
+                  "quote": "The children are sitting on yellow cushions on the floor, while the teacher stands in front of them.",
+                  "indicator": "Enough space at the activity for children to stand, kneel, sit, or move as the activity requires",
+                  "reasoning": "Children are seated on individual cushions with the teacher standing in front, indicating sufficient space for the group circle activity posture."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The activity is a group circle/song session. Yellow floor cushions provide clear, deliberate positioning. Multiple children access the zone freely throughout the session, including a late-arriving child who walks in unobstructed. No significant barriers or clutter are observed blocking access.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "clean_up": {
+              "dimension_id": "clean_up",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "The session is a group circle/song activity. No cleanup or material return occurs during the recording. While shelves and low furniture are briefly visible in the background, the camera never provides a clear view of storage labels, shelf heights relative to children, or any cleanup behavior. There is insufficient evidence to score this dimension reliably.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": 0.75,
+          "cost_usd": null,
+          "duration_seconds": 15.77089786529541
+        },
+        "toy_design": {
+          "session_id": "long_after_toy_design_20250909_activity_1_morning_circle_time_activities_and_group_learning",
+          "rubric_version": "0.2.0",
+          "scores": {
+            "purpose": {
+              "dimension_id": "purpose",
+              "rubric_version": "0.2.0",
+              "score": 0.5,
+              "anchor_matched": "Some cues to purpose are present but the arrangement is mixed or partially staged; intent is unclear in parts",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:30",
+                  "type": "visual",
+                  "quote": "The children are sitting on yellow cushions on the floor, while the teacher stands in front of them. There are various play areas and furniture around the room, including small tables and chairs, and a play tunnel.",
+                  "indicator": "Materials arranged at the activity zone in a way that obviously communicates what to do",
+                  "reasoning": "Yellow cushions arranged on the floor in a group formation provide a partial cue that children should sit together, but the circle-time activity itself (songs, chanting, guided discussion) is not communicated by any visible materials or props \u2014 a child arriving would see cushions but not know a fruit song/movement activity was planned."
+                },
+                {
+                  "ts_start": "00:30",
+                  "ts_end": "01:00",
+                  "type": "visual",
+                  "quote": "The teacher is leading a group activity, possibly a song or a game, as she gestures with her hands and the children appear to be participating. One child is lying down in the play tunnel, while another child is playing alone at a table in the background.",
+                  "indicator": "A child arriving at the activity zone could guess what to do from the arrangement alone",
+                  "reasoning": "The fact that one child is in the play tunnel and another is at a table independently suggests the setup does not clearly communicate that the cushion area is the designated group activity zone, indicating ambiguity in the arrangement's communicative power."
+                },
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:30",
+                  "type": "transcript",
+                  "quote": "Now let us form the apple. Form, form the apple and we form the apple.",
+                  "indicator": "Materials clearly staged at the activity zone in a way that suggests their use",
+                  "reasoning": "The activity is entirely teacher-led through verbal instruction and gesture with no physical materials (fruit props, visual aids, picture cards) staged at the zone to communicate the fruit song/movement activity to an arriving child."
+                },
+                {
+                  "ts_start": "04:47",
+                  "ts_end": "05:00",
+                  "type": "transcript",
+                  "quote": "Now, today we're going to listen to a story. But should we go to the trampoline and listen to the story?",
+                  "indicator": "A child arriving at the activity zone could guess what to do from the arrangement alone",
+                  "reasoning": "The teacher must verbally announce the next activity (story) and direct children to a different location, confirming that the setup itself does not communicate the activity's purpose without adult instruction."
+                }
+              ],
+              "confidence": "medium",
+              "scorer_notes": "The cushion arrangement provides a minimal spatial cue for group gathering, but the core activity (fruit song with movement and guided discussion) relies entirely on teacher verbal direction with no supporting materials, props, or visual aids staged at the zone. This is a teacher-led circle time where the activity's purpose is communicated through adult instruction rather than material arrangement. Scored 0.5 because the cushion layout does suggest 'sit together here' but does not communicate what the activity will be.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "anchor_and_choice_materials": {
+              "dimension_id": "anchor_and_choice_materials",
+              "rubric_version": "0.2.0",
+              "score": 0.5,
+              "anchor_matched": "An anchor (single or multiple) is present but choice materials are limited; OR variety of materials exists but no anchor draws children in",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:00:30",
+                  "type": "visual",
+                  "quote": "The children are sitting on yellow cushions on the floor, while the teacher stands in front of them. There are various play areas and furniture around the room, including small tables and chairs, and a play tunnel.",
+                  "indicator": "An anchor material \u2014 either one strong centerpiece OR multiple equally-weighted anchor stations \u2014 that obviously invites children to engage",
+                  "reasoning": "The teacher-led circle on cushions functions as the primary anchor for the group activity, but the anchor is the teacher's song/chant rather than a physical material children can manipulate."
+                },
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:00:46",
+                  "type": "transcript",
+                  "quote": "Now let us form the apple. Form, form the apple and we form the apple. Form, form the apple. Now we peel the apple. Peel, peel the apple and we peel the apple.",
+                  "indicator": "Choice materials (tools, items, options) at or within the anchor(s) that allow flexible use",
+                  "reasoning": "The activity is entirely song/gesture-based with no physical choice materials \u2014 children mime actions rather than use tangible tools or items, so choice materials are absent."
+                },
+                {
+                  "ts_start": "00:00:46",
+                  "ts_end": "00:04:44",
+                  "type": "transcript",
+                  "quote": "What's your favorite fruit? Apple. Banana. Banana. Okay. Now we form banana... Orange. Okay. Now it's orange... Tomato... Carrot.",
+                  "indicator": "Different children can use the same setup to produce different results",
+                  "reasoning": "Children can choose their own fruit name, providing a degree of flexible engagement within the anchor activity, but this is verbal/imaginative choice rather than choice among physical materials."
+                },
+                {
+                  "ts_start": "00:00:30",
+                  "ts_end": "00:01:00",
+                  "type": "visual",
+                  "quote": "One child is lying down in the play tunnel, while another child is playing alone at a table in the background.",
+                  "indicator": "Choice materials (tools, items, options) at or within the anchor(s) that allow flexible use",
+                  "reasoning": "Some children are independently accessing other areas (tunnel, table, shelves) suggesting materials exist in the room, but these are peripheral to the anchor activity and not integrated as choice materials within it."
+                }
+              ],
+              "confidence": "medium",
+              "scorer_notes": "The anchor is clearly the teacher-led circle song/chant activity, which draws most children in. However, the activity relies entirely on gesture and verbal participation \u2014 there are no physical choice materials (tools, items, manipulatives) offered within the anchor. The room contains other materials (tunnel, tables, shelves) but these are not part of the anchor setup. The only 'choice' is verbal (naming a fruit), which is a partial indicator of flexible engagement but does not constitute choice materials as defined by the rubric.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "spark_curiosity": {
+              "dimension_id": "spark_curiosity",
+              "rubric_version": "0.2.0",
+              "score": 0,
+              "anchor_matched": "Activity area is purely functional with no curiosity hook \u2014 children would not have any 'what's that?' moment from what is at the activity itself",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:30",
+                  "type": "visual",
+                  "quote": "The children are sitting on yellow cushions on the floor, while the teacher stands in front of them. There are various play areas and furniture around the room, including small tables and chairs, and a play tunnel.",
+                  "indicator": "A surprising or unexpected element AT the activity zone",
+                  "reasoning": "The circle activity area consists only of yellow cushions on the floor with the teacher standing in front \u2014 no surprising, mysterious, or visually striking element is present at the activity zone itself."
+                },
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "04:47",
+                  "type": "transcript",
+                  "quote": "Now let us form the apple. Form, form the apple and we form the apple. Peel, peel the apple. Chop, chop the apple. Eat, eat the apple.",
+                  "indicator": "Items at the activity zone obviously designed to be touched, examined, or wondered about",
+                  "reasoning": "The entire activity is a verbal/gestural song with no physical props, objects, or visual elements at the activity zone that could invite wonder or a 'what is that?' moment."
+                },
+                {
+                  "ts_start": "04:30",
+                  "ts_end": "05:00",
+                  "type": "visual",
+                  "quote": "The teacher and children are still engaged in the group activity, with the teacher making hand gestures. The child who was walking around the shelves is now sitting on a cushion near the group.",
+                  "indicator": "Visually striking centerpieces or features within the activity area itself",
+                  "reasoning": "Throughout the session the activity area remains purely functional \u2014 cushions and hand gestures only \u2014 with no centerpiece, prop, or curiosity hook visible at the circle area."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The play tunnel and shelves mentioned in visuals are elsewhere in the room and not part of the circle activity zone, so they do not count per rubric rules. The activity itself is entirely song/chant-based with no physical materials or curiosity elements at the activity area.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "challenge_adjustment": {
+              "dimension_id": "challenge_adjustment",
+              "rubric_version": "0.2.0",
+              "score": 0,
+              "anchor_matched": "Single fixed difficulty level \u2014 no variation possible without redesigning the activity",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:04:44",
+                  "type": "transcript",
+                  "quote": "Now we form the apple. Form, form the apple and we form the apple. Form, form the apple. Now we peel the apple. Peel, peel the apple and we peel the apple.",
+                  "indicator": "Multiple visible difficulty levels of the same activity",
+                  "reasoning": "The entire activity follows a single fixed repetitive structure (form, peel, chop, eat) applied to each fruit with no variation in complexity or difficulty level for any child."
+                },
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:05:00",
+                  "type": "visual",
+                  "quote": "The children are sitting on yellow cushions on the floor, while the teacher stands in front of them. There are various play areas and furniture around the room, including small tables and chairs, and a play tunnel.",
+                  "indicator": "Add-on / extension materials available but not forced",
+                  "reasoning": "No tiered materials, extension options, or difficulty variants are visible in the setup; the activity is a uniform whole-group song/chant with no observable scaffolding or challenge differentiation."
+                },
+                {
+                  "ts_start": "00:00:46",
+                  "ts_end": "00:04:44",
+                  "type": "transcript",
+                  "quote": "What's your favorite fruit? ... Now we form banana. Form, form banana and we form banana. Form, form banana. Now we peel banana.",
+                  "indicator": "Setup supports teacher-led or child-led difficulty change",
+                  "reasoning": "While children choose the fruit name, the activity structure remains identical for every child \u2014 there is no harder or easier version, no add-on, and no progression staged by the teacher."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The activity is a uniform group song/chant. Child input (choosing a fruit) personalizes the content but does not alter difficulty. No tiered materials or extension options are visible or referenced.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "self_served": {
+              "dimension_id": "self_served",
+              "rubric_version": "0.2.0",
+              "score": 1.0,
+              "anchor_matched": "All materials are, by DESIGN, safe, recognisable to children of the age range, and light enough for them to handle alone. The activity is designed for self-service even if teachers are observed helping during the recording.",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:30",
+                  "type": "visual",
+                  "quote": "The children are sitting on yellow cushions on the floor, while the teacher stands in front of them. There are various play areas and furniture around the room, including small tables and chairs, and a play tunnel.",
+                  "indicator": "Materials are child-safe by design (no choking hazards, sharp edges, toxic substances within reach)",
+                  "reasoning": "Yellow floor cushions, small child-sized tables and chairs, and a play tunnel are all recognisably child-safe, lightweight, and designed for independent child use."
+                },
+                {
+                  "ts_start": "00:30",
+                  "ts_end": "01:00",
+                  "type": "visual",
+                  "quote": "The teacher is leading a group activity, possibly a song or a game, as she gestures with her hands and the children appear to be participating. One child is lying down in the play tunnel, while another child is playing alone at a table in the background.",
+                  "indicator": "Materials are recognisable to children of the age range \u2014 children would know what they are and roughly how to use them",
+                  "reasoning": "A child independently uses the play tunnel and another independently accesses the table area, demonstrating that the materials are recognisable and usable without adult direction."
+                },
+                {
+                  "ts_start": "01:30",
+                  "ts_end": "02:00",
+                  "type": "visual",
+                  "quote": "The child at the table in the background is now standing and looking at the shelves.",
+                  "indicator": "Items are light enough for a child of the age range to lift and carry alone",
+                  "reasoning": "A child independently navigates to and accesses shelving materials without adult assistance, indicating items are appropriately sized and weighted for self-service."
+                },
+                {
+                  "ts_start": "04:30",
+                  "ts_end": "05:00",
+                  "type": "visual",
+                  "quote": "The teacher and children are still engaged in the group activity, with the teacher making hand gestures. The child who was walking around the shelves is now sitting on a cushion near the group.",
+                  "indicator": "Materials are sized for child hands",
+                  "reasoning": "The primary activity materials are the children's own bodies (gestures, songs) and floor cushions \u2014 all inherently child-sized and requiring no adult handling by design."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The core activity is a body-movement song/chant requiring no physical materials beyond floor cushions. Surrounding environment materials (play tunnel, small tables, shelves) are all visibly child-scaled and independently accessed by children throughout the recording. No heavy, sharp, or unrecognisable items are evident in the design.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": 0.4,
+          "cost_usd": null,
+          "duration_seconds": 16.749240159988403
+        }
+      }
+    }
+  }
+}

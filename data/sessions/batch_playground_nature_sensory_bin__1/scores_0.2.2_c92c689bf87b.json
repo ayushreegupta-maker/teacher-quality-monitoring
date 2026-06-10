@@ -1,0 +1,59 @@
+{
+  "session_id": "batch_playground_nature_sensory_bin__1",
+  "rubric_version": "0.2.2",
+  "scores": {
+    "narrative": {
+      "dimension_id": "narrative",
+      "rubric_version": "0.2.2",
+      "score": "insufficient_evidence",
+      "anchor_matched": null,
+      "evidence": [],
+      "confidence": "low",
+      "scorer_notes": "No transcript or visual observations were provided for this session. The activity setup notes describe a 'nature sensory bin' with nature-themed materials, but setup notes alone are insufficient to score the narrative dimension — no visual evidence of decor, props, arrangement, or atmospheric anchors is available to assess immersive framing.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "multi_sensory": {
+      "dimension_id": "multi_sensory",
+      "rubric_version": "0.2.2",
+      "score": "insufficient_evidence",
+      "anchor_matched": null,
+      "evidence": [],
+      "confidence": "low",
+      "scorer_notes": "No transcript content and no visual observations were provided. Despite the activity notes describing a 'nature sensory bin' with 'nature-themed materials in containers' — which would typically suggest multi-sensory engagement — there is no timestamped visual or audio evidence to score against. Cannot confirm what materials were present, how they were arranged, or how children engaged with them.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "boundary": {
+      "dimension_id": "boundary",
+      "rubric_version": "0.2.2",
+      "score": "insufficient_evidence",
+      "anchor_matched": null,
+      "evidence": [],
+      "confidence": "low",
+      "scorer_notes": "No transcript or visual observations were provided for this session. Without any timestamped visual or audio evidence, it is impossible to assess whether a clear physical or visual boundary exists for the sensory bin activity.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "movement": {
+      "dimension_id": "movement",
+      "rubric_version": "0.2.2",
+      "score": "insufficient_evidence",
+      "anchor_matched": null,
+      "evidence": [],
+      "confidence": "low",
+      "scorer_notes": "No transcript or visual observations were provided for this session. Without any timestamped scene descriptions or audio content, it is impossible to assess unobstructed access, child positioning, material reach, or any other movement indicator.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "clean_up": {
+      "dimension_id": "clean_up",
+      "rubric_version": "0.2.2",
+      "score": "insufficient_evidence",
+      "anchor_matched": null,
+      "evidence": [],
+      "confidence": "low",
+      "scorer_notes": "No transcript or visual observations were provided for this session. Without any observable evidence of storage height, labelling, item weight, or children returning materials, it is not possible to score this dimension.",
+      "prompt_hash": "c92c689bf87b"
+    }
+  },
+  "overall": null,
+  "cost_usd": null,
+  "duration_seconds": 4.748927116394043
+}

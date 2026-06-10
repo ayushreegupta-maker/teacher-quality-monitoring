@@ -1,0 +1,175 @@
+{
+  "session_id": "playground_floor_paint_001",
+  "rubric_version": "0.1.0",
+  "scores": {
+    "narrative_setting": {
+      "dimension_id": "narrative_setting",
+      "rubric_version": "0.1.0",
+      "score": 0,
+      "anchor_matched": "Generic space with no visible theme; mixed unrelated decor; pure utility setup",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:05",
+          "type": "visual",
+          "quote": "The video opens with an empty classroom, showcasing a clean, organized space with wooden shelves filled with colorful toys and an empty white paper laid out on the floor.",
+          "indicator": "Thematic decor (e.g. forest, ocean, kitchen, market, weather)",
+          "reasoning": "The space is described as a generic classroom with wooden shelves and colorful toys — no thematic decor, narrative anchor, or storytelling framework is visible."
+        },
+        {
+          "ts_start": "00:10",
+          "ts_end": "00:15",
+          "type": "visual",
+          "quote": "More children enter the room, and one child approaches the table with painting supplies.",
+          "indicator": "Props that reinforce the theme rather than competing with it",
+          "reasoning": "The only props described are generic painting supplies on a table and blank white paper — no themed props or narrative-reinforcing elements are present."
+        },
+        {
+          "ts_start": "00:45",
+          "ts_end": "00:50",
+          "type": "visual",
+          "quote": "A child in a red dress is actively painting on the paper, while teachers continue to assist other children with the supplies.",
+          "indicator": "Storytelling anchor (banner, central feature, framing object) that names the narrative",
+          "reasoning": "Throughout the session no storytelling anchor, banner, or central narrative feature is mentioned; the activity is a pure utility floor-painting setup with no thematic framing."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "The transcript is largely unintelligible/corrupted (repeated 'I don't know' lines), but the visual observations consistently describe a generic classroom painting activity with no thematic decor, narrative props, or storytelling anchors at any point in the session.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "multi_sensory": {
+      "dimension_id": "multi_sensory",
+      "rubric_version": "0.1.0",
+      "score": 0.5,
+      "anchor_matched": "Two senses clearly engaged (e.g. visual + tactile but no movement or sound)",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:05",
+          "type": "visual",
+          "quote": "The video opens with an empty classroom, showcasing a clean, organized space with wooden shelves filled with colorful toys and an empty white paper laid out on the floor.",
+          "indicator": "Visual variety beyond a single material palette",
+          "reasoning": "Wooden shelves and colorful toys provide some visual variety, but the primary activity surface is a single white paper, limiting visual richness of the activity setup itself."
+        },
+        {
+          "ts_start": "00:45",
+          "ts_end": "00:50",
+          "type": "visual",
+          "quote": "A child in a red dress is actively painting on the paper, while teachers continue to assist other children with the supplies.",
+          "indicator": "Natural / sensory materials (sand, water, fabric, wood, leaves, clay)",
+          "reasoning": "Paint applied directly to paper on the floor engages tactile sense (wet paint on hands/brushes) and visual sense (color mixing, mark-making), but no sound-making elements, balance structures, or varied textures beyond paint and paper are evident."
+        },
+        {
+          "ts_start": "00:10",
+          "ts_end": "00:15",
+          "type": "visual",
+          "quote": "More children enter the room, and one child approaches the table with painting supplies.",
+          "indicator": "Variety of textures (soft, rough, smooth, natural, manufactured)",
+          "reasoning": "The setup includes painting supplies (brushes, paint) and paper on the floor, suggesting tactile engagement with paint, but no evidence of varied textures, sound-making features, or proprioceptive structures beyond floor-level positioning."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "The transcript is largely uninformative (repetitive 'I don't know' entries after the first few lines), and the visual observations become highly repetitive after 01:05, limiting evidence quality. The activity clearly engages visual and tactile senses through floor painting with colored paints, but no sound-making elements, balance/movement structures, or varied natural materials are observable. The wooden shelves in the background add minor visual variety but are not part of the activity setup. Score of 0.5 reflects two senses engaged (visual + tactile) without evidence of a third.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "boundary": {
+      "dimension_id": "boundary",
+      "rubric_version": "0.1.0",
+      "score": 0.5,
+      "anchor_matched": "Some zones are clearly marked, others are ambiguous; partial zone differentiation",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:05",
+          "type": "visual",
+          "quote": "The video opens with an empty classroom, showcasing a clean, organized space with wooden shelves filled with colorful toys and an empty white paper laid out on the floor.",
+          "indicator": "Visual or physical markers separating zones (rugs, mats, low shelves, low fences)",
+          "reasoning": "The white paper on the floor functions as a visual boundary defining the painting activity zone, and wooden shelves suggest some zone differentiation, but no additional markers (rugs, mats, fences) are described to separate the painting area from the rest of the space."
+        },
+        {
+          "ts_start": "00:10",
+          "ts_end": "00:15",
+          "type": "visual",
+          "quote": "More children enter the room, and one child approaches the table with painting supplies.",
+          "indicator": "Defined zones for distinct activities (art, building, quiet reading, sensory, etc.)",
+          "reasoning": "The presence of both a floor paper zone and a table with painting supplies suggests two sub-areas within the activity, but the relationship and boundary between them is ambiguous — it is unclear whether the table and floor paper are part of one zone or two distinct zones."
+        },
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:10",
+          "type": "transcript",
+          "quote": "You know what you want to go the paper.",
+          "indicator": "Safety boundaries (where children should and should not go) are visually obvious",
+          "reasoning": "The teacher verbally directs a child toward 'the paper,' suggesting the boundary of the activity zone is not entirely self-evident to children and requires adult verbal guidance rather than being visually unambiguous."
+        },
+        {
+          "ts_start": "00:35",
+          "ts_end": "00:45",
+          "type": "visual",
+          "quote": "Children are now actively engaged with the painting supplies, with teachers supervising them.",
+          "indicator": "Clear pathways between zones rather than undifferentiated open space",
+          "reasoning": "The visual observations do not describe any pathways, rugs, or additional markers beyond the paper itself, indicating the broader space lacks clear zone differentiation beyond the single painting area."
+        }
+      ],
+      "confidence": "low",
+      "scorer_notes": "The transcript is largely corrupted with repeated 'I don't know' entries, providing minimal usable audio evidence. Visual observations are highly repetitive after 01:05 and do not describe the full room layout or presence/absence of zone markers beyond the paper and shelves. The score of 0.5 reflects that the paper on the floor provides one clear activity boundary, but no evidence of multiple differentiated zones, pathways, or additional physical markers is present. The session appears to be a single-activity setup rather than a multi-zone environment, which limits the applicability of this rubric dimension.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "movement_and_layout": {
+      "dimension_id": "movement_and_layout",
+      "rubric_version": "0.1.0",
+      "score": 0.5,
+      "anchor_matched": "Either varied movement OR fully reachable materials, but not both",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:05",
+          "type": "visual",
+          "quote": "The video opens with an empty classroom, showcasing a clean, organized space with wooden shelves filled with colorful toys and an empty white paper laid out on the floor.",
+          "indicator": "All play materials placed at child height and within child reach",
+          "reasoning": "Paper is laid on the floor (fully child-reachable), but shelves with toys are visible and their height relative to children cannot be confirmed as child-accessible; the primary activity material is floor-level."
+        },
+        {
+          "ts_start": "00:10",
+          "ts_end": "00:15",
+          "type": "visual",
+          "quote": "More children enter the room, and one child approaches the table with painting supplies.",
+          "indicator": "All play materials placed at child height and within child reach",
+          "reasoning": "Painting supplies are on a table accessible to children, and the paper is on the floor, supporting child-reachable materials for this activity."
+        },
+        {
+          "ts_start": "00:45",
+          "ts_end": "00:50",
+          "type": "visual",
+          "quote": "A child in a red dress is actively painting on the paper, while teachers continue to assist other children with the supplies.",
+          "indicator": "Variety of body-movement opportunities (walk, crawl, climb, balance, sit, jump)",
+          "reasoning": "Children are engaged in floor-level painting (kneeling/crouching/standing over paper), which supports some varied postures, but the activity is confined to a single painting station with no evidence of climbing, balancing, or other movement modes."
+        },
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:10",
+          "type": "visual",
+          "quote": "A teacher and a child enter the room, with the child walking towards the white paper on the floor.",
+          "indicator": "Open space for free movement, not entirely occupied by static stations",
+          "reasoning": "Children walk freely to the paper on the floor, suggesting open pathways, but the entire observable activity is a single floor-painting station with no evidence of climbing structures, balance elements, or other movement-variety features."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "The floor-painting setup places materials at child level and allows children to move to and around the paper (walking, kneeling, crouching). However, the session shows only a single activity station with no evidence of climbing, balancing, jumping, or other movement modes. The transcript is largely uninformative (repetitive 'I don't know' entries), so scoring relies entirely on visual observations. The visual descriptions become highly repetitive after 01:05, limiting confidence in assessing the full space. Score of 0.5 reflects accessible materials but insufficient evidence of varied movement opportunities.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "cleanup_and_resetting": {
+      "dimension_id": "cleanup_and_resetting",
+      "rubric_version": "0.1.0",
+      "score": "insufficient_evidence",
+      "anchor_matched": null,
+      "evidence": [],
+      "confidence": "low",
+      "scorer_notes": "The visual observations mention wooden shelves with colorful toys at the opening, suggesting some organized storage exists, but no detail is provided about labeling, child-height accessibility, return locations, or whether materials have designated homes. The activity is a floor painting session — a temporary setup — and the camera/description focus is entirely on the painting activity and teacher-child interactions. No evidence of cleanup system design (labels, silhouettes, bins, return spots) is observable from the provided descriptions. The transcript is largely uninformative. Insufficient evidence to score this dimension reliably.",
+      "prompt_hash": "c92c689bf87b"
+    }
+  },
+  "overall": 0.0,
+  "cost_usd": null,
+  "duration_seconds": 17.48576784133911
+}

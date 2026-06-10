@@ -1,0 +1,79 @@
+{
+  "activity_zone_items": [
+    {
+      "category": "Containers",
+      "name": "sand bins",
+      "count_or_quantity": "two",
+      "specifics": "located on one table, covered with clear plastic sheet before use",
+      "first_seen_at": "00:00:00"
+    },
+    {
+      "category": "Materials",
+      "name": "sand",
+      "count_or_quantity": "unknown",
+      "specifics": "contained within the two sand bins",
+      "first_seen_at": "00:00:00"
+    },
+    {
+      "category": "Materials",
+      "name": "small toys",
+      "count_or_quantity": "multiple",
+      "specifics": "embedded in or placed with the sand bins; type unspecified",
+      "first_seen_at": "00:00:00"
+    },
+    {
+      "category": "Containers",
+      "name": "hexagonal bin",
+      "count_or_quantity": "one",
+      "specifics": "located on the second table; contains colorful building blocks",
+      "first_seen_at": "00:00:00"
+    },
+    {
+      "category": "Materials",
+      "name": "colorful building blocks",
+      "count_or_quantity": "multiple",
+      "specifics": "colorful; specific colors not named",
+      "first_seen_at": "00:00:00"
+    },
+    {
+      "category": "Furniture",
+      "name": "tables",
+      "count_or_quantity": "two",
+      "specifics": "center of room; each covered with a clear plastic sheet at the start",
+      "first_seen_at": "00:00:00"
+    },
+    {
+      "category": "Materials",
+      "name": "clear plastic sheets",
+      "count_or_quantity": "two",
+      "specifics": "covering each table before activity begins",
+      "first_seen_at": "00:00:00"
+    }
+  ],
+  "other_items_in_room": [
+    {
+      "name": "long wooden benches",
+      "location": "left wall"
+    },
+    {
+      "name": "table with papers and small clay pots",
+      "location": "right side of room"
+    },
+    {
+      "name": "papers",
+      "location": "on table at right side of room"
+    },
+    {
+      "name": "small clay pots",
+      "location": "on table at right side of room"
+    },
+    {
+      "name": "phones (used for photography)",
+      "location": "carried by adults throughout room"
+    }
+  ],
+  "notes": "The observations do not specify the types of small toys in the sand bins, the exact colors of the building blocks, or the number of children and adults present. The clay pots and papers on the right-side table are not described as part of the active multi-sensory bin activity and are therefore listed under other_items_in_room. It is unclear whether the clay pots were intended as part of the activity setup or were pre-existing room items.",
+  "session_id": "batch_vision_multi_sensory_bins",
+  "source_model": "claude-sonnet-4-6",
+  "prompt_hash": "0a584ed472ce"
+}

@@ -1,0 +1,150 @@
+{
+  "session_id": "playground_001",
+  "rubric_version": "0.1.0",
+  "scores": {
+    "narrative_setting": {
+      "dimension_id": "narrative_setting",
+      "rubric_version": "0.1.0",
+      "score": 0,
+      "anchor_matched": "Generic space with no visible theme; mixed unrelated decor; pure utility setup",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:30",
+          "type": "visual",
+          "quote": "A teacher is seen walking towards the children, who are seated at a table. The teacher then kneels down to interact with a child.",
+          "indicator": "Thematic decor (e.g. forest, ocean, kitchen, market, weather)",
+          "reasoning": "No thematic decor, props, or narrative anchors are described — only a generic table and children, consistent with a utility setup."
+        },
+        {
+          "ts_start": "01:00",
+          "ts_end": "01:30",
+          "type": "visual",
+          "quote": "The teacher stands up and walks away from the table. Another teacher approaches the children at the table. A child in a black dress walks towards the shelves with toys.",
+          "indicator": "Props that reinforce the theme rather than competing with it",
+          "reasoning": "Only generic 'shelves with toys' are mentioned — no themed props or narrative-reinforcing objects are visible."
+        },
+        {
+          "ts_start": "02:30",
+          "ts_end": "03:00",
+          "type": "visual",
+          "quote": "The child in the black dress is playing with toys on the floor. The teacher is still kneeling and interacting with the child. Another child in a white dress walks towards the center of the room.",
+          "indicator": "Atmosphere and visual cues consistent across the whole space",
+          "reasoning": "Throughout the session, the space is described only in terms of generic furniture and open floor — no atmospheric or visual cues pointing to any narrative theme are present."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "Visual observations across the entire 5-minute session describe only generic classroom elements (table, shelves, floor, toys) with no mention of thematic decor, banners, backdrop, or any narrative anchor. The transcript provides no verbal references to a theme either. The space appears to be a standard utility classroom setup.",
+      "prompt_hash": "1ee76e4407c7"
+    },
+    "multi_sensory": {
+      "dimension_id": "multi_sensory",
+      "rubric_version": "0.1.0",
+      "score": "insufficient_evidence",
+      "anchor_matched": null,
+      "evidence": [],
+      "confidence": "low",
+      "scorer_notes": "The visual observations are too generic to reliably assess multi-sensory design. References to 'toys on the shelf,' 'toys on the floor,' and a table activity (painting mentioned in transcript) suggest at least visual and tactile engagement, but material types, textures, sound-making features, movement structures, and natural materials cannot be identified from the descriptions provided. The transcript is almost entirely inaudible. Insufficient evidence to score with confidence.",
+      "prompt_hash": "1ee76e4407c7"
+    },
+    "boundary": {
+      "dimension_id": "boundary",
+      "rubric_version": "0.1.0",
+      "score": 0.5,
+      "anchor_matched": "Some zones are clearly marked, others are ambiguous; partial zone differentiation",
+      "evidence": [
+        {
+          "ts_start": "00:01",
+          "ts_end": "01:30",
+          "type": "visual",
+          "quote": "A child in a black dress walks towards the shelves with toys.",
+          "indicator": "Defined zones for distinct activities (art, building, quiet reading, sensory, etc.)",
+          "reasoning": "The presence of shelves with toys suggests at least one defined activity zone, indicating some intentional spatial differentiation."
+        },
+        {
+          "ts_start": "02:00",
+          "ts_end": "02:30",
+          "type": "visual",
+          "quote": "The child in the black dress walks towards the center of the room. The teacher is still kneeling and interacting with the child. Another child in a white dress walks towards the center of the room.",
+          "indicator": "Clear pathways between zones rather than undifferentiated open space",
+          "reasoning": "Multiple children moving toward the center of the room suggests an undifferentiated open floor area without clear zone boundaries separating it from other activity areas."
+        },
+        {
+          "ts_start": "02:30",
+          "ts_end": "03:00",
+          "type": "visual",
+          "quote": "The child in the black dress is playing with toys on the floor.",
+          "indicator": "Visual or physical markers separating zones (rugs, mats, low shelves, low fences)",
+          "reasoning": "A child playing with toys on the open floor rather than in a designated zone suggests the floor space lacks clear visual or physical markers to define play boundaries."
+        },
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:30",
+          "type": "visual",
+          "quote": "A teacher is seen walking towards the children, who are seated at a table. The teacher then kneels down to interact with a child.",
+          "indicator": "Defined zones for distinct activities (art, building, quiet reading, sensory, etc.)",
+          "reasoning": "A table area is visible as a distinct activity zone, but the broader space shows children drifting to the floor and center without clear zone demarcation, indicating only partial zone differentiation."
+        }
+      ],
+      "confidence": "low",
+      "scorer_notes": "Visual observations are limited in detail — no explicit mention of rugs, mats, or physical dividers. The space appears to have a table zone and a shelf zone, but the center/floor area is ambiguous. Camera angle and description quality limit confidence.",
+      "prompt_hash": "1ee76e4407c7"
+    },
+    "movement_and_layout": {
+      "dimension_id": "movement_and_layout",
+      "rubric_version": "0.1.0",
+      "score": 0.5,
+      "anchor_matched": "Either varied movement OR fully reachable materials, but not both",
+      "evidence": [
+        {
+          "ts_start": "01:00",
+          "ts_end": "01:30",
+          "type": "visual",
+          "quote": "A child in a black dress walks towards the shelves with toys.",
+          "indicator": "All play materials placed at child height and within child reach",
+          "reasoning": "A child independently accesses toys on shelves without adult help, suggesting materials are at child-reachable height."
+        },
+        {
+          "ts_start": "01:30",
+          "ts_end": "02:00",
+          "type": "visual",
+          "quote": "The child in the black dress is playing with toys on the shelf.",
+          "indicator": "All play materials placed at child height and within child reach",
+          "reasoning": "Child independently engages with shelf materials, confirming child-height accessibility of at least some materials."
+        },
+        {
+          "ts_start": "02:00",
+          "ts_end": "02:30",
+          "type": "visual",
+          "quote": "The child in the black dress walks towards the center of the room. The teacher is still kneeling and interacting with the child. Another child in a white dress walks towards the center of the room.",
+          "indicator": "Open space for free movement, not entirely occupied by static stations",
+          "reasoning": "Children are walking freely toward the center of the room, indicating open pathways exist, but movement modes observed are limited to walking and floor play — no climbing, balancing, or other varied movement modes are visible."
+        },
+        {
+          "ts_start": "02:30",
+          "ts_end": "03:00",
+          "type": "visual",
+          "quote": "The child in the black dress is playing with toys on the floor. The teacher is still kneeling and interacting with the child. Another child in a white dress walks towards the center of the room.",
+          "indicator": "Variety of body-movement opportunities (walk, crawl, climb, balance, sit, jump)",
+          "reasoning": "Movement observed is limited to walking and sitting/floor play; no climbing structures, balance elements, or other varied movement modes are evident, so the variety-of-movement indicator is only partially met."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "Materials appear accessible at child height (shelf access observed independently), and open floor space allows walking and floor play. However, no evidence of climbing, balancing, or other varied movement modes is visible — the space appears to support walking and seated/floor activity only. This matches the 0.5 anchor: reachable materials present but movement variety is not fully demonstrated.",
+      "prompt_hash": "1ee76e4407c7"
+    },
+    "cleanup_and_resetting": {
+      "dimension_id": "cleanup_and_resetting",
+      "rubric_version": "0.1.0",
+      "score": "insufficient_evidence",
+      "anchor_matched": null,
+      "evidence": [],
+      "confidence": "low",
+      "scorer_notes": "The session is set on a playground and the visual observations are too coarse to assess storage design. No shelf labels, bin organization, return locations, or child-height storage systems are described. The only storage reference is 'shelves with toys' (01:00-01:30) with no detail about labeling, organization, or accessibility. The transcript provides no relevant audio signals. There is insufficient evidence to score design intent for child-led cleanup and resetting.",
+      "prompt_hash": "1ee76e4407c7"
+    }
+  },
+  "overall": 0.0,
+  "cost_usd": null,
+  "duration_seconds": 13.193307876586914
+}

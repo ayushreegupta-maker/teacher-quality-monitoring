@@ -1,0 +1,153 @@
+version: 0.1.0
+name: TQM Playground Design Rubric
+created_at: 2026-05-19
+
+context:
+  age_range: "3-5 years (Pre-K)"
+  subject_scope: "play-space design evaluation (typically a 5-min video showing the empty space and the first moments of children entering)"
+  scoring_scale: "0 / 0.5 / 1 (no / partial / yes)"
+  framework_basis: |
+    Original to TQM. Evaluates the design of a play space from a short video
+    showing the empty space and the first moments of children beginning to use
+    it. Five environmental design dimensions, scored 0 (no), 0.5 (partial),
+    1 (yes), or 'insufficient_evidence' when the recording does not allow the
+    dimension to be observed reliably.
+
+scoring_scale:
+  values:
+    0: "Indicator is absent or counterproductive across the observable space"
+    0.5: "Indicator is partially present — some elements visible but incomplete or inconsistent across the space"
+    1: "Indicator is clearly and fully present throughout the observable space"
+  insufficient_evidence: |
+    Use this in place of a numeric score when camera angle, video length, or
+    video content does not allow the dimension to be observed reliably.
+
+anti_bias_rules:
+  - "Score based on design intent, not material cost or freshness. A simple, thoughtfully-arranged space can score 1; an expensive but disorganized space can score 0."
+  - "Do not score based on cultural or regional decor styles, language of signage, or aesthetic preference."
+  - "Do not reward visual busyness or abundance — clarity, intent, and child-centeredness are the signals."
+  - "If the same design choice would receive a different score from a space serving a different cultural context, return the score the design earns on its own."
+  - "Prefer 'insufficient_evidence' over guessing from thin signal."
+
+evidence_requirements:
+  - "Every numeric score must be supported by at least one timestamped visual observation."
+  - "Quoted observations must appear verbatim in the vision-pass output, not paraphrased or invented."
+  - "Confidence must be reported per dimension (high / medium / low)."
+  - "Provide 2-4 evidence pieces when possible."
+
+domains:
+  - id: environment
+    label: "Environmental Design"
+    description: "Observable design qualities of the play space, evaluated from a short video of the setup plus the first moments of children entering and beginning to play."
+    dimensions:
+
+      - id: narrative_setting
+        label: "Narrative Setting"
+        description: "Whether the space presents a coherent story or theme that the child enters into. The setup tells a story rather than presenting a generic equipment collection."
+        indicators:
+          - "Thematic decor (e.g. forest, ocean, kitchen, market, weather)"
+          - "Props that reinforce the theme rather than competing with it"
+          - "Atmosphere and visual cues consistent across the whole space"
+          - "Storytelling anchor (banner, central feature, framing object) that names the narrative"
+        signal_mappings:
+          audio:
+            - "Themed music or ambient sound if present (often absent in empty-room recordings)"
+          visual:
+            - "Decor, props, banners and arrangements all pointing to one theme"
+            - "A backdrop or central feature that anchors the narrative"
+            - "Inconsistent or unrelated decor indicates absence of a coherent theme"
+        anchors:
+          0: "Generic space with no visible theme; mixed unrelated decor; pure utility setup"
+          0.5: "Some thematic elements present (a few themed props, a banner) but the theme is not coherent across the whole space"
+          1: "Clear, coherent narrative across decor, props, and arrangement; the whole space tells one story"
+        common_failure_modes:
+          - "Generic 'classroom decoration' (ABC posters, generic alphabet boards) is decor, not a narrative — does not earn 1"
+          - "Multiple competing themes (jungle + space + farm at once) lowers the score for incoherence"
+
+      - id: multi_sensory
+        label: "Multi Sensory"
+        description: "Whether the setup invites engagement of multiple senses — visual, tactile, auditory, proprioceptive, occasionally olfactory."
+        indicators:
+          - "Variety of textures (soft, rough, smooth, natural, manufactured)"
+          - "Visual variety beyond a single material palette"
+          - "Sound-making elements (instruments, chimes, water features)"
+          - "Movement and balance opportunities (proprioceptive engagement)"
+          - "Natural / sensory materials (sand, water, fabric, wood, leaves, clay)"
+        signal_mappings:
+          visual:
+            - "Multiple distinct material types visible (not all plastic, not all wood, not all paper)"
+            - "Tactile invitations such as bins of textured materials at child reach"
+            - "Structures that engage body-awareness (balance beams, low platforms, climbing features)"
+            - "Sound-making features visible even if not audible in the recording"
+        anchors:
+          0: "Single-sense or sense-impoverished setup; everything is the same material or invites only one mode of engagement"
+          0.5: "Two senses clearly engaged (e.g. visual + tactile but no movement or sound)"
+          1: "Three or more senses clearly engaged through deliberate material and arrangement choices"
+        common_failure_modes:
+          - "Visually busy but tactically monotonous (lots to look at, all plastic to touch) earns 0.5 at most"
+          - "Sensory variety only in one part of the space — partial credit"
+
+      - id: boundary
+        label: "Boundary"
+        description: "Whether play zones and play limits are visually and physically clear. A child can immediately tell where one activity ends and another begins."
+        indicators:
+          - "Defined zones for distinct activities (art, building, quiet reading, sensory, etc.)"
+          - "Visual or physical markers separating zones (rugs, mats, low shelves, low fences)"
+          - "Clear pathways between zones rather than undifferentiated open space"
+          - "Safety boundaries (where children should and should not go) are visually obvious"
+        signal_mappings:
+          visual:
+            - "Rugs, mats, low shelves, or other markers separating activity areas"
+            - "Pathways that suggest a flow between zones"
+            - "Clear sight lines for adult supervision without children feeling confined"
+            - "No ambiguous 'is this in or out of play?' areas"
+        anchors:
+          0: "Undifferentiated space; no zones marked; child cannot tell where activities begin and end"
+          0.5: "Some zones are clearly marked, others are ambiguous; partial zone differentiation"
+          1: "Every play area has a clear visual or physical boundary; transitions between zones are intuitive; safety boundaries are unambiguous"
+
+      - id: movement_and_layout
+        label: "Movement & Layout"
+        description: "Whether the layout invites varied body movement AND ensures the materials children need are reachable by them, with their hands, without adult help."
+        indicators:
+          - "Variety of body-movement opportunities (walk, crawl, climb, balance, sit, jump)"
+          - "Clear pathways that flow through the space"
+          - "All play materials placed at child height and within child reach"
+          - "Open space for free movement, not entirely occupied by static stations"
+          - "No adult-only storage above child reach for items children need to access independently"
+        signal_mappings:
+          visual:
+            - "Different floor levels, platforms, climbing structures, mats, or movement furniture"
+            - "Materials visible on low shelves, in floor-level baskets, or otherwise within child arm-reach"
+            - "Items children will use are NOT on tall shelves or stored at adult height"
+            - "Pathways are unobstructed; no maze-like or cramped arrangements"
+        anchors:
+          0: "Restricted movement (everything seated or static) OR materials out of child reach (children would need to ask an adult to fetch). Either condition alone triggers 0."
+          0.5: "Either varied movement OR fully reachable materials, but not both"
+          1: "Layout invites multiple movement modes (climb / walk / balance / sit) AND every material a child needs is within their reach"
+        common_failure_modes:
+          - "Beautiful space with attractive materials on high shelves earns 0 on this dimension — it looks good but does not work for the child"
+          - "Lots of accessible materials but everything is sit-and-do at tables earns 0.5"
+
+      - id: cleanup_and_resetting
+        label: "Cleanup & Resetting"
+        description: "Whether the space is designed so children themselves can return materials and reset the area. Scored on design intent — not on whether children actually clean up in the recording."
+        indicators:
+          - "Each material has a clearly visible 'home' or return location"
+          - "Storage is at child height and accessible without adult help"
+          - "Containers and shelves are labeled (with pictures, symbols, or color codes — not necessarily text)"
+          - "Materials are organized rather than piled or mixed together"
+          - "The design itself communicates 'this goes back here' without needing adult instruction"
+        signal_mappings:
+          visual:
+            - "Bins, baskets, or shelves with picture / symbol / color labels showing what goes where"
+            - "Outlines or silhouettes on shelves indicating return positions for specific items"
+            - "Storage furniture sized for children (low shelves, not adult cabinets)"
+            - "Mixed-material piles, unsorted bins, or undefined dump zones indicate absence of a system"
+        anchors:
+          0: "No visible storage system; materials in piles or undifferentiated bins; nothing labeled; no child-accessible return spots"
+          0.5: "Some materials have clear storage and return spots, others do not; partial labeling; mix of organized and disorganized areas"
+          1: "Every material has an obvious child-accessible return location; storage is consistently labeled (visually) and at child height; the design itself teaches the reset"
+        common_failure_modes:
+          - "Adult-labeled cabinets with text-only labels at adult eye-level do not count — labeling must be child-readable (picture/symbol)"
+          - "An immaculate space with no visible return-system labels is design-by-staff-cleanup, not design-for-child-cleanup — score 0 or 0.5"

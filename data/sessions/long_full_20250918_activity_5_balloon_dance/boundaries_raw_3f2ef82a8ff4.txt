@@ -1,0 +1,8 @@
+{
+  "first_child_visible_at": "00:09:00",
+  "last_child_visible_at": "00:10:00",
+  "last_child_evidence": "The last child is seen walking out of the room through the doorway.",
+  "confidence": "high",
+  "self_check_passed": true,
+  "notes": "The children enter the room at 00:09:00 and leave at 00:10:00. The rest of the video shows adults or an empty room."
+}

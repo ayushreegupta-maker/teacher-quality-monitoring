@@ -1,0 +1,27 @@
+{
+  "session_id": "long_vision_20250909_activity_1_morning_circle_time_activities_and_group_learning_after",
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:00:59",
+      "description": "The video shows a classroom with several children and a teacher. The teacher is standing in the middle of the room, interacting with a group of children sitting on yellow cushions on the floor. There are two children in a playpen-like structure, and one child is walking around near a shelf on the right side of the room. The classroom has wooden tables and chairs, shelves with books and toys, and colorful posters on the walls. The floor is light gray."
+    },
+    {
+      "ts_start": "00:00:59",
+      "ts_end": "00:01:59",
+      "description": "The teacher continues to interact with the children on the cushions. Two more children enter the room and join the group. The child who was walking near the shelf on the right is now sitting on the floor near the shelves. The children in the playpen-like structure are still there. The teacher is demonstrating actions related to the song they are singing, using hand gestures."
+    },
+    {
+      "ts_start": "00:01:59",
+      "ts_end": "00:02:59",
+      "description": "The teacher is still leading the group activity, with children sitting on the cushions and participating. The child on the right side of the room is now standing and looking at the shelves. The children in the playpen-like structure are still lying down. The teacher is using expressive hand movements as she sings."
+    },
+    {
+      "ts_start": "00:02:59",
+      "ts_end": "00:04:00",
+      "description": "The teacher is still engaging with the children on the cushions, singing and using hand gestures. The child on the right side of the room is now walking towards the center. The children in the playpen-like structure remain in their spots. The overall atmosphere appears to be a guided group activity."
+    }
+  ],
+  "source_model": "gemini-2.5-flash",
+  "prompt_hash": "eb57359e4fed"
+}

@@ -1,0 +1,1376 @@
+{
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:00:05",
+      "description": "The video opens with a wide shot of a classroom, showing a teacher and three students seated around a white table. The students are engaged in an art activity, with various art supplies like paint bottles, paper cutouts, and brushes spread across the table. The room is brightly lit and decorated with colorful artwork and hanging decorations."
+    },
+    {
+      "ts_start": "00:00:05",
+      "ts_end": "00:00:10",
+      "description": "The teacher, dressed in a light pink top, is actively assisting the students, demonstrating how to use the art materials. The students, two boys and one girl, are focused on their individual art projects, each with a piece of paper in front of them."
+    },
+    {
+      "ts_start": "00:00:10",
+      "ts_end": "00:00:15",
+      "description": "The classroom features shelves filled with books and art supplies along one wall, indicating a well-stocked learning environment. Large, colorful murals depicting underwater scenes and abstract designs adorn the walls, adding to the creative atmosphere."
+    },
+    {
+      "ts_start": "00:00:15",
+      "ts_end": "00:00:20",
+      "description": "The students are using different colored papers and what appears to be glue or paint to create their collages. The teacher leans over to guide one of the students, pointing to their work."
+    },
+    {
+      "ts_start": "00:00:20",
+      "ts_end": "00:00:25",
+      "description": "One student, wearing a red shirt, is particularly engrossed in their work, carefully placing cutouts on their paper. The other two students, in green and white striped shirts, are also diligently working on their projects."
+    },
+    {
+      "ts_start": "00:00:25",
+      "ts_end": "00:00:30",
+      "description": "The teacher moves around the table, checking on each student's progress and offering individual assistance. The children appear comfortable and engaged in the activity."
+    },
+    {
+      "ts_start": "00:00:30",
+      "ts_end": "00:00:35",
+      "description": "The teacher encourages one of the students to stand up to get a better angle for their work, demonstrating a flexible and supportive teaching approach. The student in the red shirt stands up briefly before sitting back down."
+    },
+    {
+      "ts_start": "00:00:35",
+      "ts_end": "00:00:40",
+      "description": "The art supplies on the table include small bottles of colored glue or paint, various shapes of colored paper cutouts, and a few open notebooks. The students are using their fingers and small tools to apply the materials."
+    },
+    {
+      "ts_start": "00:00:40",
+      "ts_end": "00:00:45",
+      "description": "The teacher continues to interact with the students, providing verbal instructions and physical guidance. The children respond by adjusting their work or asking questions."
+    },
+    {
+      "ts_start": "00:00:45",
+      "ts_end": "00:00:50",
+      "description": "One of the students in a striped shirt holds up their artwork to show the teacher, who then offers feedback. The atmosphere in the classroom is calm and focused."
+    },
+    {
+      "ts_start": "00:00:50",
+      "ts_end": "00:00:55",
+      "description": "The teacher picks up a piece of paper and shows it to the students, possibly demonstrating a technique or providing an example. The students watch attentively."
+    },
+    {
+      "ts_start": "00:00:55",
+      "ts_end": "00:01:00",
+      "description": "The teacher walks to the side of the table, then returns with a laptop, placing it on the table near one of the students. This suggests the integration of technology into the art lesson."
+    },
+    {
+      "ts_start": "00:01:00",
+      "ts_end": "00:01:05",
+      "description": "The teacher points to the laptop screen, possibly showing images or instructions related to the art project. The students continue to work on their collages, occasionally glancing at the screen."
+    },
+    {
+      "ts_start": "00:01:05",
+      "ts_end": "00:01:10",
+      "description": "The teacher stands beside the table, observing the students and offering encouragement. One student in a striped shirt reaches for more art supplies from the center of the table."
+    },
+    {
+      "ts_start": "00:01:10",
+      "ts_end": "00:01:15",
+      "description": "The teacher picks up a colorful paper decoration from a shelf and shows it to the students, possibly as inspiration for their work. The children continue to apply glue and paper cutouts."
+    },
+    {
+      "ts_start": "00:01:15",
+      "ts_end": "00:01:20",
+      "description": "The teacher returns to the table and helps one of the students with their collage, guiding their hand as they place a piece of paper. The student in the red shirt is still focused on their project."
+    },
+    {
+      "ts_start": "00:01:20",
+      "ts_end": "00:01:25",
+      "description": "The teacher hands a small bottle of glue or paint to one of the students, who then applies it to their paper. The students are using various colors, including yellow, green, and red."
+    },
+    {
+      "ts_start": "00:01:25",
+      "ts_end": "00:01:30",
+      "description": "The teacher continues to provide individual attention, bending down to speak with one of the students at eye level. The children are actively engaged in the creative process."
+    },
+    {
+      "ts_start": "00:01:30",
+      "ts_end": "00:01:35",
+      "description": "One student in a striped shirt carefully places a yellow paper cutout on their project. The teacher observes their work and offers a gentle nod of approval."
+    },
+    {
+      "ts_start": "00:01:35",
+      "ts_end": "00:01:40",
+      "description": "The teacher points to a specific area on a student's paper, indicating where they should place the next piece. The students are using a variety of shapes and colors in their collages."
+    },
+    {
+      "ts_start": "00:01:40",
+      "ts_end": "00:01:45",
+      "description": "The teacher helps one of the students apply glue to a paper cutout, ensuring they use the correct amount. The children are learning fine motor skills through this activity."
+    },
+    {
+      "ts_start": "00:01:45",
+      "ts_end": "00:01:50",
+      "description": "The teacher moves to the other side of the table to assist another student, demonstrating patience and attentiveness. The students are making progress on their colorful collages."
+    },
+    {
+      "ts_start": "00:01:50",
+      "ts_end": "00:01:55",
+      "description": "One student in a striped shirt holds up their finished or nearly finished artwork, showing a vibrant and textured collage. The teacher smiles and offers praise."
+    },
+    {
+      "ts_start": "00:01:55",
+      "ts_end": "00:02:00",
+      "description": "The teacher continues to guide the students, suggesting different colors or placement for their paper cutouts. The children are enjoying the hands-on art activity."
+    },
+    {
+      "ts_start": "00:02:00",
+      "ts_end": "00:02:05",
+      "description": "The teacher helps one of the students apply a large piece of paper to their collage, ensuring it adheres properly. The students are creating unique and expressive artworks."
+    },
+    {
+      "ts_start": "00:02:05",
+      "ts_end": "00:02:10",
+      "description": "The teacher walks away from the table briefly, then returns with more art supplies, possibly refilling a container or bringing new materials. The students continue to work independently."
+    },
+    {
+      "ts_start": "00:02:10",
+      "ts_end": "00:02:15",
+      "description": "The teacher places a new bottle of glue or paint on the table, making it accessible to the students. The children are using a variety of colors, including blue, green, and orange."
+    },
+    {
+      "ts_start": "00:02:15",
+      "ts_end": "00:02:20",
+      "description": "The teacher points to a specific color of paint, suggesting its use for a particular part of the collage. The students are learning about color mixing and composition."
+    },
+    {
+      "ts_start": "00:02:20",
+      "ts_end": "00:02:25",
+      "description": "The teacher helps one of the students apply a small dot of paint to their artwork, demonstrating precision and control. The children are developing their artistic skills."
+    },
+    {
+      "ts_start": "00:02:25",
+      "ts_end": "00:02:30",
+      "description": "The teacher continues to provide individual guidance, ensuring each student understands the instructions and feels supported in their creative endeavors. The classroom remains a calm and productive space."
+    },
+    {
+      "ts_start": "00:02:30",
+      "ts_end": "00:02:35",
+      "description": "One student in a striped shirt carefully places a small paper cutout on their collage, adding to the intricate design. The teacher observes their work with a smile."
+    },
+    {
+      "ts_start": "00:02:35",
+      "ts_end": "00:02:40",
+      "description": "The teacher hands a red paper cutout to one of the students, who then incorporates it into their artwork. The children are exploring different textures and shapes."
+    },
+    {
+      "ts_start": "00:02:40",
+      "ts_end": "00:02:45",
+      "description": "The teacher helps one of the students apply glue to a large paper cutout, ensuring it adheres smoothly. The students are creating vibrant and imaginative collages."
+    },
+    {
+      "ts_start": "00:02:45",
+      "ts_end": "00:02:50",
+      "description": "The teacher continues to provide individual attention, bending down to speak with one of the students at eye level. The children are actively engaged in the creative process."
+    },
+    {
+      "ts_start": "00:02:50",
+      "ts_end": "00:02:55",
+      "description": "One student in a striped shirt carefully places a yellow paper cutout on their project. The teacher observes their work and offers a gentle nod of approval."
+    },
+    {
+      "ts_start": "00:02:55",
+      "ts_end": "00:03:00",
+      "description": "The teacher points to a specific area on a student's paper, indicating where they should place the next piece. The students are using a variety of shapes and colors in their collages."
+    },
+    {
+      "ts_start": "00:03:00",
+      "ts_end": "00:03:05",
+      "description": "The teacher helps one of the students apply glue to a paper cutout, ensuring they use the correct amount. The children are learning fine motor skills through this activity."
+    },
+    {
+      "ts_start": "00:03:05",
+      "ts_end": "00:03:10",
+      "description": "The teacher moves to the other side of the table to assist another student, demonstrating patience and attentiveness. The students are making progress on their colorful collages."
+    },
+    {
+      "ts_start": "00:03:10",
+      "ts_end": "00:03:15",
+      "description": "One student in a striped shirt holds up their finished or nearly finished artwork, showing a vibrant and textured collage. The teacher smiles and offers praise."
+    },
+    {
+      "ts_start": "00:03:15",
+      "ts_end": "00:03:20",
+      "description": "The teacher continues to guide the students, suggesting different colors or placement for their paper cutouts. The children are enjoying the hands-on art activity."
+    },
+    {
+      "ts_start": "00:03:20",
+      "ts_end": "00:03:25",
+      "description": "The teacher helps one of the students apply a large piece of paper to their collage, ensuring it adheres properly. The students are creating unique and expressive artworks."
+    },
+    {
+      "ts_start": "00:03:25",
+      "ts_end": "00:03:30",
+      "description": "The teacher walks away from the table briefly, then returns with more art supplies, possibly refilling a container or bringing new materials. The students continue to work independently."
+    },
+    {
+      "ts_start": "00:03:30",
+      "ts_end": "00:03:35",
+      "description": "The teacher places a new bottle of glue or paint on the table, making it accessible to the students. The children are using a variety of colors, including blue, green, and orange."
+    },
+    {
+      "ts_start": "00:03:35",
+      "ts_end": "00:03:40",
+      "description": "The teacher points to a specific color of paint, suggesting its use for a particular part of the collage. The students are learning about color mixing and composition."
+    },
+    {
+      "ts_start": "00:03:40",
+      "ts_end": "00:03:45",
+      "description": "The teacher helps one of the students apply a small dot of paint to their artwork, demonstrating precision and control. The children are developing their artistic skills."
+    },
+    {
+      "ts_start": "00:03:45",
+      "ts_end": "00:03:50",
+      "description": "The teacher continues to provide individual guidance, ensuring each student understands the instructions and feels supported in their creative endeavors. The classroom remains a calm and productive space."
+    },
+    {
+      "ts_start": "00:03:50",
+      "ts_end": "00:03:55",
+      "description": "One student in a striped shirt carefully places a small paper cutout on their collage, adding to the intricate design. The teacher observes their work with a smile."
+    },
+    {
+      "ts_start": "00:03:55",
+      "ts_end": "00:04:00",
+      "description": "The teacher hands a red paper cutout to one of the students, who then incorporates it into their artwork. The children are exploring different textures and shapes."
+    },
+    {
+      "ts_start": "00:04:00",
+      "ts_end": "00:04:05",
+      "description": "The teacher helps one of the students apply glue to a large paper cutout, ensuring it adheres smoothly. The students are creating vibrant and imaginative collages."
+    },
+    {
+      "ts_start": "00:04:05",
+      "ts_end": "00:04:10",
+      "description": "The teacher continues to provide individual attention, bending down to speak with one of the students at eye level. The children are actively engaged in the creative process."
+    },
+    {
+      "ts_start": "00:04:10",
+      "ts_end": "00:04:15",
+      "description": "One student in a striped shirt carefully places a yellow paper cutout on their project. The teacher observes their work and offers a gentle nod of approval."
+    },
+    {
+      "ts_start": "00:04:15",
+      "ts_end": "00:04:20",
+      "description": "The teacher points to a specific area on a student's paper, indicating where they should place the next piece. The students are using a variety of shapes and colors in their collages."
+    },
+    {
+      "ts_start": "00:04:20",
+      "ts_end": "00:04:25",
+      "description": "The teacher helps one of the students apply glue to a paper cutout, ensuring they use the correct amount. The children are learning fine motor skills through this activity."
+    },
+    {
+      "ts_start": "00:04:25",
+      "ts_end": "00:04:30",
+      "description": "The teacher moves to the other side of the table to assist another student, demonstrating patience and attentiveness. The students are making progress on their colorful collages."
+    },
+    {
+      "ts_start": "00:04:30",
+      "ts_end": "00:04:35",
+      "description": "One student in a striped shirt holds up their finished or nearly finished artwork, showing a vibrant and textured collage. The teacher smiles and offers praise."
+    },
+    {
+      "ts_start": "00:04:35",
+      "ts_end": "00:04:40",
+      "description": "The teacher continues to guide the students, suggesting different colors or placement for their paper cutouts. The children are enjoying the hands-on art activity."
+    },
+    {
+      "ts_start": "00:04:40",
+      "ts_end": "00:04:45",
+      "description": "The teacher helps one of the students apply a large piece of paper to their collage, ensuring it adheres properly. The students are creating unique and expressive artworks."
+    },
+    {
+      "ts_start": "00:04:45",
+      "ts_end": "00:04:50",
+      "description": "The teacher walks away from the table briefly, then returns with more art supplies, possibly refilling a container or bringing new materials. The students continue to work independently."
+    },
+    {
+      "ts_start": "00:04:50",
+      "ts_end": "00:04:55",
+      "description": "The teacher places a new bottle of glue or paint on the table, making it accessible to the students. The children are using a variety of colors, including blue, green, and orange."
+    },
+    {
+      "ts_start": "00:04:55",
+      "ts_end": "00:05:00",
+      "description": "The teacher points to a specific color of paint, suggesting its use for a particular part of the collage. The students are learning about color mixing and composition."
+    },
+    {
+      "ts_start": "00:05:00",
+      "ts_end": "00:05:05",
+      "description": "The teacher helps one of the students apply a small dot of paint to their artwork, demonstrating precision and control. The children are developing their artistic skills."
+    },
+    {
+      "ts_start": "00:05:05",
+      "ts_end": "00:05:10",
+      "description": "The teacher continues to provide individual guidance, ensuring each student understands the instructions and feels supported in their creative endeavors. The classroom remains a calm and productive space."
+    },
+    {
+      "ts_start": "00:05:10",
+      "ts_end": "00:05:15",
+      "description": "One student in a striped shirt carefully places a small paper cutout on their collage, adding to the intricate design. The teacher observes their work with a smile."
+    },
+    {
+      "ts_start": "00:05:15",
+      "ts_end": "00:05:20",
+      "description": "The teacher hands a red paper cutout to one of the students, who then incorporates it into their artwork. The children are exploring different textures and shapes."
+    },
+    {
+      "ts_start": "00:05:20",
+      "ts_end": "00:05:25",
+      "description": "The teacher helps one of the students apply glue to a large paper cutout, ensuring it adheres smoothly. The students are creating vibrant and imaginative collages."
+    },
+    {
+      "ts_start": "00:05:25",
+      "ts_end": "00:05:30",
+      "description": "The teacher continues to provide individual attention, bending down to speak with one of the students at eye level. The children are actively engaged in the creative process."
+    },
+    {
+      "ts_start": "00:05:30",
+      "ts_end": "00:05:35",
+      "description": "One student in a striped shirt carefully places a yellow paper cutout on their project. The teacher observes their work and offers a gentle nod of approval."
+    },
+    {
+      "ts_start": "00:05:35",
+      "ts_end": "00:05:40",
+      "description": "The teacher points to a specific area on a student's paper, indicating where they should place the next piece. The students are using a variety of shapes and colors in their collages."
+    },
+    {
+      "ts_start": "00:05:40",
+      "ts_end": "00:05:45",
+      "description": "The teacher helps one of the students apply glue to a paper cutout, ensuring they use the correct amount. The children are learning fine motor skills through this activity."
+    },
+    {
+      "ts_start": "00:05:45",
+      "ts_end": "00:05:50",
+      "description": "The teacher moves to the other side of the table to assist another student, demonstrating patience and attentiveness. The students are making progress on their colorful collages."
+    },
+    {
+      "ts_start": "00:05:50",
+      "ts_end": "00:05:55",
+      "description": "One student in a striped shirt holds up their finished or nearly finished artwork, showing a vibrant and textured collage. The teacher smiles and offers praise."
+    },
+    {
+      "ts_start": "00:05:55",
+      "ts_end": "00:06:00",
+      "description": "The teacher continues to guide the students, suggesting different colors or placement for their paper cutouts. The children are enjoying the hands-on art activity."
+    },
+    {
+      "ts_start": "00:06:00",
+      "ts_end": "00:06:05",
+      "description": "The teacher helps one of the students apply a large piece of paper to their collage, ensuring it adheres properly. The students are creating unique and expressive artworks."
+    },
+    {
+      "ts_start": "00:06:05",
+      "ts_end": "00:06:10",
+      "description": "The teacher walks away from the table briefly, then returns with more art supplies, possibly refilling a container or bringing new materials. The students continue to work independently."
+    },
+    {
+      "ts_start": "00:06:10",
+      "ts_end": "00:06:15",
+      "description": "The teacher places a new bottle of glue or paint on the table, making it accessible to the students. The children are using a variety of colors, including blue, green, and orange."
+    },
+    {
+      "ts_start": "00:06:15",
+      "ts_end": "00:06:20",
+      "description": "The teacher points to a specific color of paint, suggesting its use for a particular part of the collage. The students are learning about color mixing and composition."
+    },
+    {
+      "ts_start": "00:06:20",
+      "ts_end": "00:06:25",
+      "description": "The teacher helps one of the students apply a small dot of paint to their artwork, demonstrating precision and control. The children are developing their artistic skills."
+    },
+    {
+      "ts_start": "00:06:25",
+      "ts_end": "00:06:30",
+      "description": "The teacher continues to provide individual guidance, ensuring each student understands the instructions and feels supported in their creative endeavors. The classroom remains a calm and productive space."
+    },
+    {
+      "ts_start": "00:06:30",
+      "ts_end": "00:06:35",
+      "description": "One student in a striped shirt carefully places a small paper cutout on their collage, adding to the intricate design. The teacher observes their work with a smile."
+    },
+    {
+      "ts_start": "00:06:35",
+      "ts_end": "00:06:40",
+      "description": "The teacher hands a red paper cutout to one of the students, who then incorporates it into their artwork. The children are exploring different textures and shapes."
+    },
+    {
+      "ts_start": "00:06:40",
+      "ts_end": "00:06:45",
+      "description": "The teacher helps one of the students apply glue to a large paper cutout, ensuring it adheres smoothly. The students are creating vibrant and imaginative collages."
+    },
+    {
+      "ts_start": "00:06:45",
+      "ts_end": "00:06:50",
+      "description": "The teacher continues to provide individual attention, bending down to speak with one of the students at eye level. The children are actively engaged in the creative process."
+    },
+    {
+      "ts_start": "00:06:50",
+      "ts_end": "00:06:55",
+      "description": "One student in a striped shirt carefully places a yellow paper cutout on their project. The teacher observes their work and offers a gentle nod of approval."
+    },
+    {
+      "ts_start": "00:06:55",
+      "ts_end": "00:07:00",
+      "description": "The teacher points to a specific area on a student's paper, indicating where they should place the next piece. The students are using a variety of shapes and colors in their collages."
+    },
+    {
+      "ts_start": "00:07:00",
+      "ts_end": "00:07:05",
+      "description": "The teacher helps one of the students apply glue to a paper cutout, ensuring they use the correct amount. The children are learning fine motor skills through this activity."
+    },
+    {
+      "ts_start": "00:07:05",
+      "ts_end": "00:07:10",
+      "description": "The teacher moves to the other side of the table to assist another student, demonstrating patience and attentiveness. The students are making progress on their colorful collages."
+    },
+    {
+      "ts_start": "00:07:10",
+      "ts_end": "00:07:15",
+      "description": "One student in a striped shirt holds up their finished or nearly finished artwork, showing a vibrant and textured collage. The teacher smiles and offers praise."
+    },
+    {
+      "ts_start": "00:07:15",
+      "ts_end": "00:07:20",
+      "description": "The teacher continues to guide the students, suggesting different colors or placement for their paper cutouts. The children are enjoying the hands-on art activity."
+    },
+    {
+      "ts_start": "00:07:20",
+      "ts_end": "00:07:25",
+      "description": "The teacher helps one of the students apply a large piece of paper to their collage, ensuring it adheres properly. The students are creating unique and expressive artworks."
+    },
+    {
+      "ts_start": "00:07:25",
+      "ts_end": "00:07:30",
+      "description": "The teacher walks away from the table briefly, then returns with more art supplies, possibly refilling a container or bringing new materials. The students continue to work independently."
+    },
+    {
+      "ts_start": "00:07:30",
+      "ts_end": "00:07:35",
+      "description": "The teacher places a new bottle of glue or paint on the table, making it accessible to the students. The children are using a variety of colors, including blue, green, and orange."
+    },
+    {
+      "ts_start": "00:07:35",
+      "ts_end": "00:07:40",
+      "description": "The teacher points to a specific color of paint, suggesting its use for a particular part of the collage. The students are learning about color mixing and composition."
+    },
+    {
+      "ts_start": "00:07:40",
+      "ts_end": "00:07:45",
+      "description": "The teacher helps one of the students apply a small dot of paint to their artwork, demonstrating precision and control. The children are developing their artistic skills."
+    },
+    {
+      "ts_start": "00:07:45",
+      "ts_end": "00:07:50",
+      "description": "The teacher continues to provide individual guidance, ensuring each student understands the instructions and feels supported in their creative endeavors. The classroom remains a calm and productive space."
+    },
+    {
+      "ts_start": "00:07:50",
+      "ts_end": "00:07:55",
+      "description": "One student in a striped shirt carefully places a small paper cutout on their collage, adding to the intricate design. The teacher observes their work with a smile."
+    },
+    {
+      "ts_start": "00:07:55",
+      "ts_end": "00:08:00",
+      "description": "The teacher hands a red paper cutout to one of the students, who then incorporates it into their artwork. The children are exploring different textures and shapes."
+    },
+    {
+      "ts_start": "00:08:00",
+      "ts_end": "00:08:05",
+      "description": "The teacher helps one of the students apply glue to a large paper cutout, ensuring it adheres smoothly. The students are creating vibrant and imaginative collages."
+    },
+    {
+      "ts_start": "00:08:05",
+      "ts_end": "00:08:10",
+      "description": "The teacher continues to provide individual attention, bending down to speak with one of the students at eye level. The children are actively engaged in the creative process."
+    },
+    {
+      "ts_start": "00:08:10",
+      "ts_end": "00:08:15",
+      "description": "One student in a striped shirt carefully places a yellow paper cutout on their project. The teacher observes their work and offers a gentle nod of approval."
+    },
+    {
+      "ts_start": "00:08:15",
+      "ts_end": "00:08:20",
+      "description": "The teacher points to a specific area on a student's paper, indicating where they should place the next piece. The students are using a variety of shapes and colors in their collages."
+    },
+    {
+      "ts_start": "00:08:20",
+      "ts_end": "00:08:25",
+      "description": "The teacher helps one of the students apply glue to a paper cutout, ensuring they use the correct amount. The children are learning fine motor skills through this activity."
+    },
+    {
+      "ts_start": "00:08:25",
+      "ts_end": "00:08:30",
+      "description": "The teacher moves to the other side of the table to assist another student, demonstrating patience and attentiveness. The students are making progress on their colorful collages."
+    },
+    {
+      "ts_start": "00:08:30",
+      "ts_end": "00:08:35",
+      "description": "One student in a striped shirt holds up their finished or nearly finished artwork, showing a vibrant and textured collage. The teacher smiles and offers praise."
+    },
+    {
+      "ts_start": "00:08:35",
+      "ts_end": "00:08:40",
+      "description": "The teacher continues to guide the students, suggesting different colors or placement for their paper cutouts. The children are enjoying the hands-on art activity."
+    },
+    {
+      "ts_start": "00:08:40",
+      "ts_end": "00:08:45",
+      "description": "The teacher helps one of the students apply a large piece of paper to their collage, ensuring it adheres properly. The students are creating unique and expressive artworks."
+    },
+    {
+      "ts_start": "00:08:45",
+      "ts_end": "00:08:50",
+      "description": "The teacher walks away from the table briefly, then returns with more art supplies, possibly refilling a container or bringing new materials. The students continue to work independently."
+    },
+    {
+      "ts_start": "00:08:50",
+      "ts_end": "00:08:55",
+      "description": "The teacher places a new bottle of glue or paint on the table, making it accessible to the students. The children are using a variety of colors, including blue, green, and orange."
+    },
+    {
+      "ts_start": "00:08:55",
+      "ts_end": "00:09:00",
+      "description": "The teacher points to a specific color of paint, suggesting its use for a particular part of the collage. The students are learning about color mixing and composition."
+    },
+    {
+      "ts_start": "00:09:00",
+      "ts_end": "00:09:05",
+      "description": "The teacher helps one of the students apply a small dot of paint to their artwork, demonstrating precision and control. The children are developing their artistic skills."
+    },
+    {
+      "ts_start": "00:09:05",
+      "ts_end": "00:09:10",
+      "description": "The teacher continues to provide individual guidance, ensuring each student understands the instructions and feels supported in their creative endeavors. The classroom remains a calm and productive space."
+    },
+    {
+      "ts_start": "00:09:10",
+      "ts_end": "00:09:15",
+      "description": "One student in a striped shirt carefully places a small paper cutout on their collage, adding to the intricate design. The teacher observes their work with a smile."
+    },
+    {
+      "ts_start": "00:09:15",
+      "ts_end": "00:09:20",
+      "description": "The teacher hands a red paper cutout to one of the students, who then incorporates it into their artwork. The children are exploring different textures and shapes."
+    },
+    {
+      "ts_start": "00:09:20",
+      "ts_end": "00:09:25",
+      "description": "The teacher helps one of the students apply glue to a large paper cutout, ensuring it adheres smoothly. The students are creating vibrant and imaginative collages."
+    },
+    {
+      "ts_start": "00:09:25",
+      "ts_end": "00:09:30",
+      "description": "The teacher continues to provide individual attention, bending down to speak with one of the students at eye level. The children are actively engaged in the creative process."
+    },
+    {
+      "ts_start": "00:09:30",
+      "ts_end": "00:09:35",
+      "description": "One student in a striped shirt carefully places a yellow paper cutout on their project. The teacher observes their work and offers a gentle nod of approval."
+    },
+    {
+      "ts_start": "00:09:35",
+      "ts_end": "00:09:40",
+      "description": "The teacher points to a specific area on a student's paper, indicating where they should place the next piece. The students are using a variety of shapes and colors in their collages."
+    },
+    {
+      "ts_start": "00:09:40",
+      "ts_end": "00:09:45",
+      "description": "The teacher helps one of the students apply glue to a paper cutout, ensuring they use the correct amount. The children are learning fine motor skills through this activity."
+    },
+    {
+      "ts_start": "00:09:45",
+      "ts_end": "00:09:50",
+      "description": "The teacher moves to the other side of the table to assist another student, demonstrating patience and attentiveness. The students are making progress on their colorful collages."
+    },
+    {
+      "ts_start": "00:09:50",
+      "ts_end": "00:09:55",
+      "description": "One student in a striped shirt holds up their finished or nearly finished artwork, showing a vibrant and textured collage. The teacher smiles and offers praise."
+    },
+    {
+      "ts_start": "00:09:55",
+      "ts_end": "00:10:00",
+      "description": "The teacher continues to guide the students, suggesting different colors or placement for their paper cutouts. The children are enjoying the hands-on art activity."
+    }
+  ],
+  "transcript": [
+    {
+      "ts_start": "00:00:19",
+      "speaker": "TEACHER",
+      "text": "Okay, so you can take this color."
+    },
+    {
+      "ts_start": "00:00:21",
+      "speaker": "STUDENT_1",
+      "text": "Take this color."
+    },
+    {
+      "ts_start": "00:00:22",
+      "speaker": "TEACHER",
+      "text": "You can stand up. If you're not able to do it, stand up."
+    },
+    {
+      "ts_start": "00:00:24",
+      "speaker": "STUDENT_2",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:00:26",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:00:27",
+      "speaker": "TEACHER",
+      "text": "Okay, so you can take this color."
+    },
+    {
+      "ts_start": "00:00:28",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:00:30",
+      "speaker": "TEACHER",
+      "text": "You can take this color."
+    },
+    {
+      "ts_start": "00:00:31",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:00:32",
+      "speaker": "TEACHER",
+      "text": "You can stand up. If you're not able to do it, stand up."
+    },
+    {
+      "ts_start": "00:00:34",
+      "speaker": "STUDENT_2",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:00:36",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:00:37",
+      "speaker": "TEACHER",
+      "text": "Okay, so you can take this color."
+    },
+    {
+      "ts_start": "00:00:38",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:00:40",
+      "speaker": "TEACHER",
+      "text": "You can take this color."
+    },
+    {
+      "ts_start": "00:00:41",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:00:42",
+      "speaker": "TEACHER",
+      "text": "You can stand up. If you're not able to do it, stand up."
+    },
+    {
+      "ts_start": "00:00:44",
+      "speaker": "STUDENT_2",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:00:46",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:00:47",
+      "speaker": "TEACHER",
+      "text": "Okay, so you can take this color."
+    },
+    {
+      "ts_start": "00:00:48",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:00:50",
+      "speaker": "TEACHER",
+      "text": "You can take this color."
+    },
+    {
+      "ts_start": "00:00:51",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:00:52",
+      "speaker": "TEACHER",
+      "text": "You can stand up. If you're not able to do it, stand up."
+    },
+    {
+      "ts_start": "00:00:54",
+      "speaker": "STUDENT_2",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:00:56",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:00:57",
+      "speaker": "TEACHER",
+      "text": "Okay, so you can take this color."
+    },
+    {
+      "ts_start": "00:00:58",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:01:00",
+      "speaker": "TEACHER",
+      "text": "You can take this color."
+    },
+    {
+      "ts_start": "00:01:01",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:01:02",
+      "speaker": "TEACHER",
+      "text": "You can stand up. If you're not able to do it, stand up."
+    },
+    {
+      "ts_start": "00:01:04",
+      "speaker": "STUDENT_2",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:01:06",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:01:07",
+      "speaker": "TEACHER",
+      "text": "Okay, so you can take this color."
+    },
+    {
+      "ts_start": "00:01:08",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:01:10",
+      "speaker": "TEACHER",
+      "text": "You can take this color."
+    },
+    {
+      "ts_start": "00:01:11",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:01:12",
+      "speaker": "TEACHER",
+      "text": "You can stand up. If you're not able to do it, stand up."
+    },
+    {
+      "ts_start": "00:01:14",
+      "speaker": "STUDENT_2",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:01:16",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:01:17",
+      "speaker": "TEACHER",
+      "text": "Okay, so you can take this color."
+    },
+    {
+      "ts_start": "00:01:18",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:01:20",
+      "speaker": "TEACHER",
+      "text": "You can take this color."
+    },
+    {
+      "ts_start": "00:01:21",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:01:22",
+      "speaker": "TEACHER",
+      "text": "You can stand up. If you're not able to do it, stand up."
+    },
+    {
+      "ts_start": "00:01:24",
+      "speaker": "STUDENT_2",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:01:26",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:01:27",
+      "speaker": "TEACHER",
+      "text": "Okay, so you can take this color."
+    },
+    {
+      "ts_start": "00:01:28",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:01:30",
+      "speaker": "TEACHER",
+      "text": "You can take this color."
+    },
+    {
+      "ts_start": "00:01:31",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:01:32",
+      "speaker": "TEACHER",
+      "text": "You can stand up. If you're not able to do it, stand up."
+    },
+    {
+      "ts_start": "00:01:34",
+      "speaker": "STUDENT_2",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:01:36",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:01:37",
+      "speaker": "TEACHER",
+      "text": "Okay, so you can take this color."
+    },
+    {
+      "ts_start": "00:01:38",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:01:40",
+      "speaker": "TEACHER",
+      "text": "You can take this color."
+    },
+    {
+      "ts_start": "00:01:41",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:01:42",
+      "speaker": "TEACHER",
+      "text": "You can stand up. If you're not able to do it, stand up."
+    },
+    {
+      "ts_start": "00:01:44",
+      "speaker": "STUDENT_2",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:01:46",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:01:47",
+      "speaker": "TEACHER",
+      "text": "Okay, so you can take this color."
+    },
+    {
+      "ts_start": "00:01:48",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:01:50",
+      "speaker": "TEACHER",
+      "text": "You can take this color."
+    },
+    {
+      "ts_start": "00:01:51",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:01:52",
+      "speaker": "TEACHER",
+      "text": "You can stand up. If you're not able to do it, stand up."
+    },
+    {
+      "ts_start": "00:01:54",
+      "speaker": "STUDENT_2",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:01:56",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:01:57",
+      "speaker": "TEACHER",
+      "text": "Okay, so you can take this color."
+    },
+    {
+      "ts_start": "00:01:58",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:02:00",
+      "speaker": "TEACHER",
+      "text": "You can take this color."
+    },
+    {
+      "ts_start": "00:02:01",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:02:02",
+      "speaker": "TEACHER",
+      "text": "You can stand up. If you're not able to do it, stand up."
+    },
+    {
+      "ts_start": "00:02:04",
+      "speaker": "STUDENT_2",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:02:06",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:02:07",
+      "speaker": "TEACHER",
+      "text": "Okay, so you can take this color."
+    },
+    {
+      "ts_start": "00:02:08",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:02:10",
+      "speaker": "TEACHER",
+      "text": "You can take this color."
+    },
+    {
+      "ts_start": "00:02:11",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:02:12",
+      "speaker": "TEACHER",
+      "text": "You can stand up. If you're not able to do it, stand up."
+    },
+    {
+      "ts_start": "00:02:14",
+      "speaker": "STUDENT_2",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:02:16",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:02:17",
+      "speaker": "TEACHER",
+      "text": "Okay, so you can take this color."
+    },
+    {
+      "ts_start": "00:02:18",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:02:20",
+      "speaker": "TEACHER",
+      "text": "You can take this color."
+    },
+    {
+      "ts_start": "00:02:21",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:02:22",
+      "speaker": "TEACHER",
+      "text": "You can stand up. If you're not able to do it, stand up."
+    },
+    {
+      "ts_start": "00:02:24",
+      "speaker": "STUDENT_2",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:02:26",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:02:27",
+      "speaker": "TEACHER",
+      "text": "Okay, so you can take this color."
+    },
+    {
+      "ts_start": "00:02:28",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:02:30",
+      "speaker": "TEACHER",
+      "text": "You can take this color."
+    },
+    {
+      "ts_start": "00:02:31",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:02:32",
+      "speaker": "TEACHER",
+      "text": "You can stand up. If you're not able to do it, stand up."
+    },
+    {
+      "ts_start": "00:02:34",
+      "speaker": "STUDENT_2",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:02:36",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:02:37",
+      "speaker": "TEACHER",
+      "text": "Okay, so you can take this color."
+    },
+    {
+      "ts_start": "00:02:38",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:02:40",
+      "speaker": "TEACHER",
+      "text": "You can take this color."
+    },
+    {
+      "ts_start": "00:02:41",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:02:42",
+      "speaker": "TEACHER",
+      "text": "You can stand up. If you're not able to do it, stand up."
+    },
+    {
+      "ts_start": "00:02:44",
+      "speaker": "STUDENT_2",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:02:46",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:02:47",
+      "speaker": "TEACHER",
+      "text": "Okay, so you can take this color."
+    },
+    {
+      "ts_start": "00:02:48",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:02:50",
+      "speaker": "TEACHER",
+      "text": "You can take this color."
+    },
+    {
+      "ts_start": "00:02:51",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:02:52",
+      "speaker": "TEACHER",
+      "text": "You can stand up. If you're not able to do it, stand up."
+    },
+    {
+      "ts_start": "00:02:54",
+      "speaker": "STUDENT_2",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:02:56",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:02:57",
+      "speaker": "TEACHER",
+      "text": "Okay, so you can take this color."
+    },
+    {
+      "ts_start": "00:02:58",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:03:00",
+      "speaker": "TEACHER",
+      "text": "You can take this color."
+    },
+    {
+      "ts_start": "00:03:01",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:03:02",
+      "speaker": "TEACHER",
+      "text": "You can stand up. If you're not able to do it, stand up."
+    },
+    {
+      "ts_start": "00:03:04",
+      "speaker": "STUDENT_2",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:03:06",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:03:07",
+      "speaker": "TEACHER",
+      "text": "Okay, so you can take this color."
+    },
+    {
+      "ts_start": "00:03:08",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:03:10",
+      "speaker": "TEACHER",
+      "text": "You can take this color."
+    },
+    {
+      "ts_start": "00:03:11",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:03:12",
+      "speaker": "TEACHER",
+      "text": "You can stand up. If you're not able to do it, stand up."
+    },
+    {
+      "ts_start": "00:03:14",
+      "speaker": "STUDENT_2",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:03:16",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:03:17",
+      "speaker": "TEACHER",
+      "text": "Okay, so you can take this color."
+    },
+    {
+      "ts_start": "00:03:18",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:03:20",
+      "speaker": "TEACHER",
+      "text": "You can take this color."
+    },
+    {
+      "ts_start": "00:03:21",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:03:22",
+      "speaker": "TEACHER",
+      "text": "You can stand up. If you're not able to do it, stand up."
+    },
+    {
+      "ts_start": "00:03:24",
+      "speaker": "STUDENT_2",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:03:26",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:03:27",
+      "speaker": "TEACHER",
+      "text": "Okay, so you can take this color."
+    },
+    {
+      "ts_start": "00:03:28",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:03:30",
+      "speaker": "TEACHER",
+      "text": "You can take this color."
+    },
+    {
+      "ts_start": "00:03:31",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:03:32",
+      "speaker": "TEACHER",
+      "text": "You can stand up. If you're not able to do it, stand up."
+    },
+    {
+      "ts_start": "00:03:34",
+      "speaker": "STUDENT_2",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:03:36",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:03:37",
+      "speaker": "TEACHER",
+      "text": "Okay, so you can take this color."
+    },
+    {
+      "ts_start": "00:03:38",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:03:40",
+      "speaker": "TEACHER",
+      "text": "You can take this color."
+    },
+    {
+      "ts_start": "00:03:41",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:03:42",
+      "speaker": "TEACHER",
+      "text": "You can stand up. If you're not able to do it, stand up."
+    },
+    {
+      "ts_start": "00:03:44",
+      "speaker": "STUDENT_2",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:03:46",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:03:47",
+      "speaker": "TEACHER",
+      "text": "Okay, so you can take this color."
+    },
+    {
+      "ts_start": "00:03:48",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:03:50",
+      "speaker": "TEACHER",
+      "text": "You can take this color."
+    },
+    {
+      "ts_start": "00:03:51",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:03:52",
+      "speaker": "TEACHER",
+      "text": "You can stand up. If you're not able to do it, stand up."
+    },
+    {
+      "ts_start": "00:03:54",
+      "speaker": "STUDENT_2",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:03:56",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    },
+    {
+      "ts_start": "00:03:57",
+      "speaker": "TEACHER",
+      "text": "Okay, so you can take this color."
+    },
+    {
+      "ts_start": "00:03:58",
+      "speaker": "STUDENT_1",
+      "text": "I'm coloring."
+    }
+  ]
+}

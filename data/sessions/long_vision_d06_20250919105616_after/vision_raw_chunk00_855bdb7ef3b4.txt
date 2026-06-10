@@ -1,0 +1,446 @@
+{
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:00:30",
+      "description": "The video shows a classroom with wooden floors and white walls. There are six small wooden tables with blue mats underneath, arranged in a semi-circle. Five children are seated at these tables, coloring on sheets of paper. One child stands near the center of the room, also holding a coloring sheet. A teacher is seated on the floor, assisting one of the children with their coloring. There's a black board on the right side of the room, and a window on the left."
+    },
+    {
+      "ts_start": "00:00:30",
+      "ts_end": "00:01:00",
+      "description": "The children continue to color. The standing child walks around the tables, looking at other children's work. The teacher remains seated, helping a child. Papers are scattered on the floor around the tables. One child drops their coloring sheet on the floor and then picks it up."
+    },
+    {
+      "ts_start": "00:01:00",
+      "ts_end": "00:01:30",
+      "description": "The children are still coloring. The teacher stands up and walks around the tables, interacting with different children. One child stands up and walks to the teacher, showing her their coloring sheet. Another child stands up and walks to the right side of the room, near the blackboard."
+    },
+    {
+      "ts_start": "00:01:30",
+      "ts_end": "00:02:00",
+      "description": "The teacher continues to interact with the children, helping them with their coloring. The child who walked to the blackboard is now standing near it, looking at the wall. Another child stands up and walks around the tables. The children are still engaged in coloring."
+    },
+    {
+      "ts_start": "00:02:00",
+      "ts_end": "00:02:30",
+      "description": "The teacher is still helping the children with their coloring. The children are focused on their work. The child who was near the blackboard walks back to the tables. Another child stands up and walks to the right side of the room, near the blackboard."
+    },
+    {
+      "ts_start": "00:02:30",
+      "ts_end": "00:03:00",
+      "description": "The teacher continues to assist the children. The children are still coloring. The child who walked to the blackboard is now standing near it, looking at the wall. Another child stands up and walks around the tables."
+    },
+    {
+      "ts_start": "00:03:00",
+      "ts_end": "00:03:30",
+      "description": "The teacher is still helping the children with their coloring. The children are focused on their work. The child who was near the blackboard walks back to the tables. Another child stands up and walks to the right side of the room, near the blackboard."
+    },
+    {
+      "ts_start": "00:03:30",
+      "ts_end": "00:04:00",
+      "description": "The teacher continues to assist the children. The children are still coloring. The child who walked to the blackboard is now standing near it, looking at the wall. Another child stands up and walks around the tables."
+    },
+    {
+      "ts_start": "00:04:00",
+      "ts_end": "00:04:30",
+      "description": "The teacher is still helping the children with their coloring. The children are focused on their work. The child who was near the blackboard walks back to the tables. Another child stands up and walks to the right side of the room, near the blackboard."
+    },
+    {
+      "ts_start": "00:04:30",
+      "ts_end": "00:05:00",
+      "description": "The teacher is still helping the children with their coloring. The children are focused on their work. The child who was near the blackboard walks back to the tables. Another child stands up and walks to the right side of the room, near the blackboard. The children are still engaged in coloring."
+    }
+  ],
+  "transcript": [
+    {
+      "ts_start": "00:00:18",
+      "speaker": "STUDENT_1",
+      "text": "I'm thinking."
+    },
+    {
+      "ts_start": "00:00:20",
+      "speaker": "STUDENT_2",
+      "text": "I can do."
+    },
+    {
+      "ts_start": "00:00:23",
+      "speaker": "TEACHER",
+      "text": "Okay, let's have a look at your drawing."
+    },
+    {
+      "ts_start": "00:00:30",
+      "speaker": "STUDENT_3",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:00:33",
+      "speaker": "TEACHER",
+      "text": "Shnaya, you're doing good."
+    },
+    {
+      "ts_start": "00:00:35",
+      "speaker": "STUDENT_4",
+      "text": "I'm doing good."
+    },
+    {
+      "ts_start": "00:00:36",
+      "speaker": "TEACHER",
+      "text": "Bring it here, beta."
+    },
+    {
+      "ts_start": "00:00:37",
+      "speaker": "STUDENT_5",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:00:39",
+      "speaker": "STUDENT_6",
+      "text": "I'm doing."
+    },
+    {
+      "ts_start": "00:00:49",
+      "speaker": "TEACHER",
+      "text": "Okay."
+    },
+    {
+      "ts_start": "00:00:50",
+      "speaker": "STUDENT_7",
+      "text": "I'm doing."
+    },
+    {
+      "ts_start": "00:00:53",
+      "speaker": "STUDENT_8",
+      "text": "I'm doing."
+    },
+    {
+      "ts_start": "00:00:55",
+      "speaker": "STUDENT_9",
+      "text": "I'm doing."
+    },
+    {
+      "ts_start": "00:00:56",
+      "speaker": "STUDENT_10",
+      "text": "Thank you for coming."
+    },
+    {
+      "ts_start": "00:00:58",
+      "speaker": "STUDENT_11",
+      "text": "Thank you for coming."
+    },
+    {
+      "ts_start": "00:01:02",
+      "speaker": "STUDENT_12",
+      "text": "I'm doing."
+    },
+    {
+      "ts_start": "00:01:04",
+      "speaker": "STUDENT_13",
+      "text": "Thank you for coming."
+    },
+    {
+      "ts_start": "00:01:06",
+      "speaker": "TEACHER",
+      "text": "Okay, come on."
+    },
+    {
+      "ts_start": "00:01:07",
+      "speaker": "STUDENT_14",
+      "text": "I'm doing."
+    },
+    {
+      "ts_start": "00:01:08",
+      "speaker": "STUDENT_15",
+      "text": "I'm doing."
+    },
+    {
+      "ts_start": "00:01:09",
+      "speaker": "TEACHER",
+      "text": "Okay, I'm here."
+    },
+    {
+      "ts_start": "00:01:16",
+      "speaker": "STUDENT_16",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:01:18",
+      "speaker": "STUDENT_17",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:01:27",
+      "speaker": "TEACHER",
+      "text": "Now, pick your portion."
+    },
+    {
+      "ts_start": "00:01:29",
+      "speaker": "TEACHER",
+      "text": "Pick your portion."
+    },
+    {
+      "ts_start": "00:01:32",
+      "speaker": "STUDENT_18",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:01:35",
+      "speaker": "TEACHER",
+      "text": "No, that's not right. No."
+    },
+    {
+      "ts_start": "00:01:39",
+      "speaker": "TEACHER",
+      "text": "Okay."
+    },
+    {
+      "ts_start": "00:01:46",
+      "speaker": "TEACHER",
+      "text": "Shnaya, can you sit here?"
+    },
+    {
+      "ts_start": "00:01:48",
+      "speaker": "STUDENT_19",
+      "text": "No."
+    },
+    {
+      "ts_start": "00:01:49",
+      "speaker": "TEACHER",
+      "text": "One, two."
+    },
+    {
+      "ts_start": "00:01:52",
+      "speaker": "TEACHER",
+      "text": "Three."
+    },
+    {
+      "ts_start": "00:01:53",
+      "speaker": "STUDENT_20",
+      "text": "One."
+    },
+    {
+      "ts_start": "00:01:54",
+      "speaker": "TEACHER",
+      "text": "Four, five."
+    },
+    {
+      "ts_start": "00:01:56",
+      "speaker": "TEACHER",
+      "text": "Six, seven."
+    },
+    {
+      "ts_start": "00:01:57",
+      "speaker": "STUDENT_21",
+      "text": "Seven."
+    },
+    {
+      "ts_start": "00:01:58",
+      "speaker": "TEACHER",
+      "text": "Eight, nine, ten."
+    },
+    {
+      "ts_start": "00:01:59",
+      "speaker": "STUDENT_22",
+      "text": "Ten."
+    },
+    {
+      "ts_start": "00:02:00",
+      "speaker": "STUDENT_23",
+      "text": "Twenty."
+    },
+    {
+      "ts_start": "00:02:02",
+      "speaker": "STUDENT_24",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:02:04",
+      "speaker": "STUDENT_25",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:02:06",
+      "speaker": "STUDENT_26",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:02:08",
+      "speaker": "STUDENT_27",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:02:09",
+      "speaker": "STUDENT_28",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:02:13",
+      "speaker": "STUDENT_29",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:02:14",
+      "speaker": "STUDENT_30",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:02:15",
+      "speaker": "STUDENT_31",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:02:19",
+      "speaker": "TEACHER",
+      "text": "Come on."
+    },
+    {
+      "ts_start": "00:02:20",
+      "speaker": "TEACHER",
+      "text": "Come on."
+    },
+    {
+      "ts_start": "00:02:22",
+      "speaker": "STUDENT_32",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:02:26",
+      "speaker": "STUDENT_33",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:02:28",
+      "speaker": "STUDENT_34",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:02:30",
+      "speaker": "STUDENT_35",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:02:37",
+      "speaker": "STUDENT_36",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:02:39",
+      "speaker": "STUDENT_37",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:02:42",
+      "speaker": "TEACHER",
+      "text": "Where are we going?"
+    },
+    {
+      "ts_start": "00:02:43",
+      "speaker": "STUDENT_38",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:02:45",
+      "speaker": "TEACHER",
+      "text": "Shnaya."
+    },
+    {
+      "ts_start": "00:02:48",
+      "speaker": "STUDENT_39",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:02:51",
+      "speaker": "TEACHER",
+      "text": "Shnaya, come on."
+    },
+    {
+      "ts_start": "00:02:53",
+      "speaker": "STUDENT_40",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:02:54",
+      "speaker": "TEACHER",
+      "text": "Come on, Shnaya."
+    },
+    {
+      "ts_start": "00:02:56",
+      "speaker": "STUDENT_41",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:02:58",
+      "speaker": "STUDENT_42",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:03:01",
+      "speaker": "STUDENT_43",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:03:02",
+      "speaker": "TEACHER",
+      "text": "Come on, Shnaya."
+    },
+    {
+      "ts_start": "00:03:08",
+      "speaker": "TEACHER",
+      "text": "Shnaya, come on."
+    },
+    {
+      "ts_start": "00:03:10",
+      "speaker": "STUDENT_44",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:03:14",
+      "speaker": "STUDENT_45",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:03:16",
+      "speaker": "TEACHER",
+      "text": "Sit here, beta. Sit here, beta. Sit here."
+    },
+    {
+      "ts_start": "00:03:20",
+      "speaker": "STUDENT_46",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:03:21",
+      "speaker": "TEACHER",
+      "text": "Okay, sit here, beta. Sit here."
+    },
+    {
+      "ts_start": "00:03:25",
+      "speaker": "TEACHER",
+      "text": "Come on, Shnaya."
+    },
+    {
+      "ts_start": "00:03:28",
+      "speaker": "TEACHER",
+      "text": "Shnaya."
+    },
+    {
+      "ts_start": "00:03:31",
+      "speaker": "STUDENT_47",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:03:34",
+      "speaker": "TEACHER",
+      "text": "Come on, Shnaya."
+    },
+    {
+      "ts_start": "00:03:41",
+      "speaker": "STUDENT_48",
+      "text": "I'm here."
+    },
+    {
+      "ts_start": "00:03:54",
+      "speaker": "STUDENT_49",
+      "text": "I'm here."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+[
+  {
+    "activity_name": "Colouring",
+    "video_path": "/Users/oh/Desktop/Teacher Quality Monitoring/data/raw/D06_20250919105616.mp4",
+    "total_seconds": null,
+    "success": false,
+    "parent_session_id": null,
+    "out_dir": null,
+    "boundaries": null,
+    "windows": null,
+    "scores": {}
+  }
+]

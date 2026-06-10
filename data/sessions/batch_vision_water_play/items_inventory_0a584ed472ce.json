@@ -1,0 +1,77 @@
+{
+  "activity_zone_items": [
+    {
+      "category": "Furniture",
+      "name": "Shallow pool-like structure",
+      "count_or_quantity": "one",
+      "specifics": "Light gray floor, white walls, light blue section on right wall",
+      "first_seen_at": "00:00:00"
+    },
+    {
+      "category": "Containers",
+      "name": "White rectangular bins",
+      "count_or_quantity": "four",
+      "specifics": "Each containing small colorful toys",
+      "first_seen_at": "00:00:00"
+    },
+    {
+      "category": "Containers",
+      "name": "Blue buckets",
+      "count_or_quantity": "multiple",
+      "specifics": "Used for scooping and transferring toys; at least two visible on right side of pool near light blue wall; one brought in by a woman in white top",
+      "first_seen_at": "00:00:00"
+    },
+    {
+      "category": "Materials",
+      "name": "Small colorful toys",
+      "count_or_quantity": "many",
+      "specifics": "Contained within the white bins; colors unspecified beyond 'colorful'",
+      "first_seen_at": "00:00:00"
+    },
+    {
+      "category": "Materials",
+      "name": "Small dark-colored objects",
+      "count_or_quantity": "multiple",
+      "specifics": "Scattered on the pool floor; color described as dark; type unspecified",
+      "first_seen_at": "00:00:00"
+    },
+    {
+      "category": "Other",
+      "name": "Glass barrier",
+      "count_or_quantity": "one",
+      "specifics": "Separates the pool area from the green artificial grass area",
+      "first_seen_at": "00:00:00"
+    },
+    {
+      "category": "Other",
+      "name": "Green artificial grass area",
+      "count_or_quantity": "one",
+      "specifics": "Located on the left side of the pool, decorated with marine-themed cutouts (starfish, fish, coral)",
+      "first_seen_at": "00:00:00"
+    },
+    {
+      "category": "Other",
+      "name": "Marine-themed cutouts",
+      "count_or_quantity": "multiple",
+      "specifics": "Starfish, fish, and coral designs; decorating the artificial grass area",
+      "first_seen_at": "00:00:00"
+    },
+    {
+      "category": "Other",
+      "name": "Steps",
+      "count_or_quantity": "one",
+      "specifics": "Used to descend into the play area",
+      "first_seen_at": "00:01:50"
+    }
+  ],
+  "other_items_in_room": [
+    {
+      "name": "Mobile phone (used for photos)",
+      "location": "Held by one of the adults in the play area; possibly not part of the play materials"
+    }
+  ],
+  "notes": "Water is implied by the context (water play activity, pool-like structure, sensory play descriptions) but is never explicitly confirmed as present in the observations. The exact number of blue buckets is slightly ambiguous — at least two are visible at the start and at least one more is brought in later. The small dark-colored objects on the pool floor are not identified by type. Marine-themed cutouts are on the grass area adjacent to the pool rather than inside it, but are part of the overall activity zone setup.",
+  "session_id": "batch_vision_water_play",
+  "source_model": "claude-sonnet-4-6",
+  "prompt_hash": "0a584ed472ce"
+}

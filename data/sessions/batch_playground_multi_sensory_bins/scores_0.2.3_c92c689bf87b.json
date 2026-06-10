@@ -1,0 +1,175 @@
+{
+  "session_id": "batch_playground_multi_sensory_bins",
+  "rubric_version": "0.2.3",
+  "scores": {
+    "narrative": {
+      "dimension_id": "narrative",
+      "rubric_version": "0.2.3",
+      "score": 0,
+      "anchor_matched": "No experiential context — generic space with no immersive framing; pure utility setup",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:17",
+          "type": "visual",
+          "quote": "The room is empty, with two tables in the center covered with clear plastic sheets. One table has two bins with sand and small toys, and the other has a hexagonal bin with colorful building blocks. There are also two long wooden benches along the left wall and a table with papers and small clay pots on the right.",
+          "indicator": "Thematic decor that names or evokes a setting",
+          "reasoning": "The prepared space shows only functional activity setup (bins, plastic sheets, benches) with no thematic decor, banners, backdrops, or framing elements that would place children inside a deliberate setting."
+        },
+        {
+          "ts_start": "00:17",
+          "ts_end": "00:50",
+          "type": "visual",
+          "quote": "Children start to enter the room, walking towards the tables. One child in a red shirt and another in a light-colored shirt approach the sand bins, while a child in a pink dress walks towards the block table.",
+          "indicator": "An atmospheric anchor (banner, central feature, framing object)",
+          "reasoning": "As children enter, no atmospheric anchor or framing object is visible — the room presents as a plain utility space with activity stations, not an immersive narrative environment."
+        },
+        {
+          "ts_start": "00:50",
+          "ts_end": "01:10",
+          "type": "visual",
+          "quote": "The children are now actively engaged with the multi-sensory bins. The adult in the red shirt is helping children at the sand bins, while another adult in a floral dress is interacting with children at the block table.",
+          "indicator": "An 'in-progress project' feel where the setup itself tells what's happening",
+          "reasoning": "The setup communicates only the activity type (sensory play) with no narrative framing, story context, or scene-setting that would constitute immersive context beyond pure utility."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "The space is a well-organized multi-sensory activity setup but contains no thematic decor, narrative framing, props evoking a setting, or atmospheric anchors. It is a functional utility arrangement with no immersive story context.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "multi_sensory": {
+      "dimension_id": "multi_sensory",
+      "rubric_version": "0.2.3",
+      "score": 1,
+      "anchor_matched": "Two or more senses are meaningfully engaged through deliberate material and arrangement choices",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:17",
+          "type": "visual",
+          "quote": "One table has two bins with sand and small toys, and the other has a hexagonal bin with colorful building blocks. There are also two long wooden benches along the left wall and a table with papers and small clay pots on the right.",
+          "indicator": "Natural / sensory materials (sand, water, fabric, wood, leaves, clay, paint)",
+          "reasoning": "Multiple distinct material types — sand, clay, colorful blocks, and paper — are deliberately arranged across stations, engaging tactile and visual senses simultaneously."
+        },
+        {
+          "ts_start": "00:17",
+          "ts_end": "00:30",
+          "type": "visual",
+          "quote": "One child in a red shirt and another in a light-colored shirt approach the sand bins, while a child in a pink dress walks towards the block table.",
+          "indicator": "Tactile invitations (textures, materials to touch, wet/dry/soft/rough)",
+          "reasoning": "Children are drawn to both sand bins (tactile/granular texture) and colorful building blocks (visual/tactile), confirming multiple senses are engaged by design."
+        },
+        {
+          "ts_start": "00:50",
+          "ts_end": "01:10",
+          "type": "visual",
+          "quote": "The children are now actively engaged with the multi-sensory bins. The adult in the red shirt is helping children at the sand bins, while another adult in a floral dress is interacting with children at the block table.",
+          "indicator": "Setups that obviously engage hands AND eyes simultaneously (painting, water play, building)",
+          "reasoning": "Active engagement at sand bins and block table confirms hands-on tactile and visual engagement occurring simultaneously across the space."
+        },
+        {
+          "ts_start": "01:50",
+          "ts_end": "02:10",
+          "type": "visual",
+          "quote": "The children are playing with the blocks and sand. The adults are interacting with the children, some kneeling to be at their eye level, while others are standing and observing.",
+          "indicator": "Visual variety (color, materials, arrangements)",
+          "reasoning": "Colorful blocks alongside sand and clay pots represent deliberate visual variety combined with tactile diversity, meeting the rubric's standard for two or more meaningfully engaged senses."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "Staff notes also reference scents as an intended element, but no visual or audio evidence of olfactory materials is confirmed in the recording. Score is based on clearly evidenced tactile and visual engagement alone, which is sufficient for a 1.0.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "boundary": {
+      "dimension_id": "boundary",
+      "rubric_version": "0.2.3",
+      "score": 1.0,
+      "anchor_matched": "At least one clear, unambiguous activity boundary — a canvas, paper, mat, rug, table, low fence, or similar marker visually defines the zone. A single well-defined zone is sufficient for this score.",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:17",
+          "type": "visual",
+          "quote": "The room is empty, with two tables in the center covered with clear plastic sheets. One table has two bins with sand and small toys, and the other has a hexagonal bin with colorful building blocks.",
+          "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+          "reasoning": "The tables with bins placed in the center of the room, covered with clear plastic sheets, create unambiguous physical boundaries that visually define where each activity takes place before any children enter."
+        },
+        {
+          "ts_start": "00:17",
+          "ts_end": "00:30",
+          "type": "visual",
+          "quote": "Children start to enter the room, walking towards the tables. One child in a red shirt and another in a light-colored shirt approach the sand bins, while a child in a pink dress walks towards the block table.",
+          "indicator": "The boundary is intuitive to a child without verbal explanation from an adult",
+          "reasoning": "Children independently navigate directly to the tables upon entering, demonstrating that the activity zones are self-evident without adult verbal direction."
+        },
+        {
+          "ts_start": "00:30",
+          "ts_end": "00:50",
+          "type": "visual",
+          "quote": "More children and adults enter the room. An adult in a red shirt approaches the sand bins and interacts with the children there. Another adult in a floral dress walks towards the block table, and a third adult in a yellow dress stands near the clay pots.",
+          "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+          "reasoning": "Multiple distinct activity zones (sand bins table, block table, clay pots table) are each anchored by a physical table, providing clear and separate boundaries for each activity area."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "The setup uses tables as the primary boundary markers, which are unambiguous and child-intuitive. Children self-directed to the correct zones upon entry without observed verbal prompting, confirming the boundaries are self-evident.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "movement": {
+      "dimension_id": "movement",
+      "rubric_version": "0.2.3",
+      "score": 1.0,
+      "anchor_matched": "Both elements are present — children can clearly access the activity zone (visible path markers not required; minor adult presence in the path is acceptable as long as children get past) AND deliberate positioning suited to the activity (standing, kneeling, or sitting as the activity calls for), with materials reachable from that posture. Explicit seating like cushions is NOT required when the activity naturally invites standing or kneeling.",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:17",
+          "type": "visual",
+          "quote": "The room is empty, with two tables in the center covered with clear plastic sheets. One table has two bins with sand and small toys, and the other has a hexagonal bin with colorful building blocks. There are also two long wooden benches along the left wall and a table with papers and small clay pots on the right.",
+          "indicator": "No significant clutter, furniture, or persistent adult barriers materially blocking the path between entry and the activity zone",
+          "reasoning": "The prepared space shows tables centrally placed with open floor space around them, indicating an unobstructed path from entry to the activity zone."
+        },
+        {
+          "ts_start": "00:17",
+          "ts_end": "00:30",
+          "type": "visual",
+          "quote": "Children start to enter the room, walking towards the tables. One child in a red shirt and another in a light-colored shirt approach the sand bins, while a child in a pink dress walks towards the block table.",
+          "indicator": "Children can walk from entry to activity zone through the natural layout without weaving around significant clutter, furniture, or persistent adult barriers",
+          "reasoning": "Children move directly and intuitively from the room entry to the activity tables without any visible obstruction or confusion about where to go."
+        },
+        {
+          "ts_start": "00:50",
+          "ts_end": "01:10",
+          "type": "visual",
+          "quote": "The children are now actively engaged with the multi-sensory bins. The adult in the red shirt is helping children at the sand bins, while another adult in a floral dress is interacting with children at the block table. Several other adults are observing the children and taking photos.",
+          "indicator": "Clear deliberate positioning suited to the activity (standing at table height for sensory bins, kneeling on the floor for floor painting, sitting on a mat for story time, etc.)",
+          "reasoning": "Children are standing at table-height sensory bins, which is the natural and appropriate posture for this activity, with materials clearly reachable from that standing position."
+        },
+        {
+          "ts_start": "01:50",
+          "ts_end": "02:10",
+          "type": "visual",
+          "quote": "The children are playing with the blocks and sand. The adults are interacting with the children, some kneeling to be at their eye level, while others are standing and observing. One adult is sitting on the bench, watching the activities.",
+          "indicator": "Children can intuitively tell WHERE to go to engage with the activity",
+          "reasoning": "Adults are distributed around the room in supportive roles without forming barriers, and children remain engaged at the bins in appropriate standing posture throughout, confirming clear positioning and unobstructed access."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": null,
+      "prompt_hash": "c92c689bf87b"
+    },
+    "clean_up": {
+      "dimension_id": "clean_up",
+      "rubric_version": "0.2.3",
+      "score": "insufficient_evidence",
+      "anchor_matched": null,
+      "evidence": [],
+      "confidence": "low",
+      "scorer_notes": "The session recording covers only the setup and active play phases. No cleanup sequence is observed at any point in the 5-minute video. While the bins appear to be on child-height tables and items (sand, small toys, building blocks) look manageable for children, there is no evidence of: return locations, visual/picture labels, storage shelving, or children actually returning materials. The design's reset affordances (labelling, storage placement, item weight) cannot be reliably assessed from play-only footage. Returning 'insufficient_evidence' rather than inferring from incomplete signals.",
+      "prompt_hash": "c92c689bf87b"
+    }
+  },
+  "overall": 0.75,
+  "cost_usd": null,
+  "duration_seconds": 18.558186054229736
+}

@@ -1,0 +1,175 @@
+{
+  "session_id": "long_after_playground_d06_20250919105616",
+  "rubric_version": "0.2.3",
+  "scores": {
+    "narrative": {
+      "dimension_id": "narrative",
+      "rubric_version": "0.2.3",
+      "score": 0,
+      "anchor_matched": "No experiential context — generic space with no immersive framing; pure utility setup",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:30",
+          "type": "visual",
+          "quote": "The video shows a classroom with wooden floors and white walls. There are six small wooden tables with blue mats underneath, arranged in a semi-circle. Five children are seated at these tables, coloring on sheets of paper.",
+          "indicator": "Thematic decor that names or evokes a setting",
+          "reasoning": "The space is a plain classroom with no thematic decor, props, or atmospheric anchors — purely functional furniture arrangement with no immersive framing."
+        },
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:30",
+          "type": "visual",
+          "quote": "There's a black board on the right side of the room, and a window on the left.",
+          "indicator": "An atmospheric anchor (banner, central feature, framing object)",
+          "reasoning": "The only notable wall feature is a blackboard — a generic classroom utility item that provides no narrative or immersive context."
+        },
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:30",
+          "type": "visual",
+          "quote": "Papers are scattered on the floor around the tables.",
+          "indicator": "An 'in-progress project' feel where the setup itself tells what's happening",
+          "reasoning": "Scattered coloring sheets indicate a basic activity setup with no deliberate scene-setting or story framing around the activity."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "The space is a generic classroom with no thematic decor, props, banners, or immersive framing of any kind. The activity (individual coloring sheets) is pure utility setup with no narrative context layered on top.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "multi_sensory": {
+      "dimension_id": "multi_sensory",
+      "rubric_version": "0.2.3",
+      "score": 0.5,
+      "anchor_matched": "Two senses are nominally engaged but at least one is weak or marginal",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:30",
+          "type": "visual",
+          "quote": "Five children are seated at these tables, coloring on sheets of paper. One child stands near the center of the room, also holding a coloring sheet.",
+          "indicator": "Natural / sensory materials (sand, water, fabric, wood, leaves, clay, paint)",
+          "reasoning": "Coloring on paper with crayons/markers engages both visual (seeing colors, images) and tactile (holding and pressing coloring tools on paper) senses, but these are relatively weak tactile and visual engagements with no other sensory modalities present."
+        },
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:30",
+          "type": "visual",
+          "quote": "There are six small wooden tables with blue mats underneath, arranged in a semi-circle.",
+          "indicator": "Tactile invitations (textures, materials to touch, wet/dry/soft/rough)",
+          "reasoning": "The wooden tables and blue mats offer minimal tactile variety beyond the coloring sheets themselves; the setup is predominantly paper-based with no rich tactile materials like sand, water, clay, or fabric."
+        },
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:30",
+          "type": "visual",
+          "quote": "There's a black board on the right side of the room, and a window on the left.",
+          "indicator": "Visual variety (color, materials, arrangements)",
+          "reasoning": "The room is visually sparse — white walls, wooden floors, a blackboard — with limited visual variety beyond the coloring sheets themselves, confirming that visual engagement is primarily limited to the coloring activity."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "The activity (individual coloring sheets) nominally engages visual and tactile senses simultaneously, but both are at a marginal level — the tactile engagement is limited to holding a crayon/marker and pressing on paper, and there are no additional sensory materials (sound, movement, natural materials, textures) deliberately incorporated into the setup. This earns 0.5 rather than 1.0.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "boundary": {
+      "dimension_id": "boundary",
+      "rubric_version": "0.2.3",
+      "score": 0.5,
+      "anchor_matched": "A boundary is implied but ambiguous (e.g. materials present but no visible zone marker; or unclear where the activity area starts and stops)",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:30",
+          "type": "visual",
+          "quote": "There are six small wooden tables with blue mats underneath, arranged in a semi-circle. Five children are seated at these tables, coloring on sheets of paper.",
+          "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+          "reasoning": "The tables with blue mats and individual coloring sheets provide an implied activity zone, but the semi-circle arrangement and open floor space leave the boundary ambiguous rather than fully self-evident."
+        },
+        {
+          "ts_start": "00:30",
+          "ts_end": "01:00",
+          "type": "visual",
+          "quote": "Papers are scattered on the floor around the tables. One child drops their coloring sheet on the floor and then picks it up.",
+          "indicator": "The boundary is intuitive to a child without verbal explanation from an adult",
+          "reasoning": "Papers scattered on the floor around the tables indicate the activity zone is not clearly contained, undermining the self-evidence of the boundary."
+        },
+        {
+          "ts_start": "01:00",
+          "ts_end": "01:30",
+          "type": "visual",
+          "quote": "Another child stands up and walks to the right side of the room, near the blackboard.",
+          "indicator": "The boundary is intuitive to a child without verbal explanation from an adult",
+          "reasoning": "Children repeatedly leaving the table area toward the blackboard suggests the activity boundary is not intuitively clear to them."
+        },
+        {
+          "ts_start": "03:16",
+          "ts_end": "03:25",
+          "type": "transcript",
+          "quote": "Sit here, beta. Sit here, beta. Sit here.",
+          "indicator": "The boundary is intuitive to a child without verbal explanation from an adult",
+          "reasoning": "The teacher must verbally redirect a child to the activity area, indicating the boundary is not fully self-evident without adult instruction."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "Tables and individual coloring sheets provide a partial boundary, but children repeatedly drift to other parts of the room and the teacher must verbally redirect them, suggesting the zone is implied but not unambiguous. Score of 0.5 reflects this partial presence.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "movement": {
+      "dimension_id": "movement",
+      "rubric_version": "0.2.3",
+      "score": 0.5,
+      "anchor_matched": "Either clear unobstructed access OR clear positioning is present, but not both. Or one is partial. Significant access obstructions (multiple adults forming a barrier; persistent blocking; major clutter) reduce a 1 to 0.5; minor adult presence in the path does NOT.",
+      "evidence": [
+        {
+          "ts_start": "00:00:00",
+          "ts_end": "00:00:30",
+          "type": "visual",
+          "quote": "There are six small wooden tables with blue mats underneath, arranged in a semi-circle. Five children are seated at these tables, coloring on sheets of paper. One child stands near the center of the room, also holding a coloring sheet. A teacher is seated on the floor, assisting one of the children with their coloring.",
+          "indicator": "Clear deliberate positioning suited to the activity",
+          "reasoning": "Children are seated at small tables for a coloring activity, which is appropriate positioning, but the activity notes say children get individual coloring sheets — the mix of seated and standing children, plus papers scattered on the floor, suggests positioning is only partially deliberate."
+        },
+        {
+          "ts_start": "00:00:30",
+          "ts_end": "00:01:00",
+          "type": "visual",
+          "quote": "Papers are scattered on the floor around the tables. One child drops their coloring sheet on the floor and then picks it up.",
+          "indicator": "No significant clutter, furniture, or persistent adult barriers materially blocking the path between entry and the activity zone",
+          "reasoning": "Papers scattered on the floor around the tables introduce minor clutter that partially obstructs the natural movement space around the activity zone."
+        },
+        {
+          "ts_start": "01:46",
+          "ts_end": "03:34",
+          "type": "transcript",
+          "quote": "Shnaya, can you sit here? ... Sit here, beta. Sit here, beta. Sit here. ... Okay, sit here, beta. Sit here. ... Come on, Shnaya. ... Shnaya. ... Come on, Shnaya.",
+          "indicator": "Children can intuitively tell WHERE to go to engage with the activity",
+          "reasoning": "The teacher's repeated and prolonged prompting of one child to sit in a specific place indicates that positioning is not fully clear or intuitive for all children, undermining the 'clear deliberate positioning' indicator."
+        },
+        {
+          "ts_start": "00:01:00",
+          "ts_end": "00:02:30",
+          "type": "visual",
+          "quote": "The teacher stands up and walks around the tables, interacting with different children. One child stands up and walks to the teacher, showing her their coloring sheet. Another child stands up and walks to the right side of the room, near the blackboard.",
+          "indicator": "Enough space at the activity for children to stand, kneel, sit, or move as the activity requires",
+          "reasoning": "Children can move around the tables freely, suggesting access is unobstructed, but children wandering to the blackboard area rather than staying at the activity zone indicates positioning is not fully clear."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "The space has tables arranged in a semi-circle with children seated for coloring — access appears unobstructed and there is enough space to move. However, positioning is only partially clear: one child persistently does not know where to sit (requiring extended teacher redirection), children wander to the blackboard area, and papers scattered on the floor add minor clutter. This partial picture — clear access but inconsistent/unclear positioning — maps to the 0.5 anchor.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "clean_up": {
+      "dimension_id": "clean_up",
+      "rubric_version": "0.2.3",
+      "score": "insufficient_evidence",
+      "anchor_matched": null,
+      "evidence": [],
+      "confidence": "low",
+      "scorer_notes": "The entire 5-minute session shows children actively coloring — no cleanup activity occurs at any point. There is no observable evidence of storage locations, labelling systems, shelf heights, or children returning materials. The visual observations describe tables, a blackboard, and papers on the floor, but no storage infrastructure is visible. Without any cleanup event or clear view of storage design, this dimension cannot be reliably scored.",
+      "prompt_hash": "c92c689bf87b"
+    }
+  },
+  "overall": 0.375,
+  "cost_usd": null,
+  "duration_seconds": 18.245950937271118
+}

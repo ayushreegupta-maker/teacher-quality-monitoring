@@ -1,0 +1,110 @@
+You are analysing a recording of a preschool classroom (children aged 3–5).
+
+ACTIVITY CONTEXT:
+Morning circle time — a group activity where children sit together for songs, storytelling, and guided discussion led by a teacher.
+
+FOCUS CHILD (for questions C1–C10):
+the boy in the red shirt
+
+For ALL of questions C1 through C10, lock onto this ONE specific child.
+Do not substitute another child if they go briefly off-camera — instead say
+so in the evidence field. If you genuinely cannot identify any child
+matching the descriptor, set the C1 answer to "INSUFFICIENT INFORMATION"
+and explain what you do see; all subsequent C-question answers should
+also flag this.
+
+Note: the activity context describes what the teacher INTENDED. Report
+what actually happened in the video, which may differ from the plan.
+
+YOUR TASK:
+Answer each numbered question below based on what you can see and hear in
+the video.
+
+OUTPUT FORMAT:
+Return a JSON object where each key is the question ID (as a string:
+"C1", "C2", ..., "C10", "T1", "T2", "T3") and each value is an object
+with these three fields:
+
+    {
+      "answer":     "<concise but complete answer — see ANSWER LENGTH rule>",
+      "confidence": "high" | "medium" | "low",
+      "evidence":   "<specific timestamp(s) and what was observed, e.g. '00:01:23 — child reaches for a balloon and smiles'>"
+    }
+
+CRITICAL RULES:
+
+1. WATCH THE WHOLE VIDEO BEFORE ANSWERING. Many questions ask about
+   patterns or trajectories that only emerge across the full recording.
+   Sample timestamps from the BEGINNING, MIDDLE, and END. If your
+   evidence clusters in the first 30 seconds, you have not watched
+   enough of the video.
+
+2. TIMESTAMPS ARE REQUIRED — AND MUST BE SPREAD ACROSS THE VIDEO.
+   Every answer must cite at least one specific timestamp in the
+   `evidence` field (HH:MM:SS format). For pattern questions (C3, C4,
+   C6, C7, C8, C10, T1, T2, T3) cite MULTIPLE timestamps from different
+   parts of the video. A single timestamp at 00:00:05 is insufficient
+   for any pattern-level question.
+
+3. WHEN TO USE "INSUFFICIENT INFORMATION":
+   - Use it ONLY when the video does not show or play the information
+     needed (e.g. the focus child is never clearly visible, audio is
+     inaudible, the relevant moment is off-camera).
+   - DO NOT use it just because a question is subjective or hard. For
+     judgment questions (C7 emotion, C8 challenges, C10 proficiency,
+     T1/T2) give your best interpretation grounded in observable
+     evidence.
+   - When refusing, set `answer` to "INSUFFICIENT INFORMATION",
+     `confidence` to "low", and explain in `evidence` what was missing.
+
+4. NO GUESSING: do not invent details, names, dialogue, or events that
+   aren't in the video. Do not fabricate plausible-sounding answers.
+   If the focus child's name is not clearly spoken on camera, refer to
+   them only by their visual descriptor.
+
+5. ACTIVITY CONTEXT DISCIPLINE: the context above describes what the
+   teacher PLANNED. Report what actually happens in the video.
+
+6. ANSWER LENGTH: aim for 2–4 sentences per answer. For C4 (interaction
+   list), C5 (every speech instance), C6 (peer interaction list), C8
+   (challenge list), C10 (proficiency list), T1 (top 3 well), T2 (top 3
+   improve), T3 (missed moments list), expand to a structured list with
+   timestamps — each list item should be on its own line.
+
+7. JSON OUTPUT DISCIPLINE: Return ONLY a valid JSON object with EXACTLY
+   13 keys ("C1"…"C10", "T1"…"T3"). Do NOT emit repeated tokens, extra
+   closing brackets, or any text after the JSON closes. The response
+   must end with a single `}` matching the opening `{`.
+
+QUESTIONS:
+
+=== CHILD SPOTLIGHT (focus on the one child described above) ===
+
+  C1. Describe the boy in the red shirt in detail — clothing, approximate height relative to peers, hair, any distinguishing features. This is your identification anchor for C2–C10.
+
+  C2. Where does the boy in the red shirt sit / stand at the start, middle, and end of the activity? Note any times they move location.
+
+  C3. What fraction of the activity was the boy in the red shirt visibly engaged (looking at the teacher/material, participating) vs disengaged (looking away, wandering, idle)? Give a rough %.
+
+  C4. How many times does the teacher interact 1-on-1 with the boy in the red shirt? For each interaction, give a timestamp and one-line description, and note who initiated it (teacher or child).
+
+  C5. Does the boy in the red shirt speak during the activity? If yes, give every timestamp where they speak and what they say (or the gist if inaudible). If no, say so.
+
+  C6. Who does the boy in the red shirt interact with among the other children? List each peer interaction with a timestamp and what happened.
+
+  C7. How does the boy in the red shirt's emotional state change across the activity (start → middle → end)? Mark any visible moments of joy, frustration, withdrawal, or discomfort with timestamps.
+
+  C8. What does the boy in the red shirt seem challenged by in this activity? Identify specific skills (motor, cognitive, language, social, self-regulation) where they appear to struggle, hesitate, copy a peer, ask for help, give up, or get it wrong. Give timestamp + observed behaviour for each.
+
+  C9. Did the boy in the red shirt need help (physical, emotional, or task-related) at any point? Did they receive it? Who from? Timestamp each instance.
+
+  C10. What does the boy in the red shirt already appear proficient in? Identify specific skills they perform confidently, independently, on the first try, or where they help/lead a peer. Give timestamp + observed behaviour for each.
+
+=== TEACHER COACHING (about the teacher, not any one child) ===
+
+  T1. What are the top 3 things the teacher did well in this activity? For each, give the specific moment(s) (timestamp + behaviour observed) that justify it. Avoid generic praise — anchor every point to something visible in the video.
+
+  T2. What are the top 3 things the teacher could improve in this activity? For each, give the specific moment(s) (timestamp + what happened or didn't happen) that prompted it, and rate severity as "minor" / "moderate" / "serious".
+
+  T3. Were there any moments in the activity where a child needed attention (emotional, behavioural, safety, or learning) and the teacher missed it or responded late? For each, give timestamp, what the child showed, and what the teacher did (or didn't do). If none, say so explicitly.
+

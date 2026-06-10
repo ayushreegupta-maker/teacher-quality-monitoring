@@ -1,0 +1,9 @@
+{
+  "first_child_visible_at": "00:03:04",
+  "last_child_visible_at": "00:21:00",
+  "confidence": "high",
+  "notes": "The first child appears at 00:03:04 and remains in the play area. The last child leaves the play area at 00:21:00.",
+  "session_id": "long_full_d06_20250919105616",
+  "source_model": "gemini-2.5-flash",
+  "prompt_hash": "647998da4dba"
+}

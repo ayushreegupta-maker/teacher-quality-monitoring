@@ -1,0 +1,12 @@
+{
+  "video_start_wall_clock": "10:56:16",
+  "first_child_wall_clock": "10:59:19",
+  "last_child_wall_clock": "11:16:05",
+  "first_child_visible_at": null,
+  "last_child_visible_at": null,
+  "first_child_evidence": "A child in a white dress with pigtails runs into the room from the right side, followed by other children and an adult.",
+  "last_child_evidence": "The last child, a boy in a striped shirt, walks out of the room with an adult.",
+  "confidence": "high",
+  "self_check_passed": true,
+  "notes": ""
+}

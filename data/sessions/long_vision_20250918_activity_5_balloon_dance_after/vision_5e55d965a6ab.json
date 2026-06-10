@@ -1,0 +1,37 @@
+{
+  "session_id": "long_vision_20250918_activity_5_balloon_dance_after",
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:00:08",
+      "description": "The room is empty except for six balloons (three white, three yellow) scattered on the wooden floor. A man in a maroon shirt walks from the right side of the frame to the left, then exits the frame."
+    },
+    {
+      "ts_start": "00:00:08",
+      "ts_end": "00:00:20",
+      "description": "Three children enter the room from the top of the frame. They begin to pick up the balloons. One child picks up a yellow balloon, another picks up a white balloon, and the third child picks up a yellow balloon."
+    },
+    {
+      "ts_start": "00:00:20",
+      "ts_end": "00:00:30",
+      "description": "More children enter the room, bringing the total to six children. A woman, presumably a teacher, also enters the room. The children are now holding balloons and some are tossing them in the air. One child picks up a white balloon from the floor."
+    },
+    {
+      "ts_start": "00:00:30",
+      "ts_end": "00:00:40",
+      "description": "The children continue to play with the balloons, tossing them up and catching them. The teacher is standing in the background, observing and occasionally interacting with the children. Two white balloons are still on the floor."
+    },
+    {
+      "ts_start": "00:00:40",
+      "ts_end": "00:00:50",
+      "description": "The children are actively playing with the balloons, some are throwing them against the black board on the right side of the room. The teacher is still observing the children."
+    },
+    {
+      "ts_start": "00:00:50",
+      "ts_end": "00:01:00",
+      "description": "The children continue to play with the balloons. The teacher instructs them to hold one balloon each. One child picks up a white balloon from the floor. All children are now holding one balloon."
+    }
+  ],
+  "source_model": "gemini-2.5-flash",
+  "prompt_hash": "5e55d965a6ab"
+}

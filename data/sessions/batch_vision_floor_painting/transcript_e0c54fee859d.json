@@ -1,0 +1,31 @@
+{
+  "session_id": "batch_vision_floor_painting",
+  "segments": [
+    {
+      "ts_start": "00:00:01",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Okay, come on."
+    },
+    {
+      "ts_start": "00:00:03",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Come on."
+    },
+    {
+      "ts_start": "00:00:04",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Okay, come on. Come on."
+    },
+    {
+      "ts_start": "00:00:06",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Come on. Come on. (repeated 295 times — likely transcription loop artifact)"
+    }
+  ],
+  "source_model": "gemini-2.5-flash",
+  "prompt_hash": "e0c54fee859d"
+}

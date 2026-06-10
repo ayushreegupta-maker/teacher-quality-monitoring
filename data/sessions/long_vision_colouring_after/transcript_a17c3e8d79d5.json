@@ -1,0 +1,49 @@
+{
+  "session_id": "long_vision_colouring_after",
+  "segments": [
+    {
+      "ts_start": "00:02:03",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Come, come, come. Come here."
+    },
+    {
+      "ts_start": "00:02:08",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Come, come, come. Come here."
+    },
+    {
+      "ts_start": "00:02:16",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Let him try. Let him try."
+    },
+    {
+      "ts_start": "00:02:20",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Okay, let him try. Let him try."
+    },
+    {
+      "ts_start": "00:02:24",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Come. Come, come."
+    },
+    {
+      "ts_start": "00:02:27",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Come, come, come."
+    },
+    {
+      "ts_start": "00:02:30",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Come, come, come."
+    }
+  ],
+  "source_model": "gemini-2.5-flash",
+  "prompt_hash": "a17c3e8d79d5"
+}

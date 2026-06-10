@@ -1,0 +1,287 @@
+{
+  "activity_name": "D06 long video test",
+  "video": "data/raw/D06_20250919105616.mp4",
+  "total_seconds": 1302.196,
+  "boundaries": {
+    "first_child_visible_at": "00:02:59",
+    "last_child_visible_at": "00:21:00",
+    "confidence": "high",
+    "notes": "The first child appears at 00:02:59, running into the room. The last child leaves the room at 00:21:00, walking out of the room with an adult.",
+    "session_id": "long_full_d06_long_video_test",
+    "source_model": "gemini-2.5-flash",
+    "prompt_hash": "647998da4dba"
+  },
+  "windows": {
+    "before": [
+      119.0,
+      419.0
+    ],
+    "after": [
+      1020.0,
+      1302.196
+    ],
+    "warnings": []
+  },
+  "results": {
+    "before": {
+      "items": {
+        "activity_zone_items": [],
+        "other_items_in_room": [],
+        "notes": "No visual observations were provided in the session data. The observations list is empty, so no inventory can be extracted.",
+        "session_id": "long_vision_d06_long_video_test_before",
+        "source_model": "claude-sonnet-4-6",
+        "prompt_hash": "0a584ed472ce"
+      },
+      "scores": {
+        "playground": {
+          "session_id": "long_before_playground_d06_long_video_test",
+          "rubric_version": "0.2.3",
+          "scores": {
+            "narrative": {
+              "dimension_id": "narrative",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript content and no visual observations were provided. There is no evidence from which to assess the presence or absence of immersive narrative framing in the space.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "multi_sensory": {
+              "dimension_id": "multi_sensory",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript content and no visual observations were provided for this session. There is no evidence from which to assess sensory engagement. Returning insufficient_evidence per scoring rules.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "boundary": {
+              "dimension_id": "boundary",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any observable evidence of the physical space, activity setup, or child/teacher behavior, it is not possible to score the boundary dimension.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "movement": {
+              "dimension_id": "movement",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript content and no visual observations were provided for this session. There is no evidence from which to assess access paths, child positioning, space layout, or material reach. Cannot score this dimension.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "clean_up": {
+              "dimension_id": "clean_up",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript content and no visual observations were provided for this session. There is no observable evidence on which to base a score for this dimension.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": null,
+          "cost_usd": null,
+          "duration_seconds": 4.179178953170776
+        },
+        "toy_design": {
+          "session_id": "long_before_toy_design_d06_long_video_test",
+          "rubric_version": "0.2.0",
+          "scores": {
+            "purpose": {
+              "dimension_id": "purpose",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript content and no visual observations were provided in the session data. There is no evidence from which to assess how materials were arranged or whether the activity's purpose was communicated by the setup. Cannot score this dimension.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "anchor_and_choice_materials": {
+              "dimension_id": "anchor_and_choice_materials",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript content and no visual observations were provided. There is no evidence from which to assess the presence or absence of anchor materials or choice materials.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "spark_curiosity": {
+              "dimension_id": "spark_curiosity",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any evidence of what is present at the activity area, it is impossible to assess whether a curiosity-sparking element exists.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "challenge_adjustment": {
+              "dimension_id": "challenge_adjustment",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript content and no visual observations were provided. The session metadata notes 'exacting setup TBD,' and both the transcript and visual observation fields are empty. There is no evidence available to score this dimension.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "self_served": {
+              "dimension_id": "self_served",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript content and no visual observations were provided. There is no evidence from which to assess the design of materials for child self-service.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": null,
+          "cost_usd": null,
+          "duration_seconds": 4.029812812805176
+        }
+      }
+    },
+    "after": {
+      "items": {
+        "activity_zone_items": [],
+        "other_items_in_room": [],
+        "notes": "No visual observations were provided in the session data. The observations list is empty, so no inventory can be extracted.",
+        "session_id": "long_vision_d06_long_video_test_after",
+        "source_model": "claude-sonnet-4-6",
+        "prompt_hash": "0a584ed472ce"
+      },
+      "scores": {
+        "playground": {
+          "session_id": "long_after_playground_d06_long_video_test",
+          "rubric_version": "0.2.3",
+          "scores": {
+            "narrative": {
+              "dimension_id": "narrative",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript content and no visual observations were provided. The session metadata notes 'exacting setup TBD,' and both the transcript and visual observation fields are empty. There is no evidence from which to assess narrative or immersive framing.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "multi_sensory": {
+              "dimension_id": "multi_sensory",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript content and no visual observations were provided. There is no evidence from which to assess sensory engagement in the space.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "boundary": {
+              "dimension_id": "boundary",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript content and no visual observations were provided for this session. There is no evidence from which to assess whether a clear physical or visual boundary exists for the activity zone.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "movement": {
+              "dimension_id": "movement",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript content and no visual observations were provided. There is no evidence from which to assess access paths, child positioning, or material reach. Returning insufficient_evidence per scoring rules.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "clean_up": {
+              "dimension_id": "clean_up",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript content and no visual observations were provided for this session. There is no observable evidence on which to base a score for this dimension.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": null,
+          "cost_usd": null,
+          "duration_seconds": 5.42927098274231
+        },
+        "toy_design": {
+          "session_id": "long_after_toy_design_d06_long_video_test",
+          "rubric_version": "0.2.0",
+          "scores": {
+            "purpose": {
+              "dimension_id": "purpose",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript content and no visual observations were provided. Without any evidence of the activity zone setup, material arrangement, or scene descriptions, it is impossible to assess whether the activity's purpose is communicated by the setup alone.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "anchor_and_choice_materials": {
+              "dimension_id": "anchor_and_choice_materials",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript content and no visual observations were provided. There is no evidence from which to assess the presence or absence of anchor materials or choice materials.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "spark_curiosity": {
+              "dimension_id": "spark_curiosity",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript content and no visual observations were provided in the session data. There is no evidence from which to assess the presence or absence of a curiosity-sparking element at the activity area.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "challenge_adjustment": {
+              "dimension_id": "challenge_adjustment",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript content and no visual observations were provided. The session metadata notes 'exacting setup TBD,' and both the transcript and visual observations fields are empty. There is no evidence available to score this dimension.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "self_served": {
+              "dimension_id": "self_served",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript content and no visual observations were provided. There is no evidence from which to assess the design of materials for child self-service.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": null,
+          "cost_usd": null,
+          "duration_seconds": 3.338214874267578
+        }
+      }
+    }
+  }
+}

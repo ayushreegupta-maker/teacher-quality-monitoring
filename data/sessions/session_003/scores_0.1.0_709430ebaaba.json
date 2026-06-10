@@ -1,0 +1,439 @@
+{
+  "session_id": "session_003",
+  "rubric_version": "0.1.0",
+  "scores": {
+    "positive_climate": {
+      "dimension_id": "positive_climate",
+      "rubric_version": "0.1.0",
+      "score": 3,
+      "anchor_matched": "Some warmth, but inconsistent across the session or distributed unevenly across students",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:30",
+          "type": "visual",
+          "quote": "Two adults and a child are visible in the classroom. One adult is sitting on the floor with the child, while the other adult is standing near them.",
+          "indicator": "Relationships (warmth, closeness)",
+          "reasoning": "Teacher sitting on the floor with a child at the session's opening signals physical closeness and warmth, consistent with a score-3 level of warmth that appears at some points but is not sustained throughout."
+        },
+        {
+          "ts_start": "12:00",
+          "ts_end": "13:30",
+          "type": "visual",
+          "quote": "The teachers are now leading the children in a singing activity. The children are actively participating, singing along and making gestures. The atmosphere is joyful and energetic. The singing activity continues. The children are enjoying the song, with some raising their hands and moving to the rhythm. The teachers are encouraging their participation. The singing activity is still ongoing, with the children actively involved. The teachers are leading the song, and the children are enthusiastically singing and moving. The classroom is filled with music and laughter.",
+          "indicator": "Positive affect (smiling, laughter, enthusiasm)",
+          "reasoning": "Shared joyful singing with laughter and enthusiastic movement represents a clear moment of positive climate, but this is one segment rather than a consistent pattern across the full session."
+        },
+        {
+          "ts_start": "25:00",
+          "ts_end": "25:14",
+          "type": "transcript",
+          "quote": "Shanaia, on the cushion.",
+          "indicator": "Respect (eye contact, names used, calm tone)",
+          "reasoning": "The teacher uses a student's name in a calm, directing tone, reflecting basic respectful communication, though the interaction is brief and task-directed rather than warmly affective."
+        },
+        {
+          "ts_start": "30:00",
+          "ts_end": "35:03",
+          "type": "transcript",
+          "quote": "Give me a fruit name. Rishab, give me a fruit name... Now let us form the apple. Form, form the apple. And we form the apple... What do you want to eat, Chinmaya? What do you want to eat?",
+          "indicator": "Positive communication (verbal and non-verbal warmth)",
+          "reasoning": "The teacher uses student names and invites individual contributions in a participatory activity, showing some personal engagement, but the tone is primarily instructional and repetitive rather than warmly expressive, keeping the score at 3 rather than 4."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "The transcript contains large blocks of clearly looped/corrupted text (repeated 'Good morning Maya' and 'I am so tired' exchanges) that appear to be transcription artifacts rather than real session content. Scoring relies primarily on the visual observations and the authentic transcript segments from 25:00 onward. The session shows genuine moments of warmth (floor-level proximity, singing with laughter, use of student names) but these are episodic rather than consistently sustained, and some interactions are flat or purely task-directed, supporting a score of 3.",
+      "prompt_hash": "709430ebaaba"
+    },
+    "negative_climate": {
+      "dimension_id": "negative_climate",
+      "rubric_version": "0.1.0",
+      "score": 4,
+      "anchor_matched": "Brief, isolated moments of frustration; quickly recovered without lasting tone shift",
+      "evidence": [
+        {
+          "ts_start": "30:50",
+          "ts_end": "31:08",
+          "type": "transcript",
+          "quote": "Rishab, that's not for you. That's not for you.",
+          "indicator": "Negative affect (irritation, anger, frustration)",
+          "reasoning": "The teacher repeats a firm redirect to Rishab twice, suggesting mild impatience, but the phrasing is controlled and not harsh or threatening, consistent with a brief isolated moment rather than sustained negativity."
+        },
+        {
+          "ts_start": "31:06",
+          "ts_end": "31:10",
+          "type": "transcript",
+          "quote": "Rishab, I told you that's not for you.",
+          "indicator": "Negative affect (irritation, anger, frustration)",
+          "reasoning": "The phrase 'I told you' carries a mild edge of frustration, but it is a single brief statement and the teacher immediately returns to the group activity without escalating, matching the anchor for a brief isolated moment quickly recovered."
+        },
+        {
+          "ts_start": "35:03",
+          "ts_end": "35:10",
+          "type": "transcript",
+          "quote": "Rishab, tell me a fruit name. Rishab is not going to give us a fruit name. You are going to give us a fruit name.",
+          "indicator": "Negative affect (irritation, anger, frustration)",
+          "reasoning": "The teacher publicly redirects away from Rishab with a slightly dismissive comment, but the tone does not rise to sarcasm or humiliation and the teacher moves on constructively, consistent with a brief, isolated moment."
+        },
+        {
+          "ts_start": "07:00",
+          "ts_end": "35:00",
+          "type": "visual",
+          "quote": "The teacher is still leading the activity with the three students. The other adult is still observing. The students are attentive, with one student in a white shirt raising her hands.",
+          "indicator": "Negative affect (irritation, anger, frustration)",
+          "reasoning": "Throughout the session visual observations consistently show calm, engaged interactions with no tense posture, aggressive pointing, or student distress, supporting the absence of sustained negativity."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "The transcript contains extensive apparent transcription artifacts (looping repeated lines) that make tone assessment difficult for large portions of the session. The only substantive behavioral evidence of any negativity is the brief 'I told you' redirect to Rishab, which is mild and isolated. No sarcasm, threats, humiliation, or raised-voice discipline are evident. Score of 4 reflects one brief, quickly recovered moment of mild frustration against an otherwise calm backdrop.",
+      "prompt_hash": "709430ebaaba"
+    },
+    "teacher_sensitivity": {
+      "dimension_id": "teacher_sensitivity",
+      "rubric_version": "0.1.0",
+      "score": 2,
+      "anchor_matched": "Notices needs but responds slowly, partially, or with generic answers",
+      "evidence": [
+        {
+          "ts_start": "15:00",
+          "ts_end": "15:00",
+          "type": "transcript",
+          "quote": "STUDENT_1: I am so tired. TEACHER: I am too.",
+          "indicator": "Responsiveness",
+          "reasoning": "When a student expresses fatigue, the teacher's only response is a generic echo ('I am too') with no follow-up action, comfort, or redirection — a partial and superficial acknowledgment of the emotional bid."
+        },
+        {
+          "ts_start": "30:50",
+          "ts_end": "31:08",
+          "type": "transcript",
+          "quote": "STUDENT_1: I don't like this. TEACHER: Rishab, I told you that's not for you.",
+          "indicator": "Responsiveness",
+          "reasoning": "When Rishab expresses discomfort ('I don't like this'), the teacher responds only with a behavioral redirect rather than acknowledging the emotional content of the statement, indicating partial responsiveness to the student's need."
+        },
+        {
+          "ts_start": "25:00",
+          "ts_end": "25:14",
+          "type": "transcript",
+          "quote": "TEACHER: Hey. Oh, you're sitting in. You're going to sit. Okay. On the cushion. Yes. On the cushion. On the cushion.",
+          "indicator": "Awareness",
+          "reasoning": "The teacher notices a student's positioning and redirects them to the cushion, showing basic awareness of student behavior, though the response is routine rather than attuned to any deeper need."
+        },
+        {
+          "ts_start": "16:00",
+          "ts_end": "17:30",
+          "type": "visual",
+          "quote": "The student on the white box is now playing with a toy. The new adult and child are still standing near the teacher and students.",
+          "indicator": "Awareness",
+          "reasoning": "A student is visibly disengaged from the group activity (playing alone on a white box) for an extended period with no observed teacher response, indicating incomplete awareness or responsiveness to all students' needs."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "The transcript contains large blocks of clearly looped/corrupted text (repeated 'Good morning Maya' and 'I am so tired / I am too' exchanges) that appear to be transcription artifacts rather than real classroom dialogue. Scoring is based on the substantive transcript segments (around 25:00–35:00) and visual observations. The teacher shows basic awareness and some responsiveness but responses are often generic or incomplete, and at least one student remains disengaged for extended periods without teacher intervention.",
+      "prompt_hash": "709430ebaaba"
+    },
+    "regard_for_student_perspectives": {
+      "dimension_id": "regard_for_student_perspectives",
+      "rubric_version": "0.1.0",
+      "score": 2,
+      "anchor_matched": "Mostly teacher-driven; rare moments of student input or choice",
+      "evidence": [
+        {
+          "ts_start": "30:00",
+          "ts_end": "30:49",
+          "type": "transcript",
+          "quote": "Give me a fruit name. Rishab, give me a fruit name.",
+          "indicator": "Support for autonomy (offers choice and leadership)",
+          "reasoning": "The teacher solicits student input for fruit names, which is a token form of choice embedded in an otherwise fully teacher-scripted chant activity, representing a rare moment of student input within a rigid structure."
+        },
+        {
+          "ts_start": "31:45",
+          "ts_end": "31:54",
+          "type": "transcript",
+          "quote": "What do you want to eat? What do you want to eat, Chinmaya? What do you want to eat?",
+          "indicator": "Student expression (substantial student talk and voice)",
+          "reasoning": "The teacher asks what students want to eat, allowing brief student nominations (banana, orange, carrot), but these are immediately absorbed into the teacher-led scripted chant with no further elaboration or follow-up on student ideas."
+        },
+        {
+          "ts_start": "20:02",
+          "ts_end": "20:08",
+          "type": "transcript",
+          "quote": "Do you know what else is fun to do? Can you tell me what else is fun to do? Would you like it if I tell you what else is fun to do?",
+          "indicator": "Flexibility / student focus (follows interests)",
+          "reasoning": "Although the teacher poses open-sounding questions, she immediately answers them herself ('we will do the indoor games') without waiting for or incorporating student responses, indicating the activity direction was predetermined rather than student-led."
+        },
+        {
+          "ts_start": "21:00",
+          "ts_end": "22:30",
+          "type": "visual",
+          "quote": "The teacher kneels down to be at eye level with the students. One student gets up and walks around the seated group before returning to sit on a cushion. Another student also gets up and walks around, then returns to the group.",
+          "indicator": "Restriction of movement (reverse indicator — over-restriction lowers the score)",
+          "reasoning": "Students are permitted to move around the room and return voluntarily, suggesting movement is not heavily restricted, which partially mitigates a lower score, but the overall session remains teacher-directed with minimal genuine student autonomy."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "The transcript contains extensive repetitive looping artifacts (the 'Good morning Maya' and 'I am so tired' sections appear to be transcription errors or data corruption) that make it difficult to assess the full session. Scoreable content is concentrated in the 30–35 minute window. The fruit-naming activity offers token student input but the structure is entirely teacher-scripted. Movement is not heavily restricted. Overall pattern is mostly teacher-driven with rare moments of student input, matching anchor 2.",
+      "prompt_hash": "709430ebaaba"
+    },
+    "behavior_management": {
+      "dimension_id": "behavior_management",
+      "rubric_version": "0.1.0",
+      "score": 3,
+      "anchor_matched": "Mixed; some routines work, others break down; recovery is slow",
+      "evidence": [
+        {
+          "ts_start": "25:00",
+          "ts_end": "25:14",
+          "type": "transcript",
+          "quote": "Hey. Oh, you're sitting in. You're going to sit. Okay. On the cushion. Yes. On the cushion. On the cushion.",
+          "indicator": "Effective redirection of misbehavior",
+          "reasoning": "Teacher redirects a student to sit on the cushion, showing some ability to manage behavior, but the repeated prompting ('On the cushion. On the cushion.') suggests the redirection required multiple attempts rather than being quick and low-key."
+        },
+        {
+          "ts_start": "30:50",
+          "ts_end": "31:08",
+          "type": "transcript",
+          "quote": "Rishab, that's not for you. That's not for you.",
+          "indicator": "Effective redirection of misbehavior",
+          "reasoning": "Teacher redirects Rishab with a specific, calm statement, but the repetition indicates the first redirect was not immediately effective, consistent with a mixed/slow recovery pattern."
+        },
+        {
+          "ts_start": "16:00",
+          "ts_end": "16:30",
+          "type": "visual",
+          "quote": "The teacher is leading an activity with three students on the mat. The other adult is observing. Another student walks into the frame and sits on a white box in the background.",
+          "indicator": "Student behavior (overall on-task pattern)",
+          "reasoning": "A student is off-task (sitting on a white box separately) while the main activity proceeds, indicating some students are not consistently engaged, reflecting a mixed on-task pattern."
+        },
+        {
+          "ts_start": "21:00",
+          "ts_end": "21:30",
+          "type": "visual",
+          "quote": "The teacher kneels down to be at eye level with the students. One student gets up and walks around the seated group before returning to sit on a cushion. Another student also gets up and walks around, then returns to the group.",
+          "indicator": "Student behavior (overall on-task pattern)",
+          "reasoning": "Multiple students are moving off-task simultaneously, and while they return on their own, the teacher does not appear to proactively prevent or quickly redirect this wandering, consistent with a mixed management pattern."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "The transcript data contains large sections of clearly looped/corrupted text (repeated 'Good morning Maya' and 'I am so tired' exchanges) that appear to be transcription artifacts rather than real session content. Scoring relies primarily on the visually observed behavior patterns and the substantive transcript segments from 25:00 onward. The session shows functional but inconsistent management: routines exist (cushion seating, turn-taking for fruit names), some redirections work, but off-task behavior recurs and redirections often require repetition.",
+      "prompt_hash": "709430ebaaba"
+    },
+    "productivity": {
+      "dimension_id": "productivity",
+      "rubric_version": "0.1.0",
+      "score": 1,
+      "anchor_matched": "Significant time lost to disorganization; transitions slow and confused; routines unclear",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "04:59",
+          "type": "transcript",
+          "quote": "Good morning, Maya. Good morning, Maya. Good morning, Maya. Good morning, Maya. Good morning, Maya. Good morning, Maya.",
+          "indicator": "Maximizing learning time",
+          "reasoning": "Nearly five minutes of the session are consumed by a single repeated greeting phrase with no instructional content, representing significant loss of learning time."
+        },
+        {
+          "ts_start": "01:00",
+          "ts_end": "06:00",
+          "type": "visual",
+          "quote": "All the adults and children have left the classroom. The classroom is now empty. The various learning materials are still in place, and the room appears tidy.",
+          "indicator": "Maximizing learning time",
+          "reasoning": "The classroom is empty for approximately five minutes during a 35-minute session, indicating substantial idle time with no instruction occurring."
+        },
+        {
+          "ts_start": "15:00",
+          "ts_end": "20:00",
+          "type": "transcript",
+          "quote": "STUDENT_1: I am so tired. TEACHER: I am too. STUDENT_1: I am so tired. TEACHER: I am too.",
+          "indicator": "Maximizing learning time",
+          "reasoning": "A five-minute block of the session (15:00–20:00) consists entirely of a looping off-topic exchange with no instructional purpose, further depleting productive learning time."
+        },
+        {
+          "ts_start": "20:02",
+          "ts_end": "23:57",
+          "type": "transcript",
+          "quote": "Okay. So, we will do the indoor games, okay? Indoor games is fun. Yes? ... Okay. So, we will do the indoor games, okay? Indoor games is fun. Yes?",
+          "indicator": "Smooth transitions",
+          "reasoning": "The same transitional phrase is repeated dozens of times over nearly four minutes without the class actually moving to the next activity, indicating a severely stalled and disorganized transition."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "The transcript shows clear signs of transcript generation artifacts (looping repeated lines), but the pattern is consistent enough across both transcript and visual evidence to confirm that large portions of the 35-minute session were lost to non-instructional content, empty classroom time, and stalled transitions. The final segment (30:00–35:00) does show a structured fruit-naming activity, but this represents only a small fraction of the session.",
+      "prompt_hash": "709430ebaaba"
+    },
+    "instructional_learning_formats": {
+      "dimension_id": "instructional_learning_formats",
+      "rubric_version": "0.1.0",
+      "score": 3,
+      "anchor_matched": "Some variety; engagement uneven; objectives stated but not reinforced",
+      "evidence": [
+        {
+          "ts_start": "08:00",
+          "ts_end": "14:59",
+          "type": "visual",
+          "quote": "One teacher is holding a book, suggesting a story time session. The children appear attentive... The teachers are now leading the children in a singing activity. The children are actively participating, singing along and making gestures. The atmosphere is joyful and energetic.",
+          "indicator": "Variety of modalities and materials",
+          "reasoning": "The session includes at least two distinct modalities — story time with a book and a singing/movement activity — demonstrating some variety in instructional formats."
+        },
+        {
+          "ts_start": "31:11",
+          "ts_end": "35:03",
+          "type": "transcript",
+          "quote": "Now let us form the apple. Form, form the apple. And we form the apple. Form, form the apple. Now we peel the apple. Peel, peel the apple. And we peel the apple. Peel, peel the apple. Now we chop the apple. Chop, chop the apple. Now we chop the apple. Eat, eat the apple.",
+          "indicator": "Variety of modalities and materials",
+          "reasoning": "The fruit activity uses a repetitive chant with physical action words (form, peel, chop, eat), incorporating movement and verbal participation, adding another modality to the session."
+        },
+        {
+          "ts_start": "30:49",
+          "ts_end": "35:03",
+          "type": "transcript",
+          "quote": "Give me a fruit name. Rishab, give me a fruit name... Apple... Banana... Orange... Carrot.",
+          "indicator": "Student interest and engagement",
+          "reasoning": "Multiple students volunteer fruit names and respond to teacher prompts, indicating active engagement during the fruit activity, though engagement is uneven as some students (e.g., Rishab) are noted as non-compliant."
+        },
+        {
+          "ts_start": "30:00",
+          "ts_end": "30:59",
+          "type": "visual",
+          "quote": "The teacher is standing in the middle of the room, facing three students who are sitting on yellow cushions on the floor. Another student is walking around the room, then sits on a shelf. Two other students are lying down in a play structure.",
+          "indicator": "Student interest and engagement",
+          "reasoning": "Engagement is visibly uneven — some students are seated and attentive while others are walking around or lying in a play structure, consistent with the anchor description of uneven engagement."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "The transcript contains large blocks of apparent transcription artifacts (looping 'Good morning Maya' and 'I am so tired' exchanges) that are likely ASR errors rather than actual classroom content. Scoring relies primarily on the visual observations and the substantive transcript content from 30:00 onward. The session shows genuine variety (story time, singing with movement, interactive fruit chant with student input) but objectives are not explicitly stated to students, and engagement is notably uneven across the group.",
+      "prompt_hash": "709430ebaaba"
+    },
+    "concept_development": {
+      "dimension_id": "concept_development",
+      "rubric_version": "0.1.0",
+      "score": 1,
+      "anchor_matched": "Pure rote or recall; no higher-order prompts; no real-world connection",
+      "evidence": [
+        {
+          "ts_start": "30:00",
+          "ts_end": "31:45",
+          "type": "transcript",
+          "quote": "Now let us form the apple. Form, form the apple. And we form the apple. Form, form the apple. Now we peel the apple. Peel, peel the apple. And we peel the apple. Peel, peel the apple. Now we chop the apple. Chop, chop the apple. Now we chop the apple. Eat, eat the apple. And we eat the apple. Eat, eat the apple.",
+          "indicator": "Analysis and reasoning",
+          "reasoning": "The activity consists entirely of rote repetition of action words (form, peel, chop, eat) with no prompts for reasoning, explanation, prediction, or comparison — matching the anchor for pure rote/recall."
+        },
+        {
+          "ts_start": "30:00",
+          "ts_end": "30:50",
+          "type": "transcript",
+          "quote": "Give me a fruit name. Rishab, give me a fruit name.",
+          "indicator": "Analysis and reasoning",
+          "reasoning": "The only question asked of students is simple recall (naming a fruit), with no follow-up asking why they chose it, how it grows, or any connection to their experience."
+        },
+        {
+          "ts_start": "33:09",
+          "ts_end": "33:20",
+          "type": "transcript",
+          "quote": "Chinmaya, what's your favorite fruit?",
+          "indicator": "Connections to the real world",
+          "reasoning": "Although this question references personal preference, it functions only as a prompt to supply a fruit name for the rote repetition activity, with no follow-through connecting to real-world experience or higher-order thinking."
+        },
+        {
+          "ts_start": "20:02",
+          "ts_end": "20:08",
+          "type": "transcript",
+          "quote": "Do you know what else is fun to do? Can you tell me what else is fun to do?",
+          "indicator": "Creating (brainstorming, generating ideas)",
+          "reasoning": "Although this appears to invite student ideas, the teacher immediately answers her own question ('we will do the indoor games') without eliciting or building on student responses, so no higher-order thinking is actually promoted."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "The transcript contains large sections of apparent transcription artifacts (looping 'Good morning Maya' and 'I am so tired' exchanges) that appear to be ASR errors rather than real classroom content. Scorable content is concentrated in the 30–35 minute window, where the activity is a fully scripted, repetitive fruit-action song with recall-only prompts. No 'why' or 'how' questions, no prediction, no integration, and no sustained real-world connection were observed.",
+      "prompt_hash": "709430ebaaba"
+    },
+    "quality_of_feedback": {
+      "dimension_id": "quality_of_feedback",
+      "rubric_version": "0.1.0",
+      "score": 1,
+      "anchor_matched": "Right/wrong only; no scaffolding; minimal or generic praise ('good job')",
+      "evidence": [
+        {
+          "ts_start": "30:49",
+          "ts_end": "30:51",
+          "type": "transcript",
+          "quote": "STUDENT_1: Apple.\nTEACHER: Apple. Hmm. So this time you're going to sit here. After that we'll go to the trampoline.",
+          "indicator": "Feedback loops (back-and-forth on the same idea)",
+          "reasoning": "The teacher accepts the student's answer ('Apple') with a minimal acknowledgment and immediately moves on to a behavioral instruction rather than extending or building on the student's response."
+        },
+        {
+          "ts_start": "31:45",
+          "ts_end": "31:54",
+          "type": "transcript",
+          "quote": "TEACHER: Give me another fruit name.\nTEACHER: What do you want to eat?\nSTUDENT_3: What do you want to eat?\nTEACHER: What do you want to eat, Chinmaya? What do you want to eat?\nSTUDENT_4: Banana.\nTEACHER: Banana. Okay.",
+          "indicator": "Scaffolding (hints to help reach an answer)",
+          "reasoning": "The teacher elicits a fruit name and accepts 'Banana' with only 'Okay,' providing no scaffolding, extension, or substantive feedback on the student's contribution."
+        },
+        {
+          "ts_start": "34:00",
+          "ts_end": "34:44",
+          "type": "transcript",
+          "quote": "TEACHER: Tomatoes. You said banana, you said banana, you said tomato. Now we form tomatoes... Now we chop. What are we chopping?\nSTUDENT_8: Tomatoes.\nTEACHER: Tomatoes. Now we chop tomatoes.",
+          "indicator": "Prompting thought processes ('how did you know?')",
+          "reasoning": "The one instance of a follow-up question ('What are we chopping?') is a simple recall prompt with no extension of thinking; the teacher accepts the correct answer and moves on without any scaffolding or encouragement tied to the student's thinking."
+        },
+        {
+          "ts_start": "33:09",
+          "ts_end": "33:20",
+          "type": "transcript",
+          "quote": "TEACHER: Yes. Chinmaya, what's your favorite fruit?\nSTUDENT_6: Apple.\nTEACHER: Apple. Okay. Now we form an apple.",
+          "indicator": "Encouragement and affirmation",
+          "reasoning": "The teacher's only response to the student's answer is 'Apple. Okay,' which is generic and evaluative with no specific affirmation or encouragement tied to the student's contribution."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "The transcript contains large sections of apparent transcription artifacts (looping 'Good morning Maya' and 'I am so tired' exchanges) that appear to be ASR errors rather than real classroom dialogue. Scorable feedback interactions are concentrated in the 30:00–35:00 segment. Across all observable exchanges, the teacher accepts student answers with minimal acknowledgment ('Okay,' 'Banana. Okay') and immediately moves to the next step of a scripted song/activity. No scaffolding, no thought-process prompting, no specific praise, and no multi-turn feedback loops on the same idea were observed.",
+      "prompt_hash": "709430ebaaba"
+    },
+    "language_modeling": {
+      "dimension_id": "language_modeling",
+      "rubric_version": "0.1.0",
+      "score": 1,
+      "anchor_matched": "Mostly directive talk; few questions; no vocabulary expansion",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "04:56",
+          "type": "transcript",
+          "quote": "Good morning, Maya. Good morning, Maya. Good morning, Maya. Good morning, Maya. Good morning, Maya. Good morning, Maya.",
+          "indicator": "Frequent conversation",
+          "reasoning": "The opening five minutes consist almost entirely of a single repeated greeting phrase with no dialogue, no questions, and no vocabulary development, exemplifying the anchor's 'mostly directive/formulaic talk' pattern."
+        },
+        {
+          "ts_start": "20:02",
+          "ts_end": "20:08",
+          "type": "transcript",
+          "quote": "Okay. And you know what else is fun to do? Do you know what else is fun to do? Can you tell me what else is fun to do?",
+          "indicator": "Open-ended questions",
+          "reasoning": "Although the teacher asks what appears to be an open-ended question, she immediately answers it herself and then repeats the same closed loop ('Indoor games is fun. Yes?') dozens of times without extending any student response, so no genuine open-ended dialogue is sustained."
+        },
+        {
+          "ts_start": "31:11",
+          "ts_end": "31:45",
+          "type": "transcript",
+          "quote": "Now let us form the apple. Form, form the apple. And we form the apple. Form, form the apple. Now we peel the apple. Peel, peel the apple. And we peel the apple. Peel, peel the apple. Now we chop the apple. Chop, chop the apple. Now we chop the apple. Eat, eat the apple. And we eat the apple. Eat, eat the apple. Now we eat the apple. Give me another fruit name.",
+          "indicator": "Repetition and extension of student talk",
+          "reasoning": "The teacher accepts a student's one-word answer ('Apple') and immediately returns to a scripted chant with no extension, elaboration, or vocabulary expansion of the student's contribution, consistent with a score-1 pattern of directive talk."
+        },
+        {
+          "ts_start": "33:09",
+          "ts_end": "33:20",
+          "type": "transcript",
+          "quote": "Yes. Chinmaya, what's your favorite fruit?",
+          "indicator": "Open-ended questions",
+          "reasoning": "This is one of the very few genuine questions directed at a student, but the student's answer ('Apple') receives no extension or vocabulary enrichment—the teacher simply launches back into the same scripted chant—so the isolated question does not raise the overall pattern above a score of 1."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "The transcript shows clear signs of transcript-generation artifacts (massive repetition of identical lines at fixed timestamps), but the underlying observable pattern is consistent: the session is dominated by scripted chants, formulaic greetings, and closed yes/no confirmations. Student utterances are acknowledged but never extended or elaborated. No advanced vocabulary is introduced. The brief open-ended questions that appear are immediately self-answered or followed by the same scripted loop, so they do not constitute genuine language modeling. Score 1 is unambiguous.",
+      "prompt_hash": "709430ebaaba"
+    }
+  },
+  "overall": 2.1,
+  "cost_usd": null,
+  "duration_seconds": 20.07218623161316
+}

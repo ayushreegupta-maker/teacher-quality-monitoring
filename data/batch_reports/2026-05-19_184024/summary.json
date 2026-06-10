@@ -1,0 +1,1230 @@
+{
+  "Floor painting": {
+    "scores": {
+      "playground": {
+        "session_id": "batch_playground_floor_painting",
+        "rubric_version": "0.2.2",
+        "scores": {
+          "narrative": {
+            "dimension_id": "narrative",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session record. The activity setup notes describe a floor painting activity (paper, paints, brushes) but provide no information about decor, props, framing, or any narrative/thematic elements. Without visual or audio evidence, the dimension cannot be reliably scored.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "multi_sensory": {
+            "dimension_id": "multi_sensory",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session data. The activity notes describe a floor painting setup (paper, paints, brushes) which the rubric explicitly calls out as earning a 1.0 for engaging visual and tactile senses meaningfully. However, the scoring rules require at least one timestamped evidence piece from the transcript or visual observations, and neither is available. Returning insufficient_evidence rather than scoring from activity notes alone.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "boundary": {
+            "dimension_id": "boundary",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session record. The activity setup notes describe paper laid on the floor with paints and brushes, which would typically constitute a clear boundary (score 1.0), but without any timestamped visual observations or transcript to confirm this, the evidence is insufficient to assign a reliable score.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "movement": {
+            "dimension_id": "movement",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session record. Despite the activity/setup notes describing a floor painting activity with paper laid on the floor, there is no timestamped visual or audio evidence to score against any indicator. Cannot assess access paths, child positioning, material reach, or obstruction without observable evidence.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "clean_up": {
+            "dimension_id": "clean_up",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session record. Without any timestamped visual or audio evidence of the storage setup, labelling, item weight, or children returning materials, it is not possible to score this dimension reliably.",
+            "prompt_hash": "c92c689bf87b"
+          }
+        },
+        "overall": null,
+        "cost_usd": null,
+        "duration_seconds": 4.554695129394531
+      },
+      "toy_design": {
+        "session_id": "batch_toy_design_floor_painting",
+        "rubric_version": "0.2.0",
+        "scores": {
+          "purpose": {
+            "dimension_id": "purpose",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript content and no visual observations were provided in the session record. Although the staff notes describe a floor painting setup (paper on floor with paints and brushes), the rubric requires at least one timestamped evidence piece from the transcript or visual observations to support a numeric score. Staff setup notes alone are not sufficient to verify what was actually observable in the recorded session.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "anchor_and_choice_materials": {
+            "dimension_id": "anchor_and_choice_materials",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the evidence fields. The session metadata describes a floor painting activity with paper, paints, and brushes, which could potentially score well on this dimension, but without actual timestamped visual observations or transcript content, there is no verifiable evidence to score against the rubric indicators.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "spark_curiosity": {
+            "dimension_id": "spark_curiosity",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session data. Without any timestamped visual descriptions or audio content, it is impossible to assess whether a curiosity-sparking element was present at the activity area.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "challenge_adjustment": {
+            "dimension_id": "challenge_adjustment",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session data. Without any timestamped scene descriptions or audio content, it is impossible to assess whether the setup included deliberate difficulty variations, tiered materials, or add-on extensions. Returning insufficient_evidence rather than guessing.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "self_served": {
+            "dimension_id": "self_served",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session data. The activity setup notes describe a floor painting activity with paper, paints, and brushes, which in principle could be child-manageable, but without any timestamped visual or audio evidence it is not possible to assess the actual materials' size, weight, safety features, or recognisability. Scoring would be guesswork.",
+            "prompt_hash": "c92c689bf87b"
+          }
+        },
+        "overall": null,
+        "cost_usd": null,
+        "duration_seconds": 4.074382066726685
+      }
+    },
+    "items": {
+      "activity_zone_items": [],
+      "other_items_in_room": [],
+      "notes": "No visual observations were provided in the session data. The metadata describes a floor painting activity with paper, paints, and brushes, but no timestamped observations were included from which to extract an inventory. Cannot populate any items without source observation data.",
+      "session_id": "batch_vision_floor_painting",
+      "source_model": "claude-sonnet-4-6",
+      "prompt_hash": "0a584ed472ce"
+    }
+  },
+  "Multi-sensory bins": {
+    "scores": {
+      "playground": {
+        "session_id": "batch_playground_multi_sensory_bins",
+        "rubric_version": "0.2.2",
+        "scores": {
+          "narrative": {
+            "dimension_id": "narrative",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session record. Without any timestamped visual descriptions or audio content, it is impossible to assess whether the space contains thematic decor, props, atmospheric anchors, or immersive framing. The activity setup notes describe multi-sensory bins but do not describe any narrative or scene-setting elements.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "multi_sensory": {
+            "dimension_id": "multi_sensory",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session record. The activity/setup notes describe a multi-sensory bin setup, but staff notes alone are not scorable evidence \u2014 the rubric requires timestamped transcript or visual observation evidence. Returning insufficient_evidence.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "boundary": {
+            "dimension_id": "boundary",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session record. Without any timestamped visual or audio evidence, it is impossible to assess whether clear physical or visual boundaries are present for the sensory bin activity.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "movement": {
+            "dimension_id": "movement",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session record. Without any timestamped visual descriptions or audio content, it is impossible to assess access paths, child positioning, material reach, or obstruction. Returning insufficient_evidence per scoring rules.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "clean_up": {
+            "dimension_id": "clean_up",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session record. Without any timestamped visual or audio evidence, it is not possible to assess storage height, label design, item weight, or child-led cleanup behavior. Returning insufficient_evidence rather than guessing.",
+            "prompt_hash": "c92c689bf87b"
+          }
+        },
+        "overall": null,
+        "cost_usd": null,
+        "duration_seconds": 3.5643310546875
+      },
+      "toy_design": {
+        "session_id": "batch_toy_design_multi_sensory_bins",
+        "rubric_version": "0.2.0",
+        "scores": {
+          "purpose": {
+            "dimension_id": "purpose",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript content and no visual observations were provided in the session record. Despite the staff activity notes describing multi-sensory bins, there is no timestamped visual or audio evidence from which to assess how materials were arranged or whether the setup communicated purpose to arriving children. Cannot score without observable evidence.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "anchor_and_choice_materials": {
+            "dimension_id": "anchor_and_choice_materials",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session record. The activity/setup notes describe multi-sensory bins with varied textures, sounds, colors, and scents, which would suggest multiple anchor stations and choice materials, but setup notes alone are not scorable evidence per the rubric requirements. Without timestamped visual observations or transcript content, a reliable score cannot be assigned.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "spark_curiosity": {
+            "dimension_id": "spark_curiosity",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session data. Despite the activity setup notes describing multi-sensory bins with varied textures, sounds, colors, and scents, there is no timestamped visual or audio evidence to evaluate what was actually present at the activity zone. Cannot score without observable evidence.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "challenge_adjustment": {
+            "dimension_id": "challenge_adjustment",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session record. Without any timestamped audio or visual evidence, it is impossible to assess whether the multi-sensory bin setup includes deliberate difficulty variations, tiered materials, or add-on extensions. Returning insufficient_evidence per scoring rules.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "self_served": {
+            "dimension_id": "self_served",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript content and no visual observations were provided in the session data. Without any visual or audio evidence of the materials, their size, weight, safety features, or recognisability, it is impossible to score the design of the materials against the self-served rubric.",
+            "prompt_hash": "c92c689bf87b"
+          }
+        },
+        "overall": null,
+        "cost_usd": null,
+        "duration_seconds": 3.7782139778137207
+      }
+    },
+    "items": {
+      "activity_zone_items": [],
+      "other_items_in_room": [],
+      "notes": "No visual observations were provided in the input. The observations list appears to be empty, so no inventory can be extracted. The metadata describes multi-sensory bins with varied textures, sounds, colors, and scents, but no specific items were documented in any timestamped observations.",
+      "session_id": "batch_vision_multi_sensory_bins",
+      "source_model": "claude-sonnet-4-6",
+      "prompt_hash": "0a584ed472ce"
+    }
+  },
+  "Damru": {
+    "scores": {
+      "playground": {
+        "session_id": "batch_playground_damru",
+        "rubric_version": "0.2.2",
+        "scores": {
+          "narrative": {
+            "dimension_id": "narrative",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided for this session. Without any timestamped scene descriptions or dialogue, it is impossible to assess whether the space contained thematic decor, props, atmospheric anchors, or immersive framing. Returning insufficient_evidence rather than guessing.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "multi_sensory": {
+            "dimension_id": "multi_sensory",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided for this session. Despite the activity notes describing a damru (traditional Indian drum) exploratory play setup \u2014 which would nominally suggest auditory and tactile engagement \u2014 there is no timestamped visual or audio evidence to confirm what was actually present or how children engaged. Cannot score without observable evidence.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "boundary": {
+            "dimension_id": "boundary",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided for this session. Without any timestamped scene descriptions or audio content, it is impossible to assess whether a clear physical or visual boundary was present for the damru activity.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "movement": {
+            "dimension_id": "movement",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript content and no visual observations were provided in the session record. Without any timestamped visual or audio evidence, it is impossible to assess access paths, child positioning, space adequacy, or material reach for this activity.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "clean_up": {
+            "dimension_id": "clean_up",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided for this session. Without any timestamped scene descriptions or audio evidence, it is impossible to assess storage height, label design, item weight, or whether children can return materials unaided.",
+            "prompt_hash": "c92c689bf87b"
+          }
+        },
+        "overall": null,
+        "cost_usd": null,
+        "duration_seconds": 3.867436170578003
+      },
+      "toy_design": {
+        "session_id": "batch_toy_design_damru",
+        "rubric_version": "0.2.0",
+        "scores": {
+          "purpose": {
+            "dimension_id": "purpose",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided for this session. Without any timestamped scene descriptions or audio content, it is impossible to assess how materials were arranged at the activity zone or whether a child arriving could intuit the activity's purpose from the setup alone.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "anchor_and_choice_materials": {
+            "dimension_id": "anchor_and_choice_materials",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided for this session. The activity notes mention a damru (traditional Indian drum) as the focal material, but without any timestamped visual or audio evidence, it is impossible to assess whether a clear anchor was present, what choice materials were available, or how children engaged. Returning insufficient_evidence rather than guessing from the activity description alone.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "spark_curiosity": {
+            "dimension_id": "spark_curiosity",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session data. While the activity notes mention a damru (a traditional Indian drum) which could potentially serve as a curiosity-sparking element for children unfamiliar with it, there is no actual observational evidence from the session to score against the rubric. Cannot score without at least one timestamped evidence piece.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "challenge_adjustment": {
+            "dimension_id": "challenge_adjustment",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided for this session. Without any timestamped scene descriptions or audio content, it is impossible to assess whether the setup included deliberate difficulty variations, tiered materials, or add-on extensions for the damru activity.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "self_served": {
+            "dimension_id": "self_served",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided for this session. Without any timestamped scene descriptions or audio content, it is impossible to assess the design of the materials (safety, recognisability, weight, sizing) against the rubric indicators.",
+            "prompt_hash": "c92c689bf87b"
+          }
+        },
+        "overall": null,
+        "cost_usd": null,
+        "duration_seconds": 4.069859027862549
+      }
+    },
+    "items": {
+      "activity_zone_items": [],
+      "other_items_in_room": [],
+      "notes": "No visual observations were provided in the input. The observations list is empty, so no items, materials, tools, or objects can be extracted or inventoried. Only the activity context (exploratory play with a damru, a small two-headed traditional Indian drum) was described in the metadata, but this alone is insufficient to populate the inventory without actual timestamped observations.",
+      "session_id": "batch_vision_damru",
+      "source_model": "claude-sonnet-4-6",
+      "prompt_hash": "0a584ed472ce"
+    }
+  },
+  "Nature sensory bin (1)": {
+    "scores": {
+      "playground": {
+        "session_id": "batch_playground_nature_sensory_bin__1",
+        "rubric_version": "0.2.2",
+        "scores": {
+          "narrative": {
+            "dimension_id": "narrative",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided for this session. The activity setup notes describe a 'nature sensory bin' with nature-themed materials, but setup notes alone are insufficient to score the narrative dimension \u2014 no visual evidence of decor, props, arrangement, or atmospheric anchors is available to assess immersive framing.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "multi_sensory": {
+            "dimension_id": "multi_sensory",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript content and no visual observations were provided. Despite the activity notes describing a 'nature sensory bin' with 'nature-themed materials in containers' \u2014 which would typically suggest multi-sensory engagement \u2014 there is no timestamped visual or audio evidence to score against. Cannot confirm what materials were present, how they were arranged, or how children engaged with them.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "boundary": {
+            "dimension_id": "boundary",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided for this session. Without any timestamped visual or audio evidence, it is impossible to assess whether a clear physical or visual boundary exists for the sensory bin activity.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "movement": {
+            "dimension_id": "movement",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided for this session. Without any timestamped scene descriptions or audio content, it is impossible to assess unobstructed access, child positioning, material reach, or any other movement indicator.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "clean_up": {
+            "dimension_id": "clean_up",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided for this session. Without any observable evidence of storage height, labelling, item weight, or children returning materials, it is not possible to score this dimension.",
+            "prompt_hash": "c92c689bf87b"
+          }
+        },
+        "overall": null,
+        "cost_usd": null,
+        "duration_seconds": 4.748927116394043
+      },
+      "toy_design": {
+        "session_id": "batch_toy_design_nature_sensory_bin__1",
+        "rubric_version": "0.2.0",
+        "scores": {
+          "purpose": {
+            "dimension_id": "purpose",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session record. Despite the staff notes describing a nature sensory bin setup, there is no timestamped visual or audio evidence to assess how materials were arranged or whether the setup communicated purpose to arriving children.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "anchor_and_choice_materials": {
+            "dimension_id": "anchor_and_choice_materials",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided for this session. The activity notes describe a 'nature sensory bin' with 'nature-themed materials in containers,' which suggests an anchor and potentially choice materials, but without actual visual or audio evidence from the recording, no reliable score can be assigned.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "spark_curiosity": {
+            "dimension_id": "spark_curiosity",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided for this session. Without any timestamped scene descriptions or dialogue, it is impossible to assess whether a curiosity-sparking element was present at the activity area.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "challenge_adjustment": {
+            "dimension_id": "challenge_adjustment",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided for this session. Without any timestamped scene descriptions or audio content, it is impossible to assess whether the setup includes deliberate difficulty variations, tiered materials, or add-on extensions.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "self_served": {
+            "dimension_id": "self_served",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided for this session. Without any timestamped scene descriptions or audio content, it is impossible to assess the design of the materials for child self-service.",
+            "prompt_hash": "c92c689bf87b"
+          }
+        },
+        "overall": null,
+        "cost_usd": null,
+        "duration_seconds": 4.998153924942017
+      }
+    },
+    "items": {
+      "activity_zone_items": [],
+      "other_items_in_room": [],
+      "notes": "No visual observations were provided in the input. The observation list is empty, so no inventory items could be extracted.",
+      "session_id": "batch_vision_nature_sensory_bin__1",
+      "source_model": "claude-sonnet-4-6",
+      "prompt_hash": "0a584ed472ce"
+    }
+  },
+  "Sand play": {
+    "scores": {
+      "playground": {
+        "session_id": "batch_playground_sand_play",
+        "rubric_version": "0.2.2",
+        "scores": {
+          "narrative": {
+            "dimension_id": "narrative",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided for this session. Without any observable evidence of the space's decor, props, arrangement, or framing, it is impossible to assess whether a narrative or immersive context was established.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "multi_sensory": {
+            "dimension_id": "multi_sensory",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided. While the activity notes describe a sand play setup \u2014 which would typically engage tactile, visual, and proprioceptive senses \u2014 there is no observable evidence from the session itself to score against the rubric. Cannot confirm what materials were present, how they were arranged, or how children engaged with them.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "boundary": {
+            "dimension_id": "boundary",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session record. Without any timestamped visual descriptions or audio content, it is impossible to assess whether a clear physical or visual boundary exists for the sand play activity.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "movement": {
+            "dimension_id": "movement",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided for this session. Without any timestamped scene descriptions or audio content, it is impossible to assess access paths, child positioning, space adequacy, or material reach for the sand play activity.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "clean_up": {
+            "dimension_id": "clean_up",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided for this session. Without any observable evidence of storage height, labelling, item weight, or cleanup behavior, it is not possible to score this dimension reliably.",
+            "prompt_hash": "c92c689bf87b"
+          }
+        },
+        "overall": null,
+        "cost_usd": null,
+        "duration_seconds": 3.957805871963501
+      },
+      "toy_design": {
+        "session_id": "batch_toy_design_sand_play",
+        "rubric_version": "0.2.0",
+        "scores": {
+          "purpose": {
+            "dimension_id": "purpose",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session record. Without any timestamped visual descriptions of the material arrangement or audio evidence, it is impossible to assess whether the setup communicates its purpose to arriving children.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "anchor_and_choice_materials": {
+            "dimension_id": "anchor_and_choice_materials",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session record. Despite the activity notes describing a sand play setup, there is no timestamped visual or audio evidence to assess the presence of anchor materials or choice materials. Cannot score without observable evidence.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "spark_curiosity": {
+            "dimension_id": "spark_curiosity",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided for this session. Without any timestamped scene descriptions or dialogue, it is impossible to assess whether a curiosity-sparking element was present at the activity area.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "challenge_adjustment": {
+            "dimension_id": "challenge_adjustment",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided for this session. Without any timestamped scene descriptions or audio content, it is impossible to assess whether the sand play setup included deliberate difficulty variations, tiered materials, or extension add-ons.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "self_served": {
+            "dimension_id": "self_served",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session data. Without any timestamped scene descriptions or audio content, it is impossible to assess the design of the materials for child self-service. Returning insufficient_evidence.",
+            "prompt_hash": "c92c689bf87b"
+          }
+        },
+        "overall": null,
+        "cost_usd": null,
+        "duration_seconds": 3.7591140270233154
+      }
+    },
+    "items": {
+      "activity_zone_items": [],
+      "other_items_in_room": [],
+      "notes": "No visual observations were provided in the input. The observation list is empty, so no items, materials, tools, or objects can be extracted or inventoried.",
+      "session_id": "batch_vision_sand_play",
+      "source_model": "claude-sonnet-4-6",
+      "prompt_hash": "0a584ed472ce"
+    }
+  },
+  "Nature sensory bin (HRBR)": {
+    "scores": {
+      "playground": {
+        "session_id": "batch_playground_nature_sensory_bin__hrbr",
+        "rubric_version": "0.2.2",
+        "scores": {
+          "narrative": {
+            "dimension_id": "narrative",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session record. Despite the activity notes describing a 'nature sensory bin' with imaginative role play and nature/home themes, there is no observable evidence (visual or audio) to score against the rubric indicators. Cannot assess decor, props, atmospheric anchors, or immersive framing without actual session content.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "multi_sensory": {
+            "dimension_id": "multi_sensory",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript content and no visual observations were provided in the session record. Despite the activity notes describing a nature sensory bin with imaginative role play and sensory exploration, there is no timestamped visual or audio evidence available to score against the rubric indicators. Cannot reliably assess which senses were engaged without observable evidence.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "boundary": {
+            "dimension_id": "boundary",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session record. Without any timestamped visual or audio evidence, it is impossible to assess whether a clear physical or visual boundary exists for the activity zone.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "movement": {
+            "dimension_id": "movement",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript content and no visual observations were provided in the session data. Without any timestamped visual or audio evidence, it is impossible to assess access paths, child positioning, material reach, or obstruction. Returning insufficient_evidence.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "clean_up": {
+            "dimension_id": "clean_up",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session record. Without any timestamped visual or audio evidence of the storage setup, labelling, item weight, or shelf height, it is not possible to score this dimension reliably.",
+            "prompt_hash": "c92c689bf87b"
+          }
+        },
+        "overall": null,
+        "cost_usd": null,
+        "duration_seconds": 4.417126893997192
+      },
+      "toy_design": {
+        "session_id": "batch_toy_design_nature_sensory_bin__hrbr",
+        "rubric_version": "0.2.0",
+        "scores": {
+          "purpose": {
+            "dimension_id": "purpose",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session record. Without any timestamped visual descriptions of the material arrangement or audio evidence, it is impossible to assess whether the setup communicates its purpose to an arriving child.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "anchor_and_choice_materials": {
+            "dimension_id": "anchor_and_choice_materials",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session record. Despite the activity notes describing a nature sensory bin with imaginative role play and sensory exploration, there is no timestamped visual or audio evidence to score against the rubric indicators.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "spark_curiosity": {
+            "dimension_id": "spark_curiosity",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session data. Without any timestamped visual descriptions or audio content, it is impossible to assess whether a curiosity-sparking element exists at the activity area.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "challenge_adjustment": {
+            "dimension_id": "challenge_adjustment",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session record. Without any observable evidence of the setup, materials, or activity structure, it is not possible to score this dimension.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "self_served": {
+            "dimension_id": "self_served",
+            "rubric_version": "0.2.0",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "No transcript or visual observations were provided in the session record. Without any timestamped scene descriptions or audio content, it is impossible to assess the design of the materials for child self-service.",
+            "prompt_hash": "c92c689bf87b"
+          }
+        },
+        "overall": null,
+        "cost_usd": null,
+        "duration_seconds": 3.431743860244751
+      }
+    },
+    "items": {
+      "activity_zone_items": [],
+      "other_items_in_room": [],
+      "notes": "No visual observations were provided in the session data. The metadata describes a nature sensory bin activity with imaginative role play, but no timestamped observations were included, so no inventory items can be extracted or inferred.",
+      "session_id": "batch_vision_nature_sensory_bin__hrbr",
+      "source_model": "claude-sonnet-4-6",
+      "prompt_hash": "0a584ed472ce"
+    }
+  },
+  "Water play": {
+    "scores": {
+      "playground": {
+        "session_id": "batch_playground_water_play",
+        "rubric_version": "0.2.2",
+        "scores": {
+          "narrative": {
+            "dimension_id": "narrative",
+            "rubric_version": "0.2.2",
+            "score": 0.5,
+            "anchor_matched": "Some context-setting elements present (a prop or partial theme) but immersion is weak or incomplete across the space",
+            "evidence": [
+              {
+                "ts_start": "00:00",
+                "ts_end": "00:30",
+                "type": "visual",
+                "quote": "Along the back wall, there's a glass barrier overlooking a green artificial grass area decorated with colorful cutouts of fish, coral, and other sea creatures.",
+                "indicator": "Thematic decor that names or evokes a setting",
+                "reasoning": "The underwater-themed cutouts on the back wall provide a partial thematic anchor (ocean/sea setting), but this is confined to one wall and does not extend throughout the play space."
+              },
+              {
+                "ts_start": "00:30",
+                "ts_end": "01:00",
+                "type": "visual",
+                "quote": "The play area remains empty, with the bins of toys and blue buckets in the same positions. The decorated back wall with the underwater theme is clearly visible.",
+                "indicator": "An atmospheric anchor (banner, central feature, framing object)",
+                "reasoning": "The underwater-themed back wall is confirmed as a deliberate decorative feature, but the rest of the space (white bins, blue buckets, gray floor, light blue walls) is generic and does not reinforce the theme, leaving immersion incomplete."
+              },
+              {
+                "ts_start": "00:00",
+                "ts_end": "00:30",
+                "type": "visual",
+                "quote": "In the center, there are four white rectangular bins containing small, colorful toys. Two blue buckets are placed near the right wall.",
+                "indicator": "Props that place the child inside the theme",
+                "reasoning": "The bins and buckets are functional activity setup items with no thematic framing connecting them to the underwater decor on the back wall, so they do not extend the narrative into the active play zone."
+              }
+            ],
+            "confidence": "medium",
+            "scorer_notes": "The underwater-themed cutouts on the back wall establish a partial narrative context, but the central play area (white bins, generic buckets, plain floor) is presented as a utility setup without deliberate scene-setting that ties the water play activity to the ocean theme. The theme is present but not immersive across the space.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "multi_sensory": {
+            "dimension_id": "multi_sensory",
+            "rubric_version": "0.2.2",
+            "score": 1.0,
+            "anchor_matched": "Two or more senses are meaningfully engaged through deliberate material and arrangement choices",
+            "evidence": [
+              {
+                "ts_start": "00:00",
+                "ts_end": "00:30",
+                "type": "visual",
+                "quote": "In the center, there are four white rectangular bins containing small, colorful toys. Along the back wall, there's a glass barrier overlooking a green artificial grass area decorated with colorful cutouts of fish, coral, and other sea creatures. Two blue buckets are placed near the right wall.",
+                "indicator": "Natural / sensory materials (sand, water, fabric, wood, leaves, clay, paint)",
+                "reasoning": "Water bins with small toys and buckets are deliberately arranged to invite tactile water play, while the colorful underwater-themed decor provides visual variety \u2014 two senses engaged by design."
+              },
+              {
+                "ts_start": "04:00",
+                "ts_end": "04:30",
+                "type": "visual",
+                "quote": "The children are playing with the toys and water in the bins. The adults are assisting and observing, some kneeling to be at eye level with the children.",
+                "indicator": "Tactile invitations (textures, materials to touch, wet/dry/soft/rough)",
+                "reasoning": "Children actively engaging with water and toys in bins confirms meaningful tactile engagement alongside the visual stimulation of the colorful materials and themed environment."
+              },
+              {
+                "ts_start": "04:30",
+                "ts_end": "05:00",
+                "type": "visual",
+                "quote": "The children are fully immersed in water play, using the scoops and small toys.",
+                "indicator": "Setups that obviously engage hands AND eyes simultaneously (painting, water play, building)",
+                "reasoning": "Water play with scoops and small toys simultaneously engages tactile (wet water, tool manipulation) and visual (watching water pour, colorful toys) senses, meeting the 1.0 anchor."
+              },
+              {
+                "ts_start": "02:00",
+                "ts_end": "02:30",
+                "type": "visual",
+                "quote": "The woman in the blue floral top is kneeling by a bin, interacting with the children. The man is sitting on the steps, observing. Another woman in a white top and patterned skirt descends the stairs, carrying a child in a white outfit.",
+                "indicator": "Proprioceptive / movement opportunities (balance, climbing, kneeling)",
+                "reasoning": "Children descending stairs and adults kneeling indicate movement/proprioceptive engagement is also present in the space, adding a third sensory modality."
+              }
+            ],
+            "confidence": "high",
+            "scorer_notes": "Transcript is uninformative (repeated 'Oh, oh, oh' utterances), but visual observations clearly document a water play setup with multiple sensory modalities: tactile (water, scoops, toys), visual (colorful toys, underwater-themed decor), and proprioceptive (stairs, kneeling, movement). The setup notes also confirm deliberate design intent around water-based exploratory play.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "boundary": {
+            "dimension_id": "boundary",
+            "rubric_version": "0.2.2",
+            "score": 1.0,
+            "anchor_matched": "At least one clear, unambiguous activity boundary \u2014 a canvas, paper, mat, rug, table, low fence, or similar marker visually defines the zone. A single well-defined zone is sufficient for this score.",
+            "evidence": [
+              {
+                "ts_start": "00:00",
+                "ts_end": "00:30",
+                "type": "visual",
+                "quote": "The video shows an empty play area with a light gray floor and light blue walls. In the center, there are four white rectangular bins containing small, colorful toys. Along the back wall, there's a glass barrier overlooking a green artificial grass area decorated with colorful cutouts of fish, coral, and other sea creatures. Two blue buckets are placed near the right wall.",
+                "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+                "reasoning": "The enclosed play area with a glass barrier, distinct flooring, and centrally placed bins creates an unambiguous, self-contained activity zone that a child could immediately identify without verbal instruction."
+              },
+              {
+                "ts_start": "01:30",
+                "ts_end": "02:00",
+                "type": "visual",
+                "quote": "A woman in a blue floral top and a man in a black shirt, holding a child in a light blue outfit, start to descend the stairs into the play area.",
+                "indicator": "The boundary is intuitive to a child without verbal explanation from an adult",
+                "reasoning": "Children and adults descend stairs to enter the defined play zone, confirming the space has a clear physical boundary (stairs/glass barrier) that demarcates where the activity happens."
+              },
+              {
+                "ts_start": "03:00",
+                "ts_end": "03:30",
+                "type": "visual",
+                "quote": "The children are now actively engaged with the toys in the white bins, with the adults supervising. The woman in the blue floral top is kneeling and interacting with the children and toys.",
+                "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+                "reasoning": "Children remain clustered around the white bins within the enclosed play area, demonstrating that the physical boundary (enclosed room with stairs entry) effectively defines the activity zone."
+              }
+            ],
+            "confidence": "high",
+            "scorer_notes": "The play area is a fully enclosed room accessed by stairs, with a glass barrier separating it from an observation area above. The white bins serve as focal activity markers within the already well-bounded space. The transcript is uninformative (repeated 'Oh, oh, oh' utterances), but visual evidence is sufficient and consistent.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "movement": {
+            "dimension_id": "movement",
+            "rubric_version": "0.2.2",
+            "score": 0.5,
+            "anchor_matched": "Either clear unobstructed access OR clear positioning is present, but not both. Or one is partial (e.g. some access but adults visibly blocking parts of the path).",
+            "evidence": [
+              {
+                "ts_start": "00:00",
+                "ts_end": "00:30",
+                "type": "visual",
+                "quote": "The video shows an empty play area with a light gray floor and light blue walls. In the center, there are four white rectangular bins containing small, colorful toys. Along the back wall, there's a glass barrier overlooking a green artificial grass area decorated with colorful cutouts of fish, coral, and other sea creatures. Two blue buckets are placed near the right wall.",
+                "indicator": "Children can clearly and unobstructedly access the activity zone from the room entry",
+                "reasoning": "The bins are centrally placed in an open floor area, suggesting clear access in the prepared state, but entry is via stairs (not a flat open path), which introduces a structural access constraint."
+              },
+              {
+                "ts_start": "01:30",
+                "ts_end": "02:00",
+                "type": "visual",
+                "quote": "A woman in a blue floral top and a man in a black shirt, holding a child in a light blue outfit, start to descend the stairs into the play area. Another woman in a white top and patterned skirt is also descending the stairs.",
+                "indicator": "Children can clearly and unobstructedly access the activity zone from the room entry",
+                "reasoning": "Children must descend stairs to reach the activity zone, and multiple adults are simultaneously using the same stairway, creating partial obstruction of the access path."
+              },
+              {
+                "ts_start": "02:00",
+                "ts_end": "02:30",
+                "type": "visual",
+                "quote": "The man is sitting on the steps while the child stands near the bins. Another child in a blue denim outfit descends the stairs and joins them. The woman in the blue floral top kneels by one of the white bins.",
+                "indicator": "No clutter, furniture, or adults blocking the path between entry and the activity zone",
+                "reasoning": "An adult is seated on the stairs \u2014 the sole entry/exit path \u2014 which partially blocks child access to and from the activity zone."
+              },
+              {
+                "ts_start": "03:00",
+                "ts_end": "03:30",
+                "type": "visual",
+                "quote": "The children are now actively engaged with the toys in the white bins, with the adults supervising. The woman in the blue floral top is kneeling and interacting with the children and toys.",
+                "indicator": "Clear deliberate positioning suited to the activity (standing at table height for sensory bins, kneeling on the floor for floor painting, sitting on a mat for story time, etc.)",
+                "reasoning": "Children standing at floor-level bins and adults kneeling alongside them indicates clear, appropriate positioning for water/sensory bin play, supporting this indicator."
+              }
+            ],
+            "confidence": "medium",
+            "scorer_notes": "The activity zone itself (bins centrally placed, open floor space, children standing/kneeling at bins) shows clear positioning suited to the activity. However, access is via a staircase rather than an open floor path, and an adult is visibly seated on the stairs during the session, partially obstructing the only entry route. This combination supports a 0.5 \u2014 positioning is present but access is partially obstructed.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "clean_up": {
+            "dimension_id": "clean_up",
+            "rubric_version": "0.2.2",
+            "score": "insufficient_evidence",
+            "anchor_matched": null,
+            "evidence": [],
+            "confidence": "low",
+            "scorer_notes": "The session recording covers only the setup and active play phases; no cleanup sequence is observed. The transcript provides no usable content (only repeated 'Oh, oh, oh' utterances). Visual observations show white bins at floor level and blue buckets, but no storage labelling, return locations, or cleanup activity is visible. There is insufficient evidence to assess whether the design supports child-led cleanup \u2014 no labels, silhouettes, or organized return spots are described, and no cleanup behavior is captured.",
+            "prompt_hash": "c92c689bf87b"
+          }
+        },
+        "overall": 0.75,
+        "cost_usd": null,
+        "duration_seconds": 16.045522212982178
+      },
+      "toy_design": {
+        "session_id": "batch_toy_design_water_play",
+        "rubric_version": "0.2.0",
+        "scores": {
+          "purpose": {
+            "dimension_id": "purpose",
+            "rubric_version": "0.2.0",
+            "score": 1.0,
+            "anchor_matched": "The activity's purpose is obvious from the setup alone \u2014 materials are arranged in a way that a child arriving can intuit what to do. Explicit labels are not required.",
+            "evidence": [
+              {
+                "ts_start": "00:00",
+                "ts_end": "00:30",
+                "type": "visual",
+                "quote": "In the center, there are four white rectangular bins containing small, colorful toys. Along the back wall, there's a glass barrier overlooking a green artificial grass area decorated with colorful cutouts of fish, coral, and other sea creatures. Two blue buckets are placed near the right wall.",
+                "indicator": "Materials arranged at the activity zone in a way that obviously communicates what to do",
+                "reasoning": "Bins of small toys with buckets placed nearby in a dedicated play zone clearly communicate a scooping/pouring/transferring water play activity to any arriving child."
+              },
+              {
+                "ts_start": "00:30",
+                "ts_end": "01:00",
+                "type": "visual",
+                "quote": "The play area remains empty, with the bins of toys and blue buckets in the same positions. The decorated back wall with the underwater theme is clearly visible.",
+                "indicator": "Optional / supplementary cues (labels, signs, mid-use materials, example work) \u2014 present but NOT required",
+                "reasoning": "The underwater-themed decoration on the back wall provides a supplementary thematic cue that reinforces the water play intent, though the bins and buckets alone are sufficient."
+              },
+              {
+                "ts_start": "02:00",
+                "ts_end": "02:30",
+                "type": "visual",
+                "quote": "The man sits on the steps while the child stands near the bins. Another child in a blue denim outfit descends the stairs and joins them. The woman in the blue floral top kneels by one of the white bins.",
+                "indicator": "A child arriving at the activity zone could guess what to do from the arrangement alone",
+                "reasoning": "Children independently approach and engage with the bins without needing adult instruction, confirming the setup communicated the activity's purpose on its own."
+              },
+              {
+                "ts_start": "04:30",
+                "ts_end": "05:00",
+                "type": "visual",
+                "quote": "The children are fully immersed in water play, using the scoops and small toys.",
+                "indicator": "Materials clearly staged at the activity zone in a way that suggests their use",
+                "reasoning": "Children's spontaneous use of scoops and small toys in the bins confirms the material arrangement successfully communicated the intended water play activity."
+              }
+            ],
+            "confidence": "high",
+            "scorer_notes": "The transcript is uninformative (repeated 'Oh, oh, oh' utterances), but the visual observations provide clear and converging evidence. The setup \u2014 bins with small toys, buckets, and an underwater-themed backdrop \u2014 unambiguously communicates water play to arriving children. No adult instruction was needed for children to begin engaging.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "anchor_and_choice_materials": {
+            "dimension_id": "anchor_and_choice_materials",
+            "rubric_version": "0.2.0",
+            "score": 1.0,
+            "anchor_matched": "At least one clear anchor draws children in (a single strong centerpiece OR multiple equally-weighted anchor stations) AND there is a variety of choice materials within or around the anchor(s) that allow flexible engagement",
+            "evidence": [
+              {
+                "ts_start": "00:00",
+                "ts_end": "00:30",
+                "type": "visual",
+                "quote": "In the center, there are four white rectangular bins containing small, colorful toys. Along the back wall, there's a glass barrier overlooking a green artificial grass area decorated with colorful cutouts of fish, coral, and other sea creatures. Two blue buckets are placed near the right wall.",
+                "indicator": "An anchor material \u2014 either one strong centerpiece OR multiple equally-weighted anchor stations \u2014 that obviously invites children to engage",
+                "reasoning": "Four water/toy bins arranged centrally, plus two blue buckets, constitute multiple equally-weighted anchor stations that clearly invite engagement."
+              },
+              {
+                "ts_start": "03:30",
+                "ts_end": "04:00",
+                "type": "visual",
+                "quote": "The children continue to play with the toys in the bins. The adults are interacting with the children, some kneeling, some standing, and some observing from the steps. One of the women picks up a blue bucket and places it near the bins, then picks up a small toy from the floor.",
+                "indicator": "Choice materials (tools, items, options) at or within the anchor(s) that allow flexible use",
+                "reasoning": "The blue buckets are being moved and combined with the bins, demonstrating that different tools (buckets, scoops, small toys) can be used flexibly within the anchor setup."
+              },
+              {
+                "ts_start": "04:00",
+                "ts_end": "04:30",
+                "type": "visual",
+                "quote": "The children are playing with the toys and water in the bins. The adults are assisting and observing, some kneeling to be at eye level with the children.",
+                "indicator": "Materials can be combined or used in different ways for different outcomes",
+                "reasoning": "Children are using water, small toys, and containers together, indicating flexible combination of materials for varied play outcomes."
+              },
+              {
+                "ts_start": "04:30",
+                "ts_end": "05:00",
+                "type": "visual",
+                "quote": "The children are fully immersed in water play, using the scoops and small toys. The adults are actively involved, helping the children and engaging with them.",
+                "indicator": "Different children can use the same setup to produce different results",
+                "reasoning": "Multiple children are simultaneously using scoops and small toys within the water bins, each able to engage differently with the available choice materials."
+              }
+            ],
+            "confidence": "high",
+            "scorer_notes": "The transcript is uninformative (repetitive 'Oh, oh, oh' utterances), but the visual observations clearly establish multiple anchor stations (four bins plus two buckets) with a variety of choice materials (scoops, small colorful toys, buckets) supporting flexible engagement. The setup notes also confirm containers, buckets, scoops, and small toys for pouring and transferring.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "spark_curiosity": {
+            "dimension_id": "spark_curiosity",
+            "rubric_version": "0.2.0",
+            "score": 0.5,
+            "anchor_matched": "Some interesting elements are present at the activity area but they don't clearly stand out as a deliberate curiosity hook",
+            "evidence": [
+              {
+                "ts_start": "00:00",
+                "ts_end": "00:30",
+                "type": "visual",
+                "quote": "In the center, there are four white rectangular bins containing small, colorful toys. Along the back wall, there's a glass barrier overlooking a green artificial grass area decorated with colorful cutouts of fish, coral, and other sea creatures. Two blue buckets are placed near the right wall.",
+                "indicator": "Visually striking centerpieces or features within the activity area itself",
+                "reasoning": "The colorful small toys in white bins and blue buckets are present at the activity zone, but these are familiar water-play materials that children commonly encounter; the underwater-themed decoration is on the back wall and glass barrier, which is ambient room decor rather than at the activity setup itself."
+              },
+              {
+                "ts_start": "00:30",
+                "ts_end": "01:00",
+                "type": "visual",
+                "quote": "The play area remains empty, with the bins of toys and blue buckets in the same positions. The decorated back wall with the underwater theme is clearly visible.",
+                "indicator": "A surprising or unexpected element AT the activity zone",
+                "reasoning": "The activity zone itself contains only bins with small colorful toys and buckets \u2014 functional and familiar materials \u2014 without a clear 'wow' element; the underwater theme is on the wall, not at the activity area."
+              },
+              {
+                "ts_start": "04:00",
+                "ts_end": "04:30",
+                "type": "visual",
+                "quote": "The children are playing with the toys and water in the bins. The adults are assisting and observing, some kneeling to be at eye level with the children.",
+                "indicator": "Items at the activity zone obviously designed to be touched, examined, or wondered about",
+                "reasoning": "Children engage with the water and toys in bins, suggesting some appeal, but the setup appears to be standard water-play materials without a clearly deliberate curiosity hook that would prompt a 'what is that?' moment."
+              }
+            ],
+            "confidence": "medium",
+            "scorer_notes": "The transcript is uninformative (repeated 'Oh, oh, oh' utterances). The underwater-themed decoration is on the back wall/glass barrier and does not count per rubric rules. The activity zone itself has colorful small toys in bins and buckets \u2014 interesting but familiar water-play materials that don't clearly constitute a deliberate curiosity hook. A 0.5 is warranted as there are some interesting elements but no clearly surprising or mysterious centerpiece at the activity setup itself.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "challenge_adjustment": {
+            "dimension_id": "challenge_adjustment",
+            "rubric_version": "0.2.0",
+            "score": 0,
+            "anchor_matched": "Single fixed difficulty level \u2014 no variation possible without redesigning the activity",
+            "evidence": [
+              {
+                "ts_start": "00:00",
+                "ts_end": "00:30",
+                "type": "visual",
+                "quote": "In the center, there are four white rectangular bins containing small, colorful toys. Along the back wall, there's a glass barrier overlooking a green artificial grass area decorated with colorful cutouts of fish, coral, and other sea creatures. Two blue buckets are placed near the right wall.",
+                "indicator": "Multiple visible difficulty levels of the same activity",
+                "reasoning": "The setup shows a single type of activity (bins with small toys and two buckets) with no visible tiered difficulty variants, extension materials, or staged progressions \u2014 all materials appear uniform in challenge level."
+              },
+              {
+                "ts_start": "03:30",
+                "ts_end": "04:00",
+                "type": "visual",
+                "quote": "One of the women picks up a blue bucket and places it near the bins, then picks up a small toy from the floor.",
+                "indicator": "Add-on / extension materials available but not forced",
+                "reasoning": "The only material variation observed is a bucket being repositioned, not a deliberate staged extension or harder variant being introduced \u2014 this does not constitute a designed difficulty adjustment."
+              },
+              {
+                "ts_start": "04:00",
+                "ts_end": "04:30",
+                "type": "visual",
+                "quote": "The children are playing with the toys and water in the bins. The adults are assisting and observing, some kneeling to be at eye level with the children.",
+                "indicator": "Setup supports teacher-led or child-led difficulty change",
+                "reasoning": "No evidence of adults introducing harder or easier variants; all children appear to be engaging with the same undifferentiated set of materials throughout the session."
+              }
+            ],
+            "confidence": "medium",
+            "scorer_notes": "The transcript is uninformative (repeated 'Oh, oh, oh' utterances). Visual observations show a single-level water play setup with uniform bins and two buckets \u2014 no tiered materials, no visible extensions, no staged progression. The variety of container sizes (bins vs. buckets) could theoretically allow some self-pacing, but there is no evidence this was deliberately staged as a difficulty gradient. Scoring 0 per the anchor: single fixed difficulty level.",
+            "prompt_hash": "c92c689bf87b"
+          },
+          "self_served": {
+            "dimension_id": "self_served",
+            "rubric_version": "0.2.0",
+            "score": 1.0,
+            "anchor_matched": "All materials are, by DESIGN, safe, recognisable to children of the age range, and light enough for them to handle alone. The activity is designed for self-service even if teachers are observed helping during the recording.",
+            "evidence": [
+              {
+                "ts_start": "00:00",
+                "ts_end": "00:30",
+                "type": "visual",
+                "quote": "In the center, there are four white rectangular bins containing small, colorful toys. Along the back wall, there's a glass barrier overlooking a green artificial grass area decorated with colorful cutouts of fish, coral, and other sea creatures. Two blue buckets are placed near the right wall.",
+                "indicator": "Materials are child-safe by design (no choking hazards, sharp edges, toxic substances within reach)",
+                "reasoning": "Small colorful toys in low bins and plastic buckets are standard child-safe water play materials with no visible sharp edges or hazardous items."
+              },
+              {
+                "ts_start": "02:00",
+                "ts_end": "02:30",
+                "type": "visual",
+                "quote": "The man sits on the steps while the child stands near the bins. Another child in a blue denim outfit descends the stairs and joins them. The woman in the blue floral top kneels by one of the white bins.",
+                "indicator": "Items are light enough for a child of the age range to lift and carry alone",
+                "reasoning": "Children are independently approaching and standing near the bins without adult assistance, indicating the bins and their contents are accessible and manageable by children."
+              },
+              {
+                "ts_start": "04:30",
+                "ts_end": "05:00",
+                "type": "visual",
+                "quote": "The children are fully immersed in water play, using the scoops and small toys.",
+                "indicator": "Materials are sized for child hands",
+                "reasoning": "Scoops and small toys are standard child-sized water play implements that 3-5 year olds can handle independently by design."
+              },
+              {
+                "ts_start": "03:30",
+                "ts_end": "04:00",
+                "type": "visual",
+                "quote": "One of the women picks up a blue bucket and places it near the bins, then picks up a small toy from the floor.",
+                "indicator": "Items are light enough for a child of the age range to lift and carry alone",
+                "reasoning": "The blue buckets are small enough that an adult can move them with one hand, indicating they are light enough for a child to manage; the small toys are clearly child-portable."
+              }
+            ],
+            "confidence": "medium",
+            "scorer_notes": "The transcript is uninformative (repeated 'Oh, oh, oh' utterances). Scoring relies entirely on visual observations. The bins appear to be low, shallow, and filled with small toys and water \u2014 all consistent with child-self-service design. The blue buckets appear to be standard small plastic buckets. No heavy equipment or safety hazards are visible. Confidence is medium rather than high because camera distance limits precise assessment of bin depth/weight and exact toy sizes.",
+            "prompt_hash": "c92c689bf87b"
+          }
+        },
+        "overall": 0.7,
+        "cost_usd": null,
+        "duration_seconds": 15.114947080612183
+      }
+    },
+    "items": {
+      "activity_zone_items": [
+        {
+          "category": "Containers",
+          "name": "White rectangular bins",
+          "count_or_quantity": "4",
+          "specifics": "Contain small colorful toys; used for water play",
+          "first_seen_at": "00:00:00"
+        },
+        {
+          "category": "Containers",
+          "name": "Blue buckets",
+          "count_or_quantity": "2",
+          "specifics": "Placed near the right wall initially; one moved near the bins during play",
+          "first_seen_at": "00:00:00"
+        },
+        {
+          "category": "Materials",
+          "name": "Water",
+          "count_or_quantity": "unknown",
+          "specifics": "Present in the bins; used for pouring and transferring play",
+          "first_seen_at": "00:04:00"
+        },
+        {
+          "category": "Tools",
+          "name": "Scoops",
+          "count_or_quantity": "multiple",
+          "specifics": "Used by children during water play; color and size unspecified",
+          "first_seen_at": "00:04:30"
+        },
+        {
+          "category": "Materials",
+          "name": "Small colorful toys",
+          "count_or_quantity": "many",
+          "specifics": "Unspecified colors; contained within the white bins; at least one found on the floor during play",
+          "first_seen_at": "00:00:00"
+        }
+      ],
+      "other_items_in_room": [
+        {
+          "name": "Glass barrier / viewing area",
+          "location": "Back wall / upper level overlooking play area"
+        },
+        {
+          "name": "Green artificial grass",
+          "location": "Behind glass barrier at back wall"
+        },
+        {
+          "name": "Colorful cutouts of fish, coral, and other sea creatures",
+          "location": "Back wall / glass barrier area, decorating the underwater-themed display"
+        },
+        {
+          "name": "Stairs",
+          "location": "Entry point into the play area"
+        }
+      ],
+      "notes": "Water is inferred to be in the bins based on the activity context and the observation at 00:04:00 referencing 'toys and water in the bins,' but is not explicitly described as being set up in the initial empty-room observations. Scoops are mentioned only at 00:04:30 without prior setup detail. The exact colors and types of small toys are not specified beyond 'colorful.' One woman's phone is present in the space but used for observation/photography rather than as a play item, so it is omitted from the inventory.",
+      "session_id": "batch_vision_water_play",
+      "source_model": "claude-sonnet-4-6",
+      "prompt_hash": "0a584ed472ce"
+    }
+  }
+}

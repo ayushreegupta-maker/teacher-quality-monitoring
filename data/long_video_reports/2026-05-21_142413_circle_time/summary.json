@@ -1,0 +1,287 @@
+{
+  "activity_name": "Circle time",
+  "video": "/Users/oh/Desktop/Teacher Quality Monitoring/data/raw/20250918_activity_1_circle_time.mp4",
+  "total_seconds": 1358.256,
+  "boundaries": {
+    "first_child_visible_at": "00:00:00",
+    "last_child_visible_at": "00:22:38",
+    "confidence": "high",
+    "notes": "Children are visible from the very beginning of the video. The last child leaves the play area at 00:22:38.",
+    "session_id": "long_full_20250918_activity_1_circle_time",
+    "source_model": "gemini-2.5-flash",
+    "prompt_hash": "647998da4dba"
+  },
+  "windows": {
+    "before": [
+      0.0,
+      240.0
+    ],
+    "after": [
+      1118.0,
+      1358.256
+    ],
+    "warnings": []
+  },
+  "results": {
+    "before": {
+      "items": {
+        "activity_zone_items": [],
+        "other_items_in_room": [],
+        "notes": "No visual observations were available; items inventory skipped.",
+        "session_id": "long_vision_20250918_activity_1_circle_time_before",
+        "source_model": "claude-sonnet-4-6",
+        "prompt_hash": "0a584ed472ce"
+      },
+      "scores": {
+        "playground": {
+          "session_id": "long_before_playground_20250918_activity_1_circle_time",
+          "rubric_version": "0.2.3",
+          "scores": {
+            "narrative": {
+              "dimension_id": "narrative",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any evidence of the space's decor, props, arrangement, or framing, it is not possible to score the Narrative dimension.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "multi_sensory": {
+              "dimension_id": "multi_sensory",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any observable evidence of materials, arrangements, or sensory elements, it is not possible to score this dimension reliably.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "boundary": {
+              "dimension_id": "boundary",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. There is no evidence from which to assess whether a clear physical or visual boundary exists for the circle time activity.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "movement": {
+              "dimension_id": "movement",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. There is no observable evidence to assess access to the activity zone, child positioning, or material reach. Cannot score this dimension.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "clean_up": {
+              "dimension_id": "clean_up",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. The activity is described as a group circle time (songs, storytelling, guided discussion), which typically involves minimal materials. Without any visual or audio evidence of storage, materials, or cleanup interactions, this dimension cannot be reliably scored.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": null,
+          "cost_usd": null,
+          "duration_seconds": 4.3249828815460205
+        },
+        "toy_design": {
+          "session_id": "long_before_toy_design_20250918_activity_1_circle_time",
+          "rubric_version": "0.2.0",
+          "scores": {
+            "purpose": {
+              "dimension_id": "purpose",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any timestamped visual descriptions of the activity zone setup or audio evidence, it is impossible to assess whether the material arrangement communicates the activity's purpose to an arriving child.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "anchor_and_choice_materials": {
+              "dimension_id": "anchor_and_choice_materials",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. The activity notes describe a group circle time (songs, storytelling, guided discussion), which is not a materials-based setup, but without any visual or audio evidence it is impossible to confirm what, if any, anchor or choice materials were present.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "spark_curiosity": {
+              "dimension_id": "spark_curiosity",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any evidence of what was present at the activity area, it is impossible to assess whether a curiosity-sparking element existed at the circle time setup.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "challenge_adjustment": {
+              "dimension_id": "challenge_adjustment",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any evidence of the activity setup, materials, or teacher actions, it is impossible to assess whether challenge adjustment was present or absent.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "self_served": {
+              "dimension_id": "self_served",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any evidence of the materials present, their size, weight, safety, or recognisability, it is not possible to score the design of materials for self-service.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": null,
+          "cost_usd": null,
+          "duration_seconds": 5.151472091674805
+        }
+      }
+    },
+    "after": {
+      "items": {
+        "activity_zone_items": [],
+        "other_items_in_room": [],
+        "notes": "No visual observations were available; items inventory skipped.",
+        "session_id": "long_vision_20250918_activity_1_circle_time_after",
+        "source_model": "claude-sonnet-4-6",
+        "prompt_hash": "0a584ed472ce"
+      },
+      "scores": {
+        "playground": {
+          "session_id": "long_after_playground_20250918_activity_1_circle_time",
+          "rubric_version": "0.2.3",
+          "scores": {
+            "narrative": {
+              "dimension_id": "narrative",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. There is no evidence from which to assess the presence or absence of narrative/immersive framing in the space.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "multi_sensory": {
+              "dimension_id": "multi_sensory",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any observable evidence of materials, arrangements, or sensory engagement, it is not possible to score this dimension reliably.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "boundary": {
+              "dimension_id": "boundary",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. There is no evidence from which to assess whether a clear physical or visual boundary for the circle time activity was present.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "movement": {
+              "dimension_id": "movement",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. There is no evidence from which to assess access paths, positioning, or material reach for the circle time activity.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "clean_up": {
+              "dimension_id": "clean_up",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. The activity is described as a group circle time (songs, storytelling, guided discussion), which typically involves minimal materials and does not generate observable cleanup behavior. Without any visual or audio evidence of storage design, material weight, labelling, or child-led cleanup, this dimension cannot be scored.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": null,
+          "cost_usd": null,
+          "duration_seconds": 7.703527927398682
+        },
+        "toy_design": {
+          "session_id": "long_after_toy_design_20250918_activity_1_circle_time",
+          "rubric_version": "0.2.0",
+          "scores": {
+            "purpose": {
+              "dimension_id": "purpose",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any evidence of how materials are arranged at the activity zone or what the setup looks like, it is impossible to score this dimension reliably.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "anchor_and_choice_materials": {
+              "dimension_id": "anchor_and_choice_materials",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. The activity notes describe a group circle time (songs, storytelling, guided discussion), which is not a materials-based setup, but without any actual evidence from the recording it is impossible to assess anchor or choice materials reliably.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "spark_curiosity": {
+              "dimension_id": "spark_curiosity",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. There is no evidence available to assess whether a curiosity-sparking element was present at the activity area.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "challenge_adjustment": {
+              "dimension_id": "challenge_adjustment",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any evidence of the activity setup, materials, or teacher actions, it is impossible to assess whether challenge adjustment was present or absent.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "self_served": {
+              "dimension_id": "self_served",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any evidence of the materials present, their size, weight, safety, or recognisability cannot be assessed. Returning insufficient_evidence.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": null,
+          "cost_usd": null,
+          "duration_seconds": 6.9172351360321045
+        }
+      }
+    }
+  }
+}

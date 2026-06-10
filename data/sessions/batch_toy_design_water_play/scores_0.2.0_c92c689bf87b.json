@@ -1,0 +1,216 @@
+{
+  "session_id": "batch_toy_design_water_play",
+  "rubric_version": "0.2.0",
+  "scores": {
+    "purpose": {
+      "dimension_id": "purpose",
+      "rubric_version": "0.2.0",
+      "score": 1.0,
+      "anchor_matched": "The activity's purpose is obvious from the setup alone — materials are arranged in a way that a child arriving can intuit what to do. Explicit labels are not required.",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:52",
+          "type": "visual",
+          "quote": "Four white rectangular bins are placed in the center of the pool, each containing small colorful toys. On the left side, there's a glass barrier separating the pool from a green artificial grass area decorated with various marine-themed cutouts like starfish, fish, and coral. Two blue buckets are visible on the right side of the pool, near the light blue wall.",
+          "indicator": "Materials arranged at the activity zone in a way that obviously communicates what to do",
+          "reasoning": "Bins filled with small toys alongside buckets in a shallow pool-like structure clearly communicate a scooping, pouring, and transferring water play activity without any need for adult instruction."
+        },
+        {
+          "ts_start": "01:20",
+          "ts_end": "01:50",
+          "type": "visual",
+          "quote": "The children appear excited, pointing towards the pool.",
+          "indicator": "A child arriving at the activity zone could guess what to do from the arrangement alone",
+          "reasoning": "Children's spontaneous excitement and pointing before entering the space indicates the setup's purpose was immediately legible to them from observation alone."
+        },
+        {
+          "ts_start": "01:50",
+          "ts_end": "02:29",
+          "type": "visual",
+          "quote": "Another child, wearing blue overalls, also enters the play area and approaches the white bins.",
+          "indicator": "A child arriving at the activity zone could guess what to do from the arrangement alone",
+          "reasoning": "A child independently approaches the bins upon entering, demonstrating that the material arrangement alone was sufficient to communicate what to do."
+        },
+        {
+          "ts_start": "03:10",
+          "ts_end": "04:00",
+          "type": "visual",
+          "quote": "The children are now playing with the toys in the white bins, some using the blue buckets. The adults are assisting and supervising them. The children are reaching into the bins, picking up toys, and transferring them to the buckets or other bins.",
+          "indicator": "Materials arranged at the activity zone in a way that obviously communicates what to do (paper on the floor + paints + brushes → 'paint the paper'; bins of sand + scoops → 'play with the sand')",
+          "reasoning": "Children are independently performing the intended scooping and transferring actions, confirming the setup communicated its purpose clearly through material arrangement alone."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": null,
+      "prompt_hash": "c92c689bf87b"
+    },
+    "anchor_and_choice_materials": {
+      "dimension_id": "anchor_and_choice_materials",
+      "rubric_version": "0.2.0",
+      "score": 1.0,
+      "anchor_matched": "At least one clear anchor draws children in (a single strong centerpiece OR multiple equally-weighted anchor stations) AND there is a variety of choice materials within or around the anchor(s) that allow flexible engagement",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:52",
+          "type": "visual",
+          "quote": "The video shows an empty play area with a shallow pool-like structure. The pool has a light gray floor and white walls, with a light blue section on the right wall. Four white rectangular bins are placed in the center of the pool, each containing small colorful toys. On the left side, there's a glass barrier separating the pool from a green artificial grass area decorated with various marine-themed cutouts like starfish, fish, and coral. Two blue buckets are visible on the right side of the pool, near the light blue wall. Several small, dark-colored objects are scattered on the pool floor.",
+          "indicator": "An anchor material — either one strong centerpiece OR multiple equally-weighted anchor stations — that obviously invites children to engage",
+          "reasoning": "The shallow pool structure with four bins of colorful toys and blue buckets constitutes a clear, visually attractive anchor zone that obviously invites children to engage."
+        },
+        {
+          "ts_start": "00:52",
+          "ts_end": "01:50",
+          "type": "visual",
+          "quote": "Adults and children begin to gather at the glass barrier, looking down into the play area. One adult, wearing a blue shirt, is seen holding a child. Another adult, wearing a pink top, is also present at the barrier. The children are observing the play area with curiosity.",
+          "indicator": "An anchor material — either one strong centerpiece OR multiple equally-weighted anchor stations — that obviously invites children to engage",
+          "reasoning": "Children gathering at the barrier and observing with curiosity and excitement confirms the pool setup functions as a strong anchor that draws children in."
+        },
+        {
+          "ts_start": "03:10",
+          "ts_end": "04:00",
+          "type": "visual",
+          "quote": "The children are now playing with the toys in the white bins, some using the blue buckets. The adults are assisting and supervising them. One woman is taking photos with her phone. The children are reaching into the bins, picking up toys, and transferring them to the buckets or other bins. The atmosphere is lively and engaging.",
+          "indicator": "Choice materials (tools, items, options) at or within the anchor(s) that allow flexible use",
+          "reasoning": "Multiple choice materials — colorful toys in four separate bins, blue buckets, and the water medium itself — allow children to scoop, transfer, and combine items in different ways, demonstrating flexible engagement."
+        },
+        {
+          "ts_start": "04:00",
+          "ts_end": "05:00",
+          "type": "visual",
+          "quote": "The children continue to play with the water and toys. The adults are actively involved, helping them scoop and transfer items. The woman in the floral top is kneeling, guiding the children, while the man in the black shirt is seated, observing. The woman in the white top and patterned skirt is also assisting, demonstrating how to use the buckets. The children appear to be enjoying the sensory play.",
+          "indicator": "Materials can be combined or used in different ways for different outcomes",
+          "reasoning": "Children are scooping and transferring items between bins and buckets, demonstrating that the variety of containers and toys supports multiple use pathways and different outcomes."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "The setup features a clear anchor (shallow pool with four bins of colorful toys) plus distinct choice materials (buckets, multiple bins, small toys, water). Children's observable excitement and varied engagement confirm both anchor draw and material variety. The marine-themed decorative elements further enhance the inviting quality of the anchor zone.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "spark_curiosity": {
+      "dimension_id": "spark_curiosity",
+      "rubric_version": "0.2.0",
+      "score": 0.5,
+      "anchor_matched": "Some interesting elements are present at the activity area but they don't clearly stand out as a deliberate curiosity hook",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:52",
+          "type": "visual",
+          "quote": "The pool has a light gray floor and white walls, with a light blue section on the right wall. Four white rectangular bins are placed in the center of the pool, each containing small colorful toys. On the left side, there's a glass barrier separating the pool from a green artificial grass area decorated with various marine-themed cutouts like starfish, fish, and coral.",
+          "indicator": "Visually striking centerpieces or features within the activity area itself",
+          "reasoning": "The marine-themed cutouts (starfish, fish, coral) on the grass area adjacent to the pool add a thematic visual element, but they are decorative backdrop rather than a clear 'wow' curiosity hook within the activity zone itself."
+        },
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:52",
+          "type": "visual",
+          "quote": "Several small, dark-colored objects are scattered on the pool floor.",
+          "indicator": "Mysterious / unfamiliar items in or at the activity setup that invite 'what is that?'",
+          "reasoning": "Unidentified dark objects scattered on the pool floor could invite some curiosity, but their nature is unclear and they don't appear to be a deliberate, prominent curiosity hook."
+        },
+        {
+          "ts_start": "00:52",
+          "ts_end": "01:20",
+          "type": "visual",
+          "quote": "Adults and children begin to gather at the glass barrier, looking down into the play area. The children are observing the play area with curiosity.",
+          "indicator": "A surprising or unexpected element AT the activity zone",
+          "reasoning": "Children observing with curiosity from the barrier suggests the setup has some appeal, but this reaction may be driven by the novelty of the pool structure itself rather than a specific deliberate curiosity element within the activity materials."
+        },
+        {
+          "ts_start": "01:20",
+          "ts_end": "01:50",
+          "type": "visual",
+          "quote": "The children appear excited, pointing towards the pool.",
+          "indicator": "Items at the activity zone obviously designed to be touched, examined, or wondered about",
+          "reasoning": "Children pointing and appearing excited indicates some curiosity-sparking quality, but the setup primarily consists of familiar water play materials (bins, buckets, scoops) without a clearly surprising or mysterious centerpiece element."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "The activity area features a pool-like structure with marine-themed decorative elements and colorful toys in bins, which creates an interesting environment. However, the core materials (bins, buckets, small toys) are relatively familiar water play items. The marine cutouts are on the adjacent grass area rather than clearly within the activity zone. The setup is appealing but lacks a single clear 'wow' or mysterious element that would earn a full 1.0.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "challenge_adjustment": {
+      "dimension_id": "challenge_adjustment",
+      "rubric_version": "0.2.0",
+      "score": 0,
+      "anchor_matched": "Single fixed difficulty level — no variation possible without redesigning the activity",
+      "evidence": [
+        {
+          "ts_start": "00:00:00",
+          "ts_end": "00:00:52",
+          "type": "visual",
+          "quote": "Four white rectangular bins are placed in the center of the pool, each containing small colorful toys. On the left side, there's a glass barrier separating the pool from a green artificial grass area decorated with various marine-themed cutouts like starfish, fish, and coral. Two blue buckets are visible on the right side of the pool, near the light blue wall.",
+          "indicator": "Multiple visible difficulty levels of the same activity",
+          "reasoning": "The setup shows a single uniform activity — bins with toys and buckets — with no visible tiered or layered difficulty variants; all materials appear identical in challenge level."
+        },
+        {
+          "ts_start": "00:03:10",
+          "ts_end": "00:04:00",
+          "type": "visual",
+          "quote": "The children are now playing with the toys in the white bins, some using the blue buckets. The adults are assisting and supervising them. One woman is taking photos with her phone. The children are reaching into the bins, picking up toys, and transferring them to the buckets or other bins.",
+          "indicator": "Add-on / extension materials available but not forced",
+          "reasoning": "No extension or add-on materials are introduced or visibly available; all children engage with the same bins and buckets at the same level of challenge."
+        },
+        {
+          "ts_start": "00:04:00",
+          "ts_end": "00:05:00",
+          "type": "visual",
+          "quote": "The adults are actively involved, helping them scoop and transfer items. The woman in the floral top is kneeling, guiding the children, while the man in the black shirt is seated, observing. The woman in the white top and patterned skirt is also assisting, demonstrating how to use the buckets.",
+          "indicator": "Setup supports teacher-led or child-led difficulty change",
+          "reasoning": "Adults are assisting with the same single activity for all children with no observable differentiation in materials or task complexity, confirming a fixed single difficulty level."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "The session footage is limited to 5 minutes and the transcript is essentially uninformative. The visual evidence consistently shows one uniform activity setup with no visible tiered materials, extensions, or deliberate difficulty variants. Confidence is medium rather than high because camera angles may not have captured all available materials in the space.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "self_served": {
+      "dimension_id": "self_served",
+      "rubric_version": "0.2.0",
+      "score": 0.5,
+      "anchor_matched": "Some materials are designed for self-service, others are not — the DESIGN itself contains items requiring adult handling (e.g. one heavy bucket, one unsafe tool, one unrecognisable item)",
+      "evidence": [
+        {
+          "ts_start": "00:00:00",
+          "ts_end": "00:00:52",
+          "type": "visual",
+          "quote": "Four white rectangular bins are placed in the center of the pool, each containing small colorful toys. Two blue buckets are visible on the right side of the pool, near the light blue wall. Several small, dark-colored objects are scattered on the pool floor.",
+          "indicator": "Materials are recognisable to children of the age range — children would know what they are and roughly how to use them",
+          "reasoning": "Small colorful toys, buckets, and bins are familiar, recognisable items for 3-5 year olds, supporting self-service for those elements."
+        },
+        {
+          "ts_start": "00:00:00",
+          "ts_end": "00:00:52",
+          "type": "visual",
+          "quote": "The pool has a light gray floor and white walls, with a light blue section on the right wall. On the left side, there's a glass barrier separating the pool from a green artificial grass area.",
+          "indicator": "Items are light enough for a child of the age range to lift and carry alone",
+          "reasoning": "The play area is a sunken pool structure with a glass barrier and steps — the physical environment itself requires adult assistance for 3-5 year olds to enter and exit safely, meaning the design is not fully self-served."
+        },
+        {
+          "ts_start": "00:01:50",
+          "ts_end": "00:02:29",
+          "type": "visual",
+          "quote": "A man in a black shirt and a child in a light blue outfit descend the steps into the play area. A woman in a floral top follows them.",
+          "indicator": "Materials are child-safe by design (no choking hazards, sharp edges, toxic substances within reach)",
+          "reasoning": "Children require adult accompaniment to descend steps into the sunken pool, indicating the physical setup design is not independently navigable by 3-5 year olds."
+        },
+        {
+          "ts_start": "00:03:10",
+          "ts_end": "00:04:00",
+          "type": "visual",
+          "quote": "The children are now playing with the toys in the white bins, some using the blue buckets. The adults are assisting and supervising them. One woman is taking photos with her phone. The children are reaching into the bins, picking up toys, and transferring them to the buckets or other bins.",
+          "indicator": "Materials are sized for child hands",
+          "reasoning": "The toys, bins, and buckets appear child-sized and manageable for small hands, but the overall pool environment design requires adult mediation for access and safety."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "The individual play materials (small toys, buckets, bins) appear well-designed for child self-service. However, the overall play space design — a sunken pool accessed via steps with a glass barrier — structurally requires adult assistance for children aged 3-5 to enter and exit safely. This design element means the activity cannot be fully self-served by design, warranting a 0.5 score. The blue buckets' weight is unclear from the footage but appear to be standard child-sized buckets.",
+      "prompt_hash": "c92c689bf87b"
+    }
+  },
+  "overall": 0.6,
+  "cost_usd": null,
+  "duration_seconds": 16.156973123550415
+}

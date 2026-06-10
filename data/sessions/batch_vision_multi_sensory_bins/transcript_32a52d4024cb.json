@@ -1,0 +1,37 @@
+{
+  "session_id": "batch_vision_multi_sensory_bins",
+  "segments": [
+    {
+      "ts_start": "00:00:45",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "You can do it."
+    },
+    {
+      "ts_start": "00:00:50",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "You can do it. Yeah."
+    },
+    {
+      "ts_start": "00:00:56",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "You can do it. Yeah."
+    },
+    {
+      "ts_start": "00:01:03",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "You can do it."
+    },
+    {
+      "ts_start": "00:01:07",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "You can do it. Yeah. (repeated 59 times — likely transcription loop artifact)"
+    }
+  ],
+  "source_model": "gemini-2.5-flash",
+  "prompt_hash": "32a52d4024cb"
+}

@@ -1,0 +1,60 @@
+{
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:00:17",
+      "description": "The room is empty, with two wooden tables in the center. One table has a bin with sand and small toys, and the other has a bin with colorful blocks. The floor is covered with a clear plastic sheet. There are wooden benches along the left wall and wooden cabinets along the right wall. Colorful flags hang on the wall at the back."
+    },
+    {
+      "ts_start": "00:00:17",
+      "ts_end": "00:00:30",
+      "description": "Children start to enter the room from the back left. They are dressed in various outfits. Some adults are also visible in the background."
+    },
+    {
+      "ts_start": "00:00:30",
+      "ts_end": "00:01:00",
+      "description": "More children and adults enter the room. The children gather around the two tables, beginning to interact with the sand and blocks. Adults are observing and assisting the children. One adult in a red shirt is helping children at the sand table, while another adult in a floral dress is helping at the block table."
+    },
+    {
+      "ts_start": "00:01:00",
+      "ts_end": "00:01:30",
+      "description": "The children continue to play with the sensory bins. Adults are actively engaging with the children, some taking photos or videos with their phones. The children are focused on their play, some standing, others kneeling to reach the bins."
+    },
+    {
+      "ts_start": "00:01:30",
+      "ts_end": "00:02:00",
+      "description": "The children are fully engaged in playing with the sand and blocks. Adults are spread around the room, some observing, some interacting with the children. One adult in a red shirt is particularly involved with the children at the sand table, demonstrating how to use the toys."
+    },
+    {
+      "ts_start": "00:02:00",
+      "ts_end": "00:02:30",
+      "description": "Children are still engrossed in their play. Some adults are sitting on the benches along the left wall, while others stand and watch. The children are using various tools and their hands to manipulate the materials in the bins."
+    },
+    {
+      "ts_start": "00:02:30",
+      "ts_end": "00:03:00",
+      "description": "The children continue to play, with adults supervising and occasionally assisting. The room is now filled with children and adults, creating a lively atmosphere. The children are exploring the textures and shapes of the materials."
+    },
+    {
+      "ts_start": "00:03:00",
+      "ts_end": "00:03:30",
+      "description": "The children remain focused on their activities at the tables. Adults are still present, some holding babies, others observing the children's play. The children are seen picking up and examining the items in the bins."
+    },
+    {
+      "ts_start": "00:03:30",
+      "ts_end": "00:04:00",
+      "description": "The children are actively playing, with several adults surrounding them. Some adults are kneeling to interact at the children's eye level. The children are using small tools and their hands to play with the sand and blocks."
+    },
+    {
+      "ts_start": "00:04:00",
+      "ts_end": "00:04:30",
+      "description": "The children continue their play, with adults closely supervising. Some adults are taking pictures, while others are helping the children with their activities. The children are fully immersed in the sensory play."
+    },
+    {
+      "ts_start": "00:04:30",
+      "ts_end": "00:05:00",
+      "description": "The children are still engaged in playing with the bins. Adults are observing and interacting, ensuring the children are safe and enjoying themselves. The room is bustling with activity."
+    }
+  ],
+  "transcript": []
+}

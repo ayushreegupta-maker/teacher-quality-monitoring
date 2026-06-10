@@ -1,0 +1,55 @@
+{
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:00:30",
+      "description": "A classroom with wooden tables and chairs is visible. A teacher is placing a blue tray filled with sand on a table. Two children enter the room and approach the table. More children and adults enter the room, and another teacher brings a second blue tray of sand to a different table."
+    },
+    {
+      "ts_start": "00:00:30",
+      "ts_end": "00:01:00",
+      "description": "Children gather around the tables with the sand trays. Teachers are assisting children in settling down and engaging with the sand. Some children are sitting on small wooden chairs, while others are standing around the tables."
+    },
+    {
+      "ts_start": "00:01:00",
+      "ts_end": "00:01:30",
+      "description": "Children are actively playing with the sand in the blue trays. They are using small colorful tools, including a green shovel and blue and red molds, to interact with the sand. Teachers are observing and interacting with the children, some kneeling to be at eye level."
+    },
+    {
+      "ts_start": "00:01:30",
+      "ts_end": "00:02:00",
+      "description": "The sand play continues with children exploring the texture and properties of the sand. Teachers are facilitating the activity, offering guidance and support. Some adults are seated on a bench along the wall, observing the children."
+    },
+    {
+      "ts_start": "00:02:00",
+      "ts_end": "00:02:30",
+      "description": "Children remain engaged in the sand play, using various tools to scoop and mold the sand. Teachers are positioned around the tables, interacting with individual children and the group. The atmosphere appears calm and focused on the activity."
+    },
+    {
+      "ts_start": "00:02:30",
+      "ts_end": "00:03:00",
+      "description": "The sand play activity is in full swing, with multiple children gathered around each table. They are using their hands and the provided tools to play with the sand. Teachers are actively involved, some kneeling or bending over to assist the children."
+    },
+    {
+      "ts_start": "00:03:00",
+      "ts_end": "00:03:30",
+      "description": "Children continue to explore the sand, some moving between the two tables. Teachers are attentive, ensuring the children are engaged and safe during the activity. One teacher is seen taking a photo or video with a phone."
+    },
+    {
+      "ts_start": "00:03:30",
+      "ts_end": "00:04:00",
+      "description": "The sand play session progresses, with children showing sustained interest in the activity. Teachers are still actively supervising and interacting with the children, some offering assistance with the sand tools. The room is well-lit, and the children appear comfortable."
+    },
+    {
+      "ts_start": "00:04:00",
+      "ts_end": "00:04:30",
+      "description": "Children are deeply immersed in the sand play, using their hands and tools to manipulate the sand. Teachers are present at both tables, engaging with the children and facilitating their play. The overall scene depicts a structured yet free-play environment."
+    },
+    {
+      "ts_start": "00:04:30",
+      "ts_end": "00:05:00",
+      "description": "The sand play activity continues with children exploring and interacting with the sand. Teachers are actively involved, some demonstrating how to use the tools or engaging in conversation with the children. The children seem content and focused on their play."
+    }
+  ],
+  "transcript": []
+}

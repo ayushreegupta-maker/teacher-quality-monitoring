@@ -1,0 +1,200 @@
+{
+  "session_id": "batch_toy_design_multi_sensory_bins",
+  "rubric_version": "0.2.0",
+  "scores": {
+    "purpose": {
+      "dimension_id": "purpose",
+      "rubric_version": "0.2.0",
+      "score": 1.0,
+      "anchor_matched": "The activity's purpose is obvious from the setup alone — materials are arranged in a way that a child arriving can intuit what to do. Explicit labels are not required.",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:17",
+          "type": "visual",
+          "quote": "The room is empty, with two tables in the center covered with clear plastic sheets. One table has two bins with sand and small toys, and the other has a hexagonal bin with colorful building blocks.",
+          "indicator": "Materials arranged at the activity zone in a way that obviously communicates what to do",
+          "reasoning": "Bins filled with sand and small toys, and a bin of colorful building blocks, are staged on tables before children arrive — the arrangement alone communicates 'dig/play in the sand' and 'build with the blocks' without any adult instruction needed."
+        },
+        {
+          "ts_start": "00:17",
+          "ts_end": "00:30",
+          "type": "visual",
+          "quote": "Children start to enter the room, walking towards the tables. One child in a red shirt and another in a light-colored shirt approach the sand bins, while a child in a pink dress walks towards the block table.",
+          "indicator": "A child arriving at the activity zone could guess what to do from the arrangement alone",
+          "reasoning": "Children independently self-select and move directly toward the bins upon entering, demonstrating that the material arrangement communicated the activity's purpose without adult direction."
+        },
+        {
+          "ts_start": "00:30",
+          "ts_end": "00:50",
+          "type": "visual",
+          "quote": "More children and adults enter the room. An adult in a red shirt approaches the sand bins and interacts with the children there.",
+          "indicator": "Setup is so clear that no adult would need to explain the activity to a child arriving",
+          "reasoning": "Children were already engaging with the bins before adults approached, confirming the setup itself was sufficient to communicate purpose."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "The transcript contains a likely loop artifact with repeated teacher utterances ('You can do it') that provide no additional evidence for this dimension. Scoring is based entirely on visual observations, which clearly show children self-directing to the bins upon entry.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "anchor_and_choice_materials": {
+      "dimension_id": "anchor_and_choice_materials",
+      "rubric_version": "0.2.0",
+      "score": 1.0,
+      "anchor_matched": "At least one clear anchor draws children in (a single strong centerpiece OR multiple equally-weighted anchor stations) AND there is a variety of choice materials within or around the anchor(s) that allow flexible engagement",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:17",
+          "type": "visual",
+          "quote": "The room is empty, with two tables in the center covered with clear plastic sheets. One table has two bins with sand and small toys, and the other has a hexagonal bin with colorful building blocks. There are also two long wooden benches along the left wall and a table with papers and small clay pots on the right.",
+          "indicator": "An anchor material — either one strong centerpiece OR multiple equally-weighted anchor stations — that obviously invites children to engage",
+          "reasoning": "Multiple equally-weighted anchor stations are clearly visible in the prepared space: sand bins with small toys, a block bin, and a clay/paper table — all functioning as distinct anchor zones."
+        },
+        {
+          "ts_start": "00:17",
+          "ts_end": "00:30",
+          "type": "visual",
+          "quote": "Children start to enter the room, walking towards the tables. One child in a red shirt and another in a light-colored shirt approach the sand bins, while a child in a pink dress walks towards the block table.",
+          "indicator": "An anchor material — either one strong centerpiece OR multiple equally-weighted anchor stations — that obviously invites children to engage",
+          "reasoning": "Children immediately self-select different anchor stations upon entering, confirming that multiple stations each draw children in independently."
+        },
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:17",
+          "type": "visual",
+          "quote": "One table has two bins with sand and small toys, and the other has a hexagonal bin with colorful building blocks. There are also two long wooden benches along the left wall and a table with papers and small clay pots on the right.",
+          "indicator": "Choice materials (tools, items, options) at or within the anchor(s) that allow flexible use",
+          "reasoning": "Within and across the anchor stations there are varied choice materials: sand, small toys embedded in sand, colorful building blocks of different shapes, papers, and clay pots — offering different kinds of sensory and constructive engagement."
+        },
+        {
+          "ts_start": "00:50",
+          "ts_end": "01:10",
+          "type": "visual",
+          "quote": "The children are now actively engaged with the multi-sensory bins. The adult in the red shirt is helping children at the sand bins, while another adult in a floral dress is interacting with children at the block table.",
+          "indicator": "Different children can use the same setup to produce different results",
+          "reasoning": "Different children are simultaneously using different anchor stations (sand vs. blocks), demonstrating that the setup supports varied, flexible engagement across the space."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "The setup features multiple equally-weighted anchor stations (sand bins with embedded toys, colorful block bin, clay/paper table), each drawing children in independently. Choice materials differ in type across stations (sand + small toys, building blocks of varied colors/shapes, clay + paper), satisfying both the anchor and choice material requirements for a score of 1.0. The transcript is largely a loop artifact and contributes no additional evidence.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "spark_curiosity": {
+      "dimension_id": "spark_curiosity",
+      "rubric_version": "0.2.0",
+      "score": 0.5,
+      "anchor_matched": "Some interesting elements are present at the activity area but they don't clearly stand out as a deliberate curiosity hook",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:17",
+          "type": "visual",
+          "quote": "The room is empty, with two tables in the center covered with clear plastic sheets. One table has two bins with sand and small toys, and the other has a hexagonal bin with colorful building blocks.",
+          "indicator": "Visually striking centerpieces or features within the activity area itself",
+          "reasoning": "The hexagonal bin shape and the combination of sand with small toys offer some novelty at the activity zone, but these are relatively familiar materials (sand, blocks) that children commonly encounter, limiting the 'wow' factor."
+        },
+        {
+          "ts_start": "00:17",
+          "ts_end": "00:30",
+          "type": "visual",
+          "quote": "Children start to enter the room, walking towards the tables. One child in a red shirt and another in a light-colored shirt approach the sand bins, while a child in a pink dress walks towards the block table.",
+          "indicator": "Items at the activity zone obviously designed to be touched, examined, or wondered about",
+          "reasoning": "Children move directly toward the bins upon entering, suggesting the setup draws them in, but the approach appears routine rather than indicating a strong 'what is that?' moment of surprise or wonder."
+        },
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:17",
+          "type": "visual",
+          "quote": "There are also two long wooden benches along the left wall and a table with papers and small clay pots on the right.",
+          "indicator": "A surprising or unexpected element AT the activity zone",
+          "reasoning": "The clay pots on the side table could represent an interesting element, but they are not clearly part of the main activity bins and their purpose is not described as a deliberate curiosity hook within the activity setup."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "The setup includes multi-sensory bins with sand, small toys, and colorful blocks in a hexagonal bin, which offer tactile and visual interest. However, the visual descriptions do not reveal any clearly surprising, mysterious, or unfamiliar element at the activity zone — sand and building blocks are familiar materials. The setup is engaging but does not clearly rise to a deliberate 'wow' curiosity hook. The staff notes mention scents and varied textures, but these are not confirmed visible in the observations, which slightly supports a 0.5 rather than 0.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "challenge_adjustment": {
+      "dimension_id": "challenge_adjustment",
+      "rubric_version": "0.2.0",
+      "score": 0,
+      "anchor_matched": "Single fixed difficulty level — no variation possible without redesigning the activity",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:17",
+          "type": "visual",
+          "quote": "The room is empty, with two tables in the center covered with clear plastic sheets. One table has two bins with sand and small toys, and the other has a hexagonal bin with colorful building blocks. There are also two long wooden benches along the left wall and a table with papers and small clay pots on the right.",
+          "indicator": "Multiple visible difficulty levels of the same activity",
+          "reasoning": "The setup shows two distinct activity types (sand bins and block bin) but no visible tiered or layered variants of the same activity at different difficulty levels — no easier/harder versions, no add-on extensions, and no materials staged for progression."
+        },
+        {
+          "ts_start": "00:17",
+          "ts_end": "00:30",
+          "type": "visual",
+          "quote": "Children start to enter the room, walking towards the tables. One child in a red shirt and another in a light-colored shirt approach the sand bins, while a child in a pink dress walks towards the block table.",
+          "indicator": "Setup supports teacher-led or child-led difficulty change",
+          "reasoning": "Children self-select between the two stations but there is no evidence of tiered difficulty within either station or optional extension materials visibly available to adjust challenge level."
+        },
+        {
+          "ts_start": "00:50",
+          "ts_end": "01:10",
+          "type": "visual",
+          "quote": "The children are now actively engaged with the multi-sensory bins. The adult in the red shirt is helping children at the sand bins, while another adult in a floral dress is interacting with children at the block table.",
+          "indicator": "Add-on / extension materials available but not forced",
+          "reasoning": "No add-on or extension materials are observed being introduced or made available; the activity appears to run at a single fixed level for all children."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "The session shows two different activity types (sand and blocks) which could be interpreted as some variation, but the rubric requires deliberate difficulty variations of the same activity or visibly staged tiered options — not simply different activity types. No tiered materials, no extension add-ons, and no visible progression staging were observed. Score is 0.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "self_served": {
+      "dimension_id": "self_served",
+      "rubric_version": "0.2.0",
+      "score": 1.0,
+      "anchor_matched": "All materials are, by DESIGN, safe, recognisable to children of the age range, and light enough for them to handle alone. The activity is designed for self-service even if teachers are observed helping during the recording.",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:17",
+          "type": "visual",
+          "quote": "The room is empty, with two tables in the center covered with clear plastic sheets. One table has two bins with sand and small toys, and the other has a hexagonal bin with colorful building blocks. There are also two long wooden benches along the left wall and a table with papers and small clay pots on the right.",
+          "indicator": "Materials are recognisable to children of the age range — children would know what they are and roughly how to use them",
+          "reasoning": "Sand bins with small toys and colorful building blocks are highly familiar, recognisable materials for 3–5 year olds that children would immediately understand how to engage with."
+        },
+        {
+          "ts_start": "00:17",
+          "ts_end": "00:30",
+          "type": "visual",
+          "quote": "Children start to enter the room, walking towards the tables. One child in a red shirt and another in a light-colored shirt approach the sand bins, while a child in a pink dress walks towards the block table.",
+          "indicator": "Materials are recognisable to children of the age range — children would know what they are and roughly how to use them",
+          "reasoning": "Children independently walked toward and approached the bins without adult prompting, confirming the materials are recognisable and inviting by design."
+        },
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:17",
+          "type": "visual",
+          "quote": "One table has two bins with sand and small toys, and the other has a hexagonal bin with colorful building blocks.",
+          "indicator": "Items are light enough for a child of the age range to lift and carry alone",
+          "reasoning": "Sand bins, small toys, and building blocks are all lightweight, child-sized materials that 3–5 year olds can handle independently by design."
+        },
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:17",
+          "type": "visual",
+          "quote": "One table has two bins with sand and small toys, and the other has a hexagonal bin with colorful building blocks.",
+          "indicator": "Materials are child-safe by design (no choking hazards, sharp edges, toxic substances within reach)",
+          "reasoning": "Sand, small toys appropriate for the age group, and building blocks present no visible sharp edges or toxic substances; the design appears age-appropriate and safe for 3–5 year olds."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "Adult assistance is observed throughout but per rubric rules this does not lower the score — the design question is whether materials could be self-served. The materials (sand bins with small toys, colorful building blocks, clay pots) are all recognisable, lightweight, and age-appropriate by design. Confidence is medium rather than high because camera detail is limited and the 'small toys' in the sand bins are not described in enough detail to fully rule out choking hazard concerns for the youngest children (age 3), though no hazard is explicitly visible.",
+      "prompt_hash": "c92c689bf87b"
+    }
+  },
+  "overall": 0.7,
+  "cost_usd": null,
+  "duration_seconds": 15.839529991149902
+}

@@ -1,0 +1,1908 @@
+[
+  {
+    "activity_name": "Circle time",
+    "video_path": "/Users/oh/Desktop/Teacher Quality Monitoring/data/raw/20250909_activity_1_Morning_circle_time_activities_and_group_learning.mp4",
+    "total_seconds": 2117.343,
+    "success": true,
+    "parent_session_id": "long_full_20250909_activity_1_morning_circle_time_activities_and_group_learning",
+    "out_dir": "/Users/oh/Desktop/Teacher Quality Monitoring/data/long_video_reports/2026-05-21_164057_circle_time",
+    "boundaries": {
+      "first_child_visible_at": "00:04:00",
+      "last_child_visible_at": "00:34:59",
+      "confidence": "high",
+      "notes": "",
+      "last_child_evidence": "The last child is seen walking out of the frame towards the right side of the room.",
+      "self_check_passed": true,
+      "session_id": "long_full_20250909_activity_1_morning_circle_time_activities_and_group_learning",
+      "source_model": "gemini-2.5-flash",
+      "prompt_hash": "3f2ef82a8ff4"
+    },
+    "windows": {
+      "before": [
+        180.0,
+        480.0
+      ],
+      "after": [
+        1859.0,
+        2117.343
+      ],
+      "warnings": []
+    },
+    "scores": {
+      "before": {
+        "playground": {
+          "session_id": "long_before_playground_20250909_activity_1_morning_circle_time_activities_and_group_learning",
+          "rubric_version": "0.2.3",
+          "scores": {
+            "narrative": {
+              "dimension_id": "narrative",
+              "rubric_version": "0.2.3",
+              "score": 0,
+              "anchor_matched": "No experiential context \u2014 generic space with no immersive framing; pure utility setup",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:01:00",
+                  "type": "visual",
+                  "quote": "The video shows an empty classroom with various learning stations. On the left, there's a colorful wall with drawings and a blackboard. In the center, there are yellow cushions arranged on the floor, and a wooden structure with compartments for bags. On the right, there are two tables with chairs, covered with white cloths.",
+                  "indicator": "Thematic decor that names or evokes a setting",
+                  "reasoning": "The described elements \u2014 blackboard, cushions, bag compartments, cloth-covered tables \u2014 are generic classroom utility fixtures with no thematic or narrative framing that would place a child inside a deliberate setting."
+                },
+                {
+                  "ts_start": "00:02:00",
+                  "ts_end": "00:03:00",
+                  "type": "visual",
+                  "quote": "The colorful wall, blackboard, yellow cushions, and wooden structure are all visible. The tables with white cloths and chairs are still neatly arranged. The natural light from the windows illuminates the room, creating a bright and inviting atmosphere.",
+                  "indicator": "An atmospheric anchor (banner, central feature, framing object)",
+                  "reasoning": "No atmospheric anchor, banner, or central feature evoking a specific setting is present; the space reads as a standard, functional early-childhood classroom with no immersive narrative context."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The session recording contains no transcript and shows only an empty classroom throughout. All five minutes of visual observations describe the same generic classroom setup with no thematic decor, props, or scene-setting elements that would constitute narrative immersion.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "multi_sensory": {
+              "dimension_id": "multi_sensory",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "The recording shows only an empty classroom with no children or activity present throughout the entire 5-minute session. There is no transcript and no observable engagement with materials. While some setup elements are visible (yellow cushions, blackboard, tables with white cloths), the session captures no actual circle time activity, making it impossible to assess whether 2 or more senses were meaningfully engaged during the intended activity.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "boundary": {
+              "dimension_id": "boundary",
+              "rubric_version": "0.2.3",
+              "score": 1.0,
+              "anchor_matched": "At least one clear, unambiguous activity boundary \u2014 a canvas, paper, mat, rug, table, low fence, or similar marker visually defines the zone. A single well-defined zone is sufficient for this score.",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:01:00",
+                  "type": "visual",
+                  "quote": "In the center, there are yellow cushions arranged on the floor",
+                  "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+                  "reasoning": "The yellow cushions arranged on the floor create a visually distinct, self-evident circle time zone that a child could identify without verbal instruction."
+                },
+                {
+                  "ts_start": "00:01:00",
+                  "ts_end": "00:02:00",
+                  "type": "visual",
+                  "quote": "The yellow cushions are still neatly arranged on the floor",
+                  "indicator": "The boundary is intuitive to a child without verbal explanation from an adult",
+                  "reasoning": "The neatly arranged yellow cushions on the floor consistently define the group circle area, making the activity zone immediately recognizable to young children."
+                },
+                {
+                  "ts_start": "00:03:00",
+                  "ts_end": "00:04:00",
+                  "type": "visual",
+                  "quote": "The yellow cushions are on the floor, and the wooden structure with compartments is visible. The tables with white cloths and chairs are also in place.",
+                  "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+                  "reasoning": "The cushion zone is spatially distinct from the table area and storage structure, reinforcing the unambiguous boundary of the circle time activity area."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "No children or teacher present during the recording; however, the physical setup is clearly observable. The yellow cushions arranged on the floor provide an unambiguous, child-intuitive boundary for the morning circle activity.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "movement": {
+              "dimension_id": "movement",
+              "rubric_version": "0.2.3",
+              "score": 1.0,
+              "anchor_matched": "Both elements are present \u2014 children can clearly access the activity zone (visible path markers not required; minor adult presence in the path is acceptable as long as children get past) AND deliberate positioning suited to the activity (standing, kneeling, or sitting as the activity calls for), with materials reachable from that posture. Explicit seating like cushions is NOT required when the activity naturally invites standing or kneeling.",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:01:00",
+                  "type": "visual",
+                  "quote": "In the center, there are yellow cushions arranged on the floor, and a wooden structure with compartments for bags.",
+                  "indicator": "Clear deliberate positioning suited to the activity (standing at table height for sensory bins, kneeling on the floor for floor painting, sitting on a mat for story time, etc.)",
+                  "reasoning": "Yellow cushions arranged on the floor provide deliberate seating suited to a group circle/story time activity, clearly signaling where children should sit."
+                },
+                {
+                  "ts_start": "00:01:00",
+                  "ts_end": "00:02:00",
+                  "type": "visual",
+                  "quote": "The classroom remains empty, with all the learning stations and furniture in place. The yellow cushions are still neatly arranged on the floor, and the wooden structure with compartments is visible. The tables with white cloths and chairs are also in the same position.",
+                  "indicator": "No significant clutter, furniture, or persistent adult barriers materially blocking the path between entry and the activity zone",
+                  "reasoning": "The room is described as having furniture neatly arranged with no clutter or obstructions, indicating clear unobstructed access to the cushion circle area."
+                },
+                {
+                  "ts_start": "00:02:00",
+                  "ts_end": "00:03:00",
+                  "type": "visual",
+                  "quote": "The colorful wall, blackboard, yellow cushions, and wooden structure are all visible. The tables with white cloths and chairs are still neatly arranged. The natural light from the windows illuminates the room, creating a bright and inviting atmosphere.",
+                  "indicator": "Children can intuitively tell WHERE to go to engage with the activity",
+                  "reasoning": "The centrally placed cushions in an otherwise open, well-lit room make the circle activity zone immediately identifiable and accessible."
+                },
+                {
+                  "ts_start": "00:03:00",
+                  "ts_end": "00:04:00",
+                  "type": "visual",
+                  "quote": "The yellow cushions are on the floor, and the wooden structure with compartments is visible. The tables with white cloths and chairs are also in place. The room remains quiet and well-lit.",
+                  "indicator": "Enough space at the activity for children to stand, kneel, sit, or move as the activity requires",
+                  "reasoning": "Cushions arranged on the floor with surrounding open space confirm adequate room for children to sit in a group circle posture as the activity requires."
+                }
+              ],
+              "confidence": "medium",
+              "scorer_notes": "No children or adults are present in the recording \u2014 the entire session shows an empty classroom. Scoring is based solely on the physical setup as observed. The yellow cushions centrally arranged on the floor clearly indicate the circle time activity zone with appropriate sitting posture, and the room appears unobstructed. Confidence is medium rather than high because no actual child movement can be observed to confirm access in practice.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "clean_up": {
+              "dimension_id": "clean_up",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "The session recording shows only an empty classroom with no children present and no cleanup activity occurring. While some structural elements are visible (wooden compartment structure for bags, yellow cushions on floor, tables with chairs), the camera angles and descriptions do not provide enough detail to assess whether storage is at child height with visual/picture labels, whether items are light enough for children to carry, or whether return locations are intuitively marked. No children or adults are observed interacting with materials, so cleanup behavior cannot be assessed. Insufficient evidence to score reliably.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": 0.6666666666666666,
+          "cost_usd": null,
+          "duration_seconds": 14.822019815444946
+        },
+        "toy_design": {
+          "session_id": "long_before_toy_design_20250909_activity_1_morning_circle_time_activities_and_group_learning",
+          "rubric_version": "0.2.0",
+          "scores": {
+            "purpose": {
+              "dimension_id": "purpose",
+              "rubric_version": "0.2.0",
+              "score": 0.5,
+              "anchor_matched": "Some cues to purpose are present but the arrangement is mixed or partially staged; intent is unclear in parts",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:01:00",
+                  "type": "visual",
+                  "quote": "In the center, there are yellow cushions arranged on the floor, and a wooden structure with compartments for bags.",
+                  "indicator": "Materials arranged at the activity zone in a way that obviously communicates what to do",
+                  "reasoning": "Yellow cushions arranged on the floor suggest a gathering/sitting area consistent with circle time, providing a partial cue to purpose, but no additional materials (books, instruments, visual aids) are staged to clarify the specific activity."
+                },
+                {
+                  "ts_start": "00:01:00",
+                  "ts_end": "00:02:00",
+                  "type": "visual",
+                  "quote": "The yellow cushions are still neatly arranged on the floor, and the wooden structure with compartments is visible. The tables with white cloths and chairs are also in the same position.",
+                  "indicator": "A child arriving at the activity zone could guess what to do from the arrangement alone",
+                  "reasoning": "While cushions on the floor suggest sitting together, the tables covered with white cloths obscure any materials that might further clarify the activity, leaving the overall purpose only partially communicated."
+                },
+                {
+                  "ts_start": "00:03:00",
+                  "ts_end": "00:04:00",
+                  "type": "visual",
+                  "quote": "The yellow cushions are on the floor, and the wooden structure with compartments is visible. The tables with white cloths and chairs are also in place.",
+                  "indicator": "Materials clearly staged at the activity zone in a way that suggests their use",
+                  "reasoning": "The consistent presence of floor cushions signals a group sitting area, but the absence of any additional staged materials (story books, song charts, puppets) means a child could only partially infer the circle-time purpose."
+                }
+              ],
+              "confidence": "medium",
+              "scorer_notes": "The floor cushion arrangement is a recognizable cue for circle/group time in preschool contexts, but no supplementary materials are visible to confirm the specific activity (songs, storytelling, discussion). Tables are covered with white cloths, obscuring potential materials. The setup communicates 'sit here together' but not clearly 'this is what we will do.'",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "anchor_and_choice_materials": {
+              "dimension_id": "anchor_and_choice_materials",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "The entire 5-minute recording shows an empty classroom with no children present and no active setup for the described circle time activity. The visual observations describe furniture (yellow cushions, tables covered with white cloths, a wooden storage structure) but no anchor materials or choice materials are deployed or visible in use. There is no transcript content. The room appears to be in a pre-activity or post-activity state, making it impossible to reliably score anchor and choice materials as intended for the session.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "spark_curiosity": {
+              "dimension_id": "spark_curiosity",
+              "rubric_version": "0.2.0",
+              "score": 0,
+              "anchor_matched": "Activity area is purely functional with no curiosity hook \u2014 children would not have any 'what's that?' moment from what is at the activity itself",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:01:00",
+                  "type": "visual",
+                  "quote": "In the center, there are yellow cushions arranged on the floor, and a wooden structure with compartments for bags. On the right, there are two tables with chairs, covered with white cloths.",
+                  "indicator": "A surprising or unexpected element AT the activity zone",
+                  "reasoning": "The circle time activity area consists only of yellow cushions on the floor \u2014 familiar, functional seating with no surprising, mysterious, or visually striking element that would invite a 'what's that?' moment."
+                },
+                {
+                  "ts_start": "00:03:00",
+                  "ts_end": "00:04:00",
+                  "type": "visual",
+                  "quote": "The classroom is still empty, with all the learning stations and furniture in their original positions. The yellow cushions are on the floor, and the wooden structure with compartments is visible.",
+                  "indicator": "Deliberate novelty in the activity setup beyond familiar materials",
+                  "reasoning": "Throughout the entire recording, the circle area shows only standard cushions with no novel, hidden, or curiosity-provoking elements added to the activity setup."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The session recording shows an empty classroom throughout all 5 minutes with no children or teacher present. The circle time activity area (yellow cushions) contains only familiar, functional materials with no curiosity hook. No transcript content exists. Score is based solely on the visible activity area setup.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "challenge_adjustment": {
+              "dimension_id": "challenge_adjustment",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "The session recording shows only an empty classroom with no children, no teacher, and no activity in progress. The transcript is empty. While some furniture and learning stations are visible, there is no observable activity setup, no materials laid out for the circle time activity, and no visible difficulty variations or tiered materials that could be assessed. The room description does not provide enough detail about any specific activity materials to evaluate challenge adjustment design.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "self_served": {
+              "dimension_id": "self_served",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "The recording shows only an empty classroom for the full 5-minute duration with no children, no teacher, and no activity materials in active use. The setup described (yellow cushions on the floor, wooden compartment structure, tables with white cloths) is too sparse and generic to assess whether activity-specific materials are safe, recognisable, and light enough for 3-5 year olds. No circle-time materials (books, props, instruments, visual aids) are visible or described in sufficient detail to score this dimension reliably.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": 0.25,
+          "cost_usd": null,
+          "duration_seconds": 10.91127324104309
+        }
+      },
+      "after": {
+        "playground": {
+          "session_id": "long_after_playground_20250909_activity_1_morning_circle_time_activities_and_group_learning",
+          "rubric_version": "0.2.3",
+          "scores": {
+            "narrative": {
+              "dimension_id": "narrative",
+              "rubric_version": "0.2.3",
+              "score": 0,
+              "anchor_matched": "No experiential context \u2014 generic space with no immersive framing; pure utility setup",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:00:30",
+                  "type": "visual",
+                  "quote": "To the right of the teacher, there are three small wooden tables with chairs. To the left, there is a large yellow and red painted wall with various drawings and a blackboard. In the background, there are shelves with books and toys.",
+                  "indicator": "Thematic decor that names or evokes a setting",
+                  "reasoning": "The room contains generic classroom furnishings and decor (blackboard, shelves, drawings) with no thematic or immersive framing that places children inside a deliberate setting."
+                },
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:03:50",
+                  "type": "visual",
+                  "quote": "The teacher is standing in the middle of the room, facing a group of children who are sitting on yellow cushions on the floor.",
+                  "indicator": "An atmospheric anchor (banner, central feature, framing object)",
+                  "reasoning": "There is no atmospheric anchor, banner, or central feature that establishes a narrative setting; the arrangement is a standard circle-time utility setup."
+                },
+                {
+                  "ts_start": "00:03:00",
+                  "ts_end": "00:03:20",
+                  "type": "visual",
+                  "quote": "The teacher is making a chopping motion with her hands, and the children are imitating her, suggesting they are acting out a song or story about food preparation.",
+                  "indicator": "Props that place the child inside the theme",
+                  "reasoning": "The food-preparation actions are conveyed entirely through gesture and song with no props, decor, or scene-setting that would immerse children in a deliberate narrative environment."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The activity is a participatory fruit/food song using mime gestures, which is engaging but constitutes activity setup rather than immersive narrative framing. No thematic decor, props, backdrop, or deliberate scene-setting is visible that would place children inside a story or setting.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "multi_sensory": {
+              "dimension_id": "multi_sensory",
+              "rubric_version": "0.2.3",
+              "score": 0.5,
+              "anchor_matched": "Two senses are nominally engaged but at least one is weak or marginal",
+              "evidence": [
+                {
+                  "ts_start": "00:00:13",
+                  "ts_end": "00:03:50",
+                  "type": "transcript",
+                  "quote": "Form, form banana. Can we form banana? Form, form banana. Can we peel banana? Peel, peel banana. Can we chop banana? Chop, chop banana. Can we eat banana? Eat, eat banana.",
+                  "indicator": "Proprioceptive / movement opportunities",
+                  "reasoning": "The repetitive song structure with action words (form, peel, chop, eat) invites children to mime physical movements, engaging proprioceptive/movement sense throughout the activity."
+                },
+                {
+                  "ts_start": "00:01:30",
+                  "ts_end": "00:02:00",
+                  "type": "visual",
+                  "quote": "The teacher is still making hand gestures and speaking to the group. The children appear to be participating in a group activity, possibly a song or a story, as they are all looking at the teacher and some are making hand gestures as well.",
+                  "indicator": "Proprioceptive / movement opportunities",
+                  "reasoning": "Children imitating the teacher's hand gestures confirms proprioceptive engagement through movement, supporting the presence of at least one non-visual sense."
+                },
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:00:30",
+                  "type": "visual",
+                  "quote": "To the left, there is a large yellow and red painted wall with various drawings and a blackboard. In the background, there are shelves with books and toys. There are also two long, narrow play structures with colorful fabric inside, where two children are lying down.",
+                  "indicator": "Visual variety (color, materials, arrangements)",
+                  "reasoning": "The classroom provides visual variety through colored walls, drawings, and colorful fabric structures, engaging the visual sense, though this is ambient rather than deliberately designed for the circle activity itself."
+                },
+                {
+                  "ts_start": "00:03:00",
+                  "ts_end": "00:03:20",
+                  "type": "visual",
+                  "quote": "The teacher is making a chopping motion with her hands, and the children are imitating her, suggesting they are acting out a song or story about food preparation.",
+                  "indicator": "Proprioceptive / movement opportunities",
+                  "reasoning": "Imitative movement (chopping, eating motions) meaningfully engages proprioceptive sense, but the activity lacks tactile materials, sound-making elements, or natural sensory materials, keeping multi-sensory engagement limited to movement plus visual."
+                }
+              ],
+              "confidence": "medium",
+              "scorer_notes": "The activity engages movement/proprioception (mimed actions) and auditory sense (rhythmic song/chant) meaningfully, plus visual attention to the teacher. However, no tactile materials, natural sensory materials, or dedicated sound-making elements are present in the circle activity itself. The auditory engagement is primarily the teacher's voice/chant rather than a deliberate sound-making design element. Two senses are engaged but the setup is a basic circle time with no material-based sensory design, placing this at 0.5.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "boundary": {
+              "dimension_id": "boundary",
+              "rubric_version": "0.2.3",
+              "score": 0.5,
+              "anchor_matched": "A boundary is implied but ambiguous (e.g. materials present but no visible zone marker; or unclear where the activity area starts and stops)",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:00:30",
+                  "type": "visual",
+                  "quote": "The teacher is standing in the middle of the room, facing a group of children who are sitting on yellow cushions on the floor.",
+                  "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+                  "reasoning": "Yellow cushions on the floor provide a partial boundary signal \u2014 children sitting on them are implicitly in the circle zone \u2014 but there is no defined mat, rug, or taped outline demarcating the full activity area."
+                },
+                {
+                  "ts_start": "00:00:30",
+                  "ts_end": "00:01:00",
+                  "type": "visual",
+                  "quote": "Another child enters the room from the left side, carrying a backpack, and walks towards the teacher and the group of children.",
+                  "indicator": "The boundary is intuitive to a child without verbal explanation from an adult",
+                  "reasoning": "A newly arriving child walks toward the group without a clear visual zone to guide them, suggesting the boundary is not fully self-evident from the physical setup alone."
+                },
+                {
+                  "ts_start": "00:02:00",
+                  "ts_end": "00:02:30",
+                  "type": "visual",
+                  "quote": "The child who was sitting at the small wooden table on the right side of the room is now standing and looking at the teacher.",
+                  "indicator": "The boundary is intuitive to a child without verbal explanation from an adult",
+                  "reasoning": "A child drifts to a table outside the circle and then stands watching, indicating the activity boundary is not clearly defined enough to keep all children within it without redirection."
+                },
+                {
+                  "ts_start": "00:03:00",
+                  "ts_end": "00:03:20",
+                  "type": "visual",
+                  "quote": "The child who walked towards the shelves is now returning to the group and sitting on a yellow cushion.",
+                  "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+                  "reasoning": "The yellow cushions serve as loose markers that children do return to, but the zone is not clearly bounded \u2014 children freely leave and re-enter without a defined perimeter."
+                }
+              ],
+              "confidence": "medium",
+              "scorer_notes": "Yellow cushions imply a gathering zone but do not constitute a clear, unambiguous boundary. Children drift in and out of the area, and no rug, mat, or taped outline defines the circle space. The boundary is implied rather than fully established.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "movement": {
+              "dimension_id": "movement",
+              "rubric_version": "0.2.3",
+              "score": 1.0,
+              "anchor_matched": "Both elements are present \u2014 children can clearly access the activity zone (visible path markers not required; minor adult presence in the path is acceptable as long as children get past) AND deliberate positioning suited to the activity (standing, kneeling, or sitting as the activity calls for), with materials reachable from that posture. Explicit seating like cushions is NOT required when the activity naturally invites standing or kneeling.",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:00:30",
+                  "type": "visual",
+                  "quote": "The teacher is standing in the middle of the room, facing a group of children who are sitting on yellow cushions on the floor.",
+                  "indicator": "Clear deliberate positioning suited to the activity (standing at table height for sensory bins, kneeling on the floor for floor painting, sitting on a mat for story time, etc.)",
+                  "reasoning": "Yellow cushions on the floor provide deliberate, activity-appropriate seating for a circle/group activity, clearly signaling where children should sit."
+                },
+                {
+                  "ts_start": "00:00:30",
+                  "ts_end": "00:01:00",
+                  "type": "visual",
+                  "quote": "Another child enters the room from the left side, carrying a backpack, and walks towards the teacher and the group of children.",
+                  "indicator": "Children can clearly access the activity zone from the room entry \u2014 minor adult presence in the path is acceptable as long as children can still get past",
+                  "reasoning": "A newly arriving child walks directly from the room entry to the group without obstruction, demonstrating clear unobstructed access to the activity zone."
+                },
+                {
+                  "ts_start": "00:01:00",
+                  "ts_end": "00:01:30",
+                  "type": "visual",
+                  "quote": "Another child, a boy, walks from the right side of the room towards the teacher and the group. The children in the play structures remain lying down. The children sitting on the floor are still engaged with the teacher.",
+                  "indicator": "Children can walk from entry to activity zone through the natural layout without weaving around significant clutter, furniture, or persistent adult barriers",
+                  "reasoning": "A second child moves freely from another part of the room to join the group, confirming unobstructed access through the natural layout."
+                },
+                {
+                  "ts_start": "00:03:00",
+                  "ts_end": "00:03:20",
+                  "type": "visual",
+                  "quote": "The child who walked towards the shelves is now returning to the group and sitting on a yellow cushion.",
+                  "indicator": "Children can intuitively tell WHERE to go to engage with the activity",
+                  "reasoning": "A child who had wandered away independently returns and sits on a yellow cushion, demonstrating that the positioning is intuitive and children know where to go."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The circle activity uses yellow floor cushions as clear positioning markers. Multiple children are observed moving freely to and from the activity zone without obstruction. The activity (seated group song/movement) is well-matched to the floor-sitting posture. No significant barriers or clutter are observed blocking access.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "clean_up": {
+              "dimension_id": "clean_up",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "The session is a 4-minute morning circle/group song activity. No cleanup or material return occurs during the recording. The visual observations mention shelves with books and toys in the background but provide no detail about labelling, height accessibility, or whether children interact with storage. There is insufficient evidence to score this dimension reliably.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": 0.5,
+          "cost_usd": null,
+          "duration_seconds": 16.079583168029785
+        },
+        "toy_design": {
+          "session_id": "long_after_toy_design_20250909_activity_1_morning_circle_time_activities_and_group_learning",
+          "rubric_version": "0.2.0",
+          "scores": {
+            "purpose": {
+              "dimension_id": "purpose",
+              "rubric_version": "0.2.0",
+              "score": 0.5,
+              "anchor_matched": "Some cues to purpose are present but the arrangement is mixed or partially staged; intent is unclear in parts",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:00:30",
+                  "type": "visual",
+                  "quote": "The teacher is standing in the middle of the room, facing a group of children who are sitting on yellow cushions on the floor. There are three children in the group, two girls and one boy.",
+                  "indicator": "Materials arranged at the activity zone in a way that obviously communicates what to do",
+                  "reasoning": "Yellow cushions arranged in a circle/group formation on the floor do communicate 'sit here for group time,' which is a partial cue to the activity's purpose."
+                },
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:00:30",
+                  "type": "visual",
+                  "quote": "To the right of the teacher, there are three small wooden tables with chairs. To the left, there is a large yellow and red painted wall with various drawings and a blackboard. In the background, there are shelves with books and toys.",
+                  "indicator": "A child arriving at the activity zone could guess what to do from the arrangement alone",
+                  "reasoning": "The setup shows cushions on the floor suggesting a gathering space, but there are no materials (props, visual aids, instruments, books, or fruit/food items) staged at the circle area that would communicate the specific activity \u2014 a fruit-themed action song \u2014 to a child arriving independently."
+                },
+                {
+                  "ts_start": "00:03:00",
+                  "ts_end": "00:03:20",
+                  "type": "visual",
+                  "quote": "The teacher is making a chopping motion with her hands, and the children are imitating her, suggesting they are acting out a song or story about food preparation.",
+                  "indicator": "A child arriving at the activity zone could guess what to do from the arrangement alone",
+                  "reasoning": "The activity's content (fruit action song) is entirely teacher-led and embodied through gesture; no materials are staged at the zone to signal this purpose to a child arriving mid-session."
+                },
+                {
+                  "ts_start": "00:01:30",
+                  "ts_end": "00:02:00",
+                  "type": "visual",
+                  "quote": "The teacher continues to interact with the children, who are now all sitting on the floor or in the play structures. The teacher is still making hand gestures and speaking to the group. The children appear to be participating in a group activity, possibly a song or a story, as they are all looking at the teacher and some are making hand gestures as well.",
+                  "indicator": "Materials arranged at the activity zone in a way that obviously communicates what to do",
+                  "reasoning": "The observer notes uncertainty ('possibly a song or a story'), confirming that the material arrangement alone does not clearly communicate the specific purpose of the activity."
+                }
+              ],
+              "confidence": "medium",
+              "scorer_notes": "The cushion arrangement signals 'group gathering' but the specific activity (fruit-themed action song) is entirely communicated through teacher instruction and gesture, not through staged materials. A child arriving could infer 'sit in a group' but not the nature of the activity. Scored 0.5 rather than 0 because the cushion arrangement does provide a partial environmental cue for group circle time.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "anchor_and_choice_materials": {
+              "dimension_id": "anchor_and_choice_materials",
+              "rubric_version": "0.2.0",
+              "score": 0,
+              "anchor_matched": "No clear anchor at all, OR only one rigid material option with no choice (e.g. one type of crayon, one shape of paper, only one way to use it)",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:03:50",
+                  "type": "visual",
+                  "quote": "The teacher is standing in the middle of the room, facing a group of children who are sitting on yellow cushions on the floor.",
+                  "indicator": "An anchor material \u2014 either one strong centerpiece OR multiple equally-weighted anchor stations \u2014 that obviously invites children to engage",
+                  "reasoning": "The entire session is a teacher-led circle activity with no physical anchor material present; children are seated on cushions engaging only with the teacher's verbal and gestural prompts."
+                },
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:03:50",
+                  "type": "transcript",
+                  "quote": "Now we form banana. Form, form banana. Can we form banana? Form, form banana. Can we peel banana? Peel, peel banana.",
+                  "indicator": "Choice materials (tools, items, options) at or within the anchor(s) that allow flexible use",
+                  "reasoning": "The activity relies entirely on verbal call-and-response and imitative gestures; there are no physical materials, tools, or items for children to handle or choose among."
+                },
+                {
+                  "ts_start": "00:03:00",
+                  "ts_end": "00:03:20",
+                  "type": "visual",
+                  "quote": "The teacher is making a chopping motion with her hands, and the children are imitating her, suggesting they are acting out a song or story about food preparation.",
+                  "indicator": "Materials can be combined or used in different ways for different outcomes",
+                  "reasoning": "Children follow a single rigid sequence (form, peel, chop, eat) dictated by the teacher with no physical materials to combine or use flexibly."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "This is a pure circle-time song/movement activity. No physical anchor materials or choice materials are present. The background shelves with books and toys are visible but not part of the activity and not accessible to children during the session.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "spark_curiosity": {
+              "dimension_id": "spark_curiosity",
+              "rubric_version": "0.2.0",
+              "score": 0,
+              "anchor_matched": "Activity area is purely functional with no curiosity hook \u2014 children would not have any 'what's that?' moment from what is at the activity itself",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:00:30",
+                  "type": "visual",
+                  "quote": "The teacher is standing in the middle of the room, facing a group of children who are sitting on yellow cushions on the floor. There are three children in the group, two girls and one boy.",
+                  "indicator": "A surprising or unexpected element AT the activity zone",
+                  "reasoning": "The activity zone consists only of yellow floor cushions and the teacher \u2014 no unusual, mysterious, or visually striking items are present at the circle area to invite wonder."
+                },
+                {
+                  "ts_start": "00:01:30",
+                  "ts_end": "00:02:00",
+                  "type": "visual",
+                  "quote": "The teacher continues to interact with the children, who are now all sitting on the floor or in the play structures. The boy who walked towards the teacher is now sitting on a yellow cushion with the other children. The teacher is still making hand gestures and speaking to the group.",
+                  "indicator": "Items at the activity zone obviously designed to be touched, examined, or wondered about",
+                  "reasoning": "The activity relies entirely on the teacher's verbal prompts and hand gestures with no physical props, objects, or novel items at the activity zone that could spark curiosity."
+                },
+                {
+                  "ts_start": "00:03:00",
+                  "ts_end": "00:03:20",
+                  "type": "visual",
+                  "quote": "The teacher is making a chopping motion with her hands, and the children are imitating her, suggesting they are acting out a song or story about food preparation.",
+                  "indicator": "Deliberate novelty in the activity setup beyond familiar materials",
+                  "reasoning": "The activity is a familiar call-and-response song using only mime/gesture \u2014 there are no surprising, unfamiliar, or visually striking elements at the activity area itself."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The circle activity is conducted entirely through teacher-led song and gesture with no physical props, mystery objects, or novel items at the activity zone. Wall art and shelves with books/toys are noted in the background but are explicitly excluded per rubric rules.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "challenge_adjustment": {
+              "dimension_id": "challenge_adjustment",
+              "rubric_version": "0.2.0",
+              "score": 0,
+              "anchor_matched": "Single fixed difficulty level \u2014 no variation possible without redesigning the activity",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:03:50",
+                  "type": "transcript",
+                  "quote": "Now we form banana. Form, form banana. Can we form banana? Form, form banana. Can we peel banana? Peel, peel banana.",
+                  "indicator": "Multiple visible difficulty levels of the same activity",
+                  "reasoning": "The entire activity follows a single fixed repetitive structure (form, peel, chop, eat) applied to each fruit/vegetable with no variation in complexity, no tiered options, and no extension materials \u2014 all children do the same actions at the same level throughout."
+                },
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:03:50",
+                  "type": "visual",
+                  "quote": "The teacher is making a chopping motion with her hands, and the children are imitating her, suggesting they are acting out a song or story about food preparation.",
+                  "indicator": "Add-on / extension materials available but not forced",
+                  "reasoning": "No materials, props, or visual aids with varying difficulty levels are visible; the setup is a uniform group imitation activity with no observable add-ons or extensions available to adjust challenge."
+                },
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:00:30",
+                  "type": "visual",
+                  "quote": "In the background, there are shelves with books and toys.",
+                  "indicator": "Tiered or layered material options",
+                  "reasoning": "While shelves with materials exist in the background, they are not surfaced or made available as part of the activity design, so they do not constitute deliberately staged difficulty variations for this activity."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The activity is a whole-group call-and-response song with a single fixed structure. Every child performs the same actions at the same level. No tiered materials, no extension options, and no visible difficulty variants are present or offered. The only child-driven element is naming a fruit, which does not constitute a difficulty adjustment.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "self_served": {
+              "dimension_id": "self_served",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "This is a teacher-led circle time activity based entirely on verbal interaction, songs, and mime/gesture \u2014 there are no physical materials being distributed or handled by children. The 'materials' in this activity are yellow floor cushions (visible in scene) and the children's own bodies for gesture imitation. There is nothing to assess in terms of child-safe design, recognisability, or weight of materials, as the activity design requires no manipulables. The rubric cannot be meaningfully applied to a purely oral/gestural group activity with no physical materials for children to self-serve.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": 0.125,
+          "cost_usd": null,
+          "duration_seconds": 16.12541913986206
+        }
+      }
+    }
+  },
+  {
+    "activity_name": "Circle time",
+    "video_path": "/Users/oh/Desktop/Teacher Quality Monitoring/data/raw/20250918_activity_1_circle_time.mp4",
+    "total_seconds": 1358.256,
+    "success": true,
+    "parent_session_id": "long_full_20250918_activity_1_circle_time",
+    "out_dir": "/Users/oh/Desktop/Teacher Quality Monitoring/data/long_video_reports/2026-05-21_163818_circle_time",
+    "boundaries": {
+      "first_child_visible_at": "00:00:00",
+      "last_child_visible_at": "00:22:58",
+      "confidence": "high",
+      "notes": "Children are present from the very beginning of the video until almost the very end. The last child is visible until 00:22:58.",
+      "last_child_evidence": "The last child is seen sitting on the mat and then moves out of the frame towards the right side of the room.",
+      "self_check_passed": true,
+      "session_id": "long_full_20250918_activity_1_circle_time",
+      "source_model": "gemini-2.5-flash",
+      "prompt_hash": "3f2ef82a8ff4"
+    },
+    "windows": {
+      "before": [
+        0.0,
+        300.0
+      ],
+      "after": [
+        1058.256,
+        1358.256
+      ],
+      "warnings": [
+        "last_child timestamp (1378s) slightly past video end (1358s); clamping to end"
+      ]
+    },
+    "scores": {
+      "before": {
+        "playground": {
+          "session_id": "long_before_playground_20250918_activity_1_circle_time",
+          "rubric_version": "0.2.3",
+          "scores": {
+            "narrative": {
+              "dimension_id": "narrative",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. There is no evidence from which to assess the presence or absence of narrative/immersive framing in the space.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "multi_sensory": {
+              "dimension_id": "multi_sensory",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any observable evidence of materials, arrangements, or sensory elements, it is not possible to score this dimension reliably.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "boundary": {
+              "dimension_id": "boundary",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. There is no evidence from which to assess whether a clear physical or visual boundary exists for the circle time activity.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "movement": {
+              "dimension_id": "movement",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. There is no observable evidence to assess access to the activity zone, child positioning, or material reach. Cannot score this dimension.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "clean_up": {
+              "dimension_id": "clean_up",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. A circle time activity (songs, storytelling, guided discussion) also does not typically involve material distribution and cleanup, making it unlikely that cleanup behaviors or storage design would be observable even with full footage.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": null,
+          "cost_usd": null,
+          "duration_seconds": 5.9311511516571045
+        },
+        "toy_design": {
+          "session_id": "long_before_toy_design_20250918_activity_1_circle_time",
+          "rubric_version": "0.2.0",
+          "scores": {
+            "purpose": {
+              "dimension_id": "purpose",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any evidence of how materials are arranged at the activity zone or what the setup looks like, it is impossible to score this dimension reliably.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "anchor_and_choice_materials": {
+              "dimension_id": "anchor_and_choice_materials",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. The activity notes describe a group circle time (songs, storytelling, guided discussion), which is not inherently a materials-based setup, but without any visual or audio evidence it is impossible to assess whether anchor or choice materials were present.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "spark_curiosity": {
+              "dimension_id": "spark_curiosity",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. There is no evidence available to assess whether a curiosity-sparking element was present at the activity area.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "challenge_adjustment": {
+              "dimension_id": "challenge_adjustment",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. There is no evidence available to assess whether challenge adjustment was present, absent, or partially present in the circle time setup.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "self_served": {
+              "dimension_id": "self_served",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any evidence of the materials present, their size, weight, safety, or recognisability cannot be assessed. Returning insufficient_evidence.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": null,
+          "cost_usd": null,
+          "duration_seconds": 4.023691892623901
+        }
+      },
+      "after": {
+        "playground": {
+          "session_id": "long_after_playground_20250918_activity_1_circle_time",
+          "rubric_version": "0.2.3",
+          "scores": {
+            "narrative": {
+              "dimension_id": "narrative",
+              "rubric_version": "0.2.3",
+              "score": 0,
+              "anchor_matched": "No experiential context \u2014 generic space with no immersive framing; pure utility setup",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:00:30",
+                  "type": "visual",
+                  "quote": "The room is a large open space with light grey flooring. On the left, there's a yellow wall with a black chalkboard. A long white light fixture hangs from the ceiling. A teacher and three children are sitting on a white mat on the floor, engaged in an activity. There are several wooden tables and chairs scattered around the room. A wooden shelf filled with various items is in the center of the room.",
+                  "indicator": "Thematic decor that names or evokes a setting",
+                  "reasoning": "The space is described as a generic classroom/play area with no thematic decor, props, or atmospheric anchors that would place children inside a deliberate immersive setting."
+                },
+                {
+                  "ts_start": "00:00:30",
+                  "ts_end": "00:01:00",
+                  "type": "visual",
+                  "quote": "The room is well-lit and appears to be a classroom or play area. There are shelves with books and other educational materials along the walls.",
+                  "indicator": "An atmospheric anchor (banner, central feature, framing object)",
+                  "reasoning": "The visual description confirms a standard classroom utility setup with no atmospheric anchor or framing object that would create immersive narrative context."
+                },
+                {
+                  "ts_start": "00:03:30",
+                  "ts_end": "00:04:00",
+                  "type": "visual",
+                  "quote": "The room remains tidy with tables and chairs arranged neatly.",
+                  "indicator": "An 'in-progress project' feel where the setup itself tells what's happening",
+                  "reasoning": "The room arrangement is described as neat and generic, with no in-progress project feel or scene-setting that would tell a wider story or place children inside a deliberate setting."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The song 'Wheels on the Bus' introduces a bus-themed narrative verbally, but the rubric scores the space design, not the song content. The physical environment shows no thematic decor, props, banners, or immersive framing elements corresponding to any setting. The space is a generic classroom with standard furniture and educational materials.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "multi_sensory": {
+              "dimension_id": "multi_sensory",
+              "rubric_version": "0.2.3",
+              "score": 0.5,
+              "anchor_matched": "Two senses are nominally engaged but at least one is weak or marginal",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "05:00:00",
+                  "type": "transcript",
+                  "quote": "The wheels on the bus go round and round, round and round, round and round. The wheels on the bus go round and round, all through the town. The wipers on the bus go swish, swish, swish",
+                  "indicator": "Sound-making elements (instruments, chimes, water, music)",
+                  "reasoning": "The song provides a clear auditory engagement through sung melody, rhythm, and vocal sound effects throughout the session."
+                },
+                {
+                  "ts_start": "00:04:30",
+                  "ts_end": "05:00:00",
+                  "type": "visual",
+                  "quote": "The children appear to be enjoying the activity, with some moving their hands and bodies in response to the teacher's instructions.",
+                  "indicator": "Proprioceptive / movement opportunities (balance, climbing, kneeling)",
+                  "reasoning": "Children moving hands and bodies in response to the song indicates some proprioceptive/movement engagement, though it is marginal \u2014 limited to gesture-based responses on a mat rather than a deliberate movement-rich setup."
+                },
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:00:30",
+                  "type": "visual",
+                  "quote": "A teacher and three children are sitting on a white mat on the floor, engaged in an activity.",
+                  "indicator": "Tactile invitations (textures, materials to touch, wet/dry/soft/rough)",
+                  "reasoning": "The only tactile element visible is the mat itself; there are no bins of textured materials, natural materials, or hands-on manipulatives evident, making tactile engagement weak."
+                }
+              ],
+              "confidence": "medium",
+              "scorer_notes": "Auditory engagement is strong and deliberate (song with varied sound effects). Movement/proprioceptive engagement is present but marginal \u2014 children move in response to the song but no dedicated movement structure is visible. Tactile engagement is essentially absent beyond sitting on a mat. This places the session at 0.5: two senses nominally engaged but the second (movement) is weak and the third (tactile) is absent.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "boundary": {
+              "dimension_id": "boundary",
+              "rubric_version": "0.2.3",
+              "score": 1.0,
+              "anchor_matched": "At least one clear, unambiguous activity boundary \u2014 a canvas, paper, mat, rug, table, low fence, or similar marker visually defines the zone. A single well-defined zone is sufficient for this score.",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:30",
+                  "type": "visual",
+                  "quote": "A teacher and three children are sitting on a white mat on the floor, engaged in an activity.",
+                  "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+                  "reasoning": "The white mat on the floor provides a clear, unambiguous physical boundary that visually defines the circle-time activity zone."
+                },
+                {
+                  "ts_start": "00:30",
+                  "ts_end": "01:00",
+                  "type": "visual",
+                  "quote": "The teacher is actively interacting with the children on the mat, who appear to be listening attentively.",
+                  "indicator": "The boundary is intuitive to a child without verbal explanation from an adult",
+                  "reasoning": "Children are consistently gathered on the mat without any verbal redirection noted, indicating the mat boundary is self-evident to participants."
+                },
+                {
+                  "ts_start": "02:30",
+                  "ts_end": "03:00",
+                  "type": "visual",
+                  "quote": "The woman who entered earlier is now sitting on the mat with the teacher and children, participating in the activity.",
+                  "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+                  "reasoning": "New adults joining the activity naturally gravitate to the mat, confirming it functions as an intuitive, self-defining activity boundary."
+                },
+                {
+                  "ts_start": "01:00",
+                  "ts_end": "01:30",
+                  "type": "visual",
+                  "quote": "One child gets up from the mat and walks towards the man on the counter. The teacher continues to engage with the remaining children.",
+                  "indicator": "The boundary is intuitive to a child without verbal explanation from an adult",
+                  "reasoning": "The child's departure from and return to the mat demonstrates awareness of the mat as the defined activity zone, consistent with an intuitive boundary."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": null,
+              "prompt_hash": "c92c689bf87b"
+            },
+            "movement": {
+              "dimension_id": "movement",
+              "rubric_version": "0.2.3",
+              "score": 1.0,
+              "anchor_matched": "Both elements are present \u2014 children can clearly access the activity zone (visible path markers not required; minor adult presence in the path is acceptable as long as children get past) AND deliberate positioning suited to the activity (standing, kneeling, or sitting as the activity calls for), with materials reachable from that posture. Explicit seating like cushions is NOT required when the activity naturally invites standing or kneeling.",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:00:30",
+                  "type": "visual",
+                  "quote": "A teacher and three children are sitting on a white mat on the floor, engaged in an activity.",
+                  "indicator": "Clear deliberate positioning suited to the activity",
+                  "reasoning": "A mat on the floor clearly signals sitting as the intended posture for circle time, providing deliberate positioning suited to the group activity."
+                },
+                {
+                  "ts_start": "00:01:00",
+                  "ts_end": "00:01:30",
+                  "type": "visual",
+                  "quote": "One child gets up from the mat and walks towards the man on the counter. The teacher continues to engage with the remaining children. The man puts his phone away and stands up, then walks towards the children on the mat.",
+                  "indicator": "Children can clearly access the activity zone from the room entry \u2014 minor adult presence in the path is acceptable as long as children can still get past",
+                  "reasoning": "A child moves freely from the mat toward an adult and back without obstruction, demonstrating unobstructed access through the space."
+                },
+                {
+                  "ts_start": "00:02:00",
+                  "ts_end": "00:02:30",
+                  "type": "visual",
+                  "quote": "Another child gets up from the mat and walks towards the shelves in the center of the room.",
+                  "indicator": "No significant clutter, furniture, or persistent adult barriers materially blocking the path between entry and the activity zone",
+                  "reasoning": "Children move freely around the room without weaving around significant obstacles, confirming clear unobstructed access."
+                },
+                {
+                  "ts_start": "00:03:30",
+                  "ts_end": "00:04:00",
+                  "type": "visual",
+                  "quote": "The room remains tidy with tables and chairs arranged neatly.",
+                  "indicator": "Enough space at the activity for children to stand, kneel, sit, or move as the activity requires",
+                  "reasoning": "The tidy, open layout with neatly arranged furniture confirms sufficient space around the mat for children to sit, lie down, and move as the circle activity requires."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": null,
+              "prompt_hash": "c92c689bf87b"
+            },
+            "clean_up": {
+              "dimension_id": "clean_up",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "This is a circle time / song activity conducted on a mat with no materials distributed or collected during the session. No cleanup sequence occurs, and the visual observations do not provide sufficient detail about storage labels, shelf heights, or item weights to assess the clean-up design. The presence of shelves is noted but their accessibility, labelling, and child-usability cannot be determined from the available evidence.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": 0.625,
+          "cost_usd": null,
+          "duration_seconds": 13.459946155548096
+        },
+        "toy_design": {
+          "session_id": "long_after_toy_design_20250918_activity_1_circle_time",
+          "rubric_version": "0.2.0",
+          "scores": {
+            "purpose": {
+              "dimension_id": "purpose",
+              "rubric_version": "0.2.0",
+              "score": 0.5,
+              "anchor_matched": "Some cues to purpose are present but the arrangement is mixed or partially staged; intent is unclear in parts",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:00:30",
+                  "type": "visual",
+                  "quote": "A teacher and three children are sitting on a white mat on the floor, engaged in an activity.",
+                  "indicator": "Materials arranged at the activity zone in a way that obviously communicates what to do",
+                  "reasoning": "The mat on the floor signals a gathering/circle-time zone, which partially communicates 'sit here together,' but no additional materials (books, instruments, visual aids) are visible to clarify the specific activity."
+                },
+                {
+                  "ts_start": "00:00:30",
+                  "ts_end": "00:01:00",
+                  "type": "visual",
+                  "quote": "The teacher is actively interacting with the children on the mat, who appear to be listening attentively.",
+                  "indicator": "A child arriving at the activity zone could guess what to do from the arrangement alone",
+                  "reasoning": "The mat with seated participants suggests a group activity, but without visible props, books, or other materials staged at the zone, a child arriving could not clearly intuit the specific purpose beyond 'sit on the mat.'"
+                },
+                {
+                  "ts_start": "00:04:30",
+                  "ts_end": "00:05:00",
+                  "type": "visual",
+                  "quote": "The children appear to be enjoying the activity, with some moving their hands and bodies in response to the teacher's instructions.",
+                  "indicator": "Materials clearly staged at the activity zone in a way that suggests their use",
+                  "reasoning": "Children's physical engagement (hand/body movements) aligns with the song-based activity, but this is driven by teacher instruction rather than material arrangement \u2014 no staged materials communicate the activity's purpose independently."
+                }
+              ],
+              "confidence": "medium",
+              "scorer_notes": "The mat itself provides a partial spatial cue for a group gathering, but no materials (books, instruments, visual aids, props) are described as staged at the zone to communicate the specific activity (singing/circle time). The activity is entirely teacher-led through verbal instruction, which means a child arriving could infer 'sit together' but not 'we will sing songs.' This warrants 0.5 rather than 1.0.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "anchor_and_choice_materials": {
+              "dimension_id": "anchor_and_choice_materials",
+              "rubric_version": "0.2.0",
+              "score": 0,
+              "anchor_matched": "No clear anchor at all, OR only one rigid material option with no choice (e.g. one type of crayon, one shape of paper, only one way to use it)",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:05:00",
+                  "type": "transcript",
+                  "quote": "The wheels on the bus go round and round, round and round, round and round. The wheels on the bus go round and round, all through the town.",
+                  "indicator": "An anchor material \u2014 either one strong centerpiece OR multiple equally-weighted anchor stations \u2014 that obviously invites children to engage",
+                  "reasoning": "The entire session is a teacher-led song with no physical anchor material present; children are guided through a single fixed song with no choice materials offered."
+                },
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:00:30",
+                  "type": "visual",
+                  "quote": "A teacher and three children are sitting on a white mat on the floor, engaged in an activity.",
+                  "indicator": "Choice materials (tools, items, options) at or within the anchor(s) that allow flexible use",
+                  "reasoning": "The setup shows only a mat with no visible tools, items, or choice materials that would allow flexible or varied engagement."
+                },
+                {
+                  "ts_start": "00:04:30",
+                  "ts_end": "00:05:00",
+                  "type": "visual",
+                  "quote": "The children and adults continue their group activity on the mat. The children appear to be enjoying the activity, with some moving their hands and bodies in response to the teacher's instructions.",
+                  "indicator": "Materials can be combined or used in different ways for different outcomes",
+                  "reasoning": "Children's engagement is entirely directed by teacher instructions with no materials present that could be combined or used in different ways for different outcomes."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "This is a circle-time song activity with no physical anchor materials or choice materials. The mat serves as a gathering space but is not an anchor material in the rubric sense. No tools, items, or options are visible or referenced. Score of 0 is appropriate.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "spark_curiosity": {
+              "dimension_id": "spark_curiosity",
+              "rubric_version": "0.2.0",
+              "score": 0,
+              "anchor_matched": "Activity area is purely functional with no curiosity hook \u2014 children would not have any 'what's that?' moment from what is at the activity itself",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:00:30",
+                  "type": "visual",
+                  "quote": "A teacher and three children are sitting on a white mat on the floor, engaged in an activity.",
+                  "indicator": "A surprising or unexpected element AT the activity zone",
+                  "reasoning": "The activity zone is a plain white mat with no described unusual, mysterious, or visually striking elements that would invite a 'what's that?' moment."
+                },
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:05:00",
+                  "type": "transcript",
+                  "quote": "The wheels on the bus go round and round, round and round, round and round. The wheels on the bus go round and round, all through the town.",
+                  "indicator": "Deliberate novelty in the activity setup beyond familiar materials",
+                  "reasoning": "The activity is a familiar, well-known children's song with no novel props, mysterious objects, or surprising elements introduced at the activity area to spark curiosity."
+                },
+                {
+                  "ts_start": "00:03:30",
+                  "ts_end": "00:04:00",
+                  "type": "visual",
+                  "quote": "The room remains tidy with tables and chairs arranged neatly.",
+                  "indicator": "Visually striking centerpieces or features within the activity area itself",
+                  "reasoning": "The activity area contains only a plain mat with no visually striking or curiosity-invoking centerpiece or feature."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The circle time activity consists entirely of a familiar song sung on a plain white mat. No props, mystery objects, covered items, or visually striking elements are described at or within the activity zone throughout the session.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "challenge_adjustment": {
+              "dimension_id": "challenge_adjustment",
+              "rubric_version": "0.2.0",
+              "score": 0,
+              "anchor_matched": "Single fixed difficulty level \u2014 no variation possible without redesigning the activity",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "05:00:00",
+                  "type": "transcript",
+                  "quote": "The wheels on the bus go round and round, round and round, round and round. The wheels on the bus go round and round, all through the town.",
+                  "indicator": "Multiple visible difficulty levels of the same activity",
+                  "reasoning": "The entire session is a single repeated song with no tiered versions, no optional extensions, and no visible variation in difficulty \u2014 all children receive the same fixed activity throughout."
+                },
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:00:30",
+                  "type": "visual",
+                  "quote": "A teacher and three children are sitting on a white mat on the floor, engaged in an activity.",
+                  "indicator": "Add-on / extension materials available but not forced",
+                  "reasoning": "No tiered materials, extension props, or difficulty-variant resources are visible in the setup; the activity is a uniform group song with no observable scaffolding options."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The session is entirely a repeated group song (Wheels on the Bus) with no differentiation, no visible material variants, and no staged progression. This is a single fixed-difficulty activity for all children.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "self_served": {
+              "dimension_id": "self_served",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "This is a circle-time singing activity (Wheels on the Bus). The 'materials' are essentially the teacher's voice, body movement, and a floor mat. There are no discrete manipulable materials to evaluate for child self-service design \u2014 no objects to lift, carry, or recognise independently. The rubric indicators (safe by design, recognisable, light enough, sized for child hands) cannot be meaningfully applied to a song-led group activity with no physical materials. Insufficient evidence to score this dimension.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": 0.125,
+          "cost_usd": null,
+          "duration_seconds": 13.53691029548645
+        }
+      }
+    }
+  },
+  {
+    "activity_name": "Balloon dance",
+    "video_path": "/Users/oh/Desktop/Teacher Quality Monitoring/data/raw/20250918_activity_5_balloon_dance.mp4",
+    "total_seconds": 1920.357,
+    "success": true,
+    "parent_session_id": "long_full_20250918_activity_5_balloon_dance",
+    "out_dir": "/Users/oh/Desktop/Teacher Quality Monitoring/data/long_video_reports/2026-05-21_164001_balloon_dance",
+    "boundaries": {
+      "first_child_visible_at": "00:09:00",
+      "last_child_visible_at": "00:31:59",
+      "confidence": "high",
+      "notes": "",
+      "last_child_evidence": "The last child is seen walking out of the room, and the door closes behind them.",
+      "self_check_passed": true,
+      "session_id": "long_full_20250918_activity_5_balloon_dance",
+      "source_model": "gemini-2.5-flash",
+      "prompt_hash": "3f2ef82a8ff4"
+    },
+    "windows": {
+      "before": [
+        480.0,
+        780.0
+      ],
+      "after": [
+        1620.357,
+        1920.357
+      ],
+      "warnings": []
+    },
+    "scores": {
+      "before": {
+        "playground": {
+          "session_id": "long_before_playground_20250918_activity_5_balloon_dance",
+          "rubric_version": "0.2.3",
+          "scores": {
+            "narrative": {
+              "dimension_id": "narrative",
+              "rubric_version": "0.2.3",
+              "score": 0,
+              "anchor_matched": "No experiential context \u2014 generic space with no immersive framing; pure utility setup",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "Six children and one adult are in a room with wooden floors and white walls. There are blackboards on one side of the room. The children are playing with white and yellow balloons.",
+                  "indicator": "Thematic decor that names or evokes a setting",
+                  "reasoning": "The room has plain white walls, wooden floors, and blackboards \u2014 no thematic decor, props, or framing that would place children inside a deliberate setting."
+                },
+                {
+                  "ts_start": "02:59",
+                  "ts_end": "03:59",
+                  "type": "visual",
+                  "quote": "The children continue to play with the balloons, some are throwing them against the wall. The adult is still engaging with the children, encouraging their play. One child is sitting on the floor, then gets up and joins the play again. Another adult is visible in the background, sitting at a table.",
+                  "indicator": "An atmospheric anchor (banner, central feature, framing object)",
+                  "reasoning": "No atmospheric anchor, banner, or central feature is present; the space remains a generic utility room with no immersive framing across the full session."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "Balloons are activity props but there is no deliberate scene-setting, thematic decor, or narrative framing that places children inside a wider story or setting. The space is a plain room used for a movement activity \u2014 pure utility setup.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "multi_sensory": {
+              "dimension_id": "multi_sensory",
+              "rubric_version": "0.2.3",
+              "score": 1,
+              "anchor_matched": "Two or more senses are meaningfully engaged through deliberate material and arrangement choices",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "The children are playing with white and yellow balloons. The adult is standing and guiding the children to play with the balloons.",
+                  "indicator": "Visual variety (color, materials, arrangements)",
+                  "reasoning": "Colored balloons (white and yellow) provide clear visual stimulation as children track them through the air."
+                },
+                {
+                  "ts_start": "00:59",
+                  "ts_end": "01:59",
+                  "type": "visual",
+                  "quote": "The children continue to play with the balloons, throwing them in the air and catching them.",
+                  "indicator": "Proprioceptive / movement opportunities (balance, climbing, kneeling)",
+                  "reasoning": "Throwing and catching balloons requires full-body movement, engaging proprioceptive and kinesthetic senses deliberately through the activity design."
+                },
+                {
+                  "ts_start": "01:59",
+                  "ts_end": "02:59",
+                  "type": "visual",
+                  "quote": "The children are still actively playing with the balloons, some are throwing them high, others are trying to catch them.",
+                  "indicator": "Natural / sensory materials (sand, water, fabric, wood, leaves, clay, paint)",
+                  "reasoning": "Balloons provide a distinct tactile experience \u2014 lightweight, smooth, and elastic \u2014 engaging touch as children grip, bat, and catch them."
+                },
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:22",
+                  "type": "transcript",
+                  "quote": "Throw it up! Throw it up! Throw it up! Throw it up!",
+                  "indicator": "Sound-making elements (instruments, chimes, water, music)",
+                  "reasoning": "The teacher's rhythmic verbal cues provide an auditory layer to the activity, and balloon play inherently produces sounds (squeaking, popping air) that add to the auditory environment."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The activity deliberately combines visual tracking (colored balloons), tactile engagement (handling balloons), proprioceptive/movement engagement (throwing, catching, full-body movement), and auditory stimulation (teacher chanting, balloon sounds). This clearly meets the 1.0 anchor. No music is explicitly confirmed in the transcript or visuals despite the activity notes mentioning music, but the remaining senses are sufficiently and meaningfully engaged.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "boundary": {
+              "dimension_id": "boundary",
+              "rubric_version": "0.2.3",
+              "score": 0,
+              "anchor_matched": "No clear boundary \u2014 children would not know where the activity is supposed to happen without being told",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "Six children and one adult are in a room with wooden floors and white walls. There are blackboards on one side of the room. The children are playing with white and yellow balloons.",
+                  "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+                  "reasoning": "The room has bare wooden floors and white walls with no mat, rug, tape, or any other marker defining where the balloon dance activity is supposed to occur."
+                },
+                {
+                  "ts_start": "01:59",
+                  "ts_end": "02:59",
+                  "type": "visual",
+                  "quote": "The children are still actively playing with the balloons, some are throwing them high, others are trying to catch them. The adult is moving around the room, interacting with different children and helping them with the balloons.",
+                  "indicator": "The boundary is intuitive to a child without verbal explanation from an adult",
+                  "reasoning": "Children and the adult are dispersed throughout the open room with no visible zone marker; the activity zone is the entire undifferentiated room, meaning no boundary is self-evident to a child."
+                },
+                {
+                  "ts_start": "02:59",
+                  "ts_end": "03:59",
+                  "type": "visual",
+                  "quote": "The children continue to play with the balloons, some are throwing them against the wall. The adult is still engaging with the children, encouraging their play. One child is sitting on the floor, then gets up and joins the play again. Another adult is visible in the background, sitting at a table.",
+                  "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+                  "reasoning": "Children throwing balloons against the wall and moving freely throughout the entire room confirms there is no defined activity zone \u2014 the space is fully open and unbounded."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "This is a free-movement balloon dance activity in an open room. No mat, rug, tape outline, or any other boundary marker is visible at any point in the recording. The entire room serves as the activity space with no delineation.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "movement": {
+              "dimension_id": "movement",
+              "rubric_version": "0.2.3",
+              "score": 1.0,
+              "anchor_matched": "Both elements are present \u2014 children can clearly access the activity zone (visible path markers not required; minor adult presence in the path is acceptable as long as children get past) AND deliberate positioning suited to the activity (standing, kneeling, or sitting as the activity calls for), with materials reachable from that posture. Explicit seating like cushions is NOT required when the activity naturally invites standing or kneeling.",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "Six children and one adult are in a room with wooden floors and white walls. There are blackboards on one side of the room. The children are playing with white and yellow balloons. The adult is standing and guiding the children to play with the balloons.",
+                  "indicator": "Children can intuitively tell WHERE to go to engage with the activity",
+                  "reasoning": "The open wooden-floor room with no furniture obstacles provides a clear, unobstructed movement zone where children immediately engage with the balloon dance activity."
+                },
+                {
+                  "ts_start": "01:59",
+                  "ts_end": "02:59",
+                  "type": "visual",
+                  "quote": "The children are still actively playing with the balloons, some are throwing them high, others are trying to catch them. The adult is moving around the room, interacting with different children and helping them with the balloons. Some balloons are on the floor, and children pick them up.",
+                  "indicator": "Enough space at the activity for children to stand, kneel, sit, or move as the activity requires",
+                  "reasoning": "Children are freely throwing balloons high and moving around to catch them, demonstrating ample unobstructed space suited to the free-movement dance activity."
+                },
+                {
+                  "ts_start": "00:59",
+                  "ts_end": "01:59",
+                  "type": "visual",
+                  "quote": "The children continue to play with the balloons, throwing them in the air and catching them. The adult is still guiding them, sometimes bending down to help a child with a balloon. One child in a red shirt is sitting on the floor for a while, then gets up and joins the play.",
+                  "indicator": "Clear deliberate positioning suited to the activity",
+                  "reasoning": "Children are standing and moving freely as the balloon dance activity requires, with the open floor space naturally inviting the appropriate posture for this movement activity."
+                },
+                {
+                  "ts_start": "02:59",
+                  "ts_end": "03:59",
+                  "type": "visual",
+                  "quote": "The children continue to play with the balloons, some are throwing them against the wall. The adult is still engaging with the children, encouraging their play. One child is sitting on the floor, then gets up and joins the play again. Another adult is visible in the background, sitting at a table.",
+                  "indicator": "No significant clutter, furniture, or persistent adult barriers materially blocking the path between entry and the activity zone",
+                  "reasoning": "The second adult is seated at a background table and does not obstruct child movement; children move freely throughout the space without weaving around barriers."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": null,
+              "prompt_hash": "c92c689bf87b"
+            },
+            "clean_up": {
+              "dimension_id": "clean_up",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "The 5-minute recording captures only the active balloon dance activity. No cleanup phase is observed \u2014 children never return materials to storage, and no storage system (shelves, bins, labels, return locations) is visible in any visual observation. Balloons are inherently light and child-manageable, but the design of the return/storage system cannot be assessed from this footage. Scoring would require guessing rather than evidence.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": 0.5,
+          "cost_usd": null,
+          "duration_seconds": 12.686960697174072
+        },
+        "toy_design": {
+          "session_id": "long_before_toy_design_20250918_activity_5_balloon_dance",
+          "rubric_version": "0.2.0",
+          "scores": {
+            "purpose": {
+              "dimension_id": "purpose",
+              "rubric_version": "0.2.0",
+              "score": 1.0,
+              "anchor_matched": "The activity's purpose is obvious from the setup alone \u2014 materials are arranged in a way that a child arriving can intuit what to do. Explicit labels are not required.",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "Six children and one adult are in a room with wooden floors and white walls. There are blackboards on one side of the room. The children are playing with white and yellow balloons. The adult is standing and guiding the children to play with the balloons.",
+                  "indicator": "Materials arranged at the activity zone in a way that obviously communicates what to do",
+                  "reasoning": "Balloons distributed directly into children's hands in an open floor space immediately communicates 'play/move with the balloon' \u2014 no further instruction is needed to understand the activity's purpose."
+                },
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:05",
+                  "type": "transcript",
+                  "quote": "Everybody got one balloon?",
+                  "indicator": "A child arriving at the activity zone could guess what to do from the arrangement alone",
+                  "reasoning": "The teacher's opening question confirms each child has already been given a balloon as the primary prop, meaning the material itself (balloon in hand, open space) signals the activity before any verbal instruction is given."
+                },
+                {
+                  "ts_start": "00:59",
+                  "ts_end": "01:59",
+                  "type": "visual",
+                  "quote": "The children continue to play with the balloons, throwing them in the air and catching them. The adult is still guiding them, sometimes bending down to help a child with a balloon.",
+                  "indicator": "Materials clearly staged at the activity zone in a way that suggests their use",
+                  "reasoning": "Children are independently throwing and catching balloons without needing explanation, demonstrating that the material arrangement (balloon + open floor space) was sufficient to communicate the activity's purpose."
+                },
+                {
+                  "ts_start": "02:59",
+                  "ts_end": "03:59",
+                  "type": "visual",
+                  "quote": "The children continue to play with the balloons, some are throwing them against the wall. The adult is still engaging with the children, encouraging their play.",
+                  "indicator": "A child arriving at the activity zone could guess what to do from the arrangement alone",
+                  "reasoning": "Children are self-directing their balloon play (throwing against walls, catching) confirming the setup alone \u2014 balloons in an open movement space \u2014 is sufficient for children to intuit the activity."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The activity is a movement/dance session using balloons as props in an open floor space. The purpose is immediately obvious: balloons distributed to children in a clear open area unambiguously signal free movement and play. No labels or signs are needed or expected for this type of physical activity setup.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "anchor_and_choice_materials": {
+              "dimension_id": "anchor_and_choice_materials",
+              "rubric_version": "0.2.0",
+              "score": 0.5,
+              "anchor_matched": "An anchor (single or multiple) is present but choice materials are limited; OR variety of materials exists but no anchor draws children in",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "The children are playing with white and yellow balloons. The adult is standing and guiding the children to play with the balloons.",
+                  "indicator": "An anchor material \u2014 either one strong centerpiece OR multiple equally-weighted anchor stations \u2014 that obviously invites children to engage",
+                  "reasoning": "Balloons function as a clear anchor material that draws children into physical play, satisfying the anchor requirement."
+                },
+                {
+                  "ts_start": "00:59",
+                  "ts_end": "01:59",
+                  "type": "visual",
+                  "quote": "The children continue to play with the balloons, throwing them in the air and catching them.",
+                  "indicator": "Choice materials (tools, items, options) at or within the anchor(s) that allow flexible use",
+                  "reasoning": "Children are using the balloons in different ways (throwing, catching), suggesting some flexible engagement, but the only material present is balloons \u2014 there are no additional tools, props, or varied items that constitute a meaningful variety of choice materials."
+                },
+                {
+                  "ts_start": "02:59",
+                  "ts_end": "03:59",
+                  "type": "visual",
+                  "quote": "The children continue to play with the balloons, some are throwing them against the wall.",
+                  "indicator": "Materials can be combined or used in different ways for different outcomes",
+                  "reasoning": "Children do use balloons in slightly different ways (throwing up, throwing against wall, catching), but this variation emerges from the single material type rather than from a variety of choice materials provided in the setup."
+                },
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "04:59",
+                  "type": "visual",
+                  "quote": "The children are playing with white and yellow balloons.",
+                  "indicator": "Choice materials (tools, items, options) at or within the anchor(s) that allow flexible use",
+                  "reasoning": "While there are two balloon colors (white and yellow), the setup consists solely of balloons with no additional tools, props, or materials \u2014 limiting the variety of choice materials available to children."
+                }
+              ],
+              "confidence": "medium",
+              "scorer_notes": "The balloons serve as a clear and engaging anchor. However, the setup offers only one type of material (balloons in two colors) with no additional tools, props, or items that would constitute meaningful choice variety. Children do engage flexibly with the single material, but the rubric requires a variety of choice materials \u2014 not just varied uses of one item. Score of 0.5 reflects a present anchor with limited choice materials.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "spark_curiosity": {
+              "dimension_id": "spark_curiosity",
+              "rubric_version": "0.2.0",
+              "score": 0,
+              "anchor_matched": "Activity area is purely functional with no curiosity hook \u2014 children would not have any 'what's that?' moment from what is at the activity itself",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "The children are playing with white and yellow balloons. The adult is standing and guiding the children to play with the balloons.",
+                  "indicator": "A surprising or unexpected element AT the activity zone",
+                  "reasoning": "The activity setup consists solely of plain white and yellow balloons \u2014 familiar, everyday items for young children \u2014 with no surprising, mysterious, or visually striking element present at the activity zone."
+                },
+                {
+                  "ts_start": "00:59",
+                  "ts_end": "02:59",
+                  "type": "visual",
+                  "quote": "The children continue to play with the balloons, throwing them in the air and catching them. The adult is still guiding them, sometimes bending down to help a child with a balloon.",
+                  "indicator": "Items at the activity zone obviously designed to be touched, examined, or wondered about",
+                  "reasoning": "The activity remains purely functional \u2014 throwing and catching balloons \u2014 with no element at the activity area that would prompt a 'what is that?' moment or invite wonder or investigation beyond the familiar play action."
+                },
+                {
+                  "ts_start": "02:59",
+                  "ts_end": "04:59",
+                  "type": "visual",
+                  "quote": "The children are still actively playing with the balloons, some are throwing them high, others are trying to catch them. The adult is moving around the room, interacting with different children and helping them with the balloons.",
+                  "indicator": "Deliberate novelty in the activity setup beyond familiar materials",
+                  "reasoning": "Throughout the entire session the activity area contains only standard balloons with no added novelty, hidden elements, or visually striking centerpiece that would constitute a curiosity hook."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "Balloons are familiar, common materials for children aged 3\u20135. The activity is purely movement-based with no unusual, mysterious, or unexpected element introduced at the activity zone. The room features (blackboards, wooden floors) are ambient and do not count per rubric rules.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "challenge_adjustment": {
+              "dimension_id": "challenge_adjustment",
+              "rubric_version": "0.2.0",
+              "score": 0,
+              "anchor_matched": "Single fixed difficulty level \u2014 no variation possible without redesigning the activity",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "Six children and one adult are in a room with wooden floors and white walls. There are blackboards on one side of the room. The children are playing with white and yellow balloons. The adult is standing and guiding the children to play with the balloons.",
+                  "indicator": "Multiple visible difficulty levels of the same activity",
+                  "reasoning": "All children are given the same type of balloon and the same single instruction (throw it up), with no visible tiered variants or alternative materials to adjust difficulty."
+                },
+                {
+                  "ts_start": "01:59",
+                  "ts_end": "02:59",
+                  "type": "visual",
+                  "quote": "The children are still actively playing with the balloons, some are throwing them high, others are trying to catch them. The adult is moving around the room, interacting with different children and helping them with the balloons.",
+                  "indicator": "Add-on / extension materials available but not forced",
+                  "reasoning": "No extension or add-on materials are visible; the activity remains a single uniform task for all children throughout the session with no staged progression or optional harder/easier variants."
+                },
+                {
+                  "ts_start": "03:59",
+                  "ts_end": "04:59",
+                  "type": "visual",
+                  "quote": "The children are still playing with the balloons, throwing them and catching them. The adult is actively participating, throwing balloons and guiding the children. Some children are picking up balloons from the floor.",
+                  "indicator": "Setup supports teacher-led or child-led difficulty change",
+                  "reasoning": "No deliberate difficulty variation is introduced by the teacher or available in the setup across the entire session; the activity design is fixed at one level."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The activity is a single free-play balloon dance with one uniform task for all children. No tiered materials, no extension options, and no visible staged progression are present at any point in the session.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "self_served": {
+              "dimension_id": "self_served",
+              "rubric_version": "0.2.0",
+              "score": 1.0,
+              "anchor_matched": "All materials are, by DESIGN, safe, recognisable to children of the age range, and light enough for them to handle alone. The activity is designed for self-service even if teachers are observed helping during the recording.",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "The children are playing with white and yellow balloons. The adult is standing and guiding the children to play with the balloons.",
+                  "indicator": "Materials are child-safe by design (no choking hazards, sharp edges, toxic substances within reach)",
+                  "reasoning": "Inflated balloons are soft, lightweight, and present no sharp edges or toxic hazards for 3\u20135 year olds by design."
+                },
+                {
+                  "ts_start": "00:59",
+                  "ts_end": "01:59",
+                  "type": "visual",
+                  "quote": "The children continue to play with the balloons, throwing them in the air and catching them.",
+                  "indicator": "Items are light enough for a child of the age range to lift and carry alone",
+                  "reasoning": "Children are independently throwing and catching balloons without adult physical assistance, confirming the materials are light enough for self-handling."
+                },
+                {
+                  "ts_start": "01:59",
+                  "ts_end": "02:59",
+                  "type": "visual",
+                  "quote": "Some balloons are on the floor, and children pick them up.",
+                  "indicator": "Items are light enough for a child of the age range to lift and carry alone",
+                  "reasoning": "Children independently retrieve balloons from the floor, demonstrating the materials are manageable without adult help."
+                },
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "The children are playing with white and yellow balloons.",
+                  "indicator": "Materials are recognisable to children of the age range \u2014 children would know what they are and roughly how to use them",
+                  "reasoning": "Balloons are universally familiar objects to children aged 3\u20135 and require no instruction to identify or begin using."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "Inflated balloons are the sole material. They are universally recognisable, extremely lightweight, sized for child hands, and safe by design for this age group. Adult involvement observed is facilitative, not necessitated by material design.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": 0.5,
+          "cost_usd": null,
+          "duration_seconds": 13.504057884216309
+        }
+      },
+      "after": {
+        "playground": {
+          "session_id": "long_after_playground_20250918_activity_5_balloon_dance",
+          "rubric_version": "0.2.3",
+          "scores": {
+            "narrative": {
+              "dimension_id": "narrative",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any observable evidence of the space's decor, props, arrangement, or framing, it is not possible to score the narrative dimension reliably.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "multi_sensory": {
+              "dimension_id": "multi_sensory",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Despite the activity description suggesting multi-sensory engagement (balloons, music, movement), there is no observable evidence to score against the rubric indicators.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "boundary": {
+              "dimension_id": "boundary",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any visual or audio evidence, it is impossible to assess whether a clear physical or visual boundary defining the activity zone was present.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "movement": {
+              "dimension_id": "movement",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any timestamped evidence \u2014 visual or audio \u2014 it is not possible to assess access to the activity zone, child positioning, space adequacy, or material reach. Returning insufficient_evidence rather than guessing.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "clean_up": {
+              "dimension_id": "clean_up",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. There is no evidence available to assess storage height, label design, item weight, or child-led cleanup behavior. Cannot score this dimension.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": null,
+          "cost_usd": null,
+          "duration_seconds": 3.842912197113037
+        },
+        "toy_design": {
+          "session_id": "long_after_toy_design_20250918_activity_5_balloon_dance",
+          "rubric_version": "0.2.0",
+          "scores": {
+            "purpose": {
+              "dimension_id": "purpose",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript content and no visual observations were provided for this session. Without any timestamped visual or audio evidence of the activity zone setup, it is impossible to assess whether the material arrangement communicates the activity's purpose to an arriving child.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "anchor_and_choice_materials": {
+              "dimension_id": "anchor_and_choice_materials",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. The activity notes describe a balloon dance activity with music, which could potentially score on this dimension, but without any timestamped transcript or visual evidence, a reliable score cannot be assigned.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "spark_curiosity": {
+              "dimension_id": "spark_curiosity",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any evidence of what was present at the activity area, it is impossible to assess whether a curiosity-sparking element existed at the balloon dance activity zone.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "challenge_adjustment": {
+              "dimension_id": "challenge_adjustment",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any evidence of the activity setup, materials, or teacher/child interactions, it is impossible to assess whether challenge adjustment was present or absent.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "self_served": {
+              "dimension_id": "self_served",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. The activity notes describe a balloon dance activity for 3-5 year olds, which by general knowledge would likely score well on self-service design (balloons are light, recognisable, and child-safe), but without any timestamped visual or audio evidence, a score cannot be reliably assigned per the evidence requirements.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": null,
+          "cost_usd": null,
+          "duration_seconds": 4.707803010940552
+        }
+      }
+    }
+  },
+  {
+    "activity_name": "Colouring",
+    "video_path": "/Users/oh/Desktop/Teacher Quality Monitoring/data/raw/D06_20250919105616.mp4",
+    "total_seconds": 1302.196,
+    "success": true,
+    "parent_session_id": "long_full_d06_20250919105616",
+    "out_dir": "/Users/oh/Desktop/Teacher Quality Monitoring/data/long_video_reports/2026-05-21_163825_colouring",
+    "boundaries": {
+      "first_child_visible_at": "00:00:00",
+      "last_child_visible_at": "00:22:00",
+      "confidence": "high",
+      "notes": "Children are present from the very beginning of the video and remain visible until the very end.",
+      "last_child_evidence": "The last child is visible in the frame at the end of the video, indicating they are present until the recording concludes.",
+      "self_check_passed": true,
+      "session_id": "long_full_d06_20250919105616",
+      "source_model": "gemini-2.5-flash",
+      "prompt_hash": "3f2ef82a8ff4"
+    },
+    "windows": {
+      "before": [
+        0.0,
+        300.0
+      ],
+      "after": [
+        1002.1959999999999,
+        1302.196
+      ],
+      "warnings": [
+        "last_child timestamp (1320s) slightly past video end (1302s); clamping to end"
+      ]
+    },
+    "scores": {
+      "before": {
+        "playground": {
+          "session_id": "long_before_playground_d06_20250919105616",
+          "rubric_version": "0.2.3",
+          "scores": {
+            "narrative": {
+              "dimension_id": "narrative",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. The activity notes describe children receiving individual colouring sheets, which is a generic activity setup, but without any visual or audio evidence of the space's decor, props, arrangement, or framing, it is impossible to reliably score the narrative dimension.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "multi_sensory": {
+              "dimension_id": "multi_sensory",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided. The activity notes describe individual colouring sheets, which would nominally engage visual and tactile senses, but without any timestamped visual or audio evidence to confirm the actual setup, materials, or child engagement, a reliable score cannot be assigned.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "boundary": {
+              "dimension_id": "boundary",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript content and no visual observations were provided for this session. Without any observable evidence of the physical or visual setup, it is not possible to reliably score the boundary dimension.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "movement": {
+              "dimension_id": "movement",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any timestamped visual or audio evidence, it is impossible to assess access paths, child positioning, space around the activity, or material reach. Returning insufficient_evidence.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "clean_up": {
+              "dimension_id": "clean_up",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any observable evidence of storage design, item weight, labelling, or child/adult cleanup behavior, it is not possible to score this dimension reliably.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": null,
+          "cost_usd": null,
+          "duration_seconds": 3.964033842086792
+        },
+        "toy_design": {
+          "session_id": "long_before_toy_design_d06_20250919105616",
+          "rubric_version": "0.2.0",
+          "scores": {
+            "purpose": {
+              "dimension_id": "purpose",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript content and no visual observations were provided for this session. Although the staff notes describe children receiving individual colouring sheets and colouring, there is no timestamped visual or audio evidence to confirm how materials were arranged at the activity zone or whether the setup itself communicated the activity's purpose. Cannot score without observable evidence.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "anchor_and_choice_materials": {
+              "dimension_id": "anchor_and_choice_materials",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided. The only available information is the staff activity note describing individual colouring sheets, which alone is insufficient to reliably score anchor presence or choice material variety without visual confirmation of what tools/options were actually available.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "spark_curiosity": {
+              "dimension_id": "spark_curiosity",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. The activity notes describe a standard colouring sheet activity, but without any visual or audio evidence of the actual activity setup, it is not possible to reliably score whether a curiosity-sparking element was present at the activity zone.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "challenge_adjustment": {
+              "dimension_id": "challenge_adjustment",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided. The activity notes describe a single colouring sheet activity with no mention of difficulty variants, tiered materials, or extensions, but without any visual or audio evidence from the session itself, a reliable score cannot be assigned.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "self_served": {
+              "dimension_id": "self_served",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided. The activity notes mention children getting individual colouring sheets and colouring, which would typically suggest child-manageable materials, but there is no timestamped evidence from the recording to confirm material design, safety, recognisability, or weight. Cannot score without observable evidence.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": null,
+          "cost_usd": null,
+          "duration_seconds": 4.882001161575317
+        }
+      },
+      "after": {
+        "playground": {
+          "session_id": "long_after_playground_d06_20250919105616",
+          "rubric_version": "0.2.3",
+          "scores": {
+            "narrative": {
+              "dimension_id": "narrative",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. The activity notes describe children receiving individual colouring sheets, which is a utility setup, but without any visual or audio evidence of the space, no reliable scoring of narrative/immersive framing is possible.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "multi_sensory": {
+              "dimension_id": "multi_sensory",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided. The activity notes describe individual colouring sheets, which would nominally engage visual and tactile senses, but without any timestamped visual or audio evidence to confirm material types, arrangements, or child engagement, a reliable score cannot be assigned.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "boundary": {
+              "dimension_id": "boundary",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript content and no visual observations were provided for this session. Without any observable evidence of the physical or visual setup, it is not possible to reliably score the boundary dimension.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "movement": {
+              "dimension_id": "movement",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any timestamped visual or audio evidence, it is impossible to assess access paths, child positioning, space around the activity, or material reach. Returning insufficient_evidence.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "clean_up": {
+              "dimension_id": "clean_up",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided in the session record. Without any observable evidence of storage design, item weight, labelling, or child/adult cleanup behavior, this dimension cannot be scored.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": null,
+          "cost_usd": null,
+          "duration_seconds": 3.74005389213562
+        },
+        "toy_design": {
+          "session_id": "long_after_toy_design_d06_20250919105616",
+          "rubric_version": "0.2.0",
+          "scores": {
+            "purpose": {
+              "dimension_id": "purpose",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript content and no visual observations were provided for this session. Although the staff notes describe children receiving individual colouring sheets to colour, there is no timestamped visual or audio evidence to confirm how materials were arranged at the activity zone or whether the setup itself communicated the activity's purpose. Cannot score without observable evidence.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "anchor_and_choice_materials": {
+              "dimension_id": "anchor_and_choice_materials",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. The activity notes mention individual colouring sheets, which would typically suggest limited choice materials, but without any visual or audio evidence, a reliable score cannot be assigned.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "spark_curiosity": {
+              "dimension_id": "spark_curiosity",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. The activity notes describe children receiving individual colouring sheets to colour, which is a familiar, functional activity with no described curiosity hook, but without any visual or audio evidence from the session itself, a reliable score cannot be assigned.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "challenge_adjustment": {
+              "dimension_id": "challenge_adjustment",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. The activity notes describe individual colouring sheets, but without any visual or audio evidence of the setup, materials, or variants available, it is not possible to reliably score this dimension.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "self_served": {
+              "dimension_id": "self_served",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided. The activity notes mention children getting individual colouring sheets and colouring, which would typically suggest child-manageable materials, but there is no timestamped visual or audio evidence to confirm material design, safety, weight, or recognisability. Cannot score without observable evidence.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": null,
+          "cost_usd": null,
+          "duration_seconds": 5.310888290405273
+        }
+      }
+    }
+  }
+]

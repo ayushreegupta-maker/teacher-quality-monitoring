@@ -1,0 +1,188 @@
+{
+  "Q1": {
+    "answer": "Yes - partial evidence",
+    "confidence": "medium",
+    "evidence_timestamps": ["00:00:00", "00:02:20"],
+    "rationale": "Visual observations show the teacher organizing items on shelves filled with art supplies, and texture cards, papers, glue, and colored paper are visible on the table throughout the session."
+  },
+  "Q2": {
+    "answer": "INSUFFICIENT INFORMATION",
+    "confidence": "low",
+    "evidence_timestamps": ["00:00:00"],
+    "rationale": "The evidence mentions art supplies and texture cards but does not specifically identify games as a distinct category of materials."
+  },
+  "Q3": {
+    "answer": "INSUFFICIENT INFORMATION",
+    "confidence": "low",
+    "evidence_timestamps": ["00:01:15"],
+    "rationale": "The evidence mentions papers and books on the table but does not specifically identify progress booklets."
+  },
+  "Q4": {
+    "answer": "Yes",
+    "confidence": "high",
+    "evidence_timestamps": ["00:00:00", "00:00:55"],
+    "rationale": "The teacher is seen organizing items on shelves from 00:00:00, and the first children enter the room at 00:00:55, indicating setup was underway before children arrived."
+  },
+  "Q5": {
+    "answer": "6",
+    "confidence": "high",
+    "evidence_timestamps": ["00:02:25", "00:08:40"],
+    "rationale": "Per the phases list, warm_up runs from 00:02:25 to 00:08:40, approximately 6 minutes of texture exploration."
+  },
+  "Q6": {
+    "answer": "INSUFFICIENT INFORMATION",
+    "confidence": "low",
+    "evidence_timestamps": ["00:00:00"],
+    "rationale": "The phase list contains 'art_gym' but not a distinct 'art_games' phase; the evidence does not separate art games from art gym."
+  },
+  "Q7": {
+    "answer": "8",
+    "confidence": "high",
+    "evidence_timestamps": ["00:08:40", "00:17:00"],
+    "rationale": "Per the phases list, art_gym (paper tearing along lines) runs from 00:08:40 to 00:17:00, approximately 8 minutes."
+  },
+  "Q8": {
+    "answer": "48",
+    "confidence": "high",
+    "evidence_timestamps": ["00:17:00", "01:05:00"],
+    "rationale": "Per the phases list, artwork (Eric Carle collage) runs from 00:17:00 to 01:05:00, approximately 48 minutes."
+  },
+  "Q9": {
+    "answer": "INSUFFICIENT INFORMATION",
+    "confidence": "low",
+    "evidence_timestamps": ["00:08:40"],
+    "rationale": "The evidence references an 'art_gym' phase (paper tearing) explained clearly, but no distinct 'art games' activity is identified in the evidence to evaluate."
+  },
+  "Q10": {
+    "answer": "Yes",
+    "confidence": "medium",
+    "evidence_timestamps": ["00:08:40", "00:20:00"],
+    "rationale": "Per-phase explanation notes the teacher instructed children to tear paper along drawn lines, rated 'clear' with 3 children engaged after; transcript at 00:20:00 shows shading/tearing instruction."
+  },
+  "Q11": {
+    "answer": "INSUFFICIENT INFORMATION",
+    "confidence": "low",
+    "evidence_timestamps": ["00:08:40"],
+    "rationale": "No distinct art games activity is identified separately in the evidence to evaluate tone."
+  },
+  "Q12": {
+    "answer": "Yes",
+    "confidence": "medium",
+    "evidence_timestamps": ["00:08:40"],
+    "rationale": "Per-phase explanation explicitly rates the teacher's tone as 'confident' for the art_gym (paper tearing) activity."
+  },
+  "Q13": {
+    "answer": "Verbal explanation, visual demonstration with a tablet/video, and step-by-step modeling with paper folding and coloring",
+    "confidence": "high",
+    "evidence_timestamps": ["00:50:00", "01:20:00", "01:35:00", "01:40:00"],
+    "rationale": "Transcript shows the teacher introducing artist Eric Carle verbally (00:50:00), demonstrating folding steps (01:20:00), showing a video of the technique (01:35:00), and modeling coloring (01:40:00)."
+  },
+  "Q14": {
+    "answer": "Yes",
+    "confidence": "medium",
+    "evidence_timestamps": ["00:30:00", "01:40:00"],
+    "rationale": "Per-phase explanation notes 3 children engaged after the artwork explanation; visual observations show children actively coloring, tearing, and pasting paper independently."
+  },
+  "Q15": {
+    "answer": "4",
+    "confidence": "low",
+    "evidence_timestamps": ["00:50:00", "01:20:00", "01:35:00", "01:45:41"],
+    "rationale": "Teacher mentions: (1) learning about Eric Carle and collage concept, (2) folding paper, (3) coloring paper to create texture, (4) tearing and pasting onto fish outline tomorrow. Bounded estimate based on transcript references."
+  },
+  "Q16": {
+    "answer": "1",
+    "confidence": "low",
+    "evidence_timestamps": ["00:30:31", "01:20:44"],
+    "rationale": "Transcript shows a student saying 'I'm not trying to do it, but I can't' (00:30:31) and 'But it has no body, it has no tail' (01:20:44), suggesting at least one child struggled briefly; bounded estimate."
+  },
+  "Q17": {
+    "answer": "INSUFFICIENT INFORMATION",
+    "confidence": "low",
+    "evidence_timestamps": ["00:25:00"],
+    "rationale": "Children say 'Finish, ma'am' around 00:25:00, but it is unclear if this was 5+ minutes before activity end; transcript loop artifacts make precise timing impossible."
+  },
+  "Q18": {
+    "answer": "Yes",
+    "confidence": "low",
+    "evidence_timestamps": ["00:30:34", "01:40:22"],
+    "rationale": "Teacher responds 'Okay, you can do it' (00:30:34) to a struggling child, and at 01:40:22 says 'You can stand up. If you're not able to do it, stand up' — adaptive scaffolding. Limited evidence."
+  },
+  "Q19": {
+    "answer": "INSUFFICIENT INFORMATION",
+    "confidence": "low",
+    "evidence_timestamps": ["00:45:22"],
+    "rationale": "At 00:45:22 teacher invites children to make 'any fish' of their own choice, which could be an extension, but evidence does not clearly show challenges offered to early finishers."
+  },
+  "Q20": {
+    "answer": "Yes",
+    "confidence": "medium",
+    "evidence_timestamps": ["00:01:23", "00:45:22", "00:50:42"],
+    "rationale": "Teacher uses open questions ('Do you know what is texture?'), offers choices ('any fish, your own choice'), and asks children to spell the artist's name — inviting participation."
+  },
+  "Q21": {
+    "answer": "Yes",
+    "confidence": "medium",
+    "evidence_timestamps": ["00:30:34", "01:00:10", "01:40:22"],
+    "rationale": "Visual observations show teacher circulating, bending down to speak with individual children, and verbal responses to a struggling student suggest re-engagement efforts."
+  },
+  "Q22": {
+    "answer": "Yes",
+    "confidence": "medium",
+    "evidence_timestamps": ["00:00:49", "01:00:00", "01:45:08"],
+    "rationale": "Teacher greets each arriving child individually ('What's your name?' at 00:00:49) and visual observations show her moving around the table to address each child."
+  },
+  "Q23": {
+    "answer": "3",
+    "confidence": "medium",
+    "evidence_timestamps": ["00:17:00", "01:05:00"],
+    "rationale": "Per-phase notes report 3 children engaged after artwork and art_gym explanations; visual observations consistently show 3 children focused on tasks throughout the main activity phases."
+  },
+  "Q24": {
+    "answer": "1",
+    "confidence": "low",
+    "evidence_timestamps": ["00:16:30", "01:01:05"],
+    "rationale": "Visual observations note a younger child wandering and being led away (00:16:30) and a boy briefly leaving his chair (01:01:05); these appear to be minor disruptions. Bounded estimate."
+  },
+  "Q25": {
+    "answer": "Teacher gently redirected children verbally (e.g., 'come and sit here') without raising voice",
+    "confidence": "medium",
+    "evidence_timestamps": ["00:00:57", "01:46:20"],
+    "rationale": "Transcript shows teacher saying 'Come and sit here' calmly (00:00:57, 01:46:20); no evidence of harsh discipline."
+  },
+  "Q26": {
+    "answer": "Yes",
+    "confidence": "medium",
+    "evidence_timestamps": ["00:17:30", "01:01:20"],
+    "rationale": "Visual observations show wandering child taken to back of room and the boy returning to his seat shortly after; activity resumed normally."
+  },
+  "Q27": {
+    "answer": "No",
+    "confidence": "high",
+    "evidence_timestamps": ["00:00:00", "01:48:00"],
+    "rationale": "No evidence in any visual observation or transcript suggests an unsafe environment; atmosphere consistently described as calm, focused, and supportive."
+  },
+  "Q28": {
+    "answer": "No",
+    "confidence": "high",
+    "evidence_timestamps": ["00:00:00", "01:48:00"],
+    "rationale": "No evidence of shouting or punishment in the transcript or visual observations; teacher's tone is consistently described as confident and patient."
+  },
+  "Q29": {
+    "answer": "No",
+    "confidence": "medium",
+    "evidence_timestamps": ["00:02:25", "01:40:00"],
+    "rationale": "Per-phase explanations describe the teacher's tone as 'confident' throughout; visual observations show calm interaction and smiling. No frustration indicators observed."
+  },
+  "Q30": {
+    "answer": "Yes",
+    "confidence": "high",
+    "evidence_timestamps": ["00:00:41", "01:05:45", "01:41:50"],
+    "rationale": "Teacher greets children warmly ('Hi kids. Good morning. How are you doing guys?'), visual observations repeatedly note her smiling at students and bending down to eye level."
+  },
+  "Q31": {
+    "answer": "INSUFFICIENT INFORMATION",
+    "confidence": "low",
+    "evidence_timestamps": ["00:01:46"],
+    "rationale": "Transcript mentions a child referring to a 'best friend' (00:01:46) but no clear evidence of the teacher actively facilitating peer interaction or friendship between children."
+  }
+}

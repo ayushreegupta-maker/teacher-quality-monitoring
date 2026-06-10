@@ -1,0 +1,75 @@
+[
+  {
+    "activity_name": "Circle time",
+    "video_path": "/Users/oh/Desktop/Teacher Quality Monitoring/data/raw/20250909_activity_1_Morning_circle_time_activities_and_group_learning.mp4",
+    "total_seconds": null,
+    "success": false,
+    "parent_session_id": null,
+    "out_dir": null,
+    "boundaries": null,
+    "windows": null,
+    "scores": {}
+  },
+  {
+    "activity_name": "Circle time",
+    "video_path": "/Users/oh/Desktop/Teacher Quality Monitoring/data/raw/20250918_activity_1_circle_time.mp4",
+    "total_seconds": null,
+    "success": false,
+    "parent_session_id": null,
+    "out_dir": null,
+    "boundaries": null,
+    "windows": null,
+    "scores": {}
+  },
+  {
+    "activity_name": "Balloon dance",
+    "video_path": "/Users/oh/Desktop/Teacher Quality Monitoring/data/raw/20250918_activity_5_balloon_dance.mp4",
+    "total_seconds": null,
+    "success": false,
+    "parent_session_id": null,
+    "out_dir": null,
+    "boundaries": null,
+    "windows": null,
+    "scores": {}
+  },
+  {
+    "activity_name": "Colouring",
+    "video_path": "/Users/oh/Desktop/Teacher Quality Monitoring/data/raw/D06_20250919105616.mp4",
+    "total_seconds": 1302.196,
+    "success": false,
+    "parent_session_id": "long_full_d06_20250919105616",
+    "out_dir": "/Users/oh/Desktop/Teacher Quality Monitoring/data/long_video_reports/2026-05-21_120927_colouring",
+    "boundaries": {
+      "first_child_visible_at": "00:03:04",
+      "last_child_visible_at": "00:21:59",
+      "confidence": "high",
+      "notes": "The first child is visible at 00:03:04 and remains in the play area. The last child is visible at 00:21:59, after which the play area is empty of children.",
+      "session_id": "long_full_d06_20250919105616",
+      "source_model": "gemini-2.5-flash",
+      "prompt_hash": "647998da4dba"
+    },
+    "windows": {
+      "before": [
+        124.0,
+        424.0
+      ],
+      "after": [
+        1062.196,
+        1302.196
+      ],
+      "warnings": [
+        "last_child timestamp (1319s) slightly past video end (1302s); clamping to end"
+      ]
+    },
+    "scores": {
+      "before": {
+        "playground": null,
+        "toy_design": null
+      },
+      "after": {
+        "playground": null,
+        "toy_design": null
+      }
+    }
+  }
+]

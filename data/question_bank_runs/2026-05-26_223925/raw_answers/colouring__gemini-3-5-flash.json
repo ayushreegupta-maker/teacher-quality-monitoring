@@ -1,0 +1,457 @@
+{
+  "1": {
+    "answer": "Yes, the activity zone is clearly defined by the blue mats laid out on the wooden floor in a circular pattern, with a small wooden desk placed on each mat.",
+    "confidence": "high",
+    "evidence": "11:01:00 — The teacher has laid out five blue mats with small wooden desks on top of them in a circle."
+  },
+  "2": {
+    "answer": "Yes, each child has an individual blue mat and a small wooden desk, making it very clear where they should sit to participate.",
+    "confidence": "high",
+    "evidence": "11:01:15 — The children enter the circle and sit down on their designated blue mats behind the desks."
+  },
+  "3": {
+    "answer": "Yes, the activity zone is in the open center of the room, while storage cabinets and other materials are located along the walls and behind a low partition wall.",
+    "confidence": "high",
+    "evidence": "11:00:15 — The teacher sets up the mats in the open floor area, away from the cabinets and partition wall."
+  },
+  "4": {
+    "answer": "The central anchor objects are the individual wooden desks and the blue mats where the children sit, which serve as the focal point for their individual work.",
+    "confidence": "high",
+    "evidence": "11:02:00 — The desks and mats are arranged in a circle, focusing the children's attention on their workspace."
+  },
+  "5": {
+    "answer": "The materials include 5 blue mats, 5 small wooden desks, 5 activity sheets with ice cream cone drawings, glue bottles/sticks, and a basket/tray containing numerous colorful pom poms.",
+    "confidence": "high",
+    "evidence": "11:03:00 - 11:04:15 — The teachers distribute the sheets, desks, glue, and a tray of colorful pom poms to the children."
+  },
+  "6": {
+    "answer": "Yes, the desks and mats are on the floor, and the sheets, glue, and pom poms are placed directly on the desks in front of the children.",
+    "confidence": "high",
+    "evidence": "11:03:30 — The teacher places the activity sheets and glue directly on the low wooden desks."
+  },
+  "7": {
+    "answer": "The activity engages visual senses (colorful pom poms and drawings), tactile senses (feeling the soft pom poms and sticky glue), auditory senses (listening to the teacher's instructions), and kinesthetic senses (reaching, counting, and sticking).",
+    "confidence": "high",
+    "evidence": "11:04:30 — Children use their hands to pick up, count, and glue the colorful pom poms onto their sheets."
+  },
+  "8": {
+    "answer": "The theme is \"ice cream cones,\" where children count and stick colorful pom poms onto drawings of ice cream cones to represent scoops of ice cream.",
+    "confidence": "high",
+    "evidence": "11:02:26 — The teacher explains: \"I am going to give you an ice cream... you will count the pom poms and stick them in the ice cream cone.\""
+  },
+  "9": {
+    "answer": "The space feels calm and inviting, with plenty of open space, natural light from the window, and a structured layout that prevents overstimulation.",
+    "confidence": "high",
+    "evidence": "11:01:30 — The children sit calmly on their mats in a well-lit, spacious room."
+  },
+  "10": {
+    "answer": "The colorful pom poms and the fun theme of making \"ice cream\" serve as an engaging element that excites the children.",
+    "confidence": "high",
+    "evidence": "11:02:30 — The children show excitement when the teacher introduces the ice cream sheets and pom poms."
+  },
+  "11": {
+    "answer": "The small pom poms could be a choking hazard for very young children, but they are appropriate for this age group under teacher supervision. The furniture and floor appear safe and stable.",
+    "confidence": "high",
+    "evidence": "11:04:30 — The children safely handle the small pom poms under the close supervision of the teacher."
+  },
+  "12": {
+    "answer": "No, the space is set up after the children enter the room. The teachers lay out the mats and desks while the children wait.",
+    "confidence": "high",
+    "evidence": "10:59:47 - 11:01:14 — The teachers carry in and arrange the mats and desks while the children stand and watch."
+  },
+  "13": {
+    "answer": "The learning objective is counting and number recognition, as indicated by the numbers written on the desks/sheets and the corresponding number of items (pom poms) to be placed on them.",
+    "confidence": "high",
+    "evidence": "11:02:00 — The teacher points to numbers on the desks, prompting the children to count."
+  },
+  "14": {
+    "answer": "The activity is mixed; the teacher directs the setup, instructions, and structure, but the children independently count and stick the pom poms on their own sheets.",
+    "confidence": "high",
+    "evidence": "11:05:00 — Children work independently on their sheets while the teacher monitors and assists."
+  },
+  "15": {
+    "answer": "It targets cognitive skills (counting, number recognition), fine motor skills (picking up small pom poms, applying glue, sticking), and language skills (counting aloud and discussing colors).",
+    "confidence": "high",
+    "evidence": "11:06:00 — A child carefully picks up a pom pom, applies glue, and sticks it while counting aloud."
+  },
+  "16": {
+    "answer": "Yes, children can choose different colors of pom poms to place on their ice cream cones.",
+    "confidence": "high",
+    "evidence": "11:04:30 — The children select various colored pom poms from the tray to place on their sheets."
+  },
+  "17": {
+    "answer": "There is a structured \"right\" outcome in terms of the count (matching the number on the sheet), but children have creative freedom in choosing the colors and arrangement of the pom poms.",
+    "confidence": "high",
+    "evidence": "11:07:00 — Children have different color combinations of pom poms on their sheets, but all match the required count."
+  },
+  "18": {
+    "answer": "Yes, counting up to 10 and sticking pom poms is highly developmentally appropriate for 3-5 year olds.",
+    "confidence": "high",
+    "evidence": "11:02:10 — The children successfully count from one to ten as a group."
+  },
+  "19": {
+    "answer": "Yes, the active part of the activity lasts about 10-12 minutes, which is ideal for keeping preschool children engaged without losing focus.",
+    "confidence": "high",
+    "evidence": "11:03:00 - 11:15:00 — The children remain focused and engaged on their tasks for the duration of the activity."
+  },
+  "20": {
+    "answer": "Yes, children who are still learning to count can receive more direct guidance from the teacher, while more advanced children can count and stick independently.",
+    "confidence": "high",
+    "evidence": "11:06:30 — The teacher helps one child count step-by-step, while other children work independently."
+  },
+  "21": {
+    "answer": "There are no explicit visible extensions shown, but children who finish can talk about their work or help peers.",
+    "confidence": "medium",
+    "evidence": "11:14:00 — Children who finish early stand up and show their completed sheets to the teacher."
+  },
+  "22": {
+    "answer": "Yes, the teacher provides direct physical and verbal scaffolding, pointing to the numbers and counting aloud with individual children.",
+    "confidence": "high",
+    "evidence": "11:09:15 — The teacher kneels next to a child, pointing to each pom pom and counting aloud with them."
+  },
+  "23": {
+    "answer": "Yes, the activity uses universal visual and tactile materials (pom poms, drawings) that are accessible and inviting to all children regardless of background.",
+    "confidence": "high",
+    "evidence": "11:04:30 — All children in the circle are actively and equally participating in the activity."
+  },
+  "24": {
+    "answer": "No, they must wait for the teacher to distribute the sheets, glue, and pom poms and explain the instructions.",
+    "confidence": "high",
+    "evidence": "11:02:30 — The children sit and wait as the teacher explains the instructions before distributing the materials."
+  },
+  "25": {
+    "answer": "No, the materials (pom poms and glue) are managed and distributed primarily by the teacher.",
+    "confidence": "high",
+    "evidence": "11:04:15 — The teacher brings the tray of pom poms and distributes them to the children's desks."
+  },
+  "26": {
+    "answer": "The teacher's tone is warm, encouraging, and enthusiastic throughout the activity.",
+    "confidence": "high",
+    "evidence": "11:02:00 — The teacher speaks in an enthusiastic, high-pitched, and welcoming voice."
+  },
+  "27": {
+    "answer": "Yes, the teacher frequently uses the children's names, such as \"Shailo,\" \"Maya,\" \"Shanaya,\" and \"Amara.\"",
+    "confidence": "high",
+    "evidence": "11:03:19 — The teacher calls out \"Shailo\" to hand her a sheet, and \"Maya\" at 11:04:34."
+  },
+  "28": {
+    "answer": "Yes, the teacher smiles, uses enthusiastic gestures, praises the children (\"Good job!\", \"Very nice!\"), and gently guides them with warm physical contact.",
+    "confidence": "high",
+    "evidence": "11:11:00 — The teacher smiles and praises a child, gently touching their shoulder."
+  },
+  "29": {
+    "answer": "No, the teacher remains patient, calm, and supportive throughout the entire video.",
+    "confidence": "high",
+    "evidence": "11:09:15 — The teacher patiently counts with a child who is struggling, maintaining a warm tone."
+  },
+  "30": {
+    "answer": "No, the teacher's voice is consistently gentle, clear, and encouraging.",
+    "confidence": "high",
+    "evidence": "11:05:15 — The teacher speaks softly and encouragingly to individual children."
+  },
+  "31": {
+    "answer": "No, there is no negative or disciplinary language used.",
+    "confidence": "high",
+    "evidence": "11:00:00 - 11:16:00 — The entire interaction is positive and supportive."
+  },
+  "32": {
+    "answer": "No, all comments are positive, encouraging, or instructional.",
+    "confidence": "high",
+    "evidence": "11:04:40 — The teacher praises a child's effort with \"Good job!\""
+  },
+  "33": {
+    "answer": "No, the teacher treats all children with respect and provides individual encouragement.",
+    "confidence": "high",
+    "evidence": "11:06:30 — The teacher provides gentle, private guidance to a child needing help."
+  },
+  "34": {
+    "answer": "No, all physical interactions are gentle, supportive, and safe.",
+    "confidence": "high",
+    "evidence": "11:09:15 — The teacher gently guides the child's hand to help them count."
+  },
+  "35": {
+    "answer": "Yes, the teacher actively monitors the room and moves to assist children who are hesitating or need help with counting or gluing.",
+    "confidence": "high",
+    "evidence": "11:06:30 — The teacher notices a child hesitating and kneels down to assist them."
+  },
+  "36": {
+    "answer": "Yes, the teacher responds warmly to children's excitement about their progress and guides them gently when they seem confused.",
+    "confidence": "high",
+    "evidence": "11:11:00 — The teacher shares a happy moment with a child who successfully completed their task."
+  },
+  "37": {
+    "answer": "When a child has difficulty counting or sticking, the teacher kneels down next to them and patiently counts aloud with them, pointing to each pom pom.",
+    "confidence": "high",
+    "evidence": "11:09:15 — The teacher kneels next to a child and counts aloud with them to help them complete the task."
+  },
+  "38": {
+    "answer": "Yes, children call out to the teacher to show their completed work or to ask for more pom poms.",
+    "confidence": "high",
+    "evidence": "11:11:14 — A child calls out \"Teacher!\" to show their completed sheet."
+  },
+  "39": {
+    "answer": "The teacher allows children to choose which colors of pom poms to use, though the overall task is structured.",
+    "confidence": "high",
+    "evidence": "11:04:30 — Children choose their own colors of pom poms from the tray."
+  },
+  "40": {
+    "answer": "Yes, children are sitting on mats and can shift their positions, and some stand up or move slightly during the activity.",
+    "confidence": "high",
+    "evidence": "11:12:00 — A child stands up briefly to adjust their position while working."
+  },
+  "41": {
+    "answer": "The teacher mostly sticks to the structured counting activity but allows children to work at their own pace and choose their colors.",
+    "confidence": "high",
+    "evidence": "11:07:00 — Children work at different speeds and use different colors of pom poms."
+  },
+  "42": {
+    "answer": "Yes, children's comments and counting are welcomed and praised by the teacher.",
+    "confidence": "high",
+    "evidence": "11:02:10 — The teacher enthusiastically repeats the numbers counted by the children."
+  },
+  "43": {
+    "answer": "Yes, the teacher explains the activity clearly before starting: \"You will count the pom poms and stick them in the ice cream cone.\"",
+    "confidence": "high",
+    "evidence": "11:02:36 — The teacher explains the instructions clearly to the group."
+  },
+  "44": {
+    "answer": "There are no major disruptions; the teacher keeps children focused by maintaining a warm, engaging presence and guiding them individually.",
+    "confidence": "high",
+    "evidence": "11:06:00 — The teacher's close presence keeps all children focused on their desks."
+  },
+  "45": {
+    "answer": "No children appear distressed during the video; they all seem engaged and comfortable.",
+    "confidence": "high",
+    "evidence": "11:00:00 - 11:16:00 — The children remain calm and happy throughout the recording."
+  },
+  "46": {
+    "answer": "There are no visible conflicts between the children during the video.",
+    "confidence": "high",
+    "evidence": "11:00:00 - 11:16:00 — The children work peacefully side-by-side."
+  },
+  "47": {
+    "answer": "All children participate actively; the teacher keeps them engaged by sitting close to them and offering encouragement.",
+    "confidence": "high",
+    "evidence": "11:09:15 — The teacher sits close to a child to keep them focused and engaged."
+  },
+  "48": {
+    "answer": "The transition at the start is slightly slow as the teachers set up the mats and desks while the children wait, but the transition to the activity itself is smooth once everything is set up.",
+    "confidence": "high",
+    "evidence": "10:59:47 - 11:01:14 — The children wait while the teachers set up the mats and desks."
+  },
+  "49": {
+    "answer": "About 1.5 minutes are spent on setup/waiting (10:59:47 to 11:01:14), 1.5 minutes on the warm-up and introduction (11:01:14 to 11:02:45), and about 13 minutes on the active counting and sticking activity (11:02:45 to 11:16:00).",
+    "confidence": "high",
+    "evidence": "11:02:45 - 11:16:00 — The active counting and sticking activity takes up the majority of the video."
+  },
+  "50": {
+    "answer": "No, the activity maintains good momentum as children are busy counting and sticking, and the teacher continuously moves around to support them.",
+    "confidence": "high",
+    "evidence": "11:08:00 — All children are actively working, and there are no lulls in the activity."
+  },
+  "51": {
+    "answer": "The video ends while some children are finishing up and others are starting to stand up, showing a gradual wrap-up.",
+    "confidence": "high",
+    "evidence": "11:15:30 — Some children stand up with their completed sheets while others continue working."
+  },
+  "52": {
+    "answer": "The teacher uses hands-on practice, physical gestures (warm-up), verbal counting, and direct demonstration/scaffolding.",
+    "confidence": "high",
+    "evidence": "11:01:30 — The teacher leads a physical warm-up exercise with hand gestures."
+  },
+  "53": {
+    "answer": "Yes, the entire core of the activity is hands-on, with each child working on their own sheet with glue and pom poms.",
+    "confidence": "high",
+    "evidence": "11:05:00 — Every child is actively using their hands to glue and stick pom poms."
+  },
+  "54": {
+    "answer": "No, the teacher's questions are mostly focused on counting and number identification (e.g., \"How many?\", \"What number is this?\") rather than open-ended \"why\" or \"how\" questions.",
+    "confidence": "high",
+    "evidence": "11:02:00 — The teacher asks \"What is this?\" and \"What number?\" to prompt counting."
+  },
+  "55": {
+    "answer": "Yes, the teacher connects the activity to \"ice cream cones,\" which is a familiar real-world concept for children.",
+    "confidence": "high",
+    "evidence": "11:02:26 — The teacher introduces the activity using the concept of making an \"ice cream.\""
+  },
+  "56": {
+    "answer": "The teacher encourages children to count independently and choose their own colors, but the task itself is highly structured.",
+    "confidence": "high",
+    "evidence": "11:07:00 — Children choose their own colors of pom poms to complete the structured counting task."
+  },
+  "57": {
+    "answer": "Yes, the teacher prompts children to count aloud themselves and guides them step-by-step rather than doing it for them.",
+    "confidence": "high",
+    "evidence": "11:09:15 — The teacher points to the pom poms and lets the child say the numbers aloud."
+  },
+  "58": {
+    "answer": "Yes, the teacher spends more time sitting closely and counting step-by-step with children who need extra help, while letting others work more independently.",
+    "confidence": "high",
+    "evidence": "11:06:30 — The teacher provides close, individual support to one child while others work independently."
+  },
+  "59": {
+    "answer": "Yes, when a child counts, the teacher often follows up by asking them to stick the corresponding number of pom poms or asking about the next number.",
+    "confidence": "high",
+    "evidence": "11:09:30 — The teacher follows up a child's counting by guiding them to stick the next pom pom."
+  },
+  "60": {
+    "answer": "The encouragement is a mix of generic (\"Good job!\", \"Very nice!\") and specific praise related to their counting and sticking success.",
+    "confidence": "high",
+    "evidence": "11:11:00 — The teacher praises a child's successful completion of their sheet."
+  },
+  "61": {
+    "answer": "The questions are mostly closed or recall-based, focusing on numbers, counting, and colors (e.g., \"What number is this?\", \"How many?\").",
+    "confidence": "high",
+    "evidence": "11:02:00 — The teacher asks closed questions about the numbers on the desks."
+  },
+  "62": {
+    "answer": "The vocabulary is simple and appropriate for preschool children, focusing on numbers, colors, counting, and \"ice cream.\"",
+    "confidence": "high",
+    "evidence": "11:02:30 — The teacher uses simple, clear language to explain the activity."
+  },
+  "63": {
+    "answer": "Yes, the teacher explicitly names actions like \"count,\" \"stick,\" and \"glue,\" and objects like \"pom poms\" and \"ice cream cone.\"",
+    "confidence": "high",
+    "evidence": "11:02:36 — The teacher explicitly names the actions and objects involved in the task."
+  },
+  "64": {
+    "answer": "Yes, when children count or name numbers, the teacher repeats and confirms their answers enthusiastically.",
+    "confidence": "high",
+    "evidence": "11:02:05 — The teacher repeats and validates the numbers counted by the children."
+  },
+  "65": {
+    "answer": "At the peak of the activity, all 5 children are actively engaged in counting and sticking pom poms, with 0 children disengaged.",
+    "confidence": "high",
+    "evidence": "11:07:00 — All five children are focused on their individual desks, working on their sheets."
+  },
+  "66": {
+    "answer": "All 5 children were engaged for at least 80% of the active time, as they remained focused on their individual desks and sheets throughout the activity.",
+    "confidence": "high",
+    "evidence": "11:03:00 - 11:15:00 — The children remain seated and focused on their tasks for the entire duration."
+  },
+  "67": {
+    "answer": "They mostly stick to the structured approach of counting and sticking pom poms as instructed, but they show variation in their choice of colors and placement.",
+    "confidence": "high",
+    "evidence": "11:07:00 — Children follow the same basic procedure but create unique color patterns."
+  },
+  "68": {
+    "answer": "At least 2 children ask questions or call out to the teacher for assistance or to show their work.",
+    "confidence": "high",
+    "evidence": "11:11:14 — A child calls out to the teacher to show their progress."
+  },
+  "69": {
+    "answer": "The children ask for help with glue or pom poms, and call out to show their progress, such as \"Look, teacher!\" or asking about colors.",
+    "confidence": "high",
+    "evidence": "11:11:14 — A child calls out to show their completed work to the teacher."
+  },
+  "70": {
+    "answer": "They wait for the teacher to distribute the materials and give instructions before starting.",
+    "confidence": "high",
+    "evidence": "11:02:45 — The children sit quietly and wait for their sheets and materials to be handed out."
+  },
+  "71": {
+    "answer": "Yes, they choose which colors of pom poms to use for their ice cream scoops.",
+    "confidence": "high",
+    "evidence": "11:04:30 — Children select their preferred colors of pom poms from the shared tray."
+  },
+  "72": {
+    "answer": "They mostly rely on the teacher to help them with glue or to provide more pom poms, rather than solving these issues independently.",
+    "confidence": "high",
+    "evidence": "11:11:14 — A child asks the teacher for assistance with their materials."
+  },
+  "73": {
+    "answer": "Yes, the children appear very happy, relaxed, and comfortable, smiling and participating enthusiastically.",
+    "confidence": "high",
+    "evidence": "11:02:10 — The children smile and count aloud happily with the teacher."
+  },
+  "74": {
+    "answer": "No, there are no visible signs of frustration, anxiety, or distress among the children.",
+    "confidence": "high",
+    "evidence": "11:00:00 - 11:16:00 — The children remain calm and content throughout the video."
+  },
+  "75": {
+    "answer": "Most children seem confident in their counting and sticking, though they occasionally look to the teacher for confirmation or praise.",
+    "confidence": "high",
+    "evidence": "11:07:00 — Children work confidently on their sheets, occasionally showing their progress."
+  },
+  "76": {
+    "answer": "There is minimal direct interaction between the children, as they are highly focused on their own individual desks and sheets, but they sit close together and observe each other.",
+    "confidence": "high",
+    "evidence": "11:08:00 — The children work quietly side-by-side, focused on their own desks."
+  },
+  "77": {
+    "answer": "The children share the space considerately on their mats, but they work individually on their own sheets rather than cooperating on a joint task.",
+    "confidence": "high",
+    "evidence": "11:07:00 — Children sit close together and share the space peacefully while working individually."
+  },
+  "78": {
+    "answer": "There are no visible conflicts observed between the children.",
+    "confidence": "high",
+    "evidence": "11:00:00 - 11:16:00 — The children work peacefully without any disputes."
+  },
+  "79": {
+    "answer": "The children work individually, so there is no active inclusion or exclusion by peers, but the teacher ensures everyone is included.",
+    "confidence": "high",
+    "evidence": "11:07:00 — All children are equally included in the circle and participate in the activity."
+  },
+  "80": {
+    "answer": "Yes, children count aloud as they place the pom poms and talk about the colors they are using.",
+    "confidence": "high",
+    "evidence": "11:09:15 — A child counts aloud \"one, two, three...\" as they place the pom poms."
+  },
+  "81": {
+    "answer": "No, they follow the structured task of counting and sticking pom poms without trying to modify it significantly.",
+    "confidence": "high",
+    "evidence": "11:07:00 — All children follow the same procedure of gluing and sticking pom poms."
+  },
+  "82": {
+    "answer": "Yes, each child creates a completed ice cream cone sheet decorated with counted pom poms.",
+    "confidence": "high",
+    "evidence": "11:14:00 — Children hold up their completed ice cream cone sheets."
+  },
+  "83": {
+    "answer": "The teacher speaks throughout almost the entire video (from 11:00:15 to 11:16:00) to guide, instruct, and encourage. The children speak primarily during the group counting at 11:02:00 - 11:02:25, and individually when counting or calling out to the teacher.",
+    "confidence": "high",
+    "evidence": "11:02:00 — Group counting by children; 11:09:15 — Individual child counting aloud with the teacher."
+  },
+  "84": {
+    "answer": "The activity is mostly structured/transmitted (the teacher provides the template and rules), but the counting process is co-constructed as the teacher and child count aloud together to solve the task.",
+    "confidence": "high",
+    "evidence": "11:09:15 — The teacher and child count aloud together, co-constructing the correct count."
+  },
+  "85": {
+    "answer": "Yes, there are shared moments of joy and enthusiasm during the warm-up exercise and when children successfully count and stick their pom poms.",
+    "confidence": "high",
+    "evidence": "11:01:30 — Shared laughter and smiles during the hand-wiggling warm-up."
+  },
+  "86": {
+    "answer": "The teacher physically joins the children by kneeling or sitting on the floor next to their mats to guide them closely.",
+    "confidence": "high",
+    "evidence": "11:06:30 — The teacher kneels on the floor next to a child's desk to assist them."
+  },
+  "87": {
+    "answer": "Yes, the teacher moves around the circle and interacts individually with each of the 5 children at their desks.",
+    "confidence": "high",
+    "evidence": "11:05:15 - 11:12:00 — The teacher provides individual attention and guidance to every child in the circle."
+  },
+  "88": {
+    "answer": "No, the teacher distributes her attention relatively evenly, moving around the circle to check on and assist each child.",
+    "confidence": "high",
+    "evidence": "11:05:00 - 11:12:00 — The teacher moves systematically around the circle, spending time with each child."
+  },
+  "89": {
+    "answer": "Yes, the teacher actively approaches quieter children to encourage them and count with them.",
+    "confidence": "high",
+    "evidence": "11:06:30 — The teacher sits with a quieter child to encourage their participation."
+  },
+  "90": {
+    "answer": "Yes, all children participate in the group counting at 11:02:00, and each child speaks or counts aloud individually with the teacher during the activity.",
+    "confidence": "high",
+    "evidence": "11:02:00 — All children count aloud together; 11:09:15 — Individual child counts aloud."
+  },
+  "91": {
+    "answer": "When children make mistakes in counting, the teacher gently guides them to recount rather than shutting them down, keeping the tone positive and supportive.",
+    "confidence": "high",
+    "evidence": "11:09:15 — The teacher gently helps a child correct their count by counting aloud with them."
+  }
+}

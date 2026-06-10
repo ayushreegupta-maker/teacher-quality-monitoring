@@ -1,0 +1,1561 @@
+{
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:00:30",
+      "description": "A teacher is seen walking towards the children, who are seated at a table. The teacher then kneels down to interact with a child."
+    },
+    {
+      "ts_start": "00:00:30",
+      "ts_end": "00:01:00",
+      "description": "The teacher is still kneeling and interacting with the child. Another child in a red dress approaches the table."
+    },
+    {
+      "ts_start": "00:01:00",
+      "ts_end": "00:01:30",
+      "description": "The teacher stands up and walks away from the table. Another teacher approaches the children at the table. A child in a black dress walks towards the shelves with toys."
+    },
+    {
+      "ts_start": "00:01:30",
+      "ts_end": "00:02:00",
+      "description": "The child in the black dress is playing with toys on the shelf. The teacher kneels down to interact with another child. Another teacher walks towards the children."
+    },
+    {
+      "ts_start": "00:02:00",
+      "ts_end": "00:02:30",
+      "description": "The child in the black dress walks towards the center of the room. The teacher is still kneeling and interacting with the child. Another child in a white dress walks towards the center of the room."
+    },
+    {
+      "ts_start": "00:02:30",
+      "ts_end": "00:03:00",
+      "description": "The child in the black dress is playing with toys on the floor. The teacher is still kneeling and interacting with the child. Another child in a white dress walks towards the center of the room."
+    },
+    {
+      "ts_start": "00:03:00",
+      "ts_end": "00:03:30",
+      "description": "The teacher stands up and walks away from the children. Another teacher approaches the children at the table. The child in the black dress is still playing with toys on the floor."
+    },
+    {
+      "ts_start": "00:03:30",
+      "ts_end": "00:04:00",
+      "description": "The teacher is interacting with the children at the table. The child in the black dress is still playing with toys on the floor. Another child in a pink dress walks towards the center of the room."
+    },
+    {
+      "ts_start": "00:04:00",
+      "ts_end": "00:04:30",
+      "description": "The teacher is still interacting with the children at the table. The child in the black dress is still playing with toys on the floor. Another child in a pink dress walks towards the center of the room."
+    },
+    {
+      "ts_start": "00:04:30",
+      "ts_end": "00:05:00",
+      "description": "The teacher is still interacting with the children at the table. The child in the black dress is still playing with toys on the floor. Another child in a pink dress walks towards the center of the room."
+    }
+  ],
+  "transcript": [
+    {
+      "ts_start": "00:00:00",
+      "speaker": "TEACHER",
+      "text": "You know what, you want to go paint on the paper? You want orange?"
+    },
+    {
+      "ts_start": "00:00:01",
+      "speaker": "STUDENT_1",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:02",
+      "speaker": "TEACHER",
+      "text": "I don't want to. It's okay."
+    },
+    {
+      "ts_start": "00:00:03",
+      "speaker": "STUDENT_2",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:04",
+      "speaker": "TEACHER",
+      "text": "You need to get the paints out here. You guys can move whatever you want to go color the paper. Rana, I'm putting the paints out here. You can use this. You want to use this to go painting? You want orange?"
+    },
+    {
+      "ts_start": "00:00:05",
+      "speaker": "STUDENT_3",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:06",
+      "speaker": "STUDENT_4",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:07",
+      "speaker": "STUDENT_5",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:08",
+      "speaker": "STUDENT_6",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:09",
+      "speaker": "STUDENT_7",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:10",
+      "speaker": "STUDENT_8",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:11",
+      "speaker": "STUDENT_9",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:12",
+      "speaker": "STUDENT_10",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:13",
+      "speaker": "STUDENT_11",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:14",
+      "speaker": "STUDENT_12",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:15",
+      "speaker": "STUDENT_13",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:16",
+      "speaker": "STUDENT_14",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:17",
+      "speaker": "STUDENT_15",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:18",
+      "speaker": "STUDENT_16",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:19",
+      "speaker": "STUDENT_17",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:20",
+      "speaker": "STUDENT_18",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:21",
+      "speaker": "STUDENT_19",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:22",
+      "speaker": "STUDENT_20",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:23",
+      "speaker": "STUDENT_21",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:24",
+      "speaker": "STUDENT_22",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:25",
+      "speaker": "STUDENT_23",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:26",
+      "speaker": "STUDENT_24",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:27",
+      "speaker": "STUDENT_25",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:28",
+      "speaker": "STUDENT_26",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:29",
+      "speaker": "STUDENT_27",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:30",
+      "speaker": "STUDENT_28",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:31",
+      "speaker": "STUDENT_29",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:32",
+      "speaker": "STUDENT_30",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:33",
+      "speaker": "STUDENT_31",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:34",
+      "speaker": "STUDENT_32",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:35",
+      "speaker": "STUDENT_33",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:36",
+      "speaker": "STUDENT_34",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:37",
+      "speaker": "STUDENT_35",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:38",
+      "speaker": "STUDENT_36",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:39",
+      "speaker": "STUDENT_37",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:40",
+      "speaker": "STUDENT_38",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:41",
+      "speaker": "STUDENT_39",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:42",
+      "speaker": "STUDENT_40",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:43",
+      "speaker": "STUDENT_41",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:44",
+      "speaker": "STUDENT_42",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:45",
+      "speaker": "STUDENT_43",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:46",
+      "speaker": "STUDENT_44",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:47",
+      "speaker": "STUDENT_45",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:48",
+      "speaker": "STUDENT_46",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:49",
+      "speaker": "STUDENT_47",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:50",
+      "speaker": "STUDENT_48",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:51",
+      "speaker": "STUDENT_49",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:52",
+      "speaker": "STUDENT_50",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:53",
+      "speaker": "STUDENT_51",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:54",
+      "speaker": "STUDENT_52",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:55",
+      "speaker": "STUDENT_53",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:56",
+      "speaker": "STUDENT_54",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:57",
+      "speaker": "STUDENT_55",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:58",
+      "speaker": "STUDENT_56",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:59",
+      "speaker": "STUDENT_57",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:00",
+      "speaker": "STUDENT_58",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:01",
+      "speaker": "STUDENT_59",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:02",
+      "speaker": "STUDENT_60",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:03",
+      "speaker": "STUDENT_61",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:04",
+      "speaker": "STUDENT_62",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:05",
+      "speaker": "STUDENT_63",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:06",
+      "speaker": "STUDENT_64",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:07",
+      "speaker": "STUDENT_65",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:08",
+      "speaker": "STUDENT_66",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:09",
+      "speaker": "STUDENT_67",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:10",
+      "speaker": "STUDENT_68",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:11",
+      "speaker": "STUDENT_69",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:12",
+      "speaker": "STUDENT_70",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:13",
+      "speaker": "STUDENT_71",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:14",
+      "speaker": "STUDENT_72",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:15",
+      "speaker": "STUDENT_73",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:16",
+      "speaker": "STUDENT_74",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:17",
+      "speaker": "STUDENT_75",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:18",
+      "speaker": "STUDENT_76",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:19",
+      "speaker": "STUDENT_77",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:20",
+      "speaker": "STUDENT_78",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:21",
+      "speaker": "STUDENT_79",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:22",
+      "speaker": "STUDENT_80",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:23",
+      "speaker": "STUDENT_81",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:24",
+      "speaker": "STUDENT_82",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:25",
+      "speaker": "STUDENT_83",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:26",
+      "speaker": "STUDENT_84",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:27",
+      "speaker": "STUDENT_85",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:28",
+      "speaker": "STUDENT_86",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:29",
+      "speaker": "STUDENT_87",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:30",
+      "speaker": "STUDENT_88",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:31",
+      "speaker": "STUDENT_89",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:32",
+      "speaker": "STUDENT_90",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:33",
+      "speaker": "STUDENT_91",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:34",
+      "speaker": "STUDENT_92",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:35",
+      "speaker": "STUDENT_93",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:36",
+      "speaker": "STUDENT_94",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:37",
+      "speaker": "STUDENT_95",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:38",
+      "speaker": "STUDENT_96",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:39",
+      "speaker": "STUDENT_97",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:40",
+      "speaker": "STUDENT_98",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:41",
+      "speaker": "STUDENT_99",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:42",
+      "speaker": "STUDENT_100",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:43",
+      "speaker": "STUDENT_101",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:44",
+      "speaker": "STUDENT_102",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:45",
+      "speaker": "STUDENT_103",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:46",
+      "speaker": "STUDENT_104",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:47",
+      "speaker": "STUDENT_105",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:48",
+      "speaker": "STUDENT_106",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:49",
+      "speaker": "STUDENT_107",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:50",
+      "speaker": "STUDENT_108",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:51",
+      "speaker": "STUDENT_109",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:52",
+      "speaker": "STUDENT_110",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:53",
+      "speaker": "STUDENT_111",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:54",
+      "speaker": "STUDENT_112",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:55",
+      "speaker": "STUDENT_113",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:56",
+      "speaker": "STUDENT_114",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:57",
+      "speaker": "STUDENT_115",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:58",
+      "speaker": "STUDENT_116",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:01:59",
+      "speaker": "STUDENT_117",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:00",
+      "speaker": "STUDENT_118",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:01",
+      "speaker": "STUDENT_119",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:02",
+      "speaker": "STUDENT_120",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:03",
+      "speaker": "STUDENT_121",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:04",
+      "speaker": "STUDENT_122",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:05",
+      "speaker": "STUDENT_123",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:06",
+      "speaker": "STUDENT_124",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:07",
+      "speaker": "STUDENT_125",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:08",
+      "speaker": "STUDENT_126",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:09",
+      "speaker": "STUDENT_127",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:10",
+      "speaker": "STUDENT_128",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:11",
+      "speaker": "STUDENT_129",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:12",
+      "speaker": "STUDENT_130",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:13",
+      "speaker": "STUDENT_131",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:14",
+      "speaker": "STUDENT_132",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:15",
+      "speaker": "STUDENT_133",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:16",
+      "speaker": "STUDENT_134",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:17",
+      "speaker": "STUDENT_135",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:18",
+      "speaker": "STUDENT_136",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:19",
+      "speaker": "STUDENT_137",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:20",
+      "speaker": "STUDENT_138",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:21",
+      "speaker": "STUDENT_139",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:22",
+      "speaker": "STUDENT_140",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:23",
+      "speaker": "STUDENT_141",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:24",
+      "speaker": "STUDENT_142",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:25",
+      "speaker": "STUDENT_143",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:26",
+      "speaker": "STUDENT_144",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:27",
+      "speaker": "STUDENT_145",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:28",
+      "speaker": "STUDENT_146",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:29",
+      "speaker": "STUDENT_147",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:30",
+      "speaker": "STUDENT_148",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:31",
+      "speaker": "STUDENT_149",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:32",
+      "speaker": "STUDENT_150",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:33",
+      "speaker": "STUDENT_151",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:34",
+      "speaker": "STUDENT_152",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:35",
+      "speaker": "STUDENT_153",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:36",
+      "speaker": "STUDENT_154",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:37",
+      "speaker": "STUDENT_155",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:38",
+      "speaker": "STUDENT_156",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:39",
+      "speaker": "STUDENT_157",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:40",
+      "speaker": "STUDENT_158",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:41",
+      "speaker": "STUDENT_159",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:42",
+      "speaker": "STUDENT_160",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:43",
+      "speaker": "STUDENT_161",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:44",
+      "speaker": "STUDENT_162",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:45",
+      "speaker": "STUDENT_163",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:46",
+      "speaker": "STUDENT_164",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:47",
+      "speaker": "STUDENT_165",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:48",
+      "speaker": "STUDENT_166",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:49",
+      "speaker": "STUDENT_167",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:50",
+      "speaker": "STUDENT_168",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:51",
+      "speaker": "STUDENT_169",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:52",
+      "speaker": "STUDENT_170",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:53",
+      "speaker": "STUDENT_171",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:54",
+      "speaker": "STUDENT_172",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:55",
+      "speaker": "STUDENT_173",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:56",
+      "speaker": "STUDENT_174",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:57",
+      "speaker": "STUDENT_175",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:58",
+      "speaker": "STUDENT_176",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:02:59",
+      "speaker": "STUDENT_177",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:00",
+      "speaker": "STUDENT_178",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:01",
+      "speaker": "STUDENT_179",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:02",
+      "speaker": "STUDENT_180",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:03",
+      "speaker": "STUDENT_181",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:04",
+      "speaker": "STUDENT_182",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:05",
+      "speaker": "STUDENT_183",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:06",
+      "speaker": "STUDENT_184",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:07",
+      "speaker": "STUDENT_185",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:08",
+      "speaker": "STUDENT_186",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:09",
+      "speaker": "STUDENT_187",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:10",
+      "speaker": "STUDENT_188",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:11",
+      "speaker": "STUDENT_189",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:12",
+      "speaker": "STUDENT_190",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:13",
+      "speaker": "STUDENT_191",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:14",
+      "speaker": "STUDENT_192",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:15",
+      "speaker": "STUDENT_193",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:16",
+      "speaker": "STUDENT_194",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:17",
+      "speaker": "STUDENT_195",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:18",
+      "speaker": "STUDENT_196",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:19",
+      "speaker": "STUDENT_197",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:20",
+      "speaker": "STUDENT_198",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:21",
+      "speaker": "STUDENT_199",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:22",
+      "speaker": "STUDENT_200",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:23",
+      "speaker": "STUDENT_201",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:24",
+      "speaker": "STUDENT_202",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:25",
+      "speaker": "STUDENT_203",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:26",
+      "speaker": "STUDENT_204",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:27",
+      "speaker": "STUDENT_205",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:28",
+      "speaker": "STUDENT_206",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:29",
+      "speaker": "STUDENT_207",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:30",
+      "speaker": "STUDENT_208",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:31",
+      "speaker": "STUDENT_209",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:32",
+      "speaker": "STUDENT_210",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:33",
+      "speaker": "STUDENT_211",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:34",
+      "speaker": "STUDENT_212",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:35",
+      "speaker": "STUDENT_213",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:36",
+      "speaker": "STUDENT_214",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:37",
+      "speaker": "STUDENT_215",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:38",
+      "speaker": "STUDENT_216",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:39",
+      "speaker": "STUDENT_217",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:40",
+      "speaker": "STUDENT_218",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:41",
+      "speaker": "STUDENT_219",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:42",
+      "speaker": "STUDENT_220",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:43",
+      "speaker": "STUDENT_221",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:44",
+      "speaker": "STUDENT_222",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:45",
+      "speaker": "STUDENT_223",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:46",
+      "speaker": "STUDENT_224",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:47",
+      "speaker": "STUDENT_225",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:48",
+      "speaker": "STUDENT_226",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:49",
+      "speaker": "STUDENT_227",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:50",
+      "speaker": "STUDENT_228",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:51",
+      "speaker": "STUDENT_229",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:52",
+      "speaker": "STUDENT_230",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:53",
+      "speaker": "STUDENT_231",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:54",
+      "speaker": "STUDENT_232",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:55",
+      "speaker": "STUDENT_233",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:56",
+      "speaker": "STUDENT_234",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:57",
+      "speaker": "STUDENT_235",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:58",
+      "speaker": "STUDENT_236",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:03:59",
+      "speaker": "STUDENT_237",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:00",
+      "speaker": "STUDENT_238",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:01",
+      "speaker": "STUDENT_239",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:02",
+      "speaker": "STUDENT_240",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:03",
+      "speaker": "STUDENT_241",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:04",
+      "speaker": "STUDENT_242",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:05",
+      "speaker": "STUDENT_243",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:06",
+      "speaker": "STUDENT_244",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:07",
+      "speaker": "STUDENT_245",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:08",
+      "speaker": "STUDENT_246",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:09",
+      "speaker": "STUDENT_247",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:10",
+      "speaker": "STUDENT_248",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:11",
+      "speaker": "STUDENT_249",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:12",
+      "speaker": "STUDENT_250",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:13",
+      "speaker": "STUDENT_251",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:14",
+      "speaker": "STUDENT_252",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:15",
+      "speaker": "STUDENT_253",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:16",
+      "speaker": "STUDENT_254",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:17",
+      "speaker": "STUDENT_255",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:18",
+      "speaker": "STUDENT_256",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:19",
+      "speaker": "STUDENT_257",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:20",
+      "speaker": "STUDENT_258",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:21",
+      "speaker": "STUDENT_259",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:22",
+      "speaker": "STUDENT_260",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:23",
+      "speaker": "STUDENT_261",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:24",
+      "speaker": "STUDENT_262",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:25",
+      "speaker": "STUDENT_263",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:26",
+      "speaker": "STUDENT_264",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:27",
+      "speaker": "STUDENT_265",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:28",
+      "speaker": "STUDENT_266",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:29",
+      "speaker": "STUDENT_267",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:30",
+      "speaker": "STUDENT_268",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:31",
+      "speaker": "STUDENT_269",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:32",
+      "speaker": "STUDENT_270",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:33",
+      "speaker": "STUDENT_271",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:34",
+      "speaker": "STUDENT_272",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:35",
+      "speaker": "STUDENT_273",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:36",
+      "speaker": "STUDENT_274",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:37",
+      "speaker": "STUDENT_275",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:38",
+      "speaker": "STUDENT_276",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:39",
+      "speaker": "STUDENT_277",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:40",
+      "speaker": "STUDENT_278",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:41",
+      "speaker": "STUDENT_279",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:42",
+      "speaker": "STUDENT_280",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:43",
+      "speaker": "STUDENT_281",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:44",
+      "speaker": "STUDENT_282",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:45",
+      "speaker": "STUDENT_283",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:46",
+      "speaker": "STUDENT_284",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:47",
+      "speaker": "STUDENT_285",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:48",
+      "speaker": "STUDENT_286",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:49",
+      "speaker": "STUDENT_287",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:50",
+      "speaker": "STUDENT_288",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:51",
+      "speaker": "STUDENT_289",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:52",
+      "speaker": "STUDENT_290",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:53",
+      "speaker": "STUDENT_291",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:54",
+      "speaker": "STUDENT_292",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:55",
+      "speaker": "STUDENT_293",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:56",
+      "speaker": "STUDENT_294",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:57",
+      "speaker": "STUDENT_295",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:58",
+      "speaker": "STUDENT_296",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:04:59",
+      "speaker": "STUDENT_297",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:05:00",
+      "speaker": "STUDENT_298",
+      "text": "[inaudible]"
+    }
+  ]
+}

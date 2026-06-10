@@ -1,0 +1,57 @@
+{
+  "session_id": "long_vision_20250918_activity_5_balloon_dance_after",
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:00:30",
+      "description": "A teacher and five children are sitting on the floor in a circle, playing with balloons. There are two white balloons and two yellow balloons. The children are wearing casual clothes. The room has light wooden flooring and white walls. There is a black board on the right side of the room."
+    },
+    {
+      "ts_start": "00:00:30",
+      "ts_end": "00:01:00",
+      "description": "The children continue to play with the balloons. One child in a blue dress stands up and walks around, holding a yellow balloon. Another child in a red shirt also stands up and walks around with a yellow balloon. The teacher remains seated, interacting with the children."
+    },
+    {
+      "ts_start": "00:01:00",
+      "ts_end": "00:01:30",
+      "description": "The children are still playing with the balloons. One child in a white shirt stands up and walks around with a white balloon. The teacher is helping a child in a blue shirt with a balloon. Another child in a blue dress is sitting on the floor, holding a yellow balloon."
+    },
+    {
+      "ts_start": "00:01:30",
+      "ts_end": "00:02:00",
+      "description": "The children are still playing with the balloons. One child in a blue shirt is crawling on the floor, pushing a white balloon. Another child in a red shirt is sitting on the floor, holding a yellow balloon. The teacher is interacting with the children, helping them with the balloons."
+    },
+    {
+      "ts_start": "00:02:00",
+      "ts_end": "00:02:30",
+      "description": "The children continue to play with the balloons. One child in a blue dress is standing and holding a yellow balloon. Another child in a white shirt is sitting on the floor, holding a white balloon. The teacher is still seated, interacting with the children."
+    },
+    {
+      "ts_start": "00:02:30",
+      "ts_end": "00:03:00",
+      "description": "A staff member in a blue uniform enters the room from the right side. The children continue to play with the balloons. The teacher is still seated, interacting with the children. Another staff member is visible in the background, sitting at a desk."
+    },
+    {
+      "ts_start": "00:03:00",
+      "ts_end": "00:03:30",
+      "description": "The staff member in the blue uniform is now standing near the children, observing them. The children are still playing with the balloons. The teacher is still seated, interacting with the children. Another staff member is visible in the background, sitting at a desk."
+    },
+    {
+      "ts_start": "00:03:30",
+      "ts_end": "00:04:00",
+      "description": "The children are still playing with the balloons. The teacher is still seated, interacting with the children. The staff member in the blue uniform is now walking towards the back of the room. Another staff member is visible in the background, sitting at a desk."
+    },
+    {
+      "ts_start": "00:04:00",
+      "ts_end": "00:04:30",
+      "description": "The children are still playing with the balloons. The teacher is still seated, interacting with the children. The staff member in the blue uniform is now standing near the back of the room, observing the children. Another staff member is visible in the background, sitting at a desk."
+    },
+    {
+      "ts_start": "00:04:30",
+      "ts_end": "00:04:59",
+      "description": "The children are still playing with the balloons. The teacher is still seated, interacting with the children. The staff member in the blue uniform is now walking towards the children, interacting with them. Another staff member is visible in the background, sitting at a desk."
+    }
+  ],
+  "source_model": "gemini-2.5-flash",
+  "prompt_hash": "99bf8e4581b5"
+}

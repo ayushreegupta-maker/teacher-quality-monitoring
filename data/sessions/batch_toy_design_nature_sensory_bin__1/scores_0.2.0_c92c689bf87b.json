@@ -1,0 +1,208 @@
+{
+  "session_id": "batch_toy_design_nature_sensory_bin__1",
+  "rubric_version": "0.2.0",
+  "scores": {
+    "purpose": {
+      "dimension_id": "purpose",
+      "rubric_version": "0.2.0",
+      "score": 0.5,
+      "anchor_matched": "Some cues to purpose are present but the arrangement is mixed or partially staged; intent is unclear in parts",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "01:00",
+          "type": "visual",
+          "quote": "In the center, there is a low, octagonal table covered with a white cloth, displaying various natural materials like leaves, twigs, and small stones.",
+          "indicator": "Materials arranged at the activity zone in a way that obviously communicates what to do",
+          "reasoning": "Natural materials are displayed on a central table, which provides some cue that children should explore them, but the arrangement is described as 'displaying' rather than staged with tools (scoops, containers, sorting trays) that would more clearly communicate sensory bin play."
+        },
+        {
+          "ts_start": "01:08",
+          "ts_end": "01:14",
+          "type": "visual",
+          "quote": "Two children, a girl in a pink dress and a boy in a light blue shirt, approach the central table. A woman in a green top kneels beside the table, engaging with the children and the materials.",
+          "indicator": "A child arriving at the activity zone could guess what to do from the arrangement alone",
+          "reasoning": "Children approach the table but an adult immediately kneels to engage and guide them, suggesting the arrangement alone may not have been fully self-explanatory without adult facilitation."
+        },
+        {
+          "ts_start": "01:20",
+          "ts_end": "01:26",
+          "type": "visual",
+          "quote": "The woman in green is kneeling and interacting with them, pointing to items.",
+          "indicator": "Materials clearly staged at the activity zone in a way that suggests their use",
+          "reasoning": "The adult pointing to items indicates the material arrangement alone was not fully sufficient to communicate purpose — adult instruction was needed to direct children's engagement."
+        },
+        {
+          "ts_start": "01:32",
+          "ts_end": "01:38",
+          "type": "visual",
+          "quote": "The children continue to explore the nature sensory bin. The two women are still kneeling, assisting the children.",
+          "indicator": "Materials clearly staged at the activity zone in a way that suggests their use",
+          "reasoning": "Ongoing adult assistance throughout the activity suggests the setup provided partial but not fully self-evident cues about what to do with the materials."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "The setup features natural materials (leaves, twigs, stones) displayed on a central table, which does communicate a nature-exploration theme. However, the description lacks mention of sensory bin containers, scoops, or other tools that would more clearly signal 'sensory bin play' versus simply 'look at these objects.' The consistent adult facilitation and pointing throughout suggests the arrangement alone left some ambiguity. A score of 0.5 reflects partial but incomplete staging.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "anchor_and_choice_materials": {
+      "dimension_id": "anchor_and_choice_materials",
+      "rubric_version": "0.2.0",
+      "score": 0.5,
+      "anchor_matched": "An anchor (single or multiple) is present but choice materials are limited; OR variety of materials exists but no anchor draws children in",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "01:00",
+          "type": "visual",
+          "quote": "In the center, there is a low, octagonal table covered with a white cloth, displaying various natural materials like leaves, twigs, and small stones.",
+          "indicator": "An anchor material — either one strong centerpiece OR multiple equally-weighted anchor stations — that obviously invites children to engage",
+          "reasoning": "The central octagonal table with nature materials functions as a clear anchor centerpiece that draws children in."
+        },
+        {
+          "ts_start": "01:08",
+          "ts_end": "01:14",
+          "type": "visual",
+          "quote": "Two children, a girl in a pink dress and a boy in a light blue shirt, approach the central table. A woman in a green top kneels beside the table, engaging with the children and the materials.",
+          "indicator": "An anchor material — either one strong centerpiece OR multiple equally-weighted anchor stations — that obviously invites children to engage",
+          "reasoning": "Children immediately approach the central table upon entering, confirming it functions as an effective anchor that draws engagement."
+        },
+        {
+          "ts_start": "01:20",
+          "ts_end": "01:26",
+          "type": "visual",
+          "quote": "The children are now actively engaging with the materials on the central table. The woman in green is kneeling and interacting with them, pointing to items.",
+          "indicator": "Choice materials (tools, items, options) at or within the anchor(s) that allow flexible use",
+          "reasoning": "Children are engaging with the materials, but the visual descriptions only identify leaves, twigs, and small stones — natural loose parts that offer some variety but no tools (scoops, containers, brushes) are mentioned, limiting evidence of robust choice materials."
+        },
+        {
+          "ts_start": "01:32",
+          "ts_end": "01:38",
+          "type": "visual",
+          "quote": "The children continue to explore the nature sensory bin. The two women are still kneeling, assisting the children. Other adults are standing or sitting on the small chairs around the room, observing and some still using their phones to capture the moment.",
+          "indicator": "Materials can be combined or used in different ways for different outcomes",
+          "reasoning": "Children are exploring the bin but no additional tools or choice materials (scoops, containers, magnifying glasses, etc.) are described, suggesting the variety of choice materials is limited to the natural items themselves."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "The anchor (central octagonal table with nature materials) is clearly present and draws children in. However, the visual descriptions only identify leaves, twigs, and small stones as materials — no tools or additional choice items (scoops, containers, magnifying glasses, sorting trays, etc.) are mentioned throughout the session. The natural loose parts themselves offer some variety, but without evidence of additional choice tools or items, the setup appears to fall short of a full 1.0 score. Scored 0.5 as anchor is strong but choice materials appear limited based on available evidence.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "spark_curiosity": {
+      "dimension_id": "spark_curiosity",
+      "rubric_version": "0.2.0",
+      "score": 0.5,
+      "anchor_matched": "Some interesting elements are present at the activity area but they don't clearly stand out as a deliberate curiosity hook",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "01:00",
+          "type": "visual",
+          "quote": "In the center, there is a low, octagonal table covered with a white cloth, displaying various natural materials like leaves, twigs, and small stones.",
+          "indicator": "Visually striking centerpieces or features within the activity area itself",
+          "reasoning": "The octagonal table with a white cloth and natural materials is a deliberate setup at the activity zone, but leaves, twigs, and stones are familiar outdoor items that children encounter regularly, limiting the 'wow' or 'what is that?' factor."
+        },
+        {
+          "ts_start": "01:08",
+          "ts_end": "01:14",
+          "type": "visual",
+          "quote": "Two children, a girl in a pink dress and a boy in a light blue shirt, approach the central table. A woman in a green top kneels beside the table, engaging with the children and the materials.",
+          "indicator": "Items at the activity zone obviously designed to be touched, examined, or wondered about",
+          "reasoning": "Children approach and engage with the materials, suggesting some draw, but the description does not indicate any surprising or unfamiliar element that would constitute a clear curiosity hook beyond ordinary nature items."
+        },
+        {
+          "ts_start": "01:20",
+          "ts_end": "01:26",
+          "type": "visual",
+          "quote": "The children are now actively engaging with the materials on the central table. The woman in green is kneeling and interacting with them, pointing to items.",
+          "indicator": "Items at the activity zone obviously designed to be touched, examined, or wondered about",
+          "reasoning": "Active engagement and adult pointing suggest the materials invite exploration, but the setup appears to rely on familiar natural materials without a clearly surprising or mysterious element."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "The activity uses natural materials (leaves, twigs, stones) displayed on a white-cloth-covered octagonal table — a thoughtful presentation but with materials that are familiar to most children. The white cloth and octagonal table shape add some visual interest to the setup, but no clearly unexpected, mysterious, or visually striking 'wow' element is described at the activity zone. The visual descriptions are not detailed enough to confirm whether any unusual specimens or hidden elements were present.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "challenge_adjustment": {
+      "dimension_id": "challenge_adjustment",
+      "rubric_version": "0.2.0",
+      "score": 0,
+      "anchor_matched": "Single fixed difficulty level — no variation possible without redesigning the activity",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "01:00",
+          "type": "visual",
+          "quote": "In the center, there is a low, octagonal table covered with a white cloth, displaying various natural materials like leaves, twigs, and small stones.",
+          "indicator": "Multiple visible difficulty levels of the same activity",
+          "reasoning": "The setup shows a single central table with one undifferentiated collection of nature materials — no tiered difficulty levels, no separate easier/harder variants, and no visible extension materials are described."
+        },
+        {
+          "ts_start": "01:08",
+          "ts_end": "01:14",
+          "type": "visual",
+          "quote": "Several adults and children enter the room. Two children, a girl in a pink dress and a boy in a light blue shirt, approach the central table. A woman in a green top kneels beside the table, engaging with the children and the materials.",
+          "indicator": "Setup supports teacher-led or child-led difficulty change",
+          "reasoning": "All children converge on the same single table with the same materials, with no evidence of tiered options, add-on materials, or staged progressions being offered or available."
+        },
+        {
+          "ts_start": "01:20",
+          "ts_end": "01:26",
+          "type": "visual",
+          "quote": "The children are now actively engaging with the materials on the central table. The woman in green is kneeling and interacting with them, pointing to items.",
+          "indicator": "Add-on / extension materials available but not forced",
+          "reasoning": "Throughout the session, only the single central table is referenced with no mention of additional materials, extensions, or difficulty variants being introduced or available nearby."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "The entire session shows one fixed sensory bin setup with no visible difficulty variants, tiered options, or extension materials. The activity is open-ended sensory exploration but the physical setup provides no deliberate challenge adjustment scaffolding.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "self_served": {
+      "dimension_id": "self_served",
+      "rubric_version": "0.2.0",
+      "score": 1.0,
+      "anchor_matched": "All materials are, by DESIGN, safe, recognisable to children of the age range, and light enough for them to handle alone. The activity is designed for self-service even if teachers are observed helping during the recording.",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "01:00",
+          "type": "visual",
+          "quote": "In the center, there is a low, octagonal table covered with a white cloth, displaying various natural materials like leaves, twigs, and small stones.",
+          "indicator": "Materials are child-safe by design (no choking hazards, sharp edges, toxic substances within reach)",
+          "reasoning": "Leaves, twigs, and small stones are natural, lightweight materials with no sharp edges or toxic properties, making them safe by design for 3-5 year olds."
+        },
+        {
+          "ts_start": "00:00",
+          "ts_end": "01:00",
+          "type": "visual",
+          "quote": "displaying various natural materials like leaves, twigs, and small stones",
+          "indicator": "Materials are recognisable to children of the age range — children would know what they are and roughly how to use them",
+          "reasoning": "Leaves, twigs, and stones are everyday natural objects that children aged 3-5 would readily recognise and know how to handle through prior outdoor experience."
+        },
+        {
+          "ts_start": "00:00",
+          "ts_end": "01:00",
+          "type": "visual",
+          "quote": "there is a low, octagonal table covered with a white cloth, displaying various natural materials like leaves, twigs, and small stones",
+          "indicator": "Items are light enough for a child of the age range to lift and carry alone",
+          "reasoning": "Leaves, twigs, and small stones are all individually lightweight items that a 3-5 year old can easily pick up and handle independently; the low table height also supports child-level access."
+        },
+        {
+          "ts_start": "01:08",
+          "ts_end": "01:14",
+          "type": "visual",
+          "quote": "Two children, a girl in a pink dress and a boy in a light blue shirt, approach the central table.",
+          "indicator": "Materials are recognisable to children of the age range — children would know what they are and roughly how to use them",
+          "reasoning": "Children independently approached and engaged with the materials without needing adult direction to identify or initiate interaction, confirming the materials are recognisable by design."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "The materials (leaves, twigs, small stones) displayed on a low table are quintessentially child-safe, recognisable, and lightweight by design. Adult presence observed during the session is consistent with a supervised open-day or parent visit context and does not reflect a design requirement for adult handling.",
+      "prompt_hash": "c92c689bf87b"
+    }
+  },
+  "overall": 0.5,
+  "cost_usd": null,
+  "duration_seconds": 18.394747972488403
+}

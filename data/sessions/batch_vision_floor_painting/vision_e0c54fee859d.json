@@ -1,0 +1,57 @@
+{
+  "session_id": "batch_vision_floor_painting",
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:00:30",
+      "description": "The video shows a classroom with a wooden floor on the right side and a light grey floor on the left. There are shelves with colorful wooden blocks and toys on the left. A large white paper is laid out on the grey floor. Two adults and a child are visible on the left side of the room. Another child walks into the room."
+    },
+    {
+      "ts_start": "00:00:30",
+      "ts_end": "00:01:00",
+      "description": "More children enter the room. An adult kneels down to help a child with their shoes. Another adult is standing near the shelves with toys, observing the children."
+    },
+    {
+      "ts_start": "00:01:00",
+      "ts_end": "00:01:30",
+      "description": "Children continue to enter the room. An adult is helping a child with their backpack. Another child is playing with the wooden blocks on the shelf. An adult is kneeling down, helping a child with their shoes."
+    },
+    {
+      "ts_start": "00:01:30",
+      "ts_end": "00:02:00",
+      "description": "Children are gathered near the shelves with toys. An adult is helping a child with their shoes. Another adult is sitting on the floor, holding a child. A child in a white dress walks towards the center of the room."
+    },
+    {
+      "ts_start": "00:02:00",
+      "ts_end": "00:02:30",
+      "description": "An adult is sitting on the floor, holding a child. Another adult is helping children near the toy shelves. A child in a white dress is standing on the white paper in the center of the room. Another child is crawling towards the paper."
+    },
+    {
+      "ts_start": "00:02:30",
+      "ts_end": "00:03:00",
+      "description": "A child is crawling on the white paper, starting to paint with yellow paint. Another child is standing on the paper. An adult is standing near the toy shelves, observing the children. Another adult is sitting on the floor, holding a child."
+    },
+    {
+      "ts_start": "00:03:00",
+      "ts_end": "00:03:30",
+      "description": "Children are gathered around the white paper, some are kneeling and painting with yellow and purple paint. Adults are observing and assisting the children. One adult is taking pictures with a phone."
+    },
+    {
+      "ts_start": "00:03:30",
+      "ts_end": "00:04:00",
+      "description": "Children are actively engaged in painting on the white paper. Some are using their hands, others are using brushes. Adults are supervising and interacting with the children. One adult is still taking pictures."
+    },
+    {
+      "ts_start": "00:04:00",
+      "ts_end": "00:04:30",
+      "description": "Children continue to paint on the paper. An adult is helping a child with painting. Another adult is walking around, observing the activity. A staff member in a blue uniform walks into the room."
+    },
+    {
+      "ts_start": "00:04:30",
+      "ts_end": "00:05:00",
+      "description": "Children are still painting on the paper. Adults are assisting and observing. The staff member in blue uniform is walking around the room. One adult is taking pictures of the children painting."
+    }
+  ],
+  "source_model": "gemini-2.5-flash",
+  "prompt_hash": "e0c54fee859d"
+}

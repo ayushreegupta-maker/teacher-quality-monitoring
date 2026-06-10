@@ -1,0 +1,67 @@
+{
+  "C1": {
+    "answer": "The focus child is a girl wearing a white dress. She has dark hair styled in a single ponytail at the back, with four visible clips on the right side of her head. She is of average height compared to her peers.",
+    "confidence": "high",
+    "evidence": "10:59:26 — child enters the room, clearly showing her white dress, ponytail, and clips."
+  },
+  "C2": {
+    "answer": "The child enters the room and wanders briefly before being directed to sit. She sits on the blue mat closest to the entrance (bottom right from the camera's perspective) and remains at this location for the entire duration of the activity.",
+    "confidence": "high",
+    "evidence": "10:59:26 — enters the room; 11:00:50 — sits on the mat nearest the door; 11:17:00 — is still seated at the same desk."
+  },
+  "C3": {
+    "answer": "The child is visibly engaged for approximately 95% of the activity. She consistently looks at the teacher during instructions, participates in group counting, and remains highly focused on her individual sticking task.",
+    "confidence": "high",
+    "evidence": "11:01:14 — follows the teacher's physical warm-up; 11:05:00 to 11:17:00 — consistently focused on placing pom-poms on her paper, rarely looking away."
+  },
+  "C4": {
+    "answer": "The teacher interacts 1-on-1 with the focus child 8 times.\n- 11:00:50 — Teacher directs her to sit on her mat (Teacher initiated).\n- 11:02:51 — Teacher hands her a paper (Teacher initiated).\n- 11:04:08 — Teacher places a desk in front of her (Teacher initiated).\n- 11:04:25 — Teacher gives her a bowl of pom-poms (Teacher initiated).\n- 11:08:24 — Teacher checks her work and points at her paper (Teacher initiated).\n- 11:10:04 — Teacher helps her stick a pom-pom (Teacher initiated).\n- 11:12:08 — Teacher checks her progress again (Teacher initiated).\n- 11:14:41 — Teacher praises her work with a thumbs up (Teacher initiated).",
+    "confidence": "high",
+    "evidence": "Timestamps provided in the answer list each specific interaction."
+  },
+  "C5": {
+    "answer": "Yes, the child speaks multiple times during the activity, primarily counting numbers.\n- 11:01:51 to 11:02:07 — Counts from 'One' to 'Ten' along with the class.\n- 11:08:47 — Counts 'One' as she places a pom-pom.\n- 11:09:12 — Counts 'Two'.\n- 11:09:19 — Counts 'Three'.\n- 11:09:24 — Counts 'Four'.\n- 11:12:24 to 11:13:06 — Counts from 'One' to 'Ten' while working.\n- 11:15:56 to 11:16:04 — Counts 'One', 'Two', 'Three'.",
+    "confidence": "high",
+    "evidence": "Timestamps provided in the answer list each instance of speech."
+  },
+  "C6": {
+    "answer": "The child has very limited interaction with peers, focusing mostly on the teacher and her task.\n- 11:00:48 — Briefly stands near and looks at another girl in a white dress before sitting down.\n- 11:04:50 — Briefly looks up at the boy sitting opposite her.",
+    "confidence": "high",
+    "evidence": "Timestamps provided in the answer list the brief peer interactions."
+  },
+  "C7": {
+    "answer": "The child's emotional state remains calm, focused, and content throughout the activity. She shows no signs of frustration or withdrawal, and appears pleased when receiving positive feedback.",
+    "confidence": "high",
+    "evidence": "10:59:26 — enters calmly; 11:05:00 — shows deep concentration on her task; 11:14:41 — appears content and satisfied when the teacher gives her a thumbs up."
+  },
+  "C8": {
+    "answer": "The child appears to have a minor challenge with fine motor skills related to the glue/sticking process.\n- 11:10:04 — Fine motor skills: She hesitates or struggles slightly with getting a pom-pom to stick to the paper, prompting the teacher to step in and assist her.",
+    "confidence": "medium",
+    "evidence": "11:10:04 — teacher notices her difficulty and provides physical assistance to stick the item."
+  },
+  "C9": {
+    "answer": "The child needed and received task-related physical help from the teacher once during the activity.\n- 11:10:04 — The teacher provides physical help to assist the child in sticking a pom-pom onto her paper.",
+    "confidence": "high",
+    "evidence": "11:10:04 — teacher leans over and helps the child press the pom-pom onto the paper."
+  },
+  "C10": {
+    "answer": "The child appears proficient in self-regulation, rote counting, and one-to-one correspondence.\n- 11:01:14 — Self-regulation: Follows the teacher's physical instructions (hands up/down) immediately and accurately.\n- 11:01:51 — Rote counting: Counts to 10 confidently with the group.\n- 11:08:47 — One-to-one correspondence: Successfully counts aloud while placing individual pom-poms on her paper.",
+    "confidence": "high",
+    "evidence": "Timestamps provided in the answer list the specific proficient behaviors."
+  },
+  "T1": {
+    "answer": "The teacher demonstrated strong skills in gaining attention, giving clear instructions, and providing individualized support.\n- 11:01:14 — Gaining attention: Uses a physical routine (hands up, down, wiggle) to successfully focus the children before starting the lesson.\n- 11:02:15 — Clear instructions: Explains the activity clearly by showing the materials and demonstrating exactly what the children need to do.\n- 11:08:24 — Individualized support: Circulates around the room, checking on each child's progress and offering specific help and praise (e.g., 11:10:04, 11:14:41).",
+    "confidence": "high",
+    "evidence": "Timestamps provided in the answer list the specific effective teaching behaviors."
+  },
+  "T2": {
+    "answer": "The teacher could improve on preparation, material distribution, and managing early finishers.\n- 10:59:21 to 11:04:30 — Preparation: Setting up mats and desks while children are present takes a long time and leads to wandering; pre-setting the room would be better. (Moderate)\n- 11:02:51 to 11:04:25 — Material distribution: Handing out papers, desks, and pom-poms individually is inefficient; materials could be pre-placed. (Minor)\n- 11:16:20 — Managing early finishers: Children who finish early sit idly; providing a transition or filler activity would maintain engagement. (Minor)",
+    "confidence": "medium",
+    "evidence": "Timestamps provided in the answer list the specific areas for improvement."
+  },
+  "T3": {
+    "answer": "There were a couple of minor moments where children needed attention that was slightly delayed.\n- 11:00:00 — A boy wanders to the window; the teacher is busy setting up mats and doesn't immediately redirect him, though she gets him seated shortly after.\n- 11:16:20 — Several children finish their task and become restless/idle; the teacher is focused on helping one child and misses the opportunity to engage the early finishers.",
+    "confidence": "medium",
+    "evidence": "Timestamps provided in the answer list the specific missed moments."
+  }
+}

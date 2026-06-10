@@ -1,0 +1,4 @@
+activity,category,name,count_or_quantity,specifics,first_seen_at
+Floor painting,Materials,White sheet of paper,one,"Large, laid flat on the grey floor as the painting surface",00:00:00
+Floor painting,Materials,Paints,unknown,Mentioned in activity context as part of the floor painting setup; not explicitly described in observations,
+Floor painting,Tools,Paintbrushes,unknown,Mentioned in activity context as part of the floor painting setup; not explicitly described in observations,

@@ -1,0 +1,9 @@
+{
+  "first_child_visible_at": "00:03:03",
+  "last_child_visible_at": "00:21:48",
+  "first_child_evidence": "A child in a white dress runs into the room from the right side of the frame, followed by other children and an adult.",
+  "last_child_evidence": "The last child, wearing a white dress, exits the room through the doorway on the right side of the frame, followed by an adult.",
+  "confidence": "high",
+  "self_check_passed": true,
+  "notes": null
+}

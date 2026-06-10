@@ -1,0 +1,183 @@
+{
+  "session_id": "playground_floor_paint_002",
+  "rubric_version": "0.2.0",
+  "scores": {
+    "narrative": {
+      "dimension_id": "narrative",
+      "rubric_version": "0.2.0",
+      "score": 0,
+      "anchor_matched": "No experiential context — generic space with no immersive framing; pure utility setup",
+      "evidence": [
+        {
+          "ts_start": "00:00:00",
+          "ts_end": "00:00:30",
+          "type": "visual",
+          "quote": "The video shows an indoor classroom with a light-colored floor and a wooden floor section. There are shelves with colorful toys and blocks along the walls. A large white paper is laid out on the light-colored floor. A teacher is seen walking around the room.",
+          "indicator": "Thematic decor that names or evokes a setting",
+          "reasoning": "The space is a generic classroom with standard shelves and toys; there is no thematic decor, props, or framing that evokes any deliberate setting or narrative."
+        },
+        {
+          "ts_start": "00:03:00",
+          "ts_end": "00:03:30",
+          "type": "visual",
+          "quote": "Children are now actively engaged in painting on the large white paper on the floor. Teachers are kneeling beside them, guiding and encouraging them. Some children are still at the table with art supplies.",
+          "indicator": "An 'in-progress project' feel where the setup itself tells what's happening",
+          "reasoning": "The activity setup (paper on floor, art supplies at table) is purely utilitarian with no scene-setting, backdrop, banner, or framing that places children inside a wider story or deliberate setting."
+        },
+        {
+          "ts_start": "00:03:30",
+          "ts_end": "00:04:00",
+          "type": "visual",
+          "quote": "The painting activity is in full swing, with several children on the paper, using their hands and brushes to apply paint. Teachers are moving around, providing support and taking pictures.",
+          "indicator": "Props that place the child inside the theme",
+          "reasoning": "No props or atmospheric anchors are present beyond basic art materials; the space remains a neutral utility setup throughout the session."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "The session is a straightforward floor painting activity in a generic classroom. There is no thematic decor, narrative framing, atmospheric anchor, or immersive context visible at any point. The transcript is empty, so no verbal framing could be assessed, but the visual evidence consistently shows a plain utility setup.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "multi_sensory": {
+      "dimension_id": "multi_sensory",
+      "rubric_version": "0.2.0",
+      "score": 1,
+      "anchor_matched": "Two or more senses are meaningfully engaged through deliberate material and arrangement choices",
+      "evidence": [
+        {
+          "ts_start": "03:30",
+          "ts_end": "04:00",
+          "type": "visual",
+          "quote": "The painting activity is in full swing, with several children on the paper, using their hands and brushes to apply paint. Teachers are moving around, providing support and taking pictures.",
+          "indicator": "Tactile invitations (textures, materials to touch, wet/dry/soft/rough)",
+          "reasoning": "Children using hands and brushes directly on paint engages tactile sense meaningfully alongside the visual output of painting."
+        },
+        {
+          "ts_start": "04:00",
+          "ts_end": "04:30",
+          "type": "visual",
+          "quote": "Children continue to paint on the paper, creating colorful patterns. Teachers are closely supervising and interacting with the children, ensuring they are engaged and enjoying the activity.",
+          "indicator": "Visual variety (color, materials, arrangements)",
+          "reasoning": "Colorful patterns being created on a large floor paper provide clear visual engagement alongside the tactile experience of painting."
+        },
+        {
+          "ts_start": "02:30",
+          "ts_end": "03:00",
+          "type": "visual",
+          "quote": "A child is seen crouching on the white paper, seemingly starting to paint.",
+          "indicator": "Proprioceptive / movement opportunities (balance, climbing, kneeling)",
+          "reasoning": "Children crouching and moving across a large floor-laid paper engages proprioceptive/movement sense as part of the deliberate floor-painting setup."
+        },
+        {
+          "ts_start": "00:00:00",
+          "ts_end": "00:00:30",
+          "type": "visual",
+          "quote": "A large white paper is laid out on the light-colored floor.",
+          "indicator": "Natural / sensory materials (sand, water, fabric, wood, leaves, clay, paint)",
+          "reasoning": "The deliberate setup of large paper on the floor with paint supplies is a design choice that invites multi-sensory engagement (visual + tactile + movement), consistent with the rubric note that floor painting earns a 1."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "The rubric explicitly notes that floor painting with paints and paper meaningfully engages visual and tactile senses and earns a 1 even without sound or movement. Here, proprioceptive engagement (crouching, moving across the paper) is also present, further supporting the score.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "boundary": {
+      "dimension_id": "boundary",
+      "rubric_version": "0.2.0",
+      "score": 1.0,
+      "anchor_matched": "At least one clear, unambiguous activity boundary — a canvas, paper, mat, rug, table, low fence, or similar marker visually defines the zone. A single well-defined zone is sufficient for this score.",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:30",
+          "type": "visual",
+          "quote": "A large white paper is laid out on the light-colored floor.",
+          "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+          "reasoning": "The large white paper on the floor is a clear, unambiguous visual boundary that defines exactly where the painting activity is to take place."
+        },
+        {
+          "ts_start": "01:00",
+          "ts_end": "01:30",
+          "type": "visual",
+          "quote": "One child walks towards the white paper on the floor.",
+          "indicator": "The boundary is intuitive to a child without verbal explanation from an adult",
+          "reasoning": "A child independently navigates toward the white paper, suggesting the boundary is self-evident without adult verbal direction."
+        },
+        {
+          "ts_start": "02:00",
+          "ts_end": "02:30",
+          "type": "visual",
+          "quote": "A child walks onto the white paper on the floor.",
+          "indicator": "The boundary is intuitive to a child without verbal explanation from an adult",
+          "reasoning": "Children are independently stepping onto the paper, confirming the zone is visually intuitive and requires no verbal prompting to identify."
+        },
+        {
+          "ts_start": "03:00",
+          "ts_end": "03:30",
+          "type": "visual",
+          "quote": "Children are now actively engaged in painting on the large white paper on the floor.",
+          "indicator": "A canvas / paper / mat / rug / table that visually defines where the activity happens",
+          "reasoning": "The large white paper continues to serve as the clear, single well-defined activity zone throughout the session."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": null,
+      "prompt_hash": "c92c689bf87b"
+    },
+    "movement": {
+      "dimension_id": "movement",
+      "rubric_version": "0.2.0",
+      "score": 0.5,
+      "anchor_matched": "Either intentional movement flow OR designated seating is present, but not both. Or one is partial.",
+      "evidence": [
+        {
+          "ts_start": "00:00:00",
+          "ts_end": "00:00:30",
+          "type": "visual",
+          "quote": "A large white paper is laid out on the light-colored floor. A teacher is seen walking around the room.",
+          "indicator": "Open space sized for the activity — not crammed, not wasted",
+          "reasoning": "The large paper on the floor defines an activity zone with accessible open space, indicating some intentional spatial design for the painting activity."
+        },
+        {
+          "ts_start": "00:02:00",
+          "ts_end": "00:02:30",
+          "type": "visual",
+          "quote": "A child walks onto the white paper on the floor. Teachers are still engaging with the children at the table, and some children are now sitting on the floor near the paper.",
+          "indicator": "Pathways to / from / around the activity zone",
+          "reasoning": "Children can walk onto the paper freely, suggesting open pathways exist, but there is no evidence of a deliberately designed path guiding children to the activity."
+        },
+        {
+          "ts_start": "00:01:30",
+          "ts_end": "00:02:00",
+          "type": "visual",
+          "quote": "Another child is being helped by a teacher to sit down on a small orange stool. The children at the table are still being prepared for the activity.",
+          "indicator": "Designated seating or positioning (cushions, low chairs, mat positions, kneeling-friendly floor)",
+          "reasoning": "Only one small orange stool is mentioned; there is no evidence of systematic designated seating or mat positions around the floor paper for the painting activity, making positioning partial at best."
+        },
+        {
+          "ts_start": "00:03:00",
+          "ts_end": "00:03:30",
+          "type": "visual",
+          "quote": "Children are now actively engaged in painting on the large white paper on the floor. Teachers are kneeling beside them, guiding and encouraging them. Some children are still at the table with art supplies.",
+          "indicator": "Materials placed within child-reach from designated positions",
+          "reasoning": "Art supplies appear to be at a separate table rather than positioned around the floor paper, suggesting materials are not fully within reach from the painting positions on the floor."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "The floor paper provides a clear activity zone and children can move to it freely, but there is no evidence of deliberately designed pathways guiding children to the space, and designated seating/positioning around the paper is absent — children appear to self-select positions on the floor. Art supplies are at a separate table, not at child-reach from the floor painting positions. This partial setup earns a 0.5.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "clean_up": {
+      "dimension_id": "clean_up",
+      "rubric_version": "0.2.0",
+      "score": "insufficient_evidence",
+      "anchor_matched": null,
+      "evidence": [],
+      "confidence": "low",
+      "scorer_notes": "The session is only 5 minutes long and covers setup and the beginning of the painting activity. No cleanup phase is observed at any point in the video. The visual observations show children entering, preparing, and beginning to paint, but there is no evidence of materials being returned, storage systems being used for return, or any cleanup-related behavior. The shelves visible along the walls could potentially provide some signal about storage height and labelling, but the descriptions are too general ('shelves with colorful toys and blocks') to reliably assess child-height accessibility, visual labelling, or whether items are light enough for children to return independently. Scoring this dimension would require guessing rather than evidence-based judgment.",
+      "prompt_hash": "c92c689bf87b"
+    }
+  },
+  "overall": 0.625,
+  "cost_usd": null,
+  "duration_seconds": 12.424154043197632
+}

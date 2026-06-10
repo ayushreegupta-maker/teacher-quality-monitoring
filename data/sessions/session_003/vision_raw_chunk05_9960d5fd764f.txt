@@ -1,0 +1,68 @@
+{
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:00:30",
+      "description": "The teacher is sitting on the floor with three students, two girls and one boy. The teacher is wearing a blue dress and a headscarf. The students are sitting on yellow cushions. The teacher is talking to the students and gesturing with her hands. One girl is wearing a pink shirt and black pants, another girl is wearing a yellow shirt and black pants, and the boy is wearing a red shirt and blue shorts. There are two other children lying in a wooden box with pillows and blankets."
+    },
+    {
+      "ts_start": "00:00:30",
+      "ts_end": "00:01:00",
+      "description": "The teacher continues to talk to the students, who are all looking at her. The boy in the red shirt gets up and walks over to a table, then returns to the group. The two children in the wooden box are still lying down. The teacher is holding a book and showing it to the students."
+    },
+    {
+      "ts_start": "00:01:00",
+      "ts_end": "00:01:30",
+      "description": "The teacher is still talking to the students, who are all sitting on the cushions. The boy in the red shirt gets up again and walks around the room, then returns to the group. The two children in the wooden box are still lying down. The teacher is holding a book and showing it to the students."
+    },
+    {
+      "ts_start": "00:01:30",
+      "ts_end": "00:02:00",
+      "description": "The teacher is still talking to the students, who are all sitting on the cushions. The boy in the red shirt gets up again and walks around the room, then returns to the group. The two children in the wooden box are still lying down. The teacher is holding a book and showing it to the students."
+    },
+    {
+      "ts_start": "00:02:00",
+      "ts_end": "00:02:30",
+      "description": "The teacher is still talking to the students, who are all sitting on the cushions. The boy in the red shirt gets up again and walks around the room, then returns to the group. The two children in the wooden box are still lying down. The teacher is holding a book and showing it to the students."
+    },
+    {
+      "ts_start": "00:02:30",
+      "ts_end": "00:03:00",
+      "description": "The teacher is still talking to the students, who are all sitting on the cushions. The boy in the red shirt gets up again and walks around the room, then returns to the group. The two children in the wooden box are still lying down. The teacher is holding a book and showing it to the students."
+    }
+  ],
+  "transcript": [
+    {
+      "ts_start": "00:00:00",
+      "speaker": "TEACHER",
+      "text": "Abego. So you're talking Abego."
+    },
+    {
+      "ts_start": "00:00:04",
+      "speaker": "STUDENT_1",
+      "text": "Hey."
+    },
+    {
+      "ts_start": "00:00:04",
+      "speaker": "TEACHER",
+      "text": "Hey. Oh, you're sitting in. You're going to sit. Okay. On the cushion. Yes. On the cushion. On the cushion."
+    },
+    {
+      "ts_start": "00:00:09",
+      "speaker": "STUDENT_2",
+      "text": "Okay."
+    },
+    {
+      "ts_start": "00:00:10",
+      "speaker": "TEACHER",
+      "text": "Good. Shanaia, on the cushion."
+    },
+    {
+      "ts_start": "00:00:14",
+      "speaker": "STUDENT_3",
+      "text": "Okay."
+    },
+    {
+      "ts_start": "00:00:15",
+      "speaker": "TEACHER",
+      "text": "Good. Shanaia, sit on the cushion. Rishab, come and sit with everybody. Rishab, come and sit with everybody. Rishab, I know you want to play, but I'll tell you. That's our activity. I'll tell you. That's our activity. I'll tell you. I'll tell you. That's our activity. I'll tell you. That's our activity. Are you ready for activity? Okay. We'll do the activity now. Sit. Sit on the mat. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit. Sit.

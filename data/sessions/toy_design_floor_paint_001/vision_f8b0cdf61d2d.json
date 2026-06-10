@@ -1,0 +1,307 @@
+{
+  "session_id": "toy_design_floor_paint_001",
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:00:05",
+      "description": "The video opens with a wide shot of a classroom. A teacher is seen walking towards the left side of the room, near a table with various items."
+    },
+    {
+      "ts_start": "00:00:05",
+      "ts_end": "00:00:10",
+      "description": "More children enter the room, some walking towards the table on the left, while others remain in the center of the room."
+    },
+    {
+      "ts_start": "00:00:10",
+      "ts_end": "00:00:15",
+      "description": "A child in a red dress walks towards the center of the room, while another child in a yellow shirt approaches the table on the left."
+    },
+    {
+      "ts_start": "00:00:15",
+      "ts_end": "00:00:20",
+      "description": "The child in the red dress continues to walk around the center, while the child in the yellow shirt interacts with items on the table."
+    },
+    {
+      "ts_start": "00:00:20",
+      "ts_end": "00:00:25",
+      "description": "A teacher kneels down to assist the child in the red dress, who is now standing near the table."
+    },
+    {
+      "ts_start": "00:00:25",
+      "ts_end": "00:00:30",
+      "description": "The teacher helps the child in the red dress with something on the table, while other children gather around."
+    },
+    {
+      "ts_start": "00:00:30",
+      "ts_end": "00:00:35",
+      "description": "The teacher stands up and walks away from the table, while the children continue to engage with the items."
+    },
+    {
+      "ts_start": "00:00:35",
+      "ts_end": "00:00:40",
+      "description": "Another teacher walks towards the table, and the child in the red dress moves to the other side of the table."
+    },
+    {
+      "ts_start": "00:00:40",
+      "ts_end": "00:00:45",
+      "description": "The teachers and children are actively engaged with the items on the table, which appear to be art supplies."
+    },
+    {
+      "ts_start": "00:00:45",
+      "ts_end": "00:00:50",
+      "description": "A child in a white shirt walks towards the center of the room and kneels down on a white mat."
+    },
+    {
+      "ts_start": "00:00:50",
+      "ts_end": "00:00:55",
+      "description": "The child in the white shirt remains kneeling on the mat, while the other children continue their activity at the table."
+    },
+    {
+      "ts_start": "00:00:55",
+      "ts_end": "00:01:00",
+      "description": "A teacher walks towards the child on the mat, while another child in a black dress walks towards the shelves on the left."
+    },
+    {
+      "ts_start": "00:01:00",
+      "ts_end": "00:01:05",
+      "description": "The child in the black dress picks up a toy from the shelf, while the teacher helps another child with their backpack."
+    },
+    {
+      "ts_start": "00:01:05",
+      "ts_end": "00:01:10",
+      "description": "The child in the black dress walks towards the center of the room with the toy, and another teacher walks past the mat."
+    },
+    {
+      "ts_start": "00:01:10",
+      "ts_end": "00:01:15",
+      "description": "The child in the black dress kneels down near the mat, while the teacher assists another child at the table."
+    },
+    {
+      "ts_start": "00:01:15",
+      "ts_end": "00:01:20",
+      "description": "A teacher sits on a brown stool on the right side of the room, holding the child in the black dress."
+    },
+    {
+      "ts_start": "00:01:20",
+      "ts_end": "00:01:25",
+      "description": "The teacher continues to hold the child, while other children are engaged in various activities around the room."
+    },
+    {
+      "ts_start": "00:01:25",
+      "ts_end": "00:01:30",
+      "description": "The child in the black dress gets up and walks towards the center of the room, then kneels on the mat."
+    },
+    {
+      "ts_start": "00:01:30",
+      "ts_end": "00:01:35",
+      "description": "The child in the black dress is now painting on the mat, while the teacher takes a picture with her phone."
+    },
+    {
+      "ts_start": "00:01:35",
+      "ts_end": "00:01:40",
+      "description": "Other children join the painting activity on the mat, and teachers assist them."
+    },
+    {
+      "ts_start": "00:01:40",
+      "ts_end": "00:01:45",
+      "description": "The children are actively engaged in painting on the mat, with teachers supervising and assisting."
+    },
+    {
+      "ts_start": "00:01:45",
+      "ts_end": "00:01:50",
+      "description": "A teacher walks towards the table on the left, while the children continue to paint on the mat."
+    },
+    {
+      "ts_start": "00:01:50",
+      "ts_end": "00:01:55",
+      "description": "The children are still painting on the mat, and a teacher is seen walking around the room."
+    },
+    {
+      "ts_start": "00:01:55",
+      "ts_end": "00:02:00",
+      "description": "More children gather around the mat to participate in the painting activity."
+    },
+    {
+      "ts_start": "00:02:00",
+      "ts_end": "00:02:05",
+      "description": "The children are fully immersed in the painting activity, with some kneeling and others standing around the mat."
+    },
+    {
+      "ts_start": "00:02:05",
+      "ts_end": "00:02:10",
+      "description": "A teacher walks towards the painting area, while another teacher is seen assisting children at the table."
+    },
+    {
+      "ts_start": "00:02:10",
+      "ts_end": "00:02:15",
+      "description": "The children continue to paint on the mat, with various colors spread across the white paper."
+    },
+    {
+      "ts_start": "00:02:15",
+      "ts_end": "00:02:20",
+      "description": "A teacher takes a picture of the children painting, while another teacher assists a child with their art."
+    },
+    {
+      "ts_start": "00:02:20",
+      "ts_end": "00:02:25",
+      "description": "The children are still engaged in the painting activity, with some using their hands to apply paint."
+    },
+    {
+      "ts_start": "00:02:25",
+      "ts_end": "00:02:30",
+      "description": "A teacher walks towards the table on the left, while the children continue to paint on the mat."
+    },
+    {
+      "ts_start": "00:02:30",
+      "ts_end": "00:02:35",
+      "description": "The children are still painting, and a teacher is seen walking around the room, observing the activity."
+    },
+    {
+      "ts_start": "00:02:35",
+      "ts_end": "00:02:40",
+      "description": "A teacher walks towards the painting area, while another teacher is seen assisting children at the table."
+    },
+    {
+      "ts_start": "00:02:40",
+      "ts_end": "00:02:45",
+      "description": "The children are fully immersed in the painting activity, with some kneeling and others standing around the mat."
+    },
+    {
+      "ts_start": "00:02:45",
+      "ts_end": "00:02:50",
+      "description": "A teacher walks towards the painting area, while another teacher is seen assisting children at the table."
+    },
+    {
+      "ts_start": "00:02:50",
+      "ts_end": "00:02:55",
+      "description": "The children are still painting, and a teacher is seen walking around the room, observing the activity."
+    },
+    {
+      "ts_start": "00:02:55",
+      "ts_end": "00:03:00",
+      "description": "More children gather around the mat to participate in the painting activity."
+    },
+    {
+      "ts_start": "00:03:00",
+      "ts_end": "00:03:05",
+      "description": "The children are fully immersed in the painting activity, with some kneeling and others standing around the mat."
+    },
+    {
+      "ts_start": "00:03:05",
+      "ts_end": "00:03:10",
+      "description": "A teacher walks towards the painting area, while another teacher is seen assisting children at the table."
+    },
+    {
+      "ts_start": "00:03:10",
+      "ts_end": "00:03:15",
+      "description": "The children continue to paint on the mat, with various colors spread across the white paper."
+    },
+    {
+      "ts_start": "00:03:15",
+      "ts_end": "00:03:20",
+      "description": "A teacher takes a picture of the children painting, while another teacher assists a child with their art."
+    },
+    {
+      "ts_start": "00:03:20",
+      "ts_end": "00:03:25",
+      "description": "The children are still engaged in the painting activity, with some using their hands to apply paint."
+    },
+    {
+      "ts_start": "00:03:25",
+      "ts_end": "00:03:30",
+      "description": "A teacher walks towards the table on the left, while the children continue to paint on the mat."
+    },
+    {
+      "ts_start": "00:03:30",
+      "ts_end": "00:03:35",
+      "description": "The children are still painting, and a teacher is seen walking around the room, observing the activity."
+    },
+    {
+      "ts_start": "00:03:35",
+      "ts_end": "00:03:40",
+      "description": "A teacher walks towards the painting area, while another teacher is seen assisting children at the table."
+    },
+    {
+      "ts_start": "00:03:40",
+      "ts_end": "00:03:45",
+      "description": "The children are fully immersed in the painting activity, with some kneeling and others standing around the mat."
+    },
+    {
+      "ts_start": "00:03:45",
+      "ts_end": "00:03:50",
+      "description": "A teacher walks towards the painting area, while another teacher is seen assisting children at the table."
+    },
+    {
+      "ts_start": "00:03:50",
+      "ts_end": "00:03:55",
+      "description": "The children are still painting, and a teacher is seen walking around the room, observing the activity."
+    },
+    {
+      "ts_start": "00:03:55",
+      "ts_end": "00:04:00",
+      "description": "More children gather around the mat to participate in the painting activity."
+    },
+    {
+      "ts_start": "00:04:00",
+      "ts_end": "00:04:05",
+      "description": "The children are fully immersed in the painting activity, with some kneeling and others standing around the mat."
+    },
+    {
+      "ts_start": "00:04:05",
+      "ts_end": "00:04:10",
+      "description": "A teacher walks towards the painting area, while another teacher is seen assisting children at the table."
+    },
+    {
+      "ts_start": "00:04:10",
+      "ts_end": "00:04:15",
+      "description": "The children continue to paint on the mat, with various colors spread across the white paper."
+    },
+    {
+      "ts_start": "00:04:15",
+      "ts_end": "00:04:20",
+      "description": "A teacher takes a picture of the children painting, while another teacher assists a child with their art."
+    },
+    {
+      "ts_start": "00:04:20",
+      "ts_end": "00:04:25",
+      "description": "The children are still engaged in the painting activity, with some using their hands to apply paint."
+    },
+    {
+      "ts_start": "00:04:25",
+      "ts_end": "00:04:30",
+      "description": "A teacher walks towards the table on the left, while the children continue to paint on the mat."
+    },
+    {
+      "ts_start": "00:04:30",
+      "ts_end": "00:04:35",
+      "description": "The children are still painting, and a teacher is seen walking around the room, observing the activity."
+    },
+    {
+      "ts_start": "00:04:35",
+      "ts_end": "00:04:40",
+      "description": "A teacher walks towards the painting area, while another teacher is seen assisting children at the table."
+    },
+    {
+      "ts_start": "00:04:40",
+      "ts_end": "00:04:45",
+      "description": "The children are fully immersed in the painting activity, with some kneeling and others standing around the mat."
+    },
+    {
+      "ts_start": "00:04:45",
+      "ts_end": "00:04:50",
+      "description": "A teacher walks towards the painting area, while another teacher is seen assisting children at the table."
+    },
+    {
+      "ts_start": "00:04:50",
+      "ts_end": "00:04:55",
+      "description": "The children are still painting, and a teacher is seen walking around the room, observing the activity."
+    },
+    {
+      "ts_start": "00:04:55",
+      "ts_end": "00:05:00",
+      "description": "More children gather around the mat to participate in the painting activity."
+    }
+  ],
+  "source_model": "gemini-2.5-flash",
+  "prompt_hash": "f8b0cdf61d2d"
+}

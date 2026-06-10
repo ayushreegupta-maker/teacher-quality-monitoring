@@ -1,0 +1,136 @@
+{
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:00:59",
+      "description": "The video shows an indoor classroom with a teacher and several students. The teacher is wearing a blue and red patterned dress with a black head covering. She is standing in the middle of a group of students who are sitting on yellow cushions on the floor. There are two long, rectangular play structures with colorful fabric inside, possibly for crawling or soft play. Several wooden tables and chairs are scattered around the room. On the left, there's a wall with colorful drawings and a blackboard. On the right, there are shelves with various items. One student is seen walking around the room, picking up items from a shelf."
+    },
+    {
+      "ts_start": "00:00:59",
+      "ts_end": "00:01:59",
+      "description": "Two more students enter the classroom, one wearing a pink backpack and the other a red shirt. They join the group sitting on the yellow cushions. The teacher interacts with the new students, helping them settle in. The student in the red shirt continues to walk around the room, exploring the shelves and other areas. The teacher then moves towards the play structures, interacting with a student inside one of them."
+    },
+    {
+      "ts_start": "00:01:59",
+      "ts_end": "00:02:59",
+      "description": "The teacher continues to engage with the students, moving between the group on the cushions and the students near the play structures. The student in the red shirt is now seen sitting on a low shelf on the right side of the room. The classroom appears well-lit with natural light coming from large windows in the background. Various educational materials and toys are visible on shelves and in baskets around the room."
+    },
+    {
+      "ts_start": "00:02:59",
+      "ts_end": "00:04:00",
+      "description": "The teacher is still interacting with the students, who are mostly sitting on the yellow cushions. The student in the red shirt is now back on the floor, walking around near the shelves. The classroom has a clean and organized appearance, with designated areas for different activities. The overall atmosphere seems calm and focused on guided learning."
+    }
+  ],
+  "transcript": [
+    {
+      "ts_start": "00:00:00",
+      "speaker": "TEACHER",
+      "text": "apple, now we peel. Give me another fruit."
+    },
+    {
+      "ts_start": "00:00:05",
+      "speaker": "TEACHER",
+      "text": "What are you going to do?"
+    },
+    {
+      "ts_start": "00:00:08",
+      "speaker": "TEACHER",
+      "text": "What's your favorite fruit, yeah?"
+    },
+    {
+      "ts_start": "00:00:11",
+      "speaker": "TEACHER",
+      "text": "What's your favorite fruit? Banana. Okay. Now we form banana. Form, form banana. Can we form banana? Form, form banana. Can we peel banana? Peel, peel banana. Can we peel banana? Peel, peel banana. Can we chop banana? Chop, chop banana. Can we chop banana? Chop, chop banana. Can we eat banana? Eat, eat banana. Can we eat banana? Eat, eat banana. Orange. Okay. So that's an orange. Now we form an orange. Form, form an orange. Can we form an orange? An orange. Form, form an orange. Can we peel an orange? An orange. Peel, peel an orange. Can we peel an orange? An orange. Peel, peel an orange. Good morning, Kanika. Good day, dear."
+    },
+    {
+      "ts_start": "00:01:10",
+      "speaker": "TEACHER",
+      "text": "And we chop an orange. Chop, chop an orange. And we chop an orange. Chop, chop an orange. And we eat the orange. Eat, eat the orange. And we"
+    },
+    {
+      "ts_start": "00:01:25",
+      "speaker": "STUDENT_1",
+      "text": "Maya."
+    },
+    {
+      "ts_start": "00:01:26",
+      "speaker": "TEACHER",
+      "text": "Maya, what's your favorite fruit? Good morning, Kanika."
+    },
+    {
+      "ts_start": "00:01:29",
+      "speaker": "STUDENT_2",
+      "text": "Good morning, ma'am."
+    },
+    {
+      "ts_start": "00:01:30",
+      "speaker": "TEACHER",
+      "text": "Yes. Maya, what's your favorite fruit?"
+    },
+    {
+      "ts_start": "00:01:37",
+      "speaker": "TEACHER",
+      "text": "Would you like to tell me the name of the fruit, Maya?"
+    },
+    {
+      "ts_start": "00:01:41",
+      "speaker": "STUDENT_3",
+      "text": "Apple."
+    },
+    {
+      "ts_start": "00:01:43",
+      "speaker": "TEACHER",
+      "text": "Apple. Okay. Now we form an apple. Form, form an apple. And we form an apple. Form, form an apple. Now we peel an apple. Peel, peel an apple. Now we peel an apple. Peel, peel an apple. Now we chop the apple. Chop, chop the apple. Now we chop the apple. Chop, chop the apple. Now we eat an apple. Eat, eat an apple. Now we eat an apple. Eat, eat an apple. Kanika, what about you? Give me a fruit name."
+    },
+    {
+      "ts_start": "00:02:21",
+      "speaker": "STUDENT_4",
+      "text": "Tomato."
+    },
+    {
+      "ts_start": "00:02:22",
+      "speaker": "TEACHER",
+      "text": "Tomatoes. You said banana, you said banana, you said tomato. Now we form tomato. Form, form tomato. Now we form tomato. Form, form tomato. And we peel tomato. Peel, peel tomato. And we peel tomato. Peel, peel tomato. Now we chop. What are we chopping?"
+    },
+    {
+      "ts_start": "00:02:45",
+      "speaker": "STUDENT_5",
+      "text": "Tomato."
+    },
+    {
+      "ts_start": "00:02:46",
+      "speaker": "TEACHER",
+      "text": "Tomato. No chopping tomato. Now we chop tomato. Chop, chop tomato. Now we chop tomato. Chop, chop tomato. Now we eat tomato. Eat, eat tomato. Ooh."
+    },
+    {
+      "ts_start": "00:03:02",
+      "speaker": "STUDENT_6",
+      "text": "Now we eat."
+    },
+    {
+      "ts_start": "00:03:03",
+      "speaker": "TEACHER",
+      "text": "Now we eat. Rishab, tell me your fruit name. But only you come up here. Rishab is not going to give us a fruit name. Rishab is going to give us a fruit name."
+    },
+    {
+      "ts_start": "00:03:15",
+      "speaker": "TEACHER",
+      "text": "Yes, what fruit name?"
+    },
+    {
+      "ts_start": "00:03:18",
+      "speaker": "TEACHER",
+      "text": "Banana done, apple done, orange done, tomato done."
+    },
+    {
+      "ts_start": "00:03:24",
+      "speaker": "STUDENT_7",
+      "text": "Carrot."
+    },
+    {
+      "ts_start": "00:03:25",
+      "speaker": "TEACHER",
+      "text": "Carrot. Okay, we can do carrot. Now we form a carrot. Form, form a carrot. Now we form a carrot. Form, form a carrot. And we peel a carrot. Peel, peel a carrot. And we peel a carrot. Peel, peel a carrot. And we chop. Let's chop the carrot. Chop the carrot. Chop, chop the carrot. And we chop the carrot. Chop, chop the carrot. Now we eat. Now we eat the carrot. Eat, eat the carrot. Now we eat the carrot. Eat, eat the carrot."
+    }
+  ]
+}

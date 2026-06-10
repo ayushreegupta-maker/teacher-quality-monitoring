@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.wav
+*.db
+*.db-journal
+test_output/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.DS_Store

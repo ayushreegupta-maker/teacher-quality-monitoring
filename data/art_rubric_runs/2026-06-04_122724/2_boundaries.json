@@ -1,0 +1,15 @@
+{
+  "first_child_visible_at": "00:42:45",
+  "last_child_visible_at": "02:29:29",
+  "confidence": "high",
+  "notes": "The video starts at 00:00:00 and ends at 02:33:00. The first child appears at 09:14:17 and the last child leaves at 11:01:01.",
+  "video_start_wall_clock": "08:31:32",
+  "first_child_wall_clock": "09:14:17",
+  "last_child_wall_clock": "11:01:01",
+  "first_child_evidence": "A child in a green and white striped shirt walks into the room, followed by another child in a red shirt.",
+  "last_child_evidence": "A child in a red shirt walks out of the room, followed by a child in a green and white striped shirt.",
+  "self_check_passed": true,
+  "session_id": "art_rubric_2026-06-04_122724",
+  "source_model": "gemini-2.5-flash",
+  "prompt_hash": "304329902791"
+}

@@ -1,0 +1,47 @@
+{
+  "session_id": "long_vision_20250918_activity_1_circle_time_before",
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:00:30",
+      "description": "The video shows a classroom with a teacher and three children sitting on a white mat on the floor. The children are engaged in an activity with the teacher. There are shelves with various items on the left side of the room. In the center, there are two wooden structures, one with purple fabric and the other empty. On the right, there are several wooden tables and chairs, some covered with white cloths. A man in a blue shirt walks into the frame from the left and approaches the children and teacher."
+    },
+    {
+      "ts_start": "00:00:30",
+      "ts_end": "00:01:00",
+      "description": "The man in the blue shirt kneels down to interact with the children and the teacher. The children continue to sit on the mat, seemingly participating in the activity. The room is well-lit with natural light coming from large windows on the far side."
+    },
+    {
+      "ts_start": "00:01:00",
+      "ts_end": "00:01:30",
+      "description": "The teacher and children remain seated on the mat, continuing their activity. The man in the blue shirt is now sitting on the floor with them. Another woman in a blue uniform enters the frame from the left and walks towards the group."
+    },
+    {
+      "ts_start": "00:01:30",
+      "ts_end": "00:02:00",
+      "description": "The woman in the blue uniform joins the group on the mat, sitting with the teacher, children, and the man. They all appear to be engaged in the same activity, possibly a storytelling or singing session. The wooden structures in the center of the room remain untouched."
+    },
+    {
+      "ts_start": "00:02:00",
+      "ts_end": "00:02:30",
+      "description": "The group on the mat continues their activity. The children are attentive to the teacher. The room's layout includes various learning stations and shelves with educational materials, but these are not currently in use."
+    },
+    {
+      "ts_start": "00:02:30",
+      "ts_end": "00:03:00",
+      "description": "The teacher, children, and the two adults are still on the mat. The children are actively participating, some raising their hands. The room appears tidy and organized, with designated areas for different activities."
+    },
+    {
+      "ts_start": "00:03:00",
+      "ts_end": "00:03:30",
+      "description": "The group on the mat is still engaged in their activity. The woman in the blue uniform stands up and walks towards the left side of the room, then exits the frame. The teacher and children continue their interaction."
+    },
+    {
+      "ts_start": "00:03:30",
+      "ts_end": "00:04:00",
+      "description": "A woman carrying a bag and a bottle enters the frame from the left, accompanied by a small boy. She walks towards the wooden structures in the center of the room. The teacher and children on the mat continue their activity."
+    }
+  ],
+  "source_model": "gemini-2.5-flash",
+  "prompt_hash": "eb57359e4fed"
+}

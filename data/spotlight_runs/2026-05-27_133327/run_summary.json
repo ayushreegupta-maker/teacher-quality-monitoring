@@ -1,0 +1,137 @@
+{
+  "generated_at": "2026-05-27T14:18:32",
+  "videos": [
+    {
+      "label": "Morning circle time",
+      "path": "/Users/oh/Desktop/Teacher Quality Monitoring/data/raw/20250909_activity_1_Morning_circle_time_activities_and_group_learning.mp4",
+      "child_descriptor": "the boy in the red shirt"
+    },
+    {
+      "label": "Balloon dance",
+      "path": "/Users/oh/Desktop/Teacher Quality Monitoring/data/raw/20250918_activity_5_balloon_dance.mp4",
+      "child_descriptor": "the girl in the blue denim dress with 2 ponytails, playing with the yellow balloon"
+    },
+    {
+      "label": "Colouring",
+      "path": "/Users/oh/Desktop/Teacher Quality Monitoring/data/raw/D06_20250919105616.mp4",
+      "child_descriptor": "the girl in the white dress with 1 ponytail and 4 clips, sitting nearest to the entrance"
+    }
+  ],
+  "models": [
+    "gemini-2.5-flash"
+  ],
+  "questions_loaded": 13,
+  "combos_run": 3,
+  "total_elapsed_seconds": 452.0997462272644,
+  "combo_status": [
+    {
+      "video": "Morning circle time",
+      "model": "gemini-2.5-flash",
+      "n_answers": 0,
+      "expected_keys": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10",
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "missing_keys": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10",
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "error": "ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+    },
+    {
+      "video": "Balloon dance",
+      "model": "gemini-2.5-flash",
+      "n_answers": 0,
+      "expected_keys": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10",
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "missing_keys": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10",
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "error": "ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+    },
+    {
+      "video": "Colouring",
+      "model": "gemini-2.5-flash",
+      "n_answers": 0,
+      "expected_keys": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10",
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "missing_keys": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C6",
+        "C7",
+        "C8",
+        "C9",
+        "C10",
+        "T1",
+        "T2",
+        "T3"
+      ],
+      "error": "ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+    }
+  ],
+  "csv": "data/spotlight_runs/2026-05-27_133327/answers.csv"
+}

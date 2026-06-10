@@ -1,0 +1,801 @@
+{
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:00:05",
+      "description": "The teacher and three students are seated at a white table, engaged in an activity with small, flat objects. A fourth student is seated to the left of the table, also participating. A tablet is visible on the table."
+    },
+    {
+      "ts_start": "00:00:05",
+      "ts_end": "00:00:10",
+      "description": "The teacher is speaking and gesturing with her hands, while the students continue to manipulate the objects on the table. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:00:10",
+      "ts_end": "00:00:15",
+      "description": "The teacher is still speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:00:15",
+      "ts_end": "00:00:20",
+      "description": "The teacher leans over to assist the student in red, who is reaching for objects on the table. The other students continue their activity."
+    },
+    {
+      "ts_start": "00:00:20",
+      "ts_end": "00:00:25",
+      "description": "The teacher is still leaning over, interacting with the student in red. The other students are focused on their activity."
+    },
+    {
+      "ts_start": "00:00:25",
+      "ts_end": "00:00:30",
+      "description": "The teacher sits upright again, and all four students are now focused on the objects on the table. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:00:30",
+      "ts_end": "00:00:35",
+      "description": "The teacher is speaking and gesturing, while the students continue to work with the objects. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:00:35",
+      "ts_end": "00:00:40",
+      "description": "The teacher is still speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:00:40",
+      "ts_end": "00:00:45",
+      "description": "The teacher is speaking, and the students are listening and working. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:00:45",
+      "ts_end": "00:00:50",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:00:50",
+      "ts_end": "00:00:55",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:00:55",
+      "ts_end": "00:01:00",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:01:00",
+      "ts_end": "00:01:05",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:01:05",
+      "ts_end": "00:01:10",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:01:10",
+      "ts_end": "00:01:15",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:01:15",
+      "ts_end": "00:01:20",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:01:20",
+      "ts_end": "00:01:25",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:01:25",
+      "ts_end": "00:01:30",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:01:30",
+      "ts_end": "00:01:35",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:01:35",
+      "ts_end": "00:01:40",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:01:40",
+      "ts_end": "00:01:45",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:01:45",
+      "ts_end": "00:01:50",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:01:50",
+      "ts_end": "00:01:55",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:01:55",
+      "ts_end": "00:02:00",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:02:00",
+      "ts_end": "00:02:05",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:02:05",
+      "ts_end": "00:02:10",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:02:10",
+      "ts_end": "00:02:15",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:02:15",
+      "ts_end": "00:02:20",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:02:20",
+      "ts_end": "00:02:25",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:02:25",
+      "ts_end": "00:02:30",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:02:30",
+      "ts_end": "00:02:35",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:02:35",
+      "ts_end": "00:02:40",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:02:40",
+      "ts_end": "00:02:45",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:02:45",
+      "ts_end": "00:02:50",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:02:50",
+      "ts_end": "00:02:55",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:02:55",
+      "ts_end": "00:03:00",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:03:00",
+      "ts_end": "00:03:05",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:03:05",
+      "ts_end": "00:03:10",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:03:10",
+      "ts_end": "00:03:15",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:03:15",
+      "ts_end": "00:03:20",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:03:20",
+      "ts_end": "00:03:25",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:03:25",
+      "ts_end": "00:03:30",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:03:30",
+      "ts_end": "00:03:35",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:03:35",
+      "ts_end": "00:03:40",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:03:40",
+      "ts_end": "00:03:45",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:03:45",
+      "ts_end": "00:03:50",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:03:50",
+      "ts_end": "00:03:55",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:03:55",
+      "ts_end": "00:04:00",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:04:00",
+      "ts_end": "00:04:05",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:04:05",
+      "ts_end": "00:04:10",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:04:10",
+      "ts_end": "00:04:15",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:04:15",
+      "ts_end": "00:04:20",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:04:20",
+      "ts_end": "00:04:25",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:04:25",
+      "ts_end": "00:04:30",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:04:30",
+      "ts_end": "00:04:35",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:04:35",
+      "ts_end": "00:04:40",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:04:40",
+      "ts_end": "00:04:45",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:04:45",
+      "ts_end": "00:04:50",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:04:50",
+      "ts_end": "00:04:55",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:04:55",
+      "ts_end": "00:05:00",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:05:00",
+      "ts_end": "00:05:05",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    },
+    {
+      "ts_start": "00:05:05",
+      "ts_end": "00:05:09",
+      "description": "The teacher is speaking, and the students are focused on their activity. The student in red is looking at the objects on the table."
+    }
+  ],
+  "transcript": [
+    {
+      "ts_start": "00:00:00",
+      "speaker": "TEACHER",
+      "text": "We have you can make it any of the."
+    },
+    {
+      "ts_start": "00:00:05",
+      "speaker": "STUDENT_1",
+      "text": "So."
+    },
+    {
+      "ts_start": "00:00:06",
+      "speaker": "TEACHER",
+      "text": "Check the picture."
+    },
+    {
+      "ts_start": "00:00:09",
+      "speaker": "STUDENT_2",
+      "text": "Oh, this is very good."
+    },
+    {
+      "ts_start": "00:00:11",
+      "speaker": "TEACHER",
+      "text": "Okay. So, can you make with the own now? Fish, any fish. Don't see that one. Okay, I'm going to close it."
+    },
+    {
+      "ts_start": "00:00:22",
+      "speaker": "TEACHER",
+      "text": "Can you, can you make it own but any fish?"
+    },
+    {
+      "ts_start": "00:00:27",
+      "speaker": "STUDENT_2",
+      "text": "Can I make fish?"
+    },
+    {
+      "ts_start": "00:00:28",
+      "speaker": "TEACHER",
+      "text": "Any fish, any fish. Your own choice."
+    },
+    {
+      "ts_start": "00:00:32",
+      "speaker": "STUDENT_2",
+      "text": "Crab."
+    },
+    {
+      "ts_start": "00:00:33",
+      "speaker": "TEACHER",
+      "text": "Crab or any fish or whale, blue whale, blue whale."
+    },
+    {
+      "ts_start": "00:00:38",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a fish."
+    },
+    {
+      "ts_start": "00:00:40",
+      "speaker": "TEACHER",
+      "text": "Or."
+    },
+    {
+      "ts_start": "00:00:41",
+      "speaker": "STUDENT_2",
+      "text": "Something I'm making."
+    },
+    {
+      "ts_start": "00:00:42",
+      "speaker": "TEACHER",
+      "text": "Shark, whale, fish."
+    },
+    {
+      "ts_start": "00:00:43",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:00:44",
+      "speaker": "TEACHER",
+      "text": "Jellyfish, you can make it. I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:00:48",
+      "speaker": "TEACHER",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:00:50",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:00:51",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:00:52",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:00:53",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:00:54",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:00:55",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:00:56",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:00:57",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:00:58",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:00:59",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:00",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:01",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:02",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:03",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:04",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:05",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:06",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:07",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:08",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:09",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:10",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:11",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:12",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:13",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:14",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:15",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:16",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:17",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:18",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:19",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:20",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:21",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:22",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:23",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:24",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:25",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:26",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:27",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:28",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:29",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:30",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:31",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:32",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:33",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:34",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:35",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:36",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:37",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:38",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:39",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:40",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:41",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:42",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:43",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:44",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:45",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:46",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:47",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:48",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:49",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:50",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:51",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:52",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:53",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:54",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:55",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:56",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:57",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:01:58",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:01:59",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:02:00",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:02:01",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:02:02",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:02:03",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:02:04",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:02:05",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:02:06",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:02:07",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    },
+    {
+      "ts_start": "00:02:08",
+      "speaker": "STUDENT_2",
+      "text": "I'm making a jellyfish."
+    },
+    {
+      "ts_start": "00:02:09",
+      "speaker": "TEACHER",
+      "text": "Very good."
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "session_id": "toy_design_floor_paint_001",
+  "rubric_version": "0.1.0",
+  "scores": {
+    "purpose": {
+      "dimension_id": "purpose",
+      "rubric_version": "0.1.0",
+      "score": 0.5,
+      "anchor_matched": "Some cues to purpose are visible but require interpretation; partial labelling or partial staging",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:10",
+          "type": "visual",
+          "quote": "The video opens with a wide shot of a classroom. A teacher is seen walking towards the left side of the room, near a table with various items.",
+          "indicator": "Materials arranged mid-use, suggesting what to do",
+          "reasoning": "Art supplies are present on a table but the setup is not yet staged in a way that communicates the activity's purpose without adult direction."
+        },
+        {
+          "ts_start": "00:07",
+          "ts_end": "00:12",
+          "type": "transcript",
+          "quote": "You need to get the paints out here.",
+          "indicator": "Setup is self-explanatory — a child walking in could guess what to do",
+          "reasoning": "The teacher's need to verbally direct children to get the paints out indicates the materials were not yet staged in a self-explanatory way at the start of the session."
+        },
+        {
+          "ts_start": "00:45",
+          "ts_end": "00:55",
+          "type": "visual",
+          "quote": "A child in a white shirt walks towards the center of the room and kneels down on a white mat.",
+          "indicator": "Materials arranged mid-use, suggesting what to do",
+          "reasoning": "The white paper/mat on the floor provides a partial environmental cue that something is meant to happen there, but without paints yet laid out it is not fully self-explanatory."
+        },
+        {
+          "ts_start": "01:30",
+          "ts_end": "01:40",
+          "type": "visual",
+          "quote": "The child in the black dress is now painting on the mat, while the teacher takes a picture with her phone. Other children join the painting activity on the mat, and teachers assist them.",
+          "indicator": "Examples of completed or in-progress work on display",
+          "reasoning": "Once painting is underway, in-progress work on the mat provides a visible cue to purpose, but this emerged through adult facilitation rather than deliberate pre-setup staging."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "The transcript appears to contain looping/repeated lines which may indicate a transcription artifact. The core evidence is clear: paints were not pre-staged on the floor paper at session start (teacher had to retrieve them), requiring verbal adult direction. Once activity was underway, the in-progress work served as a cue. This pattern fits the 0.5 anchor — some cues present but not designed-in from the outset.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "anchor_and_choice_materials": {
+      "dimension_id": "anchor_and_choice_materials",
+      "rubric_version": "0.1.0",
+      "score": 0.5,
+      "anchor_matched": "Either a hero anchor with limited choice, OR variety of materials with no clear anchor",
+      "evidence": [
+        {
+          "ts_start": "00:45",
+          "ts_end": "01:00",
+          "type": "visual",
+          "quote": "A child in a white shirt walks towards the center of the room and kneels down on a white mat.",
+          "indicator": "A visually compelling hero / centerpiece material",
+          "reasoning": "The large white paper/mat on the floor functions as a hero anchor material that draws children toward it as a centerpiece of the activity."
+        },
+        {
+          "ts_start": "02:10",
+          "ts_end": "02:25",
+          "type": "visual",
+          "quote": "The children continue to paint on the mat, with various colors spread across the white paper.",
+          "indicator": "Multiple flexible materials available beyond the anchor",
+          "reasoning": "Multiple colors of paint are visible on the paper, suggesting some color variety is present, but the evidence does not confirm different brush sizes, tools, or other material types beyond paint."
+        },
+        {
+          "ts_start": "02:20",
+          "ts_end": "02:25",
+          "type": "visual",
+          "quote": "The children are still engaged in the painting activity, with some using their hands to apply paint.",
+          "indicator": "Materials can be combined in different ways for different outcomes",
+          "reasoning": "Children using both hands and (implied) brushes suggests some flexibility in application method, but the overall setup appears limited to paint on paper with no evidence of additional choice materials such as stamps, different paper types, or other media."
+        },
+        {
+          "ts_start": "00:04",
+          "ts_end": "00:05",
+          "type": "transcript",
+          "quote": "You want orange?",
+          "indicator": "Multiple flexible materials available beyond the anchor",
+          "reasoning": "The mention of orange implies at least some color choice exists, but only one color is named, providing insufficient evidence of a full variety of choice materials."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "The large floor paper clearly serves as a hero anchor. Multiple paint colors are visible but the evidence does not confirm a rich variety of choice materials (different brush sizes, paper types, additional media). The transcript is heavily looped/corrupted and provides minimal useful signal. Scored 0.5 for hero anchor present but limited evidence of genuine material variety.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "spark_curiosity": {
+      "dimension_id": "spark_curiosity",
+      "rubric_version": "0.1.0",
+      "score": 0,
+      "anchor_matched": "Setup is purely functional with no curiosity hook — children would not have any 'what's that?' moment",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:45",
+          "type": "visual",
+          "quote": "The teachers and children are actively engaged with the items on the table, which appear to be art supplies.",
+          "indicator": "A surprising or unexpected element in the setup",
+          "reasoning": "The setup consists of standard art supplies (paints, brushes, paper on the floor) — familiar materials with no surprising, mysterious, or visually striking element that would create a 'what's that?' moment."
+        },
+        {
+          "ts_start": "01:30",
+          "ts_end": "01:40",
+          "type": "visual",
+          "quote": "The child in the black dress is now painting on the mat, while the teacher takes a picture with her phone.",
+          "indicator": "Visually striking centerpieces or features",
+          "reasoning": "The activity is straightforward floor painting with no unusual centerpiece, hidden element, or novelty beyond the familiar act of painting on paper."
+        },
+        {
+          "ts_start": "02:10",
+          "ts_end": "02:25",
+          "type": "visual",
+          "quote": "The children continue to paint on the mat, with various colors spread across the white paper.",
+          "indicator": "Items obviously designed to be touched, examined, or wondered about",
+          "reasoning": "Multiple colors on paper is a standard painting activity outcome; there is no deliberate novelty or unexpected element designed to provoke wonder or questioning beyond the activity itself."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "The transcript appears to have a looping/transcription error (same lines repeated from 00:07 onward), but the visual observations are sufficient to assess the setup. The activity is a conventional floor painting session with paper, paints, and brushes — no unusual, mysterious, or visually striking curiosity hook is present.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "challenge_adjustment": {
+      "dimension_id": "challenge_adjustment",
+      "rubric_version": "0.1.0",
+      "score": 0,
+      "anchor_matched": "Single fixed difficulty level — no variation possible without redesigning the activity",
+      "evidence": [
+        {
+          "ts_start": "01:30",
+          "ts_end": "01:45",
+          "type": "visual",
+          "quote": "The child in the black dress is now painting on the mat, while the teacher takes a picture with her phone. Other children join the painting activity on the mat, and teachers assist them.",
+          "indicator": "Multiple visible difficulty levels of the same activity",
+          "reasoning": "All children engage in the same undifferentiated floor painting activity with no visible tiered variants, extensions, or difficulty adjustments available."
+        },
+        {
+          "ts_start": "02:10",
+          "ts_end": "02:25",
+          "type": "visual",
+          "quote": "The children continue to paint on the mat, with various colors spread across the white paper. A teacher takes a picture of the children painting, while another teacher assists a child with their art. The children are still engaged in the painting activity, with some using their hands to apply paint.",
+          "indicator": "Add-on / extension materials available but not forced",
+          "reasoning": "No extension or add-on materials are visible; the only variation observed is children spontaneously using hands vs. brushes, which is not a deliberately staged difficulty option."
+        },
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:15",
+          "type": "visual",
+          "quote": "The video opens with a wide shot of a classroom. A teacher is seen walking towards the left side of the room, near a table with various items.",
+          "indicator": "Tiered or layered material options",
+          "reasoning": "The wide shot reveals no tiered or layered material options; the setup is a single large paper on the floor with paints, offering one fixed level of activity."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "The transcript appears to contain a looping transcription artifact (same lines repeated from 00:07 onward), but the visual evidence is consistent throughout and clearly shows a single undifferentiated painting activity with no deliberate difficulty variations staged.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "self_served": {
+      "dimension_id": "self_served",
+      "rubric_version": "0.1.0",
+      "score": 0.5,
+      "anchor_matched": "Most materials are manageable but some require adult help or adult supervision to use safely",
+      "evidence": [
+        {
+          "ts_start": "00:07",
+          "ts_end": "00:12",
+          "type": "transcript",
+          "quote": "You need to get the paints out here. You guys can move whatever you want to go color the paper.",
+          "indicator": "No adult-handling is required for setup, use, or cleanup of any item",
+          "reasoning": "The teacher is actively setting out the paints herself, indicating the materials were not pre-positioned for child self-service at the start of the activity."
+        },
+        {
+          "ts_start": "01:30",
+          "ts_end": "01:45",
+          "type": "visual",
+          "quote": "The child in the black dress is now painting on the mat, while the teacher takes a picture with her phone. Other children join the painting activity on the mat, and teachers assist them.",
+          "indicator": "Children can recognise what each material is and how to use it",
+          "reasoning": "Children independently approach and use the paint on the floor mat, suggesting materials are recognisable and light enough to handle, but teachers are present assisting, indicating not fully self-served."
+        },
+        {
+          "ts_start": "00:20",
+          "ts_end": "00:30",
+          "type": "visual",
+          "quote": "A teacher kneels down to assist the child in the red dress, who is now standing near the table. The teacher helps the child in the red dress with something on the table, while other children gather around.",
+          "indicator": "No adult-handling is required for setup, use, or cleanup of any item",
+          "reasoning": "Adult assistance is required for at least one child to engage with the materials at the table, indicating the setup is not fully self-served."
+        },
+        {
+          "ts_start": "02:20",
+          "ts_end": "02:25",
+          "type": "visual",
+          "quote": "The children are still engaged in the painting activity, with some using their hands to apply paint.",
+          "indicator": "Items are light enough for a child to lift and carry alone",
+          "reasoning": "Children are independently applying paint with their hands, suggesting the paint containers are accessible and manageable, supporting partial self-service once materials are laid out."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "The transcript appears to be looping/corrupted with repeated lines from 00:07 onward. The initial setup required teacher involvement (paints not pre-laid out), and adult assistance was observed for individual children, but once materials were placed on the floor mat, children could largely access them independently. This mixed picture supports a 0.5 score.",
+      "prompt_hash": "c92c689bf87b"
+    }
+  },
+  "overall": 0.3,
+  "cost_usd": null,
+  "duration_seconds": 16.850372076034546
+}

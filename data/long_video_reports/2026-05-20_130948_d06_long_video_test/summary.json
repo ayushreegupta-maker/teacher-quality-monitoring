@@ -1,0 +1,749 @@
+{
+  "activity_name": "D06 long video test",
+  "video": "data/raw/D06_20250919105616.mp4",
+  "total_seconds": 1302.196,
+  "boundaries": {
+    "first_child_visible_at": "00:59:19",
+    "last_child_visible_at": "01:15:00",
+    "confidence": "high",
+    "notes": "Children enter the room at 00:59:19 and leave at 01:15:00. The teacher is present throughout this period.",
+    "session_id": "long_full_d06_long_video_test",
+    "source_model": "gemini-2.5-flash",
+    "prompt_hash": "15b32a9f193f"
+  },
+  "windows": {
+    "before": [
+      0.0,
+      300.0
+    ],
+    "after": [
+      1002.1959999999999,
+      1302.196
+    ],
+    "warnings": [
+      "first_child timestamp (3559s) is beyond video duration (1302s) by more than 5% \u2014 likely hallucinated by the boundary model; treating as missing and falling back",
+      "last_child timestamp (4500s) is beyond video duration (1302s) by more than 5% \u2014 likely hallucinated by the boundary model; treating as missing and falling back",
+      "No valid child boundary detected \u2014 falling back to first 5 min / last 5 min of recording."
+    ]
+  },
+  "results": {
+    "before": {
+      "items": {
+        "activity_zone_items": [
+          {
+            "category": "Furniture",
+            "name": "blue mats",
+            "count_or_quantity": "multiple",
+            "specifics": "blue colored floor mats placed on the floor by the teacher",
+            "first_seen_at": "00:04:00"
+          }
+        ],
+        "other_items_in_room": [
+          {
+            "name": "blackboard",
+            "location": "right side of room, wall-mounted"
+          },
+          {
+            "name": "colorful decorations",
+            "location": "far right wall"
+          },
+          {
+            "name": "window with security bars",
+            "location": "left wall"
+          }
+        ],
+        "notes": "Recording is largely setup/empty for the first ~3 minutes. Activity has only just begun by the end of the observed segment (00:04:30). Very few activity-zone items have been introduced yet. An unspecified object was picked up near the window by the teacher at ~00:03:30, but its identity is unclear. The full activity setup is described as TBD, so inventory is likely incomplete.",
+        "session_id": "long_vision_d06_long_video_test_before",
+        "source_model": "claude-sonnet-4-6",
+        "prompt_hash": "0a584ed472ce"
+      },
+      "scores": {
+        "playground": {
+          "session_id": "long_before_playground_d06_long_video_test",
+          "rubric_version": "0.2.3",
+          "scores": {
+            "narrative": {
+              "dimension_id": "narrative",
+              "rubric_version": "0.2.3",
+              "score": 0,
+              "anchor_matched": "No experiential context \u2014 generic space with no immersive framing; pure utility setup",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:30",
+                  "type": "visual",
+                  "quote": "The room is empty and well-lit, with light wooden flooring and white walls. A large black board is visible on the right side of the room, and a window with security bars is on the left. There are some colorful decorations on the wall to the far right.",
+                  "indicator": "Thematic decor that names or evokes a setting",
+                  "reasoning": "The space contains only generic classroom features (blackboard, plain walls, unspecified colorful decorations) with no thematic or immersive framing visible."
+                },
+                {
+                  "ts_start": "01:30",
+                  "ts_end": "02:00",
+                  "type": "visual",
+                  "quote": "The colorful decorations on the right wall add a touch of vibrancy to the otherwise plain room.",
+                  "indicator": "An atmospheric anchor (banner, central feature, framing object)",
+                  "reasoning": "The decorations are described only as adding 'vibrancy' with no indication they constitute a deliberate thematic anchor or immersive setting."
+                },
+                {
+                  "ts_start": "04:00",
+                  "ts_end": "04:30",
+                  "type": "visual",
+                  "quote": "The teacher is seen placing blue mats on the floor. Two children are sitting on the floor, one on a mat, and another child is standing near the blackboard.",
+                  "indicator": "An 'in-progress project' feel where the setup itself tells what's happening",
+                  "reasoning": "The setup consists solely of blue mats being placed on a plain floor \u2014 a utility arrangement with no narrative or scene-setting framing."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The session shows a generic, undecorated classroom space. The 'colorful decorations' mentioned are never described in thematic terms and do not constitute immersive narrative framing. No props, banners, or deliberate scene-setting elements are observed throughout the recording.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "multi_sensory": {
+              "dimension_id": "multi_sensory",
+              "rubric_version": "0.2.3",
+              "score": 0.5,
+              "anchor_matched": "Two senses are nominally engaged but at least one is weak or marginal",
+              "evidence": [
+                {
+                  "ts_start": "04:00",
+                  "ts_end": "04:30",
+                  "type": "visual",
+                  "quote": "The teacher is seen placing blue mats on the floor. Two children are sitting on the floor, one on a mat, and another child is standing near the blackboard.",
+                  "indicator": "Tactile invitations (textures, materials to touch, wet/dry/soft/rough)",
+                  "reasoning": "Blue mats on the floor provide a tactile surface distinct from the wooden flooring, engaging touch alongside the visual variety of the space."
+                },
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:02:30",
+                  "type": "visual",
+                  "quote": "A large black board is visible on the right side of the room, and a window with security bars is on the left. There are some colorful decorations on the wall to the far right.",
+                  "indicator": "Visual variety (color, materials, arrangements)",
+                  "reasoning": "The blackboard and colorful wall decorations provide visual engagement, but the overall setup is sparse with limited multi-sensory materials visible."
+                },
+                {
+                  "ts_start": "03:30",
+                  "ts_end": "04:00",
+                  "type": "visual",
+                  "quote": "The children are moving around the room, some running towards the window, others towards the blackboard. The teacher is walking towards the window, then bends down to pick something up near the window.",
+                  "indicator": "Proprioceptive / movement opportunities (balance, climbing, kneeling)",
+                  "reasoning": "Children running and moving around the room provides some proprioceptive engagement, though this appears incidental rather than deliberately designed."
+                }
+              ],
+              "confidence": "medium",
+              "scorer_notes": "The session shows a largely bare room with mats being introduced late in the recording. Two senses (visual and tactile via mats) are nominally present, but the setup is minimal and the activity design is not fully observable within the 5-minute clip. No sound-making elements, natural materials, or deliberate multi-sensory arrangements are visible.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "boundary": {
+              "dimension_id": "boundary",
+              "rubric_version": "0.2.3",
+              "score": 0.5,
+              "anchor_matched": "A boundary is implied but ambiguous (e.g. materials present but no visible zone marker; or unclear where the activity area starts and stops)",
+              "evidence": [
+                {
+                  "ts_start": "04:00",
+                  "ts_end": "04:30",
+                  "type": "visual",
+                  "quote": "The teacher is seen placing blue mats on the floor. Two children are sitting on the floor, one on a mat, and another child is standing near the blackboard.",
+                  "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+                  "reasoning": "Blue mats are being introduced as potential zone markers, but they are still being placed mid-session and not yet fully established as a defined activity boundary."
+                },
+                {
+                  "ts_start": "04:30",
+                  "ts_end": "05:00",
+                  "type": "visual",
+                  "quote": "The teacher continues to place mats on the floor. Three children are now sitting on the mats, and two other children are standing. The teacher is interacting with the children, pointing to the mats.",
+                  "indicator": "The boundary is intuitive to a child without verbal explanation from an adult",
+                  "reasoning": "The teacher is actively pointing to the mats to direct children toward them, indicating the boundary is not yet self-evident to the children and requires adult verbal/gestural guidance."
+                },
+                {
+                  "ts_start": "03:30",
+                  "ts_end": "04:00",
+                  "type": "visual",
+                  "quote": "The children are moving around the room, some running towards the window, others towards the blackboard. The teacher is walking towards the window, then bends down to pick something up near the window.",
+                  "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+                  "reasoning": "Before mats are placed, children disperse freely with no visible activity boundary, confirming the zone was not pre-established or self-evident at session start."
+                }
+              ],
+              "confidence": "medium",
+              "scorer_notes": "The mats are emerging as boundary markers by the end of the clip, but they are being placed reactively after children have already scattered. The teacher's pointing gesture suggests the boundary is not yet intuitive without adult direction. A score of 0.5 reflects the partial and in-progress nature of the boundary establishment.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "movement": {
+              "dimension_id": "movement",
+              "rubric_version": "0.2.3",
+              "score": 0.5,
+              "anchor_matched": "Either clear unobstructed access OR clear positioning is present, but not both. Or one is partial. Significant access obstructions (multiple adults forming a barrier; persistent blocking; major clutter) reduce a 1 to 0.5; minor adult presence in the path does NOT.",
+              "evidence": [
+                {
+                  "ts_start": "03:00",
+                  "ts_end": "03:30",
+                  "type": "visual",
+                  "quote": "A group of children and a teacher enter the room from the back. The children are wearing light-colored clothes and appear to be between 3-5 years old. The teacher is wearing a patterned dress.",
+                  "indicator": "Children can clearly access the activity zone from the room entry",
+                  "reasoning": "Children enter the room freely with no visible obstructions blocking their path, indicating clear access to the space."
+                },
+                {
+                  "ts_start": "03:30",
+                  "ts_end": "04:00",
+                  "type": "visual",
+                  "quote": "The children are moving around the room, some running towards the window, others towards the blackboard. The teacher is walking towards the window, then bends down to pick something up near the window.",
+                  "indicator": "Children can intuitively tell WHERE to go to engage with the activity",
+                  "reasoning": "Children are dispersing in multiple directions without a clear focal activity zone, suggesting the activity positioning has not yet been established at this point."
+                },
+                {
+                  "ts_start": "04:00",
+                  "ts_end": "04:30",
+                  "type": "visual",
+                  "quote": "The teacher is seen placing blue mats on the floor. Two children are sitting on the floor, one on a mat, and another child is standing near the blackboard.",
+                  "indicator": "Clear deliberate positioning suited to the activity (standing at table height for sensory bins, kneeling on the floor for floor painting, sitting on a mat for story time, etc.)",
+                  "reasoning": "Mats are being placed mid-session, meaning deliberate positioning is only partially established \u2014 some children are on mats while others are not yet settled."
+                },
+                {
+                  "ts_start": "04:30",
+                  "ts_end": "05:00",
+                  "type": "visual",
+                  "quote": "The teacher continues to place mats on the floor. Three children are now sitting on the mats, and two other children are standing. The teacher is interacting with the children, pointing to the mats.",
+                  "indicator": "Enough space at the activity for children to stand, kneel, sit, or move as the activity requires",
+                  "reasoning": "By the end of the recording, positioning on mats is still being established (teacher still placing mats and directing children), so clear deliberate positioning is only partially present even as access to the space is unobstructed."
+                }
+              ],
+              "confidence": "medium",
+              "scorer_notes": "The activity setup is still in progress at the end of the recording. Access to the room is clearly unobstructed, but the activity zone and deliberate positioning are only partially established by the end of the 5-minute clip. No materials are visible in use, so reach cannot be assessed. Score of 0.5 reflects clear access but incomplete positioning.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "clean_up": {
+              "dimension_id": "clean_up",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "The session recording shows only the initial setup phase \u2014 children and teacher have just entered the room and mats are being placed on the floor. No cleanup activity occurs during the 5-minute recording. Storage systems, return locations, labelling, and children's ability to independently return materials cannot be assessed from this footage. The room appears largely bare with no visible storage furniture, bins, or shelving observable in the visual descriptions, making it impossible to evaluate the design's support for child-led cleanup.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": 0.375,
+          "cost_usd": null,
+          "duration_seconds": 15.569941997528076
+        },
+        "toy_design": {
+          "session_id": "long_before_toy_design_d06_long_video_test",
+          "rubric_version": "0.2.0",
+          "scores": {
+            "purpose": {
+              "dimension_id": "purpose",
+              "rubric_version": "0.2.0",
+              "score": 0,
+              "anchor_matched": "Setup is ambiguous \u2014 a child arriving could not guess what the activity is meant to be from the material arrangement alone",
+              "evidence": [
+                {
+                  "ts_start": "00:00:00",
+                  "ts_end": "00:03:00",
+                  "type": "visual",
+                  "quote": "The room is empty and well-lit, with light wooden flooring and white walls. A large black board is visible on the right side of the room, and a window with security bars is on the left. There are some colorful decorations on the wall to the far right.",
+                  "indicator": "Materials arranged at the activity zone in a way that obviously communicates what to do",
+                  "reasoning": "For the first three minutes, the room is entirely empty with no materials staged at any activity zone, providing no communicative setup for children."
+                },
+                {
+                  "ts_start": "00:04:00",
+                  "ts_end": "00:04:30",
+                  "type": "visual",
+                  "quote": "The teacher is seen placing blue mats on the floor. Two children are sitting on the floor, one on a mat, and another child is standing near the blackboard.",
+                  "indicator": "Materials arranged at the activity zone in a way that obviously communicates what to do",
+                  "reasoning": "Mats alone being placed on the floor mid-session do not communicate a specific activity purpose \u2014 they could signal sitting, movement, or any number of activities, leaving the intent ambiguous."
+                },
+                {
+                  "ts_start": "00:04:30",
+                  "ts_end": "00:05:00",
+                  "type": "visual",
+                  "quote": "The teacher continues to place mats on the floor. Three children are now sitting on the mats, and two other children are standing. The teacher is interacting with the children, pointing to the mats.",
+                  "indicator": "A child arriving at the activity zone could guess what to do from the arrangement alone",
+                  "reasoning": "The teacher must actively direct children to the mats by pointing, indicating the setup itself is insufficient to communicate the activity's purpose without adult instruction."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The room has no pre-staged activity materials at any point during the recording. The only materials introduced (blue mats) are placed by the teacher after children have already entered, and even then require adult direction to communicate purpose. No activity zone with a self-evident arrangement is ever established.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "anchor_and_choice_materials": {
+              "dimension_id": "anchor_and_choice_materials",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "The recording captures an empty room for the first ~3 minutes, then children and a teacher entering and the teacher placing blue mats on the floor. No play or learning materials (tools, sensory bins, art supplies, blocks, etc.) are visible or described at any point during the 5-minute session. The setup described in the activity notes ('exacting setup TBD') was apparently not in place during filming. There is insufficient evidence to evaluate anchor materials or choice materials.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "spark_curiosity": {
+              "dimension_id": "spark_curiosity",
+              "rubric_version": "0.2.0",
+              "score": 0,
+              "anchor_matched": "Activity area is purely functional with no curiosity hook \u2014 children would not have any 'what's that?' moment from what is at the activity itself",
+              "evidence": [
+                {
+                  "ts_start": "04:00",
+                  "ts_end": "04:30",
+                  "type": "visual",
+                  "quote": "The teacher is seen placing blue mats on the floor. Two children are sitting on the floor, one on a mat, and another child is standing near the blackboard.",
+                  "indicator": "A surprising or unexpected element AT the activity zone",
+                  "reasoning": "The activity setup consists only of plain blue mats placed on the floor \u2014 familiar, functional items with no surprising, mysterious, or visually striking element that would invite wonder or a 'what's that?' moment."
+                },
+                {
+                  "ts_start": "04:30",
+                  "ts_end": "05:00",
+                  "type": "visual",
+                  "quote": "The teacher continues to place mats on the floor. Three children are now sitting on the mats, and two other children are standing. The teacher is interacting with the children, pointing to the mats.",
+                  "indicator": "Items at the activity zone obviously designed to be touched, examined, or wondered about",
+                  "reasoning": "The completed activity area shows only blue mats with no additional objects, centerpieces, or novel elements at the activity zone that would spark curiosity or invite exploration beyond sitting."
+                }
+              ],
+              "confidence": "medium",
+              "scorer_notes": "The session recording is very short and the activity setup is still being established at the end of the clip. Only blue mats are visible at the activity area; no curiosity-sparking elements are present. Wall decorations and the blackboard are ambient room features and do not count per rubric rules.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "challenge_adjustment": {
+              "dimension_id": "challenge_adjustment",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "The recording captures only the very beginning of session setup \u2014 children enter at 03:00 and the teacher is still placing mats on the floor at 05:00. No activity materials, difficulty variants, tiered options, or extension materials are visible. The transcript is empty. There is no observable evidence of challenge adjustment design in either direction; the session simply has not progressed far enough to assess this dimension.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "self_served": {
+              "dimension_id": "self_served",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "The recording shows an essentially empty room for the first 3 minutes, and the final 2 minutes only show children entering and a teacher placing blue mats on the floor. No activity materials are visible \u2014 no toys, manipulatives, art supplies, or other learning materials are present or described. There is insufficient evidence to assess whether materials are safe, recognisable, or light enough for child self-service, as no materials have been set out during the recording window.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": 0.0,
+          "cost_usd": null,
+          "duration_seconds": 10.198824882507324
+        }
+      }
+    },
+    "after": {
+      "items": {
+        "activity_zone_items": [
+          {
+            "category": "Furniture",
+            "name": "blue mats",
+            "count_or_quantity": "multiple",
+            "specifics": "blue colored, placed on wooden floor for children to sit on",
+            "first_seen_at": "00:00:00"
+          },
+          {
+            "category": "Furniture",
+            "name": "small wooden tables",
+            "count_or_quantity": "multiple",
+            "specifics": "small-sized, wooden",
+            "first_seen_at": "00:00:00"
+          },
+          {
+            "category": "Materials",
+            "name": "paper",
+            "count_or_quantity": "multiple",
+            "specifics": "used for drawing activity",
+            "first_seen_at": "00:00:00"
+          },
+          {
+            "category": "Materials",
+            "name": "crayons",
+            "count_or_quantity": "multiple",
+            "specifics": "used for drawing; specific colors not stated",
+            "first_seen_at": "00:00:00"
+          }
+        ],
+        "other_items_in_room": [
+          {
+            "name": "blackboard",
+            "location": "wall, front of room (children and adults walk toward it)"
+          },
+          {
+            "name": "wooden floor",
+            "location": "floor throughout classroom"
+          }
+        ],
+        "notes": "Observations are largely repetitive across time segments. No additional distinct items were introduced after the first minute. The blackboard is listed under other_items_in_room as children and adults approach it but no activity or materials are described being used at it. Count of blue mats and small wooden tables not explicitly stated beyond 'multiple' implied by six children.",
+        "session_id": "long_vision_d06_long_video_test_after",
+        "source_model": "claude-sonnet-4-6",
+        "prompt_hash": "0a584ed472ce"
+      },
+      "scores": {
+        "playground": {
+          "session_id": "long_after_playground_d06_long_video_test",
+          "rubric_version": "0.2.3",
+          "scores": {
+            "narrative": {
+              "dimension_id": "narrative",
+              "rubric_version": "0.2.3",
+              "score": 0,
+              "anchor_matched": "No experiential context \u2014 generic space with no immersive framing; pure utility setup",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "The video shows a classroom with six children and one teacher. The children are seated on blue mats on the wooden floor, with small wooden tables in front of them. They are engaged in drawing activities, using paper and crayons.",
+                  "indicator": "Thematic decor that names or evokes a setting",
+                  "reasoning": "The space is described as a generic classroom with mats, tables, paper, and crayons \u2014 no thematic decor, props, or atmospheric anchors that would place children inside a deliberate setting."
+                },
+                {
+                  "ts_start": "00:59",
+                  "ts_end": "01:59",
+                  "type": "visual",
+                  "quote": "One child stands up and walks to the blackboard, then returns to her mat. Another child stands near the tables, observing the teacher and other children. The children continue to draw, some showing their work to the teacher.",
+                  "indicator": "An atmospheric anchor (banner, central feature, framing object)",
+                  "reasoning": "The only notable feature mentioned is a blackboard \u2014 a generic classroom utility item \u2014 with no evidence of any atmospheric anchor, banner, or framing object that would establish an immersive narrative context."
+                },
+                {
+                  "ts_start": "01:59",
+                  "ts_end": "02:59",
+                  "type": "visual",
+                  "quote": "The teacher continues to assist the children with their drawings. Two children stand up and walk towards the blackboard, then return to their mats.",
+                  "indicator": "An 'in-progress project' feel where the setup itself tells what's happening",
+                  "reasoning": "The setup is purely utilitarian \u2014 drawing activity on mats with tables \u2014 with no scene-setting, story framing, or in-progress project narrative visible in the space."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The space is a plain classroom with mats, small tables, paper, crayons, and a blackboard. No thematic decor, props, banners, or immersive framing elements are described at any point in the session. Drawing materials laid out for an activity do not constitute narrative immersion per the rubric's common failure modes.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "multi_sensory": {
+              "dimension_id": "multi_sensory",
+              "rubric_version": "0.2.3",
+              "score": 0.5,
+              "anchor_matched": "Two senses are nominally engaged but at least one is weak or marginal",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "The children are seated on blue mats on the wooden floor, with small wooden tables in front of them. They are engaged in drawing activities, using paper and crayons.",
+                  "indicator": "Tactile invitations (textures, materials to touch, wet/dry/soft/rough)",
+                  "reasoning": "Crayons and paper provide a tactile engagement (holding, pressing, drawing) alongside the visual output of drawing, confirming at least two senses are engaged."
+                },
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "They are engaged in drawing activities, using paper and crayons. The teacher is also seated on the floor, assisting the children with their drawings.",
+                  "indicator": "Visual variety (color, materials, arrangements)",
+                  "reasoning": "Drawing with crayons on paper engages vision (observing colors and marks being made), supporting a second sensory modality alongside tactile."
+                },
+                {
+                  "ts_start": "01:27",
+                  "ts_end": "01:29",
+                  "type": "transcript",
+                  "quote": "Now, take a cushion. Take a cushion.",
+                  "indicator": "Tactile invitations (textures, materials to touch, wet/dry/soft/rough)",
+                  "reasoning": "Cushions add a soft tactile material to the environment, marginally broadening tactile variety beyond just crayons and paper."
+                },
+                {
+                  "ts_start": "00:59",
+                  "ts_end": "01:59",
+                  "type": "visual",
+                  "quote": "One child stands up and walks to the blackboard, then returns to her mat. Another child stands near the tables, observing the teacher and other children.",
+                  "indicator": "Proprioceptive / movement opportunities (balance, climbing, kneeling)",
+                  "reasoning": "Children moving between mats, tables, and the blackboard provides some proprioceptive/movement engagement, though it appears incidental rather than deliberately designed."
+                }
+              ],
+              "confidence": "medium",
+              "scorer_notes": "The setup is primarily a drawing activity with crayons and paper on mats \u2014 this meaningfully engages tactile and visual senses. However, the sensory range is narrow (no water, sand, sound-making elements, or other distinct material types visible), and the movement observed appears incidental rather than designed. This places the session at 0.5 rather than 1.0.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "boundary": {
+              "dimension_id": "boundary",
+              "rubric_version": "0.2.3",
+              "score": 1.0,
+              "anchor_matched": "At least one clear, unambiguous activity boundary \u2014 a canvas, paper, mat, rug, table, low fence, or similar marker visually defines the zone. A single well-defined zone is sufficient for this score.",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "The children are seated on blue mats on the wooden floor, with small wooden tables in front of them. They are engaged in drawing activities, using paper and crayons.",
+                  "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+                  "reasoning": "Blue mats on the wooden floor combined with small wooden tables create a visually unambiguous activity zone where children can see exactly where the drawing activity is meant to happen."
+                },
+                {
+                  "ts_start": "00:59",
+                  "ts_end": "01:59",
+                  "type": "visual",
+                  "quote": "One child stands up and walks to the blackboard, then returns to her mat.",
+                  "indicator": "The boundary is intuitive to a child without verbal explanation from an adult",
+                  "reasoning": "Children independently return to their mats after wandering, indicating the mat-and-table zone is self-evident as the activity boundary."
+                },
+                {
+                  "ts_start": "01:59",
+                  "ts_end": "02:59",
+                  "type": "visual",
+                  "quote": "Two children stand up and walk towards the blackboard, then return to their mats. Another child stands near the tables, observing the teacher and other children.",
+                  "indicator": "A canvas / paper / mat / rug / table that visually defines where the activity happens",
+                  "reasoning": "The consistent pattern of children returning to the mats and tables confirms these physical markers serve as a clear, child-recognizable activity boundary."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The blue mats on a contrasting wooden floor, paired with small wooden tables and paper/crayons, create a well-defined single activity zone. Children naturally orient to and return to this zone, confirming the boundary is self-evident.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "movement": {
+              "dimension_id": "movement",
+              "rubric_version": "0.2.3",
+              "score": 1.0,
+              "anchor_matched": "Both elements are present \u2014 children can clearly access the activity zone (visible path markers not required; minor adult presence in the path is acceptable as long as children get past) AND deliberate positioning suited to the activity (standing, kneeling, or sitting as the activity calls for), with materials reachable from that posture. Explicit seating like cushions is NOT required when the activity naturally invites standing or kneeling.",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "The children are seated on blue mats on the wooden floor, with small wooden tables in front of them. They are engaged in drawing activities, using paper and crayons. The teacher is also seated on the floor, assisting the children with their drawings. One child stands and walks around the tables, observing others.",
+                  "indicator": "Clear deliberate positioning suited to the activity",
+                  "reasoning": "Children are seated on mats at floor-level tables for a drawing activity, which is a deliberate posture suited to the task, with materials (paper and crayons) reachable from that seated position."
+                },
+                {
+                  "ts_start": "01:27",
+                  "ts_end": "01:29",
+                  "type": "transcript",
+                  "quote": "Now, take a cushion. Take a cushion.",
+                  "indicator": "Clear deliberate positioning suited to the activity",
+                  "reasoning": "The teacher's instruction to take a cushion confirms that seating/positioning is intentionally set up for the drawing activity, reinforcing deliberate child-appropriate positioning."
+                },
+                {
+                  "ts_start": "00:59",
+                  "ts_end": "01:59",
+                  "type": "visual",
+                  "quote": "One child stands up and walks to the blackboard, then returns to her mat. Another child stands near the tables, observing the teacher and other children. The children continue to draw, some showing their work to the teacher. A child crawls on the floor and then stands up, walking towards the blackboard.",
+                  "indicator": "Children can clearly access the activity zone from the room entry",
+                  "reasoning": "Children move freely between their mats and the blackboard without obstruction, demonstrating unobstructed access throughout the activity zone."
+                },
+                {
+                  "ts_start": "01:59",
+                  "ts_end": "02:59",
+                  "type": "visual",
+                  "quote": "Two children stand up and walk towards the blackboard, then return to their mats. Another child stands near the tables, observing the teacher and other children. The children continue to draw, some showing their work to the teacher. A man enters the room from the right side and stands near the blackboard, observing the children.",
+                  "indicator": "No significant clutter, furniture, or persistent adult barriers materially blocking the path between entry and the activity zone",
+                  "reasoning": "A man enters and stands near the blackboard but children continue to move freely to and from the blackboard area, indicating his presence does not materially obstruct child movement."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The activity is a floor-based drawing session with mats and low tables \u2014 deliberate positioning is clear. Children move freely throughout the session. A visiting adult stands near the blackboard but does not block child access. Both access and positioning indicators are fully met.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "clean_up": {
+              "dimension_id": "clean_up",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "The session recording covers only an active drawing activity with no cleanup phase observed. There is no evidence of children returning materials to storage, no visible storage units, shelving, bins, or labels captured in the visual observations, and no audio related to cleanup. The design of the storage system and whether children can independently return materials cannot be assessed from this footage.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": 0.625,
+          "cost_usd": null,
+          "duration_seconds": 16.253230094909668
+        },
+        "toy_design": {
+          "session_id": "long_after_toy_design_d06_long_video_test",
+          "rubric_version": "0.2.0",
+          "scores": {
+            "purpose": {
+              "dimension_id": "purpose",
+              "rubric_version": "0.2.0",
+              "score": 1.0,
+              "anchor_matched": "The activity's purpose is obvious from the setup alone \u2014 materials are arranged in a way that a child arriving can intuit what to do. Explicit labels are not required.",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "The children are seated on blue mats on the wooden floor, with small wooden tables in front of them. They are engaged in drawing activities, using paper and crayons.",
+                  "indicator": "Materials arranged at the activity zone in a way that obviously communicates what to do",
+                  "reasoning": "Paper and crayons placed on tables in front of children on mats clearly communicates 'draw on the paper' \u2014 a child arriving could immediately intuit the activity from the arrangement alone."
+                },
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "The teacher is also seated on the floor, assisting the children with their drawings.",
+                  "indicator": "A child arriving at the activity zone could guess what to do from the arrangement alone",
+                  "reasoning": "Children are already engaged in drawing, confirming the setup (paper + crayons on tables) is sufficient to communicate the activity's purpose without additional instruction."
+                },
+                {
+                  "ts_start": "00:23",
+                  "ts_end": "00:23",
+                  "type": "transcript",
+                  "quote": "Okay, Shana, can you help me with drawing?",
+                  "indicator": "Materials arranged at the activity zone in a way that obviously communicates what to do",
+                  "reasoning": "The teacher's reference to 'drawing' confirms the activity is drawing, consistent with the material arrangement of paper and crayons that already signals this purpose."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The setup \u2014 paper and crayons on small tables with children seated on mats \u2014 is a classic, unambiguous drawing arrangement. No labels or signs are needed; the material arrangement alone communicates the activity clearly.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "anchor_and_choice_materials": {
+              "dimension_id": "anchor_and_choice_materials",
+              "rubric_version": "0.2.0",
+              "score": 0.5,
+              "anchor_matched": "An anchor (single or multiple) is present but choice materials are limited; OR variety of materials exists but no anchor draws children in",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "The children are seated on blue mats on the wooden floor, with small wooden tables in front of them. They are engaged in drawing activities, using paper and crayons.",
+                  "indicator": "An anchor material \u2014 either one strong centerpiece OR multiple equally-weighted anchor stations \u2014 that obviously invites children to engage",
+                  "reasoning": "The drawing activity with paper and crayons functions as an anchor that draws children in, but only two material types (paper and crayons) are mentioned, suggesting limited choice variety."
+                },
+                {
+                  "ts_start": "00:23",
+                  "ts_end": "00:23",
+                  "type": "transcript",
+                  "quote": "Okay, Shana, can you help me with drawing?",
+                  "indicator": "An anchor material \u2014 either one strong centerpiece OR multiple equally-weighted anchor stations \u2014 that obviously invites children to engage",
+                  "reasoning": "The teacher's reference to drawing confirms the drawing activity is the central anchor of the session."
+                },
+                {
+                  "ts_start": "00:59",
+                  "ts_end": "01:59",
+                  "type": "visual",
+                  "quote": "The teacher stands up and walks around the children, offering assistance. One child stands up and walks to the blackboard, then returns to her mat. Another child stands near the tables, observing the teacher and other children. The children continue to draw, some showing their work to the teacher.",
+                  "indicator": "Choice materials (tools, items, options) at or within the anchor(s) that allow flexible use",
+                  "reasoning": "Children are all drawing but the visual evidence only identifies paper and crayons as materials, with no mention of different colors, brush types, or other varied tools that would indicate meaningful choice variety."
+                },
+                {
+                  "ts_start": "01:59",
+                  "ts_end": "02:59",
+                  "type": "visual",
+                  "quote": "The teacher continues to assist the children with their drawings. Two children stand up and walk towards the blackboard, then return to their mats.",
+                  "indicator": "Materials can be combined or used in different ways for different outcomes",
+                  "reasoning": "The blackboard offers a potential second anchor station, but there is no evidence of materials at the blackboard being used by children, so it does not clearly function as an additional anchor with choice materials."
+                }
+              ],
+              "confidence": "medium",
+              "scorer_notes": "The session clearly has a drawing anchor, but the visual descriptions only mention paper and crayons without specifying variety (e.g., multiple crayon colors, different paper sizes, additional tools). The camera/description quality does not allow confirmation of whether meaningful choice variety exists within the materials. Scored 0.5 because an anchor is present but choice material variety cannot be confirmed from the evidence.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "spark_curiosity": {
+              "dimension_id": "spark_curiosity",
+              "rubric_version": "0.2.0",
+              "score": 0,
+              "anchor_matched": "Activity area is purely functional with no curiosity hook \u2014 children would not have any 'what's that?' moment from what is at the activity itself",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "The children are seated on blue mats on the wooden floor, with small wooden tables in front of them. They are engaged in drawing activities, using paper and crayons.",
+                  "indicator": "A surprising or unexpected element AT the activity zone",
+                  "reasoning": "The activity setup consists only of standard, familiar materials (paper and crayons on small tables) with no unusual, mysterious, or visually striking element present at the activity zone."
+                },
+                {
+                  "ts_start": "01:59",
+                  "ts_end": "02:59",
+                  "type": "visual",
+                  "quote": "The teacher continues to assist the children with their drawings. Two children stand up and walk towards the blackboard, then return to their mats.",
+                  "indicator": "Visually striking centerpieces or features within the activity area itself",
+                  "reasoning": "Throughout the session, the activity area remains a purely functional drawing setup with no centerpiece, hidden element, or novelty item that would invite wonder or a 'what's that?' response."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The entire session shows a standard drawing activity with paper and crayons. No unusual, unexpected, or curiosity-sparking elements are visible at or within the activity zone at any point during the recording.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "challenge_adjustment": {
+              "dimension_id": "challenge_adjustment",
+              "rubric_version": "0.2.0",
+              "score": 0,
+              "anchor_matched": "Single fixed difficulty level \u2014 no variation possible without redesigning the activity",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "The children are seated on blue mats on the wooden floor, with small wooden tables in front of them. They are engaged in drawing activities, using paper and crayons.",
+                  "indicator": "Multiple visible difficulty levels of the same activity",
+                  "reasoning": "All children appear to be doing the same drawing activity with the same materials \u2014 paper and crayons \u2014 with no visible tiered or varied difficulty options present."
+                },
+                {
+                  "ts_start": "00:59",
+                  "ts_end": "01:59",
+                  "type": "visual",
+                  "quote": "The teacher stands up and walks around the children, offering assistance. One child stands up and walks to the blackboard, then returns to her mat. Another child stands near the tables, observing the teacher and other children. The children continue to draw, some showing their work to the teacher.",
+                  "indicator": "Add-on / extension materials available but not forced",
+                  "reasoning": "No extension or add-on materials are described as available; the setup remains a single uniform drawing activity throughout the session."
+                },
+                {
+                  "ts_start": "01:59",
+                  "ts_end": "04:59",
+                  "type": "visual",
+                  "quote": "The teacher continues to assist the children with their drawings. Two children stand up and walk towards the blackboard, then return to their mats. Another child stands near the tables, observing the teacher and other children. The children continue to draw, some showing their work to the teacher.",
+                  "indicator": "Setup supports teacher-led or child-led difficulty change",
+                  "reasoning": "Across the entire recording, the activity remains a single fixed drawing task with no visible variation in materials, difficulty levels, or optional extensions available to any child."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The session shows a uniform drawing activity for all children with identical materials. No tiered versions, optional extensions, or add-on materials are visible at any point. The teacher assists individually but the setup itself offers no deliberate difficulty variation.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "self_served": {
+              "dimension_id": "self_served",
+              "rubric_version": "0.2.0",
+              "score": 1.0,
+              "anchor_matched": "All materials are, by DESIGN, safe, recognisable to children of the age range, and light enough for them to handle alone. The activity is designed for self-service even if teachers are observed helping during the recording.",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "The children are seated on blue mats on the wooden floor, with small wooden tables in front of them. They are engaged in drawing activities, using paper and crayons.",
+                  "indicator": "Materials are recognisable to children of the age range \u2014 children would know what they are and roughly how to use them",
+                  "reasoning": "Paper and crayons are universally recognisable drawing materials for 3\u20135 year olds, requiring no adult explanation to identify or approach."
+                },
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "They are engaged in drawing activities, using paper and crayons. The teacher is also seated on the floor, assisting the children with their drawings.",
+                  "indicator": "Items are light enough for a child of the age range to lift and carry alone",
+                  "reasoning": "Paper and crayons are extremely lightweight and sized for child hands, well within the physical capability of 3\u20135 year olds to handle independently."
+                },
+                {
+                  "ts_start": "01:27",
+                  "ts_end": "01:29",
+                  "type": "transcript",
+                  "quote": "Now, take a cushion. Take a cushion.",
+                  "indicator": "Materials are child-safe by design (no choking hazards, sharp edges, toxic substances within reach)",
+                  "reasoning": "Cushions are soft, safe, and child-manageable by design \u2014 no safety hazard is present in the described materials."
+                },
+                {
+                  "ts_start": "00:59",
+                  "ts_end": "01:59",
+                  "type": "visual",
+                  "quote": "The teacher stands up and walks around the children, offering assistance. One child stands up and walks to the blackboard, then returns to her mat.",
+                  "indicator": "Materials are sized for child hands",
+                  "reasoning": "Children independently navigate the space and materials (mats, paper, crayons) without requiring adult physical intervention to access or use them, confirming the design supports self-service."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The activity uses paper, crayons, small wooden tables, floor mats, and cushions \u2014 all standard, child-safe, lightweight, and immediately recognisable materials for 3\u20135 year olds. Teacher assistance observed is incidental to the design. No heavy, sharp, toxic, or unrecognisable materials are visible.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": 0.5,
+          "cost_usd": null,
+          "duration_seconds": 15.216084957122803
+        }
+      }
+    }
+  }
+}

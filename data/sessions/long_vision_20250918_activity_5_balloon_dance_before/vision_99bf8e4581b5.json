@@ -1,0 +1,157 @@
+{
+  "session_id": "long_vision_20250918_activity_5_balloon_dance_before",
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:00:08",
+      "description": "The room is empty, with a wooden floor and white walls. There are six white balloons and three yellow balloons scattered on the floor. A man in a maroon shirt walks from the right side of the room to the left, then exits the frame."
+    },
+    {
+      "ts_start": "00:00:08",
+      "ts_end": "00:00:20",
+      "description": "Three children enter the room from the top left. They start picking up the balloons. A woman in a patterned dress enters the room from the top left and observes the children."
+    },
+    {
+      "ts_start": "00:00:20",
+      "ts_end": "00:00:30",
+      "description": "More children enter the room, bringing the total to six children and one adult. They are all playing with the balloons, throwing them in the air and catching them. The adult is also interacting with the children and the balloons."
+    },
+    {
+      "ts_start": "00:00:30",
+      "ts_end": "00:00:40",
+      "description": "The children continue to play with the balloons, some throwing them high, others catching them. The adult is actively participating, throwing a yellow balloon in the air."
+    },
+    {
+      "ts_start": "00:00:40",
+      "ts_end": "00:00:50",
+      "description": "The children are still playing with the balloons, some are throwing them against the black board on the right side of the room. The adult is guiding them and interacting with them."
+    },
+    {
+      "ts_start": "00:00:50",
+      "ts_end": "00:01:00",
+      "description": "The children are now holding one balloon each. The adult is talking to them and demonstrating how to play with the balloons."
+    },
+    {
+      "ts_start": "00:01:00",
+      "ts_end": "00:01:10",
+      "description": "The children are moving around the room, holding their balloons. The adult is walking among them, still talking and guiding their play. Another adult is visible in the background, observing."
+    },
+    {
+      "ts_start": "00:01:10",
+      "ts_end": "00:01:20",
+      "description": "The children are now throwing their balloons in the air and catching them. The adult is actively participating, throwing a yellow balloon and interacting with the children."
+    },
+    {
+      "ts_start": "00:01:20",
+      "ts_end": "00:01:30",
+      "description": "The children continue to play with the balloons, some are running around, others are throwing and catching. The adult is moving with them, encouraging their play."
+    },
+    {
+      "ts_start": "00:01:30",
+      "ts_end": "00:01:40",
+      "description": "The children are still engaged in playing with the balloons. The adult is interacting with individual children, helping them with their balloons."
+    },
+    {
+      "ts_start": "00:01:40",
+      "ts_end": "00:01:50",
+      "description": "The children are playing with the balloons, some are throwing them against the wall. The adult is moving around the room, observing and interacting with the children."
+    },
+    {
+      "ts_start": "00:01:50",
+      "ts_end": "00:02:00",
+      "description": "The children are still playing with the balloons, some are throwing them and others are catching. The adult is guiding them and interacting with them."
+    },
+    {
+      "ts_start": "00:02:00",
+      "ts_end": "00:02:10",
+      "description": "The children are playing with the balloons, some are throwing them against the wall. The adult is moving around the room, observing and interacting with the children."
+    },
+    {
+      "ts_start": "00:02:10",
+      "ts_end": "00:02:20",
+      "description": "The children are still playing with the balloons, some are throwing them and others are catching. The adult is guiding them and interacting with them."
+    },
+    {
+      "ts_start": "00:02:20",
+      "ts_end": "00:02:30",
+      "description": "The children are playing with the balloons, some are throwing them against the wall. The adult is moving around the room, observing and interacting with the children."
+    },
+    {
+      "ts_start": "00:02:30",
+      "ts_end": "00:02:40",
+      "description": "The children are still playing with the balloons, some are throwing them and others are catching. The adult is guiding them and interacting with them."
+    },
+    {
+      "ts_start": "00:02:40",
+      "ts_end": "00:02:50",
+      "description": "The children are playing with the balloons, some are throwing them against the wall. The adult is moving around the room, observing and interacting with the children."
+    },
+    {
+      "ts_start": "00:02:50",
+      "ts_end": "00:03:00",
+      "description": "The children are still playing with the balloons, some are throwing them and others are catching. The adult is guiding them and interacting with them."
+    },
+    {
+      "ts_start": "00:03:00",
+      "ts_end": "00:03:10",
+      "description": "The children are playing with the balloons, some are throwing them against the wall. The adult is moving around the room, observing and interacting with the children."
+    },
+    {
+      "ts_start": "00:03:10",
+      "ts_end": "00:03:20",
+      "description": "The children are still playing with the balloons, some are throwing them and others are catching. The adult is guiding them and interacting with them."
+    },
+    {
+      "ts_start": "00:03:20",
+      "ts_end": "00:03:30",
+      "description": "The children are playing with the balloons, some are throwing them against the wall. The adult is moving around the room, observing and interacting with the children."
+    },
+    {
+      "ts_start": "00:03:30",
+      "ts_end": "00:03:40",
+      "description": "The children are still playing with the balloons, some are throwing them and others are catching. The adult is guiding them and interacting with them."
+    },
+    {
+      "ts_start": "00:03:40",
+      "ts_end": "00:03:50",
+      "description": "The children are playing with the balloons, some are throwing them against the wall. The adult is moving around the room, observing and interacting with the children."
+    },
+    {
+      "ts_start": "00:03:50",
+      "ts_end": "00:04:00",
+      "description": "The children are still playing with the balloons, some are throwing them and others are catching. The adult is guiding them and interacting with them."
+    },
+    {
+      "ts_start": "00:04:00",
+      "ts_end": "00:04:10",
+      "description": "The children are playing with the balloons, some are throwing them against the wall. The adult is moving around the room, observing and interacting with the children."
+    },
+    {
+      "ts_start": "00:04:10",
+      "ts_end": "00:04:20",
+      "description": "The children are still playing with the balloons, some are throwing them and others are catching. The adult is guiding them and interacting with them."
+    },
+    {
+      "ts_start": "00:04:20",
+      "ts_end": "00:04:30",
+      "description": "The children are playing with the balloons, some are throwing them against the wall. The adult is moving around the room, observing and interacting with the children."
+    },
+    {
+      "ts_start": "00:04:30",
+      "ts_end": "00:04:40",
+      "description": "The children are still playing with the balloons, some are throwing them and others are catching. The adult is guiding them and interacting with them."
+    },
+    {
+      "ts_start": "00:04:40",
+      "ts_end": "00:04:50",
+      "description": "The children are playing with the balloons, some are throwing them against the wall. The adult is moving around the room, observing and interacting with the children."
+    },
+    {
+      "ts_start": "00:04:50",
+      "ts_end": "00:04:59",
+      "description": "The children and the adult exit the room from the top left. The room is now empty, with the balloons scattered on the floor."
+    }
+  ],
+  "source_model": "gemini-2.5-flash",
+  "prompt_hash": "99bf8e4581b5"
+}

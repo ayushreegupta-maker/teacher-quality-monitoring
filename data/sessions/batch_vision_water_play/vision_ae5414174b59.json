@@ -1,0 +1,42 @@
+{
+  "session_id": "batch_vision_water_play",
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:00:52",
+      "description": "The video shows an empty play area with a shallow pool-like structure. The pool has a light gray floor and white walls, with a light blue section on the right wall. Four white rectangular bins are placed in the center of the pool, each containing small colorful toys. On the left side, there's a glass barrier separating the pool from a green artificial grass area decorated with various marine-themed cutouts like starfish, fish, and coral. Two blue buckets are visible on the right side of the pool, near the light blue wall. Several small, dark-colored objects are scattered on the pool floor."
+    },
+    {
+      "ts_start": "00:00:52",
+      "ts_end": "00:01:20",
+      "description": "Adults and children begin to gather at the glass barrier, looking down into the play area. One adult, wearing a blue shirt, is seen holding a child. Another adult, wearing a pink top, is also present at the barrier. The children are observing the play area with curiosity."
+    },
+    {
+      "ts_start": "00:01:20",
+      "ts_end": "00:01:50",
+      "description": "More adults and children arrive at the glass barrier, observing the play area. A woman in a pink top and a man in a black shirt are among them. The children appear excited, pointing towards the pool."
+    },
+    {
+      "ts_start": "00:01:50",
+      "ts_end": "00:02:29",
+      "description": "A man in a black shirt and a child in a light blue outfit descend the steps into the play area. A woman in a floral top follows them. The man sits on the edge of the pool, interacting with the child. Another child, wearing blue overalls, also enters the play area and approaches the white bins."
+    },
+    {
+      "ts_start": "00:02:29",
+      "ts_end": "00:03:10",
+      "description": "The adults and children are now actively engaged in the play area. The woman in the floral top kneels by the white bins, helping the children interact with the toys. The man in the black shirt is also seated, observing the children. Another woman, wearing a white top and patterned skirt, joins the group in the play area, bringing a blue bucket."
+    },
+    {
+      "ts_start": "00:03:10",
+      "ts_end": "00:04:00",
+      "description": "The children are now playing with the toys in the white bins, some using the blue buckets. The adults are assisting and supervising them. One woman is taking photos with her phone. The children are reaching into the bins, picking up toys, and transferring them to the buckets or other bins. The atmosphere is lively and engaging."
+    },
+    {
+      "ts_start": "00:04:00",
+      "ts_end": "00:05:00",
+      "description": "The children continue to play with the water and toys. The adults are actively involved, helping them scoop and transfer items. The woman in the floral top is kneeling, guiding the children, while the man in the black shirt is seated, observing. The woman in the white top and patterned skirt is also assisting, demonstrating how to use the buckets. The children appear to be enjoying the sensory play."
+    }
+  ],
+  "source_model": "gemini-2.5-flash",
+  "prompt_hash": "ae5414174b59"
+}

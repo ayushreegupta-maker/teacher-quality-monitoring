@@ -1,0 +1,54 @@
+{
+  "activity_zone_items": [
+    {
+      "category": "Furniture",
+      "name": "blue mat",
+      "count_or_quantity": "multiple",
+      "specifics": "four blue mats laid out on the floor in a square formation",
+      "first_seen_at": "00:01:59"
+    },
+    {
+      "category": "Furniture",
+      "name": "small wooden table",
+      "count_or_quantity": "multiple",
+      "specifics": "at least five placed on the mats in front of children; described as small and wooden",
+      "first_seen_at": "00:03:19"
+    },
+    {
+      "category": "Materials",
+      "name": "white papers / colouring sheets",
+      "count_or_quantity": "many",
+      "specifics": "carried in a basket and distributed individually to children by the teacher",
+      "first_seen_at": "00:01:39"
+    },
+    {
+      "category": "Containers",
+      "name": "basket",
+      "count_or_quantity": "one",
+      "specifics": "used to carry white papers; placed on the floor near the blackboard",
+      "first_seen_at": "00:01:39"
+    }
+  ],
+  "other_items_in_room": [
+    {
+      "name": "large blackboard",
+      "location": "right wall"
+    },
+    {
+      "name": "window with bars",
+      "location": "left wall"
+    },
+    {
+      "name": "colorful paper decorations",
+      "location": "bottom right corner of the frame"
+    },
+    {
+      "name": "white bottle",
+      "location": "window sill"
+    }
+  ],
+  "notes": "The exact number of small wooden tables is unclear; at least five are mentioned across observations (two placed, then two more, then one more). The white bottle was placed on the window sill and not observed being used at the activity zone. The papers are described as white/plain; it is assumed they are colouring sheets based on the activity context, but no colours or markings on them are described in the observations.",
+  "session_id": "long_vision_d06_20250919105616_before",
+  "source_model": "claude-sonnet-4-6",
+  "prompt_hash": "0a584ed472ce"
+}

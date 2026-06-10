@@ -1,0 +1,30 @@
+{
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:01:00",
+      "description": "The video shows an empty classroom with various learning stations. On the left, there's a colorful wall with drawings and a blackboard. In the center, there are yellow cushions arranged on the floor, and a wooden structure with compartments for bags. On the right, there are two tables with chairs, covered with white cloths. The room is well-lit with natural light from large windows."
+    },
+    {
+      "ts_start": "00:01:00",
+      "ts_end": "00:02:00",
+      "description": "The classroom remains empty, with all the learning stations and furniture in place. The yellow cushions are still neatly arranged on the floor, and the wooden structure with compartments is visible. The tables with white cloths and chairs are also in the same position. The room is quiet and appears ready for activity."
+    },
+    {
+      "ts_start": "00:02:00",
+      "ts_end": "00:03:00",
+      "description": "The classroom continues to be empty and quiet. The colorful wall, blackboard, yellow cushions, and wooden structure are all visible. The tables with white cloths and chairs are still neatly arranged. The natural light from the windows illuminates the room, creating a bright and inviting atmosphere."
+    },
+    {
+      "ts_start": "00:03:00",
+      "ts_end": "00:04:00",
+      "description": "The classroom is still empty, with all the learning stations and furniture in their original positions. The yellow cushions are on the floor, and the wooden structure with compartments is visible. The tables with white cloths and chairs are also in place. The room remains quiet and well-lit."
+    },
+    {
+      "ts_start": "00:04:00",
+      "ts_end": "00:05:00",
+      "description": "The classroom remains empty, with all the learning stations and furniture in their original positions. The yellow cushions are on the floor, and the wooden structure with compartments is visible. The tables with white cloths and chairs are also in place. The room remains quiet and well-lit."
+    }
+  ],
+  "transcript": []
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "ts": "00:02:25",
+    "activity": "warm_up",
+    "summary": "Teacher explains the concept of texture and asks children to feel different surfaces.",
+    "was_clear": "yes",
+    "confidence_tone": "confident",
+    "children_engaged_after": "2"
+  },
+  {
+    "ts": "00:08:40",
+    "activity": "art_gym",
+    "summary": "Teacher instructs children to tear paper along the drawn lines.",
+    "was_clear": "yes",
+    "confidence_tone": "confident",
+    "children_engaged_after": "3"
+  },
+  {
+    "ts": "00:17:00",
+    "activity": "artwork",
+    "summary": "Teacher introduces sea animals and the Eric Carle collage technique.",
+    "was_clear": "yes",
+    "confidence_tone": "confident",
+    "children_engaged_after": "3"
+  },
+  {
+    "ts": "00:30:00",
+    "activity": "artwork",
+    "summary": "Teacher demonstrates how to apply glue and stick the torn paper pieces inside the outline.",
+    "was_clear": "yes",
+    "confidence_tone": "confident",
+    "children_engaged_after": "3"
+  }
+]

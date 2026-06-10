@@ -1,0 +1,157 @@
+{
+  "Q1": {
+    "answer": "Yes, art resources like paper, glue, and colors were present on the table.",
+    "confidence": "high",
+    "evidence": "00:02:25 - Materials are visible on the table as the activity starts."
+  },
+  "Q2": {
+    "answer": "No specific game materials were visible, as an art game phase did not occur.",
+    "confidence": "high",
+    "evidence": "00:00:00 to 01:48:44 - No distinct game materials are brought out."
+  },
+  "Q3": {
+    "answer": "No progress booklets were visibly used or distributed during the session.",
+    "confidence": "high",
+    "evidence": "00:00:00 to 01:48:44 - Teacher does not hand out or refer to progress booklets."
+  },
+  "Q4": {
+    "answer": "Yes, the teacher was setting up materials before the children arrived.",
+    "confidence": "high",
+    "evidence": "00:00:00 - Teacher is seen organizing the classroom before children enter."
+  },
+  "Q5": {
+    "answer": "6 minutes.",
+    "confidence": "high",
+    "evidence": "00:02:25 to 00:08:40 - The texture exploration warm-up phase."
+  },
+  "Q6": {
+    "answer": "0 minutes.",
+    "confidence": "high",
+    "evidence": "No distinct art game phase was observed; the class moved from warm-up to art gym."
+  },
+  "Q7": {
+    "answer": "8 minutes.",
+    "confidence": "high",
+    "evidence": "00:08:40 to 00:17:00 - The paper tearing fine motor activity."
+  },
+  "Q8": {
+    "answer": "48 minutes.",
+    "confidence": "high",
+    "evidence": "00:17:00 to 01:05:00 - The collage artwork project."
+  },
+  "Q9": {
+    "answer": "Insufficient information, as an art game phase did not occur.",
+    "confidence": "high",
+    "evidence": "No art game was conducted."
+  },
+  "Q10": {
+    "answer": "Yes, the teacher clearly explained the task of tearing paper along the lines.",
+    "confidence": "high",
+    "evidence": "00:08:40 - Teacher gives clear verbal instructions and demonstrates."
+  },
+  "Q11": {
+    "answer": "Insufficient information, as an art game phase did not occur.",
+    "confidence": "high",
+    "evidence": "No art game was conducted."
+  },
+  "Q12": {
+    "answer": "Yes, the teacher explained the art gym activity confidently.",
+    "confidence": "high",
+    "evidence": "00:08:40 - Teacher's tone is steady and clear while giving instructions."
+  },
+  "Q13": {
+    "answer": "The teacher used verbal explanation, visual examples (book/pictures), and physical demonstration.",
+    "confidence": "high",
+    "evidence": "00:17:00 - Shows book; 00:30:00 - Demonstrates sticking."
+  },
+  "Q14": {
+    "answer": "Yes, the children were able to start tearing and sticking paper after the explanations.",
+    "confidence": "high",
+    "evidence": "00:20:00 - Children start tearing; 00:31:00 - Children start sticking."
+  },
+  "Q15": {
+    "answer": "3 steps: tear paper, apply glue, stick paper inside the outline.",
+    "confidence": "high",
+    "evidence": "00:17:00 to 00:30:00 - Teacher explains tearing, then later explains gluing and sticking."
+  },
+  "Q16": {
+    "answer": "1 child occasionally struggled to stay engaged and wandered away from the table.",
+    "confidence": "medium",
+    "evidence": "00:06:40, 00:10:00 - The boy in the green shirt wanders away from the activity."
+  },
+  "Q17": {
+    "answer": "2 children appeared to finish their sticking activity earlier than the others.",
+    "confidence": "medium",
+    "evidence": "00:55:00 - Two girls seem to have completed their main sticking while the boy continues."
+  },
+  "Q18": {
+    "answer": "No, the teacher did not explicitly offer a simpler version, but provided hands-on assistance.",
+    "confidence": "high",
+    "evidence": "00:35:00 to 00:55:00 - Teacher helps children directly rather than changing the task."
+  },
+  "Q19": {
+    "answer": "No, the teacher did not offer an extension; early finishers transitioned to washing hands.",
+    "confidence": "high",
+    "evidence": "01:05:00 - Children who finish are directed to wash hands."
+  },
+  "Q20": {
+    "answer": "Yes, the teacher asked open questions to engage the children.",
+    "confidence": "high",
+    "evidence": "00:02:25 - Asks how textures feel; 00:17:00 - Asks what sea animals they know."
+  },
+  "Q21": {
+    "answer": "Yes, the teacher noticed when a child wandered and called him back to the activity.",
+    "confidence": "high",
+    "evidence": "00:06:40 - Teacher calls the boy back to the table."
+  },
+  "Q22": {
+    "answer": "Yes, the teacher addressed each child individually by name or direct interaction.",
+    "confidence": "high",
+    "evidence": "Throughout the artwork phase (00:30:00 - 01:00:00), she helps and speaks to each child individually."
+  },
+  "Q23": {
+    "answer": "2 children were actively engaged for almost the entire duration.",
+    "confidence": "medium",
+    "evidence": "The two girls remain seated and focused on the tasks for the vast majority of the structured time."
+  },
+  "Q24": {
+    "answer": "Approximately 3 instances of minor disruption (child wandering).",
+    "confidence": "medium",
+    "evidence": "00:06:40, 00:10:00, 00:12:00 - Boy leaves the table."
+  },
+  "Q25": {
+    "answer": "The teacher handled disruptions calmly by verbally prompting the child to return.",
+    "confidence": "high",
+    "evidence": "00:06:40 - Teacher gently tells the boy to come back and sit."
+  },
+  "Q26": {
+    "answer": "Yes, the child returned to the table when prompted.",
+    "confidence": "high",
+    "evidence": "00:06:50 - Boy returns to his seat after being called."
+  },
+  "Q27": {
+    "answer": "No instances observed where a child might feel unsafe.",
+    "confidence": "high",
+    "evidence": "00:00:00 to 01:48:44 - The environment remains calm and supervised."
+  },
+  "Q28": {
+    "answer": "No instances of shouting or punishment were observed.",
+    "confidence": "high",
+    "evidence": "00:00:00 to 01:48:44 - Teacher maintains a gentle tone throughout."
+  },
+  "Q29": {
+    "answer": "No instances of the teacher appearing frustrated or impatient.",
+    "confidence": "high",
+    "evidence": "00:00:00 to 01:48:44 - Teacher is consistently patient, even when a child wanders."
+  },
+  "Q30": {
+    "answer": "Yes, the teacher demonstrates warmth through a gentle tone and encouraging words.",
+    "confidence": "high",
+    "evidence": "Throughout the session, she speaks softly and praises their work."
+  },
+  "Q31": {
+    "answer": "The teacher allows shared space but does not explicitly prompt collaborative peer interaction.",
+    "confidence": "medium",
+    "evidence": "Children work independently on their own collages, though they sit together."
+  }
+}

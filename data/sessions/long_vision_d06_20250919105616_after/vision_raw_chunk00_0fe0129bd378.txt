@@ -1,0 +1,306 @@
+{
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:00:30",
+      "description": "The camera is positioned in a room with light wooden flooring and white walls. A large black board is visible on the right side of the room, with colorful decorations on the wall next to it. A window with metal bars is on the left wall. The room appears empty."
+    },
+    {
+      "ts_start": "00:00:30",
+      "ts_end": "00:01:00",
+      "description": "The room remains empty throughout this period. The black board and colorful wall decorations are still visible on the right. The window on the left continues to show the outside through its metal bars. The light wooden flooring covers the entire visible area."
+    }
+  ],
+  "transcript": [
+    {
+      "ts_start": "00:00:00",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:02",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:04",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:05",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:06",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:07",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:08",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:09",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:10",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:11",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:12",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:13",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:14",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:15",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:16",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:17",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:18",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:19",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:20",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:21",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:22",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:23",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:24",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:25",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:26",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:27",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:28",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:29",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:30",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:31",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:32",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:33",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:34",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:35",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:36",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:37",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:38",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:39",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:40",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:41",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:42",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:43",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:44",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:45",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:46",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:47",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:48",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:49",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:50",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:51",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:52",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:53",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:54",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:55",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:56",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:57",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:58",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    },
+    {
+      "ts_start": "00:00:59",
+      "speaker": "UNKNOWN_SPEAKER",
+      "text": "[inaudible]"
+    }
+  ]
+}

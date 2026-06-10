@@ -1,0 +1,17 @@
+{
+  "session_id": "long_vision_d06_20250919105616_after",
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:00:30",
+      "description": "The camera is positioned in a room with light wooden flooring and white walls. A large black board is visible on the right side of the room, extending from the foreground to the background. To the left, a window with metal bars is visible. In the background, an open doorway leads to another area, and white cabinets are visible on the far right wall."
+    },
+    {
+      "ts_start": "00:00:30",
+      "ts_end": "00:01:00",
+      "description": "The room remains empty and still. The light wooden flooring, white walls, and black board continue to be the main features of the scene. The window on the left and the doorway in the background are still visible, with no one entering or exiting the room."
+    }
+  ],
+  "source_model": "gemini-2.5-flash",
+  "prompt_hash": "0fe0129bd378"
+}

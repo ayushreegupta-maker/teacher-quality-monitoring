@@ -1,0 +1,175 @@
+{
+  "session_id": "long_after_playground_20250918_activity_1_circle_time",
+  "rubric_version": "0.2.3",
+  "scores": {
+    "narrative": {
+      "dimension_id": "narrative",
+      "rubric_version": "0.2.3",
+      "score": 0,
+      "anchor_matched": "No experiential context — generic space with no immersive framing; pure utility setup",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:59",
+          "type": "visual",
+          "quote": "The video shows a classroom with a teacher and three children sitting on a mat on the floor. There are wooden shelves with books and toys on the left side of the room. In the center, there is a wooden shelf with various items. On the right, there are two wooden tables with chairs.",
+          "indicator": "Thematic decor that names or evokes a setting",
+          "reasoning": "The space is described as a generic classroom with standard furniture (shelves, tables, chairs) and no thematic decor, props, or atmospheric anchors that would place children inside a deliberate immersive setting."
+        },
+        {
+          "ts_start": "02:59",
+          "ts_end": "03:59",
+          "type": "visual",
+          "quote": "The teacher and two children remain on the mat, continuing their activity. The children are actively participating, and the teacher is attentive. The room remains tidy, with toys and books neatly arranged on the shelves.",
+          "indicator": "An atmospheric anchor (banner, central feature, framing object)",
+          "reasoning": "The room is described only as tidy with neatly arranged toys and books — no atmospheric anchor, banner, or central feature that frames a narrative setting is mentioned."
+        },
+        {
+          "ts_start": "03:59",
+          "ts_end": "05:00",
+          "type": "visual",
+          "quote": "The teacher and the two children continue their activity on the mat. The children are lying down and sitting up, seemingly enjoying the interaction. The teacher is smiling and engaging with them. The overall atmosphere of the classroom is calm and organized.",
+          "indicator": "Props that place the child inside the theme",
+          "reasoning": "The overall atmosphere is described as calm and organized but entirely generic — no props, framing objects, or scene-setting elements that would constitute an immersive narrative context are present."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "The transcript provides no usable content (all entries are '(singing)' with no lyrics or framing language). Visual observations consistently describe a standard, functional classroom with no thematic decor, narrative props, or immersive framing across the full session.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "multi_sensory": {
+      "dimension_id": "multi_sensory",
+      "rubric_version": "0.2.3",
+      "score": 0.5,
+      "anchor_matched": "Two senses are nominally engaged but at least one is weak or marginal",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "04:59",
+          "type": "transcript",
+          "quote": "(singing)",
+          "indicator": "Sound-making elements (instruments, chimes, water, music)",
+          "reasoning": "Sustained singing throughout the session clearly engages the auditory sense as a deliberate activity choice."
+        },
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:59",
+          "type": "visual",
+          "quote": "The teacher is wearing a brown dress, and the children are wearing white, blue, and green shirts. There are wooden shelves with books and toys on the left side of the room.",
+          "indicator": "Visual variety (color, materials, arrangements)",
+          "reasoning": "The classroom environment provides some visual variety through colored clothing and shelved materials, offering a nominal visual dimension to the setting."
+        },
+        {
+          "ts_start": "03:59",
+          "ts_end": "05:00",
+          "type": "visual",
+          "quote": "The children are lying down and sitting up, seemingly enjoying the interaction.",
+          "indicator": "Proprioceptive / movement opportunities (balance, climbing, kneeling)",
+          "reasoning": "Children changing body positions (lying down, sitting up) on the mat suggests some proprioceptive engagement, though it appears incidental rather than deliberately designed."
+        },
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:59",
+          "type": "visual",
+          "quote": "The children are engaged in an activity with the teacher.",
+          "indicator": "Tactile invitations (textures, materials to touch, wet/dry/soft/rough)",
+          "reasoning": "No tactile materials are visible in use during the circle time activity; children are seated on a mat with no observable hands-on materials, making tactile engagement absent or marginal."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "Auditory engagement (singing) is clearly present and sustained. Visual engagement is nominal — the room has shelves and colored items but these are background, not active materials in use. No tactile or hands-on materials are observed in use during the activity. Movement is incidental. This places the session at 0.5: auditory is strong, but the second sense (visual or proprioceptive) is weak/marginal rather than meaningfully designed.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "boundary": {
+      "dimension_id": "boundary",
+      "rubric_version": "0.2.3",
+      "score": 1.0,
+      "anchor_matched": "At least one clear, unambiguous activity boundary — a canvas, paper, mat, rug, table, low fence, or similar marker visually defines the zone. A single well-defined zone is sufficient for this score.",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:59",
+          "type": "visual",
+          "quote": "The video shows a classroom with a teacher and three children sitting on a mat on the floor.",
+          "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+          "reasoning": "A mat on the floor provides a clear, unambiguous physical boundary that visually defines the circle-time activity zone without requiring verbal direction."
+        },
+        {
+          "ts_start": "02:59",
+          "ts_end": "03:59",
+          "type": "visual",
+          "quote": "The teacher and two children remain on the mat, continuing their activity.",
+          "indicator": "The boundary is intuitive to a child without verbal explanation from an adult",
+          "reasoning": "Children consistently remain on the mat throughout the session, indicating the mat functions as a self-evident boundary for the activity zone."
+        },
+        {
+          "ts_start": "03:59",
+          "ts_end": "05:00",
+          "type": "visual",
+          "quote": "The teacher and the two children continue their activity on the mat. The children are lying down and sitting up, seemingly enjoying the interaction.",
+          "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+          "reasoning": "The mat continues to serve as the defined activity zone through the end of the session, with all participants remaining within it."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": null,
+      "prompt_hash": "c92c689bf87b"
+    },
+    "movement": {
+      "dimension_id": "movement",
+      "rubric_version": "0.2.3",
+      "score": 1.0,
+      "anchor_matched": "Both elements are present — children can clearly access the activity zone (visible path markers not required; minor adult presence in the path is acceptable as long as children get past) AND deliberate positioning suited to the activity (standing, kneeling, or sitting as the activity calls for), with materials reachable from that posture. Explicit seating like cushions is NOT required when the activity naturally invites standing or kneeling.",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:59",
+          "type": "visual",
+          "quote": "The video shows a classroom with a teacher and three children sitting on a mat on the floor. The teacher is wearing a brown dress, and the children are wearing white, blue, and green shirts. There are wooden shelves with books and toys on the left side of the room. In the center, there is a wooden shelf with various items. On the right, there are two wooden tables with chairs. A man in a black shirt is sitting on a black counter in the background, looking at his phone. The children are engaged in an activity with the teacher.",
+          "indicator": "Clear deliberate positioning suited to the activity (sitting on a mat for circle/story time)",
+          "reasoning": "Children and teacher are seated on a floor mat, which is the appropriate deliberate positioning for a circle time activity involving songs and guided interaction."
+        },
+        {
+          "ts_start": "01:59",
+          "ts_end": "02:59",
+          "type": "visual",
+          "quote": "The woman in the gray jumpsuit talks to the man in the black shirt, then walks towards the children and the teacher. She picks up a child and walks towards the left side of the room. The teacher continues to engage with the remaining children on the mat. The man in the black shirt walks towards the left side of the room and exits the frame.",
+          "indicator": "Children can clearly access the activity zone from the room entry — minor adult presence in the path is acceptable as long as children can still get past",
+          "reasoning": "Adults move through the space and exit without persistently blocking the activity zone; the teacher and remaining children continue unobstructed on the mat, confirming access is not materially blocked."
+        },
+        {
+          "ts_start": "02:59",
+          "ts_end": "03:59",
+          "type": "visual",
+          "quote": "The teacher and two children remain on the mat, continuing their activity. The children are actively participating, and the teacher is attentive. The room remains tidy, with toys and books neatly arranged on the shelves.",
+          "indicator": "Enough space at the activity for children to stand, kneel, sit, or move as the activity requires",
+          "reasoning": "The room is described as tidy and organized with no clutter around the mat, confirming sufficient clear space for the sitting/circle-time posture."
+        },
+        {
+          "ts_start": "03:59",
+          "ts_end": "05:00",
+          "type": "visual",
+          "quote": "The teacher and the two children continue their activity on the mat. The children are lying down and sitting up, seemingly enjoying the interaction. The teacher is smiling and engaging with them. The overall atmosphere of the classroom is calm and organized.",
+          "indicator": "Enough physical space around the activity zone for the natural posture to fit",
+          "reasoning": "Children freely shift between lying down and sitting up on the mat, demonstrating ample space for the range of postures the circle-time activity invites."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "Adult visitors (man in black shirt, woman in gray jumpsuit) move through the space but do not persistently block access to the mat; per rubric rules this does not count as obstruction. The mat provides clear deliberate positioning for a sitting/circle-time activity, and the room is consistently described as tidy and organized.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "clean_up": {
+      "dimension_id": "clean_up",
+      "rubric_version": "0.2.3",
+      "score": "insufficient_evidence",
+      "anchor_matched": null,
+      "evidence": [],
+      "confidence": "low",
+      "scorer_notes": "The session is a circle time / singing activity with no materials distributed or returned during the recording. While shelves with books and toys are visible in the background, no cleanup activity occurs and the camera does not provide sufficient detail of storage labels, shelf heights relative to children, or item weights to reliably score the clean-up design. The activity type (group singing on a mat) does not generate observable cleanup behavior within this 5-minute clip.",
+      "prompt_hash": "c92c689bf87b"
+    }
+  },
+  "overall": 0.625,
+  "cost_usd": null,
+  "duration_seconds": 16.73056197166443
+}

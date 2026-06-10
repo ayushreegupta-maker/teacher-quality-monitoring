@@ -1,0 +1,563 @@
+{
+  "activity_name": "Balloon dance",
+  "video": "/Users/oh/Desktop/Teacher Quality Monitoring/data/raw/20250918_activity_5_balloon_dance.mp4",
+  "total_seconds": 1920.357,
+  "boundaries": {
+    "first_child_visible_at": "00:09:00",
+    "last_child_visible_at": "00:31:59",
+    "confidence": "high",
+    "notes": "",
+    "last_child_evidence": "The last child is seen walking out of the room, and the door closes behind them.",
+    "self_check_passed": true,
+    "session_id": "long_full_20250918_activity_5_balloon_dance",
+    "source_model": "gemini-2.5-flash",
+    "prompt_hash": "3f2ef82a8ff4"
+  },
+  "windows": {
+    "before": [
+      480.0,
+      780.0
+    ],
+    "after": [
+      1620.357,
+      1920.357
+    ],
+    "warnings": []
+  },
+  "results": {
+    "before": {
+      "items": {
+        "activity_zone_items": [
+          {
+            "category": "Materials",
+            "name": "balloons",
+            "count_or_quantity": "multiple",
+            "specifics": "white and yellow colors; used for throwing, catching, and bouncing against walls",
+            "first_seen_at": "00:00:00"
+          }
+        ],
+        "other_items_in_room": [
+          {
+            "name": "blackboards",
+            "location": "one side of the room, wall"
+          },
+          {
+            "name": "table",
+            "location": "background"
+          }
+        ],
+        "notes": "Exact count of balloons is not stated; multiple balloons are visible on the floor and in the air at various points. A second adult is visible seated at a table in the background from 00:02:59 onward but does not participate in the activity zone. No music equipment is visually confirmed despite the session metadata referencing music.",
+        "session_id": "long_vision_20250918_activity_5_balloon_dance_before",
+        "source_model": "claude-sonnet-4-6",
+        "prompt_hash": "0a584ed472ce"
+      },
+      "scores": {
+        "playground": {
+          "session_id": "long_before_playground_20250918_activity_5_balloon_dance",
+          "rubric_version": "0.2.3",
+          "scores": {
+            "narrative": {
+              "dimension_id": "narrative",
+              "rubric_version": "0.2.3",
+              "score": 0,
+              "anchor_matched": "No experiential context \u2014 generic space with no immersive framing; pure utility setup",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "Six children and one adult are in a room with wooden floors and white walls. There are blackboards on one side of the room. The children are playing with white and yellow balloons.",
+                  "indicator": "Thematic decor that names or evokes a setting",
+                  "reasoning": "The room has plain white walls, wooden floors, and blackboards \u2014 no thematic decor, props, or framing that would place children inside a deliberate setting."
+                },
+                {
+                  "ts_start": "02:59",
+                  "ts_end": "03:59",
+                  "type": "visual",
+                  "quote": "The children continue to play with the balloons, some are throwing them against the wall. The adult is still engaging with the children, encouraging their play. One child is sitting on the floor, then gets up and joins the play again. Another adult is visible in the background, sitting at a table.",
+                  "indicator": "An atmospheric anchor (banner, central feature, framing object)",
+                  "reasoning": "No atmospheric anchor, banner, or central feature is present; the space remains a generic utility room with no immersive framing across the full session."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "Balloons are activity props but there is no deliberate scene-setting, thematic decor, or narrative framing that places children inside a wider story or setting. The space is a plain room used for a movement activity \u2014 pure utility setup.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "multi_sensory": {
+              "dimension_id": "multi_sensory",
+              "rubric_version": "0.2.3",
+              "score": 1,
+              "anchor_matched": "Two or more senses are meaningfully engaged through deliberate material and arrangement choices",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "The children are playing with white and yellow balloons. The adult is standing and guiding the children to play with the balloons.",
+                  "indicator": "Visual variety (color, materials, arrangements)",
+                  "reasoning": "Colored balloons (white and yellow) provide clear visual stimulation as children track them through the air."
+                },
+                {
+                  "ts_start": "00:59",
+                  "ts_end": "01:59",
+                  "type": "visual",
+                  "quote": "The children continue to play with the balloons, throwing them in the air and catching them.",
+                  "indicator": "Proprioceptive / movement opportunities (balance, climbing, kneeling)",
+                  "reasoning": "Throwing and catching balloons requires full-body movement, engaging proprioceptive and kinesthetic senses deliberately through the activity design."
+                },
+                {
+                  "ts_start": "01:59",
+                  "ts_end": "02:59",
+                  "type": "visual",
+                  "quote": "The children are still actively playing with the balloons, some are throwing them high, others are trying to catch them.",
+                  "indicator": "Natural / sensory materials (sand, water, fabric, wood, leaves, clay, paint)",
+                  "reasoning": "Balloons provide a distinct tactile experience \u2014 lightweight, smooth, and elastic \u2014 engaging touch as children grip, bat, and catch them."
+                },
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:22",
+                  "type": "transcript",
+                  "quote": "Throw it up! Throw it up! Throw it up! Throw it up!",
+                  "indicator": "Sound-making elements (instruments, chimes, water, music)",
+                  "reasoning": "The teacher's rhythmic verbal cues provide an auditory layer to the activity, and balloon play inherently produces sounds (squeaking, popping air) that add to the auditory environment."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The activity deliberately combines visual tracking (colored balloons), tactile engagement (handling balloons), proprioceptive/movement engagement (throwing, catching, full-body movement), and auditory stimulation (teacher chanting, balloon sounds). This clearly meets the 1.0 anchor. No music is explicitly confirmed in the transcript or visuals despite the activity notes mentioning music, but the remaining senses are sufficiently and meaningfully engaged.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "boundary": {
+              "dimension_id": "boundary",
+              "rubric_version": "0.2.3",
+              "score": 0,
+              "anchor_matched": "No clear boundary \u2014 children would not know where the activity is supposed to happen without being told",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "Six children and one adult are in a room with wooden floors and white walls. There are blackboards on one side of the room. The children are playing with white and yellow balloons.",
+                  "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+                  "reasoning": "The room has bare wooden floors and white walls with no mat, rug, tape, or any other marker defining where the balloon dance activity is supposed to occur."
+                },
+                {
+                  "ts_start": "01:59",
+                  "ts_end": "02:59",
+                  "type": "visual",
+                  "quote": "The children are still actively playing with the balloons, some are throwing them high, others are trying to catch them. The adult is moving around the room, interacting with different children and helping them with the balloons.",
+                  "indicator": "The boundary is intuitive to a child without verbal explanation from an adult",
+                  "reasoning": "Children and the adult are dispersed throughout the open room with no visible zone marker; the activity zone is the entire undifferentiated room, meaning no boundary is self-evident to a child."
+                },
+                {
+                  "ts_start": "02:59",
+                  "ts_end": "03:59",
+                  "type": "visual",
+                  "quote": "The children continue to play with the balloons, some are throwing them against the wall. The adult is still engaging with the children, encouraging their play. One child is sitting on the floor, then gets up and joins the play again. Another adult is visible in the background, sitting at a table.",
+                  "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+                  "reasoning": "Children throwing balloons against the wall and moving freely throughout the entire room confirms there is no defined activity zone \u2014 the space is fully open and unbounded."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "This is a free-movement balloon dance activity in an open room. No mat, rug, tape outline, or any other boundary marker is visible at any point in the recording. The entire room serves as the activity space with no delineation.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "movement": {
+              "dimension_id": "movement",
+              "rubric_version": "0.2.3",
+              "score": 1.0,
+              "anchor_matched": "Both elements are present \u2014 children can clearly access the activity zone (visible path markers not required; minor adult presence in the path is acceptable as long as children get past) AND deliberate positioning suited to the activity (standing, kneeling, or sitting as the activity calls for), with materials reachable from that posture. Explicit seating like cushions is NOT required when the activity naturally invites standing or kneeling.",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "Six children and one adult are in a room with wooden floors and white walls. There are blackboards on one side of the room. The children are playing with white and yellow balloons. The adult is standing and guiding the children to play with the balloons.",
+                  "indicator": "Children can intuitively tell WHERE to go to engage with the activity",
+                  "reasoning": "The open wooden-floor room with no furniture obstacles provides a clear, unobstructed movement zone where children immediately engage with the balloon dance activity."
+                },
+                {
+                  "ts_start": "01:59",
+                  "ts_end": "02:59",
+                  "type": "visual",
+                  "quote": "The children are still actively playing with the balloons, some are throwing them high, others are trying to catch them. The adult is moving around the room, interacting with different children and helping them with the balloons. Some balloons are on the floor, and children pick them up.",
+                  "indicator": "Enough space at the activity for children to stand, kneel, sit, or move as the activity requires",
+                  "reasoning": "Children are freely throwing balloons high and moving around to catch them, demonstrating ample unobstructed space suited to the free-movement dance activity."
+                },
+                {
+                  "ts_start": "00:59",
+                  "ts_end": "01:59",
+                  "type": "visual",
+                  "quote": "The children continue to play with the balloons, throwing them in the air and catching them. The adult is still guiding them, sometimes bending down to help a child with a balloon. One child in a red shirt is sitting on the floor for a while, then gets up and joins the play.",
+                  "indicator": "Clear deliberate positioning suited to the activity",
+                  "reasoning": "Children are standing and moving freely as the balloon dance activity requires, with the open floor space naturally inviting the appropriate posture for this movement activity."
+                },
+                {
+                  "ts_start": "02:59",
+                  "ts_end": "03:59",
+                  "type": "visual",
+                  "quote": "The children continue to play with the balloons, some are throwing them against the wall. The adult is still engaging with the children, encouraging their play. One child is sitting on the floor, then gets up and joins the play again. Another adult is visible in the background, sitting at a table.",
+                  "indicator": "No significant clutter, furniture, or persistent adult barriers materially blocking the path between entry and the activity zone",
+                  "reasoning": "The second adult is seated at a background table and does not obstruct child movement; children move freely throughout the space without weaving around barriers."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": null,
+              "prompt_hash": "c92c689bf87b"
+            },
+            "clean_up": {
+              "dimension_id": "clean_up",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "The 5-minute recording captures only the active balloon dance activity. No cleanup phase is observed \u2014 children never return materials to storage, and no storage system (shelves, bins, labels, return locations) is visible in any visual observation. Balloons are inherently light and child-manageable, but the design of the return/storage system cannot be assessed from this footage. Scoring would require guessing rather than evidence.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": 0.5,
+          "cost_usd": null,
+          "duration_seconds": 12.686960697174072
+        },
+        "toy_design": {
+          "session_id": "long_before_toy_design_20250918_activity_5_balloon_dance",
+          "rubric_version": "0.2.0",
+          "scores": {
+            "purpose": {
+              "dimension_id": "purpose",
+              "rubric_version": "0.2.0",
+              "score": 1.0,
+              "anchor_matched": "The activity's purpose is obvious from the setup alone \u2014 materials are arranged in a way that a child arriving can intuit what to do. Explicit labels are not required.",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "Six children and one adult are in a room with wooden floors and white walls. There are blackboards on one side of the room. The children are playing with white and yellow balloons. The adult is standing and guiding the children to play with the balloons.",
+                  "indicator": "Materials arranged at the activity zone in a way that obviously communicates what to do",
+                  "reasoning": "Balloons distributed directly into children's hands in an open floor space immediately communicates 'play/move with the balloon' \u2014 no further instruction is needed to understand the activity's purpose."
+                },
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:05",
+                  "type": "transcript",
+                  "quote": "Everybody got one balloon?",
+                  "indicator": "A child arriving at the activity zone could guess what to do from the arrangement alone",
+                  "reasoning": "The teacher's opening question confirms each child has already been given a balloon as the primary prop, meaning the material itself (balloon in hand, open space) signals the activity before any verbal instruction is given."
+                },
+                {
+                  "ts_start": "00:59",
+                  "ts_end": "01:59",
+                  "type": "visual",
+                  "quote": "The children continue to play with the balloons, throwing them in the air and catching them. The adult is still guiding them, sometimes bending down to help a child with a balloon.",
+                  "indicator": "Materials clearly staged at the activity zone in a way that suggests their use",
+                  "reasoning": "Children are independently throwing and catching balloons without needing explanation, demonstrating that the material arrangement (balloon + open floor space) was sufficient to communicate the activity's purpose."
+                },
+                {
+                  "ts_start": "02:59",
+                  "ts_end": "03:59",
+                  "type": "visual",
+                  "quote": "The children continue to play with the balloons, some are throwing them against the wall. The adult is still engaging with the children, encouraging their play.",
+                  "indicator": "A child arriving at the activity zone could guess what to do from the arrangement alone",
+                  "reasoning": "Children are self-directing their balloon play (throwing against walls, catching) confirming the setup alone \u2014 balloons in an open movement space \u2014 is sufficient for children to intuit the activity."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The activity is a movement/dance session using balloons as props in an open floor space. The purpose is immediately obvious: balloons distributed to children in a clear open area unambiguously signal free movement and play. No labels or signs are needed or expected for this type of physical activity setup.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "anchor_and_choice_materials": {
+              "dimension_id": "anchor_and_choice_materials",
+              "rubric_version": "0.2.0",
+              "score": 0.5,
+              "anchor_matched": "An anchor (single or multiple) is present but choice materials are limited; OR variety of materials exists but no anchor draws children in",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "The children are playing with white and yellow balloons. The adult is standing and guiding the children to play with the balloons.",
+                  "indicator": "An anchor material \u2014 either one strong centerpiece OR multiple equally-weighted anchor stations \u2014 that obviously invites children to engage",
+                  "reasoning": "Balloons function as a clear anchor material that draws children into physical play, satisfying the anchor requirement."
+                },
+                {
+                  "ts_start": "00:59",
+                  "ts_end": "01:59",
+                  "type": "visual",
+                  "quote": "The children continue to play with the balloons, throwing them in the air and catching them.",
+                  "indicator": "Choice materials (tools, items, options) at or within the anchor(s) that allow flexible use",
+                  "reasoning": "Children are using the balloons in different ways (throwing, catching), suggesting some flexible engagement, but the only material present is balloons \u2014 there are no additional tools, props, or varied items that constitute a meaningful variety of choice materials."
+                },
+                {
+                  "ts_start": "02:59",
+                  "ts_end": "03:59",
+                  "type": "visual",
+                  "quote": "The children continue to play with the balloons, some are throwing them against the wall.",
+                  "indicator": "Materials can be combined or used in different ways for different outcomes",
+                  "reasoning": "Children do use balloons in slightly different ways (throwing up, throwing against wall, catching), but this variation emerges from the single material type rather than from a variety of choice materials provided in the setup."
+                },
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "04:59",
+                  "type": "visual",
+                  "quote": "The children are playing with white and yellow balloons.",
+                  "indicator": "Choice materials (tools, items, options) at or within the anchor(s) that allow flexible use",
+                  "reasoning": "While there are two balloon colors (white and yellow), the setup consists solely of balloons with no additional tools, props, or materials \u2014 limiting the variety of choice materials available to children."
+                }
+              ],
+              "confidence": "medium",
+              "scorer_notes": "The balloons serve as a clear and engaging anchor. However, the setup offers only one type of material (balloons in two colors) with no additional tools, props, or items that would constitute meaningful choice variety. Children do engage flexibly with the single material, but the rubric requires a variety of choice materials \u2014 not just varied uses of one item. Score of 0.5 reflects a present anchor with limited choice materials.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "spark_curiosity": {
+              "dimension_id": "spark_curiosity",
+              "rubric_version": "0.2.0",
+              "score": 0,
+              "anchor_matched": "Activity area is purely functional with no curiosity hook \u2014 children would not have any 'what's that?' moment from what is at the activity itself",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "The children are playing with white and yellow balloons. The adult is standing and guiding the children to play with the balloons.",
+                  "indicator": "A surprising or unexpected element AT the activity zone",
+                  "reasoning": "The activity setup consists solely of plain white and yellow balloons \u2014 familiar, everyday items for young children \u2014 with no surprising, mysterious, or visually striking element present at the activity zone."
+                },
+                {
+                  "ts_start": "00:59",
+                  "ts_end": "02:59",
+                  "type": "visual",
+                  "quote": "The children continue to play with the balloons, throwing them in the air and catching them. The adult is still guiding them, sometimes bending down to help a child with a balloon.",
+                  "indicator": "Items at the activity zone obviously designed to be touched, examined, or wondered about",
+                  "reasoning": "The activity remains purely functional \u2014 throwing and catching balloons \u2014 with no element at the activity area that would prompt a 'what is that?' moment or invite wonder or investigation beyond the familiar play action."
+                },
+                {
+                  "ts_start": "02:59",
+                  "ts_end": "04:59",
+                  "type": "visual",
+                  "quote": "The children are still actively playing with the balloons, some are throwing them high, others are trying to catch them. The adult is moving around the room, interacting with different children and helping them with the balloons.",
+                  "indicator": "Deliberate novelty in the activity setup beyond familiar materials",
+                  "reasoning": "Throughout the entire session the activity area contains only standard balloons with no added novelty, hidden elements, or visually striking centerpiece that would constitute a curiosity hook."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "Balloons are familiar, common materials for children aged 3\u20135. The activity is purely movement-based with no unusual, mysterious, or unexpected element introduced at the activity zone. The room features (blackboards, wooden floors) are ambient and do not count per rubric rules.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "challenge_adjustment": {
+              "dimension_id": "challenge_adjustment",
+              "rubric_version": "0.2.0",
+              "score": 0,
+              "anchor_matched": "Single fixed difficulty level \u2014 no variation possible without redesigning the activity",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "Six children and one adult are in a room with wooden floors and white walls. There are blackboards on one side of the room. The children are playing with white and yellow balloons. The adult is standing and guiding the children to play with the balloons.",
+                  "indicator": "Multiple visible difficulty levels of the same activity",
+                  "reasoning": "All children are given the same type of balloon and the same single instruction (throw it up), with no visible tiered variants or alternative materials to adjust difficulty."
+                },
+                {
+                  "ts_start": "01:59",
+                  "ts_end": "02:59",
+                  "type": "visual",
+                  "quote": "The children are still actively playing with the balloons, some are throwing them high, others are trying to catch them. The adult is moving around the room, interacting with different children and helping them with the balloons.",
+                  "indicator": "Add-on / extension materials available but not forced",
+                  "reasoning": "No extension or add-on materials are visible; the activity remains a single uniform task for all children throughout the session with no staged progression or optional harder/easier variants."
+                },
+                {
+                  "ts_start": "03:59",
+                  "ts_end": "04:59",
+                  "type": "visual",
+                  "quote": "The children are still playing with the balloons, throwing them and catching them. The adult is actively participating, throwing balloons and guiding the children. Some children are picking up balloons from the floor.",
+                  "indicator": "Setup supports teacher-led or child-led difficulty change",
+                  "reasoning": "No deliberate difficulty variation is introduced by the teacher or available in the setup across the entire session; the activity design is fixed at one level."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "The activity is a single free-play balloon dance with one uniform task for all children. No tiered materials, no extension options, and no visible staged progression are present at any point in the session.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "self_served": {
+              "dimension_id": "self_served",
+              "rubric_version": "0.2.0",
+              "score": 1.0,
+              "anchor_matched": "All materials are, by DESIGN, safe, recognisable to children of the age range, and light enough for them to handle alone. The activity is designed for self-service even if teachers are observed helping during the recording.",
+              "evidence": [
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "The children are playing with white and yellow balloons. The adult is standing and guiding the children to play with the balloons.",
+                  "indicator": "Materials are child-safe by design (no choking hazards, sharp edges, toxic substances within reach)",
+                  "reasoning": "Inflated balloons are soft, lightweight, and present no sharp edges or toxic hazards for 3\u20135 year olds by design."
+                },
+                {
+                  "ts_start": "00:59",
+                  "ts_end": "01:59",
+                  "type": "visual",
+                  "quote": "The children continue to play with the balloons, throwing them in the air and catching them.",
+                  "indicator": "Items are light enough for a child of the age range to lift and carry alone",
+                  "reasoning": "Children are independently throwing and catching balloons without adult physical assistance, confirming the materials are light enough for self-handling."
+                },
+                {
+                  "ts_start": "01:59",
+                  "ts_end": "02:59",
+                  "type": "visual",
+                  "quote": "Some balloons are on the floor, and children pick them up.",
+                  "indicator": "Items are light enough for a child of the age range to lift and carry alone",
+                  "reasoning": "Children independently retrieve balloons from the floor, demonstrating the materials are manageable without adult help."
+                },
+                {
+                  "ts_start": "00:00",
+                  "ts_end": "00:59",
+                  "type": "visual",
+                  "quote": "The children are playing with white and yellow balloons.",
+                  "indicator": "Materials are recognisable to children of the age range \u2014 children would know what they are and roughly how to use them",
+                  "reasoning": "Balloons are universally familiar objects to children aged 3\u20135 and require no instruction to identify or begin using."
+                }
+              ],
+              "confidence": "high",
+              "scorer_notes": "Inflated balloons are the sole material. They are universally recognisable, extremely lightweight, sized for child hands, and safe by design for this age group. Adult involvement observed is facilitative, not necessitated by material design.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": 0.5,
+          "cost_usd": null,
+          "duration_seconds": 13.504057884216309
+        }
+      }
+    },
+    "after": {
+      "items": {
+        "activity_zone_items": [],
+        "other_items_in_room": [],
+        "notes": "No visual observations were available; items inventory skipped.",
+        "session_id": "long_vision_20250918_activity_5_balloon_dance_after",
+        "source_model": "claude-sonnet-4-6",
+        "prompt_hash": "0a584ed472ce"
+      },
+      "scores": {
+        "playground": {
+          "session_id": "long_after_playground_20250918_activity_5_balloon_dance",
+          "rubric_version": "0.2.3",
+          "scores": {
+            "narrative": {
+              "dimension_id": "narrative",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any observable evidence of the space's decor, props, arrangement, or framing, it is not possible to score the narrative dimension reliably.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "multi_sensory": {
+              "dimension_id": "multi_sensory",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Despite the activity description suggesting multi-sensory engagement (balloons, music, movement), there is no observable evidence to score against the rubric indicators.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "boundary": {
+              "dimension_id": "boundary",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any visual or audio evidence, it is impossible to assess whether a clear physical or visual boundary defining the activity zone was present.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "movement": {
+              "dimension_id": "movement",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any timestamped evidence \u2014 visual or audio \u2014 it is not possible to assess access to the activity zone, child positioning, space adequacy, or material reach. Returning insufficient_evidence rather than guessing.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "clean_up": {
+              "dimension_id": "clean_up",
+              "rubric_version": "0.2.3",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. There is no evidence available to assess storage height, label design, item weight, or child-led cleanup behavior. Cannot score this dimension.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": null,
+          "cost_usd": null,
+          "duration_seconds": 3.842912197113037
+        },
+        "toy_design": {
+          "session_id": "long_after_toy_design_20250918_activity_5_balloon_dance",
+          "rubric_version": "0.2.0",
+          "scores": {
+            "purpose": {
+              "dimension_id": "purpose",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript content and no visual observations were provided for this session. Without any timestamped visual or audio evidence of the activity zone setup, it is impossible to assess whether the material arrangement communicates the activity's purpose to an arriving child.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "anchor_and_choice_materials": {
+              "dimension_id": "anchor_and_choice_materials",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. The activity notes describe a balloon dance activity with music, which could potentially score on this dimension, but without any timestamped transcript or visual evidence, a reliable score cannot be assigned.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "spark_curiosity": {
+              "dimension_id": "spark_curiosity",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any evidence of what was present at the activity area, it is impossible to assess whether a curiosity-sparking element existed at the balloon dance activity zone.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "challenge_adjustment": {
+              "dimension_id": "challenge_adjustment",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. Without any evidence of the activity setup, materials, or teacher/child interactions, it is impossible to assess whether challenge adjustment was present or absent.",
+              "prompt_hash": "c92c689bf87b"
+            },
+            "self_served": {
+              "dimension_id": "self_served",
+              "rubric_version": "0.2.0",
+              "score": "insufficient_evidence",
+              "anchor_matched": null,
+              "evidence": [],
+              "confidence": "low",
+              "scorer_notes": "No transcript or visual observations were provided for this session. The activity notes describe a balloon dance activity for 3-5 year olds, which by general knowledge would likely score well on self-service design (balloons are light, recognisable, and child-safe), but without any timestamped visual or audio evidence, a score cannot be reliably assigned per the evidence requirements.",
+              "prompt_hash": "c92c689bf87b"
+            }
+          },
+          "overall": null,
+          "cost_usd": null,
+          "duration_seconds": 4.707803010940552
+        }
+      }
+    }
+  }
+}

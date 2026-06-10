@@ -1,0 +1,12 @@
+{
+  "video_start_wall_clock": "09:39:43",
+  "first_child_wall_clock": "09:40:00",
+  "last_child_wall_clock": "10:00:00",
+  "first_child_visible_at": null,
+  "last_child_visible_at": null,
+  "first_child_evidence": "A child in a pink dress walks into the play area from the right side of the frame.",
+  "last_child_evidence": "The last child, a boy in a red shirt, walks out of the play area on the right side of the frame.",
+  "confidence": "high",
+  "self_check_passed": true,
+  "notes": ""
+}

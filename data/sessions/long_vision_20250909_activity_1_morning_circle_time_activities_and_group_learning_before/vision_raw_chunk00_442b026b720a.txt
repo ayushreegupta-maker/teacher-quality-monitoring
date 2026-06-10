@@ -1,0 +1,30 @@
+{
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:01:00",
+      "description": "The video shows an empty classroom with tables, chairs, and shelves. The room is well-lit with natural light coming from large windows. There are colorful drawings and educational materials on the walls. The floor is light gray, and there are yellow cushions arranged in a semi-circle on a rug in one corner. A large, white, circular light fixture hangs from the ceiling."
+    },
+    {
+      "ts_start": "00:01:00",
+      "ts_end": "00:02:00",
+      "description": "The classroom remains empty and quiet. The camera provides a wide shot of the entire room, showing the organized layout of furniture and learning stations. The shelves are filled with books and various learning materials. The tables are clean and set up for activities, with some chairs tucked under them."
+    },
+    {
+      "ts_start": "00:02:00",
+      "ts_end": "00:03:00",
+      "description": "The classroom is still empty. The bright and inviting atmosphere of the room is evident, with ample space for children to move around. The yellow cushions on the rug suggest a designated area for group activities or reading. The overall impression is one of readiness for children to arrive and engage in learning."
+    },
+    {
+      "ts_start": "00:03:00",
+      "ts_end": "00:04:00",
+      "description": "The classroom continues to be empty. The various sections of the room, including the reading corner with cushions and the activity tables, are clearly visible. The shelves are neatly organized, and the walls are decorated with educational posters and children's artwork, adding to the vibrant learning environment."
+    },
+    {
+      "ts_start": "00:04:00",
+      "ts_end": "00:05:00",
+      "description": "The classroom remains empty. The camera captures the full extent of the room, highlighting the thoughtful arrangement of furniture and materials. The large windows offer a view of the outside, and the bright lighting ensures a cheerful ambiance. The space appears clean and well-maintained, ready for the day's activities."
+    }
+  ],
+  "transcript": []
+}

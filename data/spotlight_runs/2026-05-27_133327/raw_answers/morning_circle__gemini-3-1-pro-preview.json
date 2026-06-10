@@ -1,0 +1,67 @@
+{
+  "C1": {
+    "answer": "The boy in the red shirt has dark hair and is wearing a short-sleeved red t-shirt and blue pants. He appears to be of average height relative to his peers in the classroom.",
+    "confidence": "high",
+    "evidence": "05:03 — The boy enters the frame and is clearly visible walking around the room."
+  },
+  "C2": {
+    "answer": "At the start, he wanders around the room before sitting on a yellow cushion in the circle area. In the middle, he mostly sits on the cushion but occasionally gets up to wander. At the end, he is seated on the cushion but gets up to wander again.",
+    "confidence": "high",
+    "evidence": "05:03 — Wanders around. 05:21 — Sits on a yellow cushion. 08:11 — Gets up and wanders. 08:46 — Sits back down. 13:13 — Wanders again. 13:45 — Sits back down. 23:13 — Gets up and wanders. 23:26 — Sits back down."
+  },
+  "C3": {
+    "answer": "The boy in the red shirt is visibly engaged for approximately 60% of the activity. He frequently wanders away from the circle, but when seated, he often watches the teacher and participates in the motions.",
+    "confidence": "medium",
+    "evidence": "He is disengaged and wandering at 05:29, 08:11, 09:05, 13:13, and 23:13. He is engaged and participating while seated at 11:00 and 16:00."
+  },
+  "C4": {
+    "answer": "The teacher interacts 1-on-1 with the boy in the red shirt 5 times, all initiated by the teacher to redirect him back to the circle.\n- 05:43 — Teacher prompts child to sit down (teacher initiated)\n- 08:45 — Teacher prompts child to sit down (teacher initiated)\n- 09:24 — Teacher prompts child to sit down (teacher initiated)\n- 13:45 — Teacher prompts child to sit down (teacher initiated)\n- 23:26 — Teacher prompts child to sit down (teacher initiated)",
+    "confidence": "high",
+    "evidence": "05:43, 08:45, 09:24, 13:45, 23:26 — The teacher verbally prompts the boy to return to his seat."
+  },
+  "C5": {
+    "answer": "The boy in the red shirt does not speak audibly on his own during the activity.",
+    "confidence": "high",
+    "evidence": "Throughout the video (e.g., 05:00-25:00), the child's individual voice is not distinguishable over the teacher and the group."
+  },
+  "C6": {
+    "answer": "The boy in the red shirt does not have any significant, sustained interactions with peers.",
+    "confidence": "high",
+    "evidence": "He walks past other children (e.g., 05:07, 08:11) but does not engage in conversation or shared play with them."
+  },
+  "C7": {
+    "answer": "His emotional state appears generally neutral throughout. He is restless at the start, more settled and participating in the middle, and becomes restless again towards the end.",
+    "confidence": "medium",
+    "evidence": "05:03-09:00 — Restless, wandering. 10:00-20:00 — More settled, participating in songs. 23:13 — Becomes restless and wanders again. No strong displays of joy or frustration are visible."
+  },
+  "C8": {
+    "answer": "The boy in the red shirt appears challenged by self-regulation and attention, specifically staying seated for the duration of the activity.",
+    "confidence": "high",
+    "evidence": "He repeatedly gets up and wanders away from the circle area (05:29, 08:11, 09:05, 13:13, 23:13)."
+  },
+  "C9": {
+    "answer": "He needed verbal prompting to return to the circle and sit down, which the teacher provided multiple times.",
+    "confidence": "high",
+    "evidence": "05:43, 08:45, 09:24, 13:45, 23:26 — The teacher provides verbal help to redirect him back to the activity."
+  },
+  "C10": {
+    "answer": "The boy in the red shirt appears proficient in gross motor skills and basic imitation.",
+    "confidence": "high",
+    "evidence": "05:03 — He walks and runs independently around the room. 11:00, 16:00 — When seated, he is able to follow along with some of the hand motions during the songs."
+  },
+  "T1": {
+    "answer": "1. The teacher uses engaging props and varied songs to maintain group interest.\n2. The teacher calmly and consistently redirects the wandering child without disrupting the activity.\n3. The teacher provides clear, simple instructions for group actions.",
+    "confidence": "high",
+    "evidence": "1. 10:00-20:00 — Teacher uses fruit props and songs.\n2. 08:45, 13:45 — Teacher calmly asks the boy in red to return to his seat.\n3. 10:35 — Teacher gives clear instructions to 'form an apple'."
+  },
+  "T2": {
+    "answer": "1. The transition into circle time is somewhat unstructured, leading to wandering.\n2. The teacher could employ more proactive strategies to keep the wandering child engaged, such as giving him a specific role or prop.\n3. The pacing of some activities could be tightened to prevent restlessness.",
+    "confidence": "medium",
+    "evidence": "1. 05:00-09:00 — Children are wandering before settling down (minor).\n2. Throughout — The boy in red wanders frequently; a prop might anchor him (minor).\n3. 23:00 — Activity drags slightly, leading to the boy in red wandering again (minor)."
+  },
+  "T3": {
+    "answer": "There were no significant moments where the teacher missed a child needing attention.",
+    "confidence": "high",
+    "evidence": "When the boy in the red shirt wanders away (e.g., 08:11, 13:13), the teacher consistently notices and prompts him to return within a reasonable timeframe (08:45, 13:45)."
+  }
+}

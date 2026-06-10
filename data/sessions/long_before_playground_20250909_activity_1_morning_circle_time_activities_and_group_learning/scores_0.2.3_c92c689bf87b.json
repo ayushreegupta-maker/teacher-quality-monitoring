@@ -1,0 +1,167 @@
+{
+  "session_id": "long_before_playground_20250909_activity_1_morning_circle_time_activities_and_group_learning",
+  "rubric_version": "0.2.3",
+  "scores": {
+    "narrative": {
+      "dimension_id": "narrative",
+      "rubric_version": "0.2.3",
+      "score": 0,
+      "anchor_matched": "No experiential context — generic space with no immersive framing; pure utility setup",
+      "evidence": [
+        {
+          "ts_start": "00:00:00",
+          "ts_end": "00:01:00",
+          "type": "visual",
+          "quote": "There are colorful drawings and educational materials on the walls. The floor is light gray, and there are yellow cushions arranged in a semi-circle on a rug in one corner.",
+          "indicator": "Thematic decor that names or evokes a setting",
+          "reasoning": "The wall decorations are described as generic educational materials and children's artwork, not thematic decor evoking a specific immersive setting; the cushion arrangement is functional circle-time setup, not narrative framing."
+        },
+        {
+          "ts_start": "00:03:00",
+          "ts_end": "00:04:00",
+          "type": "visual",
+          "quote": "The walls are decorated with educational posters and children's artwork, adding to the vibrant learning environment.",
+          "indicator": "An atmospheric anchor (banner, central feature, framing object)",
+          "reasoning": "Educational posters and generic children's artwork do not constitute an atmospheric anchor or immersive narrative framing — per the rubric, generic classroom decoration does not earn a narrative score."
+        },
+        {
+          "ts_start": "00:04:00",
+          "ts_end": "00:05:00",
+          "type": "visual",
+          "quote": "The camera captures the full extent of the room, highlighting the thoughtful arrangement of furniture and materials.",
+          "indicator": "An 'in-progress project' feel where the setup itself tells what's happening",
+          "reasoning": "The overall space is described as a well-organized utility classroom with no deliberate scene-setting, story, or immersive context — it is a pure utility setup."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "The session is an empty classroom recording with no children or teacher present. The space shows standard early-childhood classroom organization (cushions, shelves, educational posters) but no thematic or narrative framing that would place a child inside a deliberate setting.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "multi_sensory": {
+      "dimension_id": "multi_sensory",
+      "rubric_version": "0.2.3",
+      "score": "insufficient_evidence",
+      "anchor_matched": null,
+      "evidence": [],
+      "confidence": "low",
+      "scorer_notes": "The recording shows only an empty classroom with no children or teacher present and no activity taking place. The session is described as a morning circle time activity, but no actual engagement, materials in use, or sensory interactions are observable. The visual observations describe the room setup (yellow cushions, shelves with books, educational posters) but no active multi-sensory engagement can be assessed from a static, empty room. Insufficient evidence to score this dimension.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "boundary": {
+      "dimension_id": "boundary",
+      "rubric_version": "0.2.3",
+      "score": 1.0,
+      "anchor_matched": "At least one clear, unambiguous activity boundary — a canvas, paper, mat, rug, table, low fence, or similar marker visually defines the zone. A single well-defined zone is sufficient for this score.",
+      "evidence": [
+        {
+          "ts_start": "00:00:00",
+          "ts_end": "00:01:00",
+          "type": "visual",
+          "quote": "there are yellow cushions arranged in a semi-circle on a rug in one corner",
+          "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+          "reasoning": "The rug with yellow cushions arranged in a semi-circle provides an unambiguous, self-evident physical boundary for the circle time activity zone."
+        },
+        {
+          "ts_start": "00:02:00",
+          "ts_end": "00:03:00",
+          "type": "visual",
+          "quote": "The yellow cushions on the rug suggest a designated area for group activities or reading.",
+          "indicator": "The boundary is intuitive to a child without verbal explanation from an adult",
+          "reasoning": "The combination of a rug and distinctively colored cushions arranged in a purposeful shape creates a visually intuitive boundary that a child could identify without adult direction."
+        },
+        {
+          "ts_start": "00:03:00",
+          "ts_end": "00:04:00",
+          "type": "visual",
+          "quote": "The various sections of the room, including the reading corner with cushions and the activity tables, are clearly visible.",
+          "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+          "reasoning": "The reading/circle corner is described as a distinct, clearly visible section of the room, confirming the boundary is well-defined and spatially separate from other areas."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "No children or teacher present during the recording; however, the physical setup is fully observable and provides sufficient evidence to score the boundary dimension. The rug with semi-circle cushion arrangement is a classic, unambiguous circle-time boundary.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "movement": {
+      "dimension_id": "movement",
+      "rubric_version": "0.2.3",
+      "score": 1.0,
+      "anchor_matched": "Both elements are present — children can clearly access the activity zone (visible path markers not required; minor adult presence in the path is acceptable as long as children get past) AND deliberate positioning suited to the activity (standing, kneeling, or sitting as the activity calls for), with materials reachable from that posture. Explicit seating like cushions is NOT required when the activity naturally invites standing or kneeling.",
+      "evidence": [
+        {
+          "ts_start": "00:00:00",
+          "ts_end": "00:01:00",
+          "type": "visual",
+          "quote": "There are colorful drawings and educational materials on the walls. The floor is light gray, and there are yellow cushions arranged in a semi-circle on a rug in one corner.",
+          "indicator": "Clear deliberate positioning suited to the activity",
+          "reasoning": "Yellow cushions arranged in a semi-circle on a rug provide deliberate, activity-appropriate seating for a group circle time activity, making it immediately clear where children should sit."
+        },
+        {
+          "ts_start": "00:02:00",
+          "ts_end": "00:03:00",
+          "type": "visual",
+          "quote": "The bright and inviting atmosphere of the room is evident, with ample space for children to move around. The yellow cushions on the rug suggest a designated area for group activities or reading.",
+          "indicator": "Enough space at the activity for children to stand, kneel, sit, or move as the activity requires",
+          "reasoning": "Ample space around the cushioned rug area confirms children can access and settle into the circle time zone without obstruction."
+        },
+        {
+          "ts_start": "00:01:00",
+          "ts_end": "00:02:00",
+          "type": "visual",
+          "quote": "The classroom remains empty and quiet. The camera provides a wide shot of the entire room, showing the organized layout of furniture and learning stations. The shelves are filled with books and various learning materials. The tables are clean and set up for activities, with some chairs tucked under them.",
+          "indicator": "Children can clearly access the activity zone from the room entry — minor adult presence in the path is acceptable as long as children can still get past",
+          "reasoning": "The organized layout with chairs tucked under tables and clear floor space indicates an unobstructed path from the room entry to the circle time rug area."
+        },
+        {
+          "ts_start": "00:04:00",
+          "ts_end": "00:05:00",
+          "type": "visual",
+          "quote": "The camera captures the full extent of the room, highlighting the thoughtful arrangement of furniture and materials. The large windows offer a view of the outside, and the bright lighting ensures a cheerful ambiance. The space appears clean and well-maintained, ready for the day's activities.",
+          "indicator": "No significant clutter, furniture, or persistent adult barriers materially blocking the path between entry and the activity zone",
+          "reasoning": "The thoughtful, clutter-free arrangement of the room confirms no barriers exist between the entry and the circle time zone."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "No children or adults are present in the recording; scoring is based entirely on the physical setup. The semi-circle of yellow cushions on a rug clearly designates the circle time area with appropriate seated positioning, and the open, organized room layout provides unobstructed access.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "clean_up": {
+      "dimension_id": "clean_up",
+      "rubric_version": "0.2.3",
+      "score": 0.5,
+      "anchor_matched": "Some materials can be returned by children, others require adult help (mixed system; partial labelling; some items reachable, some not)",
+      "evidence": [
+        {
+          "ts_start": "00:01:00",
+          "ts_end": "00:02:00",
+          "type": "visual",
+          "quote": "The shelves are filled with books and various learning materials. The tables are clean and set up for activities, with some chairs tucked under them.",
+          "indicator": "Storage is at child height and accessible without adult help",
+          "reasoning": "Shelves are visible and appear to be at a low level consistent with child-height access, suggesting some materials are reachable by children, but no detail on labelling or organization is discernible."
+        },
+        {
+          "ts_start": "00:03:00",
+          "ts_end": "00:04:00",
+          "type": "visual",
+          "quote": "The shelves are neatly organized, and the walls are decorated with educational posters and children's artwork, adding to the vibrant learning environment.",
+          "indicator": "Setup is organized rather than piled — children can see where each thing goes",
+          "reasoning": "Neatly organized shelves suggest items have designated spots, which supports child-led cleanup, but the absence of visible picture/symbol/color labels cannot be confirmed or ruled out from the description."
+        },
+        {
+          "ts_start": "00:00:00",
+          "ts_end": "00:01:00",
+          "type": "visual",
+          "quote": "There are colorful drawings and educational materials on the walls. The floor is light gray, and there are yellow cushions arranged in a semi-circle on a rug in one corner.",
+          "indicator": "Return locations are intuitive or visually labelled (pictures, symbols, color codes, silhouettes — child-readable, not text-only)",
+          "reasoning": "No visual labels, silhouettes, or color-coded return spots are described on shelves or storage areas, leaving the labelling system unclear and preventing a full score."
+        }
+      ],
+      "confidence": "low",
+      "scorer_notes": "The session is an empty classroom with no children or cleanup activity observed. Evidence is limited to static visual descriptions of the room. Shelves appear child-height and organized, but no detail on visual labelling of return locations is provided. A score of 0.5 reflects partial evidence of good design (low shelves, organized layout) without confirmation of child-readable labels or full child-independence in cleanup.",
+      "prompt_hash": "c92c689bf87b"
+    }
+  },
+  "overall": 0.625,
+  "cost_usd": null,
+  "duration_seconds": 12.915807962417603
+}

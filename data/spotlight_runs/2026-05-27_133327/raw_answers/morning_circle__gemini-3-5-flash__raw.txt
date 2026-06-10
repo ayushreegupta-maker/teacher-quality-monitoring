@@ -1,0 +1,67 @@
+{
+  "C1": {
+    "answer": "The focus child is a young boy wearing a red short-sleeved t-shirt and dark blue pants. He has short, dark hair, is barefoot, and is of average height compared to his peers. He is frequently referred to as 'Rishabh' or 'Rishab' by the teacher.",
+    "confidence": "high",
+    "evidence": "05:03 — The boy in the red shirt and blue pants enters the classroom from the left side."
+  },
+  "C2": {
+    "answer": "At the start, the boy enters and sits on a yellow cushion in the circle area. In the middle of the activity, he stands up, wanders near the wooden partition, sits back down briefly, and then runs onto the stage. By the end, he stands up again and spends the remainder of the session playing independently at the table.",
+    "confidence": "high",
+    "evidence": "05:20 — Sits on a yellow cushion.\n05:37 — Stands up and wanders near the partition.\n06:44 — Sits back on a cushion.\n08:11 — Runs onto the stage.\n09:15 — Returns to sit on a cushion.\n10:03 — Stands up and runs to the stage, then moves to the table at 10:17 where he stays until the end."
+  },
+  "C3": {
+    "answer": "The boy was visibly engaged for approximately 20% of the activity and disengaged for about 80% of the time. He spent the majority of the session wandering, running on the stage, or playing independently at the table rather than participating in the group circle time.",
+    "confidence": "high",
+    "evidence": "05:20 to 05:37 — Engaged in the circle.\n05:37 to 06:44 — Disengaged, wandering.\n07:00 to 08:11 — Engaged in the circle.\n08:11 to 09:15 — Disengaged, running on stage.\n10:03 to 16:00 — Disengaged, playing at the table."
+  },
+  "C4": {
+    "answer": "The teacher interacts 1-on-1 with the boy approximately 5 times, all initiated by the teacher to redirect his behavior or encourage participation:\n- 05:20 — Teacher guides him to sit on a cushion.\n- 06:44 — Teacher verbally directs him to sit on his cushion.\n- 08:24 — Teacher calls him to come down from the stage.\n- 10:18 — Teacher tells him the table items are not for him.\n- 14:04 — Teacher asks him for his favorite fruit name.",
+    "confidence": "high",
+    "evidence": "05:20, 06:44, 08:24, 10:18, 14:04 — Teacher initiates verbal and physical redirection."
+  },
+  "C5": {
+    "answer": "The boy speaks very little during the activity. He responds inaudibly or with a single mumbled word when the teacher directly asks him for his favorite fruit name.",
+    "confidence": "medium",
+    "evidence": "14:07 — The boy mumbles a response (possibly 'apple' or 'banana') when asked about his favorite fruit."
+  },
+  "C6": {
+    "answer": "The boy has minimal direct interaction with his peers. His only notable peer interaction is running around on the stage alongside another boy in a blue shirt.",
+    "confidence": "high",
+    "evidence": "08:11 to 08:30 — Runs and plays on the stage with another boy."
+  },
+  "C7": {
+    "answer": "At the start, the boy is calm but easily distracted. In the middle, he becomes restless and seeks active movement, showing excitement while running on the stage. By the end, he is calm but completely withdrawn from the group, focused entirely on independent play at the table.",
+    "confidence": "high",
+    "evidence": "05:20 — Calmly sitting.\n08:11 — Excitedly running on stage.\n10:17 — Calmly playing alone at the table."
+  },
+  "C8": {
+    "answer": "The boy seems challenged by:\n- Self-regulation: Struggling to remain seated in the circle (05:37, 08:11, 10:03).\n- Following instructions: Ignoring repeated requests to sit on his cushion (06:44, 08:24, 13:00).\n- Group participation: Preferring independent play over group singing and circle activities.",
+    "confidence": "high",
+    "evidence": "05:37 — Stands up and leaves the circle.\n08:24 — Ignores the teacher's call to come down from the stage.\n10:17 — Chooses independent play at the table over the group activity."
+  },
+  "C9": {
+    "answer": "The boy did not need physical or emotional help, but he required behavioral redirection. The teacher provided this redirection multiple times, both verbally and by physically guiding him back to the circle.",
+    "confidence": "high",
+    "evidence": "05:20 — Teacher physically guides him to a cushion.\n06:44 — Teacher verbally redirects him to sit down."
+  },
+  "C10": {
+    "answer": "The boy appears proficient in:\n- Gross motor skills: Running and climbing onto and off the stage confidently (08:11, 10:03).\n- Independent play: Keeping himself occupied and focused on toys at the table for an extended period (10:17 - 16:00).",
+    "confidence": "high",
+    "evidence": "08:11 — Climbs onto the stage quickly and confidently.\n10:17 to 16:00 — Plays independently and quietly at the table."
+  },
+  "T1": {
+    "answer": "The teacher demonstrated several strengths:\n1. Engaging delivery: Used animated gestures, singing, and clapping to maintain enthusiasm (07:00 - 08:00).\n2. Individual recognition: Addressed children by name and asked personalized questions to encourage participation (12:15 - 14:30).\n3. Patience: Maintained a calm, gentle tone when redirecting children who wandered off (08:24).",
+    "confidence": "high",
+    "evidence": "07:30 — Teacher sings enthusiastically with hand gestures.\n13:00 — Teacher patiently asks children for their names during a song.\n08:24 — Teacher calmly asks the boy to come down from the stage."
+  },
+  "T2": {
+    "answer": "The teacher could improve in the following areas:\n1. Classroom management / Boundary setting: Allowed children to repeatedly leave the circle to run on the stage or play at the table, leading to a fragmented group (Moderate severity; 08:11, 10:17).\n2. Group engagement: Continued the activity with only a few children instead of pausing to re-engage those who wandered off (Moderate severity; 10:30 - 12:00).\n3. Environmental design: The open layout made highly distracting play areas easily accessible during circle time (Minor severity; visible throughout).",
+    "confidence": "high",
+    "evidence": "08:11 — Children run to the stage without immediate redirection.\n10:30 — Teacher continues singing with only three children while others are disengaged.\n10:17 — The table with toys remains accessible and distracts the focus child."
+  },
+  "T3": {
+    "answer": "Yes, the teacher responded late or missed opportunities for redirection:\n- At 08:11, when the focus child and another peer ran onto the stage, the teacher continued singing for several seconds before addressing them.\n- From 10:17 onwards, the focus child was allowed to play at the table for the rest of the session (~6 minutes) without successful redirection back to the group.",
+    "confidence": "high",
+    "evidence": "08:11 to 08:24 — Delay in redirecting children from the stage.\n10:17 to 16:00 — Focus child remains disengaged at the table for the rest of the activity."
+  }
+}

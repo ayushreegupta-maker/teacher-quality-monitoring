@@ -1,0 +1,60 @@
+{
+  "activity_zone_items": [
+    {
+      "category": "Furniture",
+      "name": "rug",
+      "count_or_quantity": "one",
+      "specifics": "located in one corner of the room; serves as the group activity/reading area",
+      "first_seen_at": "00:00:00"
+    },
+    {
+      "category": "Furniture",
+      "name": "cushions",
+      "count_or_quantity": "multiple",
+      "specifics": "yellow; arranged in a semi-circle on the rug",
+      "first_seen_at": "00:00:00"
+    }
+  ],
+  "other_items_in_room": [
+    {
+      "name": "tables",
+      "location": "classroom floor, set up for activities"
+    },
+    {
+      "name": "chairs",
+      "location": "tucked under tables"
+    },
+    {
+      "name": "shelves",
+      "location": "along room walls; filled with books and learning materials"
+    },
+    {
+      "name": "books",
+      "location": "on shelves"
+    },
+    {
+      "name": "various learning materials",
+      "location": "on shelves"
+    },
+    {
+      "name": "colorful drawings / children's artwork",
+      "location": "walls"
+    },
+    {
+      "name": "educational posters / materials",
+      "location": "walls"
+    },
+    {
+      "name": "large circular light fixture",
+      "location": "ceiling; described as white"
+    },
+    {
+      "name": "large windows",
+      "location": "walls; providing natural light and view outside"
+    }
+  ],
+  "notes": "The classroom is empty throughout all observations (00:00:00–00:05:00); no children or teacher are present. The activity zone (rug with yellow cushions in semi-circle) is identified as the group circle area based on context, but no active use is observed. Counts for cushions are not explicitly stated beyond 'arranged in a semi-circle.' No additional specifics are given for most items.",
+  "session_id": "long_vision_20250909_activity_1_morning_circle_time_activities_and_group_learning_before",
+  "source_model": "claude-sonnet-4-6",
+  "prompt_hash": "0a584ed472ce"
+}

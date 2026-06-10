@@ -1,0 +1,217 @@
+{
+  "session_id": "session_001",
+  "segments": [
+    {
+      "ts_start": "00:00:01",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Chhan chhan kar de"
+    },
+    {
+      "ts_start": "00:00:02",
+      "ts_end": null,
+      "speaker": "STUDENTS",
+      "text": "Chhan chhan kar de"
+    },
+    {
+      "ts_start": "00:00:03",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Tumbi gha kandhe"
+    },
+    {
+      "ts_start": "00:00:04",
+      "ts_end": null,
+      "speaker": "STUDENTS",
+      "text": "Tumbi gha kandhe"
+    },
+    {
+      "ts_start": "00:00:05",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Chhan chhan kar de"
+    },
+    {
+      "ts_start": "00:00:06",
+      "ts_end": null,
+      "speaker": "STUDENTS",
+      "text": "Chhan chhan kar de"
+    },
+    {
+      "ts_start": "00:00:07",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Gol gol kar de"
+    },
+    {
+      "ts_start": "00:00:08",
+      "ts_end": null,
+      "speaker": "STUDENTS",
+      "text": "Gol gol kar de"
+    },
+    {
+      "ts_start": "00:00:09",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Chhan chhan kar de"
+    },
+    {
+      "ts_start": "00:00:10",
+      "ts_end": null,
+      "speaker": "STUDENTS",
+      "text": "Chhan chhan kar de"
+    },
+    {
+      "ts_start": "00:00:11",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Chhan chhan kar de"
+    },
+    {
+      "ts_start": "00:00:12",
+      "ts_end": null,
+      "speaker": "STUDENTS",
+      "text": "Chhan chhan kar de"
+    },
+    {
+      "ts_start": "00:00:13",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Mi chhotisi bahuli"
+    },
+    {
+      "ts_start": "00:00:14",
+      "ts_end": null,
+      "speaker": "STUDENTS",
+      "text": "Mi chhotisi bahuli"
+    },
+    {
+      "ts_start": "00:00:15",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Chhan chhan chhan chhan"
+    },
+    {
+      "ts_start": "00:00:16",
+      "ts_end": null,
+      "speaker": "STUDENTS",
+      "text": "Chhan chhan chhan chhan"
+    },
+    {
+      "ts_start": "00:00:17",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Chhan chhan chhan chhan"
+    },
+    {
+      "ts_start": "00:00:18",
+      "ts_end": null,
+      "speaker": "STUDENTS",
+      "text": "Chhan chhan chhan chhan"
+    },
+    {
+      "ts_start": "00:00:19",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Mala pudhe, mala pudhe"
+    },
+    {
+      "ts_start": "00:00:20",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Mi chhotisi bahuli"
+    },
+    {
+      "ts_start": "00:00:21",
+      "ts_end": null,
+      "speaker": "STUDENTS",
+      "text": "Mi chhotisi bahuli"
+    },
+    {
+      "ts_start": "00:00:22",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Chhan chhan chhan chhan"
+    },
+    {
+      "ts_start": "00:00:23",
+      "ts_end": null,
+      "speaker": "STUDENTS",
+      "text": "Chhan chhan chhan chhan"
+    },
+    {
+      "ts_start": "00:00:24",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Mala pudhe, mala pudhe"
+    },
+    {
+      "ts_start": "00:00:25",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Mala pudhe"
+    },
+    {
+      "ts_start": "00:00:26",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Mala pudhe"
+    },
+    {
+      "ts_start": "00:00:27",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Mala pudhe"
+    },
+    {
+      "ts_start": "00:00:28",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Mala pudhe"
+    },
+    {
+      "ts_start": "00:00:29",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Mala pudhe"
+    },
+    {
+      "ts_start": "00:00:30",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Mala pudhe"
+    },
+    {
+      "ts_start": "00:00:31",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Mala pudhe"
+    },
+    {
+      "ts_start": "00:00:32",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Mi chhotisi bahuli"
+    },
+    {
+      "ts_start": "00:00:33",
+      "ts_end": null,
+      "speaker": "STUDENTS",
+      "text": "Mi chhotisi bahuli"
+    },
+    {
+      "ts_start": "00:00:34",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Chhan chhan chhan chhan"
+    },
+    {
+      "ts_start": "00:00:35",
+      "ts_end": null,
+      "speaker": "STUDENTS",
+      "text": "Chhan chhan chhan chhan"
+    }
+  ],
+  "source_model": "gemini-2.5-flash",
+  "prompt_hash": "e8acfdfded18"
+}

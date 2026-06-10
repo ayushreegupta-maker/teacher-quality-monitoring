@@ -1,0 +1,11 @@
+{
+  "first_child_visible_at": "00:09:00",
+  "last_child_visible_at": "00:31:59",
+  "confidence": "high",
+  "notes": "",
+  "last_child_evidence": "The last child exits the room through the doorway, leaving the play area completely empty of children.",
+  "self_check_passed": true,
+  "session_id": "boundary_test_20250918_activity_5_balloon_dance",
+  "source_model": "gemini-2.5-flash",
+  "prompt_hash": "3f2ef82a8ff4"
+}

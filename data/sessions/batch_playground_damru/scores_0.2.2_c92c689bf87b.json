@@ -1,0 +1,59 @@
+{
+  "session_id": "batch_playground_damru",
+  "rubric_version": "0.2.2",
+  "scores": {
+    "narrative": {
+      "dimension_id": "narrative",
+      "rubric_version": "0.2.2",
+      "score": "insufficient_evidence",
+      "anchor_matched": null,
+      "evidence": [],
+      "confidence": "low",
+      "scorer_notes": "No transcript or visual observations were provided for this session. Without any timestamped scene descriptions or dialogue, it is impossible to assess whether the space contained thematic decor, props, atmospheric anchors, or immersive framing. Returning insufficient_evidence rather than guessing.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "multi_sensory": {
+      "dimension_id": "multi_sensory",
+      "rubric_version": "0.2.2",
+      "score": "insufficient_evidence",
+      "anchor_matched": null,
+      "evidence": [],
+      "confidence": "low",
+      "scorer_notes": "No transcript or visual observations were provided for this session. Despite the activity notes describing a damru (traditional Indian drum) exploratory play setup — which would nominally suggest auditory and tactile engagement — there is no timestamped visual or audio evidence to confirm what was actually present or how children engaged. Cannot score without observable evidence.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "boundary": {
+      "dimension_id": "boundary",
+      "rubric_version": "0.2.2",
+      "score": "insufficient_evidence",
+      "anchor_matched": null,
+      "evidence": [],
+      "confidence": "low",
+      "scorer_notes": "No transcript or visual observations were provided for this session. Without any timestamped scene descriptions or audio content, it is impossible to assess whether a clear physical or visual boundary was present for the damru activity.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "movement": {
+      "dimension_id": "movement",
+      "rubric_version": "0.2.2",
+      "score": "insufficient_evidence",
+      "anchor_matched": null,
+      "evidence": [],
+      "confidence": "low",
+      "scorer_notes": "No transcript content and no visual observations were provided in the session record. Without any timestamped visual or audio evidence, it is impossible to assess access paths, child positioning, space adequacy, or material reach for this activity.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "clean_up": {
+      "dimension_id": "clean_up",
+      "rubric_version": "0.2.2",
+      "score": "insufficient_evidence",
+      "anchor_matched": null,
+      "evidence": [],
+      "confidence": "low",
+      "scorer_notes": "No transcript or visual observations were provided for this session. Without any timestamped scene descriptions or audio evidence, it is impossible to assess storage height, label design, item weight, or whether children can return materials unaided.",
+      "prompt_hash": "c92c689bf87b"
+    }
+  },
+  "overall": null,
+  "cost_usd": null,
+  "duration_seconds": 3.867436170578003
+}

@@ -1,0 +1,446 @@
+{
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:00:05",
+      "description": "The teacher is standing next to a table with three students sitting around it. She is holding a tablet and showing something to the students. There are some books and art supplies on the table."
+    },
+    {
+      "ts_start": "00:00:05",
+      "ts_end": "00:00:10",
+      "description": "The teacher continues to show something on the tablet to the students. The students are looking at the tablet and listening to the teacher."
+    },
+    {
+      "ts_start": "00:00:10",
+      "ts_end": "00:00:15",
+      "description": "The teacher is still showing something on the tablet to the students. One student is pointing at the tablet."
+    },
+    {
+      "ts_start": "00:00:15",
+      "ts_end": "00:00:20",
+      "description": "The teacher is talking to the students while showing them something on the tablet. The students are engaged and looking at the tablet."
+    },
+    {
+      "ts_start": "00:00:20",
+      "ts_end": "00:00:25",
+      "description": "The teacher is still interacting with the students, showing them something on the tablet. The students are attentive."
+    },
+    {
+      "ts_start": "00:00:25",
+      "ts_end": "00:00:30",
+      "description": "The teacher is talking to the students, who are looking at the tablet. One student is resting their head on the table."
+    },
+    {
+      "ts_start": "00:00:30",
+      "ts_end": "00:00:35",
+      "description": "The teacher is showing something on the tablet to the students. She then puts the tablet down and picks up a book."
+    },
+    {
+      "ts_start": "00:00:35",
+      "ts_end": "00:00:40",
+      "description": "The teacher is showing a book to the students. The students are looking at the book."
+    },
+    {
+      "ts_start": "00:00:40",
+      "ts_end": "00:00:45",
+      "description": "The teacher is showing the book to the students. She then walks away from the table towards the shelves."
+    },
+    {
+      "ts_start": "00:00:45",
+      "ts_end": "00:00:50",
+      "description": "The teacher is walking back to the table with some items in her hands. The students are still at the table."
+    },
+    {
+      "ts_start": "00:00:50",
+      "ts_end": "00:00:55",
+      "description": "The teacher is placing some items on the table. The students are watching her."
+    },
+    {
+      "ts_start": "00:00:55",
+      "ts_end": "00:01:00",
+      "description": "The teacher is arranging items on the table. The students are observing."
+    },
+    {
+      "ts_start": "00:01:00",
+      "ts_end": "00:01:05",
+      "description": "The teacher is talking to the students and showing them how to use the items on the table. The students are listening."
+    },
+    {
+      "ts_start": "00:01:05",
+      "ts_end": "00:01:10",
+      "description": "The teacher is demonstrating something to the students using the items on the table. The students are watching intently."
+    },
+    {
+      "ts_start": "00:01:10",
+      "ts_end": "00:01:15",
+      "description": "The teacher is explaining the activity to the students. She is holding up some colorful items."
+    },
+    {
+      "ts_start": "00:01:15",
+      "ts_end": "00:01:20",
+      "description": "The teacher is still explaining the activity. The students are looking at the items on the table."
+    },
+    {
+      "ts_start": "00:01:20",
+      "ts_end": "00:01:25",
+      "description": "The teacher is demonstrating how to use the items. She is showing them how to roll something."
+    },
+    {
+      "ts_start": "00:01:25",
+      "ts_end": "00:01:30",
+      "description": "The teacher is showing the students how to roll the colorful items. The students are watching and listening."
+    },
+    {
+      "ts_start": "00:01:30",
+      "ts_end": "00:01:35",
+      "description": "The teacher is still demonstrating the rolling technique. The students are observing."
+    },
+    {
+      "ts_start": "00:01:35",
+      "ts_end": "00:01:40",
+      "description": "The teacher is talking to the students and encouraging them to try the activity. The students are looking at the items."
+    },
+    {
+      "ts_start": "00:01:40",
+      "ts_end": "00:01:45",
+      "description": "The teacher is still explaining the activity. She is holding up some colorful items."
+    },
+    {
+      "ts_start": "00:01:45",
+      "ts_end": "00:01:50",
+      "description": "The teacher is demonstrating the activity again. The students are watching."
+    },
+    {
+      "ts_start": "00:01:50",
+      "ts_end": "00:01:55",
+      "description": "The teacher is talking to the students and showing them how to use the items. The students are engaged."
+    },
+    {
+      "ts_start": "00:01:55",
+      "ts_end": "00:02:00",
+      "description": "The teacher is still demonstrating the activity. The students are watching and listening."
+    },
+    {
+      "ts_start": "00:02:00",
+      "ts_end": "00:02:05",
+      "description": "The teacher is talking to the students and showing them how to use the items. The students are attentive."
+    },
+    {
+      "ts_start": "00:02:05",
+      "ts_end": "00:02:10",
+      "description": "The teacher is still demonstrating the activity. The students are watching and listening."
+    },
+    {
+      "ts_start": "00:02:10",
+      "ts_end": "00:02:15",
+      "description": "The teacher is talking to the students and showing them how to use the items. The students are engaged."
+    },
+    {
+      "ts_start": "00:02:15",
+      "ts_end": "00:02:20",
+      "description": "The teacher is still demonstrating the activity. The students are watching and listening."
+    },
+    {
+      "ts_start": "00:02:20",
+      "ts_end": "00:02:25",
+      "description": "The teacher is talking to the students and showing them how to use the items. The students are attentive."
+    },
+    {
+      "ts_start": "00:02:25",
+      "ts_end": "00:02:30",
+      "description": "The teacher is still demonstrating the activity. The students are watching and listening."
+    },
+    {
+      "ts_start": "00:02:30",
+      "ts_end": "00:02:35",
+      "description": "The teacher is talking to the students and showing them how to use the items. The students are engaged."
+    },
+    {
+      "ts_start": "00:02:35",
+      "ts_end": "00:02:40",
+      "description": "The teacher is still demonstrating the activity. The students are watching and listening."
+    },
+    {
+      "ts_start": "00:02:40",
+      "ts_end": "00:02:45",
+      "description": "The teacher is talking to the students and showing them how to use the items. The students are attentive."
+    },
+    {
+      "ts_start": "00:02:45",
+      "ts_end": "00:02:50",
+      "description": "The teacher is still demonstrating the activity. The students are watching and listening."
+    },
+    {
+      "ts_start": "00:02:50",
+      "ts_end": "00:02:55",
+      "description": "The teacher is talking to the students and showing them how to use the items. The students are engaged."
+    },
+    {
+      "ts_start": "00:02:55",
+      "ts_end": "00:03:00",
+      "description": "The teacher is still demonstrating the activity. The students are watching and listening."
+    },
+    {
+      "ts_start": "00:03:00",
+      "ts_end": "00:03:05",
+      "description": "The teacher is talking to the students and showing them how to use the items. The students are attentive."
+    },
+    {
+      "ts_start": "00:03:05",
+      "ts_end": "00:03:09",
+      "description": "The teacher is still demonstrating the activity. The students are watching and listening."
+    }
+  ],
+  "transcript": [
+    {
+      "ts_start": "00:00:00",
+      "speaker": "TEACHER",
+      "text": "Okay, now all of you watch this video and then you will see. Just now, just now we have learned the textures. Okay? Now he's making the texture. How to make the texture, you see."
+    },
+    {
+      "ts_start": "00:00:10",
+      "speaker": "STUDENT_1",
+      "text": "It's not a cartoon."
+    },
+    {
+      "ts_start": "00:00:18",
+      "speaker": "TEACHER",
+      "text": "It's not a cartoon."
+    },
+    {
+      "ts_start": "00:00:20",
+      "speaker": "STUDENT_1",
+      "text": "It's a cartoon."
+    },
+    {
+      "ts_start": "00:00:22",
+      "speaker": "TEACHER",
+      "text": "Done? Now all of you watch the video, then you will see. Just now, just now we have learned the textures. Okay? Now he's making the texture. How to make the texture, you see."
+    },
+    {
+      "ts_start": "00:00:40",
+      "speaker": "STUDENT_1",
+      "text": "It's not a cartoon."
+    },
+    {
+      "ts_start": "00:00:42",
+      "speaker": "TEACHER",
+      "text": "It's not a cartoon."
+    },
+    {
+      "ts_start": "00:00:44",
+      "speaker": "STUDENT_1",
+      "text": "It's a cartoon."
+    },
+    {
+      "ts_start": "00:00:46",
+      "speaker": "TEACHER",
+      "text": "It's not a cartoon."
+    },
+    {
+      "ts_start": "00:00:48",
+      "speaker": "STUDENT_1",
+      "text": "It's a cartoon."
+    },
+    {
+      "ts_start": "00:00:50",
+      "speaker": "TEACHER",
+      "text": "It's not a cartoon."
+    },
+    {
+      "ts_start": "00:00:52",
+      "speaker": "STUDENT_1",
+      "text": "It's a cartoon."
+    },
+    {
+      "ts_start": "00:00:54",
+      "speaker": "TEACHER",
+      "text": "It's not a cartoon."
+    },
+    {
+      "ts_start": "00:00:56",
+      "speaker": "STUDENT_1",
+      "text": "It's a cartoon."
+    },
+    {
+      "ts_start": "00:00:58",
+      "speaker": "TEACHER",
+      "text": "It's not a cartoon."
+    },
+    {
+      "ts_start": "00:01:00",
+      "speaker": "STUDENT_1",
+      "text": "It's a cartoon."
+    },
+    {
+      "ts_start": "00:01:02",
+      "speaker": "TEACHER",
+      "text": "It's not a cartoon."
+    },
+    {
+      "ts_start": "00:01:04",
+      "speaker": "STUDENT_1",
+      "text": "It's a cartoon."
+    },
+    {
+      "ts_start": "00:01:06",
+      "speaker": "TEACHER",
+      "text": "It's not a cartoon."
+    },
+    {
+      "ts_start": "00:01:08",
+      "speaker": "STUDENT_1",
+      "text": "It's a cartoon."
+    },
+    {
+      "ts_start": "00:01:10",
+      "speaker": "TEACHER",
+      "text": "It's not a cartoon."
+    },
+    {
+      "ts_start": "00:01:12",
+      "speaker": "STUDENT_1",
+      "text": "It's a cartoon."
+    },
+    {
+      "ts_start": "00:01:14",
+      "speaker": "TEACHER",
+      "text": "It's not a cartoon."
+    },
+    {
+      "ts_start": "00:01:16",
+      "speaker": "STUDENT_1",
+      "text": "It's a cartoon."
+    },
+    {
+      "ts_start": "00:01:18",
+      "speaker": "TEACHER",
+      "text": "It's not a cartoon."
+    },
+    {
+      "ts_start": "00:01:20",
+      "speaker": "STUDENT_1",
+      "text": "It's a cartoon."
+    },
+    {
+      "ts_start": "00:01:22",
+      "speaker": "TEACHER",
+      "text": "It's not a cartoon."
+    },
+    {
+      "ts_start": "00:01:24",
+      "speaker": "STUDENT_1",
+      "text": "It's a cartoon."
+    },
+    {
+      "ts_start": "00:01:26",
+      "speaker": "TEACHER",
+      "text": "It's not a cartoon."
+    },
+    {
+      "ts_start": "00:01:28",
+      "speaker": "STUDENT_1",
+      "text": "It's a cartoon."
+    },
+    {
+      "ts_start": "00:01:30",
+      "speaker": "TEACHER",
+      "text": "It's not a cartoon."
+    },
+    {
+      "ts_start": "00:01:32",
+      "speaker": "STUDENT_1",
+      "text": "It's a cartoon."
+    },
+    {
+      "ts_start": "00:01:34",
+      "speaker": "TEACHER",
+      "text": "It's not a cartoon."
+    },
+    {
+      "ts_start": "00:01:36",
+      "speaker": "STUDENT_1",
+      "text": "It's a cartoon."
+    },
+    {
+      "ts_start": "00:01:38",
+      "speaker": "TEACHER",
+      "text": "It's not a cartoon."
+    },
+    {
+      "ts_start": "00:01:40",
+      "speaker": "STUDENT_1",
+      "text": "It's a cartoon."
+    },
+    {
+      "ts_start": "00:01:42",
+      "speaker": "TEACHER",
+      "text": "It's not a cartoon."
+    },
+    {
+      "ts_start": "00:01:44",
+      "speaker": "STUDENT_1",
+      "text": "It's a cartoon."
+    },
+    {
+      "ts_start": "00:01:46",
+      "speaker": "TEACHER",
+      "text": "It's not a cartoon."
+    },
+    {
+      "ts_start": "00:01:48",
+      "speaker": "STUDENT_1",
+      "text": "It's a cartoon."
+    },
+    {
+      "ts_start": "00:01:50",
+      "speaker": "TEACHER",
+      "text": "It's not a cartoon."
+    },
+    {
+      "ts_start": "00:01:52",
+      "speaker": "STUDENT_1",
+      "text": "It's a cartoon."
+    },
+    {
+      "ts_start": "00:01:54",
+      "speaker": "TEACHER",
+      "text": "It's not a cartoon."
+    },
+    {
+      "ts_start": "00:01:56",
+      "speaker": "STUDENT_1",
+      "text": "It's a cartoon."
+    },
+    {
+      "ts_start": "00:01:58",
+      "speaker": "TEACHER",
+      "text": "It's not a cartoon."
+    },
+    {
+      "ts_start": "00:02:00",
+      "speaker": "STUDENT_1",
+      "text": "It's a cartoon."
+    },
+    {
+      "ts_start": "00:02:02",
+      "speaker": "TEACHER",
+      "text": "It's not a cartoon."
+    },
+    {
+      "ts_start": "00:02:04",
+      "speaker": "STUDENT_1",
+      "text": "It's a cartoon."
+    },
+    {
+      "ts_start": "00:02:06",
+      "speaker": "TEACHER",
+      "text": "It's not a cartoon."
+    },
+    {
+      "ts_start": "00:02:08",
+      "speaker": "STUDENT_1",
+      "text": "It's a cartoon."
+    }
+  ]
+}

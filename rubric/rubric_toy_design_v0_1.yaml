@@ -1,0 +1,169 @@
+version: 0.2.0
+name: TQM Toy Design Rubric
+created_at: 2026-05-19
+
+context:
+  age_range: "3-5 years (Pre-K)"
+  subject_scope: "toy design / activity-interaction design — how the materials and setup invite children to engage with the activity itself"
+  scoring_scale: "0 / 0.5 / 1 (no / partial / yes)"
+  framework_basis: |
+    Five dimensions aligned with the Openhouse Learning Hub toy-design
+    framework (designing the interaction(s) in the playground). Where the
+    playground rubric scores the SPACE, this rubric scores the MATERIALS and
+    the interaction the setup invites.
+    Same 0 / 0.5 / 1 scale.
+    Intended to be scored on the same 5-min recordings as the playground
+    rubric — set up + first moments of children engaging.
+
+    Changes from v0.1.0 (2026-05-19):
+    - **Purpose**: Explicit labels are NOT required for preschool activities.
+      The arrangement of materials at the activity zone is sufficient to
+      communicate purpose if a child arriving could intuit what to do.
+    - **Anchor & Choice Materials**: A single dominant centerpiece is NOT
+      required. Multiple equally-weighted anchors (e.g. two sensory bins)
+      all count as anchors; choice materials are the tools/items used
+      within or around the anchor(s).
+    - **Spark Curiosity**: Focus ONLY on the activity area / zone itself.
+      Wall decor, items on shelves not used in the activity, or other
+      elsewhere-in-the-room features (lamps, art on walls) do NOT count.
+    - **Self Served**: Score the DESIGN, not the implementation. Observed
+      teacher assistance does NOT lower the score — the question is "could
+      a child manage these materials alone by design?", not "is an adult
+      helping right now?".
+
+scoring_scale:
+  values:
+    0: "Indicator is absent or counterproductive"
+    0.5: "Indicator is partially present — some elements visible but incomplete or inconsistent"
+    1: "Indicator is clearly and fully present"
+  insufficient_evidence: |
+    Use this when camera angle, video length, or video content does not allow
+    the dimension to be observed reliably.
+
+anti_bias_rules:
+  - "Score based on design intent, not material cost or polish. Hand-made low-cost setups can score 1; expensive branded toys can score 0."
+  - "Do not score based on cultural or regional aesthetic preference."
+  - "Do not penalize for materials being well-used vs brand-new — wear can be a sign of meaningful use."
+  - "Prefer 'insufficient_evidence' over guessing from thin signal."
+
+evidence_requirements:
+  - "Every numeric score must be supported by at least one timestamped visual observation."
+  - "Quoted observations must appear verbatim in the vision-pass output, not paraphrased or invented."
+  - "Confidence must be reported per dimension (high / medium / low)."
+  - "Provide 2-4 evidence pieces when possible."
+
+domains:
+  - id: interaction
+    label: "Activity Interaction Design"
+    description: "Observable design qualities of the materials and the interaction(s) the setup invites — evaluated from a short video of the setup plus first moments of children beginning to engage."
+    dimensions:
+
+      - id: purpose
+        label: "Purpose"
+        description: "The activity's agenda is communicated by the setup itself — the way materials are arranged at the activity zone is enough for a child arriving to intuit what to do, without needing adult instruction. Explicit text labels or signs are NOT required for preschool activities; intuitive material arrangement is the primary signal."
+        indicators:
+          - "Materials arranged at the activity zone in a way that obviously communicates what to do (paper on the floor + paints + brushes → 'paint the paper'; bins of sand + scoops → 'play with the sand')"
+          - "A child arriving at the activity zone could guess what to do from the arrangement alone"
+          - "Optional / supplementary cues (labels, signs, mid-use materials, example work) — present but NOT required"
+        signal_mappings:
+          visual:
+            - "Materials clearly staged at the activity zone in a way that suggests their use"
+            - "The arrangement itself communicates the activity (paint cups next to paper; blocks in a bin; books open on a mat)"
+            - "Labels / pictures / instructions are a bonus but not required"
+            - "Setup is so clear that no adult would need to explain the activity to a child arriving"
+        anchors:
+          0: "Setup is ambiguous — a child arriving could not guess what the activity is meant to be from the material arrangement alone"
+          0.5: "Some cues to purpose are present but the arrangement is mixed or partially staged; intent is unclear in parts"
+          1: "The activity's purpose is obvious from the setup alone — materials are arranged in a way that a child arriving can intuit what to do. Explicit labels are not required."
+        common_failure_modes:
+          - "Do NOT require text labels, signs, or example work for preschool activities. A clear arrangement of materials at the activity zone is sufficient on its own (e.g. paper + paints on the floor; bins + scoops on tables)."
+          - "Score 0.5 only when the arrangement leaves real ambiguity about what to do — not just because explicit labels are missing"
+
+      - id: anchor_and_choice_materials
+        label: "Anchor & Choice Materials"
+        description: "The setup has at least one anchor material that draws children in, PLUS a variety of choice materials (tools, options, items) that allow flexible engagement. A single dominant centerpiece is NOT required — multiple equally-weighted anchor stations (e.g. two sensory bins, several art tables) all count as anchors. Choice materials are the tools and items used within or around the anchor(s)."
+        indicators:
+          - "An anchor material — either one strong centerpiece OR multiple equally-weighted anchor stations — that obviously invites children to engage"
+          - "Choice materials (tools, items, options) at or within the anchor(s) that allow flexible use"
+          - "Materials can be combined or used in different ways for different outcomes"
+          - "Different children can use the same setup to produce different results"
+        signal_mappings:
+          visual:
+            - "One or more clearly attractive anchor zones (a hero centerpiece, or multiple equally-weighted stations all functioning as anchors)"
+            - "Tools / items within the anchor(s) that offer choice (different colors of paint, different sizes of brushes, scoops and cups in a sand bin, multiple block shapes, etc.)"
+            - "Arrangement suggests flexible combination, not a single rigid path"
+        anchors:
+          0: "No clear anchor at all, OR only one rigid material option with no choice (e.g. one type of crayon, one shape of paper, only one way to use it)"
+          0.5: "An anchor (single or multiple) is present but choice materials are limited; OR variety of materials exists but no anchor draws children in"
+          1: "At least one clear anchor draws children in (a single strong centerpiece OR multiple equally-weighted anchor stations) AND there is a variety of choice materials within or around the anchor(s) that allow flexible engagement"
+        common_failure_modes:
+          - "Multiple equally-attractive anchor stations (e.g. two sensory bins, three art areas) ALL count as anchors — do NOT penalize for not having a single dominant centerpiece"
+          - "Choice materials are the tools and items used at or within the anchor(s) — scoops, cups, brush sizes, color variations, block shapes, etc."
+          - "Lots of identical materials (e.g. 10 of the same brush) is not variety — variety means different KINDS of options"
+
+      - id: spark_curiosity
+        label: "Spark Curiosity"
+        description: "There is a 'wow' element AT the activity area that invites wonder, questions, or exploration. Something surprising, unfamiliar, or visually striking at or within the activity zone that makes a child want to investigate. Only consider items at the activity area — broader room decor, wall art, or features elsewhere in the room do NOT count."
+        indicators:
+          - "A surprising or unexpected element AT the activity zone"
+          - "Mysterious / unfamiliar items in or at the activity setup that invite 'what is that?'"
+          - "Visually striking centerpieces or features within the activity area itself"
+          - "Items at the activity zone obviously designed to be touched, examined, or wondered about"
+        signal_mappings:
+          visual:
+            - "An obviously unusual, unexpected, or striking item IN or AT the activity setup"
+            - "Items at the activity zone that don't immediately reveal their purpose, inviting questioning"
+            - "Hidden or covered elements within the activity area"
+            - "Deliberate novelty in the activity setup beyond familiar materials"
+        anchors:
+          0: "Activity area is purely functional with no curiosity hook — children would not have any 'what's that?' moment from what is at the activity itself"
+          0.5: "Some interesting elements are present at the activity area but they don't clearly stand out as a deliberate curiosity hook"
+          1: "Clear 'wow' element at the activity area — something surprising, mysterious, or visually striking that obviously invites wonder, questions, or exploration"
+        common_failure_modes:
+          - "Only items AT the activity zone count. Wall decor, items on shelves not used in the activity, ambient room features (lamps, art on walls), or other elsewhere-in-the-room elements do NOT count toward Spark Curiosity."
+          - "Familiar materials children see every day, even arranged neatly, do not earn 1 — curiosity requires novelty at the activity itself"
+          - "Many colourful items at the activity does not equal curiosity — curiosity is about the unexpected, not the abundant"
+
+      - id: challenge_adjustment
+        label: "Challenge Adjustment"
+        description: "The environment is prepared to change difficulty at an individual or group level. The setup includes deliberate variations — easier and harder versions of the same activity, optional add-ons, or materials that can be added/removed to adjust."
+        indicators:
+          - "Multiple visible difficulty levels of the same activity"
+          - "Tiered or layered material options"
+          - "Add-on / extension materials available but not forced"
+          - "Setup supports teacher-led or child-led difficulty change"
+        signal_mappings:
+          visual:
+            - "Two or more visible variants of the activity at different difficulty levels"
+            - "Optional extensions or add-ons visibly available (extra materials, more complex shapes, etc.)"
+            - "Setup suggests 'try this, then try this' progression"
+        anchors:
+          0: "Single fixed difficulty level — no variation possible without redesigning the activity"
+          0.5: "Some variation is possible but not deliberately staged or visibly available"
+          1: "Setup includes deliberate variations — different difficulty levels visible, OR materials that can clearly be added/removed to adjust"
+        common_failure_modes:
+          - "Same activity for all children with no visible variation earns 0 — even if children can self-pace"
+          - "Optional extension materials must be visibly available, not just 'in a closet' — design must surface the choice"
+
+      - id: self_served
+        label: "Self Served"
+        description: "Score the DESIGN of the materials and setup, NOT the implementation. The question is: could a child of the appropriate age range manage these materials alone — are they safe, recognisable, and light enough? Observed teacher assistance during the recording does NOT lower the score. What matters is whether the materials themselves are designed for child self-service."
+        indicators:
+          - "Materials are child-safe by design (no choking hazards, sharp edges, toxic substances within reach)"
+          - "Materials are recognisable to children of the age range — children would know what they are and roughly how to use them"
+          - "Items are light enough for a child of the age range to lift and carry alone"
+          - "Materials are sized for child hands"
+        signal_mappings:
+          visual:
+            - "Materials at the activity are visibly sized for child hands"
+            - "No items that obviously require adult lifting (no heavy buckets, no bulky equipment requiring two adults)"
+            - "Items are recognisable / familiar enough that a child can identify them"
+            - "No visible safety hazards (sharp objects, small parts within reach of very young children)"
+        anchors:
+          0: "By DESIGN, materials are unsafe for children, unfamiliar enough that they cannot identify them, or too heavy for them to manage — the activity requires adult handling regardless of implementation"
+          0.5: "Some materials are designed for self-service, others are not — the DESIGN itself contains items requiring adult handling (e.g. one heavy bucket, one unsafe tool, one unrecognisable item)"
+          1: "All materials are, by DESIGN, safe, recognisable to children of the age range, and light enough for them to handle alone. The activity is designed for self-service even if teachers are observed helping during the recording."
+        common_failure_modes:
+          - "Do NOT lower the score because teachers were observed helping children during the recording. This is a DESIGN rubric, not an implementation rubric. The question is 'could a child manage this alone by design?', not 'is an adult helping right now?'."
+          - "If even one essential material in the DESIGN requires adult lifting or adult handling for safety, the activity is not fully self-served — but that must be evident from the materials themselves, not from observed adult behavior."
+          - "Material that the child cannot recognise (and would not approach without prompting) is not self-served, even if technically safe"

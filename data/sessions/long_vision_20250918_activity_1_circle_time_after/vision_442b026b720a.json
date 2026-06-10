@@ -1,0 +1,32 @@
+{
+  "session_id": "long_vision_20250918_activity_1_circle_time_after",
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:00:59",
+      "description": "The video shows a classroom with a teacher and three children sitting on a mat on the floor. The teacher is wearing a brown dress, and the children are wearing white, blue, and green shirts. There are wooden shelves with books and toys on the left side of the room. In the center, there is a wooden shelf with various items. On the right, there are two wooden tables with chairs. A man in a black shirt is sitting on a black counter in the background, looking at his phone. The children are engaged in an activity with the teacher."
+    },
+    {
+      "ts_start": "00:00:59",
+      "ts_end": "00:01:59",
+      "description": "The teacher continues to interact with the children on the mat. The man in the black shirt gets up from the counter and walks towards the left side of the room, then returns to the counter. Another woman in a gray jumpsuit and a white backpack enters the room from the left, walks towards the center, and places her backpack on the wooden shelf."
+    },
+    {
+      "ts_start": "00:01:59",
+      "ts_end": "00:02:59",
+      "description": "The woman in the gray jumpsuit talks to the man in the black shirt, then walks towards the children and the teacher. She picks up a child and walks towards the left side of the room. The teacher continues to engage with the remaining children on the mat. The man in the black shirt walks towards the left side of the room and exits the frame."
+    },
+    {
+      "ts_start": "00:02:59",
+      "ts_end": "00:03:59",
+      "description": "The teacher and two children remain on the mat, continuing their activity. The children are actively participating, and the teacher is attentive. The room remains tidy, with toys and books neatly arranged on the shelves."
+    },
+    {
+      "ts_start": "00:03:59",
+      "ts_end": "00:05:00",
+      "description": "The teacher and the two children continue their activity on the mat. The children are lying down and sitting up, seemingly enjoying the interaction. The teacher is smiling and engaging with them. The overall atmosphere of the classroom is calm and organized."
+    }
+  ],
+  "source_model": "gemini-2.5-flash",
+  "prompt_hash": "442b026b720a"
+}

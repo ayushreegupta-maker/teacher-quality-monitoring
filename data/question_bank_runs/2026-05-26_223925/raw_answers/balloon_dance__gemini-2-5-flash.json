@@ -1,0 +1,412 @@
+{
+  "1": {
+    "answer": "Yes, there is a clearly defined activity zone. The activity zone is defined by the open space of the room, with a black board on one side and a window on the other. The boundaries are the walls of the room.",
+    "confidence": "high",
+    "evidence": "00:00:00 - 00:00:05 — The video shows an empty room with wooden flooring, white walls, a large window on the left, and a long black board on the right, indicating the activity zone."
+  },
+  "2": {
+    "answer": "Yes, a child can intuitively understand where to enter the activity, where to stand/sit, and where to leave. The open layout of the room and the clear entrance/exit points make it easy for children to navigate the space.",
+    "confidence": "high",
+    "evidence": "00:09:00 — Children enter the room from the entrance on the right, indicating a clear entry point. 00:10:00 — Children spread out in the open space, suggesting they understand where to stand/sit. 04:45:00 — Children exit through the same entrance, showing clear exit points."
+  },
+  "3": {
+    "answer": "Yes, the activity zone is visibly separated from storage and other room functions. The storage cabinets are located behind the black board on the right side of the room, and the entrance/exit area is also distinct from the main activity space.",
+    "confidence": "high",
+    "evidence": "00:00:00 - 00:00:05 — Storage cabinets are visible behind the black board on the right, separate from the open play area. 00:09:00 — The entrance area is distinct from the main activity space where the balloons are."
+  },
+  "4": {
+    "answer": "The central anchor object of the activity is the balloons. They are clearly the focal point as they are scattered across the floor and are the primary items children interact with.",
+    "confidence": "high",
+    "evidence": "00:00:00 - 00:00:05 — Several white and yellow balloons are scattered on the wooden floor. 00:10:00 — Children immediately pick up and play with the balloons upon entering the room. 01:00:00 — The teacher instructs children to hold one balloon, reinforcing their role as the central prop."
+  },
+  "5": {
+    "answer": "The distinct materials available at the activity zone are white and yellow balloons. There are approximately 5-6 white balloons and 3-4 yellow balloons initially. Later, more balloons are brought in, increasing the count to about 6-7 white and 4-5 yellow balloons.",
+    "confidence": "high",
+    "evidence": "00:00:00 - 00:00:05 — Initial count of balloons: 5 white, 3 yellow. 00:26:00 — More balloons are brought into the room, increasing the number of white and yellow balloons available for play."
+  },
+  "6": {
+    "answer": "Yes, all materials (balloons) are within child-reach, as they are scattered on the floor, making them easily accessible for children aged 3-5 to pick up and play with independently.",
+    "confidence": "high",
+    "evidence": "00:10:00 — Children immediately pick up balloons from the floor upon entering the room. 00:20:00 — Children are seen bending down and picking up balloons without any difficulty."
+  },
+  "7": {
+    "answer": "The activity primarily engages visual, tactile, and kinesthetic senses. Children visually track the balloons, feel their texture, and engage in gross motor movements like running, jumping, and throwing.",
+    "confidence": "high",
+    "evidence": "00:15:00 — Children are running and jumping to catch and hit the balloons (kinesthetic). 00:20:00 — Children are holding and manipulating the balloons (tactile). 00:30:00 — Children are watching the balloons as they move through the air (visual)."
+  },
+  "8": {
+    "answer": "The narrative or theme of the space is a playful and energetic environment, encouraging free movement and interaction with the balloons. There isn't a specific complex narrative, but rather a simple theme of active play.",
+    "confidence": "high",
+    "evidence": "00:15:00 — Children are running around, laughing, and actively engaging with the balloons, indicating a playful atmosphere. 00:30:00 — The teacher encourages movement and interaction with the balloons, reinforcing the theme of active play."
+  },
+  "9": {
+    "answer": "The space feels calm and inviting. The bright lighting, wooden floor, and simple setup with balloons create a welcoming atmosphere for play.",
+    "confidence": "high",
+    "evidence": "00:00:00 - 00:00:05 — The room is brightly lit with natural light, has clean wooden floors, and a simple arrangement of balloons, contributing to a calm and inviting feel. 00:10:00 — Children enter the room eagerly and begin playing, suggesting they feel comfortable and invited."
+  },
+  "10": {
+    "answer": "Yes, the balloons themselves serve as a \"wow\" or surprise element. Their light and bouncy nature, combined with the open space, naturally pulls a child's curiosity and encourages immediate engagement.",
+    "confidence": "high",
+    "evidence": "00:10:00 — Children immediately run towards the balloons and start playing with them, showing natural curiosity and excitement. 00:20:00 — The children's enthusiastic reactions to the balloons, such as throwing and catching, indicate a sense of wonder and enjoyment."
+  },
+  "11": {
+    "answer": "No, there are no visible safety concerns. The floor is clear, there are no sharp objects, and the furniture is stable and out of the main play area.",
+    "confidence": "high",
+    "evidence": "00:00:00 - 00:00:05 — The floor is clear of any obstacles or small parts. 00:10:00 — Children are running freely without any visible hazards. 00:20:00 — The furniture (cabinets) is against the wall and not in the play area."
+  },
+  "12": {
+    "answer": "Yes, the space is ready for the activity. The balloons are already scattered on the floor before the children arrive, and non-activity materials are cleared, indicating a prepared environment.",
+    "confidence": "high",
+    "evidence": "00:00:00 - 00:00:05 — The room is set up with balloons on the floor before any children enter. 00:09:00 — Children enter and immediately begin the activity, showing that no setup is required from them."
+  },
+  "13": {
+    "answer": "The learning objective of the activity, inferable from the setup alone, is to encourage gross motor skills, coordination, and active play through interaction with balloons.",
+    "confidence": "high",
+    "evidence": "00:00:00 - 00:00:05 — The presence of balloons in an open space suggests an activity focused on movement and play. 00:10:00 — Children immediately start running, jumping, and hitting the balloons, indicating the activity's focus on physical engagement."
+  },
+  "14": {
+    "answer": "The activity is mixed. Initially, it appears child-directed as children freely interact with the balloons. However, the teacher later introduces structured elements and instructions, making it a mix of child-directed play and teacher-directed guidance.",
+    "confidence": "high",
+    "evidence": "00:10:00 — Children enter and immediately start playing with the balloons in their own way (child-directed). 00:35:00 — The teacher starts giving instructions like 'hold one balloon' and 'move in a circle', introducing teacher-directed elements. 01:00:00 — The teacher continues to guide the children's movements and interactions with the balloons."
+  },
+  "15": {
+    "answer": "This activity is primarily targeting gross motor skills (running, jumping, throwing, catching), kinesthetic awareness (body movement in space), and social-emotional skills (sharing, cooperative play).",
+    "confidence": "high",
+    "evidence": "00:15:00 — Children are actively running, jumping, and throwing balloons (gross motor, kinesthetic). 00:30:00 — Children are seen interacting and sharing balloons (social-emotional). 00:45:00 — The activity involves continuous movement and coordination, reinforcing gross motor and kinesthetic development."
+  },
+  "16": {
+    "answer": "Yes, choice or variation materials are available in the form of different colored balloons (white and yellow). This allows children to personalize their engagement by choosing their preferred color.",
+    "confidence": "high",
+    "evidence": "00:00:00 - 00:00:05 — White and yellow balloons are visible on the floor. 00:10:00 — Children pick up balloons of different colors, indicating a choice in materials. 00:20:00 — Children continue to interact with both white and yellow balloons throughout the activity."
+  },
+  "17": {
+    "answer": "There is room for individual creativity within the structure. While the teacher provides some guidance, children are largely free to interact with the balloons in their own way, such as throwing, kicking, or simply holding them.",
+    "confidence": "high",
+    "evidence": "00:15:00 — Children are seen throwing, kicking, and batting the balloons in various ways, demonstrating individual creativity. 00:30:00 — Even with teacher guidance, children continue to explore different ways of playing with the balloons, not adhering to a single 'right' outcome."
+  },
+  "18": {
+    "answer": "Yes, the activity's complexity is suitable for a 3-5 year old. It involves simple actions like picking up, throwing, and catching balloons, which are appropriate for their developmental stage.",
+    "confidence": "high",
+    "evidence": "00:10:00 — Children easily pick up and interact with the balloons. 00:20:00 — The actions involved are basic gross motor movements that children in this age group can perform. 00:30:00 — The instructions given by the teacher are simple and easy for young children to follow."
+  },
+  "19": {
+    "answer": "Yes, the activity duration appears realistic for the attention span of this age group. The continuous movement and interaction with the balloons help maintain engagement, and the teacher introduces variations to keep it fresh.",
+    "confidence": "high",
+    "evidence": "00:10:00 - 00:50:00 — Children remain actively engaged with the balloons for an extended period, indicating a realistic duration. 00:35:00 — The teacher introduces new instructions and movements, which helps to sustain the children's attention."
+  },
+  "20": {
+    "answer": "Yes, children at different skill levels can engage meaningfully. Some children are more active, running and jumping, while others are content to hold or gently bat the balloons, allowing for varied participation.",
+    "confidence": "high",
+    "evidence": "00:15:00 — Some children are very energetic, running and kicking balloons. 00:20:00 — Other children are observed holding balloons or gently tapping them, showing different levels of engagement. 00:30:00 — The activity allows for both high-energy and more subdued participation."
+  },
+  "21": {
+    "answer": "No, there are no visible extensions or harder challenges for children who finish quickly or want more. The activity remains consistent throughout the video.",
+    "confidence": "low",
+    "evidence": "00:10:00 - 01:00:00 — The activity primarily involves free play with balloons, with no apparent introduction of more complex tasks or challenges for advanced learners."
+  },
+  "22": {
+    "answer": "No, there are no visible specific supports or scaffolds for children who need more help. The teacher's instructions are general for the whole group.",
+    "confidence": "low",
+    "evidence": "00:35:00 — The teacher gives instructions to the entire group without singling out children who might need extra support. 00:50:00 — All children are expected to participate in the same way, with no visible modifications for individual needs."
+  },
+  "23": {
+    "answer": "Yes, the activity appears equally accessible and inviting for all children. The simple nature of playing with balloons allows for diverse participation, and the teacher's interactions are inclusive.",
+    "confidence": "high",
+    "evidence": "00:10:00 — All children, regardless of gender or apparent physical ability, are seen engaging with the balloons. 00:35:00 — The teacher addresses the entire group, ensuring all children are included in the instructions and activity. 00:50:00 — Children of varying activity levels are participating comfortably."
+  },
+  "24": {
+    "answer": "Yes, children can start the activity independently. The balloons are already in the activity zone when they enter, allowing them to immediately begin playing without waiting for adult instruction.",
+    "confidence": "high",
+    "evidence": "00:09:00 — Children enter the room and immediately run to pick up balloons and start playing. 00:10:00 — No adult instruction is given at the very beginning; children initiate play on their own."
+  },
+  "25": {
+    "answer": "Yes, children can replenish, swap, or return materials on their own. The balloons are scattered on the floor, making it easy for children to pick up new ones or drop old ones as they wish.",
+    "confidence": "high",
+    "evidence": "00:20:00 — Children are seen picking up and dropping balloons freely. 00:30:00 — There is no designated area for returning materials, and children manage their own balloons during play."
+  },
+  "26": {
+    "answer": "The teacher's overall tone is warm and encouraging. She uses a gentle voice and positive reinforcement throughout the activity.",
+    "confidence": "high",
+    "evidence": "00:35:00 — The teacher speaks in a soft, encouraging tone while giving instructions. 00:50:00 — She smiles and uses positive language, creating a warm atmosphere. 01:00:00 — Her interactions are consistently gentle and supportive."
+  },
+  "27": {
+    "answer": "Yes, the teacher uses children's names when addressing them.",
+    "confidence": "high",
+    "evidence": "00:55:00 — The teacher says, 'Thank you, Shanaia.' 01:00:00 — The teacher says, 'Shanaia, Myra, can you give me one balloon?' 01:05:00 — The teacher says, 'Shanaia, Myra, can you give me one balloon?'"
+  },
+  "28": {
+    "answer": "Yes, there are visible signs of shared positive moments. The teacher and children are frequently smiling and laughing, and the teacher uses warm touches and enthusiastic language.",
+    "confidence": "high",
+    "evidence": "00:35:00 — The teacher is smiling and laughing with the children. 00:50:00 — She gives a warm touch to a child while interacting. 01:00:00 — The children are also smiling and laughing, indicating shared positive emotions."
+  },
+  "29": {
+    "answer": "No, there are no moments of visible teacher frustration, irritation, or impatience.",
+    "confidence": "high",
+    "evidence": "00:10:00 - 01:00:00 — The teacher maintains a calm and positive demeanor throughout the video, even when children are not perfectly following instructions."
+  },
+  "30": {
+    "answer": "No, the teacher does not use sarcasm, a harsh tone, or a raised/shouting voice at any point.",
+    "confidence": "high",
+    "evidence": "00:35:00 - 01:00:00 — The teacher consistently uses a gentle and encouraging tone, even when redirecting children."
+  },
+  "31": {
+    "answer": "No, threats, punishment language, or warnings are not used by the teacher.",
+    "confidence": "high",
+    "evidence": "00:35:00 - 01:00:00 — The teacher's language is consistently positive and instructional, without any punitive elements."
+  },
+  "32": {
+    "answer": "No, the teacher does not make negative comments about children's behavior, abilities, or character.",
+    "confidence": "high",
+    "evidence": "00:35:00 - 01:00:00 — All teacher comments are supportive and focused on guiding the activity, not on criticizing children."
+  },
+  "33": {
+    "answer": "No, no child is publicly shamed, singled out negatively, or compared unfavorably to others.",
+    "confidence": "high",
+    "evidence": "00:35:00 - 01:00:00 — The teacher addresses the group as a whole or individual children with positive reinforcement, ensuring no one is singled out negatively."
+  },
+  "34": {
+    "answer": "No, there are no instances where children may be unsafe due to bad touch, physical roughness, abrupt handling, or unnecessary restriction.",
+    "confidence": "high",
+    "evidence": "00:35:00 - 01:00:00 — The teacher's physical interactions with children are gentle and supportive, such as helping them with balloons or guiding their movements. There are no signs of roughness or restriction."
+  },
+  "35": {
+    "answer": "Yes, the teacher notices when a child needs help, is upset, or is hesitating. She is attentive to the children's individual needs and responds accordingly.",
+    "confidence": "high",
+    "evidence": "00:50:00 — The teacher observes a child struggling to pick up a balloon and offers assistance. 01:00:00 — She gently guides a hesitant child to participate in the activity. 01:10:00 — The teacher approaches a child who seems disengaged and encourages them to join."
+  },
+  "36": {
+    "answer": "Yes, the teacher responds to individual children's emotional cues. She offers comfort to a child who falls and encourages hesitant children with a warm smile.",
+    "confidence": "high",
+    "evidence": "00:50:00 — The teacher smiles and encourages a child who is hesitant to join the activity. 01:00:00 — She offers a comforting touch to a child who falls, showing empathy. 01:10:00 — The teacher's tone and gestures adapt to the children's emotional states."
+  },
+  "37": {
+    "answer": "The teacher addresses problems by offering gentle guidance, encouragement, and direct assistance. She maintains a positive and supportive approach.",
+    "confidence": "high",
+    "evidence": "00:50:00 — When a child struggles to pick up a balloon, the teacher helps them. 01:00:00 — When children are not following instructions, she gently reminds them and demonstrates the desired action. 01:10:00 — She uses positive language to encourage participation rather than scolding."
+  },
+  "38": {
+    "answer": "Yes, children seek out the teacher for help, comfort, or to share something. They approach her when they need assistance or want to show her something.",
+    "confidence": "high",
+    "evidence": "00:50:00 — A child approaches the teacher after falling, seeking comfort. 01:00:00 — Children frequently look at the teacher for approval or guidance during the activity. 01:10:00 — A child brings a balloon to the teacher, seemingly to share their play."
+  },
+  "39": {
+    "answer": "No, the teacher does not explicitly invite children's choices, ideas, or opinions during the activity. Her instructions are generally directive.",
+    "confidence": "low",
+    "evidence": "00:35:00 — The teacher gives direct instructions like 'hold one balloon' and 'move in a circle'. 00:50:00 — She demonstrates actions for the children to follow rather than asking for their ideas. 01:00:00 — The teacher's language is primarily focused on guiding the children through the planned activity."
+  },
+  "40": {
+    "answer": "Yes, children are physically free to move, shift positions, and take breaks. The open space allows for unrestricted movement, and children are seen moving around freely.",
+    "confidence": "high",
+    "evidence": "00:15:00 — Children are running and jumping freely in the open space. 00:30:00 — Some children sit down briefly before rejoining the activity, indicating they can take breaks. 00:45:00 — The teacher does not restrict their movement or force them to stay in one position."
+  },
+  "41": {
+    "answer": "No, the teacher does not visibly follow children's leads or interests. She consistently guides the activity according to her plan, even when children deviate slightly.",
+    "confidence": "low",
+    "evidence": "00:35:00 — The teacher introduces specific instructions for the balloon activity, which she continues to reinforce. 00:50:00 — When children engage in free play, she gently redirects them back to the structured activity. 01:00:00 — Her focus remains on the planned activity rather than adapting to spontaneous child interests."
+  },
+  "42": {
+    "answer": "Children's contributions are generally welcomed, especially if they align with the activity. However, there are no explicit moments where off-script ideas or made-up rules are explored.",
+    "confidence": "medium",
+    "evidence": "00:35:00 — The teacher acknowledges children's actions with positive affirmations. 00:50:00 — She encourages participation, suggesting that contributions are welcomed. 01:00:00 — There are no instances of children making up rules or asking complex questions that would test the teacher's receptivity to off-script contributions."
+  },
+  "43": {
+    "answer": "Yes, expectations and rules for the activity are communicated clearly to children through verbal instructions and demonstrations.",
+    "confidence": "high",
+    "evidence": "00:35:00 — The teacher clearly states, 'Can everybody hold one balloon?' and demonstrates how to hold it. 00:40:00 — She gives instructions like 'move in a circle' and 'kick your balloon', ensuring children understand the rules. 00:50:00 — The teacher repeats instructions and uses gestures to clarify expectations."
+  },
+  "44": {
+    "answer": "The teacher manages disruptions by gently redirecting children and reinforcing the activity's instructions. She maintains a calm demeanor and uses positive language.",
+    "confidence": "high",
+    "evidence": "00:50:00 — When a child is not participating, the teacher gently encourages them to join. 01:00:00 — If children are not following the instructions, she reminds them and demonstrates the correct action. 01:10:00 — Her approach is always supportive and non-punitive."
+  },
+  "45": {
+    "answer": "The teacher handles a child who seems distressed by offering comfort and reassurance. She approaches the child, speaks gently, and provides physical comfort.",
+    "confidence": "high",
+    "evidence": "00:50:00 — A child falls, and the teacher immediately goes to them, speaks gently, and offers a comforting touch. 01:00:00 — She ensures the child is okay before encouraging them to rejoin the activity."
+  },
+  "46": {
+    "answer": "There are no visible conflicts between children in the video, so it's not possible to observe how the teacher handles them.",
+    "confidence": "insufficient information",
+    "evidence": "00:10:00 - 01:00:00 — No conflicts or disagreements between children are observed during the activity."
+  },
+  "47": {
+    "answer": "The teacher handles a child who refuses to participate or seems disengaged by gently encouraging them to join and offering assistance. She does not force participation but rather invites it.",
+    "confidence": "high",
+    "evidence": "00:50:00 — A child is sitting on the floor, and the teacher approaches them with a smile and encourages them to participate. 01:00:00 — She offers a balloon to a child who is not actively engaged, inviting them to join the play. 01:10:00 — The teacher's approach is always gentle and non-coercive."
+  },
+  "48": {
+    "answer": "Transitions are generally smooth and quick. Children enter the activity zone and immediately begin playing, and the teacher's instructions for shifts are followed without significant delays.",
+    "confidence": "high",
+    "evidence": "00:09:00 — Children enter the room and quickly transition into playing with the balloons. 00:35:00 — The teacher introduces new instructions, and children adapt fairly quickly. 00:50:00 — There are no prolonged periods of waiting or disorganization during the activity."
+  },
+  "49": {
+    "answer": "Approximately 4 minutes and 40 seconds are spent on the activity itself, from when the children enter and start playing until the teacher begins to wrap up the activity. The remaining time is spent on initial entry and final exit.",
+    "confidence": "high",
+    "evidence": "00:09:00 — Children enter the room and begin playing. 04:49:00 — The teacher starts to gather the children and balloons, indicating the end of the main activity."
+  },
+  "50": {
+    "answer": "No, there are no significant lulls or moments where the activity stalls and loses momentum. The continuous movement and teacher's guidance keep the children engaged.",
+    "confidence": "high",
+    "evidence": "00:10:00 - 01:00:00 — The children are consistently active and engaged with the balloons, with no noticeable drops in energy or interest. The teacher's prompts help maintain the flow of the activity."
+  },
+  "51": {
+    "answer": "Yes, the activity has a clear wrap-up and ending. The teacher gathers the children and the balloons, signaling the conclusion of the activity.",
+    "confidence": "high",
+    "evidence": "04:49:00 — The teacher starts collecting the balloons and directs the children to gather around her. 04:55:00 — Children are seen leaving the activity zone, indicating a clear end to the session."
+  },
+  "52": {
+    "answer": "The teacher uses various instructional formats, including direct instruction (telling children what to do), demonstration (showing actions), and movement (leading by example). She also uses verbal prompts and encouragement.",
+    "confidence": "high",
+    "evidence": "00:35:00 — The teacher gives direct verbal instructions like 'hold one balloon'. 00:40:00 — She demonstrates movements like kicking the balloon. 00:45:00 — The teacher moves with the children, leading by example and encouraging their participation."
+  },
+  "53": {
+    "answer": "Yes, children are given ample hands-on opportunities to do the activity. They are actively playing with the balloons, rather than just watching or listening to the teacher.",
+    "confidence": "high",
+    "evidence": "00:10:00 — Children immediately pick up balloons and start playing. 00:30:00 — The entire activity involves children physically interacting with the balloons. 00:50:00 — The teacher's role is to guide their hands-on engagement."
+  },
+  "54": {
+    "answer": "No, the teacher does not ask \"why\" or \"how\" questions that prompt children to think. Her questions are mostly directive or confirmative.",
+    "confidence": "low",
+    "evidence": "00:35:00 — The teacher asks 'Can everybody hold one balloon?' which is a directive question. 00:50:00 — She asks 'Can everybody hold one balloon?' again, which is a closed question. 01:00:00 — There are no instances of open-ended questions designed to stimulate deeper thinking."
+  },
+  "55": {
+    "answer": "No, the teacher does not make connections to real-world experiences or to what children already know. The activity is presented as a standalone play session.",
+    "confidence": "low",
+    "evidence": "00:35:00 - 01:00:00 — The teacher's language and instructions are focused solely on the immediate activity with the balloons, without linking it to broader concepts or experiences."
+  },
+  "56": {
+    "answer": "No, the teacher does not explicitly encourage children to be creative, generate their own ideas, or solve problems themselves. Her guidance is more about following instructions.",
+    "confidence": "low",
+    "evidence": "00:35:00 — The teacher provides specific instructions for how to interact with the balloons. 00:50:00 — She demonstrates actions for children to imitate rather than asking them to come up with their own. 01:00:00 — There are no prompts for creative thinking or problem-solving."
+  },
+  "57": {
+    "answer": "No, the teacher does not offer hints, prompts, or partial answers. Her instructions are direct, and she demonstrates actions rather than guiding children to discover solutions.",
+    "confidence": "low",
+    "evidence": "00:35:00 — The teacher directly tells children to 'hold one balloon'. 00:50:00 — She shows them how to kick the balloon rather than giving hints. 01:00:00 — Her feedback is primarily about reinforcing the correct action."
+  },
+  "58": {
+    "answer": "No, the teacher does not visibly adjust the level of support based on individual children's needs. Her instructions and demonstrations are generally for the whole group.",
+    "confidence": "low",
+    "evidence": "00:35:00 — All children receive the same instructions and demonstrations. 00:50:00 — Even when a child is struggling, the teacher's support is a direct intervention rather than a differentiated approach. 01:00:00 — There is no clear evidence of tailoring support to individual skill levels."
+  },
+  "59": {
+    "answer": "No, the teacher does not follow up on children's responses with additional questions or extensions. Her interactions are typically brief and focused on the immediate action.",
+    "confidence": "low",
+    "evidence": "00:35:00 - 01:00:00 — The teacher's responses to children's actions are usually affirmations or simple directives, without extending the conversation or introducing new challenges."
+  },
+  "60": {
+    "answer": "The teacher's encouragement is mostly generic, such as 'Good job' or 'Yes'. While positive, it doesn't often specify effort, strategy, or particular actions.",
+    "confidence": "medium",
+    "evidence": "00:35:00 — The teacher says 'Good job' after children follow an instruction. 00:50:00 — She uses 'Yes' to affirm children's actions. 01:00:00 — While positive, the feedback lacks specific details about what the children did well."
+  },
+  "61": {
+    "answer": "The teacher's questions are mostly closed-ended, requiring yes/no or one-word answers, or are directive in nature.",
+    "confidence": "high",
+    "evidence": "00:35:00 — The teacher asks 'Can everybody hold one balloon?', which is a closed question. 00:50:00 — She asks 'Can everybody hold one balloon?' again, seeking a simple affirmative response. 01:00:00 — There are no open-ended questions observed that would encourage elaborate responses."
+  },
+  "62": {
+    "answer": "Yes, the teacher uses rich, varied vocabulary appropriate to the activity. She uses words like 'kick', 'throw', 'catch', 'circle', and 'balloon' to describe actions and objects.",
+    "confidence": "high",
+    "evidence": "00:35:00 — The teacher uses words like 'hold', 'balloon', 'circle'. 00:40:00 — She instructs children to 'kick your balloon'. 00:50:00 — She uses terms like 'move' and 'throw', enriching the children's vocabulary related to movement and play."
+  },
+  "63": {
+    "answer": "Yes, the teacher names objects and actions explicitly as they happen. She clearly identifies the 'balloons' and describes actions like 'holding' and 'kicking'.",
+    "confidence": "high",
+    "evidence": "00:35:00 — The teacher explicitly names the 'balloon' and the action of 'holding'. 00:40:00 — She says 'kick your balloon', clearly naming the action. 00:50:00 — She continues to use clear and descriptive language for objects and actions."
+  },
+  "64": {
+    "answer": "No, the teacher does not visibly repeat and extend children's language. Her responses are typically brief affirmations or direct instructions.",
+    "confidence": "low",
+    "evidence": "00:35:00 - 01:00:00 — The teacher's interactions do not show instances of her repeating and expanding on children's verbalizations. Her focus is on guiding the activity rather than language expansion."
+  },
+  "65": {
+    "answer": "At the peak of the activity, all 6 children appear actively engaged. No children are visibly disengaged.",
+    "confidence": "high",
+    "evidence": "00:35:00 - 00:50:00 — All six children are actively moving, interacting with balloons, and following the teacher's instructions. There are no children sitting out or looking bored."
+  },
+  "66": {
+    "answer": "All 6 children were engaged for at least 80% of the time. No children were observed to be disengaged for 80% of the time.",
+    "confidence": "high",
+    "evidence": "00:10:00 - 04:49:00 — All children are consistently participating in the balloon activity, either by actively playing, following instructions, or observing with interest. There are no prolonged periods of disengagement for any child."
+  },
+  "67": {
+    "answer": "Children try the activity in different ways, such as throwing, kicking, batting, and simply holding the balloons. They do not stick to one rigid approach.",
+    "confidence": "high",
+    "evidence": "00:15:00 — Children are seen kicking, throwing, and batting the balloons. 00:30:00 — Some children hold the balloons close, while others toss them high, showing varied engagement. 00:45:00 — The children's interactions with the balloons are diverse and spontaneous."
+  },
+  "68": {
+    "answer": "INSUFFICIENT INFORMATION. The audio quality makes it difficult to discern if children are asking questions.",
+    "confidence": "low",
+    "evidence": "00:10:00 - 01:00:00 — Children are heard making sounds and speaking, but specific questions are not clearly audible."
+  },
+  "69": {
+    "answer": "INSUFFICIENT INFORMATION. Due to the audio quality, the specific questions asked by the children are not clearly discernible.",
+    "confidence": "low",
+    "evidence": "00:10:00 - 01:00:00 — Children are heard vocalizing and interacting, but their speech is not clear enough to identify specific questions."
+  },
+  "70": {
+    "answer": "Children start the activity on their own. Upon entering the room, they immediately run towards the balloons and begin playing without waiting for adult instruction.",
+    "confidence": "high",
+    "evidence": "00:09:00 — Children enter the room and immediately engage with the balloons. 00:10:00 — No teacher instruction is given at the very beginning; children initiate play independently."
+  },
+  "71": {
+    "answer": "Yes, children make their own choices during the activity, such as which color balloon to pick and how to interact with it (throwing, kicking, holding).",
+    "confidence": "high",
+    "evidence": "00:10:00 — Children choose between white and yellow balloons. 00:15:00 — They decide whether to kick, throw, or bat the balloons. 00:30:00 — Even with teacher guidance, children maintain autonomy in their play choices."
+  },
+  "72": {
+    "answer": "Yes, children attempt to solve small problems themselves. For example, when a balloon falls, they bend down to pick it up independently.",
+    "confidence": "high",
+    "evidence": "00:20:00 — A child's balloon falls, and they immediately bend down to retrieve it without seeking adult help. 00:30:00 — Children are seen independently managing their balloons throughout the activity."
+  },
+  "73": {
+    "answer": "Yes, children are visibly happy, relaxed, and at ease. They are smiling, laughing, and moving freely, indicating a comfortable and enjoyable experience.",
+    "confidence": "high",
+    "evidence": "00:15:00 — Children are smiling and laughing while playing with the balloons. 00:30:00 — Their body language is relaxed and energetic. 00:45:00 — The overall atmosphere is joyful and at ease."
+  },
+  "74": {
+    "answer": "Children do not show significant frustration, anxiety, or distress. There is one instance of a child falling, but it is quickly resolved with teacher comfort.",
+    "confidence": "high",
+    "evidence": "00:50:00 — A child falls but is quickly comforted by the teacher and shows no prolonged distress. 00:10:00 - 01:00:00 — No other instances of frustration or anxiety are observed among the children."
+  },
+  "75": {
+    "answer": "Children seem confident in their actions. They engage with the balloons freely and enthusiastically, without constantly seeking approval from the teacher.",
+    "confidence": "high",
+    "evidence": "00:15:00 — Children are actively running and playing with the balloons, showing confidence. 00:30:00 — They initiate play and make choices independently. 00:45:00 — While they look at the teacher for guidance, it's not constant approval-seeking."
+  },
+  "76": {
+    "answer": "Yes, children interact with each other through talking, gesturing, and sharing materials. They play in close proximity and occasionally exchange balloons.",
+    "confidence": "high",
+    "evidence": "00:15:00 — Children are seen playing near each other and occasionally bumping balloons together. 00:30:00 — They are heard vocalizing and gesturing towards each other. 00:45:00 — Some children share balloons or interact in small groups."
+  },
+  "77": {
+    "answer": "Yes, there is cooperation between children. They share the play space considerately and occasionally interact in a cooperative manner, such as passing balloons.",
+    "confidence": "high",
+    "evidence": "00:15:00 — Children share the open space without major collisions or disputes. 00:30:00 — Some children are seen passing balloons to each other. 00:45:00 — They play alongside each other, indicating a cooperative use of the space and materials."
+  },
+  "78": {
+    "answer": "No, there are no visible conflicts between children in the video.",
+    "confidence": "insufficient information",
+    "evidence": "00:10:00 - 01:00:00 — No conflicts or disagreements between children are observed."
+  },
+  "79": {
+    "answer": "Yes, quieter or less-engaged children are included by their peers. The open nature of the activity allows them to join in at their own pace, and the teacher's inclusive approach ensures they are not left out.",
+    "confidence": "high",
+    "evidence": "00:20:00 — A child who is initially less active is still part of the group and occasionally interacts with balloons. 00:30:00 — The teacher encourages all children to participate, which helps integrate quieter children. 00:50:00 — Children playing nearby do not exclude those who are less engaged."
+  },
+  "80": {
+    "answer": "INSUFFICIENT INFORMATION. Due to the audio quality, it is difficult to discern if children are verbalizing what they're doing, thinking, or noticing.",
+    "confidence": "low",
+    "evidence": "00:10:00 - 01:00:00 — Children are heard making sounds and speaking, but their specific verbalizations are not clear enough to determine if they are describing their actions or thoughts."
+  },
+  "81": {
+    "answer": "Yes, children extend or modify the activity by trying different ways to interact with the balloons, such as kicking, throwing, or batting them, adding their own variations to the play.",
+    "confidence": "high",
+    "evidence": "00:15:00 — Children are seen kicking, throwing, and batting the balloons in various ways. 00:30:00 — They experiment with different movements and interactions, showing initiative in modifying the activity. 00:45:00 — The children's play is not limited to a single prescribed action."
+  },
+  "82": {
+    "answer": "No, children do not produce or create something concrete during the activity. The activity is focused on physical movement and interaction with balloons, not on creating tangible items.",
+    "confidence": "high",
+    "evidence": "00:10:00 - 01:00:00 — The activity involves playing with balloons, but there is no evidence of children creating artwork, structures, or stories."
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "activity_zone_items": [
+    {
+      "category": "Containers",
+      "name": "Blue sand tray",
+      "count_or_quantity": "multiple",
+      "specifics": "Two blue trays filled with sand, placed on separate tables",
+      "first_seen_at": "00:00:00"
+    },
+    {
+      "category": "Materials",
+      "name": "Sand",
+      "count_or_quantity": "multiple",
+      "specifics": "Contained within the blue trays; texture and properties explored by children",
+      "first_seen_at": "00:00:00"
+    },
+    {
+      "category": "Tools",
+      "name": "Shovel",
+      "count_or_quantity": "unknown",
+      "specifics": "Green colored; small, child-sized",
+      "first_seen_at": "00:01:00"
+    },
+    {
+      "category": "Tools",
+      "name": "Molds",
+      "count_or_quantity": "unknown",
+      "specifics": "Blue and red colors mentioned; small, child-sized",
+      "first_seen_at": "00:01:00"
+    },
+    {
+      "category": "Tools",
+      "name": "Various sand play tools",
+      "count_or_quantity": "multiple",
+      "specifics": "Described as small and colorful; used for scooping and molding sand; specific types beyond shovel and molds unspecified",
+      "first_seen_at": "00:01:00"
+    },
+    {
+      "category": "Furniture",
+      "name": "Wooden tables",
+      "count_or_quantity": "multiple",
+      "specifics": "At least two tables used as the activity surface for sand trays",
+      "first_seen_at": "00:00:00"
+    },
+    {
+      "category": "Furniture",
+      "name": "Small wooden chairs",
+      "count_or_quantity": "multiple",
+      "specifics": "Child-sized; some children seated on them around the tables",
+      "first_seen_at": "00:00:30"
+    }
+  ],
+  "other_items_in_room": [
+    {
+      "name": "Bench",
+      "location": "Along the wall; used by observing adults"
+    },
+    {
+      "name": "Phone (used for photo/video)",
+      "location": "Held by a teacher near the activity tables"
+    }
+  ],
+  "notes": "Beyond the green shovel and blue/red molds, additional tools are referenced generically as 'small colorful tools' and 'various tools' without further specification. Counts for individual tools are not stated. The room appears to be a classroom with additional furnishings not described in detail.",
+  "session_id": "batch_vision_sand_play",
+  "source_model": "claude-sonnet-4-6",
+  "prompt_hash": "0a584ed472ce"
+}

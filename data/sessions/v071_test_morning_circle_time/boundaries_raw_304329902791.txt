@@ -1,0 +1,12 @@
+{
+  "video_start_wall_clock": "09:39:43",
+  "first_child_wall_clock": "09:39:43",
+  "last_child_wall_clock": "10:09:51",
+  "first_child_visible_at": null,
+  "last_child_visible_at": null,
+  "first_child_evidence": "A child is already present in the play area at the beginning of the video, sitting on the floor near the window.",
+  "last_child_evidence": "The last child, wearing a red shirt, walks out of the play area through the doorway on the right side of the screen.",
+  "confidence": "high",
+  "self_check_passed": true,
+  "notes": "The first child is visible from the very beginning of the video. The last child leaves at 10:09:51, after which no children are visible in the play area for the remainder of the recording."
+}

@@ -1,0 +1,536 @@
+{
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:00:05",
+      "description": "The teacher is standing at the head of the table, looking at the children. There are three children sitting at the table, two girls and one boy. They are all looking at the table and appear to be working on something. There are papers and other materials spread out on the table."
+    },
+    {
+      "ts_start": "00:00:05",
+      "ts_end": "00:00:10",
+      "description": "The teacher walks around the table, looking at what the children are doing. She then returns to her original position at the head of the table."
+    },
+    {
+      "ts_start": "00:00:10",
+      "ts_end": "00:00:15",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:00:15",
+      "ts_end": "00:00:20",
+      "description": "The teacher is still standing at the head of the table, observing the children. The children continue to work on their projects."
+    },
+    {
+      "ts_start": "00:00:20",
+      "ts_end": "00:00:25",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:00:25",
+      "ts_end": "00:00:30",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:00:30",
+      "ts_end": "00:00:35",
+      "description": "The teacher walks to the side of the table and picks up a tablet. She then returns to her original position at the head of the table."
+    },
+    {
+      "ts_start": "00:00:35",
+      "ts_end": "00:00:40",
+      "description": "The teacher is standing at the head of the table, holding the tablet. She is looking at the children and appears to be taking pictures of their work."
+    },
+    {
+      "ts_start": "00:00:40",
+      "ts_end": "00:00:45",
+      "description": "The teacher walks around the table, taking pictures of the children's work with the tablet. She then returns to her original position at the head of the table."
+    },
+    {
+      "ts_start": "00:00:45",
+      "ts_end": "00:00:50",
+      "description": "The teacher is standing at the head of the table, holding the tablet. She is looking at the children and appears to be taking pictures of their work."
+    },
+    {
+      "ts_start": "00:00:50",
+      "ts_end": "00:00:55",
+      "description": "The teacher is standing at the head of the table, holding the tablet. She is looking at the children and appears to be taking pictures of their work."
+    },
+    {
+      "ts_start": "00:00:55",
+      "ts_end": "00:01:00",
+      "description": "The teacher is standing at the head of the table, holding the tablet. She is looking at the children and appears to be taking pictures of their work."
+    },
+    {
+      "ts_start": "00:01:00",
+      "ts_end": "00:01:05",
+      "description": "The teacher walks to the side of the table and puts the tablet down. She then returns to her original position at the head of the table."
+    },
+    {
+      "ts_start": "00:01:05",
+      "ts_end": "00:01:10",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:01:10",
+      "ts_end": "00:01:15",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:01:15",
+      "ts_end": "00:01:20",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:01:20",
+      "ts_end": "00:01:25",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:01:25",
+      "ts_end": "00:01:30",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:01:30",
+      "ts_end": "00:01:35",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:01:35",
+      "ts_end": "00:01:40",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:01:40",
+      "ts_end": "00:01:45",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:01:45",
+      "ts_end": "00:01:50",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:01:50",
+      "ts_end": "00:01:55",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:01:55",
+      "ts_end": "00:02:00",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:02:00",
+      "ts_end": "00:02:05",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:02:05",
+      "ts_end": "00:02:10",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:02:10",
+      "ts_end": "00:02:15",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:02:15",
+      "ts_end": "00:02:20",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:02:20",
+      "ts_end": "00:02:25",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:02:25",
+      "ts_end": "00:02:30",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:02:30",
+      "ts_end": "00:02:35",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:02:35",
+      "ts_end": "00:02:40",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:02:40",
+      "ts_end": "00:02:45",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:02:45",
+      "ts_end": "00:02:50",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:02:50",
+      "ts_end": "00:02:55",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:02:55",
+      "ts_end": "00:03:00",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:03:00",
+      "ts_end": "00:03:05",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:03:05",
+      "ts_end": "00:03:10",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:03:10",
+      "ts_end": "00:03:15",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:03:15",
+      "ts_end": "00:03:20",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:03:20",
+      "ts_end": "00:03:25",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:03:25",
+      "ts_end": "00:03:30",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:03:30",
+      "ts_end": "00:03:35",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:03:35",
+      "ts_end": "00:03:40",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:03:40",
+      "ts_end": "00:03:45",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:03:45",
+      "ts_end": "00:03:50",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:03:50",
+      "ts_end": "00:03:55",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:03:55",
+      "ts_end": "00:04:00",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:04:00",
+      "ts_end": "00:04:05",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    },
+    {
+      "ts_start": "00:04:05",
+      "ts_end": "00:04:09",
+      "description": "The teacher is standing at the head of the table, looking at the children. The children are still working on their projects at the table."
+    }
+  ],
+  "transcript": [
+    {
+      "ts_start": "00:00:14",
+      "speaker": "STUDENT_1",
+      "text": "I'm making a puzzle."
+    },
+    {
+      "ts_start": "00:00:15",
+      "speaker": "TEACHER",
+      "text": "What are you making, dear?"
+    },
+    {
+      "ts_start": "00:00:16",
+      "speaker": "STUDENT_1",
+      "text": "I'm making a puzzle."
+    },
+    {
+      "ts_start": "00:00:17",
+      "speaker": "TEACHER",
+      "text": "Oh, a puzzle. Very good. Can you show me?"
+    },
+    {
+      "ts_start": "00:00:18",
+      "speaker": "STUDENT_1",
+      "text": "Yes."
+    },
+    {
+      "ts_start": "00:00:19",
+      "speaker": "TEACHER",
+      "text": "Wow, very good. Can you show me?"
+    },
+    {
+      "ts_start": "00:00:20",
+      "speaker": "STUDENT_1",
+      "text": "Yes."
+    },
+    {
+      "ts_start": "00:00:21",
+      "speaker": "TEACHER",
+      "text": "Wow, very good. Can you show me?"
+    },
+    {
+      "ts_start": "00:00:22",
+      "speaker": "STUDENT_1",
+      "text": "Yes."
+    },
+    {
+      "ts_start": "00:00:23",
+      "speaker": "TEACHER",
+      "text": "Wow, very good. Can you show me?"
+    },
+    {
+      "ts_start": "00:00:24",
+      "speaker": "STUDENT_1",
+      "text": "Yes."
+    },
+    {
+      "ts_start": "00:00:25",
+      "speaker": "TEACHER",
+      "text": "Wow, very good. Can you show me?"
+    },
+    {
+      "ts_start": "00:00:26",
+      "speaker": "STUDENT_1",
+      "text": "Yes."
+    },
+    {
+      "ts_start": "00:00:27",
+      "speaker": "TEACHER",
+      "text": "Wow, very good. Can you show me?"
+    },
+    {
+      "ts_start": "00:00:28",
+      "speaker": "STUDENT_1",
+      "text": "Yes."
+    },
+    {
+      "ts_start": "00:00:29",
+      "speaker": "TEACHER",
+      "text": "Wow, very good. Can you show me?"
+    },
+    {
+      "ts_start": "00:00:30",
+      "speaker": "STUDENT_1",
+      "text": "Yes."
+    },
+    {
+      "ts_start": "00:00:31",
+      "speaker": "TEACHER",
+      "text": "Wow, very good. Can you show me?"
+    },
+    {
+      "ts_start": "00:00:32",
+      "speaker": "STUDENT_1",
+      "text": "Yes."
+    },
+    {
+      "ts_start": "00:00:33",
+      "speaker": "TEACHER",
+      "text": "Wow, very good. Can you show me?"
+    },
+    {
+      "ts_start": "00:00:34",
+      "speaker": "STUDENT_1",
+      "text": "Yes."
+    },
+    {
+      "ts_start": "00:00:35",
+      "speaker": "TEACHER",
+      "text": "Wow, very good. Can you show me?"
+    },
+    {
+      "ts_start": "00:00:36",
+      "speaker": "STUDENT_1",
+      "text": "Yes."
+    },
+    {
+      "ts_start": "00:00:37",
+      "speaker": "TEACHER",
+      "text": "Wow, very good. Can you show me?"
+    },
+    {
+      "ts_start": "00:00:38",
+      "speaker": "STUDENT_1",
+      "text": "Yes."
+    },
+    {
+      "ts_start": "00:00:39",
+      "speaker": "TEACHER",
+      "text": "Wow, very good. Can you show me?"
+    },
+    {
+      "ts_start": "00:00:40",
+      "speaker": "STUDENT_1",
+      "text": "Yes."
+    },
+    {
+      "ts_start": "00:00:41",
+      "speaker": "TEACHER",
+      "text": "Wow, very good. Can you show me?"
+    },
+    {
+      "ts_start": "00:00:42",
+      "speaker": "STUDENT_1",
+      "text": "Yes."
+    },
+    {
+      "ts_start": "00:00:43",
+      "speaker": "TEACHER",
+      "text": "Wow, very good. Can you show me?"
+    },
+    {
+      "ts_start": "00:00:44",
+      "speaker": "STUDENT_1",
+      "text": "Yes."
+    },
+    {
+      "ts_start": "00:00:45",
+      "speaker": "TEACHER",
+      "text": "Wow, very good. Can you show me?"
+    },
+    {
+      "ts_start": "00:00:46",
+      "speaker": "STUDENT_1",
+      "text": "Yes."
+    },
+    {
+      "ts_start": "00:00:47",
+      "speaker": "TEACHER",
+      "text": "Wow, very good. Can you show me?"
+    },
+    {
+      "ts_start": "00:00:48",
+      "speaker": "STUDENT_1",
+      "text": "Yes."
+    },
+    {
+      "ts_start": "00:00:49",
+      "speaker": "TEACHER",
+      "text": "Wow, very good. Can you show me?"
+    },
+    {
+      "ts_start": "00:00:50",
+      "speaker": "STUDENT_1",
+      "text": "Yes."
+    },
+    {
+      "ts_start": "00:00:51",
+      "speaker": "TEACHER",
+      "text": "Wow, very good. Can you show me?"
+    },
+    {
+      "ts_start": "00:00:52",
+      "speaker": "STUDENT_1",
+      "text": "Yes."
+    },
+    {
+      "ts_start": "00:00:53",
+      "speaker": "TEACHER",
+      "text": "Wow, very good. Can you show me?"
+    },
+    {
+      "ts_start": "00:00:54",
+      "speaker": "STUDENT_1",
+      "text": "Yes."
+    },
+    {
+      "ts_start": "00:00:55",
+      "speaker": "TEACHER",
+      "text": "Wow, very good. Can you show me?"
+    },
+    {
+      "ts_start": "00:00:56",
+      "speaker": "STUDENT_1",
+      "text": "Yes."
+    },
+    {
+      "ts_start": "00:00:57",
+      "speaker": "TEACHER",
+      "text": "Wow, very good. Can you show me?"
+    },
+    {
+      "ts_start": "00:00:58",
+      "speaker": "STUDENT_1",
+      "text": "Yes."
+    },
+    {
+      "ts_start": "00:00:59",
+      "speaker": "TEACHER",
+      "text": "Wow, very good. Can you show me?"
+    },
+    {
+      "ts_start": "00:01:00",
+      "speaker": "STUDENT_1",
+      "text": "Yes."
+    },
+    {
+      "ts_start": "00:01:01",
+      "speaker": "TEACHER",
+      "text": "Wow, very good. Can you show me?"
+    },
+    {
+      "ts_start": "00:01:02",
+      "speaker": "STUDENT_1",
+      "text": "Yes."
+    },
+    {
+      "ts_start": "00:01:03",
+      "speaker": "TEACHER",
+      "text": "Wow, very good. Can you show me?"
+    },
+    {
+      "ts_start": "00:01:04",
+      "speaker": "STUDENT_1",
+      "text": "Yes."
+    },
+    {
+      "ts_start": "00:01:05",
+      "speaker": "TEACHER",
+      "text": "Wow, very good. Can you show me?"
+    },
+    {
+      "ts_start": "00:01:06",
+      "speaker": "STUDENT_1",
+      "text": "Yes."
+    },
+    {
+      "ts_start": "00:01:07",
+      "speaker": "TEACHER",
+      "text": "Wow, very good. Can you show me?"
+    },
+    {
+      "ts_start": "00:01:08",
+      "speaker": "STUDENT_1",
+      "text": "Yes."
+    },
+    {
+      "ts_start": "00:01:09",
+      "speaker": "TEACHER",
+      "text": "Wow, very good. Can you show me?"
+    }
+  ]
+}

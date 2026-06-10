@@ -1,0 +1,183 @@
+{
+  "session_id": "long_before_playground_20250918_activity_5_balloon_dance",
+  "rubric_version": "0.2.3",
+  "scores": {
+    "narrative": {
+      "dimension_id": "narrative",
+      "rubric_version": "0.2.3",
+      "score": 0,
+      "anchor_matched": "No experiential context — generic space with no immersive framing; pure utility setup",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:08",
+          "type": "visual",
+          "quote": "The room is empty, with a wooden floor and white walls. There are six white balloons and three yellow balloons scattered on the floor.",
+          "indicator": "Thematic decor that names or evokes a setting",
+          "reasoning": "The space is a bare room with white walls and wooden floor — no thematic decor, no atmospheric anchor, and no framing that places children inside a deliberate setting."
+        },
+        {
+          "ts_start": "00:40",
+          "ts_end": "00:50",
+          "type": "visual",
+          "quote": "The children are still playing with the balloons, some are throwing them against the black board on the right side of the room.",
+          "indicator": "An atmospheric anchor (banner, central feature, framing object)",
+          "reasoning": "The only notable feature beyond the bare walls is a blackboard — a generic classroom fixture — which does not contribute to any immersive narrative setting."
+        },
+        {
+          "ts_start": "04:50",
+          "ts_end": "04:59",
+          "type": "visual",
+          "quote": "The children and the adult exit the room from the top left. The room is now empty, with the balloons scattered on the floor.",
+          "indicator": "An 'in-progress project' feel where the setup itself tells what's happening",
+          "reasoning": "Throughout the entire session the space remains a plain utility room with balloons as activity props only; there is no scene-setting, story framing, or immersive context established at any point."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "Balloons serve as activity props for a movement/dance activity but do not constitute narrative framing. No thematic decor, no atmospheric anchor, no immersive setting is present anywhere in the observable space.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "multi_sensory": {
+      "dimension_id": "multi_sensory",
+      "rubric_version": "0.2.3",
+      "score": 0.5,
+      "anchor_matched": "Two senses are nominally engaged but at least one is weak or marginal",
+      "evidence": [
+        {
+          "ts_start": "00:00:20",
+          "ts_end": "00:00:40",
+          "type": "visual",
+          "quote": "They are all playing with the balloons, throwing them in the air and catching them. The adult is also interacting with the children and the balloons.",
+          "indicator": "Proprioceptive / movement opportunities (balance, climbing, kneeling)",
+          "reasoning": "Children are running, throwing, and catching balloons, providing clear proprioceptive and whole-body movement engagement."
+        },
+        {
+          "ts_start": "00:00:00",
+          "ts_end": "00:00:08",
+          "type": "visual",
+          "quote": "There are six white balloons and three yellow balloons scattered on the floor.",
+          "indicator": "Visual variety (color, materials, arrangements)",
+          "reasoning": "Two balloon colors (white and yellow) provide some visual variety, though the material palette is limited to a single material type."
+        },
+        {
+          "ts_start": "00:00:40",
+          "ts_end": "00:00:50",
+          "type": "visual",
+          "quote": "The children are still playing with the balloons, some are throwing them against the black board on the right side of the room.",
+          "indicator": "Tactile invitations (textures, materials to touch, wet/dry/soft/rough)",
+          "reasoning": "Balloons offer a tactile experience (smooth, light, slightly elastic surface) when held and batted, though this is a single uniform material with limited tactile variety."
+        },
+        {
+          "ts_start": "00:01:00",
+          "ts_end": "00:01:20",
+          "type": "visual",
+          "quote": "The children are moving around the room, holding their balloons. The adult is walking among them, still talking and guiding their play.",
+          "indicator": "Proprioceptive / movement opportunities (balance, climbing, kneeling)",
+          "reasoning": "Free movement across the open floor space with balloons as props meaningfully engages proprioception, but no music is audible and no additional sensory materials are present, leaving the multi-sensory design incomplete."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "The activity notes describe this as a 'balloon dance' with music, but no music is audible or visible in the recording. Proprioceptive engagement (movement, throwing, catching) is strong and clearly present. Tactile engagement via balloons is present but limited to a single uniform material. Visual engagement is minimal (two colors, one material). No auditory elements (music, instruments) are confirmed in the evidence. The setup engages two senses meaningfully (movement/proprioceptive and tactile/visual) but the tactile and visual dimensions are weak — all one material type — placing this at 0.5.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "boundary": {
+      "dimension_id": "boundary",
+      "rubric_version": "0.2.3",
+      "score": 0.5,
+      "anchor_matched": "A boundary is implied but ambiguous (e.g. materials present but no visible zone marker; or unclear where the activity area starts and stops)",
+      "evidence": [
+        {
+          "ts_start": "00:00:00",
+          "ts_end": "00:00:08",
+          "type": "visual",
+          "quote": "The room is empty, with a wooden floor and white walls. There are six white balloons and three yellow balloons scattered on the floor.",
+          "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+          "reasoning": "The room itself (wooden floor, white walls) serves as an implicit boundary container, but there is no mat, tape, rug, or other zone marker — the balloons scattered on the floor imply the activity area but do not define a clear boundary."
+        },
+        {
+          "ts_start": "00:00:08",
+          "ts_end": "00:00:20",
+          "type": "visual",
+          "quote": "Three children enter the room from the top left. They start picking up the balloons. A woman in a patterned dress enters the room from the top left and observes the children.",
+          "indicator": "The boundary is intuitive to a child without verbal explanation from an adult",
+          "reasoning": "Children move freely into the room and immediately engage with the balloons, suggesting the room walls provide an implicit boundary, but no dedicated zone marker makes the activity area self-evident beyond the room itself."
+        },
+        {
+          "ts_start": "00:01:00",
+          "ts_end": "00:01:10",
+          "type": "visual",
+          "quote": "The children are moving around the room, holding their balloons. The adult is walking among them, still talking and guiding their play.",
+          "indicator": "The boundary is intuitive to a child without verbal explanation from an adult",
+          "reasoning": "The adult is verbally guiding play throughout, suggesting the activity zone is not fully self-evident to children without adult direction, which is consistent with a partial/ambiguous boundary score."
+        },
+        {
+          "ts_start": "00:00:40",
+          "ts_end": "00:00:50",
+          "type": "visual",
+          "quote": "The children are still playing with the balloons, some are throwing them against the black board on the right side of the room.",
+          "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+          "reasoning": "The room's walls (including the blackboard) act as de facto boundaries, but these are architectural features of the room rather than intentional activity-zone markers, making the boundary implied rather than clearly designed."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "This is a whole-room movement activity (balloon dance), so the room itself functions as the boundary container. The walls and floor provide an implied zone, but there is no mat, tape, rug, or other intentional zone marker. The activity design is inherently open-space, which partially justifies the room-as-boundary interpretation, but the lack of any explicit zone marker and the adult's ongoing verbal guidance keep this at 0.5.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "movement": {
+      "dimension_id": "movement",
+      "rubric_version": "0.2.3",
+      "score": 1.0,
+      "anchor_matched": "Both elements are present — children can clearly access the activity zone (visible path markers not required; minor adult presence in the path is acceptable as long as children get past) AND deliberate positioning suited to the activity (standing, kneeling, or sitting as the activity calls for), with materials reachable from that posture. Explicit seating like cushions is NOT required when the activity naturally invites standing or kneeling.",
+      "evidence": [
+        {
+          "ts_start": "00:00:00",
+          "ts_end": "00:00:08",
+          "type": "visual",
+          "quote": "The room is empty, with a wooden floor and white walls. There are six white balloons and three yellow balloons scattered on the floor.",
+          "indicator": "No significant clutter, furniture, or persistent adult barriers materially blocking the path between entry and the activity zone",
+          "reasoning": "The open wooden floor with no furniture or clutter provides completely unobstructed access to the activity zone for children entering the room."
+        },
+        {
+          "ts_start": "00:00:08",
+          "ts_end": "00:00:20",
+          "type": "visual",
+          "quote": "Three children enter the room from the top left. They start picking up the balloons. A woman in a patterned dress enters the room from the top left and observes the children.",
+          "indicator": "Children can clearly access the activity zone from the room entry — minor adult presence in the path is acceptable as long as children can still get past",
+          "reasoning": "Children immediately and freely access the activity zone upon entry, picking up balloons without any obstruction, confirming clear unobstructed access."
+        },
+        {
+          "ts_start": "00:00:20",
+          "ts_end": "00:00:40",
+          "type": "visual",
+          "quote": "More children enter the room, bringing the total to six children and one adult. They are all playing with the balloons, throwing them in the air and catching them. The adult is also interacting with the children and the balloons.",
+          "indicator": "Enough space at the activity for children to stand, kneel, sit, or move as the activity requires",
+          "reasoning": "Six children and one adult are all freely moving, throwing, and catching balloons simultaneously, demonstrating ample space for the free-movement dance/play activity."
+        },
+        {
+          "ts_start": "00:00:00",
+          "ts_end": "00:00:08",
+          "type": "visual",
+          "quote": "There are six white balloons and three yellow balloons scattered on the floor.",
+          "indicator": "Materials reachable from the natural posture the activity invites",
+          "reasoning": "Balloons are placed directly on the floor at child level, fully reachable from the natural standing/moving posture this free-movement activity invites."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "The activity is a free-movement balloon dance in an open room. The space is entirely clear of furniture and clutter, balloons are on the floor at child reach, children enter and immediately engage without any obstruction, and the open floor naturally invites the standing/moving posture the activity requires. Both access and positioning indicators are fully met.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "clean_up": {
+      "dimension_id": "clean_up",
+      "rubric_version": "0.2.3",
+      "score": "insufficient_evidence",
+      "anchor_matched": null,
+      "evidence": [],
+      "confidence": "low",
+      "scorer_notes": "The session ends at 04:50-04:59 with all children and the adult exiting the room, leaving balloons scattered on the floor. No cleanup sequence is observed at any point in the recording. The activity is a free-movement balloon dance in an open room with no visible storage infrastructure (no shelves, bins, labels, or designated return locations visible). Because cleanup never occurs and no storage design is observable, there is insufficient evidence to score this dimension.",
+      "prompt_hash": "c92c689bf87b"
+    }
+  },
+  "overall": 0.5,
+  "cost_usd": null,
+  "duration_seconds": 15.84111213684082
+}

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tqm"
+version = "0.1.0"
+description = "Teacher Quality Monitoring — score classroom video against a rubric"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic>=0.40",
+    "google-genai>=1.0",
+    "jinja2>=3.1",
+    "json-repair>=0.30",
+    "pydantic>=2.0",
+    "python-dotenv>=1.0",
+    "pyyaml>=6.0",
+    "tenacity>=8.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["adapters*", "pipeline*"]

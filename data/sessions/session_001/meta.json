@@ -1,0 +1,11 @@
+{
+  "session_id": "session_001",
+  "recorded_at": "2026-05-15",
+  "age_range": "3-5 years",
+  "duration_minutes": 1,
+  "subject": "general preschool",
+  "teacher_id": null,
+  "classroom_id": null,
+  "school_id": "default",
+  "video_path": "/Users/oh/Desktop/Teacher Quality Monitoring/data/raw/test_video.mp4"
+}

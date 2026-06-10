@@ -1,0 +1,13 @@
+{
+  "session_id": "long_vision_20250918_activity_5_balloon_dance_after",
+  "segments": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": null,
+      "speaker": "TEACHER",
+      "text": "Happy birthday to you."
+    }
+  ],
+  "source_model": "gemini-2.5-flash",
+  "prompt_hash": "5e55d965a6ab"
+}

@@ -1,0 +1,72 @@
+{
+  "session_id": "long_vision_d06_20250919105616_before",
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:00:59",
+      "description": "The room is empty, with light wooden flooring and white walls. A large black board is on the right wall, and a window with bars is on the left. Colorful paper decorations are visible on the bottom right corner of the frame."
+    },
+    {
+      "ts_start": "00:00:59",
+      "ts_end": "00:01:19",
+      "description": "A teacher and several children enter the room from the back. The children are wearing light-colored clothes and are walking around the room. The teacher is carrying a white bottle."
+    },
+    {
+      "ts_start": "00:01:19",
+      "ts_end": "00:01:39",
+      "description": "The teacher places the white bottle on the window sill and then walks towards the back of the room. The children continue to walk around, some looking at the blackboard."
+    },
+    {
+      "ts_start": "00:01:39",
+      "ts_end": "00:01:59",
+      "description": "Another teacher enters the room carrying a basket with white papers. She places the basket on the floor near the blackboard. The children are still walking around, some interacting with each other."
+    },
+    {
+      "ts_start": "00:01:59",
+      "ts_end": "00:02:19",
+      "description": "The first teacher returns with a blue mat and places it on the floor. She then unfolds it. The children gather around her, some picking up papers from the basket."
+    },
+    {
+      "ts_start": "00:02:19",
+      "ts_end": "00:02:39",
+      "description": "The teacher lays out four blue mats on the floor in a square formation. The children sit on the mats, and the teacher stands in the middle, holding a paper."
+    },
+    {
+      "ts_start": "00:02:39",
+      "ts_end": "00:02:59",
+      "description": "The teacher instructs the children, who are now sitting on their mats. Some children are holding papers and looking at them. The teacher demonstrates some movements."
+    },
+    {
+      "ts_start": "00:02:59",
+      "ts_end": "00:03:19",
+      "description": "The children imitate the teacher's movements, raising their arms up and down. The teacher continues to guide them."
+    },
+    {
+      "ts_start": "00:03:19",
+      "ts_end": "00:03:39",
+      "description": "The children continue to follow the teacher's instructions, performing arm movements. The second teacher enters the room carrying a small wooden table."
+    },
+    {
+      "ts_start": "00:03:39",
+      "ts_end": "00:03:59",
+      "description": "The second teacher places two small wooden tables on the mats in front of two children. The first teacher continues to interact with the children, pointing at the blackboard."
+    },
+    {
+      "ts_start": "00:03:59",
+      "ts_end": "00:04:19",
+      "description": "The second teacher places two more small wooden tables on the mats. The children are now sitting at their tables, and the first teacher is holding a paper and talking to them."
+    },
+    {
+      "ts_start": "00:04:19",
+      "ts_end": "00:04:39",
+      "description": "The first teacher distributes papers to the children. The second teacher brings in another small wooden table and places it on a mat."
+    },
+    {
+      "ts_start": "00:04:39",
+      "ts_end": "00:04:59",
+      "description": "The children are now seated at their tables with papers in front of them. The first teacher is distributing more papers and interacting with the children. The second teacher is walking towards the back of the room."
+    }
+  ],
+  "source_model": "gemini-2.5-flash",
+  "prompt_hash": "855bdb7ef3b4"
+}

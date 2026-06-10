@@ -1,0 +1,68 @@
+{
+  "activity_zone_items": [
+    {
+      "category": "Furniture",
+      "name": "Blue blanket",
+      "count_or_quantity": "multiple",
+      "specifics": "Two blue blankets placed on the floor for children to sit on",
+      "first_seen_at": "00:01:59"
+    },
+    {
+      "category": "Furniture",
+      "name": "Wooden table",
+      "count_or_quantity": "multiple",
+      "specifics": "Two wooden tables placed on the floor for children to colour at",
+      "first_seen_at": "00:01:59"
+    },
+    {
+      "category": "Furniture",
+      "name": "Wooden chair",
+      "count_or_quantity": "multiple",
+      "specifics": "At least two wooden chairs brought in and placed on the floor",
+      "first_seen_at": "00:03:59"
+    },
+    {
+      "category": "Materials",
+      "name": "Colouring sheets (papers)",
+      "count_or_quantity": "multiple",
+      "specifics": "Individual papers given to each child for colouring",
+      "first_seen_at": "00:02:59"
+    },
+    {
+      "category": "Containers",
+      "name": "White basket",
+      "count_or_quantity": "one",
+      "specifics": "Carried in by second teacher and placed on the floor near the blackboard; contents unspecified",
+      "first_seen_at": "00:00:59"
+    },
+    {
+      "category": "Containers",
+      "name": "White bottle",
+      "count_or_quantity": "one",
+      "specifics": "Carried in by first teacher and placed on the floor; contents unspecified",
+      "first_seen_at": "00:00:59"
+    }
+  ],
+  "other_items_in_room": [
+    {
+      "name": "Large blackboard",
+      "location": "right wall"
+    },
+    {
+      "name": "Window with bars",
+      "location": "left wall"
+    },
+    {
+      "name": "Colorful decorations",
+      "location": "right side of wall"
+    },
+    {
+      "name": "Light wooden flooring",
+      "location": "floor throughout room"
+    }
+  ],
+  "notes": "Colouring tools (e.g. crayons, markers, coloured pencils) are implied by the colouring activity but are never explicitly described in the observations. The white basket's contents are not specified; it may have contained colouring supplies or papers. The white bottle's contents are also unspecified.",
+  "session_id": "long_vision_colouring_before",
+  "source_model": "claude-sonnet-4-6",
+  "prompt_hash": "0a584ed472ce"
+}

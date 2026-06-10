@@ -1,0 +1,167 @@
+{
+  "session_id": "playground_multisensory_001",
+  "rubric_version": "0.2.1",
+  "scores": {
+    "narrative": {
+      "dimension_id": "narrative",
+      "rubric_version": "0.2.1",
+      "score": 0,
+      "anchor_matched": "No experiential context — generic space with no immersive framing; pure utility setup",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:17",
+          "type": "visual",
+          "quote": "The room is empty, with two tables in the center covered with plastic sheets. One table has two bins with sand and small toys, and the other has a bin with colorful blocks. There are also some papers on a table on the right side of the room.",
+          "indicator": "Thematic decor that names or evokes a setting",
+          "reasoning": "The space shows only utility setup — plastic-covered tables with sensory bins — with no thematic decor, props, banners, or framing that would place children inside a deliberate setting."
+        },
+        {
+          "ts_start": "00:30",
+          "ts_end": "00:50",
+          "type": "visual",
+          "quote": "More children and adults enter the room. The children gather around the tables and start playing with the materials. One adult in a red shirt is helping a child at the sand table, while another adult in a floral dress is observing the children.",
+          "indicator": "An atmospheric anchor (banner, central feature, framing object)",
+          "reasoning": "No atmospheric anchor, backdrop, or central feature is described at any point; the room remains a plain utility space throughout the session."
+        },
+        {
+          "ts_start": "01:50",
+          "ts_end": "02:10",
+          "type": "visual",
+          "quote": "The children are fully immersed in their play. The adults continue to supervise and engage with the children. One adult in a white floral top is kneeling and helping a child at the block table.",
+          "indicator": "An 'in-progress project' feel where the setup itself tells what's happening",
+          "reasoning": "Even mid-session, the visual descriptions reveal no narrative framing or scene-setting — only children playing at bins in a generic room, confirming the absence of any immersive context."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "The activity is sensory bin play, which is a legitimate early childhood activity, but the space contains no thematic decor, props, banners, or framing elements that would constitute narrative immersion. The setup is purely functional. The transcript is largely unintelligible due to a transcription loop artifact and provides no additional evidence of narrative framing.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "multi_sensory": {
+      "dimension_id": "multi_sensory",
+      "rubric_version": "0.2.1",
+      "score": 1.0,
+      "anchor_matched": "Two or more senses are meaningfully engaged through deliberate material and arrangement choices",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:17",
+          "type": "visual",
+          "quote": "The room is empty, with two tables in the center covered with plastic sheets. One table has two bins with sand and small toys, and the other has a bin with colorful blocks.",
+          "indicator": "Natural / sensory materials (sand, water, fabric, wood, leaves, clay, paint)",
+          "reasoning": "Sand bins with small toys and colorful blocks represent distinct tactile and visual material types deliberately arranged for child engagement."
+        },
+        {
+          "ts_start": "00:30",
+          "ts_end": "00:50",
+          "type": "visual",
+          "quote": "The children gather around the tables and start playing with the materials. One adult in a red shirt is helping a child at the sand table, while another adult in a floral dress is observing the children.",
+          "indicator": "Tactile invitations (textures, materials to touch, wet/dry/soft/rough)",
+          "reasoning": "Children actively engaging with sand (tactile) and colorful blocks (visual + tactile) confirms multiple senses are meaningfully engaged simultaneously."
+        },
+        {
+          "ts_start": "00:50",
+          "ts_end": "01:10",
+          "type": "visual",
+          "quote": "The children are actively engaged with the sensory bins. Adults are standing around, some taking pictures with their phones, and others interacting with the children. One adult in a white floral top is kneeling to help a child at the block table.",
+          "indicator": "Visual variety (color, materials, arrangements)",
+          "reasoning": "Colorful blocks at one table and sand with small toys at another provide both visual variety and distinct tactile experiences across the setup."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "Staff notes explicitly describe multi-sensory bins with varied textures, sounds, colors, and scents. Visual observations confirm at least two distinct material types (sand and colorful blocks) engaging tactile and visual senses. Sound and scent elements from staff notes are not directly observable in the video but the visual and tactile engagement alone is sufficient for a score of 1.0.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "boundary": {
+      "dimension_id": "boundary",
+      "rubric_version": "0.2.1",
+      "score": 1,
+      "anchor_matched": "At least one clear, unambiguous activity boundary — a canvas, paper, mat, rug, table, low fence, or similar marker visually defines the zone. A single well-defined zone is sufficient for this score.",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:17",
+          "type": "visual",
+          "quote": "The room is empty, with two tables in the center covered with plastic sheets. One table has two bins with sand and small toys, and the other has a bin with colorful blocks.",
+          "indicator": "A clear physical or visual marker defining the activity area (paper, canvas, mat, rug, table, low fence, taped outline, etc.)",
+          "reasoning": "The tables covered with plastic sheets and containing sensory bins serve as unambiguous physical boundaries that visually define where the activity is to take place, visible before any children enter."
+        },
+        {
+          "ts_start": "00:17",
+          "ts_end": "00:30",
+          "type": "visual",
+          "quote": "Children start to enter the room, walking towards the tables. There are four children visible, two boys and two girls.",
+          "indicator": "The boundary is intuitive to a child without verbal explanation from an adult",
+          "reasoning": "Children independently walk toward the tables upon entering, indicating the tables function as self-evident activity zones without requiring adult verbal direction."
+        },
+        {
+          "ts_start": "00:30",
+          "ts_end": "00:50",
+          "type": "visual",
+          "quote": "The children gather around the tables and start playing with the materials.",
+          "indicator": "A canvas / paper / mat / rug / table that visually defines where the activity happens",
+          "reasoning": "Children naturally congregate at the clearly defined table zones, confirming the tables with plastic-covered sensory bins provide an intuitive, unambiguous activity boundary."
+        }
+      ],
+      "confidence": "high",
+      "scorer_notes": "Two distinct tables with sensory bins are present, both clearly defined by their physical structure and plastic sheet coverings. Children gravitate to them without apparent verbal prompting, confirming the boundary is self-evident.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "movement": {
+      "dimension_id": "movement",
+      "rubric_version": "0.2.1",
+      "score": 0.5,
+      "anchor_matched": "Either intentional movement flow OR clear positioning is present, but not both. Or one is partial.",
+      "evidence": [
+        {
+          "ts_start": "00:00",
+          "ts_end": "00:17",
+          "type": "visual",
+          "quote": "The room is empty, with two tables in the center covered with plastic sheets. One table has two bins with sand and small toys, and the other has a bin with colorful blocks.",
+          "indicator": "Clear deliberate positioning suited to the activity (standing at table height for sensory bins)",
+          "reasoning": "Tables placed in the center of the room with sensory bins on top suggest a standing posture is intended, which is appropriate for sensory bin play, indicating deliberate positioning."
+        },
+        {
+          "ts_start": "00:17",
+          "ts_end": "00:30",
+          "type": "visual",
+          "quote": "Children start to enter the room, walking towards the tables. There are four children visible, two boys and two girls.",
+          "indicator": "Children can intuitively tell WHERE to go to engage with the activity",
+          "reasoning": "Children move directly toward the tables upon entering, suggesting the setup communicates where to go, supporting clear positioning."
+        },
+        {
+          "ts_start": "00:30",
+          "ts_end": "00:50",
+          "type": "visual",
+          "quote": "More children and adults enter the room. The children gather around the tables and start playing with the materials. One adult in a red shirt is helping a child at the sand table, while another adult in a floral dress is observing the children.",
+          "indicator": "Pathways to / from / around the activity zone",
+          "reasoning": "Multiple adults crowding around the tables alongside children suggests pathways around the activity zone are not clearly defined or maintained, making movement flow only partially present."
+        },
+        {
+          "ts_start": "01:30",
+          "ts_end": "01:50",
+          "type": "visual",
+          "quote": "The children are still playing with the bins. Adults are scattered around the room, some standing, some sitting, and some holding babies. They are all observing the children's play.",
+          "indicator": "No obstacles blocking intentional movement",
+          "reasoning": "Adults scattered throughout the room without clear delineation of pathways suggests the movement flow around the activity zone is not intentionally designed, only partially supporting the rubric indicator."
+        }
+      ],
+      "confidence": "medium",
+      "scorer_notes": "The tables in the center with sensory bins clearly signal where children should go and support a standing posture appropriate for the activity. However, there is no evidence of intentionally designed pathways to/from/around the activity zone — the space appears open but undefined in terms of deliberate flow. Adults crowding the space further obscures any pathway design, though per the rubric this is not penalized as a design flaw. The score reflects clear positioning but only partial movement flow.",
+      "prompt_hash": "c92c689bf87b"
+    },
+    "clean_up": {
+      "dimension_id": "clean_up",
+      "rubric_version": "0.2.1",
+      "score": "insufficient_evidence",
+      "anchor_matched": null,
+      "evidence": [],
+      "confidence": "low",
+      "scorer_notes": "The session recording covers only the setup and active play phases (5 minutes). No cleanup sequence is observed at any point in the video. While the space design is partially visible (tables at child height, bins with sand and blocks), there is no evidence of return locations, visual labels, silhouettes, or children attempting to return materials. The bins appear to be placed on tables covered with plastic sheets with no visible labelling or designated return spots observable. Insufficient evidence to score this dimension reliably.",
+      "prompt_hash": "c92c689bf87b"
+    }
+  },
+  "overall": 0.625,
+  "cost_usd": null,
+  "duration_seconds": 14.803585052490234
+}

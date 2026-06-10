@@ -1,0 +1,136 @@
+{
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:00:30",
+      "description": "The camera is positioned in a room with light wooden flooring and white walls. A large black board is visible on the right side of the room, extending from the foreground to the background. To the left, a window with metal bars is visible. In the background, an open doorway leads to another area, and white cabinets are visible on the far right wall."
+    },
+    {
+      "ts_start": "00:00:30",
+      "ts_end": "00:01:00",
+      "description": "The room remains empty and still. The light wooden flooring, white walls, and black board continue to be the main features of the scene. The window on the left and the doorway in the background are still visible, with no one entering or exiting the room."
+    }
+  ],
+  "transcript": [
+    {
+      "ts_start": "00:00:01",
+      "speaker": "TEACHER",
+      "text": "Okay."
+    },
+    {
+      "ts_start": "00:00:02",
+      "speaker": "TEACHER",
+      "text": "Okay."
+    },
+    {
+      "ts_start": "00:00:05",
+      "speaker": "TEACHER",
+      "text": "Okay."
+    },
+    {
+      "ts_start": "00:00:08",
+      "speaker": "TEACHER",
+      "text": "Okay."
+    },
+    {
+      "ts_start": "00:00:10",
+      "speaker": "TEACHER",
+      "text": "Okay."
+    },
+    {
+      "ts_start": "00:00:13",
+      "speaker": "TEACHER",
+      "text": "Okay."
+    },
+    {
+      "ts_start": "00:00:15",
+      "speaker": "TEACHER",
+      "text": "Okay."
+    },
+    {
+      "ts_start": "00:00:18",
+      "speaker": "TEACHER",
+      "text": "Okay."
+    },
+    {
+      "ts_start": "00:00:20",
+      "speaker": "TEACHER",
+      "text": "Okay."
+    },
+    {
+      "ts_start": "00:00:23",
+      "speaker": "TEACHER",
+      "text": "Okay."
+    },
+    {
+      "ts_start": "00:00:25",
+      "speaker": "TEACHER",
+      "text": "Okay."
+    },
+    {
+      "ts_start": "00:00:28",
+      "speaker": "TEACHER",
+      "text": "Okay."
+    },
+    {
+      "ts_start": "00:00:30",
+      "speaker": "TEACHER",
+      "text": "Okay."
+    },
+    {
+      "ts_start": "00:00:33",
+      "speaker": "TEACHER",
+      "text": "Okay."
+    },
+    {
+      "ts_start": "00:00:35",
+      "speaker": "TEACHER",
+      "text": "Okay."
+    },
+    {
+      "ts_start": "00:00:38",
+      "speaker": "TEACHER",
+      "text": "Okay."
+    },
+    {
+      "ts_start": "00:00:40",
+      "speaker": "TEACHER",
+      "text": "Okay."
+    },
+    {
+      "ts_start": "00:00:43",
+      "speaker": "TEACHER",
+      "text": "Okay."
+    },
+    {
+      "ts_start": "00:00:45",
+      "speaker": "TEACHER",
+      "text": "Okay."
+    },
+    {
+      "ts_start": "00:00:48",
+      "speaker": "TEACHER",
+      "text": "Okay."
+    },
+    {
+      "ts_start": "00:00:50",
+      "speaker": "TEACHER",
+      "text": "Okay."
+    },
+    {
+      "ts_start": "00:00:53",
+      "speaker": "TEACHER",
+      "text": "Okay."
+    },
+    {
+      "ts_start": "00:00:55",
+      "speaker": "TEACHER",
+      "text": "Okay."
+    },
+    {
+      "ts_start": "00:00:58",
+      "speaker": "TEACHER",
+      "text": "Okay."
+    }
+  ]
+}

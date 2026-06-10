@@ -1,0 +1,15 @@
+{
+  "first_child_visible_at": "00:00:17",
+  "last_child_visible_at": "00:20:17",
+  "confidence": "high",
+  "notes": "",
+  "video_start_wall_clock": "09:39:43",
+  "first_child_wall_clock": "09:40:00",
+  "last_child_wall_clock": "10:00:00",
+  "first_child_evidence": "A child in a pink dress walks into the play area from the right side of the frame.",
+  "last_child_evidence": "The last child, a boy in a red shirt, walks out of the play area on the right side of the frame.",
+  "self_check_passed": true,
+  "session_id": "v070_test_20250909_activity_1_Morning_circle_time_activities_and_group_learning",
+  "source_model": "gemini-2.5-flash",
+  "prompt_hash": "7ccb28dc0ec0"
+}

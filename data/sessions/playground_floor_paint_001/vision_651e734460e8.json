@@ -1,0 +1,307 @@
+{
+  "session_id": "playground_floor_paint_001",
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:00:05",
+      "description": "The video opens with an empty classroom, showcasing a clean, organized space with wooden shelves filled with colorful toys and an empty white paper laid out on the floor."
+    },
+    {
+      "ts_start": "00:00:05",
+      "ts_end": "00:00:10",
+      "description": "A teacher and a child enter the room, with the child walking towards the white paper on the floor."
+    },
+    {
+      "ts_start": "00:00:10",
+      "ts_end": "00:00:15",
+      "description": "More children enter the room, and one child approaches the table with painting supplies."
+    },
+    {
+      "ts_start": "00:00:15",
+      "ts_end": "00:00:20",
+      "description": "Another child walks towards the white paper on the floor, while a teacher guides a child towards the painting supplies."
+    },
+    {
+      "ts_start": "00:00:20",
+      "ts_end": "00:00:25",
+      "description": "A teacher kneels down to help a child with her shoes, while other children gather around the painting supplies."
+    },
+    {
+      "ts_start": "00:00:25",
+      "ts_end": "00:00:30",
+      "description": "The teacher continues to assist the child with her shoes, while another teacher walks past the painting area."
+    },
+    {
+      "ts_start": "00:00:30",
+      "ts_end": "00:00:35",
+      "description": "A child in a red dress approaches the painting supplies, and a teacher helps another child with her shoes."
+    },
+    {
+      "ts_start": "00:00:35",
+      "ts_end": "00:00:40",
+      "description": "Children are now actively engaged with the painting supplies, with teachers supervising them."
+    },
+    {
+      "ts_start": "00:00:40",
+      "ts_end": "00:00:45",
+      "description": "A teacher in a red shirt helps a child with the painting supplies, while other children are seated around the table."
+    },
+    {
+      "ts_start": "00:00:45",
+      "ts_end": "00:00:50",
+      "description": "A child in a red dress is actively painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:00:50",
+      "ts_end": "00:00:55",
+      "description": "A child in a white dress walks towards the painting area, while a teacher helps a child with her shoes."
+    },
+    {
+      "ts_start": "00:00:55",
+      "ts_end": "00:01:00",
+      "description": "A teacher helps a child with her shoes, while another child walks towards the painting area."
+    },
+    {
+      "ts_start": "00:01:00",
+      "ts_end": "00:01:05",
+      "description": "A teacher helps a child with her shoes, while another child walks towards the painting area."
+    },
+    {
+      "ts_start": "00:01:05",
+      "ts_end": "00:01:10",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:01:10",
+      "ts_end": "00:01:15",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:01:15",
+      "ts_end": "00:01:20",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:01:20",
+      "ts_end": "00:01:25",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:01:25",
+      "ts_end": "00:01:30",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:01:30",
+      "ts_end": "00:01:35",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:01:35",
+      "ts_end": "00:01:40",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:01:40",
+      "ts_end": "00:01:45",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:01:45",
+      "ts_end": "00:01:50",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:01:50",
+      "ts_end": "00:01:55",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:01:55",
+      "ts_end": "00:02:00",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:02:00",
+      "ts_end": "00:02:05",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:02:05",
+      "ts_end": "00:02:10",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:02:10",
+      "ts_end": "00:02:15",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:02:15",
+      "ts_end": "00:02:20",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:02:20",
+      "ts_end": "00:02:25",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:02:25",
+      "ts_end": "00:02:30",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:02:30",
+      "ts_end": "00:02:35",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:02:35",
+      "ts_end": "00:02:40",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:02:40",
+      "ts_end": "00:02:45",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:02:45",
+      "ts_end": "00:02:50",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:02:50",
+      "ts_end": "00:02:55",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:02:55",
+      "ts_end": "00:03:00",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:03:00",
+      "ts_end": "00:03:05",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:03:05",
+      "ts_end": "00:03:10",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:03:10",
+      "ts_end": "00:03:15",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:03:15",
+      "ts_end": "00:03:20",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:03:20",
+      "ts_end": "00:03:25",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:03:25",
+      "ts_end": "00:03:30",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:03:30",
+      "ts_end": "00:03:35",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:03:35",
+      "ts_end": "00:03:40",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:03:40",
+      "ts_end": "00:03:45",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:03:45",
+      "ts_end": "00:03:50",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:03:50",
+      "ts_end": "00:03:55",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:03:55",
+      "ts_end": "00:04:00",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:04:00",
+      "ts_end": "00:04:05",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:04:05",
+      "ts_end": "00:04:10",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:04:10",
+      "ts_end": "00:04:15",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:04:15",
+      "ts_end": "00:04:20",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:04:20",
+      "ts_end": "00:04:25",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:04:25",
+      "ts_end": "00:04:30",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:04:30",
+      "ts_end": "00:04:35",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:04:35",
+      "ts_end": "00:04:40",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:04:40",
+      "ts_end": "00:04:45",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:04:45",
+      "ts_end": "00:04:50",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:04:50",
+      "ts_end": "00:04:55",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    },
+    {
+      "ts_start": "00:04:55",
+      "ts_end": "00:05:00",
+      "description": "A child in a white dress is now painting on the paper, while teachers continue to assist other children with the supplies."
+    }
+  ],
+  "source_model": "gemini-2.5-flash",
+  "prompt_hash": "651e734460e8"
+}

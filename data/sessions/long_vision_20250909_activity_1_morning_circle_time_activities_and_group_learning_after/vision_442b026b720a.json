@@ -1,0 +1,57 @@
+{
+  "session_id": "long_vision_20250909_activity_1_morning_circle_time_activities_and_group_learning_after",
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:00:30",
+      "description": "The video shows a classroom with several children and a teacher. The children are sitting on yellow cushions on the floor, while the teacher stands in front of them. There are various play areas and furniture around the room, including small tables and chairs, and a play tunnel."
+    },
+    {
+      "ts_start": "00:00:30",
+      "ts_end": "00:01:00",
+      "description": "The teacher is leading a group activity, possibly a song or a game, as she gestures with her hands and the children appear to be participating. One child is lying down in the play tunnel, while another child is playing alone at a table in the background."
+    },
+    {
+      "ts_start": "00:01:00",
+      "ts_end": "00:01:30",
+      "description": "The teacher continues to lead the activity, and the children on the cushions are engaged. The child in the play tunnel remains there, and the child at the table in the background is still playing independently."
+    },
+    {
+      "ts_start": "00:01:30",
+      "ts_end": "00:02:00",
+      "description": "A new child enters the classroom from the left and walks towards the group. The teacher acknowledges the new child, who then joins the group on the cushions. The child at the table in the background is now standing and looking at the shelves."
+    },
+    {
+      "ts_start": "00:02:00",
+      "ts_end": "00:02:30",
+      "description": "The teacher is now helping the new child settle in with the group. The child who was playing at the table in the background walks towards the group and then returns to the shelves."
+    },
+    {
+      "ts_start": "00:02:30",
+      "ts_end": "00:03:00",
+      "description": "The teacher continues to interact with the children on the cushions, and they appear to be singing or chanting. The child who was at the shelves is now lying down on a mat near the shelves."
+    },
+    {
+      "ts_start": "00:03:00",
+      "ts_end": "00:03:30",
+      "description": "The group activity continues with the teacher leading and the children participating. The child near the shelves remains lying down."
+    },
+    {
+      "ts_start": "00:03:30",
+      "ts_end": "00:04:00",
+      "description": "The teacher and children are still engaged in the group activity. The child near the shelves is now sitting up and observing the activity."
+    },
+    {
+      "ts_start": "00:04:00",
+      "ts_end": "00:04:30",
+      "description": "The group activity continues with the teacher and children. The child near the shelves is now standing and walking around the area."
+    },
+    {
+      "ts_start": "00:04:30",
+      "ts_end": "00:05:00",
+      "description": "The teacher and children are still engaged in the group activity, with the teacher making hand gestures. The child who was walking around the shelves is now sitting on a cushion near the group."
+    }
+  ],
+  "source_model": "gemini-2.5-flash",
+  "prompt_hash": "442b026b720a"
+}

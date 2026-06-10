@@ -1,0 +1,1016 @@
+{
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:00:05",
+      "description": "The teacher is standing next to the table, looking at the children's work. There are three children sitting at the table, two girls and one boy. They are all focused on their work."
+    },
+    {
+      "ts_start": "00:00:05",
+      "ts_end": "00:00:10",
+      "description": "The teacher walks to the left side of the room, near the shelves, and picks up some papers."
+    },
+    {
+      "ts_start": "00:00:10",
+      "ts_end": "00:00:15",
+      "description": "The teacher returns to the table and places the papers on it. She then leans over to talk to the children."
+    },
+    {
+      "ts_start": "00:00:15",
+      "ts_end": "00:00:20",
+      "description": "The teacher is talking to the children, who are still working on their papers. The children are using pencils and crayons."
+    },
+    {
+      "ts_start": "00:00:20",
+      "ts_end": "00:00:25",
+      "description": "The teacher walks back to the shelves on the left side of the room and puts some items away."
+    },
+    {
+      "ts_start": "00:00:25",
+      "ts_end": "00:00:30",
+      "description": "The teacher returns to the table and continues to interact with the children. She is looking at their work and talking to them."
+    },
+    {
+      "ts_start": "00:00:30",
+      "ts_end": "00:00:35",
+      "description": "The teacher walks back to the shelves on the left side of the room and picks up some items."
+    },
+    {
+      "ts_start": "00:00:35",
+      "ts_end": "00:00:40",
+      "description": "The teacher returns to the table and places the items on it. She then leans over to talk to the children."
+    },
+    {
+      "ts_start": "00:00:40",
+      "ts_end": "00:00:45",
+      "description": "The teacher is talking to the children, who are still working on their papers. The children are using pencils and crayons."
+    },
+    {
+      "ts_start": "00:00:45",
+      "ts_end": "00:00:50",
+      "description": "The teacher walks back to the shelves on the left side of the room and puts some items away."
+    },
+    {
+      "ts_start": "00:00:50",
+      "ts_end": "00:00:55",
+      "description": "The teacher returns to the table and continues to interact with the children. She is looking at their work and talking to them."
+    },
+    {
+      "ts_start": "00:00:55",
+      "ts_end": "00:01:00",
+      "description": "The teacher walks back to the shelves on the left side of the room and picks up some papers."
+    },
+    {
+      "ts_start": "00:01:00",
+      "ts_end": "00:01:05",
+      "description": "The teacher returns to the table and places the papers on it. She then leans over to talk to the children."
+    },
+    {
+      "ts_start": "00:01:05",
+      "ts_end": "00:01:10",
+      "description": "The teacher is talking to the children, who are still working on their papers. The children are using pencils and crayons."
+    },
+    {
+      "ts_start": "00:01:10",
+      "ts_end": "00:01:15",
+      "description": "The teacher walks back to the shelves on the left side of the room and puts some items away."
+    },
+    {
+      "ts_start": "00:01:15",
+      "ts_end": "00:01:20",
+      "description": "The teacher returns to the table and continues to interact with the children. She is looking at their work and talking to them."
+    },
+    {
+      "ts_start": "00:01:20",
+      "ts_end": "00:01:25",
+      "description": "The teacher walks back to the shelves on the left side of the room and picks up some items."
+    },
+    {
+      "ts_start": "00:01:25",
+      "ts_end": "00:01:30",
+      "description": "The teacher returns to the table and places the items on it. She then leans over to talk to the children."
+    },
+    {
+      "ts_start": "00:01:30",
+      "ts_end": "00:01:35",
+      "description": "The teacher is talking to the children, who are still working on their papers. The children are using pencils and crayons."
+    },
+    {
+      "ts_start": "00:01:35",
+      "ts_end": "00:01:40",
+      "description": "The teacher walks back to the shelves on the left side of the room and puts some items away."
+    },
+    {
+      "ts_start": "00:01:40",
+      "ts_end": "00:01:45",
+      "description": "The teacher returns to the table and continues to interact with the children. She is looking at their work and talking to them."
+    },
+    {
+      "ts_start": "00:01:45",
+      "ts_end": "00:01:50",
+      "description": "The teacher walks back to the shelves on the left side of the room and picks up some papers."
+    },
+    {
+      "ts_start": "00:01:50",
+      "ts_end": "00:01:55",
+      "description": "The teacher returns to the table and places the papers on it. She then leans over to talk to the children."
+    },
+    {
+      "ts_start": "00:01:55",
+      "ts_end": "00:02:00",
+      "description": "The teacher is talking to the children, who are still working on their papers. The children are using pencils and crayons."
+    },
+    {
+      "ts_start": "00:02:00",
+      "ts_end": "00:02:05",
+      "description": "The teacher walks back to the shelves on the left side of the room and puts some items away."
+    },
+    {
+      "ts_start": "00:02:05",
+      "ts_end": "00:02:10",
+      "description": "The teacher returns to the table and continues to interact with the children. She is looking at their work and talking to them."
+    },
+    {
+      "ts_start": "00:02:10",
+      "ts_end": "00:02:15",
+      "description": "The teacher walks back to the shelves on the left side of the room and picks up some items."
+    },
+    {
+      "ts_start": "00:02:15",
+      "ts_end": "00:02:20",
+      "description": "The teacher returns to the table and places the items on it. She then leans over to talk to the children."
+    },
+    {
+      "ts_start": "00:02:20",
+      "ts_end": "00:02:25",
+      "description": "The teacher is talking to the children, who are still working on their papers. The children are using pencils and crayons."
+    },
+    {
+      "ts_start": "00:02:25",
+      "ts_end": "00:02:30",
+      "description": "The teacher walks back to the shelves on the left side of the room and puts some items away."
+    },
+    {
+      "ts_start": "00:02:30",
+      "ts_end": "00:02:35",
+      "description": "The teacher returns to the table and continues to interact with the children. She is looking at their work and talking to them."
+    },
+    {
+      "ts_start": "00:02:35",
+      "ts_end": "00:02:40",
+      "description": "The teacher walks back to the shelves on the left side of the room and picks up some papers."
+    },
+    {
+      "ts_start": "00:02:40",
+      "ts_end": "00:02:45",
+      "description": "The teacher returns to the table and places the papers on it. She then leans over to talk to the children."
+    },
+    {
+      "ts_start": "00:02:45",
+      "ts_end": "00:02:50",
+      "description": "The teacher is talking to the children, who are still working on their papers. The children are using pencils and crayons."
+    },
+    {
+      "ts_start": "00:02:50",
+      "ts_end": "00:02:55",
+      "description": "The teacher walks back to the shelves on the left side of the room and puts some items away."
+    },
+    {
+      "ts_start": "00:02:55",
+      "ts_end": "00:03:00",
+      "description": "The teacher returns to the table and continues to interact with the children. She is looking at their work and talking to them."
+    },
+    {
+      "ts_start": "00:03:00",
+      "ts_end": "00:03:05",
+      "description": "The teacher walks back to the shelves on the left side of the room and picks up some items."
+    },
+    {
+      "ts_start": "00:03:05",
+      "ts_end": "00:03:10",
+      "description": "The teacher returns to the table and places the items on it. She then leans over to talk to the children."
+    },
+    {
+      "ts_start": "00:03:10",
+      "ts_end": "00:03:15",
+      "description": "The teacher is talking to the children, who are still working on their papers. The children are using pencils and crayons."
+    },
+    {
+      "ts_start": "00:03:15",
+      "ts_end": "00:03:20",
+      "description": "The teacher walks back to the shelves on the left side of the room and puts some items away."
+    },
+    {
+      "ts_start": "00:03:20",
+      "ts_end": "00:03:25",
+      "description": "The teacher returns to the table and continues to interact with the children. She is looking at their work and talking to them."
+    },
+    {
+      "ts_start": "00:03:25",
+      "ts_end": "00:03:30",
+      "description": "The teacher walks back to the shelves on the left side of the room and picks up some papers."
+    },
+    {
+      "ts_start": "00:03:30",
+      "ts_end": "00:03:35",
+      "description": "The teacher returns to the table and places the papers on it. She then leans over to talk to the children."
+    },
+    {
+      "ts_start": "00:03:35",
+      "ts_end": "00:03:40",
+      "description": "The teacher is talking to the children, who are still working on their papers. The children are using pencils and crayons."
+    },
+    {
+      "ts_start": "00:03:40",
+      "ts_end": "00:03:45",
+      "description": "The teacher walks back to the shelves on the left side of the room and puts some items away."
+    },
+    {
+      "ts_start": "00:03:45",
+      "ts_end": "00:03:50",
+      "description": "The teacher returns to the table and continues to interact with the children. She is looking at their work and talking to them."
+    },
+    {
+      "ts_start": "00:03:50",
+      "ts_end": "00:03:55",
+      "description": "The teacher walks back to the shelves on the left side of the room and picks up some items."
+    },
+    {
+      "ts_start": "00:03:55",
+      "ts_end": "00:04:00",
+      "description": "The teacher returns to the table and places the items on it. She then leans over to talk to the children."
+    },
+    {
+      "ts_start": "00:04:00",
+      "ts_end": "00:04:05",
+      "description": "The teacher is talking to the children, who are still working on their papers. The children are using pencils and crayons."
+    },
+    {
+      "ts_start": "00:04:05",
+      "ts_end": "00:04:10",
+      "description": "The teacher walks back to the shelves on the left side of the room and puts some items away."
+    },
+    {
+      "ts_start": "00:04:10",
+      "ts_end": "00:04:15",
+      "description": "The teacher returns to the table and continues to interact with the children. She is looking at their work and talking to them."
+    },
+    {
+      "ts_start": "00:04:15",
+      "ts_end": "00:04:20",
+      "description": "The teacher walks back to the shelves on the left side of the room and picks up some papers."
+    },
+    {
+      "ts_start": "00:04:20",
+      "ts_end": "00:04:25",
+      "description": "The teacher returns to the table and places the papers on it. She then leans over to talk to the children."
+    },
+    {
+      "ts_start": "00:04:25",
+      "ts_end": "00:04:30",
+      "description": "The teacher is talking to the children, who are still working on their papers. The children are using pencils and crayons."
+    },
+    {
+      "ts_start": "00:04:30",
+      "ts_end": "00:04:35",
+      "description": "The teacher walks back to the shelves on the left side of the room and puts some items away."
+    },
+    {
+      "ts_start": "00:04:35",
+      "ts_end": "00:04:40",
+      "description": "The teacher returns to the table and continues to interact with the children. She is looking at their work and talking to them."
+    },
+    {
+      "ts_start": "00:04:40",
+      "ts_end": "00:04:45",
+      "description": "The teacher walks back to the shelves on the left side of the room and picks up some items."
+    },
+    {
+      "ts_start": "00:04:45",
+      "ts_end": "00:04:50",
+      "description": "The teacher returns to the table and places the items on it. She then leans over to talk to the children."
+    },
+    {
+      "ts_start": "00:04:50",
+      "ts_end": "00:04:55",
+      "description": "The teacher is talking to the children, who are still working on their papers. The children are using pencils and crayons."
+    },
+    {
+      "ts_start": "00:04:55",
+      "ts_end": "00:05:00",
+      "description": "The teacher walks back to the shelves on the left side of the room and puts some items away."
+    },
+    {
+      "ts_start": "00:05:00",
+      "ts_end": "00:05:05",
+      "description": "The teacher returns to the table and continues to interact with the children. She is looking at their work and talking to them."
+    },
+    {
+      "ts_start": "00:05:05",
+      "ts_end": "00:05:09",
+      "description": "The teacher walks back to the shelves on the left side of the room and picks up some papers."
+    }
+  ],
+  "transcript": [
+    {
+      "ts_start": "00:00:24",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:00:31",
+      "speaker": "STUDENT_2",
+      "text": "I'm not trying to do it, but I can't."
+    },
+    {
+      "ts_start": "00:00:34",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:00:36",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:00:38",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:00:40",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:00:42",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:00:44",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:00:46",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:00:48",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:00:50",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:00:52",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:00:54",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:00:56",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:00:58",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:01:00",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:01:02",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:01:04",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:01:06",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:01:08",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:01:10",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:01:12",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:01:14",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:01:16",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:01:18",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:01:20",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:01:22",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:01:24",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:01:26",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:01:28",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:01:30",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:01:32",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:01:34",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:01:36",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:01:38",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:01:40",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:01:42",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:01:44",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:01:46",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:01:48",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:01:50",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:01:52",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:01:54",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:01:56",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:01:58",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:02:00",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:02:02",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:02:04",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:02:06",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:02:08",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:02:10",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:02:12",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:02:14",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:02:16",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:02:18",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:02:20",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:02:22",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:02:24",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:02:26",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:02:28",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:02:30",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:02:32",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:02:34",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:02:36",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:02:38",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:02:40",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:02:42",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:02:44",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:02:46",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:02:48",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:02:50",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:02:52",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:02:54",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:02:56",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:02:58",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:03:00",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:03:02",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:03:04",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:03:06",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:03:08",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:03:10",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:03:12",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:03:14",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:03:16",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:03:18",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:03:20",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:03:22",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:03:24",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:03:26",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:03:28",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:03:30",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:03:32",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:03:34",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:03:36",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:03:38",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:03:40",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:03:42",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:03:44",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:03:46",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:03:48",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:03:50",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:03:52",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:03:54",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:03:56",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:03:58",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:04:00",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:04:02",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:04:04",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:04:06",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:04:08",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:04:10",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:04:12",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:04:14",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:04:16",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:04:18",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:04:20",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:04:22",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:04:24",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:04:26",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:04:28",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:04:30",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:04:32",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:04:34",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:04:36",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:04:38",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:04:40",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:04:42",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:04:44",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:04:46",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:04:48",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:04:50",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:04:52",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:04:54",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:04:56",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:04:58",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:05:00",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:05:02",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:05:04",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    },
+    {
+      "ts_start": "00:05:06",
+      "speaker": "TEACHER",
+      "text": "Okay, you can do it."
+    },
+    {
+      "ts_start": "00:05:08",
+      "speaker": "STUDENT_1",
+      "text": "I'm trying to do it inside the line."
+    }
+  ]
+}

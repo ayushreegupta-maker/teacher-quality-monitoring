@@ -1,0 +1,57 @@
+{
+  "session_id": "long_vision_d06_20250919105616_after",
+  "observations": [
+    {
+      "ts_start": "00:00:00",
+      "ts_end": "00:00:30",
+      "description": "The video shows a classroom with wooden floors and white walls. There are six small wooden tables with blue mats underneath, arranged in a semi-circle. Five children are seated at these tables, coloring on sheets of paper. One child stands near the center of the room, also holding a coloring sheet. A teacher is seated on the floor, assisting one of the children with their coloring. There's a black board on the right side of the room, and a window on the left."
+    },
+    {
+      "ts_start": "00:00:30",
+      "ts_end": "00:01:00",
+      "description": "The children continue to color. The standing child walks around the tables, looking at other children's work. The teacher remains seated, helping a child. Papers are scattered on the floor around the tables. One child drops their coloring sheet on the floor and then picks it up."
+    },
+    {
+      "ts_start": "00:01:00",
+      "ts_end": "00:01:30",
+      "description": "The children are still coloring. The teacher stands up and walks around the tables, interacting with different children. One child stands up and walks to the teacher, showing her their coloring sheet. Another child stands up and walks to the right side of the room, near the blackboard."
+    },
+    {
+      "ts_start": "00:01:30",
+      "ts_end": "00:02:00",
+      "description": "The teacher continues to interact with the children, helping them with their coloring. The child who walked to the blackboard is now standing near it, looking at the wall. Another child stands up and walks around the tables. The children are still engaged in coloring."
+    },
+    {
+      "ts_start": "00:02:00",
+      "ts_end": "00:02:30",
+      "description": "The teacher is still helping the children with their coloring. The children are focused on their work. The child who was near the blackboard walks back to the tables. Another child stands up and walks to the right side of the room, near the blackboard."
+    },
+    {
+      "ts_start": "00:02:30",
+      "ts_end": "00:03:00",
+      "description": "The teacher continues to assist the children. The children are still coloring. The child who walked to the blackboard is now standing near it, looking at the wall. Another child stands up and walks around the tables."
+    },
+    {
+      "ts_start": "00:03:00",
+      "ts_end": "00:03:30",
+      "description": "The teacher is still helping the children with their coloring. The children are focused on their work. The child who was near the blackboard walks back to the tables. Another child stands up and walks to the right side of the room, near the blackboard."
+    },
+    {
+      "ts_start": "00:03:30",
+      "ts_end": "00:04:00",
+      "description": "The teacher continues to assist the children. The children are still coloring. The child who walked to the blackboard is now standing near it, looking at the wall. Another child stands up and walks around the tables."
+    },
+    {
+      "ts_start": "00:04:00",
+      "ts_end": "00:04:30",
+      "description": "The teacher is still helping the children with their coloring. The children are focused on their work. The child who was near the blackboard walks back to the tables. Another child stands up and walks to the right side of the room, near the blackboard."
+    },
+    {
+      "ts_start": "00:04:30",
+      "ts_end": "00:05:00",
+      "description": "The teacher is still helping the children with their coloring. The children are focused on their work. The child who was near the blackboard walks back to the tables. Another child stands up and walks to the right side of the room, near the blackboard. The children are still engaged in coloring."
+    }
+  ],
+  "source_model": "gemini-2.5-flash",
+  "prompt_hash": "855bdb7ef3b4"
+}
