@@ -213,3 +213,33 @@ class Rubric(BaseModel):
             if q.id == qid:
                 return q
         raise KeyError(f"Question {qid!r} not found in rubric {self.subject!r}")
+
+
+class RubricAnswer(BaseModel):
+    """One answered question from a single rubric scoring run."""
+    id: str                              # "Q1", "Q2", ...
+    answer: str                          # the model's free-form answer text;
+                                         # numbers come through as strings
+    confidence: Literal["high", "medium", "low"]
+    evidence_timestamps: list[str] = Field(default_factory=list)  # HH:MM:SS
+    rationale: Optional[str] = None
+    # Convenience flags populated by the scorer for downstream filtering.
+    # Stored on the answer (not derived ad-hoc) so the accumulator XLSX
+    # columns 21-23 (insufficient_information, had_evidence,
+    # evidence_parse_ok) can pivot without re-parsing answer strings.
+    insufficient_information: bool = False
+    had_evidence: bool = False
+    evidence_parse_ok: bool = True
+
+
+class RubricAnswerSet(BaseModel):
+    """The output of one rubric scoring run on one session."""
+    session_id: str
+    subject: str
+    rubric_version: str                  # e.g. "v1_2026-06-10"
+    answers: dict[str, RubricAnswer]     # keyed by Q-id
+    source_model: str                    # the reasoning model that answered
+    shape: Literal["A", "B"]             # A = Gemini direct, B = Gemini→text reasoner
+    prompt_hash: Optional[str] = None
+    rendered_prompt_path: Optional[str] = None  # for audit
+    raw_response_path: Optional[str] = None     # for audit

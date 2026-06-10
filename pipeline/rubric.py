@@ -1,5 +1,5 @@
 """
-Q&A rubric loader.
+Q&A rubric loader + prompt renderer.
 
 The rubric workbook (`~/Downloads/Teacher Quality Monitoring (1).xlsx`) has
 one tab per subject: Art, Public Speaking, Robotics. Each tab is a flat
@@ -159,3 +159,136 @@ def load_rubric(
         f"{len(sections)} section(s) from {workbook_path.name}"
     )
     return rubric
+
+
+# ─── Prompt rendering ─────────────────────────────────────────────────────
+
+
+def render_questions_block(rubric: Rubric) -> str:
+    """Render the rubric questions as the `{questions_block}` substring
+    that gets interpolated into the prompt template.
+
+    Output structure (matches the legacy script's format_questions_block
+    byte-for-byte when the rubric content is unchanged):
+
+        \n=== <section> ===
+        \n[Group] <criteria>
+          Q1 [<analysis_tag>]: <observe_text>  (input ref: <input_ref>)
+          Q2 [<analysis_tag>]: <observe_text>
+          ...
+
+    Section headers fire on each new section name; [Group] headers fire on
+    each new criteria within a section. `(input ref: ...)` is only emitted
+    when the question carries an input_ref (Art tab today).
+    """
+    lines: list[str] = []
+    current_section: str | None = None
+    current_criteria: str | None = None
+    for q in rubric.all_questions():
+        if q.section != current_section:
+            current_section = q.section
+            current_criteria = None
+            lines.append(f"\n=== {current_section} ===")
+        if q.criteria != current_criteria:
+            current_criteria = q.criteria
+            lines.append(f"\n[Group] {current_criteria}")
+        analysis_tag = f"[{q.analysis_tag}]" if q.analysis_tag else ""
+        input_hint = f"  (input ref: {q.input_ref})" if q.input_ref else ""
+        lines.append(f"  {q.id} {analysis_tag}: {q.observe_text}{input_hint}")
+    return "\n".join(lines)
+
+
+# Shape labels mirror PLAN.md §3 — "A" = Gemini watches the video directly,
+# "B" = Gemini extracted evidence, Claude (or another text reasoner) scores.
+_SHAPE_A = "A"
+_SHAPE_B = "B"
+
+
+def render_prompt(
+    rubric: Rubric,
+    prompt_path: Path,
+    *,
+    shape: str = _SHAPE_A,
+    duration_str: str,
+    duration_sec: int,
+    wallclock_start: str,
+    wallclock_end: str,
+) -> str:
+    """Load a rubric prompt template from `prompt_path` and interpolate it
+    with the rubric's question block + the run metadata.
+
+    Shape A (Gemini direct):
+      Returns a fully-rendered prompt ready to send alongside the trimmed
+      video. The template uses Python str.format() — placeholders are bare
+      `{name}` and literal braces are escaped `{{` / `}}` (per the
+      externalised art template at prompts/art/rubric_art_v1_*.md).
+
+    Shape B (text reasoner over Gemini-extracted evidence):
+      Not implemented in 8a. The Shape B prompt template differs (inlines
+      evidence JSON instead of attaching video), and the scoring path
+      (`score()`) doesn't exist yet. Raises NotImplementedError.
+
+    `prompt_path` is either an absolute Path or relative to prompts/.
+    Both `prompts/art/rubric_art_v1_2026-06-10` and the full Path are OK —
+    we don't load via load_prompt() here because the templates use
+    str.format() not Jinja, and load_prompt strips frontmatter cleanly.
+    """
+    if shape != _SHAPE_A:
+        raise NotImplementedError(
+            f"render_prompt(shape={shape!r}) not implemented — "
+            f"Shape B comes in migration step 8b"
+        )
+
+    # Resolve prompt_path. Accept either an absolute path or a prompts/-
+    # relative id (e.g. 'art/rubric_art_v1_2026-06-10').
+    if not isinstance(prompt_path, Path):
+        prompt_path = Path(prompt_path)
+    if not prompt_path.is_absolute():
+        # Look under prompts/, trying both bare and .md-suffixed
+        candidates = [
+            prompt_path,
+            _PROMPTS_DIR / prompt_path,
+            _PROMPTS_DIR / f"{prompt_path}.md",
+        ]
+        for cand in candidates:
+            if cand.exists():
+                prompt_path = cand
+                break
+        else:
+            raise FileNotFoundError(
+                f"prompt not found under {_PROMPTS_DIR}: tried {candidates}"
+            )
+
+    raw = prompt_path.read_text()
+    body = _strip_frontmatter(raw)
+
+    questions_block = render_questions_block(rubric)
+
+    rendered = body.format(
+        questions_block=questions_block,
+        duration_str=duration_str,
+        duration_sec=duration_sec,
+        wallclock_start=wallclock_start,
+        wallclock_end=wallclock_end,
+    )
+    return rendered
+
+
+# ─── Internal helpers ─────────────────────────────────────────────────────
+
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent
+_PROMPTS_DIR = _PROJECT_ROOT / "prompts"
+
+import re as _re
+
+_FRONTMATTER_RE = _re.compile(r"^---\n.*?\n---\n", _re.DOTALL)
+
+
+def _strip_frontmatter(text: str) -> str:
+    """Strip a leading `---\\n...\\n---\\n` YAML frontmatter block, if present.
+    Mirrors pipeline.render.strip_frontmatter — duplicated here so this
+    module has no dependency on the legacy render module."""
+    if not text.startswith("---"):
+        return text
+    m = _FRONTMATTER_RE.match(text)
+    return text[m.end():] if m else text
