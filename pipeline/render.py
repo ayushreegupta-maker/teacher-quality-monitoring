@@ -4,7 +4,13 @@ from pathlib import Path
 import yaml
 from jinja2 import Environment
 
-from pipeline.types import Rubric, RubricDimension, SessionMeta, Transcript, VisualObservations
+from pipeline.types import (
+    LegacyRubric,
+    LegacyRubricDimension,
+    SessionMeta,
+    Transcript,
+    VisualObservations,
+)
 
 ROOT = Path(__file__).resolve().parent.parent
 PROMPT_DIR = ROOT / "prompts"
@@ -23,9 +29,11 @@ def load_prompt(prompt_id: str) -> str:
     return strip_frontmatter((PROMPT_DIR / f"{prompt_id}.md").read_text())
 
 
-def load_rubric(path: Path | None = None) -> Rubric:
+def load_rubric(path: Path | None = None) -> LegacyRubric:
+    """Legacy 5-dimension rubric loader (YAML). Stays around for the archived
+    scoring path. New Q&A rubric loader lives in pipeline.rubric."""
     path = path or (RUBRIC_DIR / "rubric_v0_1.yaml")
-    return Rubric.model_validate(yaml.safe_load(path.read_text()))
+    return LegacyRubric.model_validate(yaml.safe_load(path.read_text()))
 
 
 def render_transcript(transcript: Transcript) -> str:
@@ -43,13 +51,15 @@ def _jinja_env() -> Environment:
 
 
 def render_score_prompt(
-    dimension: RubricDimension,
-    rubric: Rubric,
+    dimension: LegacyRubricDimension,
+    rubric: LegacyRubric,
     session: SessionMeta,
     transcript: Transcript,
     observations: VisualObservations,
     few_shot_examples: list | None = None,
 ) -> str:
+    """Legacy 5-dimension prompt renderer. Stays around for the archived
+    scoring path; new Q&A path uses pipeline.rubric.render_prompt()."""
     template = _jinja_env().from_string(load_prompt("score_dimension"))
     return template.render(
         dimension=dimension.model_dump(),

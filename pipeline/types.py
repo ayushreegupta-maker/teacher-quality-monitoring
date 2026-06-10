@@ -135,7 +135,11 @@ class BoundaryDetection(BaseModel):
     prompt_hash: Optional[str] = None
 
 
-class RubricDimension(BaseModel):
+# ─── Legacy 5-dimension rubric (YAML-driven; pre-Q&A architecture) ─────────
+# Used only by render_score_prompt() + the archived scoring path. New
+# architecture uses Rubric/RubricSection/RubricQuestion below, loaded from
+# the rubric Excel workbook.
+class LegacyRubricDimension(BaseModel):
     id: str
     label: str
     description: str
@@ -146,14 +150,14 @@ class RubricDimension(BaseModel):
     scoring_direction: Optional[str] = None
 
 
-class RubricDomain(BaseModel):
+class LegacyRubricDomain(BaseModel):
     id: str
     label: str
     description: str
-    dimensions: list[RubricDimension]
+    dimensions: list[LegacyRubricDimension]
 
 
-class Rubric(BaseModel):
+class LegacyRubric(BaseModel):
     version: str
     name: str
     created_at: str
@@ -161,19 +165,51 @@ class Rubric(BaseModel):
     scoring_scale: dict
     anti_bias_rules: list[str]
     evidence_requirements: list[str]
-    domains: list[RubricDomain]
+    domains: list[LegacyRubricDomain]
 
     @field_validator("created_at", mode="before")
     @classmethod
     def _coerce_to_str(cls, v):
         return str(v)
 
-    def get_dimension(self, dim_id: str) -> RubricDimension:
+    def get_dimension(self, dim_id: str) -> LegacyRubricDimension:
         for domain in self.domains:
             for dim in domain.dimensions:
                 if dim.id == dim_id:
                     return dim
         raise KeyError(f"Dimension {dim_id} not found in rubric")
 
-    def all_dimensions(self) -> list[RubricDimension]:
+    def all_dimensions(self) -> list[LegacyRubricDimension]:
         return [dim for domain in self.domains for dim in domain.dimensions]
+
+
+# ─── New Q&A rubric (Excel-driven; one tab per subject) ────────────────────
+# Drives the new architecture. See PLAN.md §3.1 + pipeline/rubric.py.
+class RubricQuestion(BaseModel):
+    """One row in the workbook's 'What AI needs to observe' column."""
+    id: str                              # "Q1", "Q2", ...
+    section: str                         # "Environment", "Content Knowledge", ...
+    criteria: Optional[str] = None       # the group label (col B); spans multiple Qs
+    observe_text: str                    # the actual question (col C)
+    input_ref: Optional[str] = None      # optional input reference (col D — art only)
+    analysis_tag: str                    # "Visual" / "Audio" / "Visual + Audio" (col E)
+
+
+class RubricSection(BaseModel):
+    name: str                            # "Environment" / "Content Knowledge" / ...
+    questions: list[RubricQuestion]
+
+
+class Rubric(BaseModel):
+    subject: str                         # "art" / "public_speaking" / "robotics"
+    source_path: str                     # absolute path to the workbook on disk
+    sections: list[RubricSection]
+
+    def all_questions(self) -> list[RubricQuestion]:
+        return [q for s in self.sections for q in s.questions]
+
+    def get_question(self, qid: str) -> RubricQuestion:
+        for q in self.all_questions():
+            if q.id == qid:
+                return q
+        raise KeyError(f"Question {qid!r} not found in rubric {self.subject!r}")
