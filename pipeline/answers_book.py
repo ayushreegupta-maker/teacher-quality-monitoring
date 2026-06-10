@@ -276,7 +276,7 @@ def write_sidecar(
             "session_id": answer_set.session_id,
             "session_date": _session_date_from_id(answer_set.session_id),
             "camera": _camera_from_session_id(answer_set.session_id),
-            "teacher_id": config.get("teacher_id"),  # blank until step 33 wires schedule
+            "teacher_id": config.get("teacher_id"),  # CLI override now (option-c); auto from teacher_schedule once #33 lands
             "subject": answer_set.subject,
             "rubric_version": answer_set.rubric_version,
             "vision_model": config.get("vision_model"),

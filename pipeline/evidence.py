@@ -126,6 +126,8 @@ def build_evidence_bundle(
     vision_model: Optional[str] = None,
     fps: Optional[float] = None,
     chunking: str = DEFAULT_CHUNKING,
+    activity_context: Optional[str] = None,
+    teacher_id: Optional[str] = None,
     force: bool = False,
     cache_root: Path = _DEFAULT_CACHE_ROOT,
 ) -> EvidenceBundle:
@@ -135,6 +137,12 @@ def build_evidence_bundle(
     `subject` defaults to the session camera's subject (via
     `resolve_session_segments`). `vision_model` defaults to
     `llm.vision_model`.
+
+    `activity_context` + `teacher_id` are per-session metadata that flows
+    into the vision-pass prompt (vision.md already has Jinja hooks for
+    `session.activity_context`). They're recorded on the bundle for
+    traceability but are NOT part of the cache key — pass `--force` when
+    they change for the same session.
 
     The function requires a built session-video cache to read boundaries
     from, so it first calls `build_session_video(session_id, llm)` —
@@ -161,7 +169,23 @@ def build_evidence_bundle(
             f"[{session_id}] evidence cache HIT — loading from "
             f"{bundle_path.relative_to(_PROJECT_ROOT) if str(bundle_path).startswith(str(_PROJECT_ROOT)) else bundle_path}"
         )
-        return EvidenceBundle.model_validate_json(bundle_path.read_text())
+        cached = EvidenceBundle.model_validate_json(bundle_path.read_text())
+        # Warn if the caller passed context that doesn't match the cached
+        # values — the cache key doesn't include context, so a mismatch
+        # is silent unless we surface it here.
+        if activity_context is not None and cached.activity_context != activity_context:
+            log.warning(
+                f"[{session_id}] cached bundle has "
+                f"activity_context={cached.activity_context!r}, but caller "
+                f"passed {activity_context!r}. Pass --force to rebuild."
+            )
+        if teacher_id is not None and cached.teacher_id != teacher_id:
+            log.warning(
+                f"[{session_id}] cached bundle has teacher_id="
+                f"{cached.teacher_id!r}, but caller passed {teacher_id!r}. "
+                "Pass --force to rebuild."
+            )
+        return cached
 
     log.info(
         f"[{session_id}] evidence cache MISS — building "
@@ -177,13 +201,18 @@ def build_evidence_bundle(
     # Run vision_observe on the TRIMMED video (class window only). Uses a
     # SessionMeta scoped to this session so observe-prompt metadata is right.
     duration_min = boundaries_class_duration_minutes(boundaries, sva)
-    sess_meta = SessionMeta(
+    sess_meta_kwargs = dict(
         session_id=session_id,
         recorded_at=segs[0].starts_at.date(),
         duration_minutes=duration_min,
         subject=subject,
         video_path=sva.trimmed,
     )
+    if activity_context is not None:
+        sess_meta_kwargs["activity_context"] = activity_context
+    if teacher_id is not None:
+        sess_meta_kwargs["teacher_id"] = teacher_id
+    sess_meta = SessionMeta(**sess_meta_kwargs)
     transcript, observations = vision_observe(
         sess_meta, llm, chunk_minutes=_chunk_minutes_from_chunking(chunking)
     )
@@ -199,6 +228,8 @@ def build_evidence_bundle(
         observations=[o.model_dump() for o in observations.observations],
         transcript_source_model=transcript.source_model,
         observations_source_model=observations.source_model,
+        activity_context=activity_context,
+        teacher_id=teacher_id,
         built_at=datetime.utcnow().isoformat(timespec="seconds"),
         source_run_dir=str(sva.session_dir),
     )

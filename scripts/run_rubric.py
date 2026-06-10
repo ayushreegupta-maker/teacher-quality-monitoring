@@ -201,6 +201,19 @@ def main() -> int:
                         "Gemini default (recommended)")
     p.add_argument("--chunking", default="5min",
                    help="(Shape B) vision-pass chunking: 5min / 10min / single")
+    # Per-session context fed into the vision-pass prompt (option-c
+    # patch). Not part of the evidence-cache key — pass --force when
+    # context changes for the same session.
+    p.add_argument("--activity-context", default=None,
+                   help="Free-form notes the vision pass should know about, "
+                        "e.g. 'Week 3 lesson 4: Eric Carle collage'. Goes "
+                        "into the vision prompt's `session.activity_context`. "
+                        "Recorded on the EvidenceBundle for traceability")
+    p.add_argument("--teacher-id", default=None,
+                   help="Teacher identifier for this session. Recorded on "
+                        "the EvidenceBundle + the accumulator XLSX. Will be "
+                        "auto-resolved from teacher_schedule once task #33 "
+                        "lands")
     p.add_argument("--force", action="store_true",
                    help="Re-run all stages even if their outputs exist")
     p.add_argument("--dry-run", action="store_true",
@@ -277,6 +290,8 @@ def main() -> int:
             vision_model=args.vision_model,
             fps=args.vision_fps,
             chunking=args.chunking,
+            activity_context=args.activity_context,
+            teacher_id=args.teacher_id,
             force=args.force,
         )
         log.info(
@@ -324,6 +339,11 @@ def main() -> int:
         "finished_at": datetime.utcnow().replace(microsecond=0).isoformat(),
         "wall_clock_seconds": round(elapsed, 1),
         "prompt_hash": answer_set.prompt_hash,
+        # Per-session context fed into the vision pass (option-c).
+        # Recorded here for audit even on Shape A (where they're not used
+        # — Shape A's rubric prompt has no activity_context hook today).
+        "activity_context": args.activity_context,
+        "teacher_id": args.teacher_id,
     }
     if args.shape == "B":
         config["vision_model"] = args.vision_model

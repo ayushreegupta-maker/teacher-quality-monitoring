@@ -270,6 +270,14 @@ class EvidenceBundle(BaseModel):
     phases: Optional[list[dict]] = None
     explanations: Optional[list[dict]] = None
     disturbances: Optional[list[dict]] = None
+    # Per-session context fed into the vision-pass prompt (PLAN.md /
+    # session-metadata gap, option-c patch). Recorded in the bundle so
+    # downstream Shape B reasoning can also see what context the vision
+    # pass had. Both fields are deliberately NOT part of the cache key —
+    # the caller is expected to pass `--force` when context changes for
+    # the same session.
+    activity_context: Optional[str] = None
+    teacher_id: Optional[str] = None
     # Provenance + traceability
     built_at: Optional[str] = None                # ISO timestamp
     source_run_dir: Optional[str] = None
