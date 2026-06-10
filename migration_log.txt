@@ -1,0 +1,19 @@
+# TQM migration log — append-only audit trail of every `mv`.
+# Format: <ISO-UTC-timestamp>\t<step>\t<old_path>\t<new_path>\t<note?>
+2026-06-10T10:43:10.588902	1	/Users/oh/Desktop/Teacher Quality Monitoring/data/sessions	/Users/oh/Desktop/Teacher Quality Monitoring/data/_archive/sessions_batch_era	legacy outputs from older batch_*.py runners
+2026-06-10T10:43:10.589484	1	/Users/oh/Desktop/Teacher Quality Monitoring/data/segments	/Users/oh/Desktop/Teacher Quality Monitoring/data/_archive/segments	old chunking step outputs
+2026-06-10T10:43:10.589728	1	/Users/oh/Desktop/Teacher Quality Monitoring/data/batch_long_reports	/Users/oh/Desktop/Teacher Quality Monitoring/data/_archive/batch_long_reports	older batch-runner reports
+2026-06-10T10:43:10.589934	1	/Users/oh/Desktop/Teacher Quality Monitoring/data/batch_reports	/Users/oh/Desktop/Teacher Quality Monitoring/data/_archive/batch_reports	older batch-runner reports
+2026-06-10T10:43:10.590148	1	/Users/oh/Desktop/Teacher Quality Monitoring/data/long_video_reports	/Users/oh/Desktop/Teacher Quality Monitoring/data/_archive/long_video_reports	older long-video runner reports
+2026-06-10T10:43:10.590339	1	/Users/oh/Desktop/Teacher Quality Monitoring/app	/Users/oh/Desktop/Teacher Quality Monitoring/data/_archive/app	unused web UI scaffold
+2026-06-10T10:43:10.590828	1	/Users/oh/Desktop/Teacher Quality Monitoring/batch_long_video.py	/Users/oh/Desktop/Teacher Quality Monitoring/scripts/_archive/batch_long_video.py	predecessor of run_art_rubric_test.py
+2026-06-10T10:43:10.591084	1	/Users/oh/Desktop/Teacher Quality Monitoring/batch_score.py	/Users/oh/Desktop/Teacher Quality Monitoring/scripts/_archive/batch_score.py	old 5-dim rubric batch runner
+2026-06-10T10:43:10.591407	1	/Users/oh/Desktop/Teacher Quality Monitoring/score_long_video.py	/Users/oh/Desktop/Teacher Quality Monitoring/scripts/_archive/score_long_video.py	old long-video scoring runner
+2026-06-10T10:43:10.591804	1	/Users/oh/Desktop/Teacher Quality Monitoring/tqm_db.py	/Users/oh/Desktop/Teacher Quality Monitoring/scripts/_archive/tqm_db.py	top-level legacy DB helper
+2026-06-10T10:43:10.592176	1	/Users/oh/Desktop/Teacher Quality Monitoring/test_render.py	/Users/oh/Desktop/Teacher Quality Monitoring/scripts/_archive/test_render.py	old test scaffold at project root
+2026-06-10T10:43:10.592592	1	/Users/oh/Desktop/Teacher Quality Monitoring/score_cli.py	/Users/oh/Desktop/Teacher Quality Monitoring/scripts/_archive/score_cli.py	phase-0a single-video scorer, uses old 5-dim rubric
+2026-06-10T10:43:10.592852	1	/Users/oh/Desktop/Teacher Quality Monitoring/pipeline/extract.py	/Users/oh/Desktop/Teacher Quality Monitoring/pipeline/_archive/extract.py	older artifact-extraction helpers
+2026-06-10T10:43:10.593056	1	/Users/oh/Desktop/Teacher Quality Monitoring/pipeline/items.py	/Users/oh/Desktop/Teacher Quality Monitoring/pipeline/_archive/items.py	item/dimension classes for old 5-dim rubric
+2026-06-10T10:43:10.593470	1	/Users/oh/Desktop/Teacher Quality Monitoring/pipeline/score.py	/Users/oh/Desktop/Teacher Quality Monitoring/pipeline/_archive/score.py	old per-dimension scoring, replaced by pipeline/rubric.py
+2026-06-10T10:43:10.593901	1	/Users/oh/Desktop/Teacher Quality Monitoring/prompts/score_dimension.md	/Users/oh/Desktop/Teacher Quality Monitoring/prompts/_archive/score_dimension.md	old 5-dimension scoring prompt
+2026-06-10T10:43:10.594376	1	/Users/oh/Desktop/Teacher Quality Monitoring/prompts/consolidate_items.md	/Users/oh/Desktop/Teacher Quality Monitoring/prompts/_archive/consolidate_items.md	item-consolidation prompt for old flow
