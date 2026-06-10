@@ -18,10 +18,15 @@ test_output/
 
 # TQM data caches — reproducible, kept off git to keep the repo small.
 # data/raw/ holds NVR pulls (*.mp4 already gitignored above).
+# data/sessions/ is the per-session video cache (combined + trimmed +
+# boundaries) built by pipeline.session_video. Each session is ~1.5 GB
+# on disk — recomputable from raw + boundary detection. Should have
+# been gitignored alongside the others below in step 9.
 # data/evidence_cache/ is rebuilt by pipeline.evidence (each cached bundle
 # can be ~1MB; sweeping many sessions would bloat the repo fast).
 # data/rubric_runs/ is per-run output keyed on config — useful locally,
 # recomputable from cache + script.
+data/sessions/
 data/evidence_cache/
 data/rubric_runs/
 data/_answer_queue/
