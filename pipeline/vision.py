@@ -389,3 +389,112 @@ def vision_observe(
         f"{len(observations.observations)} observations"
     )
     return transcript, observations
+
+
+# ─── Re-apply the dedupe to an existing transcript ────────────────────────
+
+
+def redo_dedupe_for_run(run_dir) -> dict:
+    """Re-apply the 3-pass dedupe to <run_dir>/6_transcript.json — useful
+    when the dedupe rules have been tightened and we want the cleaner
+    output without re-paying for the vision pass.
+
+    Writes:
+        <run_dir>/6_transcript_deduped_v2.json
+        <run_dir>/6_transcript_readable_v2.txt
+
+    Returns a summary dict::
+
+        {
+            "loaded": int,                # input segment count
+            "pass1_adjacent_collapsed": int,
+            "pass2_within_segment_collapsed": int,
+            "pass3_alternating_collapsed": int,
+            "final": int,                 # output segment count
+            "json_out": str,
+            "text_out": str,
+        }
+
+    Absorbed from scripts/redo_transcript_dedupe.py in step 11 of the TQM
+    consolidation migration. CLI entry point at the bottom of this module
+    so `python -m pipeline.vision <run_dir>` works.
+    """
+    import json
+    from pathlib import Path
+
+    run_dir = Path(run_dir).resolve()
+    src = run_dir / "6_transcript.json"
+    if not src.exists():
+        raise FileNotFoundError(f"missing: {src}")
+
+    data = json.loads(src.read_text())
+    segments = [dict(s) for s in data.get("segments", [])]
+    n_in = len(segments)
+    log.info(f"redo_dedupe: loaded {n_in} segments from {src}")
+
+    # Pass 1: adjacent-run dedupe. Harmless on already-deduped input; lets
+    # us report one consistent set of counters end-to-end.
+    segments, p1 = _dedupe_transcript_loops(segments, min_run=5)
+    log.info(f"redo_dedupe: pass 1 (adjacent runs) collapsed: {p1}")
+
+    # Pass 2: within-segment text repetition (single segment carrying the
+    # same period-delimited fragment N times in a row).
+    p2 = 0
+    for s in segments:
+        new_text, c = _collapse_within_segment_repetition(s.get("text", ""), min_run=5)
+        if c:
+            s["text"] = new_text
+            p2 += c
+    log.info(f"redo_dedupe: pass 2 (within-segment fragments) collapsed: {p2}")
+
+    # Pass 3: A-B-A-B alternating cycles.
+    segments, p3 = _dedupe_alternating_loops(segments, min_cycles=5)
+    log.info(f"redo_dedupe: pass 3 (alternating A-B cycles) collapsed: {p3}")
+
+    n_out = len(segments)
+    log.info(f"redo_dedupe: segments: {n_in} -> {n_out}  (removed {n_in - n_out})")
+
+    data["segments"] = segments
+    out_json = run_dir / "6_transcript_deduped_v2.json"
+    out_json.write_text(json.dumps(data, indent=2))
+
+    lines = []
+    for s in segments:
+        ts = s.get("ts_start") or "--:--:--"
+        spk = s.get("speaker") or "?"
+        txt = s.get("text") or ""
+        lines.append(f"[{ts}] {spk}: {txt}")
+    out_txt = run_dir / "6_transcript_readable_v2.txt"
+    out_txt.write_text("\n".join(lines) + "\n")
+
+    return {
+        "loaded": n_in,
+        "pass1_adjacent_collapsed": p1,
+        "pass2_within_segment_collapsed": p2,
+        "pass3_alternating_collapsed": p3,
+        "final": n_out,
+        "json_out": str(out_json),
+        "text_out": str(out_txt),
+    }
+
+
+if __name__ == "__main__":
+    # CLI:  python -m pipeline.vision <run_dir>
+    # Re-applies the 3-pass dedupe to <run_dir>/6_transcript.json without
+    # re-running the Gemini vision pass. Useful after dedupe-rule updates.
+    import sys
+    if len(sys.argv) != 2:
+        sys.exit("usage: python -m pipeline.vision <run_dir>")
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+    )
+    result = redo_dedupe_for_run(sys.argv[1])
+    print(
+        f"\ndone. {result['loaded']} -> {result['final']} segments.\n"
+        f"  pass1 (adjacent): {result['pass1_adjacent_collapsed']}\n"
+        f"  pass2 (within):   {result['pass2_within_segment_collapsed']}\n"
+        f"  pass3 (alt A-B):  {result['pass3_alternating_collapsed']}\n"
+        f"wrote: {result['json_out']}\n"
+        f"       {result['text_out']}"
+    )
