@@ -3,7 +3,8 @@ CCTV downloader — pulls classroom video from a Hikvision NVR via ISAPI over Ta
 
 Reads camera config from `data/cctv_cameras.xlsx`, searches for recordings on a
 given date and time window, downloads each segment, transcodes to H.264 + AAC if
-needed (so Gemini accepts it), and saves into `data/raw/`.
+needed (so Gemini accepts it), and saves into `data/raw/<subject>/` (subject
+derived from the camera's row in `cctv_cameras.xlsx`).
 
 Usage:
   # Pull a single camera for a specific date + time window
@@ -23,7 +24,7 @@ Usage:
   python scripts/cctv_pull.py --date 2026-05-30 --camera D14 --no-transcode
 
 Output naming:
-  data/raw/{camera_id}_{centre}_{subject}_{YYYYMMDD}_{startHHMMSS}.mp4
+  data/raw/{subject}/{camera_id}_{centre}_{subject}_{YYYYMMDD}_{startHHMMSS}.mp4
 
 Requires (in .env at project root):
   NVR_USER=admin
@@ -315,12 +316,15 @@ def pull_camera(cam: dict, date: date_cls, start_hm: str, end_hm: str,
     downloaded = 0
     skipped = 0
     failed = 0
+    # Each camera = one subject (cctv_cameras.xlsx invariant), so each pull
+    # lands inside its subject's subfolder. See PLAN.md §3.5.
+    subject_dir = OUTPUT_DIR / fmt_filename_safe(cam["subject"])
     TMP_DIR.mkdir(parents=True, exist_ok=True)
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    subject_dir.mkdir(parents=True, exist_ok=True)
 
     for i, seg in enumerate(segs, 1):
         final_name = output_filename(cam, seg["start"])
-        final_path = OUTPUT_DIR / final_name
+        final_path = subject_dir / final_name
         if final_path.exists():
             log.info(f"  [{i}/{len(segs)}] {final_name} already exists — skip")
             skipped += 1
