@@ -40,6 +40,12 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 from adapters.llm import LLMAdapter
+from pipeline.answers_book import (
+    compute_run_n,
+    init_workbook,
+    merge_queue,
+    write_sidecar,
+)
 from pipeline.boundaries import _parse_hms
 from pipeline.evidence import build_evidence_bundle, enrich_bundle_with_shape_a
 from pipeline.rubric import (
@@ -63,6 +69,8 @@ DEFAULT_WORKBOOK = Path.home() / "Downloads" / "Teacher Quality Monitoring (1).x
 DEFAULT_CAMERAS_XLSX = ROOT / "data" / "cctv_cameras.xlsx"
 RUBRIC_RUNS_DIR = ROOT / "data" / "rubric_runs"
 PROMPTS_DIR = ROOT / "prompts"
+ANSWERS_XLSX = ROOT / "data" / "tqm_answers.xlsx"
+ANSWERS_QUEUE_DIR = ROOT / "data" / "_answer_queue"
 
 log = logging.getLogger("run_rubric")
 logging.basicConfig(
@@ -323,12 +331,43 @@ def main() -> int:
         config["chunking"] = args.chunking
     (run_dir / "0_config.json").write_text(json.dumps(config, indent=2))
 
+    # 9. Emit sidecar + merge into the rolling accumulator.
+    finished_at = datetime.utcnow().replace(microsecond=0).isoformat()
+    run_id = started_at.isoformat()
+    config_slug = run_dir.name
+    run_n = compute_run_n(
+        ANSWERS_XLSX,
+        session_id=args.session_id,
+        subject=subject,
+        rubric_version=args.rubric_version,
+        shape=args.shape,
+        reasoner=answer_set.source_model,
+    )
+    init_workbook(ANSWERS_XLSX)  # no-op if it already exists
+    write_sidecar(
+        ANSWERS_QUEUE_DIR,
+        answer_set=answer_set, rubric=rubric, config=config,
+        run_id=run_id,
+        started_at=started_at.isoformat(),
+        finished_at=finished_at,
+        wall_clock_seconds=round(elapsed, 1),
+        config_slug=config_slug,
+        run_n=run_n,
+    )
+    merge_result = merge_queue(ANSWERS_XLSX, ANSWERS_QUEUE_DIR)
+    if merge_result.get("backup_path"):
+        log.warning(
+            f"accumulator merge FAILED — backup at {merge_result['backup_path']}, "
+            "sidecar retained for retry"
+        )
+
     answered = sum(1 for a in answer_set.answers.values()
                    if not a.insufficient_information)
     insufficient = len(answer_set.answers) - answered
     log.info(
         f"DONE. wrote {run_dir.relative_to(ROOT)} — "
-        f"{answered} answered, {insufficient} INSUFFICIENT"
+        f"{answered} answered, {insufficient} INSUFFICIENT "
+        f"(run_n={run_n})"
     )
     return 0
 
