@@ -69,16 +69,16 @@ The current art rubric prompt is built **inline inside `run_art_rubric_test.py`*
 | Subdir | Created by | Status | Disposition |
 |---|---|---|---|
 | `art_rubric_runs/` | `run_art_rubric_test.py` | **current** — 2 runs, the recent ones | keep |
-| `raw/` | `cctv_pull.py` | **current** — 379 files, flat | **reorganise** in migration step 2: properly-named files → `data/raw/<subject>/`; older test files → `data/_legacy/raw_pre_subject_organization/` |
-| `sessions/` | older `batch_*.py` | **legacy outputs** (90 dirs) | **archive** to `data/_legacy/sessions_batch_era/` — frees `data/sessions/` for the new session video cache (§3.5) |
-| `segments/` | old chunking step | **legacy** | **archive** to `data/_legacy/segments/` |
-| `batch_long_reports/`, `batch_reports/`, `long_video_reports/` | older runners | **legacy outputs** | **archive** to `data/_legacy/` |
+| `raw/` | `cctv_pull.py` | **current** — 379 files, flat | **reorganise** in migration step 2: properly-named files → `data/raw/<subject>/`; older test files → `data/_archive/raw_pre_subject_organization/` |
+| `sessions/` | older `batch_*.py` | **legacy outputs** (90 dirs) | **archive** to `data/_archive/sessions_batch_era/` — frees `data/sessions/` for the new session video cache (§3.5) |
+| `segments/` | old chunking step | **legacy** | **archive** to `data/_archive/segments/` |
+| `batch_long_reports/`, `batch_reports/`, `long_video_reports/` | older runners | **legacy outputs** | **archive** to `data/_archive/` |
 | `question_bank/`, `question_bank_runs/` | `run_question_bank.py` | **completed, retainable** | keep — useful comparators |
 | `spotlight_questions/`, `spotlight_runs/` | `run_spotlight_questions.py` | **completed, retainable** | keep — useful comparators |
 | `cctv_cameras.xlsx` | manual | **current** | keep; eventually → SQLite (task #14) |
 | `tqm.db` | SQLite | **current** | keep |
 
-"Archive" means: move to `data/_legacy/` so it's out of the way but recoverable. Nothing deleted until you say so.
+"Archive" means: move to `data/_archive/` so it's out of the way but recoverable. Nothing deleted until you say so.
 
 ### 1.7 Other
 
@@ -387,8 +387,8 @@ We previously discussed routing video through GCS + Vertex AI for upload savings
 
 **Migration steps:**
 
-1. **Archive legacy first** to free namespaces. Move `data/sessions/` → `data/_legacy/sessions_batch_era/` (frees `data/sessions/` for the new session video cache). Move `data/segments/`, `data/batch_*_reports/`, `data/long_video_reports/` → `data/_legacy/`. Move `batch_long_video.py`, `batch_score.py`, `score_long_video.py`, `tqm_db.py` (top-level legacy utilities) → `scripts/_archive/`. Nothing deleted. Commit.
-2. **Bucket `data/raw/` by subject** (one-time bulk move). New layout: `data/raw/art/`, `data/raw/public_speaking/`, `data/raw/robotics/`. Parse each existing properly-named file (`D14_hrbr_public_speaking_…`, `D28_hrbr_art_…`, `D29_hrbr_robotics_…`) for the subject token and move it. Older pre-subject test files (`D06_*.mp4`, `20250909_activity_*.mp4`, `test_video.mp4`, `playground/`) → `data/_legacy/raw_pre_subject_organization/`. Then **update `cctv_pull.py`** to write new files into `data/raw/<subject>/` going forward (one-line change — subject is already in scope at the write site). Commit. *(Note: mp4s are gitignored so the commit only captures the cctv_pull.py code change; the moves themselves are tracked via `migration_log.txt`, see §3.8.)*
+1. **Archive legacy first** to free namespaces. Move `data/sessions/` → `data/_archive/sessions_batch_era/` (frees `data/sessions/` for the new session video cache). Move `data/segments/`, `data/batch_*_reports/`, `data/long_video_reports/` → `data/_archive/`. Move `batch_long_video.py`, `batch_score.py`, `score_long_video.py`, `tqm_db.py` (top-level legacy utilities) → `scripts/_archive/`. Nothing deleted. Commit.
+2. **Bucket `data/raw/` by subject** (one-time bulk move). New layout: `data/raw/art/`, `data/raw/public_speaking/`, `data/raw/robotics/`. Parse each existing properly-named file (`D14_hrbr_public_speaking_…`, `D28_hrbr_art_…`, `D29_hrbr_robotics_…`) for the subject token and move it. Older pre-subject test files (`D06_*.mp4`, `20250909_activity_*.mp4`, `test_video.mp4`, `playground/`) → `data/_archive/raw_pre_subject_organization/`. Then **update `cctv_pull.py`** to write new files into `data/raw/<subject>/` going forward (one-line change — subject is already in scope at the write site). Commit. *(Note: mp4s are gitignored so the commit only captures the cctv_pull.py code change; the moves themselves are tracked via `migration_log.txt`, see §3.8.)*
 3. **Rename + reorganise prompts.** `prompts/detect_boundaries.md` → `prompts/boundaries.md`. `prompts/vision_observe.md` → `prompts/vision.md`. Update the two `load_prompt("…")` callsites in `pipeline/boundaries.py` + `pipeline/vision.py`. Create empty `prompts/art/`, `prompts/public_speaking/`, `prompts/robotics/` folders. Move `prompts/score_dimension.md` + `prompts/consolidate_items.md` → `prompts/_archive/`.
 4. **Rename `pipeline/session_resolve.py` → `pipeline/session_context.py`.** Update imports at every known callsite (already-archived files don't need updates). Add a new `resolve_session_segments(session_id) → list[Path] + offsets` function — moves the segment-stitching logic out of the legacy `run_art_rubric_test.py` into the session module.
 5. **Build the session video cache layer** (§3.5). New code in `scripts/run_rubric.py` (or a helper module): given a session_id, fetch raw segments via `session_context`, ffmpeg-concat to `data/sessions/<subject>/<session_id>/1a_combined.mp4`, downscale to `1b_boundary_input.mp4`, run boundary detection → `2_boundaries.json`, trim to `3_trimmed.mp4`. Idempotent: skip if files already exist for that session_id.
@@ -468,7 +468,7 @@ For the pilot we'll compare configs using inter-combo agreement, coverage, and a
 
 | # | Decision | Status |
 |---|---|---|
-| D1 | Archive `sessions/`, `segments/`, `batch_*_reports/` to `data/_legacy/` | ✅ **approved** |
+| D1 | Archive `sessions/`, `segments/`, `batch_*_reports/` to `data/_archive/` | ✅ **approved** |
 | D2 | ~~Delete~~ — instead, **archive** `batch_long_video.py`, `batch_score.py` (+ all other suspect-dead files: `extract.py`, `items.py`, old `score.py`, `score_dimension.md`, `consolidate_items.md`) | ✅ **approved (archive only, no deletion anywhere in the plan)** |
 | D3 | §3 target architecture | ✅ **approved** |
 | D4 | §3.7 migration order (now 11 steps) | ✅ **approved** |
