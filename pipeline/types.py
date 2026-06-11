@@ -94,6 +94,9 @@ class BoundaryDetection(BaseModel):
 
 # ─── New Q&A rubric (Excel-driven; one tab per subject) ────────────────────
 # Drives the new architecture. See PLAN.md §3.1 + pipeline/rubric.py.
+AnswerType = Literal["scored_1_4", "yes_no", "numeric", "multi_choice", "free_text"]
+
+
 class RubricQuestion(BaseModel):
     """One row in the workbook's 'What AI needs to observe' column."""
     id: str                              # "Q1", "Q2", ...
@@ -102,6 +105,11 @@ class RubricQuestion(BaseModel):
     observe_text: str                    # the actual question (col C)
     input_ref: Optional[str] = None      # optional input reference (col D — art only)
     analysis_tag: str                    # "Visual" / "Audio" / "Visual + Audio" (col E)
+    # ─── New columns added 2026-06-10 — typed answer support ─────────────
+    answer_type: AnswerType = "free_text"  # col F; defaults preserve legacy behaviour
+    description: Optional[str] = None      # col G — "what good looks like"
+    levels: Optional[list[str]] = None     # cols H-K — 4 strings for scored_1_4 only
+    options: Optional[list[str]] = None    # col L — for multi_choice only
 
 
 class RubricSection(BaseModel):
@@ -139,6 +147,11 @@ class RubricAnswer(BaseModel):
     insufficient_information: bool = False
     had_evidence: bool = False
     evidence_parse_ok: bool = True
+    # True if `answer` matches the question's declared answer_type
+    # (e.g. integer for `numeric`, "Yes"/"No" for `yes_no`, etc.).
+    # Set by pipeline.rubric._build_answer_set after the model's response
+    # is parsed.  Defaults to True so legacy `free_text` answers stay valid.
+    answer_type_valid: bool = True
 
 
 class RubricAnswerSet(BaseModel):

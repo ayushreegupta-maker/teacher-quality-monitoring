@@ -90,6 +90,11 @@ SUBJECT_COLUMNS: list[str] = [
     "had_evidence",                 # 22
     "evidence_parse_ok",            # 23
     "prompt_hash",                  # 24
+    # Added 2026-06-10 for typed answers (scored_1_4 / yes_no / numeric /
+    # multi_choice / free_text). Appended at the end so the column order
+    # of existing seeded rows stays stable.
+    "answer_type",                  # 25 — from the rubric workbook col F
+    "answer_type_valid",            # 26 — True if `answer` matches answer_type
 ]
 
 # Runs tab (17 cols — index of every run_rubric.py invocation)
@@ -264,13 +269,15 @@ def write_sidecar(
     """
     queue_dir.mkdir(parents=True, exist_ok=True)
 
-    # Resolve question text from the rubric so each row has it inline
-    q_text = {q.id: (q.observe_text, q.section)
-              for q in rubric.all_questions()}
+    # Resolve question text + answer_type from the rubric inline per row
+    q_lookup = {q.id: q for q in rubric.all_questions()}
 
     subject_rows: list[dict[str, Any]] = []
     for qid, ans in answer_set.answers.items():
-        text, section = q_text.get(qid, ("(unknown)", "(unknown)"))
+        q = q_lookup.get(qid)
+        text = q.observe_text if q else "(unknown)"
+        section = q.section if q else "(unknown)"
+        answer_type = q.answer_type if q else "free_text"
         subject_rows.append({
             "run_id": run_id,
             "session_id": answer_set.session_id,
@@ -296,6 +303,8 @@ def write_sidecar(
             "had_evidence": ans.had_evidence,
             "evidence_parse_ok": ans.evidence_parse_ok,
             "prompt_hash": answer_set.prompt_hash,
+            "answer_type": answer_type,
+            "answer_type_valid": ans.answer_type_valid,
         })
 
     runs_row = {

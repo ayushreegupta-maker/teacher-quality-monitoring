@@ -63,6 +63,69 @@ _SUBJECT_TO_SHEET = {
 DEFAULT_ANALYSIS_TAG = "Visual + Audio"
 
 
+# ─── answer_type validation + level/option parsing ────────────────────────
+
+_VALID_ANSWER_TYPES = {"scored_1_4", "yes_no", "numeric", "multi_choice", "free_text"}
+
+
+def _normalise_answer_type(raw: str | None, qid: str, subject: str) -> str:
+    """Read column F and return the canonical answer_type. Blank → 'free_text'.
+    Unknown values warn + fall back to 'free_text'."""
+    if raw is None:
+        return "free_text"
+    key = raw.strip()
+    if key in _VALID_ANSWER_TYPES:
+        return key
+    log.warning(
+        f"[{subject}] {qid}: unknown answer_type {raw!r}; falling back to "
+        f"'free_text'. Valid: {sorted(_VALID_ANSWER_TYPES)}"
+    )
+    return "free_text"
+
+
+def _parse_levels(
+    h: str | None, i: str | None, j: str | None, k: str | None,
+    answer_type: str, qid: str, subject: str,
+) -> list[str] | None:
+    """For scored_1_4: return the [lvl1, lvl2, lvl3, lvl4] list. Warns + returns
+    None if not all 4 are present (downstream renderer treats as free_text).
+    For other types: returns None (levels columns ignored)."""
+    if answer_type != "scored_1_4":
+        return None
+    raw = [h, i, j, k]
+    filled = [x for x in raw if x]
+    if len(filled) != 4:
+        log.warning(
+            f"[{subject}] {qid}: answer_type='scored_1_4' needs 4 non-empty "
+            f"level cells (cols H-K); got {len(filled)}. Levels not used."
+        )
+        return None
+    return [str(x) for x in raw]
+
+
+def _parse_options(
+    raw: str | None, answer_type: str, qid: str, subject: str,
+) -> list[str] | None:
+    """For multi_choice: split column L on comma into a list of ≥2 options.
+    Returns None on parse fail; downstream renderer treats as free_text."""
+    if answer_type != "multi_choice":
+        return None
+    if not raw:
+        log.warning(
+            f"[{subject}] {qid}: answer_type='multi_choice' needs options "
+            "in col L. None given."
+        )
+        return None
+    opts = [o.strip() for o in raw.split(",") if o.strip()]
+    if len(opts) < 2:
+        log.warning(
+            f"[{subject}] {qid}: answer_type='multi_choice' needs ≥2 options; "
+            f"got {len(opts)}: {opts}"
+        )
+        return None
+    return opts
+
+
 def load_rubric(
     workbook_path: Path,
     subject: str,
@@ -113,47 +176,71 @@ def load_rubric(
     current_criteria: str | None = None
     q_counter = 0
 
+    def _cell(row, idx):
+        """Safely fetch row[idx] and return None if missing/blank."""
+        if len(row) <= idx:
+            return None
+        v = row[idx]
+        if v is None:
+            return None
+        s = str(v).strip()
+        return s if s else None
+
     for row in ws.iter_rows(min_row=2, values_only=True):
-        # Defensive: the sheet may have fewer than 5 columns (PS + Robotics)
-        col_a = row[0] if len(row) > 0 else None
-        col_b = row[1] if len(row) > 1 else None
-        col_c = row[2] if len(row) > 2 else None
-        col_d = row[3] if len(row) > 3 else None
-        col_e = row[4] if len(row) > 4 else None
+        col_a = _cell(row, 0)   # section (carry-forward)
+        col_b = _cell(row, 1)   # criteria (carry-forward)
+        col_c = _cell(row, 2)   # observe_text — REQUIRED
+        col_d = _cell(row, 3)   # input_ref
+        col_e = _cell(row, 4)   # analysis_tag
+        col_f = _cell(row, 5)   # answer_type (NEW)
+        col_g = _cell(row, 6)   # description (NEW)
+        col_h = _cell(row, 7)   # level_1_worst (NEW; scored_1_4 only)
+        col_i = _cell(row, 8)   # level_2
+        col_j = _cell(row, 9)   # level_3
+        col_k = _cell(row, 10)  # level_4_best
+        col_l = _cell(row, 11)  # options (NEW; multi_choice only)
 
-        # Carry-forward section + criteria from the most recent non-empty value
-        if col_a is not None and str(col_a).strip():
-            current_section = str(col_a).strip()
-        if col_b is not None and str(col_b).strip():
-            current_criteria = str(col_b).strip()
+        # Carry-forward section + criteria
+        if col_a:
+            current_section = col_a
+        if col_b:
+            current_criteria = col_b
 
-        # Skip rows that don't carry a question
-        if col_c is None or not str(col_c).strip():
+        if col_c is None:
             continue
 
         if current_section is None:
             log.warning(
                 f"[{subject}] question row with no section above it at "
-                f"row {q_counter + 2}, skipping: {str(col_c)[:60]}"
+                f"row {q_counter + 2}, skipping: {col_c[:60]}"
             )
             continue
 
-        # Open a new section when the section name changes
         if open_section is None or open_section.name != current_section:
             open_section = RubricSection(name=current_section, questions=[])
             sections.append(open_section)
 
         q_counter += 1
+        qid = f"Q{q_counter}"
+
+        # Normalise answer_type with forgiving aliases
+        answer_type = _normalise_answer_type(col_f, qid, subject)
+
+        # Pull levels (4-tuple) + options based on answer_type
+        levels = _parse_levels(col_h, col_i, col_j, col_k, answer_type, qid, subject)
+        options = _parse_options(col_l, answer_type, qid, subject)
+
         question = RubricQuestion(
-            id=f"Q{q_counter}",
+            id=qid,
             section=current_section,
             criteria=current_criteria,
-            observe_text=str(col_c).strip(),
-            input_ref=str(col_d).strip() if col_d and str(col_d).strip() else None,
-            analysis_tag=(
-                str(col_e).strip() if col_e and str(col_e).strip()
-                else default_analysis_tag
-            ),
+            observe_text=col_c,
+            input_ref=col_d,
+            analysis_tag=col_e or default_analysis_tag,
+            answer_type=answer_type,
+            description=col_g,
+            levels=levels,
+            options=options,
         )
         open_section.questions.append(question)
 
@@ -182,18 +269,21 @@ def render_questions_block(rubric: Rubric) -> str:
     """Render the rubric questions as the `{questions_block}` substring
     that gets interpolated into the prompt template.
 
-    Output structure (matches the legacy script's format_questions_block
-    byte-for-byte when the rubric content is unchanged):
+    Output structure:
 
         \n=== <section> ===
         \n[Group] <criteria>
-          Q1 [<analysis_tag>]: <observe_text>  (input ref: <input_ref>)
-          Q2 [<analysis_tag>]: <observe_text>
-          ...
+          Q1 [<analysis_tag>] (<answer_type_hint>): <observe_text>  (input ref: ...)
+              Description: <description>            ← if present
+              1 = <level_1_worst>                   ← scored_1_4 only
+              2 = <level_2>
+              3 = <level_3>
+              4 = <level_4_best>
+              Options: a, b, c                       ← multi_choice only
 
-    Section headers fire on each new section name; [Group] headers fire on
-    each new criteria within a section. `(input ref: ...)` is only emitted
-    when the question carries an input_ref (Art tab today).
+    Backwards-compatible: questions with answer_type='free_text' and no
+    description / levels / options render exactly like before (no type hint,
+    no description line).
     """
     lines: list[str] = []
     current_section: str | None = None
@@ -206,10 +296,41 @@ def render_questions_block(rubric: Rubric) -> str:
         if q.criteria != current_criteria:
             current_criteria = q.criteria
             lines.append(f"\n[Group] {current_criteria}")
-        analysis_tag = f"[{q.analysis_tag}]" if q.analysis_tag else ""
-        input_hint = f"  (input ref: {q.input_ref})" if q.input_ref else ""
-        lines.append(f"  {q.id} {analysis_tag}: {q.observe_text}{input_hint}")
+        lines.extend(_render_one_question(q))
     return "\n".join(lines)
+
+
+_TYPE_HINTS: dict[str, str] = {
+    "scored_1_4": "scored 1-4",
+    "yes_no": "yes/no",
+    "numeric": "integer",
+    "multi_choice": "pick from options",
+    "free_text": "",  # no hint → backward-compatible rendering
+}
+
+
+def _render_one_question(q: RubricQuestion) -> list[str]:
+    """Render a single RubricQuestion as a list of lines."""
+    analysis_tag = f"[{q.analysis_tag}]" if q.analysis_tag else ""
+    type_hint = _TYPE_HINTS.get(q.answer_type, "")
+    type_hint_str = f" ({type_hint})" if type_hint else ""
+    input_hint = f"  (input ref: {q.input_ref})" if q.input_ref else ""
+
+    head = f"  {q.id} {analysis_tag}{type_hint_str}: {q.observe_text}{input_hint}"
+    lines = [head]
+
+    if q.description:
+        lines.append(f"      Description: {q.description}")
+
+    if q.answer_type == "scored_1_4" and q.levels and len(q.levels) == 4:
+        lines.append(f"      1 = {q.levels[0]}")
+        lines.append(f"      2 = {q.levels[1]}")
+        lines.append(f"      3 = {q.levels[2]}")
+        lines.append(f"      4 = {q.levels[3]}")
+    elif q.answer_type == "multi_choice" and q.options:
+        lines.append(f"      Options: {', '.join(q.options)}")
+
+    return lines
 
 
 # Shape labels mirror PLAN.md §3 — "A" = Gemini watches the video directly,
@@ -343,6 +464,86 @@ def _is_valid_hms(s: str) -> bool:
     return bool(_HMS_RE.match(s.strip()))
 
 
+def _validate_answer_against_type(
+    ans_str: str,
+    question: RubricQuestion,
+    is_insufficient: bool,
+    session_id: str,
+    qid: str,
+) -> bool:
+    """Return True if the answer matches the question's declared answer_type.
+    INSUFFICIENT INFORMATION is always considered valid regardless of type.
+    Logs a warning + returns False on type mismatch."""
+    if is_insufficient:
+        return True
+
+    at = question.answer_type
+    if at == "free_text":
+        return True  # anything goes
+
+    if at == "scored_1_4":
+        try:
+            n = int(ans_str.strip())
+            if 1 <= n <= 4:
+                return True
+        except ValueError:
+            pass
+        log.warning(
+            f"[{session_id}] {qid}: answer_type=scored_1_4 expected integer "
+            f"1-4, got {ans_str!r}"
+        )
+        return False
+
+    if at == "yes_no":
+        norm = ans_str.strip().lower().rstrip(".!")
+        if norm in ("yes", "no", "y", "n", "true", "false"):
+            return True
+        # Forgive longer answers that START with yes/no
+        if norm.startswith(("yes", "no", "y ", "n ", "yes,", "no,")):
+            return True
+        log.warning(
+            f"[{session_id}] {qid}: answer_type=yes_no expected Yes/No, "
+            f"got {ans_str!r}"
+        )
+        return False
+
+    if at == "numeric":
+        try:
+            int(ans_str.strip().rstrip("."))
+            return True
+        except ValueError:
+            pass
+        # Forgive "6 minutes" / "approximately 6" / "~6"
+        m = _re.search(r"-?\d+", ans_str)
+        if m is not None:
+            return True
+        log.warning(
+            f"[{session_id}] {qid}: answer_type=numeric expected an integer, "
+            f"got {ans_str!r}"
+        )
+        return False
+
+    if at == "multi_choice":
+        if not question.options:
+            return True  # loader downgraded to free_text effectively
+        opts_lower = {o.lower().strip() for o in question.options}
+        # Accept comma/semicolon-separated multi-select
+        chosen = _re.split(r"[,;]\s*", ans_str.lower().strip())
+        chosen = [c.strip() for c in chosen if c.strip()]
+        if not chosen:
+            return False
+        for c in chosen:
+            if c not in opts_lower:
+                log.warning(
+                    f"[{session_id}] {qid}: multi_choice answer {c!r} not in "
+                    f"declared options {question.options}"
+                )
+                return False
+        return True
+
+    return True  # unknown type — be permissive
+
+
 # ─── Scoring ──────────────────────────────────────────────────────────────
 
 
@@ -456,7 +657,8 @@ def _build_answer_set(
     """Walk the model's JSON response, validate per-question shape, and
     assemble a typed RubricAnswerSet. Skips unexpected keys + malformed
     rows with a warning — never raises on a single bad answer."""
-    valid_ids = {q.id for q in rubric.all_questions()}
+    questions_by_id = {q.id: q for q in rubric.all_questions()}
+    valid_ids = set(questions_by_id.keys())
     answers: dict[str, RubricAnswer] = {}
 
     for qid, payload in parsed_response.items():
@@ -488,6 +690,13 @@ def _build_answer_set(
             )
             confidence = "low"
 
+        # Validate the answer's shape against the question's declared
+        # answer_type. INSUFFICIENT is always valid regardless of type.
+        question = questions_by_id[qid]
+        answer_type_valid = _validate_answer_against_type(
+            ans_str, question, is_insufficient, session_id, qid,
+        )
+
         try:
             answers[qid] = RubricAnswer(
                 id=qid,
@@ -498,6 +707,7 @@ def _build_answer_set(
                 insufficient_information=is_insufficient,
                 had_evidence=had_evidence,
                 evidence_parse_ok=evidence_parse_ok,
+                answer_type_valid=answer_type_valid,
             )
         except Exception as e:
             log.warning(f"[{session_id}] {qid}: validation failed ({e!r}); skipping")
