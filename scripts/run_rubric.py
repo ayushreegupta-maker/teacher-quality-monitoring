@@ -175,8 +175,20 @@ def main() -> int:
     p = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
-    p.add_argument("--session-id", required=True,
-                   help="e.g. 2026-05-18__D28__0900")
+    # Pick ONE of these two paths to find the trimmed video to score:
+    target = p.add_mutually_exclusive_group(required=True)
+    target.add_argument(
+        "--session-id",
+        help="Run the full session_video pipeline (combine → boundary → trim) "
+             "from data/raw. Format: <YYYY-MM-DD>__<camera>__<HHMM>, "
+             "e.g. 2026-05-18__D28__0900",
+    )
+    target.add_argument(
+        "--trimmed-video", type=Path,
+        help="Path to an existing trimmed .mp4. Skips ffmpeg + boundary "
+             "detection. Subject + session_id auto-derived from the path: "
+             "data/sessions/<subject>/<session_id>/3_trimmed.mp4",
+    )
     p.add_argument("--rubric-version", required=True,
                    help="e.g. v1_2026-06-10 — must match a file at "
                         "prompts/<subject>/rubric_<subject>_<version>.md")
@@ -196,8 +208,18 @@ def main() -> int:
                    help="(Shape B) Vision model used to build the evidence "
                         "bundle. Defaults to LLMAdapter's vision_model")
     p.add_argument("--vision-fps", type=float, default=None,
-                   help="(Shape B) fps the vision pass sampled at. None = "
-                        "Gemini default (recommended)")
+                   help="fps Gemini should sample the video at. None = "
+                        "Gemini default (~1 fps). Lower this for long videos "
+                        "that blow the 1M-input-token ceiling — e.g. 0.5 fps "
+                        "for a 90+ min trimmed class. Applies to both Shape A "
+                        "(scoring call) and Shape B (vision-pass cache key). "
+                        "NOTE: Gemini may silently ignore fps for files "
+                        "uploaded via the Files API — prefer --media-resolution low.")
+    p.add_argument("--media-resolution", choices=["low", "medium", "high"], default=None,
+                   help="Gemini tokens-per-frame: low=66, medium=258 (default), "
+                        "high=516. Use 'low' for long videos (>30min) to fit "
+                        "under the 1M input-token ceiling. 108min @ default "
+                        "(MEDIUM) ≈ 1.67M tokens (over); @ LOW ≈ 428k tokens.")
     p.add_argument("--chunking", default="5min",
                    help="(Shape B) vision-pass chunking: 5min / 10min / single")
     # Per-session context fed into the vision-pass prompt (option-c
@@ -221,10 +243,28 @@ def main() -> int:
 
     started_at = datetime.utcnow().replace(microsecond=0)
 
-    # 1. Resolve subject from session_id + camera config
-    _, camera_id, _ = parse_session_id(args.session_id)
-    subject = _resolve_subject(camera_id, args.cameras_xlsx)
-    log.info(f"session_id={args.session_id} → camera={camera_id} subject={subject}")
+    # 1. Resolve subject + session_id from whichever input was given
+    if args.trimmed_video:
+        # data/sessions/<subject>/<session_id>/3_trimmed.mp4
+        tv = args.trimmed_video.resolve()
+        if not tv.exists():
+            raise SystemExit(f"trimmed video not found: {tv}")
+        try:
+            sid = tv.parent.name                     # 2026-05-18__D28__0900
+            subject = tv.parent.parent.name          # art
+            assert tv.parent.parent.parent.name == "sessions", \
+                f"expected data/sessions/<subject>/<sid>/, got {tv}"
+        except (AssertionError, IndexError) as e:
+            raise SystemExit(
+                f"--trimmed-video path must be data/sessions/<subject>/"
+                f"<session_id>/3_trimmed.mp4; got {tv} ({e})"
+            )
+        args.session_id = sid
+        log.info(f"--trimmed-video → subject={subject} session_id={sid}")
+    else:
+        _, camera_id, _ = parse_session_id(args.session_id)
+        subject = _resolve_subject(camera_id, args.cameras_xlsx)
+        log.info(f"session_id={args.session_id} → camera={camera_id} subject={subject}")
 
     # 2. Resolve prompt path (shape-specific)
     prompt_path = _resolve_prompt_path(subject, args.rubric_version, args.shape)
@@ -249,9 +289,26 @@ def main() -> int:
 
     # 4. Build/reuse the session-video cache (always — even Shape B needs the
     #    trimmed window's metadata + boundaries for the evidence bundle).
+    #    Skipped when --trimmed-video is given: the user vouched for the file
+    #    and we just construct the artifacts handle from the sibling files.
     llm = LLMAdapter()
-    log.info("stage A: build_session_video()")
-    sva = build_session_video(args.session_id, llm=llm, force=args.force)
+    if args.trimmed_video:
+        from pipeline.session_video import SessionVideoArtifacts
+        sdir = args.trimmed_video.resolve().parent
+        log.info(f"--trimmed-video: skipping stage A, using {sdir.relative_to(ROOT)}")
+        sva = SessionVideoArtifacts(
+            session_id=args.session_id,
+            subject=subject,
+            session_dir=sdir,
+            segments_used=[],
+            combined=sdir / "1a_combined.mp4",
+            boundary_input=sdir / "1b_boundary_input.mp4",
+            boundaries_json=sdir / "2_boundaries.json",
+            trimmed=args.trimmed_video.resolve(),
+        )
+    else:
+        log.info("stage A: build_session_video()")
+        sva = build_session_video(args.session_id, llm=llm, force=args.force)
 
     # 5. Load rubric
     log.info("stage B: load_rubric()")
@@ -280,6 +337,8 @@ def main() -> int:
             video_path=sva.trimmed,
             shape="A",
             reasoner_model=args.reasoner,
+            fps=args.vision_fps,
+            media_resolution=args.media_resolution,
         )
     else:  # Shape B
         log.info("stage C-1: load/build evidence bundle")

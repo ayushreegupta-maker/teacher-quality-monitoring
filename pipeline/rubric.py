@@ -103,29 +103,6 @@ def _parse_levels(
     return [str(x) for x in raw]
 
 
-def _parse_options(
-    raw: str | None, answer_type: str, qid: str, subject: str,
-) -> list[str] | None:
-    """For multi_choice: split column L on comma into a list of ≥2 options.
-    Returns None on parse fail; downstream renderer treats as free_text."""
-    if answer_type != "multi_choice":
-        return None
-    if not raw:
-        log.warning(
-            f"[{subject}] {qid}: answer_type='multi_choice' needs options "
-            "in col L. None given."
-        )
-        return None
-    opts = [o.strip() for o in raw.split(",") if o.strip()]
-    if len(opts) < 2:
-        log.warning(
-            f"[{subject}] {qid}: answer_type='multi_choice' needs ≥2 options; "
-            f"got {len(opts)}: {opts}"
-        )
-        return None
-    return opts
-
-
 def load_rubric(
     workbook_path: Path,
     subject: str,
@@ -176,9 +153,19 @@ def load_rubric(
     current_criteria: str | None = None
     q_counter = 0
 
+    # Workbook column layout (same across all tabs; PS + Robotics simply
+    # leave D-H blank, which falls through to free_text):
+    #   A: section / bucket   (carry-forward)
+    #   B: criteria           (carry-forward)
+    #   C: question text      — required
+    #   D: answer_type        — one of the 5 canonical tokens
+    #   E: level_1            — scored_1_4 only
+    #   F: level_2
+    #   G: level_3
+    #   H: level_4
+
     def _cell(row, idx):
-        """Safely fetch row[idx] and return None if missing/blank."""
-        if len(row) <= idx:
+        if idx >= len(row):
             return None
         v = row[idx]
         if v is None:
@@ -187,20 +174,15 @@ def load_rubric(
         return s if s else None
 
     for row in ws.iter_rows(min_row=2, values_only=True):
-        col_a = _cell(row, 0)   # section (carry-forward)
-        col_b = _cell(row, 1)   # criteria (carry-forward)
-        col_c = _cell(row, 2)   # observe_text — REQUIRED
-        col_d = _cell(row, 3)   # input_ref
-        col_e = _cell(row, 4)   # analysis_tag
-        col_f = _cell(row, 5)   # answer_type (NEW)
-        col_g = _cell(row, 6)   # description (NEW)
-        col_h = _cell(row, 7)   # level_1_worst (NEW; scored_1_4 only)
-        col_i = _cell(row, 8)   # level_2
-        col_j = _cell(row, 9)   # level_3
-        col_k = _cell(row, 10)  # level_4_best
-        col_l = _cell(row, 11)  # options (NEW; multi_choice only)
+        col_a = _cell(row, 0)   # section
+        col_b = _cell(row, 1)   # criteria
+        col_c = _cell(row, 2)   # question
+        col_d = _cell(row, 3)   # answer_type
+        col_e = _cell(row, 4)   # level_1
+        col_f = _cell(row, 5)   # level_2
+        col_g = _cell(row, 6)   # level_3
+        col_h = _cell(row, 7)   # level_4
 
-        # Carry-forward section + criteria
         if col_a:
             current_section = col_a
         if col_b:
@@ -223,24 +205,18 @@ def load_rubric(
         q_counter += 1
         qid = f"Q{q_counter}"
 
-        # Normalise answer_type with forgiving aliases
-        answer_type = _normalise_answer_type(col_f, qid, subject)
-
-        # Pull levels (4-tuple) + options based on answer_type
-        levels = _parse_levels(col_h, col_i, col_j, col_k, answer_type, qid, subject)
-        options = _parse_options(col_l, answer_type, qid, subject)
+        answer_type = _normalise_answer_type(col_d, qid, subject)
+        levels = _parse_levels(col_e, col_f, col_g, col_h,
+                               answer_type, qid, subject)
 
         question = RubricQuestion(
             id=qid,
             section=current_section,
             criteria=current_criteria,
             observe_text=col_c,
-            input_ref=col_d,
-            analysis_tag=col_e or default_analysis_tag,
+            analysis_tag=default_analysis_tag,
             answer_type=answer_type,
-            description=col_g,
             levels=levels,
-            options=options,
         )
         open_section.questions.append(question)
 
@@ -421,6 +397,7 @@ def render_prompt(
                 "render_prompt(shape='B') requires evidence=<EvidenceBundle>"
             )
         return body.format(
+            activity_context=evidence.activity_context or "(not specified)",
             questions_block=questions_block,
             boundaries_json=json.dumps(evidence.boundaries, indent=2),
             phases_json=json.dumps(evidence.phases or [], indent=2),
@@ -557,6 +534,8 @@ def score(
     video_path: Path | None = None,
     shape: str = _SHAPE_A,
     reasoner_model: str | None = None,
+    fps: float | None = None,
+    media_resolution: str | None = None,
 ) -> tuple[RubricAnswerSet, str]:
     """Run one rubric scoring call. Returns (RubricAnswerSet, raw_response).
 
@@ -584,12 +563,15 @@ def score(
         log.info(
             f"[{session_id}] score (A): uploading {video_path.name} + asking "
             f"{model} about {len(rubric.all_questions())} questions"
+            + (f" (fps={fps})" if fps is not None else "")
         )
         video_file = llm.upload_video(video_path)
         raw = llm.call_gemini_video(
             prompt=prompt,
             video_file=video_file,
             model_name=reasoner_model,
+            fps=fps,
+            media_resolution=media_resolution,
         )
         source_model = model
 

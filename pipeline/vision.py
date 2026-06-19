@@ -1,5 +1,9 @@
 import logging
+import random
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from pathlib import Path
+from typing import Optional
 
 from adapters.llm import LLMAdapter, parse_json_lenient, prompt_hash
 from adapters.sessions import session_dir
@@ -20,6 +24,7 @@ CHUNK_MINUTES = 5
 # call due to transient model load; a single retry almost always fixes it.
 CHUNK_MAX_ATTEMPTS = 3
 CHUNK_RETRY_BACKOFF_SECONDS = (5, 15)  # backoff before attempts 2 and 3
+CHUNK_MAX_CONCURRENCY = 5              # parallel Gemini calls per session
 
 
 def _shift_ts(ts: str, offset_seconds: int) -> str:
@@ -197,12 +202,20 @@ def vision_observe(
     session: SessionMeta,
     llm: LLMAdapter,
     chunk_minutes: int = CHUNK_MINUTES,
-) -> tuple[Transcript, VisualObservations]:
+) -> tuple[Transcript, VisualObservations, list[dict], list[dict], list[dict]]:
     """Chunked Gemini vision pass. Uploads video once, analyses N-min slices via
     video_metadata offsets, shifts timestamps in Python, and merges results.
 
     Resilient to per-chunk failures: a failed chunk is logged and skipped; remaining
     chunks still contribute. Raw responses are saved per chunk for debugging.
+
+    Returns five things:
+      - transcript (Transcript)
+      - observations (VisualObservations)
+      - phases (list[dict]) — present only when session.subject is "art"; cross-chunk merged
+      - explanations (list[dict]) — present only when session.subject is "art"
+      - disturbances (list[dict]) — present only when session.subject is "art"
+    For non-art subjects the last three are empty lists.
     """
     log.info(f"[{session.session_id}] vision pass starting on {session.video_path}")
 
@@ -226,96 +239,51 @@ def vision_observe(
 
     all_observations: list[dict] = []
     all_segments: list[dict] = []
+    all_phases: list[dict] = []
+    all_explanations: list[dict] = []
+    all_disturbances: list[dict] = []
 
-    for i, (start, end) in enumerate(chunks):
-        chunk_label = f"chunk {i + 1}/{len(chunks)} ({start}s-{end}s)"
-        log.info(f"[{session.session_id}] {chunk_label} starting")
-
-        # Retry the chunk on three transient failure modes:
-        #   (a) call_gemini_video raises (network / rate limit / etc.)
-        #   (b) parse_json_lenient raises (truncated / malformed response)
-        #   (c) parse succeeds but BOTH arrays are empty (Gemini silently
-        #       returned a placeholder — the failure mode we saw on the
-        #       D06 colouring 'after' clip)
-        chunk_obs: list = []
-        chunk_segs: list = []
-        succeeded = False
-        for attempt in range(1, CHUNK_MAX_ATTEMPTS + 1):
-            if attempt > 1:
-                backoff = CHUNK_RETRY_BACKOFF_SECONDS[
-                    min(attempt - 2, len(CHUNK_RETRY_BACKOFF_SECONDS) - 1)
-                ]
-                log.warning(
-                    f"[{session.session_id}] {chunk_label} retry "
-                    f"{attempt}/{CHUNK_MAX_ATTEMPTS} after {backoff}s backoff"
-                )
-                time.sleep(backoff)
-
-            attempt_suffix = "" if attempt == 1 else f"_attempt{attempt:02d}"
-            raw_path = sd / f"vision_raw_chunk{i:02d}{attempt_suffix}_{p_hash}.txt"
-
+    # Process chunks concurrently — up to CHUNK_MAX_CONCURRENCY in flight at once.
+    # Per-chunk failures are isolated (return None); the aggregate lists are
+    # extended in chunk-index order after all futures settle so the cross-chunk
+    # phase merge below sees adjacency correctly.
+    log.info(
+        f"[{session.session_id}] dispatching {len(chunks)} chunks to "
+        f"{CHUNK_MAX_CONCURRENCY}-way thread pool"
+    )
+    results: list[Optional[dict]] = [None] * len(chunks)
+    with ThreadPoolExecutor(max_workers=CHUNK_MAX_CONCURRENCY) as ex:
+        future_to_i = {
+            ex.submit(
+                _process_chunk,
+                i, start, end,
+                len(chunks),
+                session.session_id,
+                llm, video_file, full_prompt, p_hash, sd,
+            ): i
+            for i, (start, end) in enumerate(chunks)
+        }
+        for fut in as_completed(future_to_i):
+            i = future_to_i[fut]
             try:
-                raw = llm.call_gemini_video(
-                    prompt=full_prompt,
-                    video_file=video_file,
-                    start_seconds=start,
-                    end_seconds=end,
-                )
+                results[i] = fut.result()
             except Exception as e:
                 log.error(
-                    f"[{session.session_id}] {chunk_label} attempt {attempt} "
-                    f"call failed: {e!r}"
+                    f"[{session.session_id}] chunk {i + 1}/{len(chunks)} "
+                    f"raised unexpected exception: {e!r} — skipping"
                 )
-                continue
+                results[i] = None
 
-            raw_path.write_text(raw)
-
-            try:
-                parsed = parse_json_lenient(raw)
-            except Exception as e:
-                log.error(
-                    f"[{session.session_id}] {chunk_label} attempt {attempt} "
-                    f"parse failed: {e!r} (raw at {raw_path})"
-                )
-                continue
-
-            chunk_obs = parsed.get("observations") or []
-            chunk_segs = parsed.get("transcript") or []
-
-            if not chunk_obs and not chunk_segs:
-                log.warning(
-                    f"[{session.session_id}] {chunk_label} attempt {attempt} "
-                    f"returned empty observations and transcript "
-                    f"(raw at {raw_path})"
-                )
-                continue
-
-            succeeded = True
-            break
-
-        if not succeeded:
-            log.error(
-                f"[{session.session_id}] {chunk_label} FAILED after "
-                f"{CHUNK_MAX_ATTEMPTS} attempts — skipping chunk"
-            )
+    # Aggregate in chunk-index order so the cross-chunk phase merge sees
+    # adjacency correctly.
+    for r in results:
+        if r is None:
             continue
-
-        # Shift chunk-local timestamps -> absolute
-        for o in chunk_obs:
-            if "ts_start" in o:
-                o["ts_start"] = _shift_ts(o["ts_start"], start)
-            if "ts_end" in o:
-                o["ts_end"] = _shift_ts(o["ts_end"], start)
-        for s in chunk_segs:
-            if "ts_start" in s:
-                s["ts_start"] = _shift_ts(s["ts_start"], start)
-
-        all_observations.extend(chunk_obs)
-        all_segments.extend(chunk_segs)
-        log.info(
-            f"[{session.session_id}] {chunk_label} done: "
-            f"+{len(chunk_obs)} observations, +{len(chunk_segs)} transcript segments"
-        )
+        all_observations.extend(r["observations"])
+        all_segments.extend(r["transcript"])
+        all_phases.extend(r["phases"])
+        all_explanations.extend(r["explanations"])
+        all_disturbances.extend(r["disturbances"])
 
     # Three-pass dedupe of Gemini transcription loop artifacts:
     #   1. Adjacent-segment runs: N copies of the same (speaker, text) in a row.
@@ -383,12 +351,193 @@ def vision_observe(
     (sd / f"transcript_{p_hash}.json").write_text(transcript.model_dump_json(indent=2))
     (sd / f"vision_{p_hash}.json").write_text(observations.model_dump_json(indent=2))
 
+    # Cross-chunk phase merging — collapse adjacent same-type phases when
+    # the previous one ends with continuation and the next one starts with it.
+    merged_phases, n_merged = _merge_cross_chunk_phases(all_phases)
+    if n_merged:
+        log.info(
+            f"[{session.session_id}] cross-chunk phase merge: "
+            f"{len(all_phases)} → {len(merged_phases)} ({n_merged} stitched)"
+        )
+
     log.info(
         f"[{session.session_id}] vision pass done across {len(chunks)} chunks: "
         f"{len(transcript.segments)} transcript segments, "
-        f"{len(observations.observations)} observations"
+        f"{len(observations.observations)} observations, "
+        f"{len(merged_phases)} phases, {len(all_explanations)} explanations, "
+        f"{len(all_disturbances)} disturbances"
     )
-    return transcript, observations
+    return transcript, observations, merged_phases, all_explanations, all_disturbances
+
+
+def _process_chunk(
+    i: int,
+    start: int,
+    end: int,
+    chunks_count: int,
+    session_id: str,
+    llm: LLMAdapter,
+    video_file,
+    full_prompt: str,
+    p_hash: str,
+    sd: Path,
+) -> Optional[dict]:
+    """Process ONE chunk under the parallel thread pool.
+
+    Returns a dict with keys observations / transcript / phases / explanations /
+    disturbances (all lists of dicts, with timestamps already shifted to absolute
+    session time), or None if all attempts failed.
+
+    Retries on three transient failure modes:
+      (a) call_gemini_video raises (network / rate limit / etc.)
+      (b) parse_json_lenient raises (truncated / malformed response)
+      (c) parse succeeds but BOTH arrays are empty (Gemini silently returned a
+          placeholder — the failure mode we saw on the D06 colouring 'after'
+          clip)
+
+    Backoff includes 0.7×–1.3× jitter so parallel chunks that all hit a 429
+    don't retry in lock-step.
+    """
+    chunk_label = f"chunk {i + 1}/{chunks_count} ({start}s-{end}s)"
+    log.info(f"[{session_id}] {chunk_label} starting")
+
+    chunk_obs: list = []
+    chunk_segs: list = []
+    parsed: dict = {}
+    succeeded = False
+
+    for attempt in range(1, CHUNK_MAX_ATTEMPTS + 1):
+        if attempt > 1:
+            base = CHUNK_RETRY_BACKOFF_SECONDS[
+                min(attempt - 2, len(CHUNK_RETRY_BACKOFF_SECONDS) - 1)
+            ]
+            backoff = base * random.uniform(0.7, 1.3)
+            log.warning(
+                f"[{session_id}] {chunk_label} retry "
+                f"{attempt}/{CHUNK_MAX_ATTEMPTS} after {backoff:.1f}s backoff"
+            )
+            time.sleep(backoff)
+
+        attempt_suffix = "" if attempt == 1 else f"_attempt{attempt:02d}"
+        raw_path = sd / f"vision_raw_chunk{i:02d}{attempt_suffix}_{p_hash}.txt"
+
+        try:
+            raw = llm.call_gemini_video(
+                prompt=full_prompt,
+                video_file=video_file,
+                start_seconds=start,
+                end_seconds=end,
+            )
+        except Exception as e:
+            log.error(
+                f"[{session_id}] {chunk_label} attempt {attempt} "
+                f"call failed: {e!r}"
+            )
+            continue
+
+        raw_path.write_text(raw)
+
+        try:
+            parsed = parse_json_lenient(raw)
+        except Exception as e:
+            log.error(
+                f"[{session_id}] {chunk_label} attempt {attempt} "
+                f"parse failed: {e!r} (raw at {raw_path})"
+            )
+            continue
+
+        chunk_obs = parsed.get("observations") or []
+        chunk_segs = parsed.get("transcript") or []
+
+        if not chunk_obs and not chunk_segs:
+            log.warning(
+                f"[{session_id}] {chunk_label} attempt {attempt} "
+                f"returned empty observations and transcript "
+                f"(raw at {raw_path})"
+            )
+            continue
+
+        succeeded = True
+        break
+
+    if not succeeded:
+        log.error(
+            f"[{session_id}] {chunk_label} FAILED after "
+            f"{CHUNK_MAX_ATTEMPTS} attempts — skipping chunk"
+        )
+        return None
+
+    # Shift chunk-local timestamps -> absolute
+    for o in chunk_obs:
+        if "ts_start" in o:
+            o["ts_start"] = _shift_ts(o["ts_start"], start)
+        if "ts_end" in o:
+            o["ts_end"] = _shift_ts(o["ts_end"], start)
+    for s in chunk_segs:
+        if "ts_start" in s:
+            s["ts_start"] = _shift_ts(s["ts_start"], start)
+
+    # Subject-conditional fields — only emitted for art today (see vision.md).
+    chunk_phases = parsed.get("phases") or []
+    chunk_explanations = parsed.get("explanations") or []
+    chunk_disturbances = parsed.get("disturbances") or []
+    for p in chunk_phases:
+        if "start" in p:
+            p["start"] = _shift_ts(p["start"], start)
+        if "end" in p:
+            p["end"] = _shift_ts(p["end"], start)
+    for e in chunk_explanations:
+        if "ts" in e:
+            e["ts"] = _shift_ts(e["ts"], start)
+    for d in chunk_disturbances:
+        if "ts" in d:
+            d["ts"] = _shift_ts(d["ts"], start)
+
+    log.info(
+        f"[{session_id}] {chunk_label} done: "
+        f"+{len(chunk_obs)} observations, +{len(chunk_segs)} transcript segs, "
+        f"+{len(chunk_phases)} phases, +{len(chunk_explanations)} explanations, "
+        f"+{len(chunk_disturbances)} disturbances"
+    )
+
+    return {
+        "observations": chunk_obs,
+        "transcript": chunk_segs,
+        "phases": chunk_phases,
+        "explanations": chunk_explanations,
+        "disturbances": chunk_disturbances,
+    }
+
+
+def _merge_cross_chunk_phases(phases: list[dict]) -> tuple[list[dict], int]:
+    """Stitch adjacent same-type phases whose continuation flags agree.
+
+    Rule: phases[i] and phases[i+1] merge iff
+        phases[i].ends_with_continuation == True
+        AND phases[i+1].starts_with_continuation == True
+        AND same type.
+    Disagreement (one flag says continue, the other doesn't) — trust the
+    disagreement; don't merge. Returns (merged_list, n_merged).
+    """
+    if not phases:
+        return [], 0
+    merged: list[dict] = [dict(phases[0])]
+    n_merged = 0
+    for p in phases[1:]:
+        prev = merged[-1]
+        same_type = prev.get("type") == p.get("type")
+        prev_continues = bool(prev.get("ends_with_continuation"))
+        next_continues = bool(p.get("starts_with_continuation"))
+        if same_type and prev_continues and next_continues:
+            prev["end"] = p.get("end", prev.get("end"))
+            prev["what_happened"] = (
+                f"{prev.get('what_happened', '')} … {p.get('what_happened', '')}".strip(" …")
+            )
+            prev["ends_with_continuation"] = bool(p.get("ends_with_continuation"))
+            n_merged += 1
+        else:
+            merged.append(dict(p))
+    return merged, n_merged
 
 
 # ─── Re-apply the dedupe to an existing transcript ────────────────────────

@@ -213,7 +213,7 @@ def build_evidence_bundle(
     if teacher_id is not None:
         sess_meta_kwargs["teacher_id"] = teacher_id
     sess_meta = SessionMeta(**sess_meta_kwargs)
-    transcript, observations = vision_observe(
+    transcript, observations, phases, explanations, disturbances = vision_observe(
         sess_meta, llm, chunk_minutes=_chunk_minutes_from_chunking(chunking)
     )
 
@@ -226,6 +226,9 @@ def build_evidence_bundle(
         boundaries=boundaries,
         transcript=[s.model_dump() for s in transcript.segments],
         observations=[o.model_dump() for o in observations.observations],
+        phases=phases or None,
+        explanations=explanations or None,
+        disturbances=disturbances or None,
         transcript_source_model=transcript.source_model,
         observations_source_model=observations.source_model,
         activity_context=activity_context,

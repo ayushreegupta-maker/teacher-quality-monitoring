@@ -147,6 +147,7 @@ class LLMAdapter:
         start_seconds: int | None = None,
         end_seconds: int | None = None,
         fps: float | None = None,
+        media_resolution: str | None = None,
         model_name: str | None = None,
     ) -> str:
         """Call Gemini with a video. Defaults:
@@ -179,6 +180,10 @@ class LLMAdapter:
             config_kwargs["response_mime_type"] = "application/json"
         if thinking_budget is not None:
             config_kwargs["thinking_config"] = gtypes.ThinkingConfig(thinking_budget=thinking_budget)
+        if media_resolution is not None:
+            mr_key = f"MEDIA_RESOLUTION_{media_resolution.upper()}"
+            config_kwargs["media_resolution"] = gtypes.MediaResolution[mr_key]
+            log.info(f"call_gemini_video: media_resolution={mr_key} (~66/258/516 tok/frame for LOW/MED/HIGH)")
 
         # The video_metadata path is triggered if ANY of start/end/fps is set.
         needs_video_metadata = (
@@ -198,11 +203,16 @@ class LLMAdapter:
             if fps is not None:
                 vm_kwargs["fps"] = fps
             video_metadata = gtypes.VideoMetadata(**vm_kwargs)
+            log.info(
+                f"call_gemini_video: video_metadata path "
+                f"(start={vm_kwargs['start_offset']} end={vm_kwargs['end_offset']} fps={fps})"
+            )
             contents = [
                 gtypes.Part(file_data=file_data, video_metadata=video_metadata),
                 prompt,
             ]
         else:
+            log.info("call_gemini_video: default path (no video_metadata, Gemini picks fps)")
             contents = [video_file, prompt]
 
         resp = self._gemini.models.generate_content(

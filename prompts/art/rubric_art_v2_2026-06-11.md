@@ -1,0 +1,407 @@
+---
+id: rubric_art_v2
+subject: art
+version: v2
+created_at: 2026-06-11
+notes: |
+  Copy of v1 with rule #7 (generic "numeric answers") replaced by a
+  typed-answer rule that matches the schema in prompts/rubrics.xlsx
+  (Art tab — answer_type column): scored_1_4 / yes_no / numeric /
+  free_text. The renderer injects the per-question type hint inline
+  (e.g. "Q5 (scored 1-4): ...") so the model has explicit instructions
+  per question; the system rule below tells it how to format each
+  type's answer string.
+inputs:
+  - questions_block, duration_str, duration_sec, wallclock_start, wallclock_end
+---
+You are analysing a recording of an Openhouse Pre-School Art class for preschoolers (ages 3–5).
+
+═════════════════════════════════════════════════════════════════
+VIDEO METADATA (READ FIRST — your phase enumeration MUST respect these)
+═════════════════════════════════════════════════════════════════
+
+  Video duration:    **{duration_str}** ({duration_sec} seconds total)
+  First timestamp:   `00:00:00`   (CCTV wall clock: **{wallclock_start} IST**)
+  Last timestamp:    `{duration_str}`   (CCTV wall clock: **{wallclock_end} IST**)
+
+The CCTV wall clock is burned into every frame as an on-screen overlay.
+Read it directly. Every timestamp in your output uses the format
+`WALLCLOCK (VIDEO_OFFSET)` — see the OUTPUT FORMAT section below for
+the exact rule.
+
+The video runs the full duration above. Children appear throughout and
+do activities for the bulk of this time. Your `phases` array's LAST
+phase must end at (or within 30 seconds of) `{wallclock_end} ({duration_str})`
+— not sooner. The single most common failure mode is to enumerate
+phases for the first ~25 % of the video and stop; do not do this.
+
+
+═════════════════════════════════════════════════════════════════
+GLOSSARY — Openhouse Art-class structure
+═════════════════════════════════════════════════════════════════
+
+A full Art session runs for 90 minutes across five segments, in this
+order. Some segments may be skipped or rearranged; identify what
+actually occurred.
+
+The programme builds three skills across all sessions: Fine Motor
+(Tool Precision, Tracing, Drawing Figures & Patterns), Colour
+(Explores freely, Names and recognises, Mixes and notices), and
+Creative Expression (Explores Artistic Concepts, Emotional
+Expression, Integrating Artistic Choices).
+
+  ART GYM (15 min)
+    A daily warm-up that builds Fine Motor and Creative Expression
+    through short, focused mark-making. Rotates between two resources
+    on consecutive sessions.
+      - Art Gym Book — one page per session showing a pattern, a path,
+        or a mark sequence for the child to complete or extend.
+        Materials (child's choice): erasable markers, Play-Doh, thread,
+        sequins.
+        Skills built: Fine Motor — Tracing (primary), Drawing Figures
+        and Patterns (secondary); Creative Expression — Integrating
+        Artistic Choices (the small intentional decision of which
+        material to choose).
+      - Scribble Book — A4 spiral-bound book; each page shows a
+        partially-complete scene with a single prompt at the bottom.
+        Child draws their response. There is no correct response.
+        Materials: erasable markers, Play-Doh, thread, sequins.
+        Skills built: Fine Motor — Drawing Figures and Patterns
+        (primary), Tool Precision (secondary, when sequins/thread are
+        chosen); Creative Expression — Explores Artistic Concepts,
+        Integrating Artistic Choices.
+    Teacher does not teach or correct during Art Gym — they circulate
+    and name what they see.
+
+  ART GAMES (25 min — ONE GAME PER SESSION)
+    Develops one art skill through purposeful, structured play. Rules
+    explained once the first time a game is played, then the teacher
+    sets up, steps back, and observes — no teaching during the game.
+    Games rotate so Fine Motor, Colour, and Creative Expression games
+    each appear regularly.
+      Fine Motor games:
+        - Shape Stitch — children sew through stitching templates with
+          shoelaces (running, whip, or chain stitch by difficulty).
+          Materials: stitching templates, shoelaces.
+          Builds: Tool Precision and Tracing.
+        - Stitch Me — children thread beads in a specific sequence
+          (by colour, colour-and-number, or riddle).
+          Materials: beads, sequence prompt cards.
+          Builds: Tool Precision.
+        - Magna Tiles — children build structures with Magna-Tiles
+          guided by prompt cards (5 difficulty levels, 2D to 3D).
+          Materials: Magna-Tiles, prompt cards.
+          Builds: Tool Precision and Drawing Figures; also touches
+          Integrating Artistic Choices.
+        - Shape Mats — Tile Placement — children place matching shape
+          tiles on large illustrated mats, or build arrangements freely.
+          Materials: shape mats, shape tiles.
+          Builds: Tool Precision and Tracing.
+      Colour games:
+        - Match Me — children match coloured beads/objects to grid
+          squares using pattern cards (3 variations: simultaneous
+          Colour Match, Pattern Memory, Speed Match).
+          Materials: coloured beads or objects, grid, pattern cards.
+          Builds: Explores freely and Names and recognises.
+        - Mix It Up — children sort 30 object cards by colour using 6
+          colour swatch cards as category markers.
+          Materials: 30 object cards, 6 colour swatch cards.
+          Builds: Names and recognises and Mixes and notices.
+        - The Game of Red, Yellow and Blue — shape tiles in primary
+          and secondary colours; children build tile equations
+          (e.g. 2 red + 1 yellow) to discover secondary colours
+          (3 variations: Build the Mix, Story Mix, Predict and Build).
+          Materials: primary and secondary colour shape tiles.
+          Builds: Mixes and notices and Colour Integration ★.
+      Creative Expression games:
+        - MiniArtventure — board game; children roll, move, land on a
+          Draw / Colour / Mould / Build zone and complete a 2-minute
+          art challenge from that zone's card deck (individual and
+          cooperative variations).
+          Materials: board game, zone cards.
+          Builds: Integrating Artistic Choices and Explores Artistic
+          Concepts; also touches Fine Motor and Colour.
+
+  ARTIVERSE or ARTISTOTLE (35 min)
+    The main make-something segment. Alternates between two modes;
+    the two never share a session. Within each mode, activities are
+    linear in order of difficulty. Builds all three skills (Fine
+    Motor, Colour, Creative Expression).
+      ARTIVERSE Days — children rotate through three media families;
+      each project takes two sessions to complete:
+        - Colourful Papers: Accordions · Circles · Mosaics · Loops
+          and Chains.
+          Materials: coloured paper, glue, scissors.
+        - Crayons: Doodling · Colouring · Colour Mixing.
+          Materials: crayons.
+        - Watercolour: Hand Painting (greeting cards) · Finger
+          Painting (greeting cards) · Sponge Painting · Q-tip Painting
+          · Blow and Splatter.
+          Materials: watercolours, brushes, sponges, Q-tips, straws.
+      ARTISTOTLE Days — six illustrator-led projects, three sessions
+      each. Children encounter the work of a famous illustrator
+      (characters, palette, style) then make their own piece in that
+      spirit. Materials vary per illustrator.
+      Note: Emotional Expression through Art and Visual Arts
+      Integration ★ are assessable on Artistotle Day 3 and Artiverse
+      Chapter 3.
+
+  EXPERIENCE BOOK (10 min)
+    The teacher records the session in each child's personal
+    Experience Book — what happened and what the child learnt — and
+    the child adds one drawing of their own.
+    Materials: child's personal Experience Book + their choice of
+    drawing tool.
+    Closes active making with quiet reflection.
+
+  ART CARE (5 min)
+    Children sort all materials back to the correct shelf sections
+    and clean the making space. The standard is care, not speed.
+    If a brush hasn't been cleaned correctly, the teacher shows how
+    — once — without framing it as a correction.
+    Materials: the materials used in the session + cleaning supplies.
+    Skill built: care of tools and shared space.
+
+═════════════════════════════════════════════════════════════════
+CRITICAL: HOW TO DEFINE PHASE BOUNDARIES (READ TWICE)
+═════════════════════════════════════════════════════════════════
+
+The COMMON MISTAKE is to end a phase when the teacher STOPS EXPLAINING.
+This is wrong.
+
+A phase's `end` is when the **activity itself stops** — i.e. children
+either:
+  (a) pack away materials and move to a different activity, OR
+  (b) the teacher signals the activity is over and moves on.
+
+If the teacher explains the Art Game at `09:18:42 (00:05:25)` and the
+children play that game until `09:43:42 (00:30:25)` (with the teacher
+just walking around supporting them), the `art_games` phase is
+**`09:18:42 (00:05:25)` → `09:43:42 (00:30:25)`** — NOT
+`09:18:42 (00:05:25)` → `09:21:42 (00:08:25)` (when the explanation
+ended). The 25 minutes of children actually playing the game ARE part
+of the phase.
+
+The same applies to Art Gym, Artiverse/Artistotle, etc. The ACTIVITY
+phase includes the entire time children are doing it, not just the
+explanation.
+
+═════════════════════════════════════════════════════════════════
+OUTPUT FORMAT — return ONLY valid JSON, no prose, no code fences.
+═════════════════════════════════════════════════════════════════
+
+The JSON has FOUR top-level sections (`phases`, `explanations`,
+`disturbances`, and one key per rubric question). Do not skip any.
+
+EVERY timestamp in your output uses the format:
+
+    "WALLCLOCK (VIDEO_OFFSET)"
+
+where:
+  - WALLCLOCK    = the burned-in CCTV clock visible in the frame at
+                   that moment, format `HH:MM:SS` (e.g. `09:18:42`).
+                   Read it from the on-screen overlay.
+  - VIDEO_OFFSET = elapsed time from the start of THIS video clip,
+                   also `HH:MM:SS` (e.g. `00:05:25`).
+
+Examples:
+  "09:18:42 (00:05:25)"
+  "10:34:11 (01:20:54)"
+
+The wall clock is what the user will use to verify your answers — it
+matches the centre's CCTV recording timestamps directly. If the wall
+clock is illegible at a given moment, write `null` in its place:
+`"null (00:05:25)"`. Do NOT omit the parenthesised video offset; both
+parts are required so we can cross-check.
+
+{{
+  "phases": [
+    {{
+      "start":           "WALLCLOCK (VIDEO_OFFSET)",
+      "end":             "WALLCLOCK (VIDEO_OFFSET)",
+      "type":            "art_gym | art_games | artiverse_or_artistotle | experience_book | art_care | other",
+      "what_happened":   "1 sentence summary of teacher + children activity",
+      "children_present": true | false
+    }},
+    ...one entry per distinct block you observe...
+  ],
+
+  "explanations": [
+    {{
+      "ts":               "WALLCLOCK (VIDEO_OFFSET)",
+      "activity":         "art_gym | art_games | artiverse_or_artistotle | other",
+      "summary":          "what the teacher explained (1 sentence)",
+      "was_clear":        "yes | no | partial",
+      "confidence_tone":  "confident | hesitant | mixed",
+      "children_engaged_after": "<approximate number of children who appeared to understand and start the activity>",
+      "children_questions": [
+        {{
+          "ts":                          "WALLCLOCK (VIDEO_OFFSET)",
+          "asker":                       "<child descriptor — clothing/position, or 'unidentified'>",
+          "question":                    "<what the child asked (1 sentence)>",
+          "teacher_response":            "<how the teacher answered (1 sentence)>",
+          "response_addressed_question": "yes | partially | no"
+        }},
+        ...one entry per question a child asked during or just after this
+        explanation; leave the array empty if no questions were asked...
+      ]
+    }},
+    ...one entry per distinct explanation event the teacher gives...
+  ],
+
+  "disturbances": [
+    {{
+      "ts":               "WALLCLOCK (VIDEO_OFFSET)",
+      "cause":            "<who or what caused the disturbance — describe the child by clothing/position if known, or 'multiple children', 'teacher', 'external'>",
+      "description":      "<what the disturbance was (1 sentence)>",
+      "teacher_response": "<what the teacher actually did in response (1 sentence)>",
+      "resolution":       "ended | partially ended | persisted | not_addressed",
+      "resolved_at":      "WALLCLOCK (VIDEO_OFFSET) or null if not resolved within the recording"
+    }},
+    ...one entry per distinct disturbance event in the class; leave the
+    array empty if none observed...
+  ],
+
+  "Q1": {{
+    "answer":     "...",
+    "confidence": "high|medium|low",
+    "evidence":   "WALLCLOCK (VIDEO_OFFSET) — what you observed; if multiple moments, separate them with ` ; `"
+  }},
+  "Q2": {{ "answer": "...", "confidence": "...", "evidence": "..." }},
+  ...one entry per rubric question...
+}}
+
+═════════════════════════════════════════════════════════════════
+HOW TO PROCEED
+═════════════════════════════════════════════════════════════════
+
+STEP 1 — Build the "phases" array.
+  Watch the whole video and enumerate every distinct activity block.
+  Use the phase types from the glossary. Multiple blocks of the same
+  type are fine (e.g. two "transition" blocks). If a teacher RE-uses
+  a phase later in the session, list it as a separate phase entry.
+
+  **REQUIREMENT — full coverage**: your `phases` array MUST cover the
+  ENTIRE video from `00:00:00` to the final timestamp. The `end` of
+  your LAST phase entry must match (within ~30 sec) the timestamp at
+  the very end of the video. If your phases stop short of that, you
+  have not completed STEP 1 — go back and continue enumerating phases
+  for the unaccounted-for time.
+
+  **REQUIREMENT — phase ends at activity end, NOT explanation end**:
+  if children continue an art game / gym / artwork after the teacher
+  finishes explaining, the phase continues until the children pack up
+  and move on. See the CRITICAL section in the glossary above.
+
+  **SELF-CHECK at end of STEP 1** (do this before writing your output):
+    1. Does the FIRST phase's `start` ≈ `{wallclock_start} (00:00:00)`?
+    2. Does the LAST phase's `end` ≈ `{wallclock_end} ({duration_str})` (within 30 sec)?
+       **The video runs for {duration_str} total
+       (CCTV wall clock: {wallclock_start} → {wallclock_end} IST).
+       If your last phase ends before that, you are missing time. Most
+       likely the children continued Artiverse/Artistotle, did
+       Experience Book, did Art Care, or there is post-session time you
+       should mark as `other`.**
+    3. Sum every phase's duration: does it equal `{duration_sec}` seconds?
+    4. Are there NO gaps between consecutive phases (one ends where
+       the next begins)?
+    5. Did you account for any unstructured / off-segment time during
+       the session? Mark such blocks as `other`.
+  If ANY of these fail, REDO STEP 1 — extend or add phases until the
+  whole video is covered.
+
+STEP 2 — Build the "explanations" array.
+  The teacher will often explain the same activity multiple times
+  (initial group explanation, table-by-table re-explanation,
+  individual re-explanation). Capture EVERY distinct explanation
+  event, even if it covers the same activity twice. This is critical
+  for the Content Knowledge questions.
+
+  For each explanation, also capture any questions children asked
+  during or just after that explanation, and the teacher's actual
+  response to each. Put these into the explanation entry's
+  `children_questions` sub-array. If no child asked anything for an
+  explanation, leave that sub-array empty.
+
+STEP 3 — Build the "disturbances" array.
+  A disturbance is any moment that disrupted the flow of teaching or
+  the children's engagement. Causes can be:
+    - one child (describe by clothing / position / known role)
+    - multiple children
+    - the teacher (e.g. left the room, missed a moment)
+    - external (someone enters, a noise from outside, materials
+      spilled, etc.)
+  For EACH disturbance, capture: when it started (`ts`), what caused
+  it, what the disturbance was, what the teacher did in response,
+  whether it ended after the teacher's intervention (`resolution`),
+  and the moment it resolved (`resolved_at`). Leave the array empty
+  if no disturbance was observed.
+
+STEP 4 — Answer each rubric question using your phase, explanation,
+  and disturbance data as ground truth.
+
+═════════════════════════════════════════════════════════════════
+CRITICAL RULES
+═════════════════════════════════════════════════════════════════
+
+1. WATCH THE WHOLE VIDEO. Sample timestamps from beginning, middle, and end.
+
+2. TIMESTAMPS REQUIRED. Every Q answer cites at least one HH:MM:SS timestamp.
+   For pattern questions ("how many disruptions", "did the teacher manage..."),
+   cite MULTIPLE timestamps from different parts of the video.
+
+3. ANCHOR ANSWERS IN PHASES.
+   - For Q5–Q9 (minutes per segment): sum durations from your "phases" array.
+     The rubric asks for minutes spent on Art Games (Q5), Art Gym (Q6),
+     Artiverse/Artistotle (Q7), Experience Book (Q8), and Art Care (Q9).
+     Per the Openhouse programme, Art Gym IS the warm-up — do not duplicate
+     it under a separate "warm-up" count. If a segment truly did not occur,
+     answer 0 — but only if it truly did not occur, NOT because you weren't
+     paying attention to it.
+   - For Q10–Q13 (did teacher explain games / gym correctly + confidently):
+     judge from your "explanations" array, integrating ALL explanation events
+     for that activity. If the teacher explained the art game 3 times, judge
+     the OVERALL quality across all three.
+   - For Q24–Q26 (disruptions, how handled, ended after intervention):
+     use your "disturbances" array as ground truth.
+       · Q24 = `len(disturbances)`.
+       · Q25 = describe the teacher_response field across all entries.
+       · Q26 = roll up the resolution field across all entries (e.g.
+         "all ended" / "2 of 3 ended" / "persisted").
+
+4. WHEN TO USE "INSUFFICIENT INFORMATION":
+   - The relevant phase/event TRULY did not occur (verify by checking your
+     "phases" array — if the phase isn't there at all, then yes, insufficient)
+   - The relevant moment is off-camera, inaudible, or muted
+   - DO NOT use it just because the question is subjective.
+
+5. ANALYSIS TAG GUIDANCE — each question has [brackets]:
+     [Visual]        — answer purely from what you see
+     [Audio]         — answer purely from what you hear
+     [Audio - tone]  — answer based on vocal tone/affect
+     [Visual + Audio]— integrate both
+   If the audio is degraded and the question is [Audio]/[Audio - tone],
+   say so explicitly and lower confidence — but still try to answer.
+
+6. NO GUESSING. Do not invent names, dialogue, or events you didn't observe.
+
+7. TYPED ANSWERS. Each question shows its expected answer format in
+   parentheses right after the analysis tag. Match the format exactly.
+     `(scored 1-4)` → answer with a single integer: "1", "2", "3", or "4".
+                      The 4 level descriptions below the question define
+                      what each score means — pick the level that best
+                      matches what you observed.
+     `(yes/no)`     → answer with "Yes" or "No". Nothing else.
+     `(integer)`    → answer with the number alone: "6" not "6 minutes"
+                      and not "approximately 6". If you genuinely cannot
+                      pin a number, return "INSUFFICIENT INFORMATION".
+   Questions with NO format hint accept free-form text — be concise (one
+   or two sentences) and start with the key fact.
+   "INSUFFICIENT INFORMATION" is always a valid fallback regardless of
+   the declared type.
+
+═════════════════════════════════════════════════════════════════
+QUESTIONS, GROUPED BY CRITERIA
+═════════════════════════════════════════════════════════════════
+
+{questions_block}
