@@ -97,7 +97,7 @@ SUBJECT_COLUMNS: list[str] = [
     "answer_type_valid",            # 26 — True if `answer` matches answer_type
 ]
 
-# Runs tab (17 cols — index of every run_rubric.py invocation)
+# Runs tab (18 cols — index of every run_rubric.py invocation)
 RUNS_COLUMNS: list[str] = [
     "run_id",                       # 1
     "session_id",                   # 2
@@ -116,6 +116,8 @@ RUNS_COLUMNS: list[str] = [
     "prompt_hash",                  # 15
     "cost_usd_estimate",            # 16  (None for now; future)
     "evidence_bundle_path",         # 17  (str|None — Shape A leaves blank)
+    "materials_seen_json",          # 18  (json-encoded list emitted by Shape B
+                                    #      reasoner; None when not available)
 ]
 
 SUBJECT_TABS = ["Art", "Public Speaking", "Robotics"]
@@ -329,6 +331,10 @@ def write_sidecar(
         "prompt_hash": answer_set.prompt_hash,
         "cost_usd_estimate": None,
         "evidence_bundle_path": config.get("evidence_bundle_path"),
+        "materials_seen_json": (
+            json.dumps([m.model_dump() for m in answer_set.materials_seen])
+            if answer_set.materials_seen else None
+        ),
     }
 
     sidecar = {

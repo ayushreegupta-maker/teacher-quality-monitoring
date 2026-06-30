@@ -34,3 +34,4 @@ data/_answer_queue/
 # Migration audit log — append-only on disk, derivable from migrate_*
 # scripts. Tracked across machines via the scripts themselves.
 migration_log.txt
+data/tqm_answers.backup_*.xlsx

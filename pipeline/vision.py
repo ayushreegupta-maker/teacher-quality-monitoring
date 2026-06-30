@@ -81,8 +81,9 @@ def _dedupe_transcript_loops(segments: list[dict], min_run: int = 5) -> tuple[li
         run_len = j - i
         if run_len >= min_run:
             merged = dict(segments[i])
+            base_text = merged.get("text", "")
             merged["text"] = (
-                f"{merged['text']} (repeated {run_len} times — "
+                f"{base_text} (repeated {run_len} times — "
                 "likely transcription loop artifact)"
             )
             out.append(merged)
