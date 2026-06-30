@@ -20,6 +20,7 @@ Two-pane layout:
 from __future__ import annotations
 
 import json
+import os
 from datetime import date, datetime, time, timedelta
 from pathlib import Path
 
@@ -27,16 +28,12 @@ import pandas as pd
 import streamlit as st
 
 ROOT = Path(__file__).resolve().parent.parent
-ANSWERS_XLSX = ROOT / "data" / "tqm_answers.xlsx"
 RUBRIC_RUNS = ROOT / "data" / "rubric_runs"
 SESSIONS_DIR = ROOT / "data" / "sessions"
 CAMERAS_XLSX = ROOT / "data" / "cctv_cameras.xlsx"
 
-SUBJECT_SHEETS = {
-    "art": "Art",
-    "public_speaking": "Public Speaking",
-    "robotics": "Robotics",
-}
+# Subject tokens — same set the pipeline uses end-to-end.
+SUBJECTS = ("art", "public_speaking", "robotics")
 
 # 5-min margin on each side of the class window (the convention I use when
 # manually trimming via the fast path). Used only to estimate class end time.
@@ -165,88 +162,134 @@ def password_gate() -> bool:
 # ─── Data loaders ──────────────────────────────────────────────────────────
 
 
-@st.cache_data(ttl=60)
-def load_runs_sheet() -> pd.DataFrame:
-    """The Runs tab — one row per rubric run, with materials_seen_json column."""
+# ─── Supabase client ─────────────────────────────────────────────────────────
+
+
+@st.cache_resource
+def _supabase():
+    """Cached Supabase client. Returns None when secrets aren't configured —
+    callers should handle gracefully (empty data instead of crashing)."""
     try:
-        return pd.read_excel(ANSWERS_XLSX, sheet_name="Runs")
+        url = st.secrets.get("SUPABASE_URL") or os.environ.get("SUPABASE_URL")
+        key = (st.secrets.get("SUPABASE_SERVICE_KEY")
+               or os.environ.get("SUPABASE_SERVICE_KEY"))
     except Exception:
-        return pd.DataFrame()
+        url = os.environ.get("SUPABASE_URL")
+        key = os.environ.get("SUPABASE_SERVICE_KEY")
+    if not url or not key:
+        return None
+    try:
+        from supabase import create_client
+        return create_client(url, key)
+    except Exception:
+        return None
+
+
+def _fetch_all(table: str, *, select: str = "*", batch: int = 1000) -> list[dict]:
+    """Paginate through every row of a Supabase table. The PostgREST API
+    caps each response at 1000 rows by default, so we have to range-select."""
+    sb = _supabase()
+    if sb is None:
+        return []
+    out: list[dict] = []
+    start = 0
+    while True:
+        end = start + batch - 1
+        r = sb.table(table).select(select).range(start, end).execute()
+        rows = r.data or []
+        out.extend(rows)
+        if len(rows) < batch:
+            break
+        start += batch
+    return out
+
+
+@st.cache_data(ttl=60)
+def load_runs() -> pd.DataFrame:
+    """One row per run, from the Supabase `runs` table."""
+    rows = _fetch_all("runs")
+    df = pd.DataFrame(rows)
+    if df.empty:
+        return df
+    if "session_date" in df.columns:
+        df["session_date"] = pd.to_datetime(df["session_date"], errors="coerce").dt.date
+    return df
 
 
 @st.cache_data(ttl=60)
 def runs_window_info() -> dict[str, dict]:
-    """{run_id → {duration_sec: float|None, boundaries_detected: bool|None}}.
-    Reads the Runs sheet so the dashboard can compute the class end time
-    without the video being on disk (e.g. on Streamlit Cloud)."""
-    runs = load_runs_sheet()
+    """{run_id → {duration_sec, boundaries_detected}} — for class-window
+    computation on the cloud build (where the video isn't on disk)."""
+    df = load_runs()
+    if df.empty:
+        return {}
     out: dict[str, dict] = {}
-    if runs.empty:
-        return out
-    dur_col = "trimmed_video_duration_seconds"
-    bd_col = "boundaries_detected"
-    for _, row in runs.iterrows():
+    for _, row in df.iterrows():
         rid = str(row.get("run_id") or "").strip()
         if not rid:
             continue
-        dur = row.get(dur_col) if dur_col in runs.columns else None
-        bd = row.get(bd_col) if bd_col in runs.columns else None
+        dur = row.get("trimmed_video_duration_seconds")
+        bd = row.get("boundaries_detected")
         try:
             dur = float(dur) if pd.notna(dur) else None
         except Exception:
             dur = None
-        bd_norm = None
-        if pd.notna(bd):
-            sv = str(bd).strip().lower()
-            if sv in ("true", "1", "yes"):
-                bd_norm = True
-            elif sv in ("false", "0", "no"):
-                bd_norm = False
+        try:
+            bd_norm = bool(bd) if pd.notna(bd) else None
+        except Exception:
+            bd_norm = None
         out[rid] = {"duration_sec": dur, "boundaries_detected": bd_norm}
     return out
 
 
 @st.cache_data(ttl=60)
 def materials_by_run() -> dict[str, list]:
-    """{run_id → parsed materials_seen list}. Reads the Runs sheet's
-    materials_seen_json column so the cloud build doesn't need per-run JSON.
-    """
-    runs = load_runs_sheet()
+    """{run_id → parsed materials_seen list}. The runs.materials_seen column
+    in Supabase is jsonb so we already get a Python list back."""
+    df = load_runs()
+    if df.empty:
+        return {}
     out: dict[str, list] = {}
-    if runs.empty or "materials_seen_json" not in runs.columns:
-        return out
-    for _, row in runs.iterrows():
+    for _, row in df.iterrows():
         rid = str(row.get("run_id") or "").strip()
-        raw = row.get("materials_seen_json")
-        if not rid or pd.isna(raw) or not str(raw).strip():
+        ms = row.get("materials_seen")
+        if not rid or ms is None:
             continue
-        try:
-            out[rid] = json.loads(str(raw))
-        except Exception:
-            continue
+        # jsonb comes back as a list[dict] already; tolerate string-encoded too
+        if isinstance(ms, str):
+            try:
+                ms = json.loads(ms)
+            except Exception:
+                continue
+        if isinstance(ms, list) and ms:
+            out[rid] = ms
     return out
 
 
 @st.cache_data(ttl=60)
 def load_all_answers() -> pd.DataFrame:
-    """Concat the three subject sheets into one tall dataframe."""
-    frames = []
-    for subj, sheet in SUBJECT_SHEETS.items():
-        try:
-            df = pd.read_excel(ANSWERS_XLSX, sheet_name=sheet)
-        except Exception:
-            continue
-        df["subject"] = subj
-        frames.append(df)
-    if not frames:
+    """One row per (run × question) joined with run-level metadata the
+    dashboard needs to filter (session_date, camera, teacher_id, run_n).
+    Pulls from the Supabase `answers` + `runs` tables."""
+    answers = _fetch_all("answers")
+    if not answers:
         return pd.DataFrame()
-    df = pd.concat(frames, ignore_index=True)
+    runs = load_runs()
+    df = pd.DataFrame(answers)
+    if not runs.empty:
+        wanted = ["run_id", "session_date", "camera", "rubric_version",
+                  "reasoner", "shape", "run_n", "vision_model"]
+        keep = [c for c in wanted if c in runs.columns]
+        df = df.merge(runs[keep], on="run_id", how="left")
+    # The answers table has insufficient_information as a real bool — but
+    # pandas may bring it back as Python bool or numpy bool depending on
+    # the supabase-py version. Normalise.
     if "insufficient_information" in df.columns:
-        df["insufficient_information"] = (
-            df["insufficient_information"].astype(str).str.lower().eq("true")
-        )
-    if "session_date" in df.columns:
-        df["session_date"] = pd.to_datetime(df["session_date"], errors="coerce").dt.date
+        df["insufficient_information"] = df["insufficient_information"].astype(bool)
+    # teacher_id isn't on the answers table — keep the column shape so the
+    # filter UI still works when we wire it up.
+    if "teacher_id" not in df.columns:
+        df["teacher_id"] = None
     return df
 
 
@@ -273,102 +316,29 @@ def load_camera_lookup() -> dict[str, dict]:
 
 
 @st.cache_data(ttl=60)
-def index_run_artefacts() -> dict[str, dict]:
-    """Walk data/rubric_runs/<subject>/<config_slug>/ and return
-    {run_id_normalised: {subject, run_dir, has_activity_context, has_materials_seen, shape}}.
-
-    run_id_normalised = the colons-stripped run_id (matches config_slug prefix).
-    """
-    index: dict[str, dict] = {}
-    if not RUBRIC_RUNS.exists():
-        return index
-    for subj_dir in RUBRIC_RUNS.iterdir():
-        if not subj_dir.is_dir():
-            continue
-        for run_dir in subj_dir.iterdir():
-            if not run_dir.is_dir():
-                continue
-            cfg_path = run_dir / "0_config.json"
-            ans_path = run_dir / "5_answers.json"
-            if not cfg_path.exists() or not ans_path.exists():
-                continue
-            try:
-                cfg = json.loads(cfg_path.read_text())
-            except Exception:
-                cfg = {}
-            run_id_norm = run_dir.name.split("__", 1)[0]  # YYYY-MM-DDTHHMMSS
-            has_ctx = bool(cfg.get("activity_context"))
-            try:
-                ans = json.loads(ans_path.read_text())
-                has_materials = bool(ans.get("materials_seen"))
-            except Exception:
-                has_materials = False
-            index[run_id_norm] = {
-                "subject": subj_dir.name,
-                "run_dir": run_dir,
-                "has_activity_context": has_ctx,
-                "has_materials_seen": has_materials,
-                "shape": cfg.get("shape") or "?",
-                "activity_context": cfg.get("activity_context"),
-            }
-    return index
-
-
-def _norm_run_id(run_id: str) -> str:
-    """'2026-06-29T12:54:16' → '2026-06-29T125416' (matches config_slug prefix)."""
-    return str(run_id).replace(":", "")
-
-
-@st.cache_data(ttl=60)
 def canonical_session_runs(answers_df: pd.DataFrame) -> pd.DataFrame:
     """Pick the best (subject, session_id) → one canonical run.
 
-    Preference order:
-      1. Shape B with activity_context (the "Shape B with session context")
-      2. Shape B without activity_context
-      3. Skip Shape A entirely (we only surface productionable Shape B runs)
-
-    Within the chosen tier, take the latest run_n.
+    Rule: Shape B only, latest run_n per session. activity_context is no
+    longer a tier-breaker (in practice every Shape B run carries one and
+    we don't have that flag in Supabase yet — kept simple).
     """
     if answers_df.empty:
         return answers_df
-    runs_meta = index_run_artefacts()
 
-    # Strip to one row per (subject, session_id, run_id)
     cols = ["subject", "session_id", "session_date", "camera", "teacher_id",
             "rubric_version", "reasoner", "shape", "run_id", "run_n"]
-    runs = answers_df[cols].drop_duplicates().copy()
-    runs = runs[runs["shape"] == "B"]
+    available = [c for c in cols if c in answers_df.columns]
+    runs = answers_df[available].drop_duplicates().copy()
+    if "shape" in runs.columns:
+        runs = runs[runs["shape"] == "B"]
     if runs.empty:
         return runs
-
-    runs["run_norm"] = runs["run_id"].map(_norm_run_id)
-    runs["has_ctx"] = runs["run_norm"].map(
-        lambda r: runs_meta.get(r, {}).get("has_activity_context", False)
-    )
-    runs["has_materials"] = runs["run_norm"].map(
-        lambda r: runs_meta.get(r, {}).get("has_materials_seen", False)
-    )
-
-    # tier 1 = has_ctx; tier 2 = no ctx. Pick highest tier per session, then latest run_n.
-    runs["tier"] = runs["has_ctx"].map({True: 1, False: 2})
-    runs = runs.sort_values(
-        ["subject", "session_id", "tier", "run_n"],
-        ascending=[True, True, True, False],
-    )
+    if "run_n" in runs.columns:
+        runs = runs.sort_values(
+            ["subject", "session_id", "run_n"], ascending=[True, True, False],
+        )
     return runs.drop_duplicates(subset=["subject", "session_id"], keep="first")
-
-
-def load_run_answers_json(subject: str, run_id: str) -> dict | None:
-    """Read 5_answers.json for the matching run."""
-    idx = index_run_artefacts()
-    info = idx.get(_norm_run_id(run_id))
-    if info is None:
-        return None
-    p = info["run_dir"] / "5_answers.json"
-    if not p.exists():
-        return None
-    return json.loads(p.read_text())
 
 
 def trimmed_video_path(subject: str, session_id: str) -> Path | None:
@@ -467,6 +437,19 @@ def main():
         return
     st.title("Openhouse")
 
+    # ── Top-level view switcher ──
+    view = st.sidebar.radio(
+        "View",
+        ["Sessions", "Coaching Queue"],
+        index=0,
+        key="_view",
+    )
+    st.sidebar.markdown("---")
+
+    if view == "Coaching Queue":
+        render_coaching_queue()
+        return
+
     df = load_all_answers()
     if df.empty:
         st.warning(
@@ -557,9 +540,20 @@ def main():
         labels.append(label)
         keys.append((row["subject"], row["session_id"], row["run_id"]))
 
+    # Default selection — if the user clicked "Open session" in the queue,
+    # land on that one.
+    default_idx = 0
+    jump_target = st.session_state.pop("_jump_session", None)
+    if jump_target is not None:
+        try:
+            default_idx = keys.index(jump_target)
+        except ValueError:
+            default_idx = 0
+
     idx = st.sidebar.radio(
         "Pick a session",
         range(len(labels)),
+        index=default_idx,
         format_func=lambda i: labels[i],
         label_visibility="collapsed",
     )
@@ -573,12 +567,9 @@ def render_session_detail(
     df: pd.DataFrame, subject: str, session_id: str, run_id: str,
     cam_lookup: dict[str, dict],
 ):
-    artefacts = load_run_answers_json(subject, run_id) or {}
     qdf = df[(df["subject"] == subject) & (df["run_id"] == run_id)].copy()
-    # materials live in the Runs sheet of the xlsx now, so the cloud build
-    # works without the per-run JSON. Falls back to artefacts if absent.
-    materials_idx = materials_by_run()
-    materials_from_xlsx = materials_idx.get(str(run_id))
+    # materials live on runs.materials_seen in Supabase.
+    materials = materials_by_run().get(str(run_id)) or []
 
     cam = qdf["camera"].iloc[0] if not qdf.empty else ""
     centre = cam_lookup.get(str(cam), {}).get("centre_name", "—")
@@ -636,7 +627,6 @@ def render_session_detail(
     )
 
     # ── Class window + materials seen, side-by-side under the video ──
-    materials = materials_from_xlsx or artefacts.get("materials_seen") or []
     window = parse_class_window(subject, session_id, v_path, run_id=run_id)
 
     m_col, w_col = st.columns([3, 2], gap="large")
@@ -754,6 +744,237 @@ def render_section_questions(qdf: pd.DataFrame, section_name: str, video_state_k
                             st.rerun()
                 else:
                     st.markdown("_no evidence timestamps_")
+
+
+# ─── Coaching Queue ──────────────────────────────────────────────────────────
+
+
+# Phrases (case-insensitive) that mark a yes_no question as a "red flag"
+# question — Yes here is concerning (vs e.g. "Was every child addressed?"
+# where Yes is good). Matches the three Warmth-section safety questions
+# across all subjects.
+_RED_FLAG_QUESTION_PREFIX = "are there any instances where"
+
+COACHING_STATUS_OPTIONS = [
+    ("training_required_immediately", "🚨 Training required immediately"),
+    ("training_required",             "⚠️ Training required"),
+    ("no_training_required",          "✓ No training required"),
+]
+COACHING_STATUS_LABEL = dict(COACHING_STATUS_OPTIONS)
+
+
+@st.cache_data(ttl=30)
+def load_coaching_actions() -> dict[str, dict]:
+    """{session_id → coaching_actions row}. Empty when Supabase isn't set up."""
+    rows = _fetch_all("coaching_actions")
+    return {r["session_id"]: r for r in rows}
+
+
+def save_coaching_action(session_id: str, status: str, notes: str | None) -> bool:
+    """Upsert a coaching_actions row. Returns True on success."""
+    sb = _supabase()
+    if sb is None:
+        return False
+    try:
+        sb.table("coaching_actions").upsert({
+            "session_id": session_id,
+            "status": status,
+            "notes": (notes or "").strip() or None,
+            "updated_at": datetime.utcnow().isoformat(),
+        }, on_conflict="session_id").execute()
+        load_coaching_actions.clear()  # invalidate cache so the table refreshes
+        return True
+    except Exception as e:
+        st.error(f"Save failed: {e}")
+        return False
+
+
+def _flag_session(qdf: pd.DataFrame) -> list[str]:
+    """Apply the coaching ruleset to one canonical session's question rows.
+    Returns a list of human-readable reasons. Empty list = not flagged."""
+    reasons: list[str] = []
+    if qdf.empty:
+        return reasons
+
+    for _, r in qdf.iterrows():
+        qid = str(r.get("question_id") or "")
+        ans_raw = str(r.get("answer") or "").strip()
+        conf = str(r.get("confidence") or "").strip().lower()
+        atype = str(r.get("answer_type") or "").strip().lower()
+        ins = bool(r.get("insufficient_information"))
+        qtext = str(r.get("question_text") or "")
+
+        if ins:
+            continue
+
+        # Rule 1: low scored_1_4 with medium or high confidence
+        if atype == "scored_1_4" and conf in ("medium", "high"):
+            try:
+                n = int(ans_raw)
+                if n in (1, 2):
+                    short = qtext.rstrip("?").strip()
+                    if len(short) > 50:
+                        short = short[:47] + "…"
+                    reasons.append(f"{qid}: {short} = {n} ({conf[0].upper()})")
+            except ValueError:
+                pass
+
+        # Rule 2: red-flag yes_no answered Yes (confidence not gated)
+        if atype == "yes_no" and ans_raw.lower().startswith("yes"):
+            if qtext.lower().startswith(_RED_FLAG_QUESTION_PREFIX):
+                short = qtext.rstrip("?").strip()
+                if len(short) > 50:
+                    short = short[:47] + "…"
+                reasons.append(f"{qid}: {short} = Yes")
+    return reasons
+
+
+@st.cache_data(ttl=60)
+def compute_coaching_queue(df: pd.DataFrame, canon: pd.DataFrame) -> pd.DataFrame:
+    """For each canonical session, evaluate the ruleset and return a frame
+    of flagged sessions with a 'reasons' column."""
+    if df.empty or canon.empty:
+        return pd.DataFrame()
+    queue_rows = []
+    for _, sess in canon.iterrows():
+        qdf = df[(df["subject"] == sess["subject"]) & (df["run_id"] == sess["run_id"])]
+        reasons = _flag_session(qdf)
+        if not reasons:
+            continue
+        queue_rows.append({
+            "subject": sess["subject"],
+            "session_id": sess["session_id"],
+            "session_date": sess.get("session_date"),
+            "camera": sess.get("camera"),
+            "teacher_id": sess.get("teacher_id"),
+            "run_id": sess["run_id"],
+            "reasons": reasons,
+            "flag_count": len(reasons),
+        })
+    return pd.DataFrame(queue_rows).sort_values("session_date", ascending=False)
+
+
+def render_coaching_queue():
+    st.header("Coaching Queue")
+    st.caption(
+        "Sessions flagged for training-team attention. A session is queued when "
+        "any scored question is **1 or 2** with medium/high confidence, **or** "
+        "a safety-themed yes/no question is answered **Yes** at any confidence."
+    )
+
+    sb = _supabase()
+    if sb is None:
+        st.error(
+            "Supabase isn't configured. Add `SUPABASE_URL` and "
+            "`SUPABASE_SERVICE_KEY` to Streamlit Cloud Secrets (or .env locally)."
+        )
+        return
+
+    df = load_all_answers()
+    canon = canonical_session_runs(df)
+    cam_lookup = load_camera_lookup()
+    queue = compute_coaching_queue(df, canon)
+    coaching = load_coaching_actions()
+
+    if queue.empty:
+        st.success("No sessions match the coaching rules right now.")
+        return
+
+    queue = queue.copy()
+    queue["centre"] = queue["camera"].map(
+        lambda c: cam_lookup.get(str(c), {}).get("centre_name", "—")
+    )
+    queue["teacher_display"] = queue["teacher_id"].apply(
+        lambda t: t if pd.notna(t) and str(t) not in ("None", "nan", "") else "—"
+    )
+
+    # ── Top-line filters ──
+    cols = st.columns(3)
+    with cols[0]:
+        subjects = sorted(queue["subject"].unique())
+        sel_subj = st.multiselect("Subject", subjects, default=[], placeholder="Any")
+    with cols[1]:
+        centres = sorted(queue["centre"].dropna().unique())
+        sel_centre = st.multiselect("Centre", centres, default=[], placeholder="Any")
+    with cols[2]:
+        sel_status = st.multiselect(
+            "Status",
+            ["unreviewed"] + [v for _, v in COACHING_STATUS_OPTIONS],
+            default=[],
+            placeholder="Any",
+        )
+
+    view = queue
+    if sel_subj:
+        view = view[view["subject"].isin(sel_subj)]
+    if sel_centre:
+        view = view[view["centre"].isin(sel_centre)]
+    if sel_status:
+        def _row_status(sid: str) -> str:
+            row = coaching.get(sid)
+            if not row:
+                return "unreviewed"
+            return COACHING_STATUS_LABEL.get(row.get("status"), row.get("status") or "?")
+        view = view[view["session_id"].apply(lambda s: _row_status(s) in sel_status)]
+
+    st.markdown(f"**{len(view)}** session(s) flagged")
+    st.markdown("---")
+
+    # ── One row per session ──
+    for _, row in view.iterrows():
+        sid = row["session_id"]
+        existing = coaching.get(sid) or {}
+        cur_status = existing.get("status")
+        cur_notes = existing.get("notes") or ""
+
+        d = row["session_date"]
+        d_str = d.strftime("%Y-%m-%d") if isinstance(d, date) else str(d)
+
+        header_left = f"**{row['subject']}** · {d_str} · {row['centre']} · {row['teacher_display']}"
+        status_badge = (
+            COACHING_STATUS_LABEL.get(cur_status, "")
+            if cur_status else "○ Unreviewed"
+        )
+
+        with st.expander(f"{header_left}  —  {status_badge}", expanded=False):
+            # Reasons + open-session link
+            top = st.columns([5, 1])
+            with top[0]:
+                st.markdown("**Flagged because:**")
+                for r in row["reasons"]:
+                    st.markdown(f"- {r}")
+            with top[1]:
+                if st.button("Open session", key=f"open_{sid}"):
+                    st.session_state["_view"] = "Sessions"
+                    st.session_state["_jump_session"] = (
+                        row["subject"], sid, row["run_id"],
+                    )
+                    st.rerun()
+
+            # Status + notes
+            st.markdown("---")
+            new_status = st.radio(
+                "Decision",
+                [k for k, _ in COACHING_STATUS_OPTIONS],
+                format_func=lambda k: COACHING_STATUS_LABEL[k],
+                index=(
+                    [k for k, _ in COACHING_STATUS_OPTIONS].index(cur_status)
+                    if cur_status in dict(COACHING_STATUS_OPTIONS) else 1
+                ),
+                key=f"status_{sid}",
+                horizontal=True,
+            )
+            new_notes = st.text_area(
+                "Notes",
+                value=cur_notes,
+                key=f"notes_{sid}",
+                placeholder="Coaching plan, who's responsible, follow-up date…",
+                height=80,
+            )
+            if st.button("Save", key=f"save_{sid}", type="primary"):
+                if save_coaching_action(sid, new_status, new_notes):
+                    st.success("Saved.")
+                    st.rerun()
 
 
 if __name__ == "__main__":
