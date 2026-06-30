@@ -222,6 +222,20 @@ def main() -> int:
                         "(MEDIUM) ≈ 1.67M tokens (over); @ LOW ≈ 428k tokens.")
     p.add_argument("--chunking", default="5min",
                    help="(Shape B) vision-pass chunking: 5min / 10min / single")
+    # Methodology-test flags: reproduce earlier pipeline states by toggling
+    # off sections of the vision prompt. Default ON = current production.
+    # Both flags affect the vision-pass prompt only; reasoner is unchanged.
+    p.add_argument("--no-phase-extraction", action="store_true",
+                   help="(Shape B) Suppress the phases/explanations/disturbances "
+                        "block in the vision prompt. Use to reproduce the pre-"
+                        "phase-inline behaviour where the bundle has empty "
+                        "phase/explanation/disturbance arrays. Combine with "
+                        "--force so the cached bundle is rebuilt.")
+    p.add_argument("--no-tightened-rules", action="store_true",
+                   help="(Shape B) Suppress the non-overlap rule + the broadened "
+                        "Q&A-counts-as-explanation guidance added in the late-"
+                        "2026-06-19 prompt tightening. Use to reproduce the "
+                        "earlier vision prompt. Combine with --force.")
     # Per-session context fed into the vision-pass prompt (option-c
     # patch). Not part of the evidence-cache key — pass --force when
     # context changes for the same session.
@@ -351,6 +365,12 @@ def main() -> int:
             activity_context=args.activity_context,
             teacher_id=args.teacher_id,
             force=args.force,
+            phase_extraction=not args.no_phase_extraction,
+            tightened_rules=not args.no_tightened_rules,
+            # When the caller passed --trimmed-video, hand the synthetic sva
+            # in so the evidence builder skips re-running combine/boundary
+            # detection (it would otherwise re-resolve raw segments).
+            sva=sva if args.trimmed_video else None,
         )
         log.info(
             f"  bundle: {len(bundle.transcript)} transcript segs, "

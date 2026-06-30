@@ -117,8 +117,8 @@ def _load_camera_lookup(cameras_xlsx: Path) -> dict[str, dict[str, str]]:
 def resolve_session_segments(
     session_id: str,
     expected_duration_minutes: int = 120,
-    lookback_minutes: int = 60,
-    trailing_buffer_minutes: int = 30,
+    lookback_minutes: int = 180,
+    trailing_buffer_minutes: int = 180,
     raw_dir: Path = _DEFAULT_RAW_DIR,
     cameras_xlsx: Path = _DEFAULT_CAMERAS_XLSX,
 ) -> list[SegmentEntry]:

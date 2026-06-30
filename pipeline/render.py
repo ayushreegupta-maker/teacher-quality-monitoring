@@ -46,7 +46,23 @@ def split_system_user(rendered: str) -> tuple[str, str]:
     return system_part, user_part
 
 
-def render_vision_prompt(session: SessionMeta) -> str:
-    """Render the vision prompt with session context injected."""
+def render_vision_prompt(
+    session: SessionMeta,
+    *,
+    phase_extraction: bool = True,
+    tightened_rules: bool = True,
+) -> str:
+    """Render the vision prompt with session context injected.
+
+    `phase_extraction` and `tightened_rules` are methodology-test toggles
+    that selectively suppress sections of the vision prompt. Both default
+    ON (= current production behaviour); set False to reproduce earlier
+    pipeline states for A/B comparisons. See scripts/run_rubric.py for the
+    corresponding CLI flags.
+    """
     template = _jinja_env().from_string(load_prompt("vision"))
-    return template.render(session=session.model_dump(mode="json"))
+    return template.render(
+        session=session.model_dump(mode="json"),
+        phase_extraction=phase_extraction,
+        tightened_rules=tightened_rules,
+    )

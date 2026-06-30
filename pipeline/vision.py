@@ -202,6 +202,9 @@ def vision_observe(
     session: SessionMeta,
     llm: LLMAdapter,
     chunk_minutes: int = CHUNK_MINUTES,
+    *,
+    phase_extraction: bool = True,
+    tightened_rules: bool = True,
 ) -> tuple[Transcript, VisualObservations, list[dict], list[dict], list[dict]]:
     """Chunked Gemini vision pass. Uploads video once, analyses N-min slices via
     video_metadata offsets, shifts timestamps in Python, and merges results.
@@ -229,7 +232,15 @@ def vision_observe(
 
     video_file = llm.upload_video(session.video_path)
 
-    template = render_vision_prompt(session)
+    template = render_vision_prompt(
+        session,
+        phase_extraction=phase_extraction,
+        tightened_rules=tightened_rules,
+    )
+    log.info(
+        f"[{session.session_id}] vision prompt: phase_extraction="
+        f"{phase_extraction} tightened_rules={tightened_rules}"
+    )
     system, user = split_system_user(template)
     full_prompt = f"{system}\n\n{user}"
     p_hash = prompt_hash(template)

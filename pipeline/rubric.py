@@ -34,6 +34,7 @@ import openpyxl
 from adapters.llm import LLMAdapter, parse_json_lenient, prompt_hash
 from pipeline.types import (
     EvidenceBundle,
+    MaterialSeen,
     Rubric,
     RubricAnswer,
     RubricAnswerSet,
@@ -643,6 +644,12 @@ def _build_answer_set(
     valid_ids = set(questions_by_id.keys())
     answers: dict[str, RubricAnswer] = {}
 
+    # Top-level meta keys the reasoner is allowed to emit alongside Q*.
+    # Extracted out of the main loop so they don't trigger "unexpected qid".
+    materials_seen = _parse_materials_seen(
+        parsed_response.pop("materials_seen", None), session_id,
+    )
+
     for qid, payload in parsed_response.items():
         if qid not in valid_ids:
             log.warning(f"[{session_id}] unexpected qid {qid!r}, skipping")
@@ -709,4 +716,34 @@ def _build_answer_set(
         source_model=source_model,
         shape=shape,
         prompt_hash=prompt_hash(prompt),
+        materials_seen=materials_seen,
     )
+
+
+def _parse_materials_seen(raw, session_id: str) -> list[MaterialSeen] | None:
+    """Coerce the reasoner's `materials_seen` field into a list[MaterialSeen].
+    Returns None if absent. Skips malformed entries with a warning."""
+    if raw is None:
+        return None
+    if not isinstance(raw, list):
+        log.warning(
+            f"[{session_id}] materials_seen not a list ({type(raw).__name__}); "
+            "ignoring"
+        )
+        return None
+    out: list[MaterialSeen] = []
+    for i, m in enumerate(raw):
+        if not isinstance(m, dict):
+            log.warning(
+                f"[{session_id}] materials_seen[{i}] not a dict "
+                f"({type(m).__name__}); skipping"
+            )
+            continue
+        try:
+            out.append(MaterialSeen(**m))
+        except Exception as e:
+            log.warning(
+                f"[{session_id}] materials_seen[{i}] validation failed "
+                f"({e!r}); skipping"
+            )
+    return out

@@ -154,6 +154,15 @@ class RubricAnswer(BaseModel):
     answer_type_valid: bool = True
 
 
+class MaterialSeen(BaseModel):
+    """One distinct teaching material / apparatus / resource observed across
+    a session. Emitted by the Shape B reasoner alongside Q1-QN answers."""
+    item: str                            # concise name, e.g. "lego blocks (red, white)"
+    first_seen: Optional[str] = None     # HH:MM:SS of earliest observation
+    category: Optional[str] = None       # kit / consumable / book / card / device / other
+    notes: Optional[str] = None          # short context, e.g. "primary build material"
+
+
 class RubricAnswerSet(BaseModel):
     """The output of one rubric scoring run on one session."""
     session_id: str
@@ -165,6 +174,11 @@ class RubricAnswerSet(BaseModel):
     prompt_hash: Optional[str] = None
     rendered_prompt_path: Optional[str] = None  # for audit
     raw_response_path: Optional[str] = None     # for audit
+    # Deduplicated list of materials the reasoner saw across the session.
+    # Designed to be diffed against a canonical Openhouse-supplied materials
+    # list to flag missing / extra items.  None when the reasoner didn't emit
+    # the field (e.g. older prompt versions).
+    materials_seen: Optional[list[MaterialSeen]] = None
 
 
 class EvidenceBundle(BaseModel):

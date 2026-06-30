@@ -73,13 +73,14 @@ Use this context to focus your observations on what is most useful downstream. F
 - Be concrete ("teacher kneels at child's level, smiles" / "low shelf with three labeled baskets at child height") not interpretive ("teacher is being warm" / "storage is well designed").
 - **At activity setups, enumerate distinct items, tools, and colors visible — do not aggregate.** For example, instead of "art supplies on the table," write something like "On the table: 4 cups of paint (red, blue, yellow, green), 6 brushes of two different sizes, a stack of A4 paper, a roll of paper towels, two cups of rinse water." Instead of "various colors on the paper," write "red, blue, and yellow paint visible on the paper, applied with brushes and at least one child's hands." Aggregate descriptions like "art supplies" or "various colors" hide the variety that rubric dimensions depend on — especially Anchor & Choice Materials, Multi-sensory, and Self Served. Count what you can count; name what you can name.
 
+{% if phase_extraction and session.subject in ["art", "public_speaking", "robotics"] %}
+## Phases, explanations, and disturbances ({{ session.subject }}-class)
+
+In addition to observations and transcript, identify three structured kinds of events that downstream rubric scoring depends on. These are subject-specific to Openhouse {{ session.subject }} classes.
+
+### Openhouse {{ session.subject }}-class phase glossary
+
 {% if session.subject == "art" %}
-## Phases, explanations, and disturbances (Art-class only)
-
-In addition to observations and transcript, identify three structured kinds of events that downstream rubric scoring depends on. These are subject-specific to Openhouse Art classes.
-
-### Openhouse Art-class phase glossary
-
 A full Art session runs ~90 min across these segments. Some may be skipped or re-ordered.
 
 - **`art_gym`** (15 min) — daily warm-up. Mark-making in the Art Gym Book (tracing patterns/paths) or Scribble Book (open-ended drawing to a prompt). Materials: erasable markers, Play-Doh, thread, sequins.
@@ -89,6 +90,24 @@ A full Art session runs ~90 min across these segments. Some may be skipped or re
 - **`art_care`** (5 min) — children sort materials back to shelves and clean the making space.
 - **`transition`** — gap between segments where children move, fetch materials, or wait.
 - **`other`** — anything that doesn't fit the above (arrival, setup, dismissal, off-segment time).
+{% elif session.subject == "public_speaking" %}
+A full Public Speaking session for the 5–8 band runs through these segments. Some may be skipped or re-ordered.
+
+- **`roll_call`** — short, energetic warm-up. Every-child-takes-a-turn pattern, low stakes, fast pace. Examples (NOT exhaustive): sentence chain, every body says, voice toss, eye contact tag, copycat, name games. Other warm-up games are equally valid — recognise the pattern, not a fixed game.
+- **`playground`** — the main game block. Rule-based group game with a speaking / listening focus. Examples (NOT exhaustive): what's that sound, script flip, tale trail, shuffle, body talk, watch your step, train of thoughts, guess me, psychiatrist, reverse gear. Other speaking/listening games are equally valid.
+- **`showtime`** — the performance / sharing block. Each child (or pair) gets a short solo or paired turn to perform / share / present. Examples (NOT exhaustive): whacky news reporter, mad ad, experience share circle, magic box narratives, story spine, superhero sales pitch. Other performance / sharing formats are equally valid.
+- **`experience_book`** — quiet reflection close. The teacher writes a line in each child's personal Experience Book; child may add a drawing.
+- **`transition`** — gap between segments where children move, fetch materials, or wait.
+- **`other`** — anything that doesn't fit the above (arrival, setup, dismissal, off-segment time).
+{% elif session.subject == "robotics" %}
+A full Robotics session for the 5–8 band runs through these segments. Some may be skipped or re-ordered.
+
+- **`experiments`** — hands-on demonstration block. The teacher poses a small physics question, the children predict, and they test together using simple apparatus. Cue cards typically scaffold the predict / test / observe loop, but any concept-driven experiment counts — recognise the pattern (question → predict → test → observe), not a fixed apparatus. Examples (NOT exhaustive): **L1 levers** (longer lever / less effort; heavier load / more effort; balance of equal weights), **L1 pulleys** (single pulley doesn't reduce effort; changes direction of pull; pull-angle changes comfort not effort). Other experiments using different apparatus are equally valid.
+- **`builds`** — physical construction block. Children build a working artifact from a kit that applies a physics concept. Examples (NOT exhaustive): **see-saw** (applies the lever idea — a beam pivoting on a fulcrum), **weighing scale** (applies balance — a two-pan lever scale), **crane** (applies the pulley idea — a rope-and-pulley lifting a load), **motorised builds** (e.g. car or crane with a DC motor + battery + wires). Other builds are equally valid; recognise the pattern (assembling a working artifact from a kit), not a fixed model.
+- **`experience_book`** — quiet reflection close. The teacher writes a line in each child's personal Experience Book; child may add a drawing.
+- **`transition`** — gap between segments where children move, fetch materials, or wait.
+- **`other`** — anything that doesn't fit the above (arrival, setup, dismissal, off-segment time).
+{% endif %}
 
 ### `phases` array
 
@@ -108,11 +127,11 @@ List every distinct activity block you observe in THIS chunk. Use the types abov
 
 **Continuation flags are critical** — the caller stitches phases across chunk boundaries using them. If a phase clearly starts and ends WITHIN this chunk, set both flags to `false`. If a phase was already underway at chunk start (e.g. the first frame shows children mid-activity, not transitioning in), set `starts_with_continuation=true`. If the chunk ends mid-activity (children still doing the same thing at the last frame), set `ends_with_continuation=true`.
 
-**Phases MUST NOT OVERLAP.** Two phases cannot share any timestamp range — at every moment of the chunk, exactly one phase is active. If you see ambiguous moments where the teacher is transitioning, or where children are doing two different things (e.g. some still drawing in their books while others have already started the collage), pick the **dominant** activity (the one most children are engaged in, or the one the teacher is leading) and assign that minute to one phase only. The phases array, read in order, should partition the chunk into contiguous non-overlapping spans. If there's a true gap with no activity, mark it as `other` or `transition`. Self-check: read your phases array end-to-end — each phase's `end` should equal (or be less than 1 sec before) the next phase's `start`. If any phase's start is BEFORE the previous phase's end, you have an overlap — fix it.
+{% if tightened_rules %}**Phases MUST NOT OVERLAP.** Two phases cannot share any timestamp range — at every moment of the chunk, exactly one phase is active. If you see ambiguous moments where the teacher is transitioning, or where children are doing two different things (e.g. some still drawing in their books while others have already started the collage), pick the **dominant** activity (the one most children are engaged in, or the one the teacher is leading) and assign that minute to one phase only. The phases array, read in order, should partition the chunk into contiguous non-overlapping spans. If there's a true gap with no activity, mark it as `other` or `transition`. Self-check: read your phases array end-to-end — each phase's `end` should equal (or be less than 1 sec before) the next phase's `start`. If any phase's start is BEFORE the previous phase's end, you have an overlap — fix it.{% endif %}
 
 ### `explanations` array
 
-A teacher EXPLAINS something to the children whenever they actively help children learn or understand an activity. This is **broader than formal "here's what we'll do today" introductions**. Capture EVERY distinct explanation event in this chunk, in any of these forms:
+{% if tightened_rules %}A teacher EXPLAINS something to the children whenever they actively help children learn or understand an activity. This is **broader than formal "here's what we'll do today" introductions**. Capture EVERY distinct explanation event in this chunk, in any of these forms:
 
   - **Formal introduction** — "Today we're going to make a collage"
   - **Demonstration with narration** — teacher shows how to fold paper while describing each step
@@ -123,12 +142,14 @@ A teacher EXPLAINS something to the children whenever they actively help childre
 
 The bar is: *did the teacher try to help children learn or do something during this moment?* If yes, log it.
 
-Each entry:
+{% else %}A teacher EXPLAINS something to the children when they verbally introduce / demonstrate / clarify an activity. Capture EVERY distinct explanation event in this chunk, even if it's a re-explanation of the same activity:
+
+{% endif %}Each entry:
 
 ```
 {
   "ts": "HH:MM:SS",                        // chunk-relative; when the explanation starts
-  "activity": "art_gym | art_games | artiverse_or_artistotle | experience_book | art_care | other",
+  "activity": "<one of the phase types listed above>",
   "summary": "<what the teacher explained, in one sentence>",
   "was_clear": "yes | no | partial",
   "confidence_tone": "confident | hesitant | mixed",
@@ -177,12 +198,12 @@ Return ONLY valid JSON. No code fences. No prose. No explanation. The JSON must 
   ],
   "transcript": [
     {"ts_start": "HH:MM:SS", "speaker": "TEACHER", "text": "..."}
-  ]{% if session.subject == "art" %},
+  ]{% if phase_extraction and session.subject in ["art", "public_speaking", "robotics"] %},
   "phases": [
-    {"type": "art_gym", "start": "HH:MM:SS", "end": "HH:MM:SS", "what_happened": "...", "children_present": true, "starts_with_continuation": false, "ends_with_continuation": false}
+    {"type": "{% if session.subject == 'art' %}art_gym{% elif session.subject == 'public_speaking' %}roll_call{% elif session.subject == 'robotics' %}experiments{% endif %}", "start": "HH:MM:SS", "end": "HH:MM:SS", "what_happened": "...", "children_present": true, "starts_with_continuation": false, "ends_with_continuation": false}
   ],
   "explanations": [
-    {"ts": "HH:MM:SS", "activity": "art_gym", "summary": "...", "was_clear": "yes", "confidence_tone": "confident", "children_engaged_after": 6}
+    {"ts": "HH:MM:SS", "activity": "{% if session.subject == 'art' %}art_gym{% elif session.subject == 'public_speaking' %}playground{% elif session.subject == 'robotics' %}experiments{% endif %}", "summary": "...", "was_clear": "yes", "confidence_tone": "confident", "children_engaged_after": 6}
   ],
   "disturbances": [
     {"ts": "HH:MM:SS", "cause": "child in red dress", "description": "...", "teacher_response": "...", "resolution": "ended"}

@@ -39,7 +39,11 @@ from typing import Optional
 
 from adapters.llm import LLMAdapter
 from pipeline.session_context import resolve_session_segments
-from pipeline.session_video import build_session_video
+from pipeline.session_video import (
+    SessionVideoArtifacts,
+    build_session_video,
+    video_duration_seconds,
+)
 from pipeline.types import (
     EvidenceBundle,
     SessionMeta,
@@ -130,6 +134,9 @@ def build_evidence_bundle(
     teacher_id: Optional[str] = None,
     force: bool = False,
     cache_root: Path = _DEFAULT_CACHE_ROOT,
+    phase_extraction: bool = True,
+    tightened_rules: bool = True,
+    sva: Optional[SessionVideoArtifacts] = None,
 ) -> EvidenceBundle:
     """Idempotent: returns the cached bundle if present; otherwise runs
     `vision_observe` + assembles + persists the bundle.
@@ -150,11 +157,15 @@ def build_evidence_bundle(
     """
     # Always resolve segments — we need at minimum the date for SessionMeta.
     # When subject wasn't supplied, also use the segments to derive it.
-    segs = resolve_session_segments(session_id)
-    if not segs:
-        raise ValueError(f"no segments for {session_id!r}")
-    if subject is None:
-        subject = segs[0].subject
+    # Skip when `sva` is provided AND we already know subject (caller is on
+    # the --trimmed-video fast path that bypasses raw-segment discovery).
+    segs = None
+    if sva is None or subject is None:
+        segs = resolve_session_segments(session_id)
+        if not segs:
+            raise ValueError(f"no segments for {session_id!r}")
+        if subject is None:
+            subject = segs[0].subject
 
     if vision_model is None:
         vision_model = llm.vision_model
@@ -192,18 +203,30 @@ def build_evidence_bundle(
         f"(vision_model={vision_model}, fps={fps}, chunking={chunking})"
     )
 
-    # Ensure the session-video cache is built (idempotent + cheap on hit)
-    sva = build_session_video(session_id, llm=llm)
+    # Ensure the session-video cache is built (idempotent + cheap on hit).
+    # When the caller passed a pre-built `sva` (--trimmed-video fast path),
+    # use it directly and don't re-run the combine/boundary stages.
+    if sva is None:
+        sva = build_session_video(session_id, llm=llm)
 
-    # Read boundaries (already produced by build_session_video)
-    boundaries = json.loads(sva.boundaries_json.read_text())
+    # Read boundaries (already produced by build_session_video). On the
+    # fast path there's no boundaries.json — derive duration from the
+    # trimmed video itself via ffprobe.
+    if sva.boundaries_json.exists():
+        boundaries = json.loads(sva.boundaries_json.read_text())
+        duration_min = boundaries_class_duration_minutes(boundaries, sva)
+    else:
+        boundaries = {"source": "trimmed-video fast path; no boundary detection"}
+        duration_min = max(1, int(round(video_duration_seconds(sva.trimmed) / 60)))
 
     # Run vision_observe on the TRIMMED video (class window only). Uses a
     # SessionMeta scoped to this session so observe-prompt metadata is right.
-    duration_min = boundaries_class_duration_minutes(boundaries, sva)
+    recorded_at = (
+        segs[0].starts_at.date() if segs else _date_from_session_id(session_id)
+    )
     sess_meta_kwargs = dict(
         session_id=session_id,
-        recorded_at=segs[0].starts_at.date(),
+        recorded_at=recorded_at,
         duration_minutes=duration_min,
         subject=subject,
         video_path=sva.trimmed,
@@ -214,7 +237,10 @@ def build_evidence_bundle(
         sess_meta_kwargs["teacher_id"] = teacher_id
     sess_meta = SessionMeta(**sess_meta_kwargs)
     transcript, observations, phases, explanations, disturbances = vision_observe(
-        sess_meta, llm, chunk_minutes=_chunk_minutes_from_chunking(chunking)
+        sess_meta, llm,
+        chunk_minutes=_chunk_minutes_from_chunking(chunking),
+        phase_extraction=phase_extraction,
+        tightened_rules=tightened_rules,
     )
 
     bundle = EvidenceBundle(
@@ -244,6 +270,12 @@ def build_evidence_bundle(
         f"{len(bundle.observations)} observations"
     )
     return bundle
+
+
+def _date_from_session_id(session_id: str):
+    """Parse the YYYY-MM-DD prefix of a session_id into a `date`."""
+    from datetime import date
+    return date.fromisoformat(session_id.split("__", 1)[0])
 
 
 def boundaries_class_duration_minutes(boundaries: dict, sva) -> int:

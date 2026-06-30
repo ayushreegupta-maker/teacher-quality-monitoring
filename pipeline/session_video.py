@@ -266,6 +266,13 @@ def stage2_detect_boundaries(
         prompt=full_prompt,
         video_file=video_file,
         fps=BOUNDARY_FPS,
+        # MEDIA_RESOLUTION_LOW (66 tok/frame) keeps long combined videos
+        # under the 1M input-token ceiling. A 226-min combined video at
+        # BOUNDARY_FPS=0.5 would otherwise be ~1.75M tokens at MEDIUM
+        # (258 tok/frame), busting the limit. Boundary detection is a
+        # coarse first-child-visible / last-child-visible signal; LOW
+        # is plenty for that.
+        media_resolution="low",
     )
     raw_path = out_path.with_name(out_path.stem + "_raw.txt")
     raw_path.write_text(raw)
