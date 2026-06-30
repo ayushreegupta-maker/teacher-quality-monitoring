@@ -469,6 +469,16 @@ def main():
         lambda t: t if pd.notna(t) and str(t) not in ("None", "nan", "") else "—"
     )
 
+    # ── Handle a jump from the Coaching Queue (must come BEFORE rendering
+    # sidebar widgets so we can override their session_state)
+    jump_target = st.session_state.pop("_jump_session", None)
+    if jump_target is not None:
+        # Clear any active filters so the target session appears in the list
+        for k in ("_filter_subject", "_filter_centre", "_filter_teacher",
+                  "_filter_date"):
+            if k in st.session_state:
+                del st.session_state[k]
+
     # ── Sidebar: filters + sessions list ──
     # All filters are OPTIONAL. Empty multiselect = "no constraint" (don't
     # apply that filter). Date range left blank = full available range.
@@ -477,6 +487,7 @@ def main():
     all_subjects = sorted(canon["subject"].unique())
     sel_subjects = st.sidebar.multiselect(
         "Subject", all_subjects, default=[], placeholder="Any",
+        key="_filter_subject",
     )
 
     valid_dates = sorted(canon["session_date"].dropna().unique())
@@ -486,6 +497,7 @@ def main():
             value=(),
             min_value=valid_dates[0],
             max_value=valid_dates[-1],
+            key="_filter_date",
         )
         if isinstance(date_range, tuple) and len(date_range) == 2:
             d_lo, d_hi = date_range
@@ -497,11 +509,13 @@ def main():
     all_centres = sorted(canon["centre"].dropna().unique())
     sel_centres = st.sidebar.multiselect(
         "Centre", all_centres, default=[], placeholder="Any",
+        key="_filter_centre",
     )
 
     all_teachers = sorted(canon["teacher_display"].dropna().unique())
     sel_teachers = st.sidebar.multiselect(
         "Teacher", all_teachers, default=[], placeholder="Any",
+        key="_filter_teacher",
     )
 
     # Apply each filter only when the user actually set it
@@ -540,22 +554,26 @@ def main():
         labels.append(label)
         keys.append((row["subject"], row["session_id"], row["run_id"]))
 
-    # Default selection — if the user clicked "Open session" in the queue,
-    # land on that one.
-    default_idx = 0
-    jump_target = st.session_state.pop("_jump_session", None)
+    # If we came from a Coaching Queue jump, force the radio to that session
+    # by writing into its key BEFORE the widget renders. (Without a key,
+    # st.radio honors `index` only on first render — positional state wins
+    # afterward, so the radio would silently snap back to the previous pick.)
     if jump_target is not None:
         try:
-            default_idx = keys.index(jump_target)
+            st.session_state["_session_pick_idx"] = keys.index(jump_target)
         except ValueError:
-            default_idx = 0
+            pass
+
+    # Guard against a stale persisted index when the filter result shrank
+    if st.session_state.get("_session_pick_idx", 0) >= len(labels):
+        st.session_state["_session_pick_idx"] = 0
 
     idx = st.sidebar.radio(
         "Pick a session",
         range(len(labels)),
-        index=default_idx,
         format_func=lambda i: labels[i],
         label_visibility="collapsed",
+        key="_session_pick_idx",
     )
     sel_subject, sel_sid, sel_run_id = keys[idx]
 
