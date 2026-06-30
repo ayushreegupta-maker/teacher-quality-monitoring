@@ -501,3 +501,152 @@ def merge_queue(
             "backup_path": str(backup_path),
             "error": f"{type(e).__name__}: {e}",
         }
+
+
+# ─── Supabase write path ─────────────────────────────────────────────────────
+
+
+def _supabase_client():
+    """Lazy + cached Supabase client. Returns None when SUPABASE_URL +
+    SUPABASE_SERVICE_KEY aren't in os.environ (e.g. nothing's been loaded
+    from .env yet)."""
+    import os
+    url = os.environ.get("SUPABASE_URL")
+    key = os.environ.get("SUPABASE_SERVICE_KEY")
+    if not url or not key:
+        return None
+    try:
+        from supabase import create_client
+        return create_client(url, key)
+    except Exception as e:
+        log.error(f"Failed to create Supabase client: {e}")
+        return None
+
+
+def compute_run_n_supabase(
+    *,
+    session_id: str,
+    subject: str,
+    rubric_version: str,
+    shape: str,
+    reasoner: str,
+) -> int:
+    """How many runs already exist for this exact (session, config) combo
+    in the Supabase `runs` table — plus 1. Returns 1 if Supabase is
+    unreachable (degrades to a 'first attempt' answer; the upsert key is
+    run_id so we never collide accidentally)."""
+    sb = _supabase_client()
+    if sb is None:
+        return 1
+    try:
+        r = sb.table("runs").select("run_id", count="exact").eq(
+            "session_id", session_id
+        ).eq("subject", subject).eq(
+            "rubric_version", rubric_version
+        ).eq("shape", shape).eq("reasoner", reasoner).execute()
+        return (r.count or 0) + 1
+    except Exception as e:
+        log.warning(f"compute_run_n_supabase fallback to 1 ({type(e).__name__}: {e})")
+        return 1
+
+
+def merge_queue_supabase(queue_dir: Path) -> dict:
+    """Read each sidecar JSON in queue_dir, upsert it into Supabase, and
+    delete the sidecar on success. Sidecars survive failures (Supabase
+    down, bad row, etc.) for the next attempt.
+
+    Returns: {merged_sidecars, runs_inserted, answers_inserted, errors}.
+    """
+    sb = _supabase_client()
+    if sb is None:
+        return {
+            "merged_sidecars": 0, "runs_inserted": 0, "answers_inserted": 0,
+            "errors": ["Supabase not configured"],
+        }
+
+    merged = runs_inserted = answers_inserted = 0
+    errors: list[str] = []
+
+    for sidecar_path in sorted(queue_dir.glob("*.json")):
+        try:
+            data = json.loads(sidecar_path.read_text())
+        except Exception as e:
+            errors.append(f"{sidecar_path.name}: bad json — {e}")
+            continue
+
+        # ── Project the sidecar into the Supabase schema ──
+        runs_row = dict(data.get("runs_row") or {})
+        # Derive session_date + camera (column on runs table)
+        sid = runs_row.get("session_id", "") or ""
+        try:
+            parts = sid.split("__")
+            runs_row.setdefault("session_date", parts[0])
+            runs_row.setdefault("camera", parts[1] if len(parts) > 1 else None)
+        except Exception:
+            pass
+        # materials_seen_json (a JSON string) → materials_seen (a list/None)
+        ms_str = runs_row.pop("materials_seen_json", None)
+        if ms_str:
+            try:
+                runs_row["materials_seen"] = json.loads(ms_str)
+            except Exception:
+                runs_row["materials_seen"] = None
+        else:
+            runs_row["materials_seen"] = None
+
+        # answers projection
+        subject_token = data.get("subject")
+        subject_rows = data.get("subject_rows") or []
+        answers_rows = []
+        for r in subject_rows:
+            answers_rows.append({
+                "run_id":                   r.get("run_id"),
+                "question_id":              r.get("question_id"),
+                "session_id":               r.get("session_id"),
+                "subject":                  subject_token,
+                "section":                  r.get("section"),
+                "question_text":            r.get("question_text"),
+                "answer":                   r.get("answer"),
+                "confidence":               r.get("confidence"),
+                "evidence_timestamps":      r.get("evidence_timestamps"),
+                "rationale":                r.get("rationale"),
+                "insufficient_information": r.get("insufficient_information"),
+                "had_evidence":             r.get("had_evidence"),
+                "evidence_parse_ok":        r.get("evidence_parse_ok"),
+                "answer_type":              r.get("answer_type"),
+                "answer_type_valid":        r.get("answer_type_valid"),
+            })
+
+        try:
+            # 1. upsert the run
+            sb.table("runs").upsert(runs_row, on_conflict="run_id").execute()
+            runs_inserted += 1
+
+            # 2. upsert the answers (batched to stay under request-size caps)
+            BATCH = 200
+            for i in range(0, len(answers_rows), BATCH):
+                sb.table("answers").upsert(
+                    answers_rows[i:i + BATCH],
+                    on_conflict="run_id,question_id",
+                ).execute()
+            answers_inserted += len(answers_rows)
+
+            # 3. success — drop the sidecar
+            sidecar_path.unlink(missing_ok=True)
+            merged += 1
+            log.info(
+                f"merged sidecar {sidecar_path.name} → Supabase "
+                f"(1 run + {len(answers_rows)} answers)"
+            )
+        except Exception as e:
+            err = f"{sidecar_path.name}: {type(e).__name__}: {e}"
+            errors.append(err)
+            log.error(err)
+            # Leave sidecar in place; next merge attempts to retry it.
+
+    return {
+        "merged_sidecars": merged,
+        "runs_inserted": runs_inserted,
+        "answers_inserted": answers_inserted,
+        "errors": errors,
+    }

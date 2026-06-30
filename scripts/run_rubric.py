@@ -40,9 +40,8 @@ ROOT = Path(__file__).resolve().parent.parent
 
 from adapters.llm import LLMAdapter
 from pipeline.answers_book import (
-    compute_run_n,
-    init_workbook,
-    merge_queue,
+    compute_run_n_supabase,
+    merge_queue_supabase,
     write_sidecar,
 )
 from pipeline.boundaries import _parse_hms
@@ -68,8 +67,24 @@ DEFAULT_WORKBOOK = ROOT / "prompts" / "rubrics.xlsx"
 DEFAULT_CAMERAS_XLSX = ROOT / "data" / "cctv_cameras.xlsx"
 RUBRIC_RUNS_DIR = ROOT / "data" / "rubric_runs"
 PROMPTS_DIR = ROOT / "prompts"
-ANSWERS_XLSX = ROOT / "data" / "tqm_answers.xlsx"
+# Sidecar queue: durable buffer between the in-process answer set and the
+# Supabase upsert. If Supabase is down at write time, the sidecar stays
+# here for the next merge to retry.
 ANSWERS_QUEUE_DIR = ROOT / "data" / "_answer_queue"
+
+
+def _load_env_file(path: Path) -> None:
+    """Minimal .env loader — populates os.environ so the Supabase client
+    in pipeline.answers_book can pick up SUPABASE_URL / SUPABASE_SERVICE_KEY."""
+    import os
+    if not path.exists():
+        return
+    for raw in path.read_text().splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        k, v = line.split("=", 1)
+        os.environ.setdefault(k.strip(), v.strip().strip("'\""))
 
 log = logging.getLogger("run_rubric")
 logging.basicConfig(
@@ -255,6 +270,10 @@ def main() -> int:
                    help="Print the plan + paths, exit without LLM calls")
     args = p.parse_args()
 
+    # Surface SUPABASE_* env vars from .env so the pipeline write path can
+    # reach Postgres. Idempotent: setdefault keeps any vars already in env.
+    _load_env_file(ROOT / ".env")
+
     started_at = datetime.utcnow().replace(microsecond=0)
 
     # 1. Resolve subject + session_id from whichever input was given
@@ -433,15 +452,13 @@ def main() -> int:
     finished_at = datetime.utcnow().replace(microsecond=0).isoformat()
     run_id = started_at.isoformat()
     config_slug = run_dir.name
-    run_n = compute_run_n(
-        ANSWERS_XLSX,
+    run_n = compute_run_n_supabase(
         session_id=args.session_id,
         subject=subject,
         rubric_version=args.rubric_version,
         shape=args.shape,
         reasoner=answer_set.source_model,
     )
-    init_workbook(ANSWERS_XLSX)  # no-op if it already exists
     write_sidecar(
         ANSWERS_QUEUE_DIR,
         answer_set=answer_set, rubric=rubric, config=config,
@@ -452,11 +469,12 @@ def main() -> int:
         config_slug=config_slug,
         run_n=run_n,
     )
-    merge_result = merge_queue(ANSWERS_XLSX, ANSWERS_QUEUE_DIR)
-    if merge_result.get("backup_path"):
+    merge_result = merge_queue_supabase(ANSWERS_QUEUE_DIR)
+    if merge_result.get("errors"):
         log.warning(
-            f"accumulator merge FAILED — backup at {merge_result['backup_path']}, "
-            "sidecar retained for retry"
+            f"Supabase merge had {len(merge_result['errors'])} error(s); "
+            "sidecars retained for retry on the next run. "
+            f"first: {merge_result['errors'][0]}"
         )
 
     answered = sum(1 for a in answer_set.answers.values()

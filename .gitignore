@@ -31,7 +31,13 @@ data/evidence_cache/
 data/rubric_runs/
 data/_answer_queue/
 
+# The longitudinal Q&A log moved to Supabase on 2026-06-30. The xlsx is no
+# longer the source of truth; pipeline writes go straight to Postgres via
+# pipeline.answers_book.merge_queue_supabase. We keep the file around
+# locally as a backup but it isn't tracked.
+data/tqm_answers.xlsx
+data/tqm_answers.backup_*.xlsx
+
 # Migration audit log — append-only on disk, derivable from migrate_*
 # scripts. Tracked across machines via the scripts themselves.
 migration_log.txt
-data/tqm_answers.backup_*.xlsx
