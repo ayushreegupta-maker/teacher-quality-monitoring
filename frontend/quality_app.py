@@ -70,6 +70,69 @@ def is_cloud_deploy() -> bool:
         return False
 
 
+def _r2_secrets() -> dict | None:
+    """Return {account_id, bucket, key, secret} when all four R2 secrets are
+    set in st.secrets (either local .streamlit/secrets.toml or the Streamlit
+    Cloud Settings → Secrets panel). Returns None otherwise."""
+    try:
+        s = st.secrets
+        needed = ("r2_account_id", "r2_bucket", "r2_access_key_id", "r2_secret_access_key")
+        if not all(s.get(k) for k in needed):
+            return None
+        return {
+            "account_id": s["r2_account_id"],
+            "bucket": s["r2_bucket"],
+            "key": s["r2_access_key_id"],
+            "secret": s["r2_secret_access_key"],
+        }
+    except Exception:
+        return None
+
+
+@st.cache_resource
+def _r2_client():
+    """Construct (and cache for the lifetime of the Streamlit session) the
+    boto3 S3 client pointing at the R2 endpoint. Returns None when R2
+    secrets aren't configured."""
+    creds = _r2_secrets()
+    if creds is None:
+        return None
+    try:
+        import boto3
+        from botocore.config import Config
+        return boto3.client(
+            "s3",
+            endpoint_url=f"https://{creds['account_id']}.r2.cloudflarestorage.com",
+            aws_access_key_id=creds["key"],
+            aws_secret_access_key=creds["secret"],
+            region_name="auto",
+            config=Config(signature_version="s3v4"),
+        )
+    except Exception:
+        return None
+
+
+@st.cache_data(ttl=1800)  # 30 min — well under the 1-hour URL TTL
+def r2_signed_video_url(subject: str, session_id: str) -> str | None:
+    """Return a 1-hour pre-signed GET URL for the session's video on R2.
+    The key convention matches scripts/upload_videos_to_r2.py:
+        <subject>/<session_id>.mp4
+    Returns None when R2 isn't configured or the object can't be signed."""
+    client = _r2_client()
+    creds = _r2_secrets()
+    if client is None or creds is None:
+        return None
+    key = f"{subject}/{session_id}.mp4"
+    try:
+        return client.generate_presigned_url(
+            "get_object",
+            Params={"Bucket": creds["bucket"], "Key": key},
+            ExpiresIn=3600,
+        )
+    except Exception:
+        return None
+
+
 def password_gate() -> bool:
     """Shared-password lock used in cloud deploys (free tier has no built-in
     viewer auth). Returns True when the user is authenticated for this
@@ -534,8 +597,16 @@ def render_session_detail(
     video_state_key = f"video_jump_{session_id}_{run_id}"
     jump_to = int(st.session_state.get(video_state_key, 0))
 
-    if v_path is not None:
-        st.video(str(v_path), start_time=jump_to)
+    # Source order:
+    #   1. R2 signed URL (when R2 secrets are configured — works on cloud)
+    #   2. Local file (works on the Mac during dev)
+    #   3. No source — show a contextual info message
+    video_src = r2_signed_video_url(subject, session_id)
+    if video_src is None and v_path is not None:
+        video_src = str(v_path)
+
+    if video_src is not None:
+        st.video(video_src, start_time=jump_to)
         # ALWAYS render the caption (placeholder when no jump) so the
         # widget tree stays positionally stable across reruns — otherwise
         # st.expander state below resets when a timestamp is clicked.
@@ -546,10 +617,10 @@ def render_session_detail(
             st.caption(" ")
     elif is_cloud_deploy():
         st.info(
-            "🎬 **Video playback is disabled in the hosted dashboard.** "
-            "Open the local copy on the team Mac to play the trimmed class "
-            "videos. The Q&A, materials, and class window below are the "
-            "same in both."
+            "🎬 **Video for this session isn't on R2 yet.** "
+            "Add `<subject>/<session_id>.mp4` to the bucket — or open the "
+            "local copy on the team Mac to play it. The Q&A, materials, and "
+            "class window below are the same in both."
         )
     else:
         st.info(

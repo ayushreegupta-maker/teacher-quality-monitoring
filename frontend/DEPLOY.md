@@ -45,6 +45,14 @@ git push origin main
    ```toml
    password = "pick-something-strong"
    is_cloud_deploy = true
+
+   # Cloudflare R2 — enables video playback on the cloud build.
+   # Without these four, the Video panel shows an info message but the
+   # rest of the dashboard still works.
+   r2_account_id = "00ee49aaff555c25f705fd3f212f75b0"
+   r2_bucket = "openhouse-tqm-videos"
+   r2_access_key_id = "<from your R2 API token>"
+   r2_secret_access_key = "<from your R2 API token>"
    ```
 
 4. Click **"Deploy"**. First build takes 2–4 min (installing pandas,
