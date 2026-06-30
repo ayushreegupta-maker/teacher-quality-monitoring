@@ -437,6 +437,15 @@ def main():
         return
     st.title("Openhouse")
 
+    # ── Apply any pending view request BEFORE the view widget renders.
+    # We can't modify a widget's session_state key after the widget has
+    # been instantiated (Streamlit throws StreamlitAPIException), so the
+    # button handlers set a separate "_requested_view" key and we copy it
+    # over here on the next script run.
+    if "_requested_view" in st.session_state:
+        requested = st.session_state.pop("_requested_view")
+        st.session_state["_view"] = requested
+
     # ── Top-level view switcher ──
     view = st.sidebar.radio(
         "View",
@@ -963,7 +972,10 @@ def render_coaching_queue():
                     st.markdown(f"- {r}")
             with top[1]:
                 if st.button("Open session", key=f"open_{sid}"):
-                    st.session_state["_view"] = "Sessions"
+                    # Use a separate "_requested_view" key, not "_view"
+                    # directly — modifying a widget's own key after it's
+                    # been rendered triggers StreamlitAPIException.
+                    st.session_state["_requested_view"] = "Sessions"
                     st.session_state["_jump_session"] = (
                         row["subject"], sid, row["run_id"],
                     )
