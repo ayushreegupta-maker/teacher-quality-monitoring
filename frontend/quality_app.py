@@ -112,6 +112,38 @@ def load_runs_sheet() -> pd.DataFrame:
 
 
 @st.cache_data(ttl=60)
+def runs_window_info() -> dict[str, dict]:
+    """{run_id → {duration_sec: float|None, boundaries_detected: bool|None}}.
+    Reads the Runs sheet so the dashboard can compute the class end time
+    without the video being on disk (e.g. on Streamlit Cloud)."""
+    runs = load_runs_sheet()
+    out: dict[str, dict] = {}
+    if runs.empty:
+        return out
+    dur_col = "trimmed_video_duration_seconds"
+    bd_col = "boundaries_detected"
+    for _, row in runs.iterrows():
+        rid = str(row.get("run_id") or "").strip()
+        if not rid:
+            continue
+        dur = row.get(dur_col) if dur_col in runs.columns else None
+        bd = row.get(bd_col) if bd_col in runs.columns else None
+        try:
+            dur = float(dur) if pd.notna(dur) else None
+        except Exception:
+            dur = None
+        bd_norm = None
+        if pd.notna(bd):
+            sv = str(bd).strip().lower()
+            if sv in ("true", "1", "yes"):
+                bd_norm = True
+            elif sv in ("false", "0", "no"):
+                bd_norm = False
+        out[rid] = {"duration_sec": dur, "boundaries_detected": bd_norm}
+    return out
+
+
+@st.cache_data(ttl=60)
 def materials_by_run() -> dict[str, list]:
     """{run_id → parsed materials_seen list}. Reads the Runs sheet's
     materials_seen_json column so the cloud build doesn't need per-run JSON.
@@ -312,19 +344,20 @@ def hms_to_seconds(ts: str) -> int:
 
 
 def parse_class_window(
-    subject: str, session_id: str, trimmed_path: Path | None
+    subject: str, session_id: str, trimmed_path: Path | None,
+    *, run_id: str | None = None,
 ) -> tuple[str, str, str] | None:
     """Return (start_HHMM, end_HHMM, source_note) for the class window.
 
     Start: HHMM token from session_id (scheduled start).
-    End  : depends on how the trim was produced —
-      - If 2_boundaries.json exists, the trim is boundary-detected
-        (no margin); end = start + full trim duration.
-      - Otherwise the trim is the manual fast path which includes
-        TRIM_MARGIN_MIN on each side; end = start + (trim - 2×margin).
+    End  : computed from trim duration + boundary-detected flag.
 
-    source_note describes which formula was applied so the UI can show
-    "approximate" honestly. Returns None if session_id is malformed.
+    Resolution order for duration + boundary flag:
+      1. The Runs sheet of tqm_answers.xlsx (works in the cloud build
+         where the video isn't on disk). Pass `run_id` to enable.
+      2. The video file on disk + 2_boundaries.json sibling. Fallback for
+         older Runs rows that don't have the new columns.
+      3. None (returns "—" for end with an explanatory note).
     """
     try:
         parts = session_id.split("__")
@@ -333,11 +366,27 @@ def parse_class_window(
         start = time(h, m)
     except Exception:
         return None
-    if trimmed_path is None or not trimmed_path.exists():
-        return (start.strftime("%H:%M"), "—", "no trim available")
-    dur_min = max(1, int(round((cached_video_duration(str(trimmed_path)) or 0) / 60)))
-    bd_path = trimmed_path.parent / "2_boundaries.json"
-    if bd_path.exists():
+
+    # Try the xlsx Runs sheet first
+    dur_sec: float | None = None
+    bd: bool | None = None
+    if run_id:
+        info = runs_window_info().get(str(run_id))
+        if info:
+            dur_sec = info.get("duration_sec")
+            bd = info.get("boundaries_detected")
+
+    # Fallback: disk inspection (local dev)
+    if dur_sec is None and trimmed_path is not None and trimmed_path.exists():
+        dur_sec = cached_video_duration(str(trimmed_path))
+        if bd is None:
+            bd = (trimmed_path.parent / "2_boundaries.json").exists()
+
+    if dur_sec is None:
+        return (start.strftime("%H:%M"), "—", "trim metadata unavailable")
+
+    dur_min = max(1, int(round(dur_sec / 60)))
+    if bd:
         class_min = dur_min
         source = "boundary-detected"
     else:
@@ -517,7 +566,7 @@ def render_session_detail(
 
     # ── Class window + materials seen, side-by-side under the video ──
     materials = materials_from_xlsx or artefacts.get("materials_seen") or []
-    window = parse_class_window(subject, session_id, v_path)
+    window = parse_class_window(subject, session_id, v_path, run_id=run_id)
 
     m_col, w_col = st.columns([3, 2], gap="large")
     with w_col:

@@ -1,19 +1,23 @@
 """
 One-off backfill: walk data/rubric_runs/<subject>/<run>/5_answers.json,
-extract materials_seen, and write it into the Runs sheet of
-data/tqm_answers.xlsx as a new `materials_seen_json` column.
+extract materials_seen, and write three columns into the Runs sheet of
+data/tqm_answers.xlsx so the cloud dashboard can read them without the
+per-run JSON / session directory being available:
 
-Idempotent: re-running won't duplicate the column. If the column already
-exists, existing values are overwritten with the latest JSON value for
-each (run_id, config_slug) match.
+  - materials_seen_json           — Shape B reasoner's materials list
+  - trimmed_video_duration_seconds — ffprobe of 3_trimmed.mp4
+  - boundaries_detected           — whether 2_boundaries.json exists
 
-Run once:
+Idempotent: re-running won't duplicate columns and updates in-place.
+
+Run once after each schema change:
     .venv/bin/python scripts/testing/backfill_materials_seen.py
 """
 from __future__ import annotations
 
 import json
 import shutil
+import subprocess
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -23,16 +27,29 @@ import openpyxl
 ROOT = Path(__file__).resolve().parent.parent.parent
 XLSX = ROOT / "data" / "tqm_answers.xlsx"
 RUBRIC_RUNS = ROOT / "data" / "rubric_runs"
+SESSIONS_DIR = ROOT / "data" / "sessions"
+
+NEW_COLUMNS = [
+    "materials_seen_json",
+    "trimmed_video_duration_seconds",
+    "boundaries_detected",
+]
 
 
-def _norm_run_id(run_id: str) -> str:
-    """'2026-06-29T12:54:16' → '2026-06-29T125416'."""
-    return str(run_id).replace(":", "")
+def ffprobe_duration(path: Path) -> float | None:
+    try:
+        r = subprocess.run(
+            ["ffprobe", "-v", "error", "-show_format",
+             "-print_format", "json", str(path)],
+            capture_output=True, text=True, timeout=15,
+        )
+        return float(json.loads(r.stdout)["format"]["duration"])
+    except Exception:
+        return None
 
 
 def materials_index_from_disk() -> dict[str, str]:
-    """{config_slug → json-encoded materials_seen}. Only includes runs that
-    have a non-empty materials_seen list in their 5_answers.json."""
+    """{config_slug → json-encoded materials_seen list}."""
     out: dict[str, str] = {}
     if not RUBRIC_RUNS.exists():
         return out
@@ -57,6 +74,16 @@ def materials_index_from_disk() -> dict[str, str]:
     return out
 
 
+def session_window_info(subject: str, session_id: str) -> tuple[float | None, bool]:
+    """Return (trimmed_duration_seconds_or_None, boundaries_detected_bool)
+    for a session, by reading 3_trimmed.mp4 + 2_boundaries.json from disk."""
+    sess_dir = SESSIONS_DIR / subject / session_id
+    trim = sess_dir / "3_trimmed.mp4"
+    boundaries = sess_dir / "2_boundaries.json"
+    dur = ffprobe_duration(trim) if trim.exists() else None
+    return dur, boundaries.exists()
+
+
 def main():
     if not XLSX.exists():
         print(f"missing: {XLSX}")
@@ -78,30 +105,49 @@ def main():
     ws = wb["Runs"]
 
     headers = [c.value for c in ws[1]]
-    if "materials_seen_json" not in headers:
-        new_col = ws.max_column + 1
-        ws.cell(row=1, column=new_col, value="materials_seen_json")
-        headers.append("materials_seen_json")
-        print(f"added column 'materials_seen_json' at position {new_col}")
-    ms_col_idx = headers.index("materials_seen_json") + 1  # 1-based
+    for col in NEW_COLUMNS:
+        if col not in headers:
+            new_col = ws.max_column + 1
+            ws.cell(row=1, column=new_col, value=col)
+            headers.append(col)
+            print(f"added column {col!r} at position {new_col}")
 
-    slug_col_idx = headers.index("config_slug") + 1
+    slug_idx = headers.index("config_slug")
+    subj_idx = headers.index("subject")
+    sid_idx = headers.index("session_id")
+    ms_idx = headers.index("materials_seen_json")
+    dur_idx = headers.index("trimmed_video_duration_seconds")
+    bd_idx = headers.index("boundaries_detected")
 
-    n_patched = 0
-    n_total = 0
+    n_materials = n_window = n_total = 0
+    # cache session_window lookups so we don't ffprobe the same trim twice
+    win_cache: dict[tuple[str, str], tuple[float | None, bool]] = {}
+
     for row in ws.iter_rows(min_row=2, max_col=ws.max_column):
         n_total += 1
-        slug_cell = row[slug_col_idx - 1]
-        slug = (slug_cell.value or "").strip()
-        if not slug:
-            continue
-        materials = materials_by_slug.get(slug)
-        if materials:
-            ws.cell(row=slug_cell.row, column=ms_col_idx, value=materials)
-            n_patched += 1
+        slug = (row[slug_idx].value or "").strip() if row[slug_idx].value else ""
+        subject = (row[subj_idx].value or "").strip() if row[subj_idx].value else ""
+        sid = (row[sid_idx].value or "").strip() if row[sid_idx].value else ""
+
+        if slug:
+            ms = materials_by_slug.get(slug)
+            if ms:
+                ws.cell(row=row[0].row, column=ms_idx + 1, value=ms)
+                n_materials += 1
+
+        if subject and sid:
+            key = (subject, sid)
+            if key not in win_cache:
+                win_cache[key] = session_window_info(subject, sid)
+            dur, bd = win_cache[key]
+            if dur is not None:
+                ws.cell(row=row[0].row, column=dur_idx + 1, value=dur)
+                n_window += 1
+            ws.cell(row=row[0].row, column=bd_idx + 1, value=bool(bd))
 
     wb.save(XLSX)
-    print(f"patched {n_patched}/{n_total} Runs rows with materials_seen_json")
+    print(f"patched {n_total} Runs rows — "
+          f"{n_materials} with materials, {n_window} with duration")
 
 
 if __name__ == "__main__":

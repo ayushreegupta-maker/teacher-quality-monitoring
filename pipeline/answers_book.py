@@ -118,6 +118,13 @@ RUNS_COLUMNS: list[str] = [
     "evidence_bundle_path",         # 17  (str|None — Shape A leaves blank)
     "materials_seen_json",          # 18  (json-encoded list emitted by Shape B
                                     #      reasoner; None when not available)
+    "trimmed_video_duration_seconds", # 19  (float — duration of 3_trimmed.mp4;
+                                    #      lets the dashboard derive the class
+                                    #      end time without the video on disk)
+    "boundaries_detected",          # 20  (bool — True if 2_boundaries.json
+                                    #      exists for this session; tells the
+                                    #      dashboard which end-time formula to
+                                    #      use)
 ]
 
 SUBJECT_TABS = ["Art", "Public Speaking", "Robotics"]
@@ -335,6 +342,8 @@ def write_sidecar(
             json.dumps([m.model_dump() for m in answer_set.materials_seen])
             if answer_set.materials_seen else None
         ),
+        "trimmed_video_duration_seconds": _trimmed_duration_seconds(config),
+        "boundaries_detected": _boundaries_detected(config),
     }
 
     sidecar = {
@@ -364,6 +373,39 @@ def _camera_from_session_id(session_id: str) -> str:
         return session_id.split("__")[1]
     except Exception:
         return ""
+
+
+def _trimmed_duration_seconds(config: dict) -> Optional[float]:
+    """ffprobe the session's 3_trimmed.mp4 (if it exists) and return its
+    duration in seconds. Returns None when the file is missing or ffprobe
+    fails — the dashboard then falls back to its earlier disk-probing path."""
+    sess_dir = config.get("session_dir")
+    if not sess_dir:
+        return None
+    trim = Path(sess_dir) / "3_trimmed.mp4"
+    if not trim.exists():
+        return None
+    import subprocess
+    try:
+        r = subprocess.run(
+            ["ffprobe", "-v", "error", "-show_format",
+             "-print_format", "json", str(trim)],
+            capture_output=True, text=True, timeout=15,
+        )
+        return float(json.loads(r.stdout)["format"]["duration"])
+    except Exception:
+        return None
+
+
+def _boundaries_detected(config: dict) -> Optional[bool]:
+    """Returns True iff 2_boundaries.json exists in the session dir.
+    Used by the dashboard to pick the class-end-time formula
+    (boundary-detected → use full trim duration; manual fast-path → subtract
+    the 5-min margin on each side)."""
+    sess_dir = config.get("session_dir")
+    if not sess_dir:
+        return None
+    return (Path(sess_dir) / "2_boundaries.json").exists()
 
 
 # ─── Atomic merge ────────────────────────────────────────────────────────
