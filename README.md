@@ -4,17 +4,15 @@ Score Openhouse preschool and primary classroom videos against a subject-specifi
 
 **Subjects live today:** Art (3–5), Public Speaking (5–8), Robotics (5–8).
 
-**Contacts:**
-- Ayushree Gupta — `ayushree.gupta@openhouse.study` (product / rubric / test-data)
-- LXD — `lxd@openhouse.study` (engineering / deploy / access)
+**Contact:** Ayushree Gupta — `ayushree.gupta@openhouse.study`
 
 ---
 
 ## Live dashboard
 
-**URL:** `https://<PASTE-STREAMLIT-URL-HERE>.streamlit.app`
+**URL:** <https://teacher-quality-monitoring.streamlit.app/>
 
-Password-gated. **Message LXD (`lxd@openhouse.study`) for access.**
+Password-gated. **Message Ayushree (`ayushree.gupta@openhouse.study`) for the password.**
 
 Two views in the app:
 
@@ -95,7 +93,7 @@ R2_ACCESS_KEY_ID=<from your R2 API token>
 R2_SECRET_ACCESS_KEY=<from your R2 API token>
 ```
 
-Ask LXD for the shared credentials if you're inside Openhouse.
+Ask Ayushree for the shared credentials if you're inside Openhouse.
 
 ### 4. Get the test video
 
@@ -210,10 +208,8 @@ frontend/         Streamlit quality dashboard
 scripts/
   run_rubric.py                     main entry point (see "Run" above)
   cctv_pull.py                      pull raw video from the NVR (Openhouse internal — VPN required)
-  upload_videos_to_r2.py            one-shot: push trimmed videos to Cloudflare R2
-  r2_replace_ps_videos.py           one-shot: delete + re-upload specific R2 objects
-  backfill_supabase.py              one-shot: xlsx → Supabase migration
-  testing/                          one-off diagnostic / probe scripts
+  upload_videos_to_r2.py            reusable helper: push trimmed videos to Cloudflare R2
+  testing/                          diagnostic / probe scripts
 
 data/             All gitignored — recomputable from raw + scripts
   raw/                Raw NVR pulls (~1 GB per camera per day)
@@ -248,5 +244,4 @@ PLAN.md           Architecture target + cheap-pilot rationale
 
 ## Questions
 
-- Product / rubric / test-data: Ayushree Gupta — `ayushree.gupta@openhouse.study`
-- Engineering / deploy / access to the live dashboard: LXD — `lxd@openhouse.study`
+Ayushree Gupta — `ayushree.gupta@openhouse.study`
