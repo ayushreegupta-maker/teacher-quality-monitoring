@@ -1,8 +1,0 @@
-{
-  "first_child_visible_at": "00:09:00",
-  "last_child_visible_at": "00:31:59",
-  "last_child_evidence": "The last child exits the room through the doorway, leaving the play area completely empty of children.",
-  "confidence": "high",
-  "self_check_passed": true,
-  "notes": ""
-}

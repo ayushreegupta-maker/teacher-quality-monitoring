@@ -1,9 +1,0 @@
-{
-  "first_child_visible_at": "00:00:08",
-  "last_child_visible_at": "00:00:00",
-  "first_child_evidence": "A child in a white shirt and blue shorts runs into the room from the left side of the frame.",
-  "last_child_evidence": null,
-  "confidence": "low",
-  "self_check_passed": false,
-  "notes": "The last child is not visible leaving the room. The video ends with children still present. The last_child_visible_at is set to 00:00:00 as a placeholder, but it is not accurate."
-}

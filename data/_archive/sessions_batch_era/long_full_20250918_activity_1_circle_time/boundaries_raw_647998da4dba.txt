@@ -1,6 +1,0 @@
-{
-  "first_child_visible_at": "00:00:00",
-  "last_child_visible_at": "00:22:38",
-  "confidence": "high",
-  "notes": "Children are visible from the very beginning of the video. The last child leaves the play area at 00:22:38."
-}

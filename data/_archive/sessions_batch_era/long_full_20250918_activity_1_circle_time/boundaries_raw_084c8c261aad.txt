@@ -1,8 +1,0 @@
-{
-  "first_child_visible_at": "00:00:00",
-  "last_child_visible_at": "00:23:00",
-  "last_child_evidence": "The last child is seen playing on the mat with the teacher.",
-  "confidence": "high",
-  "self_check_passed": true,
-  "notes": "Shape B - children visible throughout (no clear transitions)"
-}

@@ -1,9 +1,0 @@
-{
-  "first_child_visible_at": "00:09:00",
-  "last_child_visible_at": "05:00:00",
-  "first_child_evidence": "A child in a white shirt and blue shorts runs into the room from the left doorway, followed by another child in a blue dress and a third child in a white shirt and blue shorts.",
-  "last_child_evidence": "The last child in a red shirt walks out of the left doorway, leaving the room empty of children.",
-  "confidence": "high",
-  "self_check_passed": true,
-  "notes": "The recording is exactly 32 minutes long. The first child appears at 00:09:00 and the last child leaves at 05:00:00. The remaining time is either setup or pack-up."
-}

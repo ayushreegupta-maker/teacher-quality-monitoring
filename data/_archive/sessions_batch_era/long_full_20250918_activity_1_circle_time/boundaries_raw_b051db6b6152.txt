@@ -1,9 +1,0 @@
-{
-  "first_child_visible_at": "00:00:00",
-  "last_child_visible_at": "00:00:00",
-  "first_child_evidence": "At the start of the video, there are already four children present in the classroom, sitting on a mat with an adult.",
-  "last_child_evidence": "The video ends with four children still present in the classroom, sitting on a mat with an adult.",
-  "confidence": "high",
-  "self_check_passed": true,
-  "notes": "The children are present throughout the entire video, from the very first second to the very last second."
-}
