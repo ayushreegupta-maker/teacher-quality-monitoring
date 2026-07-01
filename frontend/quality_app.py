@@ -573,9 +573,17 @@ def main():
         except ValueError:
             pass
 
-    # Guard against a stale persisted index when the filter result shrank
-    if st.session_state.get("_session_pick_idx", 0) >= len(labels):
-        st.session_state["_session_pick_idx"] = 0
+    # Guard against a stale persisted index when the filter result shrank,
+    # OR a stringified index coming back from Streamlit's state serializer
+    # (on Cloud, widget state can round-trip through localStorage as a str).
+    raw_idx = st.session_state.get("_session_pick_idx", 0)
+    try:
+        safe_idx = int(raw_idx)
+    except (TypeError, ValueError):
+        safe_idx = 0
+    if safe_idx < 0 or safe_idx >= len(labels):
+        safe_idx = 0
+    st.session_state["_session_pick_idx"] = safe_idx
 
     idx = st.sidebar.radio(
         "Pick a session",
