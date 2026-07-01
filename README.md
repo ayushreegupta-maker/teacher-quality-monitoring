@@ -1,23 +1,67 @@
 # Teacher Quality Monitoring (TQM)
 
-Score Openhouse preschool classroom video against a rubric. Gemini watches the video and extracts evidence; Claude reads that evidence and answers ~32 rubric questions per session.
+Score Openhouse preschool and primary classroom videos against a subject-specific rubric. Gemini watches the video and extracts evidence; Claude reads that evidence and answers 32–34 rubric questions per session. A live Streamlit dashboard lets the quality + training teams walk every scored session and act on it.
 
-**Contact:** Ayushree Gupta — `ayushree.gupta@openhouse.study`
+**Subjects live today:** Art (3–5), Public Speaking (5–8), Robotics (5–8).
+
+**Contacts:**
+- Ayushree Gupta — `ayushree.gupta@openhouse.study` (product / rubric / test-data)
+- LXD — `lxd@openhouse.study` (engineering / deploy / access)
 
 ---
 
-## Setup
+## Live dashboard
 
-Tested on macOS and Linux. ~5 minutes if your machine already has Python 3.10+ and `ffmpeg`.
+**URL:** `https://<PASTE-STREAMLIT-URL-HERE>.streamlit.app`
+
+Password-gated. **Message LXD (`lxd@openhouse.study`) for access.**
+
+Two views in the app:
+
+1. **Sessions** — pick a canonical run, watch the trimmed class video, and walk the Q&A section-by-section (Environment / Content Knowledge / Facilitation / Warmth). Every answer shows confidence, cited timestamps, and rationale — click a timestamp to seek the video to that moment.
+2. **Coaching Queue** — sessions the rules flagged for the training team's attention. Marks any session where a scored `1–4` question came out `1` or `2` with medium/high confidence, or any safety-themed yes/no question came back `Yes`. Set a decision (immediate training / training required / no training required) plus notes, saved to Supabase.
+
+---
+
+## What runs where
+
+```
+┌──────────────────────────────┐
+│  Local machine (Mac)         │
+│  ─────────────────────────── │
+│  scripts/run_rubric.py       │
+│    · combines raw NVR clips  │
+│    · Gemini vision pass      │
+│    · Claude Opus reasoner    │
+│    · writes to Postgres      │
+└──────────┬───────────────────┘
+           │ upsert
+           ▼
+     ┌──────────────┐         ┌──────────────────┐
+     │  Supabase    │◀─read───│  Streamlit Cloud │
+     │  (Postgres)  │         │  frontend/       │
+     │   runs       │         │  quality_app.py  │
+     │   answers    │         └─────────┬────────┘
+     │   coaching_  │                   │ signed URL
+     │   actions    │                   ▼
+     └──────────────┘         ┌──────────────────┐
+                              │  Cloudflare R2   │
+                              │  (video hosting) │
+                              └──────────────────┘
+```
+
+The pipeline runs on a local Mac (needs API keys + `ffmpeg` + disk for raw video). Everything read by the dashboard lives in Supabase; the videos it plays live in Cloudflare R2.
+
+---
+
+## Setup (for running the pipeline)
+
+Tested on macOS. ~10 minutes if Python 3.10+ and `ffmpeg` are already installed.
 
 ### 1. Install prerequisites
 
 ```bash
-# macOS
 brew install python ffmpeg
-
-# Ubuntu/Debian
-sudo apt install python3 python3-venv ffmpeg
 ```
 
 ### 2. Clone and install
@@ -31,22 +75,31 @@ source .venv/bin/activate
 pip install -e .
 ```
 
-### 3. Add API keys
+### 3. Add credentials to `.env`
 
-Create a `.env` file in the repo root (gitignored, never committed):
+Create a `.env` file at the repo root (gitignored, never committed):
 
+```bash
+# Model providers (both need paid billing)
+GOOGLE_API_KEY=<your Gemini API key>
+ANTHROPIC_API_KEY=<your Claude API key>
+
+# Supabase — where every scored run lands
+SUPABASE_URL=https://<project-id>.supabase.co
+SUPABASE_SERVICE_KEY=<service_role key>
+
+# Cloudflare R2 — where trimmed videos are uploaded (for dashboard playback)
+R2_ACCOUNT_ID=<your Cloudflare account id>
+R2_BUCKET=openhouse-tqm-videos
+R2_ACCESS_KEY_ID=<from your R2 API token>
+R2_SECRET_ACCESS_KEY=<from your R2 API token>
 ```
-GOOGLE_API_KEY=<your gemini api key>
-ANTHROPIC_API_KEY=<your claude api key>
-```
 
-Both need paid billing. Free-tier quotas hit rate limits within one run.
+Ask LXD for the shared credentials if you're inside Openhouse.
 
 ### 4. Get the test video
 
-The raw classroom recordings aren't in the repo (they're real children, and the files are large). To try the pipeline on a real session, **email Ayushree (`ayushree.gupta@openhouse.study`)** to get the test bundle for session `2026-05-18__D28__0900`.
-
-Drop the three files she sends you into:
+Raw classroom recordings aren't in the repo (real children + huge files). Email Ayushree for the test bundle for session `2026-05-18__D28__0900` (Art class). Drop the three files into:
 
 ```
 data/sessions/art/2026-05-18__D28__0900/
@@ -57,67 +110,56 @@ data/sessions/art/2026-05-18__D28__0900/
 
 ---
 
-## Run
+## Run the pipeline
 
-One command. The recommended path is **Shape B**: Gemini extracts evidence in 22 parallel chunks, then Claude Opus reasons over that evidence.
+Score one session end-to-end (fast path — assumes `3_trimmed.mp4` already exists):
+
+```bash
+.venv/bin/python scripts/run_rubric.py \
+  --trimmed-video data/sessions/art/2026-05-18__D28__0900/3_trimmed.mp4 \
+  --rubric-version v2_2026-06-11 \
+  --shape B \
+  --activity-context "Today's planned segments: Art Games — textures. Art Gym — lines. Artiverse — collage. Experience Book — reflections."
+```
+
+| Stage | What runs | Time | Cost |
+|---|---|---|---|
+| Vision pass | ~22 × Gemini chunks (concurrency 5) | ~2 min | ~$2.50 |
+| Reasoner | 1 × Claude Opus 4.7 | ~30 sec | ~$0.20 |
+| Supabase write | 1 run row + 32 answer rows upserted | <1 sec | — |
+| **Total** | | **~2.5 min** | **~$3** |
+
+Re-runs with the same `--vision-model` and session skip the vision pass (cached to `data/evidence_cache/`) and only re-run the reasoner. ~30 sec / ~$0.20 per re-score.
+
+**Full pipeline** — starts from raw NVR clips instead of a pre-trimmed video:
 
 ```bash
 .venv/bin/python scripts/run_rubric.py \
   --session-id 2026-05-18__D28__0900 \
   --rubric-version v2_2026-06-11 \
   --shape B \
-  --vision-model gemini-3.5-flash \
-  --activity-context "Today's planned segments: Art Games — learning about different textures. Art Gym — drawing lines in their sketchbook. Artiverse — making a collage. Experience Book — filling out reflections. Art Care — putting materials back."
+  --activity-context "..."
 ```
 
-| Stage | What runs | Time | Cost |
-|---|---|---|---|
-| Vision pass | 22 × Gemini chunks (concurrency 5) | ~2 min | ~$2.50 |
-| Reasoner | 1 × Claude Opus 4.7 | ~30 sec | ~$0.20 |
-| **Total** | | **~2.5 min** | **~$3** |
-
-Re-runs with the same `--vision-model` and `--session-id` skip the vision pass (cached) and only re-run the reasoner. That's ~30 sec / ~$0.20 per re-score.
+This adds a `combine → detect boundaries → trim` step (~5–10 min extra) that produces the `3_trimmed.mp4` from the raw camera clips in `data/raw/<subject>/`.
 
 ---
 
-## Outputs
+## Where each run's data ends up
 
-Every run writes to two places:
-
-### 1. Per-run folder (`data/rubric_runs/`)
-
-```
-data/rubric_runs/art/2026-06-19T130300__v2_2026-06-11__claude-opus-4-7__B/
-├── 0_config.json           ← run metadata (model, prompt hash, timestamps)
-├── 4_rendered_prompt.txt   ← the exact text Claude saw
-├── 5_answers.json          ← parsed answers per question (Q1–Q32):
-│                             { id, answer, confidence, evidence_timestamps, rationale, ... }
-└── 5_answers_raw.txt       ← Claude's raw response (in case parsing missed something)
-```
-
-### 2. Longitudinal answer log (`data/tqm_answers.xlsx`)
-
-**Every run appends one row per question to this workbook** — the long-term record of every session ever scored, every Q&A response, every rationale.
-
-Columns include: `session_id` · `subject` · `rubric_version` · `q_id` · `question` · `answer` · `confidence` · `evidence_timestamps` · `rationale` · `source_model` · `run_started_at` · `answer_type` · …
-
-Use this for cross-session reporting, teacher comparisons, or quality trends over time. Open it in Excel / Numbers / Google Sheets and pivot however you need.
-
-### 3. Cached evidence bundle (`data/evidence_cache/`)
-
-The vision pass output (transcript + observations + phases + explanations + disturbances) is cached here so re-runs against the same video skip the expensive Gemini work. Cache key: `{session_id}__{vision_model}__fps-default__chunk-5min`.
-
-You can also inspect this bundle directly — it's a single JSON file with everything Gemini extracted:
-
-```
-data/evidence_cache/art/<session_id>__<vision_model>__fps-default__chunk-5min/evidence_bundle.json
-```
+| Artefact | Location | Committed? |
+|---|---|---|
+| `runs` table (one row per rubric run) | Supabase Postgres | data lives in the DB |
+| `answers` table (one row per Q × run) | Supabase Postgres | data lives in the DB |
+| `coaching_actions` (per-session training decision + notes) | Supabase Postgres | data lives in the DB |
+| Trimmed class video (`3_trimmed.mp4`) | Local disk during dev; Cloudflare R2 for the deployed dashboard | ❌ (large + children's faces) |
+| Vision-pass cache (transcript / observations / phases) | `data/evidence_cache/<subject>/<session>__<model>__…/evidence_bundle.json` | ❌ (rebuildable, ~1 MB each) |
+| Per-run audit trail (0_config.json, 5_answers.json, raw prompt + response) | `data/rubric_runs/<subject>/<config_slug>/` | ❌ (local audit only) |
+| Answer-queue sidecar (durable buffer between run + Supabase upsert) | `data/_answer_queue/*.json` (deleted on successful upsert) | ❌ |
 
 ---
 
-## Architecture in one screen
-
-Two paths through the same rubric:
+## Two paths through the same rubric
 
 - **Shape A** — single Gemini call watches the whole trimmed video and answers all 32 rubric questions in one shot. Fast and cheap but evidence is whole-video spans; 1–4 scores tend to cluster at 4. Useful for prototyping. Not recommended for real scoring.
 
@@ -126,38 +168,60 @@ Two paths through the same rubric:
   ```
   Gemini (vision pass, chunked)              Claude Opus (reasoner)
   ┌─────────────────────────┐                ┌───────────────────────┐
-  │ 22 × 5-min chunks       │   evidence     │ Reads everything as   │
-  │ → transcript            │   bundle       │ text + the 32-Q       │
+  │ N × 5-min chunks        │   evidence     │ Reads everything as   │
+  │ → transcript            │   bundle       │ text + the 32/34-Q    │
   │ → observations          ├───────────────►│ rubric. Returns       │
-  │ → phases                │  (cached as    │ Q1–Q32 with answer +  │
+  │ → phases                │  (cached as    │ Q1-QN with answer +   │
   │ → explanations          │   JSON on      │ confidence + evidence │
   │ → disturbances          │   disk)        │ timestamps + rationale│
+  │ → materials list        │                │ + materials_seen list │
   └─────────────────────────┘                └───────────────────────┘
   ```
 
   Differentiated 1–4 scores. Time-anchored evidence ("at 01:10:23, child in red shirt said 'dirty hands'"). What we use in practice.
+
+Every Shape B run also emits a **`materials_seen`** list — a deduplicated inventory of teaching materials Gemini spotted (blocks, lever apparatus, drawing paper, motors, etc.). Surfaces in the dashboard next to the class video.
 
 ---
 
 ## Repo layout
 
 ```
-adapters/         LLM SDK wrappers (Gemini, Claude, OpenAI)
-pipeline/         Pipeline stages (session_video, boundaries, vision, evidence, rubric, …)
+adapters/         LLM SDK wrappers (Gemini, Claude)
+pipeline/         Pipeline stages
+  session_video.py     combine + boundary-detect + trim raw NVR clips
+  vision.py            chunked Gemini call → evidence bundle
+  evidence.py          bundle cache
+  rubric.py            Claude Opus call over the bundle
+  answers_book.py      sidecar → Supabase upsert
+  types.py             pydantic models (RubricAnswerSet, MaterialSeen, ...)
+
 prompts/
-  rubrics.xlsx        The rubric workbook — one tab per subject (art, robotics, …)
-  vision.md           The Gemini vision-pass prompt (subject-conditional)
-  art/                Art-class prompt templates (Shape A + Shape B per version)
+  rubrics.xlsx         The rubric workbook — one tab per subject (Art / Public Speaking / Robotics)
+  vision.md            The Gemini vision-pass prompt (subject-conditional)
+  art/                 Shape B prompt templates for Art (v1 + v2)
+  public_speaking/     Shape B prompt template for PS
+  robotics/            Shape B prompt template for Robotics
+
+frontend/         Streamlit quality dashboard
+  quality_app.py       single-page app: Sessions + Coaching Queue views
+  DEPLOY.md            step-by-step Streamlit Cloud deploy recipe
+
 scripts/
-  run_rubric.py       Main entry point (see "Run" above)
-  cctv_pull.py        Pull raw video from the NVR (Openhouse internal — VPN required)
-  testing/            One-off diagnostic / probe scripts
-data/                 All gitignored — recomputable from raw + scripts
+  run_rubric.py                     main entry point (see "Run" above)
+  cctv_pull.py                      pull raw video from the NVR (Openhouse internal — VPN required)
+  upload_videos_to_r2.py            one-shot: push trimmed videos to Cloudflare R2
+  r2_replace_ps_videos.py           one-shot: delete + re-upload specific R2 objects
+  backfill_supabase.py              one-shot: xlsx → Supabase migration
+  testing/                          one-off diagnostic / probe scripts
+
+data/             All gitignored — recomputable from raw + scripts
   raw/                Raw NVR pulls (~1 GB per camera per day)
   sessions/           Per-session video cache (combined → boundaries → trimmed)
   evidence_cache/     Per-session vision output (cached JSON bundles)
-  rubric_runs/        Per-run output folders (see "Outputs" above)
-  tqm_answers.xlsx    Longitudinal log of every Q&A response across all runs
+  rubric_runs/        Per-run audit output (see table above)
+  _answer_queue/      Sidecar queue for durable Supabase writes
+
 DECISIONS.md      Why we did things this way
 PLAN.md           Architecture target + cheap-pilot rationale
 ```
@@ -166,39 +230,23 @@ PLAN.md           Architecture target + cheap-pilot rationale
 
 ## Common workflows
 
-**Re-score with a different rubric version**
-Change `--rubric-version` and re-run. Evidence cache is keyed on session + vision_model, not rubric version, so the bundle is reused. ~30 sec / ~$0.20.
+**Re-score with a different rubric version.** Change `--rubric-version` and re-run. Evidence cache is keyed on session + vision_model, not rubric version, so the bundle is reused. ~30 sec / ~$0.20.
 
-**Try a different vision model**
-Set `--vision-model gemini-3.5-flash` (default is `gemini-2.5-flash`). This routes to a fresh cache dir and triggers a full vision-pass rebuild. ~2.5 min / ~$3.
+**Try a different vision model.** Set `--vision-model gemini-3.5-flash` (default is `gemini-2.5-flash`). This routes to a fresh cache dir and triggers a full vision-pass rebuild. ~2.5 min / ~$3.
 
-**Force a rebuild of an existing cached bundle**
-Add `--force` (e.g. after tweaking the vision prompt).
+**Force a rebuild of an existing cached bundle.** Add `--force` (e.g. after tweaking the vision prompt).
 
-**Add a new subject (e.g. robotics)**
+**Add a new subject** (e.g. Language)
 1. Add a tab to `prompts/rubrics.xlsx`.
 2. Author `prompts/<subject>/rubric_<subject>_<version>_shape_b.md` (copy from `prompts/art/`).
-3. Optionally add a `{% if session.subject == "<subject>" %}` block to `prompts/vision.md` so the vision pass gets subject-specific phase types.
+3. Add an `{% elif session.subject == "<subject>" %}` branch to `prompts/vision.md` so the vision pass emits subject-specific phase types.
+4. Add the camera → subject mapping in `data/cctv_cameras.xlsx`.
 
----
-
-## Running on GitHub Codespaces (alternative)
-
-Convenient for trying the pipeline without setting up locally.
-
-1. On the repo page: **Code → Codespaces → Create codespace on main**.
-2. In the Codespace terminal:
-   ```
-   python3 -m venv .venv && source .venv/bin/activate && pip install -e .
-   ```
-3. Add API keys as Codespace secrets: **Settings → Codespaces → Secrets** → `GOOGLE_API_KEY` and `ANTHROPIC_API_KEY`. They're auto-injected as env vars.
-4. Upload the test-data files Ayushree sends you into `data/sessions/art/2026-05-18__D28__0900/` (the 542 MB video takes a few minutes to upload).
-5. Run the same command as the "Run" section.
-
-For sustained work, the local install is faster — Codespaces re-uploads the video every time you recreate the environment.
+**Deploy the dashboard.** See `frontend/DEPLOY.md` — Streamlit Community Cloud recipe with the password gate + R2 + Supabase secrets you need in the Cloud settings panel.
 
 ---
 
 ## Questions
 
-Ayushree Gupta — `ayushree.gupta@openhouse.study`
+- Product / rubric / test-data: Ayushree Gupta — `ayushree.gupta@openhouse.study`
+- Engineering / deploy / access to the live dashboard: LXD — `lxd@openhouse.study`
