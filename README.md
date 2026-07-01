@@ -146,7 +146,7 @@ This adds a `combine → detect boundaries → trim` step (~5–10 min extra) th
 ## Where each run's data ends up
 
 | Artefact | Location | Committed? |
-|---|---|---|
+|------------------|---|---|
 | `runs` table (one row per rubric run) | Supabase Postgres | data lives in the DB |
 | `answers` table (one row per Q × run) | Supabase Postgres | data lives in the DB |
 | `coaching_actions` (per-session training decision + notes) | Supabase Postgres | data lives in the DB |
